@@ -1,4 +1,4 @@
-name: Daily RISC Fuzz Security Paper Watch
+name: RISC Fuzz Security Paper Watch
 
 on:
   schedule:
@@ -11,7 +11,7 @@ permissions:
 jobs:
   collect-and-summarize:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -25,22 +25,24 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade openai pypdf
 
+      - name: Validate scripts
+        run: python -m py_compile scripts/common.py scripts/fetch_papers.py scripts/classify_papers.py scripts/summarize_papers.py scripts/render_report.py
+
       - name: Fetch papers
-        timeout-minutes: 20
+        timeout-minutes: 12
         run: python scripts/fetch_papers.py
 
       - name: Classify papers
         run: python scripts/classify_papers.py
 
       - name: Summarize papers
-        timeout-minutes: 25
-
+        timeout-minutes: 10
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-4.1-mini
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-v4-flash
-          MAX_LLM_ANALYSES_PER_RUN: 5
+          MAX_LLM_ANALYSES_PER_RUN: 3
           ENABLE_FULL_TEXT_ANALYSIS: "false"
         run: python scripts/summarize_papers.py
 
