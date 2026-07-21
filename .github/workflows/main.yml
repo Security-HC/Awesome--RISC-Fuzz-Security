@@ -2,7 +2,7 @@ name: Daily RISC Fuzz Security Paper Watch
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: "0 1 */3 * *"
   workflow_dispatch:
 
 permissions:
