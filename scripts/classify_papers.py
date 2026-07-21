@@ -16,7 +16,7 @@ def classify(paper: dict, rules: dict[str, list[str]]) -> list[str]:
     for category, keywords in rules.items():
         if any(keyword.lower() in haystack for keyword in keywords):
             categories.append(category)
-    return categories or ["Uncategorized"]
+    return categories or ["未分类"]
 
 
 def main() -> None:
@@ -29,4 +29,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
