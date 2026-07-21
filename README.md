@@ -62,3 +62,13 @@ The default search includes:
 
 Edit [config/search_queries.json](config/search_queries.json) and [config/categories.json](config/categories.json) to tune keywords and categories.
 
+## Deduplication
+
+The collector deduplicates papers before rendering reports. A paper is treated as already known when any of these match an existing record:
+
+- arXiv/source ID
+- Normalized title
+- Abstract page URL
+- PDF URL
+
+Existing papers are not rewritten every day when nothing changed, so the scheduled Action should not create noisy commits for the same search results. The metadata keeps `first_seen`, `last_seen`, `seen_count`, and `content_hash` fields for traceability.
