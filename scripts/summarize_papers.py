@@ -1,3 +1,4 @@
+from __future__ import annotations
 
 import os
 import json
@@ -149,3 +150,13 @@ def main() -> None:
             full_text = extract_pdf_text(paper.get("pdf_url", ""))
             paper["analysis"] = llm_analysis(paper, full_text) if full_text else abstract_based_analysis(paper)
             llm_analyses_used += 1
+        except Exception as exc:
+            print(f"WARNING: 论文分析失败，已降级为摘要卡片：{paper.get('title', paper.get('id', 'unknown'))}\n{exc}", file=sys.stderr)
+            paper["analysis"] = abstract_based_analysis(paper)
+            paper["analysis"]["error"] = str(exc)
+
+    write_json(DATA_DIR / "papers.json", papers)
+
+
+if __name__ == "__main__":
+    main()
