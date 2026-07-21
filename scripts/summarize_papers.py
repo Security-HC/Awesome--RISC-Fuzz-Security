@@ -61,8 +61,11 @@ def extract_pdf_text(pdf_url: str, max_pages: int = 16) -> str:
 def llm_analysis(paper: dict, full_text: str) -> dict:
     from openai import OpenAI
 
-    model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
-    client = OpenAI()
+    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-pro")
+    client = OpenAI(
+        api_key=os.environ.get("DEEPSEEK_API_KEY"),
+        base_url="https://api.deepseek.com",
+    )
     prompt = f"""
 You are maintaining a research reading database about RISC-V, processor fuzzing,
 microarchitecture security, hardware fuzzing, and verification.
@@ -81,11 +84,24 @@ Abstract: {paper.get("abstract")}
 Paper text:
 {full_text}
 """
-    response = client.responses.create(
-        model=model,
-        input=prompt,
-        text={"format": {"type": "json_object"}},
-    )
+    response = client.chat.completions.create(
+    model=model,
+    messages=[
+        {
+            "role": "system",
+            "content": "你是一个处理器安全、RISC-V、微架构 fuzzing 方向的论文阅读助手。"
+        },
+        {
+            "role": "user",
+            "content": prompt
+        }
+    ],
+    stream=False,
+)
+
+content = response.choices[0].message.content
+
+result = json.loads(content)
     import json
 
     result = json.loads(response.output_text)
@@ -100,7 +116,7 @@ def needs_analysis(paper: dict) -> bool:
 
 def main() -> None:
     papers = read_json(DATA_DIR / "papers.json", [])
-    has_key = bool(os.environ.get("OPENAI_API_KEY"))
+    has_key = bool(os.environ.get("DEEPSEEK_API_KEY"))
 
     for paper in papers:
         if not needs_analysis(paper):
