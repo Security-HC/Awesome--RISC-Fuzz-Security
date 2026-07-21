@@ -1,100 +1,78 @@
 from __future__ import annotations
 
 import datetime as dt
-import hashlib
-import re
-import time
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
-from email.utils import parsedate_to_datetime
+from collections import defaultdict
 
-from common import DATA_DIR, ROOT, normalize_space, read_json, slugify, write_json
+from common import DATA_DIR, PAPER_REPORTS_DIR, REPORTS_DIR, slugify, read_json
 
 
-ARXIV_API = "https://export.arxiv.org/api/query"
-ATOM = "{http://www.w3.org/2005/Atom}"
-ARXIV = "{http://arxiv.org/schemas/atom}"
+def md_escape(value: str) -> str:
+    return str(value or "").replace("|", "\\|").replace("\n", " ")
 
 
-def dedupe_key(value: str) -> str:
-    value = normalize_space(value).lower()
-    value = re.sub(r"[^a-z0-9]+", " ", value)
-    return normalize_space(value)
+def authors_short(authors: list[str]) -> str:
+    if not authors:
+        return ""
+    if len(authors) <= 3:
+        return ", ".join(authors)
+    return f"{', '.join(authors[:3])}, et al."
 
 
-def content_hash(paper: dict) -> str:
-    relevant = "|".join(
-        [
-            paper.get("title", ""),
-            " ".join(paper.get("authors", [])),
-            paper.get("abstract", ""),
-            paper.get("published", ""),
-            paper.get("updated", ""),
-            paper.get("url", ""),
-            paper.get("pdf_url", ""),
-            " ".join(paper.get("source_categories", [])),
-        ]
-    )
-    return hashlib.sha256(relevant.encode("utf-8")).hexdigest()
+def paper_filename(paper: dict) -> str:
+    year = (paper.get("published") or "unknown")[:4]
+    return f"{year}-{slugify(paper.get('title', paper.get('id', 'paper')))}.md"
 
 
-def index_keys(paper: dict) -> set[str]:
-    keys = {f"id:{paper.get('id', '')}"}
-    source = paper.get("source", "")
-    source_id = paper.get("source_id", "")
-    if source and source_id:
-        keys.add(f"source:{source}:{source_id}")
-    title_key = paper.get("title_key") or dedupe_key(paper.get("title", ""))
-    if title_key:
-        keys.add(f"title:{title_key}")
-    pdf_url = paper.get("pdf_url", "")
-    if pdf_url:
-        keys.add(f"pdf:{pdf_url}")
-    url = paper.get("url", "")
-    if url:
-        keys.add(f"url:{url}")
-    return keys
+def render_detail(paper: dict) -> str:
+
+{paper.get("abstract", "")}
+
+## Research Problem
+
+{analysis.get("research_problem", "")}
+
+## Introduction
+
+{analysis.get("introduction", "")}
+
+## Method
+
+{analysis.get("method", "")}
+
+## Evaluation
+
+{analysis.get("evaluation", "")}
+
+## Conclusion
+
+{analysis.get("conclusion", "")}
+
+## Limitations
+
+{analysis.get("limitations", "")}
+
+## Detailed Reading Analysis
+
+{analysis.get("deep_reading", "")}
+
+## Follow-up Questions
+
+{question_lines}
+"""
 
 
-def arxiv_query(search_query: str, max_results: int) -> list[dict]:
-    params = {
-        "search_query": search_query,
-                "source": "arXiv",
-                "source_id": arxiv_id,
-                "title": title,
-                "title_key": dedupe_key(title),
-                "authors": authors,
-                "abstract": abstract,
-                "published": published_raw[:10],
-                "matched_queries": [search_query],
-                "categories": [],
-                "analysis": {},
-                "first_seen": dt.date.today().isoformat(),
-                "last_seen": dt.date.today().isoformat(),
-                "seen_count": 1,
-            }
-        )
-    return papers
+def render_index(papers: list[dict]) -> str:
+    grouped: dict[str, list[dict]] = defaultdict(list)
+    for paper in papers:
+        for category in paper.get("categories", ["Uncategorized"]):
+            grouped[category].append(paper)
 
-
-def add_to_index(index: dict[str, str], paper: dict) -> None:
-    for key in index_keys(paper):
-        if key.endswith(":"):
-            continue
-        index[key] = paper["id"]
-
-
-def merge_into_current(current: dict, paper: dict, today: str) -> bool:
-    changed = False
-
-    current_queries = set(current.get("matched_queries", []))
-    incoming_queries = set(paper.get("matched_queries", []))
-    merged_queries = sorted(current_queries | incoming_queries)
-    if merged_queries != current.get("matched_queries", []):
-        current["matched_queries"] = merged_queries
-        changed = True
-
-    for field in ["title", "title_key", "authors", "abstract", "published", "updated", "url", "pdf_url", "source_categories"]:
-        incoming = paper.get(field)
-        if incoming and current.get(field) != incoming:
+    data_updated = max((paper.get("last_seen", "") for paper in papers), default="")
+    lines = [
+        "# RISC Fuzz Security Paper Watch",
+        "",
+        f"Last updated: {dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat()}",
+        f"Data updated: {data_updated or 'No papers collected yet'}",
+        "",
+        "This report is generated automatically by GitHub Actions.",
+        "",
