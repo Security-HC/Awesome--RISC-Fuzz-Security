@@ -16,6 +16,7 @@ from common import DATA_DIR, ROOT, normalize_space, read_json, slugify, write_js
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 OPENALEX_API = "https://api.openalex.org/works"
+SEMANTIC_SCHOLAR_API = "https://api.semanticscholar.org/graph/v1/paper/search"
 ATOM = "{http://www.w3.org/2005/Atom}"
 
 
@@ -89,6 +90,20 @@ def openalex_pdf_url(work: dict) -> str:
         return primary_location["pdf_url"]
     open_access = work.get("open_access") or {}
     return open_access.get("oa_url") or ""
+
+
+def semantic_pdf_url(paper: dict) -> str:
+    open_access_pdf = paper.get("openAccessPdf") or {}
+    return open_access_pdf.get("url") or ""
+
+
+def semantic_external_url(paper: dict) -> str:
+    external_ids = paper.get("externalIds") or {}
+    if external_ids.get("DOI"):
+        return f"https://doi.org/{external_ids['DOI']}"
+    if paper.get("url"):
+        return paper["url"]
+    return ""
 
 
 def is_top_venue(venue: str, top_venues: list[str]) -> bool:
@@ -235,6 +250,87 @@ def openalex_query(search_query: str, max_results: int, from_publication_date: s
     return papers
 
 
+def semantic_scholar_query(search_query: str, max_results: int, from_year: int, top_venues: list[str]) -> list[dict]:
+    fields = ",".join(
+        [
+            "title",
+            "abstract",
+            "year",
+            "authors",
+            "url",
+            "venue",
+            "publicationVenue",
+            "externalIds",
+            "openAccessPdf",
+            "publicationDate",
+            "fieldsOfStudy",
+        ]
+    )
+    params = {
+        "query": search_query,
+        "limit": max_results,
+        "fields": fields,
+    }
+    url = f"{SEMANTIC_SCHOLAR_API}?{urllib.parse.urlencode(params)}"
+    request = urllib.request.Request(url, headers={"User-Agent": "risc-fuzz-paper-watch/1.0"})
+    try:
+        with urllib.request.urlopen(request, timeout=45) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        message = exc.read().decode("utf-8", errors="replace")[:1000]
+        print(f"WARNING: Semantic Scholar query failed with HTTP {exc.code}: {search_query}\n{message}", file=sys.stderr)
+        return []
+    except Exception as exc:
+        print(f"WARNING: Semantic Scholar query failed: {search_query}\n{exc}", file=sys.stderr)
+        return []
+
+    papers: list[dict] = []
+    for paper in payload.get("data", []):
+        title = normalize_space(paper.get("title") or "")
+        if not title:
+            continue
+        year = int(paper.get("year") or 0)
+        if year and year < from_year:
+            continue
+        publication_venue = paper.get("publicationVenue") or {}
+        venue = publication_venue.get("name") or paper.get("venue") or ""
+        if top_venues and venue and not is_top_venue(venue, top_venues):
+            continue
+        external_ids = paper.get("externalIds") or {}
+        paper_id = paper.get("paperId") or external_ids.get("DOI") or slugify(title)
+        authors = [
+            normalize_space(author.get("name", ""))
+            for author in paper.get("authors", [])
+        ]
+        authors = [author for author in authors if author]
+        doi = f"https://doi.org/{external_ids['DOI']}" if external_ids.get("DOI") else ""
+        papers.append(
+            {
+                "id": f"semantic-scholar-{slugify(paper_id)}",
+                "source": "Semantic Scholar",
+                "venue": venue or "未记录",
+                "source_id": paper_id,
+                "doi": doi,
+                "title": title,
+                "title_key": dedupe_key(title),
+                "authors": authors,
+                "abstract": normalize_space(paper.get("abstract") or ""),
+                "published": paper.get("publicationDate") or str(year or ""),
+                "updated": "",
+                "url": semantic_external_url(paper),
+                "pdf_url": semantic_pdf_url(paper),
+                "source_categories": paper.get("fieldsOfStudy") or [],
+                "matched_queries": [f"Semantic Scholar: {search_query}"],
+                "categories": [],
+                "analysis": {},
+                "first_seen": dt.date.today().isoformat(),
+                "last_seen": dt.date.today().isoformat(),
+                "seen_count": 1,
+            }
+        )
+    return papers
+
+
 def add_to_index(index: dict[str, str], paper: dict) -> None:
     for key in index_keys(paper):
         if key.endswith(":"):
@@ -301,28 +397,54 @@ def merge_papers(existing: list[dict], fetched: list[dict]) -> list[dict]:
 def main() -> None:
     config = read_json(ROOT / "config" / "search_queries.json", {})
     queries = config.get("queries", [])
+    literature_queries = config.get("literature_queries", queries)
     arxiv_categories = config.get("arxiv_categories", [])
     max_results = int(config.get("max_results_per_query", 25))
     max_openalex_results = int(config.get("max_openalex_results_per_query", 25))
+    max_semantic_scholar_results = int(config.get("max_semantic_scholar_results_per_query", 20))
     request_delay_seconds = int(config.get("request_delay_seconds", 10))
     openalex_from_date = config.get("openalex_from_publication_date", "2018-01-01")
+    from_year = int(openalex_from_date[:4])
     top_venues = config.get("top_venues", [])
 
     fetched: list[dict] = []
+    arxiv_count = 0
+    openalex_count = 0
+    semantic_scholar_count = 0
     for index, query in enumerate(queries):
         category_filter = " OR ".join(f"cat:{category}" for category in arxiv_categories)
         search_query = f"({query}) AND ({category_filter})" if category_filter else query
-        fetched.extend(arxiv_query(search_query, max_results))
+        results = arxiv_query(search_query, max_results)
+        arxiv_count += len(results)
+        fetched.extend(results)
         if index < len(queries) - 1:
             time.sleep(request_delay_seconds)
 
-    for index, query in enumerate(queries):
-        fetched.extend(openalex_query(query, max_openalex_results, openalex_from_date, top_venues))
-        if index < len(queries) - 1:
+    for index, query in enumerate(literature_queries):
+        results = openalex_query(query, max_openalex_results, openalex_from_date, top_venues)
+        openalex_count += len(results)
+        fetched.extend(results)
+        if index < len(literature_queries) - 1:
             time.sleep(2)
 
+    for index, query in enumerate(literature_queries):
+        results = semantic_scholar_query(query, max_semantic_scholar_results, from_year, top_venues)
+        semantic_scholar_count += len(results)
+        fetched.extend(results)
+        if index < len(literature_queries) - 1:
+            time.sleep(2)
+
+    print(
+        "检索结果："
+        f"arXiv {arxiv_count} 条；"
+        f"OpenAlex {openalex_count} 条；"
+        f"Semantic Scholar {semantic_scholar_count} 条；"
+        f"合并前共 {len(fetched)} 条。"
+    )
     existing = read_json(DATA_DIR / "papers.json", [])
-    write_json(DATA_DIR / "papers.json", merge_papers(existing, fetched))
+    merged = merge_papers(existing, fetched)
+    print(f"查重合并后共 {len(merged)} 条。")
+    write_json(DATA_DIR / "papers.json", merged)
 
 
 if __name__ == "__main__":
