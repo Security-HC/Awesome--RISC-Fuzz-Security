@@ -98,7 +98,7 @@
       "RTL and Hardware Verification",
       "Tools and Benchmarks"
     ],
-    "content_hash": "5594f2a71f60eed9a5e6e88764ff8e67f1d85a4a73076995ca1885b9c65af7e4",
+    "content_hash": "d6baa877c13ff21334e08a41f7b408fd87ba88fc17b71e36eb2310ba87274278",
     "first_seen": "2026-07-21",
     "id": "arxiv-2607-10340v1",
     "last_seen": "2026-07-21",
@@ -110,17 +110,17 @@
     ],
     "pdf_url": "https://arxiv.org/pdf/2607.10340v1",
     "published": "2026-07-11",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AR"
     ],
     "source_id": "2607.10340v1",
     "title": "When Fuzzing Meets Understanding: LLM-Driven Semantic Test Generation for RTL Verification",
     "title_key": "when fuzzing meets understanding llm driven semantic test generation for rtl verification",
     "updated": "2026-07-11",
-    "url": "https://www.semanticscholar.org/paper/db2fb6af9e5c9fd90427a46b9c6adb44328b254b",
-    "venue": "未记录"
+    "url": "http://arxiv.org/abs/2607.10340v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "Modern processor verification struggles to reach deep architectural states due to the inefficiencies of traditional mutation-based fuzzing. We propose HiFuzz, a novel hierarchical reinforcement learning framework that replaces mutation with a structured, two-layer generation process: a Program Agent for global layout and a Basic Block Agent for precise instruction filling. To overcome reward sparsity, HiFuzz integrates an adaptive coverage reward mechanism and a semantic-aware basic block encoder providing intrinsic feedback. Extensive evaluations on three real-world RISC-V cores demonstrate that HiFuzz significantly outperforms state-of-the-art fuzzers in coverage and bug detection.",
@@ -185,19 +185,20 @@
   {
     "abstract": "Strategic analysis of AI-enabled conflict often treats \"cyber\" as one offense–defense game and AI ca- pability as a scalar speedup. We argue instead that AI-mediated conflict is a layered strategic envi- ronment: a wire layer of machine-speed discovery and exploitation, a model/weights layer of captured decision-support, an audit layer of verification exhaustion, and an attribution layer where punishment is slower than defection. The central claim is an inversion across layers: the observable wire layer is relatively self-correcting, while the unobservable model and audit layers can become self- reinforcing. We formalize the stack with five compact model results and seven falsifiable predictions. Two results are empirically grounded here: the wire-layer queueing claim that correlated vulnerability arrivals in- flate remediation backlogs, and the model-layer capture-bound claim that deep, quiet, sustained ma- nipulation should be hard. The audit and attribution results remain simulation-only here; their in- cident-data grounding is future work. Throughout, we separate mathematical status from operational status: simulation-checked means the closed form is reproduced under the model assumptions, not that the mechanism has been observed in the wild. We then run two proof-of-concept probes, not a benchmark or a security evaluation. On the wire, open vulnerability corpora show clustered and over-dispersed discovery streams that inflate remedia- tion queues; the 2026 LLM-credited discovery wave is real but still mostly upstream of weaponiza- tion, with only a small fast-migrating subset reaching active-exploitation catalogs. On the model lay- er, adaptive red-teaming across six model checkpoints shows that the clean capture bound fails on a weak 0.5B model and becomes model- and domain-dependent on frontier systems. For factual ques- tions, an existence-scale test (N = 2 injections × 6 checkpoints) yields a transfer-confirmed 3:3 split: some checkpoints resist, while others flip through true-but-irrelevant context that evades a con- tent/plausibility auditor. This supports a content-versus-relevance diagnostic — not yet a gen- eral keyed-payload capability. For opinions, fact-robustness and opinion-robustness separate into distinct axes. The contribution is therefore a layered synthesis, a measurable content/relevance audit gap, and a disciplined path for testing where AI-enabled conflict shifts from exploitation of systems to manipulation of institutional judgment.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "中文元数据分析",
+      "conclusion": "当前结论基于摘要和元数据生成：该论文可能围绕处理器安全验证、fuzzing 效率、微架构漏洞发现或硬件测试自动化展开。需要结合正文确认作者最终证明的效果和适用边界。",
+      "deep_reading": "元数据主题：Unobservable、Computer science、Attribution、Computer security、Audit trail、Audit、Observable、Layer (electronics)、Comparability、Vulnerability (computing)、Queueing theory、Empirical research、Econometrics、Operations research、Queue、Empirical evidence、Game theory、Inversion (geology)、Upstream (networking)、Benchmark (surveying)、Falsifiability、One shot、Intrusion detection system、Adversary、Asynchronous communication、Network packet、Minimax、Data mining、Causal model。建议优先阅读 Introduction、Threat Model/Background、Method、Evaluation 和 Discussion。如果该论文与 RISC-V 或处理器 fuzzing 强相关，应进一步记录其可复用的测试生成思路、覆盖率指标、oracle 设计和开源实现。",
+      "error": "Remote end closed connection without response",
+      "evaluation": "当前未进行 PDF 正文解析。后续应补充实验对象、baseline、发现 bug 数量、覆盖率提升、运行开销、复现条件和 artifact 可用性。",
       "follow_up_questions": [
         "论文是否提供开源实现或实验 artifact？",
         "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
         "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "该记录基于题名、摘要和元数据生成。论文来源为 未记录，当前分类为 RTL and Hardware Verification、Tools and Benchmarks。从命中查询看，论文与 OpenAlex: SoC verification fuzzing 相关。Introduction 部分应重点关注作者如何定义处理器/微架构/硬件 fuzzing 的验证缺口、现有方法的不足，以及本文声称的核心贡献。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
+      "limitations": "当前未进行 PDF 正文解析。初步阅读时应重点检查：是否只覆盖特定 ISA/处理器/仿真器，是否依赖人工规则或特定 oracle，是否难以迁移到 RISC-V，是否缺少真实硬件验证，以及实验是否只在有限 benchmark 上成立。",
+      "method": "当前未进行 PDF 正文解析。可从摘要初步判断其方法线索；正式阅读时应提取 fuzz 输入生成策略、变异方式、覆盖率或反馈信号、oracle/差分对象、测试平台以及是否依赖仿真器、RTL 或真实硬件。",
       "research_problem": "Strategic analysis of AI-enabled conflict often treats \"cyber\" as one offense–defense game and AI ca- pability as a scalar speedup. We argue instead that AI-mediated conflict is a layered strategic envi- ronment: a wire layer of machine-speed discovery and exploitation, a model/weights layer of captured decision-support, an audit layer of verification exhaustion, and an attribution layer where punishment is slower than defection. The central claim is an inversion across layers: the observable wire layer is relatively self-correcting, while the unobservable model and audit layers can become self- reinforcing. We formalize the stack with five compact model results and seven falsifiable predictions. Two results are empirically grounded here: the wire-layer queueing claim that correlated vulnerability arrivals in- flate remediation backlogs, and the model-layer capture-bound claim that deep, quiet, sustained ma- nipulation should be hard. The audit and attribution results remain simulation-only here; their in- cident-data grounding is future work. Throughout, we separate mathematical status from operational status: simulation-checked means the closed form is reproduced under the model assumptions, not that the mechanism has been observed in the wild. We then run two proof-of-concept probes, not a benchmark or a security evaluation. On the wire, open vulnerability corpora show clustered and over-dispersed discovery streams that inflate remedia- tion queues; the 2026 LLM-credited discovery wave is real but still mostly upstream of weaponiza- tion, with only a small fast-migrating subset reaching active-exploitation catalogs. On the model lay- er, adaptive red-teaming across six model checkpoints shows that the clean capture bound fails on a weak 0.5B model and becomes model- and domain-dependent on frontier systems. For factual ques- tions, an existence-scale test (N = 2 injections × 6 checkpoints) yields a transfer-confirmed 3:3 split: some checkpoints resist, while others flip through true-but-irrelevant context that evades a con- tent/plausibility auditor. This supports a content-versus-relevance diagnostic — not yet a gen- eral keyed-payload capability. For opinions, fact-robustness and opinion-robustness separate into distinct axes. The contribution is therefore a layered synthesis, a measurable content/relevance audit gap, and a disciplined path for testing where AI-enabled conflict shifts from exploitation of systems to manipulation of institutional judgment."
     },
     "authors": [
@@ -260,20 +261,22 @@
   {
     "abstract": "Deep learning (DL) frameworks are critical AI infrastructures that often hide bugs with serious security implications. While dynamic approaches such as fuzzing are effective in uncovering these bugs, they require real test execution and incur high computational costs. Static analysis is a natural complement because it can detect bugs without runtime execution, offering fast and scalable testing. Unfortunately, there is still limited work targeting static analysis for DL frameworks due to their multilingual architectures and tensor-related program state. We present Phoenix, the first LLM-based static analysis technique for DL frameworks. Our key insight is that cross-language tensor flows in DL frameworks can be modeled, together with concrete code context, as a structured semantic bridge intermediate representation (SBIR) that LLMs can analyze for potential bugs in tensor semantic propagation. We implement this insight through a multi-agent workflow. A summarization agent first distills bug summaries from historical bug-fix patches and CWE rules. Guided by each summary, an extraction agent identifies bug-relevant repository symbols for code retrieval, and a generation agent synthesizes grounded SBIRs from the retrieved context. Finally, an analysis agent is leveraged to check SBIRs and report potential bugs. Our evaluation shows that Phoenix is a practical complement to dynamic DL framework testing for bug finding. To date, Phoenix has found 31 real new bugs in PyTorch for different heterogeneous hardware backends (Intel CPU, NVIDIA CUDA, and Apple MPS). Among them, 20 submitted bug-fixing patches have been merged into upstream.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "PHOENIX是一种实用的基于LLM的静态分析技术，能够有效检测深度学习框架中跨语言张量语义不一致的bug。通过SBIR抽象和多智能体协同，克服了多语言架构和张量状态带来的挑战。评估表明其在真实PyTorch代码库中成功发现了大量新bug，且与动态测试互补。未来工作可能包括扩展到其他框架（如JAX、TVM）和更多bug类型。",
+      "deep_reading": "论文的核心创新在于将LLM用于DL框架的静态分析，并提出了SBIR这种轻量级中间表示来桥接跨语言张量语义。值得关注的设计决策包括：对不同来源（CWE和PR）采用相反的抽象方向（向下具体化vs向上泛化），这有助于生成更精准的bug模式；以及ERG策略中标识符提取与代码检索的分离，减少了LLM一次处理大量代码的不确定性。不过，SBIR的形式化定义中实体（E）包含语言层标识（ℓ）和对象（e）及可选的字段（f），这种设计虽然简洁，但可能难以表达复杂的控制流和数据依赖。另外，论文未详细讨论LLM在不同阶段的温度参数或采样策略对结果的影响，这可能是一个可探讨的变体。",
+      "evaluation": "在PyTorch框架上评估PHOENIX。结果：\n- 发现31个真实bug，涉及不同硬件后端（Intel CPU、NVIDIA CUDA、Apple MPS），其中26个被确认，20个修复补丁已合入主分支。\n- 与传统静态分析工具（Bandit、CSA）对比，PHOENIX的假阳性率更低（具体数值未在文本中给出，但声称显著更少）。\n- 与基于LLM的动态fuzzer（如FuzzGPT）对比，PHOENIX发现了30个动态测试未检测到的bug，证明其是动态测试的有效补充。",
       "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
+        "1. 如何进一步降低LLM在SBIR生成和分析中的幻觉概率？是否可以引入符号执行或定理证明作为辅助验证？",
+        "2. SBIR能否扩展到其他深度学习框架（如TensorFlow、JAX）或编译器（如TVM）？是否需要新增传输类型或语义约束？",
+        "3. PHOENIX能否用于检测性能相关bug（如不必要的张量拷贝）或安全性漏洞（如缓冲区溢出）？",
+        "4. 多智能体协作的设计是否可以自动化调整（如根据复杂度动态选择LLM模型或迭代次数）？",
+        "5. 如何评估PHOENIX的召回率（即漏报率）？目前仅报告了发现的新bug，未与完全已知bug列表对比。"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "本文提出PHOENIX，首个基于大语言模型（LLM）的深度学习框架静态分析技术。其核心洞察是：跨语言张量流可以建模为结构化语义桥接中间表示（SBIR），LLM能够分析该表示以检测张量语义传播中的潜在bug。PHOENIX采用多智能体工作流：摘要智能体从历史bug修复PR和CWE规则中提炼bug摘要；提取智能体根据摘要识别代码库中与bug相关的符号；生成智能体合成基于检索上下文的SBIR；分析智能体检查SBIR并报告bug。评估表明，PHOENIX在PyTorch中发现了31个真实bug（其中20个已合并），且假阳性率显著低于传统静态分析工具，并发现了30个动态测试未覆盖的bug。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "Deep learning (DL) frameworks are critical AI infrastructures that often hide bugs with serious security implications. While dynamic approaches such as fuzzing are effective in uncovering these bugs, they require real test execution and incur high computational costs. Static analysis is a natural complement because it can detect bugs without runtime execution, offering fast and scalable testing. Unfortunately, there is still limited work targeting static analysis for DL frameworks due to their multilingual architectures and tensor-related program state. We present Phoenix, the first LLM-based static analysis technique for DL frameworks. Our key insight is that cross-language tensor flows in DL frameworks can be modeled, together with concrete code context, as a structured semantic bridge intermediate representation (SBIR) that LLMs can analyze for potential bugs in tensor semantic propagation. We implement this insight through a multi-agent workflow. A summarization agent first distills bug summaries from historical bug-fix patches and CWE rules. Guided by each summary, an extraction agent identifies bug-relevant repository symbols for code retrieval, and a generation agent synthesizes grounded SBIRs from the retrieved context. Finally, an analysis agent is leveraged to check SBIRs and report potential bugs. Our evaluation shows that Phoenix is a practical complement to dynamic DL framework testing for bug finding. To date, Phoenix has found 31 real new bugs in PyTorch for different heterogeneous hardware backends (Intel CPU, NVIDIA CUDA, and Apple MPS). Among them, 20 submitted bug-fixing patches have been merged into upstream."
+      "limitations": "1. 依赖LLM的推理能力：LLM可能产生幻觉或误判，导致假阳性或遗漏。2. 需要历史bug数据：SBIR生成依赖于从bug修复PR和CWE中提取摘要，对于全新框架或尚未记录的bug类型，可能效果有限。3. 评估范围有限：仅在PyTorch上验证，未在JAX、TensorFlow等框架上测试，泛化性未知。4. SBIR设计可能覆盖不全：当前传输类型和语义约束仅针对常见bug模式，可能遗漏其他类型跨语言问题。5. 多智能体协作成本高：多次调用LLM可能带来时间和计算开销。",
+      "method": "PHOENIX包含三个主要阶段：\n1. 基于LLM的bug摘要生成：利用LLM对历史bug修复PR和CWE规则进行抽象，生成结构化bug摘要（包括bug类型、触发条件、违反的语义约束等）。对CWE采用向下具体化，对PR采用向上泛化。\n2. 基于LLM的SBIR生成：首先提取标识符（通过LLM从摘要中识别关键代码符号），然后检索代码上下文，最后生成SBIR。SBIR是一个五元组〈源实体，目标实体，传输类型，语义约束，代码上下文〉，其中传输类型包括数据传播、别名、调度、守卫检查、控制依赖、元数据转换、变异、分配等，语义约束记录张量属性（dtype、shape、layout等）。生成策略采用ERG（提取-检索-生成）循环，最多尝试3次。\n3. 基于LLM的SBIR分析：分析智能体检查SBIR中的语义约束是否被违反，从而报告候选bug。多智能体协作使得LLM专注于跨语言张量语义而避免全代码库扫描。",
+      "research_problem": "深度学习框架由于混合语言架构（Python、C++、CUDA），存在大量跨语言张量语义不一致的bug。现有动态测试（如fuzzing）需要执行成本高，且难以覆盖所有路径；而传统静态分析工具（如Bandit、CSA）仅能处理单一语言，无法捕捉跨语言的张量契约违规。因此，如何在不执行程序的情况下，通过静态分析有效检测跨语言张量语义传播中的bug是一个关键挑战。"
     },
     "authors": [
       "Shaoyu Yang",
@@ -314,20 +317,22 @@
   {
     "abstract": "Fuzzing is widely used for software and hardware verification, offering an effective alternative to random testing. While gray-box fuzzers benefit from full visibility into the system under test and can leverage execution feedback such as branch coverage, these approaches are not applicable when verifying systems whose firmware or binaries are not publicly available. In such scenarios, obtaining coverage information for guiding the fuzzer becomes infeasible. In this paper, we introduce PowerFuzz, a statistical black-box fuzzing framework that leverages power side-channel measurements as a substitute for binary instrumentation, requiring no internal visibility into the target firmware. A central challenge in black-box firmware fuzzing is determining the executed branches during test execution. To address this challenge, we use power traces to identify branches utilizing a sliding window followed by a growing window full-trace correlation method. This approach also enables the construction of a high-level control-flow graph of the black-box firmware, which we utilize to drive the fuzzer to unexplored execution paths. Extensive evaluation using three embedded hardware platforms and ten firmware benchmarks demonstrates that PowerFuzz can provide branch coverage comparable (within 13.5%) to gray-box fuzzers while significantly outperforming (up to 22%) state-of-the-art black-box fuzzers.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "PowerFuzz是首个基于功耗侧信道黑盒固件模糊测试框架，通过功耗迹替代二进制插桩实现覆盖引导，实验表明其性能接近灰盒模糊器，显著优于现有黑盒方法，为无固件二进制访问场景提供了有效验证手段。",
+      "deep_reading": "论文的核心创新在于利用功耗迹的时间序列相似性检测分支执行差异，并动态构建TCFG。关键挑战是区分数据依赖和操作依赖引起的功耗变化，作者通过DTW和相关性分析实现。同时，滑动窗口和增长窗口方法降低了计算开销。未来可探索多侧信道融合或机器学习方法提高分支识别精度。",
+      "evaluation": "在三个嵌入式硬件平台（如STM32等）和十个固件基准上评估，与灰盒模糊器（AFL等）对比，PowerFuzz的分支覆盖度在13.5%以内；相比最先进的黑盒模糊器（如EM-Fuzz），覆盖度提升高达22%。使用分支覆盖率、路径发现数等指标。",
       "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
+        "PowerFuzz如何处理多任务或中断导致的功耗迹混叠？",
+        "对于不同架构（如RISC-V）的微控制器，功耗迹的区分度是否足够？",
+        "能否结合其他侧信道（如电磁）提高分支识别鲁棒性？",
+        "TCFG的构建是否需要大量初始种子来建立基线？",
+        "PowerFuzz是否适用于非嵌入式系统（如SoC）？"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "嵌入式设备固件常因加密或专有而不可获取，传统灰盒模糊测试依赖二进制插桩获取分支覆盖率，无法用于黑盒场景。本文提出PowerFuzz，首次利用功耗侧信道测量作为黑盒固件模糊测试的反馈机制，通过功耗迹分析推断执行路径，构建迹引导控制流图（TCFG），驱动变异引擎探索新路径。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "Fuzzing is widely used for software and hardware verification, offering an effective alternative to random testing. While gray-box fuzzers benefit from full visibility into the system under test and can leverage execution feedback such as branch coverage, these approaches are not applicable when verifying systems whose firmware or binaries are not publicly available. In such scenarios, obtaining coverage information for guiding the fuzzer becomes infeasible. In this paper, we introduce PowerFuzz, a statistical black-box fuzzing framework that leverages power side-channel measurements as a substitute for binary instrumentation, requiring no internal visibility into the target firmware. A central challenge in black-box firmware fuzzing is determining the executed branches during test execution. To address this challenge, we use power traces to identify branches utilizing a sliding window followed by a growing window full-trace correlation method. This approach also enables the construction of a high-level control-flow graph of the black-box firmware, which we utilize to drive the fuzzer to unexplored execution paths. Extensive evaluation using three embedded hardware platforms and ten firmware benchmarks demonstrates that PowerFuzz can provide branch coverage comparable (within 13.5%) to gray-box fuzzers while significantly outperforming (up to 22%) state-of-the-art black-box fuzzers."
+      "limitations": "1）依赖外部物理测量设备，需要精确的同步触发和功率采集，可能受环境噪声和测量误差影响；2）仅适用于可测量功耗的微控制器，对于功耗变化不敏感或包含复杂外设的系统可能效果有限；3）TCFG可能无法完全等价于真实CFG，尤其是当某些分支未被触发时；4）实验仅基于三个平台和十个基准，通用性需进一步验证。",
+      "method": "PowerFuzz包含三个核心模块：1）相似性分析：使用滑动窗口和增长窗口全迹相关方法，结合动态时间规整（DTW）比较当前功耗迹与已存储迹，检测执行分支分歧；2）动态TCFG构建：基于检测到的分歧，增量构建TCFG，节点存储基本块对应的功耗迹段，边表示分支转移；3）分支选择：利用TCFG识别未探索路径，通过深度优先策略选择分支，指导AFL变变异引擎生成新输入。",
+      "research_problem": "黑盒固件模糊测试中，由于固件二进制不可访问，无法获取分支覆盖反馈来指导变异，导致模糊测试效率低下。现有方法如电磁侧信道需要昂贵设备，而功耗侧信道尚未被利用。"
     },
     "authors": [
       "Dakshina Tharindu",
@@ -363,20 +368,16 @@
   {
     "abstract": "Benchmarks for LLM-generated GPU kernels (KernelBench, TritonBench, GEAK) score correctness through fixed-shape, small-sample allclose-style checks. The number of inputs varies between benchmarks. The shape, dtype, and tolerance are fixed for each kernel. We test that oracle empirically. We construct a controlled corpus of 24 Triton and CPU stand-in kernels (15 correct controls and 9 LLM-style buggy variants seeded with documented transcription errors) and re-evaluate it under op-schema-aware seeded fuzzing with a high-precision (fp64) CPU reference and per-(op, dtype) absolute tolerances. The seeded oracle flags 9 of 9 buggy kernels and passes 15 of 15 correct controls, at zero precision cost on controls. We extend the corpus to 26 ops (adding a flash-attention pair) and re-run the same protocol on five GPU classes (RTX 3060, A10, L40S, A100 SXM4, H100 NVL). The verdicts are identical across all five GPUs: 10 of 10 illusions caught and 16 of 16 controls clean. The corpus result is about LLM-style transcription bugs that the allclose-on-one-shape oracle certifies as correct, not about the bug rate of any specific deployed LLM. Every flagged failure replays byte-for-byte from a stored seed.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
-      "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
-      ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "LLM式的转录错误能够通过现有的固定形状、小样本allclose-style检查被错误地认证为“正确”。本文提出的op-schema-aware种子预言机成功揭示了这一差距，并提供了边界感知形状生成、基于(op, dtype)的绝对容忍度校准以及原则性输入生成等对策。这些对策易于集成到任何现有项目，可有效消除正确性幻觉。",
+      "deep_reading": "本文的核心贡献在于系统性地揭示了LLM生成GPU内核验证中的正确性幻觉问题，并通过构造的语料库和模糊测试方法证实了该问题的存在。op-schema-aware形状生成是方法上的关键创新，它通过共享符号维度和边界候选集，使测试能够覆盖操作的完整输入域，从而暴露形状相关错误。采用绝对容忍度并基于(op, dtype)校准，避免了PyTorch allclose组合容忍度可能掩盖错误的风险。跨GPU一致性验证表明方法对硬件平台不敏感，增强了结果的可靠性。可重复性设计（每失败存储快照）确保了实验的可审计性。论文坦诚地讨论了局限性，尤其是错误变体的人工性质，并给出了合理理由：确保ground truth准确且针对已知威胁模型。这为进一步将方法应用于真实LLM输出提供了基准。",
+      "evaluation": "在RTX 3060上的单GPU评估中，种子预言机正确捕获了9个LLM式错误变体（其中4个为真实Triton GPU内核），15个正确控制组全部通过，零误报。扩展至26个操作并在5种GPU（RTX 3060、A10、L40S、A100 SXM4、H100 NVL）上进行跨GPU验证，结果完全一致：16个控制组通过，10个LLM式错误变体被捕获。错误分为两类：幅度均匀错误（如缺失缩放因子）几乎在所有形状下触发；形状敏感错误（如尾部掩码）仅在特定边界形状下触发，而边界形状不在常规测试中。",
+      "follow_up_questions": "1. 如何将本文的模糊测试方法扩展到对真实LLM生成的大规模内核集（如KernelBench或GEAK的输出）进行自动评估，以测量实际错误率？2. 如何自动化校准每个(op, dtype)的绝对容忍度，使其既能捕获错误又避免假阳性？3. 本文的op-schema-aware模糊测试能否作为集成模块加入现有LLM内核基准测试中，取代原有的allclose检查？4. 对于形状敏感错误，边界候选集的设计是否可以自动化生成或优化，而非手动选择？5. 预言机如何扩展到跨数据类型比较（例如内核fp16与fp64参考），以更好地检测混合精度问题？6. 该模糊测试框架是否可迁移到其他硬件平台（如AMD GPU或CPU）？",
+      "introduction": "现有基准测试在评判LLM生成GPU内核正确性时，采用固定形状、固定数据类型和手动设定的容忍度，这种单一测试方式会漏掉许多真实错误。本文构造了一个包含24个内核的语料库（15个正确控制组和9个LLM式错误变体），通过op-schema-aware种子模糊测试和高精度fp64参考预言机重新评估，以揭示这种幻觉。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "Benchmarks for LLM-generated GPU kernels (KernelBench, TritonBench, GEAK) score correctness through fixed-shape, small-sample allclose-style checks. The number of inputs varies between benchmarks. The shape, dtype, and tolerance are fixed for each kernel. We test that oracle empirically. We construct a controlled corpus of 24 Triton and CPU stand-in kernels (15 correct controls and 9 LLM-style buggy variants seeded with documented transcription errors) and re-evaluate it under op-schema-aware seeded fuzzing with a high-precision (fp64) CPU reference and per-(op, dtype) absolute tolerances. The seeded oracle flags 9 of 9 buggy kernels and passes 15 of 15 correct controls, at zero precision cost on controls. We extend the corpus to 26 ops (adding a flash-attention pair) and re-run the same protocol on five GPU classes (RTX 3060, A10, L40S, A100 SXM4, H100 NVL). The verdicts are identical across all five GPUs: 10 of 10 illusions caught and 16 of 16 controls clean. The corpus result is about LLM-style transcription bugs that the allclose-on-one-shape oracle certifies as correct, not about the bug rate of any specific deployed LLM. Every flagged failure replays byte-for-byte from a stored seed."
+      "limitations": "1. 10个错误变体是作者人工植入的、文献中记载的LLM转录错误模式，并非直接从真实LLM输出中获取，因此本研究衡量的是哪些错误模式会被allclose-style检查遗漏，而非任何特定LLM的错误率。2. 预言机当前仅进行同数据类型比较（内核fp16与从fp64向下取整的参考fp16），跨数据类型比较（如内核fp16与参考fp64）是未来工作。3. Python客户端将接收张量解码为连续布局，因此非连续布局的模糊测试在客户端边界上是名义上的。4. bfloat16在Python客户端中受限于NumPy缺乏原生bf16类型，测试中代理为fp16。5. 高精度fp64参考经向下取整后作为正确性标准，不保证与特定库的字节一致。6. Triton内核每次运行重新编译，未控制ptxas随机性，但跨GPU验证表明不影响正确性判决。",
+      "method": "方法包括三个核心部分：（1）op-schema-aware模糊测试：每个内核声明一个模式，包含共享符号维度及其候选值（包括边界值），模糊器根据主种子推导出每个测试用例的确定性形状，从而覆盖操作的真实输入域。（2）参考预言机：使用fp64 CPU参考计算，然后向下取整到目标数据类型，采用基于(op, dtype)的绝对容忍度进行比较，并检测NaN和Inf，记录完整的逐元素误差分布（最大绝对值、最大相对值、ULP百分位数等）。（3）语料库构建：最初24个操作，15个正确控制组和9个LLM式错误变体（如GELU缺少0.5、softmax尾部掩码错误、RMSNorm缺少sqrt等），随后扩展到26个操作（添加flash-attention对）用于跨GPU验证。所有测试通过可重复流水线运行，每个失败案例存储完整输入快照。",
+      "research_problem": "现有LLM生成GPU内核的基准测试（KernelBench、TritonBench、GEAK）通过固定形状、小样本的allclose-style检查来评判正确性，但该检查存在系统性乐观偏差，无法检测LLM式的转录错误，导致产生“正确性幻觉”。"
     },
     "authors": [
       "Dipankar Sarkar"
@@ -3132,7 +3133,7 @@
       "Microarchitecture Security",
       "Fuzzing Methodology"
     ],
-    "content_hash": "56c1338988b3b407769464cd364d994fdef3b35086efc754d11c00ec427e1f0a",
+    "content_hash": "db4562fd4fd6ec43d3e1b0778df3990218b323c24f796d29619b4857a82f1981",
     "doi": "https://doi.org/10.1145/3676642.3736115",
     "first_seen": "2026-07-21",
     "id": "arxiv-2504-20934v1",
@@ -3143,19 +3144,20 @@
       "(\"transient execution\" AND fuzzing) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE)",
       "Semantic Scholar: transient execution fuzzing"
     ],
-    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3676642.3736115",
+    "pdf_url": "https://arxiv.org/pdf/2504.20934v1",
     "published": "2025-04-29",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AR",
+      "cs.CR"
     ],
     "source_id": "2504.20934v1",
-    "title": "DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking Assisted Processor Fuzzing",
+    "title": "DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking assisted Processor Fuzzing",
     "title_key": "dejavuzz disclosing transient execution bugs with dynamic swappable memory and differential information flow tracking assisted processor fuzzing",
     "updated": "2025-04-29",
-    "url": "https://doi.org/10.1145/3676642.3736115",
-    "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems"
+    "url": "http://arxiv.org/abs/2504.20934v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "In the evolving landscape of integrated circuit (IC) design, the increasing complexity of modern processors and intellectual property (IP) cores has introduced new challenges in ensuring design correctness and security. The recent advancements in hardware fuzzing techniques have shown their efficacy in detecting hardware bugs and vulnerabilities at the RTL abstraction level of hardware. However, they suffer from several limitations, including an inability to address vulnerabilities introduced during synthesis and gate-level transformations. These methods often fail to detect issues arising from library adversaries, where compromised or malicious library components can introduce backdoors or unintended behaviors into the design. In this paper, we present a novel hardware fuzzer, SynFuzz, designed to overcome the limitations of existing hardware fuzzing frameworks. SynFuzz focuses on fuzzing hardware at the gate-level netlist to identify synthesis bugs and vulnerabilities that arise during the transition from RTL to the gate-level. We analyze the intrinsic hardware behaviors using coverage metrics specifically tailored for the gate-level. Furthermore, SynFuzz implements differential fuzzing to uncover bugs associated with EDA libraries. We evaluated SynFuzz on popular open-source processors and IP designs, successfully identifying 7 new synthesis bugs. Additionally, by exploiting the optimization settings of EDA tools, we performed a compromised library mapping attack (CLiMA), creating a malicious version of hardware designs that remains undetectable by traditional verification methods. We also demonstrate how SynFuzz overcomes the limitations of the industry-standard formal verification tool, Cadence Conformal, providing a more robust and comprehensive approach to hardware verification.",
@@ -3645,7 +3647,7 @@
       "Microarchitecture Security",
       "Tools and Benchmarks"
     ],
-    "content_hash": "7f4d2f101411a627b2308d131ce5f746cfd58d6a608c6309e133335786571149",
+    "content_hash": "c0260ebb3d47b083c2ec7381df58ffb48c14757a1c992d760751d5739b8f35a0",
     "doi": "https://doi.org/10.48550/arXiv.2406.06034",
     "first_seen": "2026-07-21",
     "id": "arxiv-2406-06034v2",
@@ -3658,17 +3660,17 @@
     ],
     "pdf_url": "https://arxiv.org/pdf/2406.06034v2",
     "published": "2024-06-10",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.CR"
     ],
     "source_id": "2406.06034v2",
     "title": "Shesha: Multi-head Microarchitectural Leakage Discovery in new-generation Intel Processors",
     "title_key": "shesha multi head microarchitectural leakage discovery in new generation intel processors",
     "updated": "2024-06-14",
-    "url": "https://doi.org/10.48550/arXiv.2406.06034",
-    "venue": "USENIX Security Symposium"
+    "url": "http://arxiv.org/abs/2406.06034v2",
+    "venue": "arXiv"
   },
   {
     "abstract": "High-Level Synthesis (HLS) has transformed the development of complex Hardware IPs (HWIP) by offering abstraction and configurability through languages like SystemC/C++, particularly for Field Programmable Gate Array (FPGA) accelerators in high-performance and cloud computing contexts. These IPs can be synthesized for different FPGA boards in cloud, offering compact area requirements and enhanced flexibility. HLS enables designs to execute directly on ARM processors within modern FPGAs without the need for Register Transfer Level (RTL) synthesis, thereby conserving FPGA resources. While HLS offers flexibility and efficiency, it also introduces potential vulnerabilities such as the presence of hidden circuitry, including the possibility of hosting hardware trojans within designs. In cloud environments, these vulnerabilities pose significant security concerns such as leakage of sensitive data, IP functionality disruption and hardware damage, necessitating the development of robust testing frameworks. This research presents an advanced testing approach for HLS-developed cloud IPs, specifically targeting hidden malicious functionalities that may exist in rare conditions within the design. The proposed method leverages selective instrumentation, combining greybox fuzzing and concolic execution techniques to enhance test generation capabilities. Evaluation conducted on various HLS benchmarks, possessing characteristics of FPGA-based cloud IPs with embedded cloud related threats, demonstrates the effectiveness of our framework in detecting trojans and rare scenarios, showcasing improvements in coverage, time efficiency, memory usage, and testing costs compared to existing methods.",
@@ -4661,16 +4663,16 @@
     },
     "authors": [
       "Daniel Weber",
-      "A. Ibrahim",
+      "Ahmad Ibrahim",
       "Hamed Nemati",
       "Michael Schwarz",
-      "C. Rossow"
+      "Christian Rossow"
     ],
     "categories": [
       "Microarchitecture Security",
       "Tools and Benchmarks"
     ],
-    "content_hash": "68f7e1e0cea556d7ba9b1b01e69fba0f8a157153f83f5e8a0b4bf637d99d86aa",
+    "content_hash": "2295b57997759db78d8a0fa74fadea462ad24a806b6120aba5916ef8b6f94524",
     "first_seen": "2026-07-21",
     "id": "arxiv-2106-03470v1",
     "last_seen": "2026-07-21",
@@ -4681,17 +4683,17 @@
     ],
     "pdf_url": "https://arxiv.org/pdf/2106.03470v1",
     "published": "2021-06-07",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.CR"
     ],
     "source_id": "2106.03470v1",
     "title": "Osiris: Automated Discovery of Microarchitectural Side Channels",
     "title_key": "osiris automated discovery of microarchitectural side channels",
     "updated": "2021-06-07",
-    "url": "https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2",
-    "venue": "USENIX Security Symposium"
+    "url": "http://arxiv.org/abs/2106.03470v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "Hardware flaws are permanent and potent: hardware cannot be patched once fabricated, and any flaws may undermine any software executing on top. Consequently, verification time dominates implementation time. The gold standard in hardware Design Verification (DV) is concentrated at two extremes: random dynamic verification and formal verification. Both struggle to root out the subtle flaws in complex hardware that often manifest as security vulnerabilities. The root problem with random verification is its undirected nature, making it inefficient, while formal verification is constrained by the state-space explosion problem, making it infeasible against complex designs. What is needed is a solution that is directed, yet under-constrained. Instead of making incremental improvements to existing DV approaches, we leverage the observation that existing software fuzzers already provide such a solution, and adapt them for hardware DV. Specifically, we translate RTL hardware to a software model and fuzz that model. The central challenge we address is how best to mitigate the differences between the hardware execution model and software execution model. This includes: 1) how to represent test cases, 2) what is the hardware equivalent of a crash, 3) what is an appropriate coverage metric, and 4) how to create a general-purpose fuzzing harness for hardware. To evaluate our approach, we fuzz four IP blocks from Google's OpenTitan SoC. Our experiments reveal a two orders-of-magnitude reduction in run time to achieve Finite State Machine (FSM) coverage over traditional dynamic verification schemes. Moreover, with our design-agnostic harness, we achieve over 88% HDL line coverage in three out of four of our designs -- even without any initial seeds.",
@@ -4713,8 +4715,8 @@
     },
     "authors": [
       "Timothy Trippel",
-      "K. Shin",
-      "A. Chernyakhovsky",
+      "Kang G. Shin",
+      "Alex Chernyakhovsky",
       "Garret Kelly",
       "Dominic Rizzo",
       "Matthew Hicks"
@@ -4722,7 +4724,7 @@
     "categories": [
       "RTL and Hardware Verification"
     ],
-    "content_hash": "66b9469c7e99c2ff0f929d3d16acc036c962f4007a4327f2f968248a88bf8f24",
+    "content_hash": "368076a92aea3698f6831daf5a67db68f3098547173fb2f799441e8958fa4f84",
     "first_seen": "2026-07-21",
     "id": "arxiv-2102-02308v1",
     "last_seen": "2026-07-21",
@@ -4732,17 +4734,18 @@
     ],
     "pdf_url": "https://arxiv.org/pdf/2102.02308v1",
     "published": "2021-02-03",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AR",
+      "cs.CR"
     ],
     "source_id": "2102.02308v1",
     "title": "Fuzzing Hardware Like Software",
     "title_key": "fuzzing hardware like software",
     "updated": "2021-02-03",
-    "url": "https://www.semanticscholar.org/paper/de7eff32b91ab9c2a73077e5e7258a3877ffcb94",
-    "venue": "USENIX Security Symposium"
+    "url": "http://arxiv.org/abs/2102.02308v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "Programmable switches have emerged as powerful and flexible alternatives to fixed-function forwarding devices. But because of the unique hardware constraints of network switches, the design and implementation of compilers targeting these devices is tedious and error prone. Despite the important role that compilers play in software development, there is a dearth of tools for testing compilers for programmable network devices. We present Druzhba, a programmable switch simulator used for testing compilers targeting programmable packet-processing substrates. We show that we can model the low-level behavior of a switch's programmable hardware. We further show how our machine model can be used by compiler developers to target Druzhba as a compiler backend. Generated machine code programs are fed into Druzhba and tested using a fuzzing-based approach that allows compiler developers to test the correctness of their compilers. Using a program-synthesis-based compiler as a case study, we demonstrate how Druzhba has been successful in testing compiler-generated machine code for our simulated switch pipeline instruction set.",

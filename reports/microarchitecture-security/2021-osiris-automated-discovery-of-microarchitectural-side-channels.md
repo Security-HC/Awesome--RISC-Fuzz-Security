@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Daniel Weber、A. Ibrahim、Hamed Nemati、Michael Schwarz、C. Rossow
+- 作者：Daniel Weber、Ahmad Ibrahim、Hamed Nemati、Michael Schwarz、Christian Rossow
 - 发表日期：2021-06-07
 - 更新日期：2021-06-07
 - 来源：arXiv
@@ -10,8 +10,8 @@
 - 研究类别：微架构安全、工具与基准测试
 - 首次发现：2026-07-21
 - 最近更新：2026-07-21
-- 命中次数：3
-- 论文页面：[https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2](https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2)
+- 命中次数：4
+- 论文页面：[http://arxiv.org/abs/2106.03470v1](http://arxiv.org/abs/2106.03470v1)
 - PDF：[https://arxiv.org/pdf/2106.03470v1](https://arxiv.org/pdf/2106.03470v1)
 - 分析模式：仅元数据分析
 

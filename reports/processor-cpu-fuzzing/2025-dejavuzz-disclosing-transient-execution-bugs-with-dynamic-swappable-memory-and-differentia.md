@@ -1,4 +1,4 @@
-# DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking Assisted Processor Fuzzing
+# DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking assisted Processor Fuzzing
 
 ## 基本信息
 
@@ -10,9 +10,9 @@
 - 研究类别：处理器与 CPU Fuzzing、微架构安全、Fuzzing 方法论
 - 首次发现：2026-07-21
 - 最近更新：2026-07-21
-- 命中次数：4
-- 论文页面：[https://doi.org/10.1145/3676642.3736115](https://doi.org/10.1145/3676642.3736115)
-- PDF：[https://dl.acm.org/doi/pdf/10.1145/3676642.3736115](https://dl.acm.org/doi/pdf/10.1145/3676642.3736115)
+- 命中次数：5
+- 论文页面：[http://arxiv.org/abs/2504.20934v1](http://arxiv.org/abs/2504.20934v1)
+- PDF：[https://arxiv.org/pdf/2504.20934v1](https://arxiv.org/pdf/2504.20934v1)
 - 分析模式：仅元数据分析
 
 ## 摘要
