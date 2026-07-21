@@ -1,4 +1,3 @@
-from __future__ import annotations
 
 import os
 import json
@@ -43,6 +42,7 @@ def abstract_based_analysis(paper: dict) -> dict:
 
 
 def extract_pdf_text(pdf_url: str, max_pages: int = 16) -> str:
+def extract_pdf_text(pdf_url: str, max_pages: int = 8) -> str:
     try:
         from pypdf import PdfReader
     except Exception:
@@ -50,6 +50,7 @@ def extract_pdf_text(pdf_url: str, max_pages: int = 16) -> str:
 
     request = urllib.request.Request(pdf_url, headers={"User-Agent": "risc-fuzz-paper-watch/1.0"})
     with urllib.request.urlopen(request, timeout=60) as response:
+    with urllib.request.urlopen(request, timeout=45) as response:
         content = response.read()
 
     with tempfile.NamedTemporaryFile(suffix=".pdf") as handle:
@@ -60,6 +61,7 @@ def extract_pdf_text(pdf_url: str, max_pages: int = 16) -> str:
         for page in reader.pages[:max_pages]:
             pages.append(page.extract_text() or "")
     return normalize_space("\n".join(pages))[:55000]
+    return normalize_space("\n".join(pages))[:25000]
 
 
 def llm_analysis(paper: dict, full_text: str) -> dict:
@@ -68,10 +70,12 @@ def llm_analysis(paper: dict, full_text: str) -> dict:
     if os.environ.get("DEEPSEEK_API_KEY"):
         model = os.environ.get("DEEPSEEK_MODEL", "deepseek-v4-flash")
         client = OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"], base_url="https://api.deepseek.com")
+        client = OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"], base_url="https://api.deepseek.com", timeout=90.0)
         provider = "DeepSeek"
     else:
         model = os.environ.get("OPENAI_MODEL", "gpt-4.1-mini")
         client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+        client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"), timeout=90.0)
         provider = "OpenAI"
 
     prompt = f"""
@@ -127,6 +131,8 @@ def needs_analysis(paper: dict) -> bool:
 def main() -> None:
     papers = read_json(DATA_DIR / "papers.json", [])
     has_key = bool(os.environ.get("OPENAI_API_KEY") or os.environ.get("DEEPSEEK_API_KEY"))
+    max_llm_analyses = int(os.environ.get("MAX_LLM_ANALYSES_PER_RUN", "5"))
+    llm_analyses_used = 0
 
     for paper in papers:
         if not needs_analysis(paper):
@@ -134,15 +140,12 @@ def main() -> None:
         if not has_key:
             paper["analysis"] = abstract_based_analysis(paper)
             continue
+        if llm_analyses_used >= max_llm_analyses:
+            if not paper.get("analysis"):
+                paper["analysis"] = abstract_based_analysis(paper)
+            continue
         try:
+            print(f"分析论文：{paper.get('title', paper.get('id', 'unknown'))}")
             full_text = extract_pdf_text(paper.get("pdf_url", ""))
             paper["analysis"] = llm_analysis(paper, full_text) if full_text else abstract_based_analysis(paper)
-        except Exception as exc:
-            paper["analysis"] = abstract_based_analysis(paper)
-            paper["analysis"]["error"] = str(exc)
-
-    write_json(DATA_DIR / "papers.json", papers)
-
-
-if __name__ == "__main__":
-    main()
+            llm_analyses_used += 1
