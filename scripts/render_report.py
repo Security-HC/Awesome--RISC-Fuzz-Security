@@ -143,8 +143,8 @@ def grouped_papers(papers: list[dict]) -> dict[str, list[dict]]:
 
 def render_table(papers: list[dict], detail_prefix: str) -> list[str]:
     lines = [
-        "| 发表日期 | 论文标题 | 简要研究问题 | Introduction | 方法 | 结论 | 论文页面 | PDF | 详细分析 |",
-        "|---|---|---|---|---|---|---|---|---|",
+        "| 发表日期 | 论文标题 | 会议/期刊 | 简要研究问题 | Introduction | 方法 | 结论 | 论文页面 | PDF | 详细分析 |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for paper in papers:
         analysis = paper.get("analysis") or {}
@@ -155,6 +155,7 @@ def render_table(papers: list[dict], detail_prefix: str) -> list[str]:
                 [
                     md_escape(paper.get("published", "")),
                     md_escape(paper.get("title", "")),
+                    md_escape(paper.get("venue", paper.get("source", ""))),
                     short_text(analysis.get("research_problem", "")),
                     short_text(analysis.get("introduction", "")),
                     short_text(analysis.get("method", "")),
