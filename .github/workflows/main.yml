@@ -2,7 +2,7 @@ name: Daily RISC Fuzz Security Paper Watch
 
 on:
   schedule:
-    - cron: "0 1 * * *"  
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 permissions:
@@ -32,6 +32,8 @@ jobs:
 
       - name: Summarize papers
         env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4.1-mini
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-v4-pro
         run: python scripts/summarize_papers.py
@@ -46,5 +48,3 @@ jobs:
           git add data reports README.md
           git commit -m "Update daily paper watch" || echo "No changes to commit"
           git push
-
-  
