@@ -1,52 +1,58 @@
 # Awesome--RISC-Fuzz-Security
 
-Daily paper radar for RISC-V, processor, microarchitecture, hardware fuzzing, and security verification research.
+面向 RISC-V、处理器、微架构、硬件 Fuzzing 与安全验证方向的每日论文自动收集和中文阅读整理仓库。
 
-## What It Builds
+## 输出内容
 
-The GitHub Action runs every day and updates:
+GitHub Action 每天自动运行并更新：
 
-- [reports/README.md](reports/README.md): category-based paper table
-- `reports/papers/*.md`: detailed reading notes for each paper
-- [data/papers.json](data/papers.json): accumulated paper metadata and analysis state
+- [reports/README.md](reports/README.md)：按研究类别划分的中文论文总表
+- `reports/papers/*.md`：每篇论文的中文详细阅读记录
+- [data/papers.json](data/papers.json)：累计论文元数据、分类和分析状态
 
-Each detailed note tracks:
+每篇论文详情页包含：
 
-- Basic metadata and clickable paper links
-- Research problem
-- Introduction summary
-- Method
-- Evaluation
-- Conclusion
-- Limitations
-- Deeper reading analysis
-- Follow-up research questions
+- 基本信息和可点击论文链接
+- 研究问题
+- Introduction 梳理
+- 方法
+- 实验与评估
+- 结论
+- 局限性
+- 详细阅读分析
+- 后续跟进问题
 
-## Daily Schedule
+## 每日运行时间
 
-The workflow is configured for 09:00 Beijing time every day:
+工作流默认每天北京时间 09:00 运行：
 
 ```yaml
 cron: "0 1 * * *"
 ```
 
-GitHub Actions cron uses UTC, so `01:00 UTC` is `09:00 Asia/Shanghai`.
+GitHub Actions 的 cron 使用 UTC，因此 `01:00 UTC` 对应北京时间 `09:00`。
 
-You can also run it manually from the GitHub Actions tab with `workflow_dispatch`.
+也可以在 GitHub Actions 页面通过 `workflow_dispatch` 手动运行。
 
-## Required Repository Secret
+## API Key 设置
 
-For full-paper LLM analysis, add this repository secret:
+如果使用 OpenAI，在仓库 Secret 中添加：
 
 ```text
 OPENAI_API_KEY
 ```
 
-Without the secret, the workflow still fetches papers and creates metadata-based notes from titles and abstracts.
+如果使用 DeepSeek，在仓库 Secret 中添加：
 
-## Search Scope
+```text
+DEEPSEEK_API_KEY
+```
 
-The default search includes:
+如果没有配置 API Key，工作流仍会抓取论文，并基于题名和摘要生成中文记录；配置 API Key 后会尝试读取 PDF 正文并生成更完整的中文全文分析。
+
+## 检索范围
+
+默认检索范围包括：
 
 - RISC-V fuzzing
 - processor fuzzing
@@ -62,13 +68,13 @@ The default search includes:
 
 Edit [config/search_queries.json](config/search_queries.json) and [config/categories.json](config/categories.json) to tune keywords and categories.
 
-## Deduplication
+## 查重机制
 
-The collector deduplicates papers before rendering reports. A paper is treated as already known when any of these match an existing record:
+脚本在生成报告前会自动查重。只要下面任一字段命中已有记录，就认为是同一篇论文：
 
-- arXiv/source ID
-- Normalized title
-- Abstract page URL
+- arXiv 或其他来源编号
+- 归一化后的标题
+- 论文页面 URL
 - PDF URL
 
-Existing papers are not rewritten every day when nothing changed, so the scheduled Action should not create noisy commits for the same search results. The metadata keeps `first_seen`, `last_seen`, `seen_count`, and `content_hash` fields for traceability.
+如果同一篇论文每天被重复检索到，但元数据没有变化，脚本不会重写记录，也不会制造无意义的每日提交。元数据中会保留 `first_seen`、`last_seen`、`seen_count` 和 `content_hash` 便于追踪。
