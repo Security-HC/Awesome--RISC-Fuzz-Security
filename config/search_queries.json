@@ -1,51 +1,65 @@
 {
-  "RISC-V Fuzzing 研究": [
-    "risc-v",
-    "riscv",
-    "risc v",
-    "isa fuzz",
-    "instruction set"
+  "arxiv_categories": ["cs.CR", "cs.AR", "cs.DC", "cs.SE"],
+  "max_results_per_query": 15,
+  "max_openalex_results_per_query": 25,
+  "max_semantic_scholar_results_per_query": 20,
+  "openalex_from_publication_date": "2010-01-01",
+  "request_delay_seconds": 10,
+  "queries": [
+    "\"RISC-V\" AND fuzzing",
+    "\"processor\" AND fuzzing",
+    "\"CPU\" AND fuzzing",
+    "\"microarchitecture\" AND fuzzing",
+    "\"hardware\" AND fuzzing",
+    "\"ISA\" AND testing",
+    "\"instruction set\" AND fuzzing",
+    "\"RTL\" AND fuzzing",
+    "\"SoC\" AND verification",
+    "\"transient execution\" AND fuzzing",
+    "\"cache side channel\" AND fuzzing",
+    "\"hardware security\" AND fuzzing"
   ],
-  "处理器与 CPU Fuzzing": [
-    "processor fuzz",
-    "cpu fuzz",
-    "core fuzz",
-    "instruction fuzz",
-    "architecture fuzz"
+  "literature_queries": [
+    "RISC-V processor fuzzing",
+    "RISC-V hardware fuzzing",
+    "processor fuzzing",
+    "CPU fuzzing",
+    "microarchitecture fuzzing",
+    "RTL fuzzing",
+    "hardware fuzzing",
+    "ISA testing fuzzing",
+    "instruction set fuzzing",
+    "SoC verification fuzzing",
+    "transient execution fuzzing",
+    "cache side channel fuzzing",
+    "hardware security fuzzing",
+    "processor verification fuzzing",
+    "microarchitectural side channel detection"
   ],
-  "微架构安全": [
-    "microarchitecture",
-    "microarchitectural",
-    "speculative execution",
-    "transient execution",
-    "cache side channel",
-    "side channel",
-    "timing channel"
+  "top_venues": [
+    "IEEE Symposium on Security and Privacy",
+    "USENIX Security Symposium",
+    "ACM Conference on Computer and Communications Security",
+    "Network and Distributed System Security Symposium",
+    "NDSS",
+    "ACM Transactions on Privacy and Security",
+    "IEEE Transactions on Dependable and Secure Computing",
+    "International Symposium on Computer Architecture",
+    "IEEE/ACM International Symposium on Microarchitecture",
+    "ACM International Conference on Architectural Support for Programming Languages and Operating Systems",
+    "IEEE International Symposium on High-Performance Computer Architecture",
+    "Design Automation Conference",
+    "International Conference on Computer-Aided Design",
+    "Design, Automation & Test in Europe Conference",
+    "Hardware and Architectural Support for Security and Privacy",
+    "IEEE International Symposium on Hardware Oriented Security and Trust",
+    "RAID",
+    "Annual Computer Security Applications Conference",
+    "ESORICS"
   ],
-  "RTL 与硬件验证": [
-    "rtl",
-    "verilog",
-    "systemverilog",
-    "hardware verification",
-    "formal verification",
-    "simulation",
-    "soc verification"
-  ],
-  "Fuzzing 方法论": [
-    "coverage guided",
-    "mutation",
-    "grammar",
-    "differential testing",
-    "oracle",
-    "symbolic execution",
-    "concolic"
-  ],
-  "工具与基准测试": [
-    "benchmark",
-    "dataset",
-    "framework",
-    "tool",
-    "artifact",
-    "open source"
-  ]
+  "google_scholar_note": {
+    "enabled": false,
+    "reason": "Google Scholar has no stable public API and automated scraping often triggers CAPTCHA. Use it manually, or use a paid provider such as SerpAPI if automated Scholar search is required.",
+    "manual_url": "https://scholar.google.com/"
+  }
 }
