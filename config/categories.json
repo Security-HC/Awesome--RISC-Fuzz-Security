@@ -1,0 +1,52 @@
+{
+  "RISC-V Fuzzing": [
+    "risc-v",
+    "riscv",
+    "risc v",
+    "isa fuzz",
+    "instruction set"
+  ],
+  "Processor and CPU Fuzzing": [
+    "processor fuzz",
+    "cpu fuzz",
+    "core fuzz",
+    "instruction fuzz",
+    "architecture fuzz"
+  ],
+  "Microarchitecture Security": [
+    "microarchitecture",
+    "microarchitectural",
+    "speculative execution",
+    "transient execution",
+    "cache side channel",
+    "side channel",
+    "timing channel"
+  ],
+  "RTL and Hardware Verification": [
+    "rtl",
+    "verilog",
+    "systemverilog",
+    "hardware verification",
+    "formal verification",
+    "simulation",
+    "soc verification"
+  ],
+  "Fuzzing Methodology": [
+    "coverage guided",
+    "mutation",
+    "grammar",
+    "differential testing",
+    "oracle",
+    "symbolic execution",
+    "concolic"
+  ],
+  "Tools and Benchmarks": [
+    "benchmark",
+    "dataset",
+    "framework",
+    "tool",
+    "artifact",
+    "open source"
+  ]
+}
+

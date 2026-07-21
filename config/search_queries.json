@@ -1,0 +1,19 @@
+{
+  "arxiv_categories": ["cs.CR", "cs.AR", "cs.DC", "cs.SE"],
+  "max_results_per_query": 25,
+  "queries": [
+    "\"RISC-V\" AND fuzzing",
+    "\"processor\" AND fuzzing",
+    "\"CPU\" AND fuzzing",
+    "\"microarchitecture\" AND fuzzing",
+    "\"hardware\" AND fuzzing",
+    "\"ISA\" AND testing",
+    "\"instruction set\" AND fuzzing",
+    "\"RTL\" AND fuzzing",
+    "\"SoC\" AND verification",
+    "\"transient execution\" AND fuzzing",
+    "\"cache side channel\" AND fuzzing",
+    "\"hardware security\" AND fuzzing"
+  ]
+}
+
