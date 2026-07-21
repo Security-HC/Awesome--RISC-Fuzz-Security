@@ -42,7 +42,6 @@ def abstract_based_analysis(paper: dict) -> dict:
     }
 
 
-def extract_pdf_text(pdf_url: str, max_pages: int = 16) -> str:
 def extract_pdf_text(pdf_url: str, max_pages: int = 8) -> str:
     try:
         from pypdf import PdfReader
@@ -50,7 +49,6 @@ def extract_pdf_text(pdf_url: str, max_pages: int = 8) -> str:
         return ""
 
     request = urllib.request.Request(pdf_url, headers={"User-Agent": "risc-fuzz-paper-watch/1.0"})
-    with urllib.request.urlopen(request, timeout=60) as response:
     with urllib.request.urlopen(request, timeout=45) as response:
         content = response.read()
 
