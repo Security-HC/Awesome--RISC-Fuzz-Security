@@ -197,11 +197,12 @@ def main() -> None:
     request_delay_seconds = int(config.get("request_delay_seconds", 10))
 
     fetched: list[dict] = []
-    for query in queries:
+    for index, query in enumerate(queries):
         category_filter = " OR ".join(f"cat:{category}" for category in arxiv_categories)
         search_query = f"({query}) AND ({category_filter})" if category_filter else query
         fetched.extend(arxiv_query(search_query, max_results))
-        time.sleep(request_delay_seconds)
+        if index < len(queries) - 1:
+            time.sleep(request_delay_seconds)
 
     existing = read_json(DATA_DIR / "papers.json", [])
     write_json(DATA_DIR / "papers.json", merge_papers(existing, fetched))
