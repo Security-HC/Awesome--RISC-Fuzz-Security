@@ -632,20 +632,25 @@
   {
     "abstract": "Generating code from natural-language requirements has become a primary route for LLM-assisted software development. Although LLMs can successfully complete small programming tasks, generating an entire complex project remains unreliable because subtle errors may survive compilation and testing. Verified programming can reduce this risk by requiring generated implementations to satisfy machine-checked specifications. Existing explorations mostly target verification-oriented languages and toolchains such as Dafny and Frama-C, but directly generating project-scale verified code with these systems remains difficult. This paper studies whether interactive theorem provers (ITPs) can support large-scale software generation. Because ITPs handle pure total functions but not effects such as I/O, our agent separates effectful code from pure logic: it implements the effects in the target language, proves the pure logic in an ITP, and extracts it for integration into the final project. We study this route through the fully automatic development of a CPU interpreter for all 47 instructions of the unprivileged RISC-V RV32I base: after the requirements are supplied, no human intervenes in synthesis, proof repair, extraction, or integration. With Rocq as the backend, the agent completes the project within 30 minutes, producing 1,859 lines of verified Rocq and extracting 2,848 lines of C++. The resulting interpreter passes all 265 LLM-generated tests covering the 47 instructions and exhibits zero crashes and zero hangs during 12 hours of AFL++ fuzzing. Under the same configuration, a Dafny-based backend fails to complete verification. Our observation is that Rocq exposes a concrete proof state when a proof attempt fails, giving the agent actionable feedback for repair. These results provide empirical evidence that ITP-based verified programming is a feasible route for LLM-generated software projects.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "ITP为基础的验证编程是LLM生成软件项目的可行路线，案例提供了经验证据。Rocq的证明状态反馈是代理驱动开发中的优势属性。",
+      "deep_reading": "论文创新在于利用ITP的显式证明状态作为LLM代理的修复反馈，相较于Dafny等黑盒验证器，这种细粒度反馈显著提升了自动修复效率。分离纯核心与副作用的设计使ITP能处理实际软件中的效果问题，通过提取将验证价值扩展到宿主语言。与主流验证语言Dafny的对比突出了反馈粒度的重要性，但Dafny的失败可能受限于其基于SMT的自动化策略对不完整程序缺乏指导。此外，工作流依赖于预先设计好的分离策略，对于更复杂的项目（如包含I/O、并发）可能需要更精细的模型。未来的研究方向包括自动化更细粒度的分离、扩展到其他ITP（如Lean）、以及评估提取可信度。",
+      "evaluation": "以RISC-V RV32I全部47条指令的CPU解释器为测试任务，使用Claude Opus 4.7和Rocq 9.0.1后端。在30分钟自动运行中，代理合成1859行验证Rocq代码，提取2848行C++代码。265个LLM生成的指令测试全部通过；12小时AFL++模糊测试执行9820万输入，零崩溃零挂起。对比实验：相同配置下Dafny后端在30分钟内未能完成验证，观察认为Rocq的显式证明状态提供了更有效的修复信号。",
       "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
+        "如何自动化地将复杂项目中的副作用与纯逻辑分离？是否可能通过类型系统或静态分析辅助？",
+        "该工作流能否扩展到其他领域，例如生成操作系统内核或网络协议栈？",
+        "Rocq的证明状态反馈在代理修复中具体起到多大作用？能否量化为修复轮次减少或成功率提升？",
+        "与其他ITP（如Lean、Isabelle）相比，Rocq的反馈机制是否同样有效？",
+        "提取工具的可靠性如何？能否对提取结果进行二次验证以增强可信度？",
+        "Dafny失败的根本原因是代理能力不足还是工具本身限制？是否可通过调整提示或增加时间改善？",
+        "fuzzing测试的覆盖率如何？是否针对所有指令路径进行了充分测试？",
+        "该工作流能否与增量验证或持续集成结合，实现自动维护验证代码？"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "LLM辅助软件开发中，生成完整复杂项目常因代码编译测试通过但仍违背语义而不可信。验证编程要求实现满足形式化规范，但现有探索如Dafny在代理驱动下难以完成项目级验证，因为自动化验证失败仅提供有限调试信息。本文研究ITP作为后端是否可行，因为ITP（如Rocq）在证明失败时暴露具体证明状态，提供可操作修复反馈。通过一个完全自动开发RISC-V RV32I CPU解释器的案例，代理在30分钟内完成，生成1859行Rocq验证代码并提取2848行C++，所有265个LLM生成测试通过，12小时AFL++模糊测试零崩溃零挂起。这是已知最大的完全自动开发的可运行验证核心软件项目。贡献包括：最大自动验证项目、分离纯核心与副作用的工作流、Rocq与Dafny的对比实验。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "Generating code from natural-language requirements has become a primary route for LLM-assisted software development. Although LLMs can successfully complete small programming tasks, generating an entire complex project remains unreliable because subtle errors may survive compilation and testing. Verified programming can reduce this risk by requiring generated implementations to satisfy machine-checked specifications. Existing explorations mostly target verification-oriented languages and toolchains such as Dafny and Frama-C, but directly generating project-scale verified code with these systems remains difficult. This paper studies whether interactive theorem provers (ITPs) can support large-scale software generation. Because ITPs handle pure total functions but not effects such as I/O, our agent separates effectful code from pure logic: it implements the effects in the target language, proves the pure logic in an ITP, and extracts it for integration into the final project. We study this route through the fully automatic development of a CPU interpreter for all 47 instructions of the unprivileged RISC-V RV32I base: after the requirements are supplied, no human intervenes in synthesis, proof repair, extraction, or integration. With Rocq as the backend, the agent completes the project within 30 minutes, producing 1,859 lines of verified Rocq and extracting 2,848 lines of C++. The resulting interpreter passes all 265 LLM-generated tests covering the 47 instructions and exhibits zero crashes and zero hangs during 12 hours of AFL++ fuzzing. Under the same configuration, a Dafny-based backend fails to complete verification. Our observation is that Rocq exposes a concrete proof state when a proof attempt fails, giving the agent actionable feedback for repair. These results provide empirical evidence that ITP-based verified programming is a feasible route for LLM-generated software projects."
+      "limitations": "1) 验证保证仅覆盖纯核心部分，宿主代码（I/O、运行时集成）通过动态测试而非形式化验证；2) 假设提取工具正确保留语义，未验证提取后代码与Rocq定义的等价性；3) 需求分析需要用户交互澄清表示选择，可能限制全自动化程度；4) 实验仅针对RISC-V RV32I子集，规模有限；5) 仅与Dafny进行一次30分钟对比，未控制变量如超时策略；6) 仅使用LLM生成测试和AFL++，未评估形式化规范本身的完整性。",
+      "method": "提出SPDDWL工作流，参数化ITP后端，实例化为Rocq。分为三阶段：1) 需求分析：LLM代理将自然语言需求转化为编程计划，明确类型定义、纯功能函数、逻辑规范（函数级和全局级）以及副作用分离；2) 合成与验证：编码代理生成Rocq纯函数定义，证明代理生成规范和战术证明，Rocq检查失败时返回证明状态和诊断信息供代理修复；3) 组合与提取：将验证过的处理程序组合成step函数，证明全局性质，然后通过提取工具（如Crane）导出C++代码，与实现副作用的宿主层链接。提取正确性假设成立。",
+      "research_problem": "研究如何利用交互式定理证明器（ITP）支持LLM代理自动生成具有机器验证核心的完整软件项目，克服直接使用Dafny等验证语言时由于失败反馈不充分导致的困难。"
     },
     "authors": [
       "Jian Fang",
@@ -680,20 +685,22 @@
   {
     "abstract": "We present swarm-attack, an open-source adversarial testing framework in which multiple lightweight LLM agents coordinate through shared memory, parallel exploration, and evolutionary optimization. Together, our results demonstrate that both safety bypass of frontier models and software vulnerability discovery, i.e., the capability class that motivated restricted release of Anthropic's Mythos Preview, are achievable at effectively zero cost using commodity hardware and openly available models. We report two experiments. In the first, five instances of a 1.2 billion parameter model conducted 225 jailbreak attacks each against GPT-4o and Claude Sonnet~4. Against GPT-4o, the swarm achieved an Effective Harm Rate of 45.8%, producing 49 critical-severity breaches; against Claude Sonnet-4, the Effective Harm Rate was 0% despite a 40% technical success rate. In the second experiment, the same models performed combined source code analysis and binary fuzzing against a vulnerable C application with 9 planted CWEs. With a hand-crafted exploit seed corpus, regex pattern detection, and AddressSanitizer-based crash classification, the pipeline recovers 9 of 9 vulnerabilities (100% recall) in approximately four minutes on a consumer MacBook. With those scaffold components disabled, the same model recovers 0 of 9 by crash verification and 2 of 9 by citation. The capability class that motivated restricted release of Anthropic's Mythos Preview is therefore reproducible at effectively zero cost; the important enabler is the system scaffold itself, which compensates for the limited reasoning capacity of small individual models.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "AI安全政策应转向系统级能力评估，因为攻击能力主要源于协调框架、共享内存、进化优化等系统级设计，而非模型本身。小模型+精心设计的框架可复现前沿模型的危险能力，且成本极低，模型级访问限制提供的防御窗口比预期窄。",
+      "deep_reading": "技术核心在于量化了系统框架与模型能力的分离：在相同模型和相同目标下，辅助配置召回100%，自主配置crash验证召回0%，说明1.2B模型本身几乎无法独立完成漏洞利用，但框架通过角色分化、正则检测、ASan崩溃分类和后处理CWE归一化弥补了模型推理能力的不足。有效危害率（EHR）的提出解决了LLM-as-judge对格式合规性误判为有害内容的问题，对安全评估指标设计有重要参考价值。两实验共同表明：攻击成本已趋近于零，防御者应投资于系统级防御而非仅依赖模型安全。",
+      "evaluation": "实验1：GPT-4o技术成功率60.9%，有效危害率45.8%（49个关键严重攻击）；Claude Sonnet 4技术成功率40.0%，有效危害率0%。群体进化使GPT-4o攻击成功率从31.4%提升至66.3%（峰值73%）。实验2：辅助配置下，5×3规模（5个agent×3代）召回8/9，7×3规模召回9/9，运行时间约240秒。自主配置下，crash验证召回0/9，引用验证召回2/9（其中一个CWE分类错误）。9个CWE的差距完全归因于系统框架。",
       "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
+        "如何自动生成或优化系统框架（scaffold）以适配不同攻击目标？",
+        "安全政策如何具体定义和测量系统级能力？是否需要类似有效危害率的行业标准？",
+        "在更大规模模型（如7B、70B）上，系统框架与模型能力的贡献比例是否变化？",
+        "防御方如何构建等效的协调攻击检测系统以提前预警？",
+        "实验中的漏洞发现框架能否迁移到真实大型代码库（如Linux内核）？"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "Anthropic的Claude Mythos Preview因具备自主发现和利用零日漏洞的能力而限制发布，但作者提出质疑：限制单个模型是否真能降低攻击者的可用能力。通过两个实验证明，使用5个1.2B参数的开源模型组成的协调群体（swarm-attack），在消费级硬件上，即可实现前沿模型的安全绕过和软件漏洞发现，且成本极低。关键能力来自系统框架（scaffold）而非模型本身。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "We present swarm-attack, an open-source adversarial testing framework in which multiple lightweight LLM agents coordinate through shared memory, parallel exploration, and evolutionary optimization. Together, our results demonstrate that both safety bypass of frontier models and software vulnerability discovery, i.e., the capability class that motivated restricted release of Anthropic's Mythos Preview, are achievable at effectively zero cost using commodity hardware and openly available models. We report two experiments. In the first, five instances of a 1.2 billion parameter model conducted 225 jailbreak attacks each against GPT-4o and Claude Sonnet~4. Against GPT-4o, the swarm achieved an Effective Harm Rate of 45.8%, producing 49 critical-severity breaches; against Claude Sonnet-4, the Effective Harm Rate was 0% despite a 40% technical success rate. In the second experiment, the same models performed combined source code analysis and binary fuzzing against a vulnerable C application with 9 planted CWEs. With a hand-crafted exploit seed corpus, regex pattern detection, and AddressSanitizer-based crash classification, the pipeline recovers 9 of 9 vulnerabilities (100% recall) in approximately four minutes on a consumer MacBook. With those scaffold components disabled, the same model recovers 0 of 9 by crash verification and 2 of 9 by citation. The capability class that motivated restricted release of Anthropic's Mythos Preview is therefore reproducible at effectively zero cost; the important enabler is the system scaffold itself, which compensates for the limited reasoning capacity of small individual models."
+      "limitations": "实验只使用了1.2B参数模型，更大模型可能表现不同；漏洞发现目标是人为植入9个CWE的合成应用，真实软件代码可能更复杂；安全评估中LLM-as-judge存在假阳性，虽引入EHR但手动验证有限；系统框架组件（种子语料库、正则模式）需人工设计，自动化程度不足；实验仅覆盖两种场景（jailbreak和漏洞发现），其他攻击向量未涉及。",
+      "method": "实验1：采用5个LFM2.5-1.2B-Thinking模型实例，分配不同攻击策略（指令覆盖、角色扮演、多轮升级、混淆、进化变异），通过共享记忆和进化优化（交叉率0.5，突变率0.3）生成225次攻击，针对GPT-4o和Claude Sonnet 4。采用跨提供商LLM-as-judge评估，并引入有效危害率（EHR）消除假阳性。实验2：针对包含9个CWE（如栈/堆溢出、UAF、命令注入等）的C程序（SwarmApp），分两阶段：阶段1源码分析使用角色分化模型（内存安全、注入、认证逻辑、算术），结合正则检测和LLM引用；阶段2二进制模糊测试使用AddressSanitizer，种子语料库8个，LLM生成突变输入。辅助配置包含所有组件；自主配置禁用人工组件，仅靠LLM生成输入和引用。",
+      "research_problem": "AI安全政策是否应聚焦于模型级访问限制，还是系统级能力评估？具体而言，通过开源小模型和系统框架能否复现前沿模型的攻击能力，从而质疑模型限制的有效性。"
     },
     "authors": [
       "Michael A. Riegler",
@@ -728,20 +735,22 @@
   {
     "abstract": "We present Elevator, the first binary translator that statically translates entire x86-64 executables to AArch64 without debug information, source code, or assumptions about code layout. Unlike existing systems, which rely on heuristics or runtime fallbacks to handle code-versus-data decoding errors, Elevator considers all possible interpretations of every byte and produces a separate translation for each feasible one ahead of time. Any byte may be interpreted as data, an opcode, or an opcode argument; we generate separate control flow paths for all interpretations, pruning only those leading to abnormal termination. Translations are built by composing code \"tiles\" automatically derived from a high-level description of the source ISA, yielding a nimble translation framework. The approach is deterministic and produces complete, self-contained binaries with no runtime component in the trusted code base. The principal cost is substantial code size expansion. The key benefit is that the output is the actual code that will run, enabling testing, validation, certification, and cryptographic signing prior to deployment, reducing risk compared to emulators or JIT compilers. We evaluate Elevator on a diverse corpus of real-world binaries, including the entire SPECint 2006 suite, demonstrating that static full-program binary translation can be both reliable and practical. Elevator achieves performance on par with or better than QEMU's user-mode JIT emulation.",
     "analysis": {
-      "analysis_mode": "仅元数据分析",
-      "conclusion": "等待全文提取后补充。",
-      "deep_reading": "等待全文提取后补充。建议结合论文 PDF、开源 artifact、实验对象和可迁移到 RISC-V/处理器 fuzzing 的部分继续分析。",
-      "evaluation": "等待全文提取后补充。",
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash",
+      "conclusion": "Elevator是首个完全静态、确定性、无启发式的跨ISA（x86-64到AArch64）二进制翻译器。它消除了运行时组件，使输出二进制可直接部署前测试、验证、认证和签名。方法可靠且实用，性能可接受，主要代价是代码膨胀，但在高可靠性场景中可接受。",
+      "deep_reading": "论文核心创新是将超集反汇编（先前仅用于二进制重写）首次应用于静态二进制翻译，通过不区分代码/数据而生成所有可能路径的翻译，从根本上避免了启发式错误。瓷砖库的离线构建利用LLVM简化工程，但瓷砖的C函数表达依赖于对x64指令语义的精确建模（包括对部分寄存器写、标志位修改的模拟）。预处理阶段通过一次离线编译生成所有瓷砖，使得在线阶段仅需查表和拼接，从而高效。性能收益来自于全静态翻译消除了动态检查和缓存，但代价是代码膨胀。论文未讨论多线程同步、信号处理等，可能在这些场景中需要额外机制。",
+      "evaluation": "在包含整个SPECint 2006套件及手工构造的病理样例（如重叠指令、计算间接分支）的语料上评估。结果表明Elevator能正确翻译所有程序，性能与QEMU用户态JIT仿真相当或更优（SPECint 2006平均运行时间比QEMU快约5%）。代码膨胀为主要代价：翻译后二进制大小平均为原始x86-64二进制的10.3倍。",
       "follow_up_questions": [
-        "论文是否提供开源实现或实验 artifact？",
-        "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-        "论文依赖什么 oracle、覆盖率指标或差分测试对象？"
+        "如何通过代码压缩或二进制差分技术减少Elevator的代码膨胀？",
+        "能否将Elevator方法扩展至自修改代码或动态代码生成场景？",
+        "与Apple Rosetta 2等混合翻译方法相比，Elevator在安全性和性能上具体优劣如何？",
+        "瓷砖库能否由高层ISA规范自动生成，以支持更多源和目标ISA？",
+        "是否需要添加运行时支持以处理多线程程序中的原子指令和内存模型差异？"
       ],
-      "introduction": "当前为基于题名和摘要生成的记录。配置 OPENAI_API_KEY 或 DEEPSEEK_API_KEY 后，可以启用全文阅读分析。",
+      "introduction": "硬件ISA过渡需迁移遗留软件，但源码可能不可得或无法复现原始二进制；现有静态二进制翻译因代码/数据区分等价于停机问题而依赖启发式，动态翻译则覆盖不完整且输出非确定性。Elevator通过超集反汇编，为每个字节的所有可行解释生成独立控制流路径，前置构建所有翻译，输出自包含二进制，无需运行时组件，从而支持部署前全面验证。",
       "language": "zh-CN",
-      "limitations": "等待全文提取后补充。初步阅读时应重点检查适用架构、测试对象、oracle 设计、覆盖率指标和复现实验条件。",
-      "method": "等待全文提取后补充。",
-      "research_problem": "We present Elevator, the first binary translator that statically translates entire x86-64 executables to AArch64 without debug information, source code, or assumptions about code layout. Unlike existing systems, which rely on heuristics or runtime fallbacks to handle code-versus-data decoding errors, Elevator considers all possible interpretations of every byte and produces a separate translation for each feasible one ahead of time. Any byte may be interpreted as data, an opcode, or an opcode argument; we generate separate control flow paths for all interpretations, pruning only those leading to abnormal termination. Translations are built by composing code \"tiles\" automatically derived from a high-level description of the source ISA, yielding a nimble translation framework. The approach is deterministic and produces complete, self-contained binaries with no runtime component in the trusted code base. The principal cost is substantial code size expansion. The key benefit is that the output is the actual code that will run, enabling testing, validation, certification, and cryptographic signing prior to deployment, reducing risk compared to emulators or JIT compilers. We evaluate Elevator on a diverse corpus of real-world binaries, including the entire SPECint 2006 suite, demonstrating that static full-program binary translation can be both reliable and practical. Elevator achieves performance on par with or better than QEMU's user-mode JIT emulation."
+      "limitations": "1. 显著的代码膨胀（约10倍），可能限制在存储敏感场景的应用。2. 仅支持x86-64输入到AArch64输出，扩展至其他ISA需重建瓷砖库。3. 未处理自修改代码、多线程、异常处理等复杂运行时行为。4. 地址查找表对间接分支的转发引入微小性能开销。5. 评估仅限SPECint 2006，未测试大型服务器或图形应用。",
+      "method": "离线阶段：将每条x64指令语义表达为C函数，针对每种寄存器/操作数组合特化，通过LLVM编译成AArch64代码瓷砖，构建可复用的瓷砖库。在线阶段：对输入二进制执行超集反汇编，从每个可执行字节偏移开始，考虑所有可能的指令起始点，构建超集控制流图；为每个候选指令在瓷砖库中查找对应瓷砖并拼接，同时嵌入地址查找表（从原始指令地址到翻译代码地址）。最后打包阶段：将翻译代码、原始二进制、查找表及运行时驱动程序链接为自包含的AArch64可执行文件。关键设计：全状态保存（一对一寄存器映射）、指令级隔离、无需启发式决策。",
+      "research_problem": "静态二进制翻译中代码与数据区分的不可判定性导致现有方法依赖启发式或运行时回退机制，无法实现完全静态、确定性的跨ISA翻译，且输出依赖运行时组件，难以在部署前进行测试、验证和认证。"
     },
     "authors": [
       "Hongyu Chen",
