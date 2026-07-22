@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import os
 import json
+import os
 import re
 import sys
 import tempfile
@@ -17,62 +17,48 @@ ANALYSIS_FIELDS = [
     "evaluation",
     "conclusion",
     "limitations",
+    "key_contribution",
+    "relevance_to_repo",
     "deep_reading",
     "follow_up_questions",
 ]
 
 
 def abstract_based_analysis(paper: dict) -> dict:
-    abstract = paper.get("abstract", "")
+    abstract = normalize_space(paper.get("abstract", ""))
     title = paper.get("title", "该论文")
-    categories = "、".join(paper.get("categories", [])) or "未分类"
-    venue = paper.get("venue") or paper.get("source") or "未记录"
-    source_categories = "、".join(paper.get("source_categories", [])) or "未记录"
-    matched_queries = "；".join(paper.get("matched_queries", [])[:3]) or "未记录"
+    primary_category = paper.get("primary_category") or "未分类"
+    abstract_note = abstract if abstract else "当前记录没有可用摘要。"
     return {
-        "research_problem": abstract or f"{title} 缺少可用摘要，暂时只能从标题和检索类别判断其研究问题。",
-        "introduction": (
-            f"该记录基于题名、摘要和元数据生成。论文来源为 {venue}，当前分类为 {categories}。"
-            f"从命中查询看，论文与 {matched_queries} 相关。Introduction 部分应重点关注作者如何定义处理器/微架构/"
-            "硬件 fuzzing 的验证缺口、现有方法的不足，以及本文声称的核心贡献。"
-        ),
-        "method": (
-            "当前未进行 PDF 正文解析。可从摘要初步判断其方法线索；正式阅读时应提取 fuzz 输入生成策略、"
-            "变异方式、覆盖率或反馈信号、oracle/差分对象、测试平台以及是否依赖仿真器、RTL 或真实硬件。"
-        ),
-        "evaluation": (
-            "当前未进行 PDF 正文解析。后续应补充实验对象、baseline、发现 bug 数量、覆盖率提升、运行开销、"
-            "复现条件和 artifact 可用性。"
-        ),
-        "conclusion": (
-            "当前结论基于摘要和元数据生成：该论文可能围绕处理器安全验证、fuzzing 效率、微架构漏洞发现或硬件测试自动化展开。"
-            "需要结合正文确认作者最终证明的效果和适用边界。"
-        ),
-        "limitations": (
-            "当前未进行 PDF 正文解析。初步阅读时应重点检查：是否只覆盖特定 ISA/处理器/仿真器，是否依赖人工规则或特定 oracle，"
-            "是否难以迁移到 RISC-V，是否缺少真实硬件验证，以及实验是否只在有限 benchmark 上成立。"
-        ),
-        "deep_reading": (
-            f"元数据主题：{source_categories}。建议优先阅读 Introduction、Threat Model/Background、Method、Evaluation 和 Discussion。"
-            "如果该论文与 RISC-V 或处理器 fuzzing 强相关，应进一步记录其可复用的测试生成思路、覆盖率指标、oracle 设计和开源实现。"
-        ),
+        "research_problem": f"摘要级初步判断（未核验正文）：{abstract_note}",
+        "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+        "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+        "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+        "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+        "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+        "key_contribution": f"待全文核验；当前仅能确认论文题名为《{title}》，初步归入“{primary_category}”。",
+        "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+        "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
         "follow_up_questions": [
-            "论文是否提供开源实现或实验 artifact？",
-            "方法是否可以迁移到 RISC-V core、RTL 仿真器或真实处理器？",
-            "论文依赖什么 oracle、覆盖率指标或差分测试对象？",
+            "论文的在线反馈信号和最终 Oracle 分别是什么？",
+            "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+            "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？",
         ],
-        "analysis_mode": "中文元数据分析",
+        "analysis_mode": "摘要级占位（未全文核验）",
+        "evidence_level": "abstract" if abstract else "metadata",
         "language": "zh-CN",
     }
 
 
-def extract_pdf_text(pdf_url: str, max_pages: int = 8) -> str:
+def extract_pdf_text(pdf_url: str, max_first_pages: int = 8, max_last_pages: int = 2) -> str:
+    if not pdf_url:
+        return ""
     try:
         from pypdf import PdfReader
     except Exception:
         return ""
 
-    request = urllib.request.Request(pdf_url, headers={"User-Agent": "risc-fuzz-paper-watch/1.0"})
+    request = urllib.request.Request(pdf_url, headers={"User-Agent": "risc-fuzz-paper-watch/2.0"})
     with urllib.request.urlopen(request, timeout=45) as response:
         content = response.read()
 
@@ -80,10 +66,12 @@ def extract_pdf_text(pdf_url: str, max_pages: int = 8) -> str:
         handle.write(content)
         handle.flush()
         reader = PdfReader(handle.name)
-        pages = []
-        for page in reader.pages[:max_pages]:
-            pages.append(page.extract_text() or "")
-    return normalize_space("\n".join(pages))[:25000]
+        total = len(reader.pages)
+        indexes = list(range(min(max_first_pages, total)))
+        if total > max_first_pages:
+            indexes.extend(range(max(max_first_pages, total - max_last_pages), total))
+        pages = [(reader.pages[index].extract_text() or "") for index in dict.fromkeys(indexes)]
+    return normalize_space("\n".join(pages))[:50000]
 
 
 def llm_analysis(paper: dict, paper_text: str, analysis_scope: str) -> dict:
@@ -99,19 +87,25 @@ def llm_analysis(paper: dict, paper_text: str, analysis_scope: str) -> dict:
         provider = "OpenAI"
 
     prompt = f"""
-你正在维护一个中文论文阅读数据库，主题是 RISC-V、处理器 fuzzing、
-微架构安全、硬件 fuzzing、RTL/SoC 验证和处理器安全。
+你正在维护一个严格筛选的中文文献数据库，主题限定为：RISC-V/处理器 Fuzzing、多 hart 与内存一致性验证、微架构安全自动测试、RTL/SoC 硬件 Fuzzing，以及直接相关的覆盖、Oracle、故障注入和 Artifact。
 
-请只返回 JSON，不要使用 Markdown 代码块。JSON 必须包含这些键：
+只返回 JSON，不要使用 Markdown 代码块。必须包含：
 research_problem, introduction, method, evaluation, conclusion, limitations,
-deep_reading, follow_up_questions.
+key_contribution, relevance_to_repo, deep_reading, follow_up_questions, evidence_level.
 
-所有值必须使用中文。分析要具体、技术化，不要泛泛总结。
-如果论文没有明确写局限性，请基于方法和实验设置谨慎推断。
+要求：
+1. 只依据提供的正文/摘要，不得把检索词当成论文事实。
+2. 明确区分作者明确声称、实验实际证明和你的谨慎推断。
+3. Introduction 应概括研究缺口、既有方法不足和贡献，不要复述摘要。
+4. Method 必须提取输入生成、反馈/coverage、Oracle、DUT/平台、是否需要 golden model。
+5. Evaluation 必须提取 baseline、实验预算、统计、bug/CVE、开销和 Artifact；正文未提供时明确写“未确认”。
+6. relevance_to_repo 必须说明它是直接相关、强邻近还是仅方法借鉴，并指出与多 hart/一致性路径研究的关系。
+7. 如果文本只覆盖论文前几页，结论和局限必须标记证据不足。
 
-论文标题：{paper.get("title")}
-作者：{", ".join(paper.get("authors", []))}
-摘要：{paper.get("abstract")}
+论文标题：{paper.get('title')}
+作者：{', '.join(paper.get('authors', []))}
+主分类：{paper.get('primary_category')}
+摘要：{paper.get('abstract')}
 分析范围：{analysis_scope}
 
 可用文本：
@@ -120,15 +114,16 @@ deep_reading, follow_up_questions.
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": "你是处理器安全、RISC-V、微架构和 fuzzing 方向的中文论文阅读助手。"},
+            {"role": "system", "content": "你是处理器验证、RISC-V、微架构安全和硬件 Fuzzing 方向的严谨文献审稿助手。"},
             {"role": "user", "content": prompt},
         ],
         response_format={"type": "json_object"},
     )
     content = response.choices[0].message.content or "{}"
     result = parse_json_object(content)
-    result["analysis_mode"] = f"{provider} 全文分析：{model}"
+    result["analysis_mode"] = f"{provider} {analysis_scope}：{model}"
     result["language"] = "zh-CN"
+    result.setdefault("evidence_level", "full-text" if "PDF" in analysis_scope else "abstract")
     return result
 
 
@@ -143,10 +138,12 @@ def parse_json_object(content: str) -> dict:
 
 
 def needs_analysis(paper: dict) -> bool:
+    if paper.get("curation_status") != "included":
+        return False
     analysis = paper.get("analysis") or {}
     if analysis.get("language") != "zh-CN":
         return True
-    if analysis.get("analysis_mode") == "仅元数据分析":
+    if analysis.get("analysis_mode") in {"仅元数据分析", "中文元数据分析"}:
         return True
     return not all(analysis.get(field) for field in ANALYSIS_FIELDS)
 
@@ -161,14 +158,15 @@ def main() -> None:
     pending_count = sum(1 for paper in papers if needs_analysis(paper))
     print(
         "摘要配置："
-        f"待分析论文 {pending_count} 篇；"
+        f"纳入论文中待分析 {pending_count} 篇；"
         f"本次最多 LLM 分析 {max_llm_analyses} 篇；"
         f"PDF 全文分析 {'开启' if full_text_enabled else '关闭'}；"
-        f"刷新元数据分析 {'开启' if refresh_metadata_analysis else '关闭'}；"
         f"API Key {'已配置' if has_key else '未配置'}。"
     )
 
     for paper in papers:
+        if paper.get("curation_status") != "included":
+            continue
         if not needs_analysis(paper) and not refresh_metadata_analysis:
             continue
         if not has_key:
@@ -182,22 +180,20 @@ def main() -> None:
             print(f"分析论文：{paper.get('title', paper.get('id', 'unknown'))}")
             if full_text_enabled:
                 paper_text = extract_pdf_text(paper.get("pdf_url", ""))
-                analysis_scope = "PDF 前 8 页文本"
+                analysis_scope = "PDF 首 8 页与末 2 页文本"
             else:
                 paper_text = "\n".join(
                     [
                         f"标题：{paper.get('title', '')}",
                         f"作者：{', '.join(paper.get('authors', []))}",
                         f"摘要：{paper.get('abstract', '')}",
-                        f"来源分类：{', '.join(paper.get('source_categories', []))}",
-                        f"命中查询：{', '.join(paper.get('matched_queries', []))}",
                     ]
                 )
-                analysis_scope = "标题、摘要和元数据"
+                analysis_scope = "标题与摘要"
             paper["analysis"] = llm_analysis(paper, paper_text, analysis_scope) if paper_text else abstract_based_analysis(paper)
             llm_analyses_used += 1
         except Exception as exc:
-            print(f"WARNING: 论文分析失败，已降级为摘要卡片：{paper.get('title', paper.get('id', 'unknown'))}\n{exc}", file=sys.stderr)
+            print(f"WARNING: 论文分析失败，降级为摘要占位：{paper.get('title', paper.get('id', 'unknown'))}\n{exc}", file=sys.stderr)
             paper["analysis"] = abstract_based_analysis(paper)
             paper["analysis"]["error"] = str(exc)
 
