@@ -67,6 +67,19 @@ def evidence_label(paper: dict) -> str:
     return {"full-text": "全文核验", "abstract": "摘要级", "metadata": "元数据"}.get(level, level)
 
 
+def analysis_status_label(paper: dict) -> str:
+    status = paper.get("analysis_status") or "unprocessed"
+    labels = {
+        "fulltext_verified": "已完成",
+        "abstract_only": "仅摘要",
+        "fulltext_pending": "等待全文",
+        "fulltext_unavailable": "PDF待补",
+        "fulltext_failed": "全文失败",
+        "unprocessed": "未处理",
+    }
+    return labels.get(status, status)
+
+
 def relevance_label(paper: dict) -> str:
     tier = paper.get("relevance_tier", "B")
     return {"A": "A·直接相关", "B": "B·强邻近", "C": "C·待复核", "D": "D·排除"}.get(tier, tier)
@@ -93,6 +106,7 @@ def render_detail(paper: dict) -> str:
 - 主分类：{category_label(paper.get('primary_category', ''))}
 - 相关性：{relevance_label(paper)}（score={paper.get('relevance_score', '')}）
 - 证据等级：{evidence_label(paper)}
+- 全文状态：{analysis_status_label(paper)}
 - 标签：{tags}
 - 纳入依据：{reasons}
 - 论文页面：[{paper.get('url', '')}]({paper.get('url', '')})
@@ -224,7 +238,7 @@ def render_index(papers: list[dict], detail_prefix_mode: str = "report") -> str:
         "",
         f"数据更新日期：{data_updated or '尚未收集论文'}",
         "",
-        f"当前纳入 {len(curated)} 篇；待人工复核 {review} 篇；自动排除 {excluded} 篇。",
+        f"当前纳入 {len(curated)} 篇；其中全文核验 {sum(1 for p in curated if (p.get('evidence_level') or (p.get('analysis') or {}).get('evidence_level')) == 'full-text')} 篇、摘要/元数据待回填 {sum(1 for p in curated if (p.get('evidence_level') or (p.get('analysis') or {}).get('evidence_level') or 'metadata') != 'full-text')} 篇；待人工复核 {review} 篇；自动排除 {excluded} 篇。",
         "",
     ]
     lines.extend(render_scope())
