@@ -8,6 +8,7 @@
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=100）
 - 证据等级：摘要级
+- 全文状态：PDF待补
 - 标签：RISC-V Processor Fuzzing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
 - 论文页面：[https://doi.org/10.1145/3719027.3765167](https://doi.org/10.1145/3719027.3765167)
@@ -36,7 +37,7 @@ Comprehensive exploration of the CPU architectural states in fuzzing is akin to 
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction》，初步归入“RISC-V Processor Fuzzing”。
+待全文核验；当前仅能确认论文题名为《DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 

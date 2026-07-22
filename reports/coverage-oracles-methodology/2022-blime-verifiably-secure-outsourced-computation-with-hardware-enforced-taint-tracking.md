@@ -7,12 +7,13 @@
 - 会议/期刊：arXiv
 - 主分类：覆盖、Oracle 与 Fuzzing 方法
 - 相关性：A·直接相关（score=5）
-- 证据等级：摘要级
+- 证据等级：全文核验
+- 全文状态：已完成
 - 标签：Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：hardware/processor object: risc-v, rtl；verification/fuzzing method: taint tracking；security relevance: security
 - 论文页面：[http://arxiv.org/abs/2204.09649v8](http://arxiv.org/abs/2204.09649v8)
 - PDF：[https://arxiv.org/pdf/2204.09649v8](https://arxiv.org/pdf/2204.09649v8)
-- 分析模式：摘要级占位（未全文核验）
+- 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 16 页，提取 91740 字符
 
 ## 摘要
 
@@ -20,42 +21,40 @@ Outsourced computing is widely used today. However, current approaches for prote
 
 ## 研究问题
 
-摘要级初步判断（未核验正文）：Outsourced computing is widely used today. However, current approaches for protecting client data in outsourced computing fall short: use of cryptographic techniques like fully-homomorphic encryption incurs substantial costs, whereas use of hardware-assisted trusted execution environments has been shown to be vulnerable to run-time and side-channel attacks. We present Blinded Memory (BliMe), an architecture to realize efficient and secure outsourced computation. BliMe consists of a novel and minimal set of instruction set architecture (ISA) extensions implementing a taint-tracking policy to ensure the confidentiality of client data even in the presence of server vulnerabilities. To secure outsourced computation, the BliMe extensions can be used together with an attestable, fixed-function hardware security module (HSM) and an encryption engine that provides atomic decrypt-and-taint and encrypt-and-untaint operations. Clients rely on remote attestation and key agreement with the HSM to ensure that their data can be transferred securely to and from the encryption engine and will always be protected by BliMe's taint-tracking policy while at the server. We provide an RTL implementation BliMe-BOOM based on the BOOM RISC-V core. BliMe-BOOM requires no reduction in clock frequency relative to unmodified BOOM, and has minimal power ($<\!1.5\%$) and FPGA resource ($\leq\!9.0\%$) overheads. Various implementations of BliMe incur only moderate performance overhead ($8--25\%$). We also provide a machine-checked security proof of a simplified model ISA with BliMe extensions.
+外包计算中保护客户端数据机密性，现有方法（FHE开销巨大、TEE易受运行时和侧信道攻击）均存在不足。
 
 ## Introduction 梳理
 
-尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。
+现有TEE面临软件漏洞和侧信道泄漏，FHE性能开销过大。BliMe通过最小硬件扩展（ISA污点跟踪）结合独立HSM和加密引擎，实现高效安全的外包计算，无需信任服务器软件。贡献包括：BliMe架构、BliMe-BOOM RTL实现、形式化安全证明和性能评估。
 
 ## 方法
 
-尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。
+输入由客户端使用会话密钥加密后发送；服务器通过加密引擎原子解密并标记为盲化（taint）。无显式反馈/coverage机制，违反策略时触发故障。Oracle基于HSM远程认证和加密引擎原子操作。DUT包括基于BOOM RISC-V核的RTL设计（BliMe-BOOM-1/8）和gem5模拟器。无需golden model，但形式化证明针对简化模型ISA。
 
 ## 实验与评估
 
-尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。
+Baseline为未修改BOOM和gem5默认配置。实验使用SPEC2017整数ref workload，FireSim FPGA综合测量资源/功率，gem5模拟1B指令。平均性能开销：BliMe-BOOM-1/8为23%，BliMe-gem5为25%，优化后8%。未发现bug/CVE。功率开销<1.5%，FPGA资源≤9.0%。Artifact开源：https://github.com/ssg-research/BliMe。
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《BliMe: Verifiably Secure Outsourced Computation with Hardware-Enforced Taint Tracking》，初步归入“Coverage, Oracles & Fuzzing Methodology”。
+1) BliMe架构及ISA污点跟踪扩展；2) 基于BOOM的RTL实现BliMe-BOOM；3) 简化模型ISA的形式化安全证明；4) 全面的性能评估显示低开销。
 
 ## 与本仓库研究主线的关系
 
-该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。
+强邻近：直接涉及RISC-V硬件安全增强和污点跟踪设计，但主题为安全外包而非处理器验证/fuzzing。方法论可借鉴于多hart一致性验证中的信息流控制和侧信道防御，但本文未涉及一致性模型验证。
 
 ## 结论
 
-尚未核验正文，因此不对论文最终结论作确定性概括。
+BliMe通过硬件强制污点跟踪实现安全外包计算，性能开销适度（8-25%），兼容现有侧信道抵抗代码，并提供形式化安全证明。
 
 ## 局限性
 
-尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。
+硬件攻击（如Rowhammer、DVFS故障注入、物理侧信道）超出范围；依赖HSM和加密引擎正确实现；仅支持2^n-1个客户端；未实现HSM本身；部分性能开销源于Chipyard限制。
 
 ## 详细阅读分析
 
-优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。
+需深入理解污点传播规则（表I）、形式化证明技术（F*模型）以及BliMe-BOOM与BOOM的集成细节（尤其是缓存标签管理、推测执行策略）。
 
 ## 后续核验问题
 
-- 论文的在线反馈信号和最终 Oracle 分别是什么？
-- 实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？
-- 论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？
+- 1) BliMe的污点跟踪如何扩展至多hart场景以支持一致性验证？2) BliMe能否防御瞬态执行攻击（如Spectre）？3) 如何自动编译BliMe兼容代码？

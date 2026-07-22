@@ -8,6 +8,7 @@
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级
+- 全文状态：PDF待补
 - 标签：RISC-V Processor Fuzzing、Microarchitectural Security Testing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：hardware/processor object: risc-v, cpu, rtl；verification/fuzzing method: fuzz；security relevance: transient execution
 - 论文页面：[https://doi.org/10.1109/dac63849.2025.11133085](https://doi.org/10.1109/dac63849.2025.11133085)
@@ -36,7 +37,7 @@ This paper presents BPUFuzzer, a fuzz testing tool for detecting branching trans
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《BPUFuzzer: Effective Fuzz Testing for Branching Transient Execution Vulnerabilities of RISC-V CPU》，初步归入“RISC-V Processor Fuzzing”。
+待全文核验；当前仅能确认论文题名为《BPUFuzzer: Effective Fuzz Testing for Branching Transient Execution Vulnerabilities of RISC-V CPU》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 

@@ -8,6 +8,7 @@
 - 主分类：形式化与定向处理器验证
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级
+- 全文状态：PDF待补
 - 标签：Formal & Directed Processor Verification
 - 纳入依据：hardware/processor object: risc-v, microarchitectural；verification/fuzzing method: validation；security relevance: security
 - 论文页面：[https://doi.org/10.1145/3793638.3793640](https://doi.org/10.1145/3793638.3793640)
@@ -36,7 +37,7 @@ The modularity of the RISC-V Instruction Set Architecture (ISA) has accelerated 
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5》，初步归入“Formal & Directed Processor Verification”。
+待全文核验；当前仅能确认论文题名为《RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 

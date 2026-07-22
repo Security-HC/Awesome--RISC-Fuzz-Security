@@ -8,6 +8,7 @@
 - 主分类：RTL 与 SoC 硬件 Fuzzing
 - 相关性：A·直接相关（score=9）
 - 证据等级：摘要级
+- 全文状态：PDF待补
 - 标签：RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: processor fuzzing；hardware/processor object: processor, rtl；verification/fuzzing method: fuzz, test generation, verification
 - 论文页面：[https://doi.org/10.23919/date69613.2026.11539325](https://doi.org/10.23919/date69613.2026.11539325)
@@ -36,7 +37,7 @@ The increasing complexity of modern processor designs has posed significant chal
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《Fine-Grained Code Analysis for Processor Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。
+待全文核验；当前仅能确认论文题名为《Fine-Grained Code Analysis for Processor Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 

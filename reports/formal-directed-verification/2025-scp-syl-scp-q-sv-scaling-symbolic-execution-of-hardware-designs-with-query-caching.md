@@ -8,6 +8,7 @@
 - 主分类：形式化与定向处理器验证
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级
+- 全文状态：PDF待补
 - 标签：Formal & Directed Processor Verification
 - 纳入依据：hardware/processor object: cpu, verilog, systemverilog, soc；verification/fuzzing method: verification；security relevance: security
 - 论文页面：[https://doi.org/10.1145/3676642.3736123](https://doi.org/10.1145/3676642.3736123)
@@ -36,7 +37,7 @@ Symbolic execution of hardware designs is a path-based analysis that can deliver
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching》，初步归入“Formal & Directed Processor Verification”。
+待全文核验；当前仅能确认论文题名为《<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 
