@@ -1,52 +1,137 @@
 {
-  "RISC-V Fuzzing": [
-    "risc-v",
-    "riscv",
-    "risc v",
-    "isa fuzz",
-    "instruction set"
-  ],
-  "Processor and CPU Fuzzing": [
-    "processor fuzz",
-    "cpu fuzz",
-    "core fuzz",
-    "instruction fuzz",
-    "architecture fuzz"
-  ],
-  "Microarchitecture Security": [
-    "microarchitecture",
-    "microarchitectural",
-    "speculative execution",
-    "transient execution",
-    "cache side channel",
-    "side channel",
-    "timing channel"
-  ],
-  "RTL and Hardware Verification": [
-    "rtl",
-    "verilog",
-    "systemverilog",
-    "hardware verification",
-    "formal verification",
-    "simulation",
-    "soc verification"
-  ],
-  "Fuzzing Methodology": [
-    "coverage guided",
-    "mutation",
-    "grammar",
-    "differential testing",
-    "oracle",
-    "symbolic execution",
-    "concolic"
-  ],
-  "Tools and Benchmarks": [
-    "benchmark",
-    "dataset",
-    "framework",
-    "tool",
-    "artifact",
-    "open source"
-  ]
+  "Multi-Hart, Memory Consistency & Cache Coherence": {
+    "priority": 120,
+    "any_phrases": [
+      "multi-hart",
+      "multihart",
+      "inter-hart",
+      "cross-hart",
+      "memory consistency",
+      "rvwmo",
+      "cache coherence",
+      "cache coherency",
+      "coherence protocol",
+      "directory coherence",
+      "litmus test",
+      "probeackdata",
+      "probeackdata",
+      "tilelink"
+    ],
+    "all_groups": [
+      ["multicore", "verification"],
+      ["multicore", "fuzz"],
+      ["shared memory", "processor", "testing"]
+    ]
+  },
+  "RISC-V Processor Fuzzing": {
+    "priority": 110,
+    "any_phrases": [
+      "difuzzrtl",
+      "processorfuzz",
+      "thehuzz",
+      "morfuzz",
+      "cascade",
+      "divefuzz",
+      "goldenfuzz",
+      "refuzz",
+      "simfuzz",
+      "hifuzz",
+      "genhuzz"
+    ],
+    "all_groups": [
+      ["risc-v", "fuzz"],
+      ["riscv", "fuzz"],
+      ["risc-v", "differential testing"],
+      ["riscv", "processor verification"]
+    ]
+  },
+  "Microarchitectural Security Testing": {
+    "priority": 100,
+    "any_phrases": [
+      "specdoctor",
+      "whisperfuzz",
+      "phantom trails",
+      "milesan",
+      "revizor",
+      "osiris",
+      "transient execution",
+      "speculative execution",
+      "microarchitectural leakage",
+      "timing vulnerability",
+      "leakage contract"
+    ],
+    "all_groups": [
+      ["microarchitectural", "fuzz"],
+      ["microarchitecture", "automated testing"],
+      ["side channel", "automated detection"]
+    ]
+  },
+  "RTL & SoC Hardware Fuzzing": {
+    "priority": 90,
+    "any_phrases": [
+      "rfuzz",
+      "directfuzz",
+      "hyperfuzzing",
+      "socfuzzer",
+      "fuzzing hardware like software",
+      "fuzzitizer"
+    ],
+    "all_groups": [
+      ["rtl", "fuzz"],
+      ["verilog", "fuzz"],
+      ["systemverilog", "fuzz"],
+      ["soc", "hardware", "fuzz"],
+      ["hardware", "coverage-guided", "verification"]
+    ]
+  },
+  "Coverage, Oracles & Fuzzing Methodology": {
+    "priority": 80,
+    "any_phrases": [
+      "coverage-guided",
+      "directed greybox",
+      "formal-assisted",
+      "golden reference",
+      "consistency checker",
+      "hardware sanitizer",
+      "information flow tracking",
+      "taint tracking",
+      "multi-armed bandit"
+    ],
+    "all_groups": [
+      ["processor", "oracle"],
+      ["processor", "coverage"],
+      ["rtl", "coverage"],
+      ["hardware", "bug detection", "fuzz"]
+    ]
+  },
+  "Benchmarks, Bug Injection & Artifacts": {
+    "priority": 70,
+    "any_phrases": [
+      "automatic bug injection",
+      "bug injection",
+      "mutation testing",
+      "mutant benchmark",
+      "processor benchmark",
+      "fuzzer evaluation"
+    ],
+    "all_groups": [
+      ["processor", "benchmark", "fuzz"],
+      ["hardware", "artifact", "fuzz"]
+    ]
+  },
+  "Formal & Directed Processor Verification": {
+    "priority": 60,
+    "any_phrases": [
+      "directed test generation",
+      "transition coverage",
+      "protocol verification",
+      "model checking",
+      "formal verification"
+    ],
+    "all_groups": [
+      ["processor", "formal verification"],
+      ["cache coherence", "test generation"],
+      ["multicore", "directed test"]
+    ]
+  }
 }
-
