@@ -1,0 +1,1520 @@
+[
+  {
+    "abstract": "As RISC-V processors are increasingly considered for embedded real-time and control-oriented systems, evaluating how timing behavior changes under increasing task concurrency becomes essential. Adding runnable tasks can amplify preemptions, context-switch activity, response-time variability, execution jitter, and deadline pressure. Existing RISC-V simulation and virtual-platform environments mainly target architectural exploration, functional validation, or full-system execution, and do not directly provide a controlled workflow for isolating scheduler-induced timing degradation across large configuration spaces. This paper presents nSim-RV, a configurable and reproducible RISC-V simulation and orchestration framework for scheduler-aware timing scalability evaluation. The framework combines automated campaign generation, deterministic workload configuration, structured dataset aggregation, duplicate validation, and timing-oriented metric extraction. The evaluation compares a standard shared-pipeline execution model with an nMPRA-inspired preserved-context mode under identical scheduler and workload conditions. The campaign includes CoreMark, Dhrystone, and a deterministic synthetic RT-Control workload, 2–32 concurrent tasks, 50 k–1 M cycle observation windows, cache-disabled and cache-enabled configurations, and four-stage and five-stage pipeline organizations, resulting in 864 validated configurations. Results show that increasing task concurrency amplifies timing variability and deadline pressure. Preserved-context execution reduces switching-induced disturbance and delays or reduces higher-pressure timing behavior in several trajectories. Under the five-stage cache-disabled RT-Control configuration at N = 32, it reduces the deadline miss ratio from 3.74% to 2.21%, corresponding to a 41.1% relative reduction, with the clearest benefits observed for Dhrystone and RT-Control at intermediate–high task counts.",
+    "analysis": {},
+    "authors": [
+      "Nicolai Iuga",
+      "Nicoleta Cristina Găitan",
+      "Ionel Zagan",
+      "Vasile Gheorghiţă Găitan"
+    ],
+    "categories": [],
+    "content_hash": "a7a726166a66cd39aae679fe98f3b73cec6536fad910515eeec20dac67ff5074",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.3390/computers15070447",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "openalex-w7168574757",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "https://www.mdpi.com/2073-431X/15/7/447/pdf?version=1784112597",
+    "primary_category": "",
+    "published": "2026-07-15",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Concurrency",
+      "Scalability",
+      "Distributed computing",
+      "Worst-case execution time",
+      "Workload",
+      "Task (project management)",
+      "Workflow",
+      "Metric (unit)",
+      "Real-time computing",
+      "Pipeline (software)",
+      "Execution time",
+      "Concurrency control",
+      "Fetch",
+      "Orchestration",
+      "Parallel computing",
+      "Static timing analysis",
+      "Abstraction",
+      "Scheduling (production processes)",
+      "Deadlock",
+      "Execution model",
+      "Reusability",
+      "Task analysis",
+      "Response time",
+      "Mode (computer interface)",
+      "Embedded system",
+      "Concurrent computing",
+      "Session (web analytics)",
+      "Performance metric",
+      "Protocol (science)",
+      "Decomposition",
+      "Programming paradigm",
+      "Computer architecture",
+      "System monitoring"
+    ],
+    "source_id": "https://openalex.org/W7168574757",
+    "title": "nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency",
+    "title_key": "nsim rv a reproducible risc v framework for scheduler aware timing scalability under increasing task concurrency",
+    "updated": "2026-07-17",
+    "url": "https://doi.org/10.3390/computers15070447",
+    "venue": "Computers"
+  },
+  {
+    "abstract": "Ensuring functional consistency between high-level algorithmic models and low-level hardware implementations is a critical challenge, particularly as modern design flows increasingly span heterogeneous abstractions—from deep learning frameworks to hardware netlists. In this paper, we present EquivFusion, an end-to-end equivalence checking tool tailored for multi-modal circuit designs. Unlike traditional flows that rely on siloed tools or ad-hoc translation, EquivFusion leverages a verification-oriented MLIR lowering pipeline to unify diverse entry points—including PyTorch, C/C++, Chisel, Verilog, and gate-level netlists—into a common intermediate representation. This architecture enables automated, pairwise equivalence checking across diverse abstraction levels by rigorously translating designs into standard formal verification formats, i.e., SMT-LIB, BTOR2, AIGER. We demonstrate EquivFusion's feasibility to bridge the semantic gap between software specifications and hardware realizations, showcasing its effectiveness in facilitating \"shift-left\" formal verification for datapath-intensive hardware designs. EquivFusion is available online1.",
+    "analysis": {},
+    "authors": [
+      "Jiayíng Zhu",
+      "Baoqi Zhang",
+      "Mengxia Tao",
+      "Kezhi Li",
+      "Hao Yan",
+      "Qiang Xu",
+      "Min Li"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "a695d487a4cbcadb744bc281ba4e8b3918113590eae758d929795d2bb4322429",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3803437.3806400",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "openalex-w7155203019",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3803437.3806400",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2026-07-05",
+    "relevance_reasons": [
+      "hardware/processor object: verilog",
+      "verification/fuzzing method: verification, formal verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Formal equivalence checking",
+      "Computer science",
+      "Formal verification",
+      "Abstraction",
+      "Model checking",
+      "Pipeline (software)",
+      "Programming language",
+      "Formal methods",
+      "Consistency (knowledge bases)",
+      "Abstraction model checking",
+      "Equivalence (formal languages)",
+      "Pairwise comparison",
+      "Software",
+      "Implementation",
+      "Theoretical computer science",
+      "Computer architecture",
+      "Algorithm",
+      "Formal specification",
+      "Hardware architecture",
+      "Netlist",
+      "Bridging (networking)",
+      "Bridge (graph theory)",
+      "High-level synthesis",
+      "Computer engineering",
+      "Electronic design automation",
+      "Sequential consistency",
+      "Semantic gap",
+      "Consistency model",
+      "Computer hardware",
+      "Logic synthesis",
+      "Data structure",
+      "Design flow",
+      "Embedded system",
+      "Automated reasoning",
+      "Symbolic trajectory evaluation",
+      "Functional verification",
+      "Architecture"
+    ],
+    "source_id": "https://openalex.org/W7155203019",
+    "title": "EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR",
+    "title_key": "equivfusion unifying hardware equivalence checking from algorithms to netlists via mlir",
+    "updated": "2026-07-18",
+    "url": "https://doi.org/10.1145/3803437.3806400",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Accelerators provide large performance and energy-efficiency benefits, but can significantly change the hardware-software interface. The täkō programmable memory hierarchy accelerates data movement by enabling programmers to run user-defined callback functions triggered by cache misses, evictions, and writebacks. However, it also leads to drastically increased complexity and counterintuitive outcomes. In response, we develop an ISA-level memory consistency model (MCM) for täkō that captures the semantics of its operation, and we show how it enables programmers to formally reason about their täkō programs. We also prove the soundness of this ISA-level MCM by constructing a detailed täkō implementation model and verifying that all executions of the implementation model are allowed by our ISA-level MCM. Along the way, we discover useful insights about microarchitectural modeling and verification that are applicable to hardware in general. This is the extended version of the ISCA 2026 paper \"täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies\". This version adds material on additional litmus tests to Section V to further explore the programmability of täkō using our ISA-level MCM.",
+    "analysis": {},
+    "authors": [
+      "Pranav Srinivasan",
+      "Manos Kapritsos",
+      "Yatin A. Manerkar"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "ad3b7cb3ef4d9b8a0c30a74c77d2e52e3c5e940ebcd0cc3812191b74cf0f484f",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2605-04172v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2605.04172v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2026-05-05",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural, memory consistency",
+      "verification/fuzzing method: verification, litmus"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.LO"
+    ],
+    "source_id": "2605.04172v1",
+    "title": "täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)",
+    "title_key": "t k formal enabling robust software for programmable memory hierarchies extended version",
+    "updated": "2026-05-05",
+    "url": "http://arxiv.org/abs/2605.04172v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Functional verification has become the most time-consuming phase in IC development, and Assertion-Based Verification (ABV) is key to reducing debugging time. However, existing LLM-based assertion generation methods typically pursue indiscriminate verification, aiming for maximal coverage without considering signal criticality, whereas industrial practice demands maximizing coverage with minimal verification cost. Consequently, identifying signals that have the greatest impact on design functionality and error propagation-enabling a shift from indiscriminate to targeted verification-remains a key challenge. To address this, we propose AgileAssert, a key signal-driven assertion generation framework that constructs RTL semantic graphs and identifies the top-K critical signals via a hybrid scoring and selection mechanism, followed by structure-aware RTL slicing to provide the LLM with precise targets and contextual information, thereby guiding LLMs to generate tightly constrained targeted assertions for efficient verification. Evaluated on block- and CPU-level designs, with an average 66.68% reduction in assertions, our approach outperforms three existing SOTA methods, and significantly improving coverage metrics while reducing input token consumption by 64%. In mutation testing, when our approach surpasses existing methods in error detection rate, the average number of assertions used decreases by 72.74%.",
+    "analysis": {},
+    "authors": [
+      "Yonghao Wang",
+      "Hongqin Lyu",
+      "Boling Chen",
+      "MinYang Bao",
+      "Wenchao Ding",
+      "Feng Gu",
+      "Zhiteng Chao",
+      "Jianan Mu",
+      "Kan Shi",
+      "Tiancheng Wang",
+      "Huawei Li"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "4fe527f1943c9354c3cd99e9eacaf3a1bc1c24f52625e7b82f803ea2199efc5a",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2604-08932v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2604.08932v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-04-10",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, rtl",
+      "verification/fuzzing method: verification, mutation testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2604.08932v1",
+    "title": "From Indiscriminate to Targeted: Efficient RTL Verification via Functionally Key Signal-Driven LLM Assertion Generation",
+    "title_key": "from indiscriminate to targeted efficient rtl verification via functionally key signal driven llm assertion generation",
+    "updated": "2026-04-10",
+    "url": "http://arxiv.org/abs/2604.08932v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Modern computing is shifting from homogeneous CPU-centric systems to heterogeneous systems with closely integrated CPUs and GPUs. While the CPU software stack has benefited from decades of memory safety hardening, the GPU software stack remains dangerously immature. This discrepancy presents a critical ethical challenge: the world's most advanced AI and scientific workloads are increasingly deployed on vulnerable hardware components. In this paper, we study the key challenges of ensuring memory safety on heterogeneous systems. We show that, while the number of exploitable bugs in heterogeneous systems rises every year, current mitigation methods often rely on unfaithful translations, i.e., converting GPU programs to run on CPUs for testing, which fails to capture the architectural differences between CPUs and GPUs. We argue that the faithfulness of the program behavior is at the core of secure and reliable heterogeneous systems design. To ensure faithfulness, we discuss several design considerations of a GPU-native fuzzing pipeline for CUDA programs.",
+    "analysis": {},
+    "authors": [
+      "Mingkai Li",
+      "Joseph Devietti",
+      "Suman Jana",
+      "Tanvir Ahmed Khan"
+    ],
+    "categories": [],
+    "content_hash": "6e17b82b8b9b5ed3192a794f95903325e1ae09e22cc9418a08e496221fac11ed",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2603-05725v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2603.05725v1",
+    "primary_category": "",
+    "published": "2026-03-05",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "2603.05725v1",
+    "title": "Challenges and Design Considerations for Finding CUDA Bugs Through GPU-Native Fuzzing",
+    "title_key": "challenges and design considerations for finding cuda bugs through gpu native fuzzing",
+    "updated": "2026-03-05",
+    "url": "http://arxiv.org/abs/2603.05725v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Remote Direct Memory Access (RDMA) is a memory technology that allows remote devices to directly write to and read from each other's memory, bypassing components such as the CPU and operating system. This enables low-latency high-throughput networking, as required for many modern data centres, HPC applications and AI/ML workloads. However, baseline RDMA comprises a highly permissive weak memory model that is difficult to use in practice and has only recently been formalised. In this paper, we introduce the Library of Composable Objects (LOCO), a formally verified library for building multi-node objects on RDMA, filling the gap between shared memory and distributed system programming. LOCO objects are well-encapsulated and take advantage of the strong locality and the weak consistency characteristics of RDMA. They have performance comparable to custom RDMA systems (e.g. distributed maps), but with a far simpler programming model amenable to formal proofs of correctness. To support verification, we develop a novel modular declarative verification framework, called Mowgli, that is flexible enough to model multinode objects and is independent of a memory consistency model. We instantiate Mowgli with the RDMA memory model, and use it to verify correctness of LOCO libraries.",
+    "analysis": {},
+    "authors": [
+      "Guillaume Ambal",
+      "George Hodgkins",
+      "Mark Madler",
+      "Gregory Chockler",
+      "Brijesh Dongol",
+      "Joseph Izraelevitz",
+      "Azalea Raad",
+      "Viktor Vafeiadis"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "fc839ab24fcdc52a989573ffdc4659cad3a76039d7681a0d0579ef99cc0e884c",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2510-10531v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2510.10531v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2025-10-12",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, memory consistency",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.PL",
+      "cs.DC",
+      "cs.LO",
+      "eess.SY"
+    ],
+    "source_id": "2510.10531v1",
+    "title": "A Verified High-Performance Composable Object Library for Remote Direct Memory Access (Extended Version)",
+    "title_key": "a verified high performance composable object library for remote direct memory access extended version",
+    "updated": "2025-10-12",
+    "url": "http://arxiv.org/abs/2510.10531v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Assertion-based verification (ABV) serves as a crucial technique for ensuring that register-transfer level (RTL) designs adhere to their specifications. While Large Language Model (LLM) aided assertion generation approaches have recently achieved remarkable progress, existing methods are still unable to effectively identify the relationship between design specifications and RTL designs, which leads to the insufficiency of the generated assertions. To address this issue, we propose AssertGen, an assertion generation framework that automatically generates SystemVerilog assertions (SVA). AssertGen first extracts verification objectives from specifications using a chain-of-thought (CoT) reasoning strategy, then bridges corresponding signals between these objectives and the RTL code to construct a cross-layer signal chain, and finally generates SVAs based on the LLM. Experimental results demonstrate that AssertGen outperforms the existing state-of-the-art methods across several key metrics, such as pass rate of formal property verification (FPV), cone of influence (COI), proof core and mutation testing coverage.",
+    "analysis": {},
+    "authors": [
+      "Hongqin Lyu",
+      "Yonghao Wang",
+      "Yunlin Du",
+      "Mingyu Shi",
+      "Zhiteng Chao",
+      "Wenxing Li",
+      "Tiancheng Wang",
+      "Huawei Li"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "e4ab98cebb62ae592a26cfeaa78b46ca135821ca3fe001edcc0b8f1440a2903d",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2509-23674v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2509.23674v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2025-09-28",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, verilog, systemverilog",
+      "verification/fuzzing method: verification, mutation testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2509.23674v1",
+    "title": "AssertGen: Enhancement of LLM-aided Assertion Generation through Cross-Layer Signal Bridging",
+    "title_key": "assertgen enhancement of llm aided assertion generation through cross layer signal bridging",
+    "updated": "2025-09-28",
+    "url": "http://arxiv.org/abs/2509.23674v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Virtual Prototypes (VPs) are important tools in modern hardware development. At high abstractions, they are often implemented in SystemC and offer early analysis of increasingly complex designs. These complex designs often combine one or more processors, interconnects, and peripherals to perform tasks in hardware or interact with the environment. Verifying these subsystems is a well-suited task for VPs, as they allow reasoning across different abstraction levels. While modern verification techniques like symbolic execution can be seamlessly integrated into VP-based workflows, they require modifications in the SystemC kernel. Hence, existing approaches modify and replace the SystemC kernel, or ignore the opportunity of cross-level scenarios completely, and would not allow focusing on special challenges of particular subsystems like peripherals. We propose CrosSym and SEFOS, two opposing approaches for a versatile symbolic execution of peripherals. CrosSym modifies the SystemC kernel, while SEFOS instead modifies a modern symbolic execution engine. Our extensive evaluation applies our tools to various peripherals on different levels of abstractions. Both tools' extensive sets of features are demonstrated for (1) different verification scenarios, and (2) identifying 300+ mutants. In comparison with each other, SEFOS convinces with the unmodified SystemC kernel and peripheral, while CrosSym offers slightly better runtime and memory usage. In comparison to the state-of-the-art, that is limited to Transaction Level Modelling (TLM), our tools offered comparable runtime, while enabling cross-level verification with symbolic execution.",
+    "analysis": {},
+    "authors": [
+      "Karl Aaron Rudkowski",
+      "Sallar Ahmadi-Pour",
+      "Rolf Drechsler"
+    ],
+    "categories": [],
+    "content_hash": "cc08fbae37b7f1f0b545668c69219b9dbd3a1c1a85ed0be756321c2816211fda",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2509-05504v2",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2509.05504v2",
+    "primary_category": "",
+    "published": "2025-09-05",
+    "relevance_reasons": [
+      "hardware/processor object: processor",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.PL",
+      "cs.AR"
+    ],
+    "source_id": "2509.05504v2",
+    "title": "Comparing Methods for the Cross-Level Verification of SystemC Peripherals with Symbolic Execution",
+    "title_key": "comparing methods for the cross level verification of systemc peripherals with symbolic execution",
+    "updated": "2025-12-12",
+    "url": "http://arxiv.org/abs/2509.05504v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Deep learning powers critical applications such as autonomous driving, healthcare, and finance, where the correctness of underlying libraries is essential. Bugs in widely used deep learning APIs can propagate to downstream systems, causing serious consequences. While existing fuzzing techniques detect bugs through intra-framework testing across hardware backends (CPU vs. GPU), they may miss bugs that manifest identically across backends and thus escape detection under these strategies. To address this problem, we propose XAMT, a cross-framework fuzzing method that tests deep learning libraries by matching and comparing functionally equivalent APIs across different frameworks. XAMT matches APIs using similarity-based rules based on names, descriptions, and parameter structures. It then aligns inputs and applies variance-guided differential testing to detect bugs. We evaluated XAMT on five popular frameworks, including PyTorch, TensorFlow, Keras, Chainer, and JAX. XAMT matched 839 APIs and identified 238 matched API groups, and detected 17 bugs, 12 of which have been confirmed. Our results show that XAMT uncovers bugs undetectable by intra-framework testing, especially those that manifest consistently across backends. XAMT offers a complementary approach to existing methods and offers a new perspective on the testing of deep learning libraries.",
+    "analysis": {},
+    "authors": [
+      "Bin Duan",
+      "Ruican Dong",
+      "Naipeng Dong",
+      "Dan Dongseong Kim",
+      "Guowei Yang"
+    ],
+    "categories": [],
+    "content_hash": "0ab6e13a0f4f73a2c4b730d0f3ad5ba3d049b89c5e1cae5e4272eaa94d6d969b",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2508-12546v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2508.12546v1",
+    "primary_category": "",
+    "published": "2025-08-18",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz, differential testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2508.12546v1",
+    "title": "XAMT: Cross-Framework API Matching for Testing Deep Learning Libraries",
+    "title_key": "xamt cross framework api matching for testing deep learning libraries",
+    "updated": "2025-08-18",
+    "url": "http://arxiv.org/abs/2508.12546v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Multicore timing interference, arising when multiple requests contend for the same shared hardware resources, is a primary concern for timing verification and validation of time-critical applications. Bandwidth control and regulation approaches have been proposed in the literature as an effective method to monitor and limit the impact of timing interference at run time. These approaches seek for fine-grained control of the bandwidth consumption (at the microsecond level) to meet stringent timing requirements on embedded critical systems. Such granularity and configurations, while effective, can become an entry barrier for the application of bandwidth control to a wide class of productized, modular ROS2 applications. This is so because those applications have less stringent timing requirements but would still benefit from bandwidth regulation, though under less restrictive, and therefore more portable, granularity and configurations. In this work, we provide ROSGuard, a highly-portable, modular implementation of a timing interference monitoring and control mechanism that builds on the abstractions available on top of a generic and portable Linux-based software stack with the Robotic Operating System 2 (ROS2) layer, a widespreadedly adopted middleware for a wide class of industrial applications, far beyond the robotic domain. We deploy ROSGuard on an NVIDIA AGX Orin platform as a representative target for functionally rich distributed AI-based applications and a set of synthetic and real-world benchmarks. We apply an effective bandwidth regulation scheme on ROS2-based applications and achieve comparable effectiveness to specialized, finer-grained state-of-the-art solutions.",
+    "analysis": {},
+    "authors": [
+      "Jon Altonaga Puente",
+      "Enrico Mezzetti",
+      "Irune Agirre Troncoso",
+      "Jaume Abella Ferrer",
+      "Francisco J. Cazorla Almeida"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "fd2f2b441d69b5307574895ff19cfa2e6e4de536d502aa7fee89a3dca91993b9",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2506-04640v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2506.04640v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2025-06-05",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: verification, validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2506.04640v1",
+    "title": "ROSGuard: A Bandwidth Regulation Mechanism for ROS2-based Applications",
+    "title_key": "rosguard a bandwidth regulation mechanism for ros2 based applications",
+    "updated": "2025-06-05",
+    "url": "http://arxiv.org/abs/2506.04640v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Secure speculation schemes have shown great promise in the war against speculative side-channel attacks, and will be a key building block for developing secure, high-performance architectures moving forward. As the field matures, the need for rigorous microarchitectures, and corresponding performance and cost analysis, become critical for evaluating secure schemes and for enabling their future adoption. In ShadowBinding, we present effective microarchitectures for two state-of-the-art secure schemes, uncovering and mitigating fundamental microarchitectural limitations within the analyzed schemes, and provide important design characteristics. We uncover that Speculative Taint Tracking's (STT's) rename-based taint computation must be completed in a single cycle, creating an expensive dependency chain which greatly limits performance for wider processor cores. We also introduce a novel michroarchitectural approach for STT, named STT-Issue, which, by delaying the taint computation to the issue stage, eliminates the dependency chain, achieving better instructions per cycle (IPC), timing, area, and performance results. Through a comprehensive evaluation of our STT and Non-Speculative Data Access (NDA) microarchitectural designs on the RISC-V Berkeley Out-of-Order Machine, we find that the IPC impact of in-core secure schemes is higher than previously estimated, close to 20% for the highest performance core. With insights into timing from our RTL evaluation, the performance loss, created by the combined impact of IPC and timing, becomes even greater, at 35%, 27%, and 22% for STT-Rename, STT-Issue, and NDA, respectively. If these trends were to hold for leading processor core designs, the performance impact would be well over 30%, even for the best-performing scheme.",
+    "analysis": {},
+    "authors": [
+      "Amund Bergland Kvalsvik",
+      "Magnus Själander"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "fb924fa26051bcc123999215a3c5798254c8347d2439fe934c38b06de2bf3015",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2504-07018v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2504.07018v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2025-04-09",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, microarchitecture, microarchitectural",
+      "verification/fuzzing method: taint tracking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.AR"
+    ],
+    "source_id": "2504.07018v1",
+    "title": "ShadowBinding: Realizing Effective Microarchitectures for In-Core Secure Speculation Schemes",
+    "title_key": "shadowbinding realizing effective microarchitectures for in core secure speculation schemes",
+    "updated": "2025-04-09",
+    "url": "http://arxiv.org/abs/2504.07018v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "This paper presents an automated infrastructure for the verification of RISC-V processors, using continuous integration techniques combined with FPGAs from multiple vendors, such as Altera/Intel, Xilinx/AMD, Gowin, and Lattice.We designed a robust and scalable environment that facilitates early detection of faults in various RISC-V processor implementations, ensuring compliance with ISA specifications.Preliminary results demonstrate the effectiveness of the approach, highlighting the methodology's ability to quickly identify errors and gather essential data for processor selection and verification.",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "de3d32ffafa1ec9b84304bce83c6bc3051998c447ff8f3ccc1c509a2c23e58ea",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.5753/sscad_estendido.2024",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "openalex-w4403683349",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "OpenAlex: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "https://sol.sbc.org.br/index.php/sscad_estendido/article/download/30962/30765/",
+    "primary_category": "",
+    "published": "2024-10-23",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Materials science"
+    ],
+    "source_id": "https://openalex.org/W4403683349",
+    "title": "Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)",
+    "title_key": "anais estendidos do xxv simp sio em sistemas computacionais de alto desempenho sscad estendido 2024",
+    "updated": "2026-04-21",
+    "url": "https://doi.org/10.5753/sscad_estendido.2024",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Test generation has been a critical and labor-intensive process in hardware design verification. Recently, the emergence of Large Language Model (LLM) with their advanced understanding and inference capabilities, has introduced a novel approach. In this work, we investigate the integration of LLM into the Coverage Directed Test Generation (CDG) process, where the LLM functions as a Verilog Reader. It accurately grasps the code logic, thereby generating stimuli that can reach unexplored code branches. We compare our framework with random testing, using our self-designed Verilog benchmark suite. Experiments demonstrate that our framework outperforms random testing on designs within the LLM's comprehension scope. Our work also proposes prompt engineering optimizations to augment LLM's understanding scope and accuracy.",
+    "analysis": {},
+    "authors": [
+      "Ruiyang Ma",
+      "Yuxin Yang",
+      "Ziqian Liu",
+      "Jiaxi Zhang",
+      "Min Li",
+      "Junhua Huang",
+      "Guojie Luo"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "fcbacb24739a837429fabf1f6e037a7a9a21ce431d218a350e9601cf1ec00e1e",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2406-04373v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2406.04373v1",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2024-06-03",
+    "relevance_reasons": [
+      "hardware/processor object: verilog",
+      "verification/fuzzing method: random testing, directed test generation, test generation, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "source_id": "2406.04373v1",
+    "title": "VerilogReader: LLM-Aided Hardware Test Generation",
+    "title_key": "verilogreader llm aided hardware test generation",
+    "updated": "2024-06-03",
+    "url": "http://arxiv.org/abs/2406.04373v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Memory consistency model (MCM) issues in out-of-order-issue microprocessor-based shared-memory systems are notoriously non-intuitive and a source of hardware design bugs. Prior hardware verification work is limited to in-order-issue processors, to proving the correctness only of some test cases, or to bounded verification that does not scale in practice beyond 7 instructions across all threads. Because cache coherence (i.e., write serialization and atomicity) and pipeline front-end verification and testing are well-studied, we focus on the memory ordering in an out-of-order-issue processor's load-store queue and the coherence interface between the core and global coherence. We propose QED based on the key notion of observability that any hardware reordering matters only if a forbidden value is produced. We argue that one needs to consider (1) only directly-ordered instruction pairs -- transitively non-redundant pairs connected by an edge in the MCM-imposed partial order -- and not all in-flight instructions, and (2) only the ordering of external events from other cores (e.g.,invalidations) but not the events' originating cores, achieving verification scalability in both the numbers of in-flight memory instructions and of cores. Exhaustively considering all pairs of instruction types and all types of external events intervening between each pair, QED attempts to restore any reordered instructions to an MCM-complaint order without changing the execution values, where failure indicates an MCM violation. Each instruction pair's exploration results in a decision tree of simple, narrowly-defined predicates to be evaluated against the RTL. In our experiments, we automatically generate the decision trees for SC, TSO, and RISC-V WMO, and illustrate automatable verification by evaluating a substantial predicate against BOOMv3 implementation of RISC-V WMO, leaving full automation to future work.",
+    "analysis": {},
+    "authors": [
+      "Gokulan Ravi",
+      "Xiaokang Qiu",
+      "Mithuna Thottethodi",
+      "T. N. Vijaykumar"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "6a332e36ea0476d40d68ba1fa870c68be50314ac78c26463f8061df54c3c88f4",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2404-03113v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2404.03113v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2024-04-03",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, rtl, cache coherence",
+      "verification/fuzzing method: verification, validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2404.03113v1",
+    "title": "QED: Scalable Verification of Hardware Memory Consistency",
+    "title_key": "qed scalable verification of hardware memory consistency",
+    "updated": "2024-04-03",
+    "url": "http://arxiv.org/abs/2404.03113v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Fixing software bugs has always been an essential and time-consuming process in software development. Fixing concurrency bugs has become especially critical in the multicore era. However, fixing concurrency bugs is challenging due to non-deterministic failures and tricky parallel reasoning. Beyond correctly fixing the original problem in the software, a good patch should also avoid introducing new bugs, degrading performance unnecessarily, or damaging software readability. Existing tools cannot automate the whole fixing process and provide good-quality patches. We present RaceFixer, a tool that automates the process of fixing one common type of concurrency bug: single-variable atomicity violations. RaceFixer starts from the bug reports of an existing bug-detection tool ThreadSanitizer. It augments these with static analysis to construct a suitable patch for each bug report. It tries to combine the patches of multiple bugs for better performance and code readability. Finally, we test RaceFixer on benchmarks from TheadSanitizer.",
+    "analysis": {},
+    "authors": [
+      "Sanjay Malakar",
+      "Tameem Bin Haider",
+      "Rifat Shahriar"
+    ],
+    "categories": [],
+    "content_hash": "c3759cf7b08aeb552b5bb44b9908ea7cd06a7a353c7f7286c272a21191948bba",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2401-04221v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2401.04221v1",
+    "primary_category": "",
+    "published": "2024-01-08",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: sanitizer"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE",
+      "cs.PL"
+    ],
+    "source_id": "2401.04221v1",
+    "title": "RaceFixer -- An Automated Data Race Fixer",
+    "title_key": "racefixer an automated data race fixer",
+    "updated": "2024-01-08",
+    "url": "http://arxiv.org/abs/2401.04221v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Trusted Execution Environments (TEEs) are deployed in many CPU designs because of the confidentiality and integrity guarantees they provide. ARM TrustZone is a TEE extensively deployed on smart phones, IoT devices, and notebooks. Specifically, TrustZone is used to separate code execution and data into two worlds, normal world and secure world. However, this separation inherently prevents traditional fuzzing approaches which rely upon coverage-guided feedback and existing fuzzing research is, therefore, extremely limited. In this paper, we present a native and generic method to perform efficient and scalable feedback-driven fuzzing on Trusted Applications (TAs) using ARM CoreSight. We propose LightEMU, a novel fuzzing framework that allows us to fuzz TAs by decoupling them from relied TEE. We argue that LightEMU is a promising first-stage approach for rapidly discovering TA vulnerabilities prior to investing effort in whole system TEE evaluation precisely because the majority of publicly disclosed TrustZone bugs reside in the TA code itself. We implement LightEMU and adapt it to Teegris, Trusty, OP-TEE and QSEE and evaluate 8 real-world TAs while triggering 3 unique crashes and achieving x10 time speedup when fuzzing TAs using the state-of-the-art TrustZone fuzzing framework.",
+    "analysis": {},
+    "authors": [
+      "Haoqi Shan",
+      "Sravani Nissankararao",
+      "Yujia Liu",
+      "Moyao Huang",
+      "Shuo Wang",
+      "Yier Jin",
+      "Dean Sullivan"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "74a4317de41da40764e1f761da64ac1cac7455a2a96fc3ccdea2ba1ec3440beb",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2311-09532v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2311.09532v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2023-11-16",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz, coverage-guided"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "2311.09532v1",
+    "title": "LightEMU: Hardware Assisted Fuzzing of Trusted Applications",
+    "title_key": "lightemu hardware assisted fuzzing of trusted applications",
+    "updated": "2023-11-16",
+    "url": "http://arxiv.org/abs/2311.09532v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Precise exceptions are a cornerstone of modern computing as they provide the abstraction of sequential instruction execution to programmers while accommodating microarchitectural optimizations. However, increasing compute capabilities in deep memory hierarchies (e.g., software event handlers, programmable accelerators) expose long exception detection latencies that forgo precise exception semantics for retired stores awaiting completion. Unfortunately, well-known post-retirement speculation mechanisms to tolerate these latencies require excessively large microarchitectural structures per core. This paper rethinks the role of architecture and OS in supporting precise exceptions. We show that instead of forcing the architecture to support precise exceptions transparently in all cases, it is preferable to employ hardware-software co-design to handle imprecise store exceptions efficiently. We develop formalism to prove that this approach complies with underlying memory consistency models and design a RISC-V prototype that passes all litmus tests, demonstrating its efficacy.",
+    "analysis": {},
+    "authors": [
+      "Siddharth Gupta",
+      "Yuanlong Li",
+      "Qingxuan Kang",
+      "Abhishek Bhattacharjee",
+      "Babak Falsafi",
+      "Yunho Oh",
+      "Mathias Payer"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "46cb313379d4a174cb82f974422f4c3b2688261618eb6065f4dc0a4ef2934aad",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3579371.3589087",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "openalex-w4380881120",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "OpenAlex: RVWMO litmus testing verification"
+    ],
+    "pdf_url": "https://infoscience.epfl.ch/bitstreams/29d202e7-152f-4063-a5d3-42668af91e77/download",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2023-06-16",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, microarchitectural, memory consistency",
+      "verification/fuzzing method: litmus"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Litmus",
+      "Abstraction",
+      "Programming language",
+      "Formalism (music)",
+      "Architecture",
+      "Software",
+      "Consistency (knowledge bases)",
+      "Sequential consistency",
+      "Instruction set",
+      "Speculative execution",
+      "Forcing (mathematics)",
+      "Microarchitecture",
+      "Software engineering",
+      "Embedded system",
+      "Operating system",
+      "Consistency model",
+      "Correctness",
+      "Artificial intelligence",
+      "Physical chemistry",
+      "Philosophy",
+      "Visual arts",
+      "Musical",
+      "Epistemology",
+      "Art",
+      "Climatology",
+      "Chemistry",
+      "Geology"
+    ],
+    "source_id": "https://openalex.org/W4380881120",
+    "title": "Imprecise Store Exceptions",
+    "title_key": "imprecise store exceptions",
+    "updated": "2026-07-14",
+    "url": "https://doi.org/10.1145/3579371.3589087",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Concolic testing is a scalable solution for automated generation of directed tests for validation of hardware designs. Unfortunately, concolic testing also fails to cover complex corner cases such as hard-to-activate branches. In this paper, we propose an incremental concolic testing technique to cover hard-to-activate branches in register-transfer level models. We show that a complex branch condition can be viewed as a sequence of easy-to-activate events. We map the branch coverage problem to the coverage of a sequence of events. We propose an efficient algorithm to cover the sequence of events using concolic testing. Specifically, the test generated to activate the current event is used as the starting point to activate the next event in the sequence. Experimental results demonstrate that our approach can be used to generate directed tests to cover complex corner cases while state-of-the-art methods fail to activate them.",
+    "analysis": {},
+    "authors": [
+      "Hasini Witharana",
+      "Aruna Jayasena",
+      "Prabhat Mishra"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "8b6f5c4945f38054eb2ae72449c4649b8e2662322ee60c8604e2f25ae84d176f",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2302-12241v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2302.12241v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2023-02-23",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2302.12241v1",
+    "title": "Sequence-Based Incremental Concolic Testing of RTL Models",
+    "title_key": "sequence based incremental concolic testing of rtl models",
+    "updated": "2023-02-23",
+    "url": "http://arxiv.org/abs/2302.12241v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "In recent years, more people have seen their work depend on data manipulation tasks. However, many of these users do not have the background in programming required to write complex programs, particularly SQL queries. One way of helping these users is automatically synthesizing the SQL query given a small set of examples. Several program synthesizers for SQL have been recently proposed, but they do not leverage multicore architectures. This paper proposes CUBES, a parallel program synthesizer for the domain of SQL queries using input-output examples. Since input-output examples are an under-specification of the desired SQL query, sometimes, the synthesized query does not match the user's intent. CUBES incorporates a new disambiguation procedure based on fuzzing techniques that interacts with the user and increases the confidence that the returned query matches the user intent. We perform an extensive evaluation on around 4000 SQL queries from different domains. Experimental results show that our sequential version can solve more instances than other state-of-the-art SQL synthesizers. Moreover, the parallel approach can scale up to 16 processes with super-linear speedups for many hard instances. Our disambiguation approach is critical to achieving an accuracy of around 60%, significantly larger than other SQL synthesizers.",
+    "analysis": {},
+    "authors": [
+      "Ricardo Brancas",
+      "Miguel Terra-Neves",
+      "Miguel Ventura",
+      "Vasco Manquinho",
+      "Ruben Martins"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "31648e9407df6e08024e913b6bb583b2ff62cabfeee5a5fd9a5bc7b574f62122",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2203-04995v2",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2203.04995v2",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2022-03-09",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.PL",
+      "cs.DB",
+      "cs.SE"
+    ],
+    "source_id": "2203.04995v2",
+    "title": "CUBES: A Parallel Synthesizer for SQL Using Examples",
+    "title_key": "cubes a parallel synthesizer for sql using examples",
+    "updated": "2024-02-01",
+    "url": "http://arxiv.org/abs/2203.04995v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "CPUs are becoming more complex with every generation, at both the logical and the physical levels. This potentially leads to more logic bugs and electrical defects in CPUs being overlooked during testing, which causes data corruption or other undesirable effects when these CPUs are used in production. These ever-present problems may also have simply become more evident as more CPUs are operated and monitored by large cloud providers. If the RTL (\"source code\") of a CPU were available, we could apply greybox fuzzing to the CPU model almost as we do to any other software [arXiv:2102.02308]. However our targets are general purpose x86_64 CPUs produced by third parties, where we do not have the RTL design, so in our case CPU implementations are opaque. Moreover, we are more interested in electrical defects as opposed to logic bugs. We present SiliFuzz, a work-in-progress system that finds CPU defects by fuzzing software proxies, like CPU simulators or disassemblers, and then executing the accumulated test inputs (known as the corpus) on actual CPUs on a large scale. The major difference between this work and traditional software fuzzing is that a software bug fixed once will be fixed for all installations of the software, while for CPU defects we have to test every individual core repeatedly over its lifetime due to wear and tear. In this paper we also analyze four groups of CPU defects that SiliFuzz has uncovered and describe patterns shared by other SiliFuzz findings.",
+    "analysis": {},
+    "authors": [
+      "Kostya Serebryany",
+      "Maxim Lifantsev",
+      "Konstantin Shtoyk",
+      "Doug Kwan",
+      "Peter Hochschild"
+    ],
+    "categories": [
+      "RTL & SoC Hardware Fuzzing"
+    ],
+    "content_hash": "531d21581472d994097a9fb1596ed189744e839065ca148fe5b4eccfee48c7d1",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2110-11519v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2110.11519v1",
+    "primary_category": "RTL & SoC Hardware Fuzzing",
+    "published": "2021-10-05",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, rtl",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2110.11519v1",
+    "title": "SiliFuzz: Fuzzing CPUs by proxy",
+    "title_key": "silifuzz fuzzing cpus by proxy",
+    "updated": "2021-10-05",
+    "url": "http://arxiv.org/abs/2110.11519v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "The thesis work presents assertion based functional verification of RTL representation of a digital design. The MBIST controller is designed based on a memory testing March algorithm. This March algorithm is a little modified March C algorithm which is modified by adding a paused element to test memory data retention faults. In assertion based functional verification, creation of verification plan, for MBIST controller RTL model and the implementation & simulation of the verification plan using System-Verilog and Synopsys-VCS are done. In ABV, verification plan includes the MBIST controller design and functional specification, functional coverage goals, code coverage goals, and assertions. Assertions are used to check the errors in RTL model of MBIST controller and to provide the functionality coverage. Functional coverage metrics are used to track the level or quality of verification. Most of the functional metrics score approximately reached the planned goal of 100 % which is planned in the verification plan. The designed MBIST controller is verified against the intended features. ABV approach helped to make the verification and design process efficient and less time-consuming by finding the bugs, exercising the corner cases in the design, and using the directed test cases in a small design. ABV helped to write directed and efficient test cases (25) which are approx 32 % less than the use of maximum possible random test cases (88) for designed MBIST controller with 100% assertion coverage and approximately equal total functional coverage, i.e., 97 % approx. In this way, ABV helped to fasten the design and verification process with better quality and assurance of correct functionality of MBIST controller after the integration in MBIST architecture.",
+    "analysis": {},
+    "authors": [
+      "Ashwani Kumar"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "d958d2ccbf4fd34d972a4fe676013898027493aba2e3a15b642aefbd9a2ae358",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2106-11461v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2106.11461v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2021-06-22",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, verilog",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE",
+      "cs.AR"
+    ],
+    "source_id": "2106.11461v1",
+    "title": "Assertion Based Functional Verification of March Algorithm Based MBIST Controller",
+    "title_key": "assertion based functional verification of march algorithm based mbist controller",
+    "updated": "2021-06-22",
+    "url": "http://arxiv.org/abs/2106.11461v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Concise and abstract models of system-level behaviors are invaluable in design analysis, testing, and validation. In this paper, we consider the problem of inferring models from communication traces of system-on-chip~(SoC) designs. The traces capture communications among different blocks of a SoC design in terms of messages exchanged. The extracted models characterize the system-level communication protocols governing how blocks exchange messages, and coordinate with each other to realize various system functions. In this paper, the above problem is formulated as a constraint satisfaction problem, which is then fed to a SMT solver. The solutions returned by the SMT solver are used to extract the models that accept the input traces. In the experiments, we demonstrate the proposed approach with traces collected from a transaction-level simulation model of a multicore SoC design and traces of a more detailed multicore SoC design developed in GEM5 environment.",
+    "analysis": {},
+    "authors": [
+      "Hao Zheng",
+      "Md Rubel Ahmed",
+      "Parijat Mukherjee",
+      "Mahesh C. Ketkar",
+      "Jin Yang"
+    ],
+    "categories": [],
+    "content_hash": "972cdc99ba1ef20add232a40efa0be60abe9b9b0acaa7aeca7ecf1d711067cd4",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-2102-06989v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2102.06989v1",
+    "primary_category": "",
+    "published": "2021-02-13",
+    "relevance_reasons": [
+      "hardware/processor object: system-on-chip, soc, multicore",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.IR",
+      "eess.SY"
+    ],
+    "source_id": "2102.06989v1",
+    "title": "Model Synthesis for Communication Traces of System-on-Chip Designs",
+    "title_key": "model synthesis for communication traces of system on chip designs",
+    "updated": "2021-02-13",
+    "url": "http://arxiv.org/abs/2102.06989v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "On a system that exposes disjoint memory spaces to the software, a program has to address memory consistency issues and perform data transfers so that it always accesses valid data. Several approaches exist to ensure the consistency of the memory accessed. Here we are interested in the verification of a declarative approach where each component of a computation is annotated with an access mode declaring which part of the memory is read or written by the component. The programming framework uses the component annotations to guarantee the validity of the memory accesses. This is the mechanism used in VectorPU, a C++ library for programming CPU-GPU heterogeneous systems. This article proves the correctness of the software cache-coherence mechanism used in VectorPU. Beyond the scope of VectorPU, this article provides a simple and effective formalisation of memory consistency mechanisms based on the explicit declaration of the effect of each component on each memory space. The formalism we propose also takes into account arrays for which a single validity status is stored for the whole array; additional mechanisms for dealing with overlapping arrays are also studied.",
+    "analysis": {},
+    "authors": [
+      "Ludovic Henrio",
+      "Christoph Kessler",
+      "Lu Li"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "7ecb931fa35f8ab4278d799ae404809f6aec3f9a446c28a42fa1f6798ff44443",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1910-11110v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1910.11110v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2019-10-24",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, memory consistency",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.DC"
+    ],
+    "source_id": "1910.11110v1",
+    "title": "Leveraging access mode declarations in a model for memory consistency in heterogeneous systems",
+    "title_key": "leveraging access mode declarations in a model for memory consistency in heterogeneous systems",
+    "updated": "2019-10-24",
+    "url": "http://arxiv.org/abs/1910.11110v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Existing techniques to ensure functional correctness and hardware trust during pre-silicon verification face severe limitations. In this work, we systematically leverage two key ideas: 1) Symbolic Quick Error Detection (Symbolic QED or SQED), a recent bug detection and localization technique using Bounded Model Checking (BMC); and 2) Symbolic starting states, to present a method that: i) Effectively detects both \"difficult\" logic bugs and Hardware Trojans, even with long activation sequences where traditional BMC techniques fail; and ii) Does not need skilled manual guidance for writing testbenches, writing design-specific assertions, or debugging spurious counter-examples. Using open-source RISC-V cores, we demonstrate the following: 1. Quick (<5 minutes for an in-order scalar core and <2.5 hours for an out-of-order superscalar core) detection of 100% of hundreds of logic bug and hardware Trojan scenarios from commercial chips and research literature, and 97.9% of \"extremal\" bugs (randomly-generated bugs requiring ~100,000 activation instructions taken from random test programs). 2. Quick (~1 minute) detection of several previously unknown bugs in open-source RISC-V designs.",
+    "analysis": {},
+    "authors": [
+      "Karthik Ganesan",
+      "Srinivasa Shashank Nuthakki"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "4cdef724b0f7fbcfa82a67f4d7134527016254e39cc0a994dd7299e510e543f7",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1908-06757v4",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1908.06757v4",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2019-08-19",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: verification, model checking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.CR",
+      "cs.LO"
+    ],
+    "source_id": "1908.06757v4",
+    "title": "Boosting the Bounds of Symbolic QED for Effective Pre-Silicon Verification of Processor Cores",
+    "title_key": "boosting the bounds of symbolic qed for effective pre silicon verification of processor cores",
+    "updated": "2021-06-17",
+    "url": "http://arxiv.org/abs/1908.06757v4",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "DIFT (Dynamic Information Flow Tracking) has been a hot topic for more than a decade. Unfortunately, existing hardware DIFT approaches have not been widely used neither by research community nor by hardware vendors. It is due to two major reasons: current hardware DIFT solutions lack support for multi-threaded applications and implementations for hardcore processors. This work addresses both issues by introducing an approach with some unique features: DIFT for multi-threaded software, virtual memory protection (rather than physical memory as in related works) and Linux kernel support using an information flow monitor called RFBlare. These goals are accomplished by taking advantage of a notable feature of ARM CoreSight components (context ID) combined with a custom DIFT coprocessor and RFBlare. The communication time overhead, major source of slowdown in total DIFT time overhead, is divided by a factor 3.8 compared to existing solutions with similar software constraints as in this work. The area overhead of this work is lower than 1% and power overhead is 16.2% on a middle-class Xilinx Zynq SoC.",
+    "analysis": {},
+    "authors": [
+      "Muhammad Abdul Wahab",
+      "Pascal Cotret",
+      "Mounir Nasr Allah",
+      "Guillaume Hiet",
+      "Arnab Kumar Biswas",
+      "Vianney Lapôtre",
+      "Guy Gogniat"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "e0e1a6f17904c06c3477a17aa08ca2ac9d944e9062806523cefae0defa6d4b81",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1812-01541v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1812.01541v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2018-12-04",
+    "relevance_reasons": [
+      "hardware/processor object: processor, soc",
+      "verification/fuzzing method: information flow tracking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "1812.01541v1",
+    "title": "A small and adaptive coprocessor for information flow tracking in ARM SoCs",
+    "title_key": "a small and adaptive coprocessor for information flow tracking in arm socs",
+    "updated": "2018-12-04",
+    "url": "http://arxiv.org/abs/1812.01541v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "This work details a hardware-assisted approach for information flow tracking implemented on reconfigurable chips. Current solutions are either time-consuming or hardly portable (modifications of both sofware/hardware layers). This work takes benefits from debug components included in ARMv7 processors to retrieve details on instructions committed by the CPU. First results in terms of silicon area and time overheads are also given.",
+    "analysis": {},
+    "authors": [
+      "Muhammad Abdul Wahab",
+      "Pascal Cotret",
+      "Mounir Nasr Allah",
+      "Guillaume Hiet",
+      "Vianney Lapotre",
+      "Guy Gogniat"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "a41b920317c0f7b26feb6f9db76007612b8e66521e00724c432c618b9d6f437a",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1811-05465v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1811.05465v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2018-11-13",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cpu",
+      "verification/fuzzing method: information flow tracking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "1811.05465v1",
+    "title": "Towards a hardware-assisted information flow tracking ecosystem for ARM processors",
+    "title_key": "towards a hardware assisted information flow tracking ecosystem for arm processors",
+    "updated": "2018-11-13",
+    "url": "http://arxiv.org/abs/1811.05465v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Reactive systems are composed of a well defined set of input events that the system reacts with by executing an associated handler to each event. In concurrent environments, event handlers can interact with the execution of other programs such as hardware interruptions in preemptive systems, or other instances of the reactive system in multicore architectures. State of the art rely-guarantee based verification frameworks only focus on imperative programs, being difficult to capture in the rely and guarantee relations interactions with possible infinite sequences of event handlers, and the input arguments to event handlers. In this paper, we propose the formalisation in Isabelle/HOL of an event-based rely-guarantee approach for concurrent reactive systems. We develop a Pi-Core language which incorporates a concurrent imperative and system specification language by `events', and we build a rely-guarantee proof system for Pi-Core and prove its soundness. Our approach can deal with multicore and interruptible concurrency. We use two case studies to show this: an interruptible controller for stepper motors and an ARINC 653 multicore kernel, and prove the functional correctness and preservation of invariants of them in Isabelle/HOL.",
+    "analysis": {},
+    "authors": [
+      "Yongwang Zhao",
+      "David Sanan",
+      "Fuyuan Zhang",
+      "Yang Liu"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "3c289b4b13b50952e8c18f5dea8d0dcb8f4b3081fc9d623019a8b2c999afd1e7",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1810-07855v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1810.07855v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2018-10-18",
+    "relevance_reasons": [
+      "hardware/processor object: soc, multicore",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "1810.07855v1",
+    "title": "An Event-based Compositional Reasoning Approach for Concurrent Reactive Systems",
+    "title_key": "an event based compositional reasoning approach for concurrent reactive systems",
+    "updated": "2018-10-18",
+    "url": "http://arxiv.org/abs/1810.07855v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "In this paper C-Slow Retiming (CSR) on RTL is discussed. CSR multiplies the functionality of cores by adding the same number of registers into each path. The technique is ideal for FPGAs with their already existing registers. Previously publications are limited to adding registers on netlist level, which generates a lot of system verification problems and which is assumed to be the major drawback to use this technology in the modern multicore times. The paper shows how CSR can efficiently be done with timing driven automatic RTL modification. The methodology provided with this paper can be used as guidance for using CSR in high level synthesis (HLS). The paper shows the results of a CSR-ed complex RISC core on RTL implemented on FPGAs.",
+    "analysis": {},
+    "authors": [
+      "Tobias Strauch"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "380979951333fac2d5e4cf11487b088a82eba1d877a2f613c603e953fc14e570",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1807-05446v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1807.05446v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2018-07-14",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, multicore",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "1807.05446v1",
+    "title": "Timing Driven C-Slow Retiming on RTL for MultiCores on FPGAs",
+    "title_key": "timing driven c slow retiming on rtl for multicores on fpgas",
+    "updated": "2018-07-14",
+    "url": "http://arxiv.org/abs/1807.05446v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Memory consistency models (MCMs) which govern inter-module interactions in a shared memory system, are a significant, yet often under-appreciated, aspect of system design. MCMs are defined at the various layers of the hardware-software stack, requiring thoroughly verified specifications, compilers, and implementations at the interfaces between layers. Current verification techniques evaluate segments of the system stack in isolation, such as proving compiler mappings from a high-level language (HLL) to an ISA or proving validity of a microarchitectural implementation of an ISA. This paper makes a case for full-stack MCM verification and provides a toolflow, TriCheck, capable of verifying that the HLL, compiler, ISA, and implementation collectively uphold MCM requirements. The work showcases TriCheck's ability to evaluate a proposed ISA MCM in order to ensure that each layer and each mapping is correct and complete. Specifically, we apply TriCheck to the open source RISC-V ISA, seeking to verify accurate, efficient, and legal compilations from C11. We uncover under-specifications and potential inefficiencies in the current RISC-V ISA documentation and identify possible solutions for each. As an example, we find that a RISC-V-compliant microarchitecture allows 144 outcomes forbidden by C11 to be observed out of 1,701 litmus tests examined. Overall, this paper demonstrates the necessity of full-stack verification for detecting MCM-related bugs in the hardware-software stack.",
+    "analysis": {},
+    "authors": [
+      "Caroline Trippel",
+      "Yatin A. Manerkar",
+      "Daniel Lustig",
+      "Michael Pellauer",
+      "Margaret Martonosi"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "655c30418b88e6894def72bf78ffb9faa1b03d11bae32f3e20310db1b2d7e214",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1608-07547v2",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1608.07547v2",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2016-08-26",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, microarchitecture, microarchitectural, memory consistency",
+      "verification/fuzzing method: verification, litmus"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "1608.07547v2",
+    "title": "TriCheck: Memory Model Verification at the Trisection of Software, Hardware, and ISA",
+    "title_key": "tricheck memory model verification at the trisection of software hardware and isa",
+    "updated": "2017-02-08",
+    "url": "http://arxiv.org/abs/1608.07547v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Software model checking suffers from the so-called state explosion problem, and relaxed memory consistency models even worsen this situation. What is worse, parameterizing model checking by memory consistency models, that is, to make the model checker as flexible as we can supply definitions of memory consistency models as an input, intensifies state explosion. This paper explores specific reasons for state explosion in model checking with multiple memory consistency models, provides some optimizations intended to mitigate the problem, and applies them to McSPIN, a model checker for memory consistency models that we are developing. The effects of the optimizations and the usefulness of McSPIN are demonstrated experimentally by verifying copying protocols of concurrent copying garbage collection algorithms. To the best of our knowledge, this is the first model checking of the concurrent copying protocols under relaxed memory consistency models.",
+    "analysis": {},
+    "authors": [
+      "Tatsuya Abe",
+      "Tomoharu Ugawa",
+      "Toshiyuki Maeda",
+      "Kousuke Matsumoto"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "4c53e61e23936bcd4b534a750192349af1a206af4b5bdc6fe3cf40522da620c2",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1608-05893v1",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1608.05893v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2016-08-21",
+    "relevance_reasons": [
+      "hardware/processor object: memory consistency",
+      "verification/fuzzing method: model checking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE",
+      "cs.LO",
+      "cs.PL"
+    ],
+    "source_id": "1608.05893v1",
+    "title": "Reducing State Explosion for Software Model Checking with Relaxed Memory Consistency Models",
+    "title_key": "reducing state explosion for software model checking with relaxed memory consistency models",
+    "updated": "2016-08-21",
+    "url": "http://arxiv.org/abs/1608.05893v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Modern architectures provide weaker memory consistency guarantees than sequential consistency. These weaker guarantees allow programs to exhibit behaviours where the program statements appear to have executed out of program order. Fortunately, modern architectures provide memory barriers (fences) to enforce the program order between a pair of statements if needed. Due to the intricate semantics of weak memory models, the placement of fences is challenging even for experienced programmers. Too few fences lead to bugs whereas overuse of fences results in performance degradation. This motivates automated placement of fences. Tools that restore sequential consistency in the program may insert more fences than necessary for the program to be correct. Therefore, we propose a property-driven technique that introduces \"reorder-bounded exploration\" to identify the smallest number of program locations for fence placement. We implemented our technique on top of CBMC; however, in principle, our technique is generic enough to be used with any model checker. Our experimental results show that our technique is faster and solves more instances of relevant benchmarks as compared to earlier approaches.",
+    "analysis": {},
+    "authors": [
+      "Saurabh Joshi",
+      "Daniel Kroening"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "20f49a69f8d2be2386f0e4a32196a16aa373e370e62421e95ad8fd8f1bdbde31",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "id": "arxiv-1407-7443v3",
+    "included": false,
+    "last_seen": "2026-07-22",
+    "matched_queries": [
+      "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/1407.7443v3",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2014-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: memory consistency",
+      "verification/fuzzing method: model checking"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "1407.7443v3",
+    "title": "Property-Driven Fence Insertion using Reorder Bounded Model Checking",
+    "title_key": "property driven fence insertion using reorder bounded model checking",
+    "updated": "2015-06-01",
+    "url": "http://arxiv.org/abs/1407.7443v3",
+    "venue": "arXiv"
+  }
+]
