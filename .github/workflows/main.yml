@@ -43,14 +43,15 @@ jobs:
         run: python scripts/classify_papers.py
 
       - name: Summarize included papers
-        timeout-minutes: 14
+        timeout-minutes: 25
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: gpt-4.1-mini
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: deepseek-v4-flash
-          MAX_LLM_ANALYSES_PER_RUN: 5
+          MAX_LLM_ANALYSES_PER_RUN: 8
           ENABLE_FULL_TEXT_ANALYSIS: "true"
+          MAX_FULLTEXT_RETRIES: "3"
         run: python scripts/summarize_papers.py
 
       - name: Render curated reports
