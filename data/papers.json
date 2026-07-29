@@ -1,5 +1,179 @@
 [
   {
+    "abstract": "Scaling monolithic multicores is increasingly constrained by power/thermal limits, yield, and rising manufacturing and testing costs. Chiplet designs address these challenges by partitioning large dies into smaller parts (typically multiple core-complex dies and an I/O die) linked via high-bandwidth physical fabrics (PHY). As bandwidth and wiring density scale, however, these short-reach links are pushed closer to their signal-integrity limits, increasing susceptibility to noise, crosstalk, and channel loss, motivating stronger link-level reliability mechanisms such as forward error correction (FEC). Despite this trend, state-of-the-art simulation infrastructures often approximate inter-chiplet links using oversimplified, fixed-latency models. Such abstractions overlook the inherently dynamic, runtime-dependent behavior of the PHY -- including channel conditions (e.g., signal-to-noise ratio shifts, signal crosstalk, clock jitter), iterative decoder convergence and packet retransmissions, and application dynamics (e.g., LLC-misses that travel across chiplet boundaries) -- all of which are hard to determine offline. We show that neglecting these effects distorts inter-chiplet packet-level timing and high-level performance metrics such as IPC, leading to off-trend simulation results. We present DICE, an in-simulation, runtime PHY modeling in gem5 that captures the end-to-end inter-chiplet datapath, including QC-LDPC encoding/decoding, PAM4 modulation, lossy-channel transmission, LLR-based demodulation, adaptive packet re-sending, and PHY-level flow control between chiplets.",
+    "analysis": {},
+    "authors": [
+      "Rashid Aligholipour",
+      "Stefanos kaxiras",
+      "Yuan Yao"
+    ],
+    "categories": [],
+    "content_hash": "13e1add26a62af0917399a256e82103054784d08c391d29743a32a7dcd81c6b6",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: multicore; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "arxiv-2607-24221v2",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24221v2",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2607.24221v2",
+    "title": "DICE: Detailed Inter-Chiplet End-to-End PHY Modeling for Accurate Chiplet Simulation",
+    "title_key": "dice detailed inter chiplet end to end phy modeling for accurate chiplet simulation",
+    "updated": "2026-07-28",
+    "url": "http://arxiv.org/abs/2607.24221v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Power-Side-Channel Leakage (PSCL) originates from architectural and micro-architectural artifacts in a processor and poses a severe threat to the confidentiality of cryptographic software. Consequently, pre-silicon PSCL evaluation is indispensable for secure hardware design. Existing frameworks are either limited by poor simulation scalability or fail to attribute leakage to the correct hardware signals and software instructions, thereby impeding a comprehensive root-cause analysis. This paper presents SPARC, an automated framework for pre-silicon PSCL evaluation and root-cause analysis. SPARC leverages macro-cell-level Information Flow Tracking (IFT) augmented with enhanced shadow logic that tags switching activity originating from secret-dependent data. By isolating this activity, SPARC applies statistical leakage tests to detect PSCL, while simultaneously attributing the leakage to specific hardware signals and mapping those signals to the corresponding software instructions. This approach thus delivers a full end-to-end leakage evaluation and root-cause analysis for both hardware and software. To demonstrate and validate SPARC, PSCL of multiple open-source RISC-V CPUs, encompassing 32-bit and 64-bit cores with both in-order and out-of-order pipelines, is evaluated across a range of cryptographic workloads, including masked and unmasked AES and ML-KEM (CRYSTALS-Kyber-512). SPARC recovers known leakage sources as a sanity check and identifies specific microarchitectural leakage sources, achieving an 8x per-trace simulation speedup over previously shown approaches on comparable designs. By enabling precise and scalable root-cause analysis at the pre-silicon stage, this work provides a practical framework to mitigate PSCL early in the design flow, thereby strengthening the security of future processors.",
+    "analysis": {
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 9 页，提取 53763 字符",
+      "conclusion": "SPARC实现了预硅前PSCL评估和根因分析，在三个RISC-V CPU上验证了掩码和非掩码AES及ML-KEM。检出已知泄漏并识别了微架构泄漏(如Proteus乱序流水线)，实现了8倍仿真速度提升。",
+      "deep_reading": "需要深读。方法核心是IFT和泄漏建模，评估了多种RISC-V处理器和加密工作负载。",
+      "evaluation": "baseline：声称8x per-trace仿真加速，但未列出直接对比实验；实验预算：AMD Ryzen 7 7800X3D CPU, 64GB DDR5 RAM；统计：每周期Welch's t-test；bug/CVE：未披露具体CVE，但恢复已知泄漏源并识别新泄漏；开销：仪器化设计增大~11-12%相对于纯CellIFT；总评估时间：AES(<25分钟)，Kyber(~10小时)；Artifact：开源代码在https://github.com/iti-luebeck/sparc-sca。",
+      "evidence_level": "full-text",
+      "follow_up_questions": [
+        "如何将SPARC扩展到多核SoC并处理一致性协议中引入的泄漏？",
+        "SPARC的泄漏模型能否适应其他侧信道(如电磁)？",
+        "对于掩码实现，SPARC能否区分一阶泄漏与高阶泄漏？"
+      ],
+      "introduction": "已有方法如ACA在门级需要60小时，Telescope未使用IFT，Archer只到ISA层。SPARC填补了这些空白，提供可扩展的预硅前PSCL评估和根因分析，同时实现硬件信号和软件指令归因。",
+      "key_contribution": "提出SPARC框架，结合宏单元级IFT和泄漏估计逻辑，实现可扩展的预硅前PSCL评估，并自动进行硬件信号和软件指令的双重根因分析。",
+      "language": "zh-CN",
+      "limitations": "动态IFT仅覆盖被激活的路径，未评估未激活路径；宏单元级抽象忽略低于宏单元级的效果(如毛刺)；未来工作需要门级交叉验证、掩码ML-KEM和片上多核系统。",
+      "method": "输入生成：匹配对痕迹，每组N条痕迹，明文相同但密钥不同(K0和K1)；掩码实现中随机掩码配对匹配。反馈/coverage：基于Welch's t-test的TVLA，每周期计算t统计量，阈值|t|>4.5判定泄漏。Oracle：无golden model，使用统计假设检验。DUT/平台：三种RISC-V处理器(Ibex 32位2级顺序，Proteus 32位乱序，Rocket 64位5级顺序)在Verilator上仿真。是否需要golden model：否。",
+      "relevance_to_repo": "直接相关。属于微架构安全自动测试，聚焦于功耗侧信道泄漏的评估和根因分析，与多hart/一致性路径研究不直接相关，但涉及处理器安全验证。",
+      "research_problem": "现有预硅前功耗侧信道泄漏(PSCL)评估框架要么仿真可扩展性差，要么无法将泄漏归因到正确的硬件信号和软件指令，缺乏同时具备可扩展性、秘密敏感性和软硬件联合归因的框架。"
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_verified",
+    "authors": [
+      "Andrija Nešković",
+      "Christian Ewert",
+      "Mladen Berekovic",
+      "Saleh Mulhem"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing",
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "2307085047dfc50a20933f3b418f9f4a882f73a746b87ee0b14b1bf0672933a9",
+    "curation_status": "included",
+    "evidence_level": "full-text",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_pages": 9,
+    "fulltext_source": "https://arxiv.org/pdf/2607.23218v1",
+    "fulltext_text_chars": 53763,
+    "id": "arxiv-2607-23218v1",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:\"timing vulnerability\" OR all:\"microarchitectural leakage\") AND (all:fuzzing OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_candidate_fingerprint": "38b1225db1fa1ed8a3dbde38a664f7b840bb851ebf5b3dd33540df4c87402523",
+    "pdf_url": "https://arxiv.org/pdf/2607.23218v1",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-07-25",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, cpu, microarchitectural",
+      "verification/fuzzing method: information flow tracking",
+      "security relevance: security, leakage"
+    ],
+    "relevance_score": 5,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 2,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.AR"
+    ],
+    "source_id": "2607.23218v1",
+    "title": "SPARC: Automated Root-Cause Analysis of Pre-Silicon Power Side-Channel Leakage in the Processor Design Flow",
+    "title_key": "sparc automated root cause analysis of pre silicon power side channel leakage in the processor design flow",
+    "updated": "2026-07-25",
+    "url": "http://arxiv.org/abs/2607.23218v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "This book addresses a systematically overlooked reality in Ecuadorian higher education: the statistically inevitable presence of neurodiverse students those with ADHD, dyslexia, and ASD in university EFL courses. Grounded in the neurodiversity paradigm, which frames neurological variation as natural human difference rather than deficit, the book constructs a conceptual, pedagogical, and legal framework that equips EFL instructors to respond with academic rigour and genuine inclusion. The first four chapters analyse the neurobiological bases of each condition, translating that knowledge into differentiated skill profiles, evidence-based strategies, and assessment options. Chapter 5 integrates these within the UDL framework; Chapter 6 addresses assessment redesign for validity, fairness, and accessibility; Chapter 7 closes with three composite Ecuadorian case studies and a Professional Development Plan. Twenty-two ready-to-use instruments are offered, applicable without additional resources.",
+    "analysis": {},
+    "authors": [
+      "Diego Nieto Herrera",
+      "Lister Antonio Ramos Saltos",
+      "Lady Viviana Quintuña Barrera",
+      "Margarita Elisa Montero Bastidas",
+      "Jefferson Alberto Sánchez Paguay"
+    ],
+    "categories": [],
+    "content_hash": "ff3061531cbdae916ac85c379115e52bec4b643ecd7ef2fd1226b09592f50d66",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.65488/9789907016215",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7170079079",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://libros.revistaricac.com/index.php/home/catalog/download/21/28/135",
+    "primary_category": "",
+    "published": "2026-07-22",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Rigour",
+      "Psychology",
+      "Linguistics",
+      "Natural (archaeology)",
+      "Foreign language",
+      "English as a foreign language",
+      "Variation (astronomy)",
+      "Narrative",
+      "Pedagogy",
+      "Sociology",
+      "Natural language",
+      "Cognitive science",
+      "Epistemology",
+      "English language",
+      "Applied linguistics"
+    ],
+    "source_id": "https://openalex.org/W7170079079",
+    "title": "NEURODIVERSITY AND THE TEACHING OF ENGLISH AS A FOREIGN LANGUAGE",
+    "title_key": "neurodiversity and the teaching of english as a foreign language",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.65488/9789907016215",
+    "venue": "未记录"
+  },
+  {
     "abstract": "The Linux kernel is one of the most complex software systems, where automated fuzzing continuously exposes thousands of crashes, yet root-cause diagnosis remains a manual and time-consuming bottleneck. Existing LLM-based root cause analysis (RCA) techniques, effective for distributed systems, do not readily generalize to kernel debugging due to sparse low-level artifacts, heterogeneous diagnostic evidence (e.g., syscalls, logs, and crash reports), and complex non-linear fault propagation that demands fine-grained method-level reasoning. To address these challenges, we propose KernelDiag, an agent-based framework for kernel root-cause diagnosis via structured causal reasoning. KernelDiag first aligns heterogeneous diagnostic artifacts through log-to-code mapping, and then employs artifact-specialized agents to iteratively reason over source-level program semantics and crash-specific kernel configurations. The inferred causal dependencies are incrementally organized into structured Evidence Graphs, enabling accurate faulty-method localization and causal explanations. We evaluate KernelDiag on the real-world KGYM benchmark. KernelDiag consistently outperforms state-of-the-art localization approaches at both file and method levels, achieving significant improvements in Top@k accuracy, including up to 4x and 2x gains in challenging settings without explicit hints. Furthermore, both human and LLM-assisted evaluations show that KernelDiag generates accurate, coherent, and actionable diagnostic explanations. Overall, this work lays the foundation for automated kernel root-cause diagnosis by bridging low-level diagnostic evidence with source-level causal reasoning.",
     "analysis": {},
     "authors": [
@@ -58,7 +232,7 @@
       "H Wang"
     ],
     "categories": [],
-    "content_hash": "6513f6ab51fe7261d7a4cda2dcf9d886ed2bb4b569659cd34dc8a9a12ec03a4b",
+    "content_hash": "68c79766736a34b20ce5618c58a897951ba35eafb54b45a5b4801f787af3587e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.5194/egusphere-2026-3343",
     "evidence_level": "abstract",
@@ -66,7 +240,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168867454",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing"
     ],
@@ -79,7 +253,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Flood myth",
@@ -105,7 +279,7 @@
     "source_id": "https://openalex.org/W7168867454",
     "title": "Review article: Global flood research across four decades: An analysis of 57,474 research articles based on a large language model",
     "title_key": "review article global flood research across four decades an analysis of 57 474 research articles based on a large language model",
-    "updated": "2026-07-17",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.5194/egusphere-2026-3343",
     "venue": "未记录"
   },
@@ -169,7 +343,7 @@
       "Vasile Gheorghiţă Găitan"
     ],
     "categories": [],
-    "content_hash": "a7a726166a66cd39aae679fe98f3b73cec6536fad910515eeec20dac67ff5074",
+    "content_hash": "8b333497e43097388bcb874895362d9226a2648a6c5e0f585a5c0410a8cbf5b9",
     "curation_status": "review",
     "doi": "https://doi.org/10.3390/computers15070447",
     "evidence_level": "abstract",
@@ -177,7 +351,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168574757",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -191,7 +365,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -232,7 +406,7 @@
     "source_id": "https://openalex.org/W7168574757",
     "title": "nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency",
     "title_key": "nsim rv a reproducible risc v framework for scheduler aware timing scalability under increasing task concurrency",
-    "updated": "2026-07-17",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/computers15070447",
     "venue": "Computers"
   },
@@ -485,8 +659,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：RISC-V’s open and extensible design improves flexibility, but it also permits vendors to customize trap behavior and reserved opcode space in ways that can affect exception handling. This paper presents a scoping review of RISC-V exception-handling security, focusing on how traps, privilege transitions, control registers, and handler routines can become attack surfaces when they are not correctly protected. We organize the literature by a five-stage exception lifecycle and map documented attacks and defenses to the architectural state they affect. Our review shows that exception-handling vulnerabilities arise from exposed control registers, insufficiently protected trap entry and return paths, and flawed handler execution. Recent attacks, such as GhostWrite, halt-and-catch-fire conditions, and side-channel exploits, illustrate how weaknesses in exception management can lead to privilege escalation, denial of service, or data leakage. In contrast, defenses are unevenly distributed across the lifecycle: backward-edge return-time integrity is addressed by multiple dedicated mechanisms, while dispatch-time and privilege-transition protection remain largely indirect and are often embedded within broader trusted-execution designs. Because the primary studies report heterogeneous cost metrics, the overhead values we extract are presented as reported rather than normalized across a common benchmark. The literature suggests that lightweight mechanisms, such as Physical Memory Protection and software-based control-flow enforcement, generally incur modest overhead, whereas stronger approaches, such as CHERI-RISC-V and Trusted-Execution Environments, may impose substantially higher costs on exception-heavy workloads. Overall, our findings indicate that exception handling should be treated as a security-critical boundary and that future work should emphasize stage-specific defenses, formal verification, and tighter integration between hardware and software protections."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Mina Soltani Siapoush",
@@ -495,7 +669,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "5ce86efe20361ff2cf75628d6ae1b781267ea485667fd09e747f458545ad6854",
+    "content_hash": "33e2a45703dcee56e4b5eb7dcfcdecff1d6c7318856fb3ac8d4be065a766a37d",
     "curation_status": "included",
     "doi": "https://doi.org/10.3390/computers15070440",
     "evidence_level": "abstract",
@@ -507,7 +681,7 @@
     ],
     "id": "openalex-w7167899815",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: CPU fuzzing hardware verification",
       "OpenAlex: RISC-V processor fuzzing",
@@ -527,7 +701,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -563,7 +737,7 @@
     "source_id": "https://openalex.org/W7167899815",
     "title": "From RISC to Risk: Exception Handling as a Gateway to Exploitation",
     "title_key": "from risc to risk exception handling as a gateway to exploitation",
-    "updated": "2026-07-12",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/computers15070440",
     "venue": "Computers"
   },
@@ -656,7 +830,7 @@
       "Chenyan Xiong"
     ],
     "categories": [],
-    "content_hash": "a6008a4622fdd4cd053e9e8667709559affc99ac96b1697aa9f0d679c6c84a56",
+    "content_hash": "943872399d2a082218febafe68515832d7e0abef82185040a97983473816e68a",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3805712.3809627",
     "evidence_level": "abstract",
@@ -664,7 +838,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7159642999",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation",
       "OpenAlex: cache coherence transition coverage verification"
@@ -678,7 +852,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -710,7 +884,7 @@
     "source_id": "https://openalex.org/W7159642999",
     "title": "Agentic Search in the Wild: Intents and Trajectory Dynamics from 14M+ Real Search Requests",
     "title_key": "agentic search in the wild intents and trajectory dynamics from 14m real search requests",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3805712.3809627",
     "venue": "未记录"
   },
@@ -728,7 +902,7 @@
       "Yiqun Liu"
     ],
     "categories": [],
-    "content_hash": "e47291c12966bb83c5ffed13f66040504ed3216cb458804ee43404a6765f5a19",
+    "content_hash": "daaff05861580cfd64aaec21915077c2d22027eb2d4b4277d128a9aa9729f848",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3805712.3808598",
     "evidence_level": "abstract",
@@ -736,7 +910,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414968348",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: cache coherence transition coverage verification"
     ],
@@ -749,7 +923,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Benchmark (surveying)",
@@ -774,7 +948,7 @@
     "source_id": "https://openalex.org/W4414968348",
     "title": "SurGE: A Benchmark and Evaluation Framework for Scientific Survey Generation",
     "title_key": "surge a benchmark and evaluation framework for scientific survey generation",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3805712.3808598",
     "venue": "未记录"
   },
@@ -871,6 +1045,72 @@
     "updated": "2026-07-08",
     "url": "http://arxiv.org/abs/2607.07007v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "This paper examines the psychological dimension of Mikhail Bulgakov's The Master and Margarita through the development of Ivan Bezdomny.Rather than treating the character as a secondary witness to the novel's supernatural events, the study argues that his intellectual and psychological transformation constitutes one of the central mechanisms through which the novel reshapes its ontological structure.Drawing on the theoretical perspectives of Yuri Lotman, Sigmund Freud, and Carl Gustav Jung, the paper interprets Ivan's crisis as a transition from doctrinal certainty to reflective worldview, revealing the interaction between traumatic experience, symbolic space, and the reconstruction of personal identity.The analysis demonstrates that Ivan's psychological evolution serves not only as an individual narrative trajectory but also as the principal epistemological framework through which Bulgakov redefines the relationship between ideological and metaphysical reality.",
+    "analysis": {},
+    "authors": [
+      "Кучерук С. В.",
+      "Анічкіна О. В.",
+      "Авдєєв С. В.",
+      "Ходюк О. В."
+    ],
+    "categories": [],
+    "content_hash": "824327604a9d17ac6656dd77d98cb6a7197c9443147741341b3e80d7538da862",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70286/isu-08.07.2026",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7168043356",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://isu-conference.com/wp-content/uploads/2026/07/Sofia_Bulgaria_08.07.26.pdf",
+    "primary_category": "",
+    "published": "2026-07-08",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Competence (human resources)",
+      "Component (thermodynamics)",
+      "Public relations",
+      "Cultural diversity",
+      "Context (archaeology)",
+      "Intercultural communication",
+      "Sociology",
+      "Knowledge management",
+      "Engineering ethics",
+      "Intercultural competence",
+      "Cultural communication",
+      "Information and Communications Technology",
+      "Political science",
+      "Cultural issues",
+      "Cross-cultural communication",
+      "Social relation",
+      "Cultural competence",
+      "International communication",
+      "Social environment",
+      "Globalization",
+      "Social issues",
+      "Cultural environment",
+      "Business",
+      "Culturally appropriate"
+    ],
+    "source_id": "https://openalex.org/W7168043356",
+    "title": "Cross-Cultural Communication and Its Problem Areas",
+    "title_key": "cross cultural communication and its problem areas",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.70286/isu-08.07.2026",
+    "venue": "未记录"
   },
   {
     "abstract": "Modern processor verification struggles to reach deep architectural states due to the inefficiencies of traditional mutation-based fuzzing. We propose HiFuzz, a novel hierarchical reinforcement learning framework that replaces mutation with a structured, two-layer generation process: a Program Agent for global layout and a Basic Block Agent for precise instruction filling. To overcome reward sparsity, HiFuzz integrates an adaptive coverage reward mechanism and a semantic-aware basic block encoder providing intrinsic feedback. Extensive evaluations on three real-world RISC-V cores demonstrate that HiFuzz significantly outperforms state-of-the-art fuzzers in coverage and bug detection.",
@@ -1702,6 +1942,118 @@
     "venue": "ERA"
   },
   {
+    "abstract": "Zero-knowledge virtual machine (zkVM) is a powerful infrastructure for proving the correctness of a program execution with a succinct proof, attracting significant interest from researchers, developers, and users. It has been widely used in applications such as blockchain rollups, privacy-preserving machine learning, and off-chain computation. As the field grows, a wide range of zkVMs have been proposed. However, they adopt different choices in instruction formats, trace layouts, and proving backends, which results in a highly heterogeneous design landscape and makes it difficult to understand the relations among these systems.To bridge this gap, we provide a comprehensive study of zkVMs that covers both their theoretical foundations and practical implementations. We decompose zkVMs into three layers: (1) the ISA layer, which defines instruction semantics and determines the structure of the execution trace, (2) the VM layer, which captures program execution and organizes constraints through modular circuit components, and (3) the proving layer, which converts execution traces into algebraic constraints and generates the final proofs. This decomposition allows us to isolate the role of each layer while also examining how they interact in real systems. To give readers a more direct understanding of how these design choices affect performance, scalability, and usability, we conduct a comprehensive experimental evaluation of representative zkVMs following this layered framework. Finally, we conclude the paper by summarizing the main observations from our analysis and outlining several potential directions for zkVM design and implementation.",
+    "analysis": {},
+    "authors": [
+      "Guomin Yang",
+      "Yunbo Yang",
+      "Yuejia Cheng",
+      "Haibo Tang",
+      "Bingsheng Zhang",
+      "Kui Ren"
+    ],
+    "categories": [],
+    "content_hash": "b8706c231a48f322a76930574c5542d1a8e39408ee789501379e37ba9f09a854",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3779208.3805964",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7163556769",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3779208.3805964",
+    "primary_category": "",
+    "published": "2026-06-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Correctness",
+      "Programming language",
+      "Modular design",
+      "Semantics (computer science)",
+      "TRACE (psycholinguistics)",
+      "Field (mathematics)",
+      "Bridge (graph theory)",
+      "Software engineering",
+      "Decomposition",
+      "Range (aeronautics)",
+      "Theoretical computer science",
+      "Simple (philosophy)",
+      "Operational semantics",
+      "Program analysis",
+      "Layer (electronics)",
+      "Process (computing)",
+      "Abstract machine",
+      "Symbolic execution",
+      "Component (thermodynamics)",
+      "Program Design Language"
+    ],
+    "source_id": "https://openalex.org/W7163556769",
+    "title": "SoK: Understanding zkVM: From Research to Practice",
+    "title_key": "sok understanding zkvm from research to practice",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.1145/3779208.3805964",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Caches are fundamental to modern processor performance, but are also a well-known source of side-channel vulnerabilities. Recent advancements in “weird computation” leverage data caches in conjunction with speculative execution to enable hidden computations, primarily for program obfuscation. This work extends the paradigm of microarchitectural weird machines to the TLB, an address translation cache that has received less attention in this context and is often less susceptible to common cache defense techniques. We demonstrate the feasibility of using TLB entries as “weird registers” to encode binary states and construct logic gates. Our adaptation of the Flexo compiler framework, termed Flexo-TLB, enables the creation of complex weird circuits on the TLB. Through extensive experimentation on modern Intel Meteorlake P-core and E-core and Kabylake architectures, we characterize the timing behavior of the TLB, optimize transient window sizes, and evaluate the performance and accuracy of TLB-based weird gates and circuits. While proving the viability of the TLB as an alternative microarchitectural state for hidden computations, we identify key limitations, including a reduced gate input capacity and increased sensitivity to circuit complexity and architectural differences. Our findings highlight the potential of the TLB as a resilient, albeit constrained, medium for microarchitectural computation, particularly in scenarios where conventional data cache-based approaches are mitigated.",
+    "analysis": {},
+    "authors": [
+      "Jonah Heller",
+      "Marcel Pflaeging",
+      "T. Tiemann",
+      "Thomas Eisenbarth"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "05f378fcee2e4e170c57daded5af08d3931bc1cff3f59664f587dc9c3d68b35d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3779208.3785280",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor, microarchitectural; security relevance: speculative execution; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-3f135695656e0b06996b144513a69b23d34690f4",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3779208.3785280",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-06-01",
+    "relevance_reasons": [
+      "hardware/processor object: processor, microarchitectural",
+      "security relevance: speculative execution",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3f135695656e0b06996b144513a69b23d34690f4",
+    "title": "CTRL+ALT+TLB: Exploring Microarchitectural Weird Machines on Translation Look-aside Buffers",
+    "title_key": "ctrl alt tlb exploring microarchitectural weird machines on translation look aside buffers",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3779208.3785280",
+    "venue": "ACM Asia Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "Large Language Models with Chain-of-Thought reasoning capabilities represent valuable intellectual property, yet existing black-box watermarking methods often trade robustness for reasoning fidelity by perturbing final answers or relying on fragile trigger patterns. We propose BiCoT, a watermarking framework that embeds ownership signals into the internal geometry of reasoning traces by aligning high-saliency structural anchors with a private signature subspace while regularizing ordinary control tokens to preserve semantic capacity. This design couples the watermark with reasoning-relevant representations, making removal difficult without disrupting the features that support coherent reasoning. To enable verification under model theft and representation drift, we introduce Robust Subspace Registration (RSR), a Top- logprob-based black-box verifier that uses sentinel tokens to calibrate systematic shifts in the output distribution. Experiments show that BiCoT preserves reasoning fidelity across diverse complex reasoning tasks while achieving robust detection under fine-tuning, quantization, model-level perturbations, and adaptive output-level attacks across in-domain and out-of-distribution settings.",
     "analysis": {},
     "authors": [
@@ -2222,6 +2574,51 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "As IoT and embedded devices proliferate across various domains, securing their firmware has become critical. Fuzzing offers a systematic approach to uncovering vulnerabilities in firmware, and coverage feedback can improve its effectiveness by guiding exploration. However, many devices make coverage information impossible to obtain by preventing firmware extraction, instrumentation, or accurate emulation; in such cases, testers are left with only inefficient black-box fuzzing. In this paper, we present an approach that leverages electromagnetic (EM) side-channel emanations to guide firmware fuzzing in purely black-box settings. However, turning raw EM measurements into reliable guidance is challenging: EM traces are noisy, and timing jitter causes corresponding features in different traces to shift in time. We address these challenges by combining frequency band selection based on the activity-to-idle signal contrast with dynamic time warping to align per-input traces and detect sustained divergence, while maintaining scalability by organizing executions in a tree structure based on their divergence times. We evaluate our approach on four real firmware targets and demonstrate that EM-derived feedback enhances path exploration, yielding higher code coverage than unguided fuzzing.",
+    "analysis": {},
+    "authors": [
+      "Fatemeh Moradihaghighi",
+      "Zihao Zhan",
+      "Yanan Guo",
+      "Ziming Zhao",
+      "Mashrur Chowdhury",
+      "Zhenkai Zhang"
+    ],
+    "categories": [],
+    "content_hash": "6c674743b82ccdcb884cffe70e5e62c9f785ead07382d909737cd3e9630a8677",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/HOST68814.2026.11604975",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: firmware fuzzing",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-5b75153b112348556d78013ada82dea420ee7686",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2026-05-04",
+    "relevance_reasons": [
+      "excluded phrase: firmware fuzzing"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5b75153b112348556d78013ada82dea420ee7686",
+    "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+    "title_key": "fuzz emup leveraging em side channel emanation to guide black box embedded firmware fuzzing",
+    "updated": "",
+    "url": "https://doi.org/10.1109/HOST68814.2026.11604975",
+    "venue": "IEEE International Symposium on Hardware Oriented Security and Trust"
+  },
+  {
     "abstract": "Operating system specialization is a well-known approach to optimize a specific application's performance, memory usage, security, or other important metrics. Specializing an OS for an application is typically a manual process that requires great expertise. Specialization through configuration lends itself well to automation; however, it is challenging due to the sheer size of the configuration space of modern OSes, the difficulty to quantify that space, the long time it takes to evaluate a configuration, and the large number of invalid configurations. Hence, existing attempts at specializing OSes automatically are limited to switching features on and off to minimize memory consumption or attack surface, and cannot target metrics such as performance.",
     "analysis": {},
     "authors": [
@@ -2235,7 +2632,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "5b2e8b0a3894573b3a0ca5e199dae910f23fc82a8c137982cb1c7660663c0cb8",
+    "content_hash": "0c6b54fe5bc9e1a5ec6c828e637cd4128369158bfcc7f26d8d2d17da486f6cc7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -2243,7 +2640,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -2257,7 +2654,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2281,7 +2678,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -2306,8 +2703,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The increasing complexity of modern processor designs has posed significant challenges in achieving comprehensive coverage metrics for functional verification of Register-Transfer Level (RTL) designs. Despite the availability of white-box RTL models, recent advancements in hardware fuzzing have predominantly focused on grey-box methodologies, which lack effective utilization of internal logic and structural information.This paper presents a novel approach that addresses this limitation by extracting control flow graphs (CFGs) from processor designs and analyzing the dependencies within these graphs. The analyzed CFGs serve as heuristic information to guide the generation of processor stimuli. By effectively leveraging internal logic information during the simulation of complex processors, this method provides interpretable heuristics for test generation. Experimental results demonstrate the effectiveness of utilizing control flow information derived from processor designs in enhancing the convergence speed of coverage metrics and guiding test sequences towards hard-to-reach states."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Ziyue Zheng",
@@ -2402,8 +2799,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern processors are increasingly complex, with rich microarchitectural features and heterogeneous components. This complexity expands the attack surface and makes security vulnerabilities harder to detect using traditional security techniques. Hardware fuzzing has emerged as a scalable approach for uncovering insecure behaviors in modern processors. However, it often struggles to (i) explore hard-to-reach design spaces due to its randomness and (ii) locate the root causes of vulnerabilities due to design complexity.This work presents advanced hybrid hardware fuzzing techniques that combine the complementary strengths of fuzzing, formal verification, and static analysis to systematically detect and localize vulnerabilities in processors. Specifically, we investigate (i) the use of formal verification to guide fuzzing toward hard-to-reach design spaces, thereby enabling the discovery of subtle vulnerabilities, and (ii) the use of static analysis to extract and monitor timing behaviors at the register-transfer level (RTL), enabling localization of timing vulnerabilities that can arise even in functionally correct designs.Finally, we outline future research directions, including using large language models to generate expert-informed tests, leveraging prior design knowledge to enhance fuzzing effectiveness on new processors, and transferring effective strategies from white-box fuzzing to black-box fuzzing environments."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Chen Chen",
@@ -2564,7 +2961,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "20f44946d47956db3ed62a47c0b646fcd7906ba68d08c53170c268e326f4d149",
+    "content_hash": "566167e4859f43048ff7a519bdb000902251b0893d780e659734fdc8a8309405",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -2572,7 +2969,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -2587,7 +2984,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -2598,7 +2995,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -3131,7 +3528,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "6b069b6f432e74a1b98e32672a311178cba597d32b0cb4f4e853549913f7fe2a",
+    "content_hash": "6be5760f2cdc4a97ba062e6aca22c9edc09e20b2139ad1f73487caf789168f58",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -3139,7 +3536,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3153,7 +3550,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -3187,7 +3584,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-07-05",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -3212,8 +3609,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The modularity of the RISC-V Instruction Set Architecture (ISA) has accelerated its adoption in security-critical domains, yet it introduces significant challenges for pre-silicon security validation. Current evaluation methods often rely on high-level emulation that overlooks microarchitectural side effects or post-silicon testing that identifies vulnerabilities too late in the design cycle. This paper presents RV-Sec5, a systematic framework for ISA-level security evaluation that leverages the gem5 simulator. Unlike standard simulators, RV-Sec5 introduces a methodology to map high-level security invariants—such as privilege isolation and memory protection—directly to automated, cycle-accurate instrumentation points within the ISA decoder. This approach bridges the semantic gap between abstract security policies and low-level hardware execution. We demonstrate the framework’s efficacy through a case study involving unauthorized Control and Status Register (CSR) modifications, showing how RV-Sec5 detects privilege escalation attempts and monitors microarchitectural anomalies, such as TLB flushes and cache state changes, in real-time."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Muhammad Awais",
@@ -3225,7 +3622,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "c10daf8ab537430d714d84aebf93d9bef47c39d374cd088d9c0011d40dcde414",
+    "content_hash": "04b2fbcb17942c674683fce408cab4443749946dce5d482d257e08c6a3cb5613",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3793638.3793640",
     "evidence_level": "abstract",
@@ -3237,7 +3634,7 @@
     ],
     "id": "openalex-w7133240413",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -3254,7 +3651,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3271,7 +3668,7 @@
     "source_id": "https://openalex.org/W7133240413",
     "title": "RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5",
     "title_key": "rv sec5 enhancing risc v security evaluation via targeted isa level instrumentation using gem5",
-    "updated": "2026-07-14",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.1145/3793638.3793640",
     "venue": "未记录"
   },
@@ -3511,7 +3908,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "28760d2b7f1f91a4637472fc78833f1b4e5894157abf53522cada9a01d975685",
+    "content_hash": "ed97211617a5e8f485f6db346fe744699002555520d1604fb90dc5302961f484",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -3519,7 +3916,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -3533,7 +3930,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -3566,7 +3963,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-07-16",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -3634,7 +4031,7 @@
     "fulltext_text_chars": 86567,
     "id": "arxiv-2512-21524v1",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -3650,7 +4047,7 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 3,
+    "seen_count": 5,
     "source": "arXiv",
     "source_categories": [
       "Fuzz testing",
@@ -3703,7 +4100,7 @@
       "Coverage, Oracles & Fuzzing Methodology",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "f5418b59e3bca44e17326074a1bb1aa9e214901a9250dc0b8da4ac52bc19ead3",
+    "content_hash": "e5cb6d4c7fe00b7f8c8b0b5f37a9a400287a61ab7c5748dece44f089f337a8ee",
     "curation_status": "included",
     "doi": "https://doi.org/10.14722/ndss.2026.231486",
     "evidence_level": "full-text",
@@ -3714,7 +4111,7 @@
     "fulltext_text_chars": 100000,
     "id": "arxiv-2512-23438v1",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -3738,7 +4135,7 @@
     "relevance_score": 8,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 8,
+    "seen_count": 10,
     "source": "arXiv",
     "source_categories": [
       "Computer science",
@@ -3770,7 +4167,7 @@
     "source_id": "2512.23438v1",
     "title": "Fuzzilicon: A Post-Silicon Microcode-Guided x86 CPU Fuzzer",
     "title_key": "fuzzilicon a post silicon microcode guided x86 cpu fuzzer",
-    "updated": "2026-07-19",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.14722/ndss.2026.231486",
     "venue": "未记录"
   },
@@ -3811,7 +4208,7 @@
       "RISC-V Processor Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "e922eb04ba081336d869870741888dcc39195ecc81daec0fcc70da8f4fc0ddc6",
+    "content_hash": "8761b721e6a50cdb7d5fd18f486ae4d2285e92369bbec5da538aa02f319cfde0",
     "curation_status": "included",
     "doi": "https://doi.org/10.14722/ndss.2026.240118",
     "evidence_level": "full-text",
@@ -3822,7 +4219,7 @@
     "fulltext_text_chars": 100000,
     "id": "arxiv-2512-04436v2",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -3841,7 +4238,7 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 6,
+    "seen_count": 8,
     "source": "arXiv",
     "source_categories": [
       "Fuzz testing",
@@ -3866,7 +4263,7 @@
     "source_id": "2512.04436v2",
     "title": "ReFuzz: Reusing Tests for Processor Fuzzing with Contextual Bandits",
     "title_key": "refuzz reusing tests for processor fuzzing with contextual bandits",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.14722/ndss.2026.240118",
     "venue": "未记录"
   },
@@ -4050,7 +4447,7 @@
       "Xi Wang"
     ],
     "categories": [],
-    "content_hash": "f5269cbfcd48bc6b8a204420b70f75391c3b601a26ccfe1d9d0934f895307de0",
+    "content_hash": "b586ece8ca9ebb26a9317c9e13e6a564e9a4320b59131e11818341770a0f7619",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "evidence_level": "abstract",
@@ -4058,7 +4455,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4416469058",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -4072,7 +4469,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Expediting",
@@ -4110,7 +4507,7 @@
     "source_id": "https://openalex.org/W4416469058",
     "title": "ChatHLS: Towards Systematic Design Automation and Optimization for High-Level Synthesis",
     "title_key": "chathls towards systematic design automation and optimization for high level synthesis",
-    "updated": "2026-07-18",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "venue": "未记录"
   },
@@ -4683,8 +5080,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Comprehensive exploration of the CPU architectural states in fuzzing is akin to generating diverse test cases, which include a reasonable distribution of opcode and diversity in instruction execution results (typically measured through write-back data). However, our analysis of state-of-the-art CPU fuzzers reveals that they exhibit high repetition in write-back data and an imbalanced distribution of opcodes during fuzzing. This paper presents DiveFuzz, which diversifies write-back data by finely controlling the operands of instructions at runtime, coupled with correlated contextual semantics, to generate instruction streams with diverse write-back data and semantic associations. Furthermore, DiveFuzz introduces a novel mutator that monitors the fuzzing process to dynamically adjust opcode distribution and accurately eliminate false positives. Our evaluations show that DiveFuzz significantly increases the diversity of instruction write-back data and achieves a more balanced opcode distribution compared to state-of-the-art fuzzers. Across five common coverage metrics, DiveFuzz achieves coverage 204× faster than DifuzzRTL and 114× faster than Cascade. We evaluated DiveFuzz on four well-known open-source RISC-V CPUs—XiangShan, CVA6, Rocket, and NutShell—uncovering 26 new bugs, 15 of which have CVE identifiers."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Zihui Guo",
@@ -4699,7 +5096,7 @@
       "RTL & SoC Hardware Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "b963dcee586d18652f6fce9df229dc86986d114a8a6e324bec0c044b85641047",
+    "content_hash": "48d5d1bbc8a66e97aba84ddb107e54dc84e8660661eb93336a51c1a005f1daaf",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3719027.3765167",
     "evidence_level": "abstract",
@@ -4711,7 +5108,7 @@
     ],
     "id": "openalex-w4416549522",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing",
       "OpenAlex: microarchitectural path coverage processor fuzzing",
@@ -4727,7 +5124,7 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Opcode",
@@ -4750,7 +5147,7 @@
     "source_id": "https://openalex.org/W4416549522",
     "title": "DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction",
     "title_key": "divefuzz enhancing cpu fuzzing via diverse instruction construction",
-    "updated": "2026-07-14",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.1145/3719027.3765167",
     "venue": "未记录"
   },
@@ -4820,6 +5217,128 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Microarchitectural performance optimizations introduce information flows inside CPU implementations that exceed those defined by the Instruction Set Architecture (ISA). Microarchitectural vulnerabilities, such as constant-time violations and various classes of transient execution attacks, are subsets of these excessive information flows. We observe that an exploitable microarchitectural leakage is an excessive information flow that can affect the time it takes for the CPU to execute a particular instruction, creating a timing covert channel. We design MileSan, the first RTL sanitizer that is capable of detecting exploitable microarchitectural leakage by checking for the architecturally-observable differences between architectural and microarchitectural information flows. For a given program and CPU implementation, MileSan computes architectural flows using software taint tracking and microarchitectural flows using RTL taint tracking. Evaluating the exploitability of proof of concepts generated by previous microarchitectural fuzzers, we find cases that are in fact not exploitable and discover the particular microarchitectural components that enable exploitation for the rest. In addition to assessing exploitability, MileSan enables the generation of random test programs with strictly-defined architectural information flows of secret data using a novel technique called taint-aware in-situ simulation. Leveraging this capability, we build RandOS, a new microarchitectural fuzzer that generates random programs traversing different privilege levels and address spaces, akin to random operating systems. Evaluation using five RISC-V CPUs shows that RandOS not only detects known exploitable vulnerabilities 4.5x faster than the state of the art, but also discovers 19 new constant-time violations and transient execution vulnerabilities in well-tested CPUs, such as BOOM, CVA6 and OpenC910.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《MileSan: Detecting Exploitable Microarchitectural Leakage via Differential Hardware-Software Taint Tracking》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Microarchitectural performance optimizations introduce information flows inside CPU implementations that exceed those defined by the Instruction Set Architecture (ISA). Microarchitectural vulnerabilities, such as constant-time violations and various classes of transient execution attacks, are subsets of these excessive information flows. We observe that an exploitable microarchitectural leakage is an excessive information flow that can affect the time it takes for the CPU to execute a particular instruction, creating a timing covert channel. We design MileSan, the first RTL sanitizer that is capable of detecting exploitable microarchitectural leakage by checking for the architecturally-observable differences between architectural and microarchitectural information flows. For a given program and CPU implementation, MileSan computes architectural flows using software taint tracking and microarchitectural flows using RTL taint tracking. Evaluating the exploitability of proof of concepts generated by previous microarchitectural fuzzers, we find cases that are in fact not exploitable and discover the particular microarchitectural components that enable exploitation for the rest. In addition to assessing exploitability, MileSan enables the generation of random test programs with strictly-defined architectural information flows of secret data using a novel technique called taint-aware in-situ simulation. Leveraging this capability, we build RandOS, a new microarchitectural fuzzer that generates random programs traversing different privilege levels and address spaces, akin to random operating systems. Evaluation using five RISC-V CPUs shows that RandOS not only detects known exploitable vulnerabilities 4.5x faster than the state of the art, but also discovers 19 new constant-time violations and transient execution vulnerabilities in well-tested CPUs, such as BOOM, CVA6 and OpenC910."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "T. Kovats",
+      "Flavien Solt",
+      "Katharina Ceesay-Seitz",
+      "Kaveh Razavi"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing",
+      "Microarchitectural Security Testing",
+      "RTL & SoC Hardware Fuzzing",
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "8a9c4fbc38741b3cd58d4548c1de56f98fbd4251ce4fb0a7c53d10a4de1b7107",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1145/3719027.3765066",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [
+      "https://doi.org/10.1145/3719027.3765066"
+    ],
+    "id": "semantic-scholar-6f038816a2e2f52d0611c825ce5df278ef970b31",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "d7e6d080aaaf0ff835211ac495b2edcab4efffb0fd315dd52fa5325e538edc54",
+    "pdf_url": "https://doi.org/10.1145/3719027.3765066",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2025-11-19",
+    "relevance_reasons": [
+      "manual direct seed title"
+    ],
+    "relevance_score": 100,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6f038816a2e2f52d0611c825ce5df278ef970b31",
+    "title": "MileSan: Detecting Exploitable Microarchitectural Leakage via Differential Hardware-Software Taint Tracking",
+    "title_key": "milesan detecting exploitable microarchitectural leakage via differential hardware software taint tracking",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3719027.3765066",
+    "venue": "Conference on Computer and Communications Security"
+  },
+  {
+    "abstract": "Windows printing services remain a notable vector for attacks. Previous studies have predominantly targeted vulnerabilities within various control aspects of printing services, such as spooler services and firmware updates. Yet, we contend that an essential aspect of data processing—the document parser within printer drivers—has been overlooked in past research. We present a coverage-based fuzzing system, PrintXPSurge, specifically crafted to detect weaknesses in the XPS printer driver's parsing function. To craft semantically correct XPS files, we leverage a large language model-assisted repair approach to automate the creation of semantically correct XPS files that comply with necessary constraints. To ensure our fuzzing process effectively interacts with the XPS printer driver, we develop a progressive state reconstruction method that addresses individual dependency requirements across the entire printing service workflow. Furthermore, when a crash is detected, we employ backtracing to confirm its origin in the XPS parser, isolating it from other components in the pipeline. Our evaluation reveals that PrintXPSurge surpasses existing top Windows fuzzers in performance, successfully identifying 102 bugs in 10 drivers from major brands, including 17 zero-day vulnerabilities confirmed by Microsoft and third-party vendors.",
+    "analysis": {},
+    "authors": [
+      "Yunpeng Tian",
+      "Feng Dong",
+      "Junhai Wang",
+      "Mu Zhang",
+      "Zhiniang Peng",
+      "Zesen Ye",
+      "Xiapu Luo",
+      "Haoyu Wang"
+    ],
+    "categories": [],
+    "content_hash": "0f75951fc1aca42021540a7ecc8209cc0a15c6d73a0920c3a0bcae0ae847d810",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3719027.3744807",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-43f21c042be5b5da08a75034609483635f368bfa",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3719027.3744807",
+    "primary_category": "",
+    "published": "2025-11-19",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "43f21c042be5b5da08a75034609483635f368bfa",
+    "title": "Error Messages to Fuzzing: Detecting XPS Parsing Vulnerabilities in Windows Printing Components",
+    "title_key": "error messages to fuzzing detecting xps parsing vulnerabilities in windows printing components",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3719027.3744807",
+    "venue": "Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "Recent surge in adoption of Large Language Models (LLMs) have made them vulnerable to sophisticated adversarial attacks, manipulative prompts, and encoded malicious inputs. Existing countermeasures often require retraining models, a process that is computationally expensive and impractical for deployment. This paper introduces a novel defense framework that enables LLMs to autonomously detect, filter, and fend off malicious or adversarial inputs without requiring retraining or fine-tuning. The proposed framework consists of two core components: (1) A summarization module that processes and summarizes adversarial research literature to provide the LLM with context-aware defense knowledge and (2) A prompt filtering module that detects, decodes, and classifies harmful inputs through advanced Natural Language Processing (NLP) techniques, such as zero-shot classification, keyword analysis, and encoded content detection. By combining text extraction, summarization, and malicious prompt analysis, this approach enhances the robustness of LLMs against adversarial misuse. Experimental results demonstrate that this integrated approach successfully identifies encoded prompts, malicious patterns, and manipulative language structures with a success rate of 98.7%. The framework also enables the model to respond appropriately to malicious prompts with a higher percentage of jailbreak resistance and refusal rate, using minimal quantity of adversarial research literature as context. The framework significantly reduces LLM Attack Success Rate (ASR) as a lightweight, efficient alternative to retraining-based time and resource-consuming defenses, while upholding LLM response quality.",
     "analysis": {},
     "authors": [
@@ -4827,7 +5346,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "91fcfdbaa91644d76da219fddb4036247e10f5c719168e3d3153d787fe35608a",
+    "content_hash": "b2686af26fb6c3fdebc725b1291123d98ccd5fb9063d35a4cfeb0840f4c91900",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -4835,7 +5354,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4848,7 +5367,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -4873,7 +5392,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-07-21",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -5163,6 +5682,164 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Contention-based side channels, rooted in resource sharing, have emerged as a significant security threat in modern processors. These side channels allow attackers to leverage timing differences caused by conflicts in execution ports, caches, or interconnects to infer secret information such as cryptographic keys or enclave-resident data. Despite increasing awareness, detecting such channels remains challenging because triggering contentions requires precisely orchestrating specific microarchitectural states, which is often difficult in practice, especially for timing-sensitive contentions. This paper introduces Sonar, the first systematic and automated fuzzing framework designed to uncover contention side channels in processors. Our core idea is to leverage microarchitectural states to guide testcase generation, enabling the precise triggering of microarchitectural events with stringent conditions. Sonar is built on the key observation that multiplexers (MUXes) are hotspots for contention, as resource contention frequently involves data routing and signal selection, which are fundamentally implemented by MUXes in circuits. We first identify contention-critical states with side channel risks based on MUXes, and then utilize these runtime states to directly guide testcase generation via fuzzing, progressively approaching and ultimately triggering contentions. Finally, we employ a dual-differential comparison method to efficiently detect contention-induced side channels and simulate attack scenarios to assess their exploitability. Evaluated on two out-of-order RISC-V processors, Sonar uncovers 14 contention side channels, including 11 previously unknown. These results demonstrate the effectiveness of Sonar in uncovering potentially exploitable microarchitectural contentions.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《Sonar: A Hardware Fuzzing Framework to Uncover Contention Side Channels in Processors》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Contention-based side channels, rooted in resource sharing, have emerged as a significant security threat in modern processors. These side channels allow attackers to leverage timing differences caused by conflicts in execution ports, caches, or interconnects to infer secret information such as cryptographic keys or enclave-resident data. Despite increasing awareness, detecting such channels remains challenging because triggering contentions requires precisely orchestrating specific microarchitectural states, which is often difficult in practice, especially for timing-sensitive contentions. This paper introduces Sonar, the first systematic and automated fuzzing framework designed to uncover contention side channels in processors. Our core idea is to leverage microarchitectural states to guide testcase generation, enabling the precise triggering of microarchitectural events with stringent conditions. Sonar is built on the key observation that multiplexers (MUXes) are hotspots for contention, as resource contention frequently involves data routing and signal selection, which are fundamentally implemented by MUXes in circuits. We first identify contention-critical states with side channel risks based on MUXes, and then utilize these runtime states to directly guide testcase generation via fuzzing, progressively approaching and ultimately triggering contentions. Finally, we employ a dual-differential comparison method to efficiently detect contention-induced side channels and simulate attack scenarios to assess their exploitability. Evaluated on two out-of-order RISC-V processors, Sonar uncovers 14 contention side channels, including 11 previously unknown. These results demonstrate the effectiveness of Sonar in uncovering potentially exploitable microarchitectural contentions."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "Kanqi Zhang",
+      "Peinan Li",
+      "Miao Li",
+      "Xin Tian",
+      "Zelong Du",
+      "Quanchen Liu",
+      "Yongqiang Lyu",
+      "Yu Jiang",
+      "Dan Meng",
+      "Rui Hou"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing",
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "2fdeaa360e4c723d2bd22d86ebcbea1b2507d8a9fbe9b3298a0eacd5355bc146",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1145/3725843.3756136",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [
+      "https://doi.org/10.1145/3725843.3756136"
+    ],
+    "id": "semantic-scholar-c59e5a11dd4dc8f45ebe72e34c331a4dace72eee",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "ed53587ebb3ad82535c681367805f5b0afe890658efe16e4bcd2017392b1f6d9",
+    "pdf_url": "https://doi.org/10.1145/3725843.3756136",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2025-10-17",
+    "relevance_reasons": [
+      "strong phrase in title: hardware fuzzing",
+      "hardware/processor object: risc-v, processor, microarchitectural",
+      "verification/fuzzing method: fuzz",
+      "security relevance: security, side channel"
+    ],
+    "relevance_score": 10,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "c59e5a11dd4dc8f45ebe72e34c331a4dace72eee",
+    "title": "Sonar: A Hardware Fuzzing Framework to Uncover Contention Side Channels in Processors",
+    "title_key": "sonar a hardware fuzzing framework to uncover contention side channels in processors",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3725843.3756136",
+    "venue": "Micro"
+  },
+  {
+    "abstract": "Modern hardware incorporates reusable designs to reduce cost and time to market, inadvertently increasing exposure to security vulnerabilities. While formal verification and simulation-based approaches have been traditionally utilized to mitigate these vulnerabilities, formal techniques are hindered by scalability issues, while conventional simulation methods frequently overlook critical edge cases. Fuzzing, as a simulation-based strategy, has demonstrated considerable promise in enhancing the security of both software and hardware; however, it is impeded by challenges such as limited input coverage, difficulties in traversing branching paths, and the complexity of managing circuit parameters, in addition to the limited adaptability of existing hardware fuzzing techniques within industrial workflows. To address these limitations, we propose SymbFuzz, an innovative hybrid hardware fuzzing methodology that leverages symbolic execution to achieve superior coverage. SymbFuzz is the first hardware fuzzing technique to be implemented on the industry-standard Universal Verification Methodology (UVM), facilitating seamless integration into commercial hardware verification flows. SymbFuzz was evaluated on a diverse set of processor RTLs, including OpenTitan (Ibex), CVA6, Rocket-Core, and Mor1kx. These designs span a range of processor architectures and complexities. SymbFuzz detected all bugs previously found by existing fuzzers and additionally uncovered 14 new bugs, including a vulnerability in OpenTitan, reported in the CWE 2025 database. It also achieved up to 6.8 × faster convergence compared to traditional UVM random testing and over 2 × 104 additional functional coverage points compared to state-of-the-art fuzzers, demonstrating its effectiveness in improving RTL validation across varied processor architectures.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《SymbFuzz: Symbolic Execution Guided Hardware Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Modern hardware incorporates reusable designs to reduce cost and time to market, inadvertently increasing exposure to security vulnerabilities. While formal verification and simulation-based approaches have been traditionally utilized to mitigate these vulnerabilities, formal techniques are hindered by scalability issues, while conventional simulation methods frequently overlook critical edge cases. Fuzzing, as a simulation-based strategy, has demonstrated considerable promise in enhancing the security of both software and hardware; however, it is impeded by challenges such as limited input coverage, difficulties in traversing branching paths, and the complexity of managing circuit parameters, in addition to the limited adaptability of existing hardware fuzzing techniques within industrial workflows. To address these limitations, we propose SymbFuzz, an innovative hybrid hardware fuzzing methodology that leverages symbolic execution to achieve superior coverage. SymbFuzz is the first hardware fuzzing technique to be implemented on the industry-standard Universal Verification Methodology (UVM), facilitating seamless integration into commercial hardware verification flows. SymbFuzz was evaluated on a diverse set of processor RTLs, including OpenTitan (Ibex), CVA6, Rocket-Core, and Mor1kx. These designs span a range of processor architectures and complexities. SymbFuzz detected all bugs previously found by existing fuzzers and additionally uncovered 14 new bugs, including a vulnerability in OpenTitan, reported in the CWE 2025 database. It also achieved up to 6.8 × faster convergence compared to traditional UVM random testing and over 2 × 104 additional functional coverage points compared to state-of-the-art fuzzers, demonstrating its effectiveness in improving RTL validation across varied processor architectures."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "S. Miftah",
+      "Amisha Srivastava",
+      "Hyunmin Kim",
+      "Shiyi Wei",
+      "Kanad Basu"
+    ],
+    "categories": [
+      "RTL & SoC Hardware Fuzzing",
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "fe5eb9598e0b14ed56f0f3be893379f4f0b5bc42544ac953bd4fb6d5a1d32c0e",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1145/3725843.3756131",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [
+      "https://doi.org/10.1145/3725843.3756131"
+    ],
+    "id": "semantic-scholar-b688222a2b968a9e06452d8415a298516c93cfc5",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "9d7770b053cbbf06bb86dbed6812981ccee1bbebbd4b5e29d3656ee722240c99",
+    "pdf_url": "https://doi.org/10.1145/3725843.3756131",
+    "primary_category": "RTL & SoC Hardware Fuzzing",
+    "published": "2025-10-17",
+    "relevance_reasons": [
+      "strong phrase in title: hardware fuzzing",
+      "hardware/processor object: processor, rtl",
+      "verification/fuzzing method: fuzz, random testing, verification, validation",
+      "security relevance: security, vulnerability"
+    ],
+    "relevance_score": 10,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "b688222a2b968a9e06452d8415a298516c93cfc5",
+    "title": "SymbFuzz: Symbolic Execution Guided Hardware Fuzzing",
+    "title_key": "symbfuzz symbolic execution guided hardware fuzzing",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3725843.3756131",
+    "venue": "Micro"
+  },
+  {
     "abstract": "Remote Direct Memory Access (RDMA) is a memory technology that allows remote devices to directly write to and read from each other's memory, bypassing components such as the CPU and operating system. This enables low-latency high-throughput networking, as required for many modern data centres, HPC applications and AI/ML workloads. However, baseline RDMA comprises a highly permissive weak memory model that is difficult to use in practice and has only recently been formalised. In this paper, we introduce the Library of Composable Objects (LOCO), a formally verified library for building multi-node objects on RDMA, filling the gap between shared memory and distributed system programming. LOCO objects are well-encapsulated and take advantage of the strong locality and the weak consistency characteristics of RDMA. They have performance comparable to custom RDMA systems (e.g. distributed maps), but with a far simpler programming model amenable to formal proofs of correctness. To support verification, we develop a novel modular declarative verification framework, called Mowgli, that is flexible enough to model multinode objects and is independent of a memory consistency model. We instantiate Mowgli with the RDMA memory model, and use it to verify correctness of LOCO libraries.",
     "analysis": {},
     "authors": [
@@ -5215,6 +5892,46 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "A. Desai"
+    ],
+    "categories": [],
+    "content_hash": "656a92993e2907ae06e9b0c015afb6c528fca332c1d75de9ec57597c0555c177",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.34727/2025/isbn.978-3-85448-084-6_2",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-7a1b21afe816161e568370db81287d10092237ca",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2025-10-06",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "7a1b21afe816161e568370db81287d10092237ca",
+    "title": "Systems Correctness Practices at AWS: Leveraging Formal and Semi-formal Methods",
+    "title_key": "systems correctness practices at aws leveraging formal and semi formal methods",
+    "updated": "",
+    "url": "https://doi.org/10.34727/2025/isbn.978-3-85448-084-6_2",
+    "venue": "Formal Methods in Computer-Aided Design"
+  },
+  {
     "abstract": "Single-address-space operating systems have well-known lightweightness benefits that result from their central design idea: the kernel and applications share a unique address space. This model makes these operating systems (OSes) incompatible by design with a large class of software: multiprocess POSIX applications. Indeed, the semantics of the primitive used to create POSIX processes, fork, are inextricably tied to the existence of multiple address spaces.",
     "analysis": {},
     "authors": [
@@ -5223,7 +5940,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "2a61f1a4f43918471d0fd2c59a598d392f1c4298f0bbceb3dc4f22f79c532487",
+    "content_hash": "9c841771cc137b54175e0fa8415f25f43e3bad3b9057fe032a9386834b623ee1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3731569.3764809",
     "evidence_level": "abstract",
@@ -5231,7 +5948,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414735884",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -5244,7 +5961,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "POSIX",
@@ -5263,7 +5980,7 @@
     "source_id": "https://openalex.org/W4414735884",
     "title": "μFork: Supporting POSIX fork Within a Single-Address-Space OS",
     "title_key": "fork supporting posix fork within a single address space os",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3731569.3764809",
     "venue": "未记录"
   },
@@ -5763,101 +6480,6 @@
     "venue": "arXiv"
   },
   {
-    "abstract": "Transient execution vulnerabilities have emerged as a critical threat to modern processors. Hardware fuzzing testing techniques have recently shown promising results in discovering transient execution bugs in large-scale out-of-order processor designs. However, their poor microarchitectural controllability and observability prevent them from effectively and efficiently detecting transient execution vulnerabilities.",
-    "analysis": {
-      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 16 页，提取 87419 字符",
-      "conclusion": "DejaVuzz利用swapMem和diffIFT增强微架构可控性和可观测性，在BOOM和XiangShan上比SpecDoctor提升4.7倍覆盖率，发现5个新漏洞（6个CVE），证明了有效性。",
-      "deep_reading": "建议重点阅读第3节（Operating Primitives）、第4节（DejaVuzz Framework）、第6节（Evaluation）中的Table 3、Table 4、Figure 7。特别关注训练缩减策略和污点活性分析的设计细节。",
-      "evaluation": "baseline: 与SpecDoctor比较，并在BOOM上比较DejaVuzz*（随机训练）和DejaVuzz-（无污点覆盖率）。实验预算：2500个瞬态窗口，20,000次迭代（覆盖率实验），5次重复。统计：平均训练指令数（TO/ETO），覆盖点数，仿真时间。bug/CVE：发现5个新漏洞，分配6个CVE（CVE-2024-44590至44595）。开销：diffIFT编译时间比Base增加约2.2倍（BOOM 268 vs 122秒），仿真时间增加约2-3倍；CellIFT在BOOM上编译用时2856秒且仿真慢。Artifact：代码开源在https://github.com/sycuricon/DejaVuzz。",
-      "evidence_level": "full-text",
-      "follow_up_questions": [
-        "1) diffIFT的假阴性率如何定量评估？作者仅给出worst-case实验。",
-        "2) swapMem在真实硬件（如黑盒处理器）上的可移植性？",
-        "3) 能否将swapMem与多核/多hart场景结合用于一致性测试？",
-        "4) 污点活性注释能否自动化？",
-        "5) 与形式化验证方法相比，DejaVuzz的覆盖完备性如何？"
-      ],
-      "introduction": "现有硬件fuzzing方法如SpecDoctor、IntroSpectre等在触发瞬态窗口时受限于地址空间冲突（类型有限、训练开销高），在观测敏感数据时缺乏覆盖率反馈和精确oracle（控制流过沾染）。本文提出动态可交换内存（swapMem）实现地址空间分时复用以增强可控性，提出差分信息流追踪（diffIFT）通过对比不同秘密实例的控制信号消除过沾染以增强可观测性，并构建DejaVuzz fuzzer实现更高效的漏洞检测。",
-      "key_contribution": "1) 总结了瞬态执行fuzzing的微架构可控性和可观测性挑战，提出swapMem和diffIFT两个原语。2) 基于原语设计DejaVuzz，包括训练推导/缩减、污点覆盖率、污点活性分析。3) 在真实处理器上发现5个新漏洞并分配CVE。",
-      "language": "zh-CN",
-      "limitations": "1) diffIFT是近似解，可能因秘密对产生相同控制信号导致假阴性（可通过尝试不同秘密对缓解）。2) 训练缩减策略倾向于选择开销最小的训练序列，可能忽略需要更长时间训练的预测器。3) 生成的刺激只能在swapMem上运行，迁移到标准内存模型需手动拼接。4) 污点活性注释目前需手动进行，未来可考虑自动注释。",
-      "method": "输入生成：基于种子随机生成触发指令，利用swapMem隔离训练和瞬态序列以生成任意瞬态窗口；训练推导策略根据瞬态窗口信息生成针对性训练；训练缩减策略通过逐一移除训练包并重仿真判断必要性。反馈/覆盖率：diffIFT生成污点，定义污点覆盖率（模块内污点寄存器数量作为索引记录覆盖点），引导变异。Oracle：首先检查瞬态窗口是否常量时间执行；若否则报告；若是则利用污点活性注释（绑定状态寄存器与污点寄存器）过滤不可利用泄露。DUT/平台：BOOM和XiangShan，使用Synopsys VCS仿真。是否需要golden model：否，采用差分测试（两个DUT实例加载不同秘密）。",
-      "relevance_to_repo": "直接相关（处理器Fuzzing、微架构安全自动测试、Oracle）。与多hart/一致性路径关系：论文聚焦单处理器内核，未涉及多hart或内存一致性验证，但diffIFT的差分思路可推广到一致性验证中的状态比较。",
-      "research_problem": "瞬态执行漏洞在乱序处理器中检测困难，现有硬件fuzzing方法在微架构可控性和可观测性方面存在不足，无法有效触发多样瞬态窗口且无法精确追踪敏感数据传播。"
-    },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
-    "analysis_status": "fulltext_verified",
-    "authors": [
-      "Jinyan Xu",
-      "Yangye Zhou",
-      "Xingzhi Zhang",
-      "Yinshuai Li",
-      "Qinhan Tan",
-      "Yinqian Zhang",
-      "Yajin Zhou",
-      "Rui Chang",
-      "Wenbo Shen"
-    ],
-    "categories": [
-      "Microarchitectural Security Testing",
-      "Coverage, Oracles & Fuzzing Methodology"
-    ],
-    "content_hash": "1458d2f73aab17fe49a7a374a0b64e7fa64c4c00db47dc2b46955f2983ca0770",
-    "curation_status": "included",
-    "doi": "https://doi.org/10.1145/3676642.3736115",
-    "evidence_level": "full-text",
-    "exclusion_reason": "",
-    "first_seen": "2026-07-22",
-    "fulltext_pages": 16,
-    "fulltext_source": "https://arxiv.org/pdf/2504.20934v1",
-    "fulltext_text_chars": 87419,
-    "id": "arxiv-2504-20934v1",
-    "included": true,
-    "last_seen": "2026-07-22",
-    "matched_queries": [
-      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "OpenAlex: RISC-V RTL fuzzing differential testing",
-      "OpenAlex: transient execution RTL fuzzing"
-    ],
-    "pdf_candidate_fingerprint": "ffec297fe46dad0d16fc0bdd96f0d45946452c256bb538580bdc2811e4676ac1",
-    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3676642.3736115",
-    "primary_category": "Microarchitectural Security Testing",
-    "published": "2025-08-06",
-    "relevance_reasons": [
-      "strong phrase in title: processor fuzzing",
-      "hardware/processor object: processor, microarchitectural",
-      "verification/fuzzing method: fuzz, information flow tracking",
-      "security relevance: transient execution"
-    ],
-    "relevance_score": 10,
-    "relevance_tier": "A",
-    "scope": "core",
-    "seen_count": 6,
-    "source": "arXiv",
-    "source_categories": [
-      "Fuzz testing",
-      "Computer science",
-      "Transient (computer programming)",
-      "Software bug",
-      "Information flow",
-      "Operating system",
-      "Embedded system",
-      "Software",
-      "Linguistics",
-      "Philosophy"
-    ],
-    "source_id": "2504.20934v1",
-    "title": "DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking Assisted Processor Fuzzing",
-    "title_key": "dejavuzz disclosing transient execution bugs with dynamic swappable memory and differential information flow tracking assisted processor fuzzing",
-    "updated": "2026-07-14",
-    "url": "https://doi.org/10.1145/3676642.3736115",
-    "venue": "未记录"
-  },
-  {
     "abstract": "Symbolic execution of hardware designs is a path-based analysis that can deliver high quality coverage and security verification results. Unfortunately, the technique has historically struggled with the path explosion problem and, despite recent advances, remains expensive. We present SylQ-SV, a dedicated SystemVerilog symbolic execution engine that uses SMT query caching to improve execution times, reducing run time by up to 17% over the state of the art. SylQ-SV provides language support for all necessary SystemVerilog constructs, including SystemVerilog Assertions, to provide end-to-end verification workflows of the open-source designs most commonly appearing in the literature. We evaluate SYLQ-SV on the OR1200 CPU, the OpenTitan SoC with Ibex core, and two SoC designs from the HACK@DAC competitions (with PULPissimo core and CVA6 core, respectively). We make the SylQ-SV source code and all data used in the evaluation publicly available.",
     "analysis": {
       "analysis_mode": "摘要级占位（未全文核验）",
@@ -5878,8 +6500,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Symbolic execution of hardware designs is a path-based analysis that can deliver high quality coverage and security verification results. Unfortunately, the technique has historically struggled with the path explosion problem and, despite recent advances, remains expensive. We present SylQ-SV, a dedicated SystemVerilog symbolic execution engine that uses SMT query caching to improve execution times, reducing run time by up to 17% over the state of the art. SylQ-SV provides language support for all necessary SystemVerilog constructs, including SystemVerilog Assertions, to provide end-to-end verification workflows of the open-source designs most commonly appearing in the literature. We evaluate SYLQ-SV on the OR1200 CPU, the OpenTitan SoC with Ibex core, and two SoC designs from the HACK@DAC competitions (with PULPissimo core and CVA6 core, respectively). We make the SylQ-SV source code and all data used in the evaluation publicly available."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kaki Ryan",
@@ -5888,7 +6510,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "e532c982e538eaa58c083d0071a2abb0bda7cad2a04afc289ce3e770f99d07cc",
+    "content_hash": "fb6a9bfac1cae4cc314286a7fe9d37f670713615fcf74e429f10a2e4563f3752",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3676642.3736123",
     "evidence_level": "abstract",
@@ -5900,7 +6522,7 @@
     ],
     "id": "openalex-w4413014921",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -5916,7 +6538,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5929,7 +6551,7 @@
     "source_id": "https://openalex.org/W4413014921",
     "title": "<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching",
     "title_key": "scp syl scp q sv scaling symbolic execution of hardware designs with query caching",
-    "updated": "2026-07-14",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.1145/3676642.3736123",
     "venue": "未记录"
   },
@@ -6136,8 +6758,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：This paper presents BPUFuzzer, a fuzz testing tool for detecting branching transient execution vulnerabilities in CPU RTL design. BPUFuzzer addresses two key challenges: generating testcases that capture complex control flows, and extracting essential data from vast hardware states to guide testcase selection. Utilizing a control flow graph-based testcase generation strategy with anomaly detection and employing fitness and coverage metrics, BPUFuzzer works on testcases that cover broader program flows and deliberately selects testcases to discover transient execution vulnerabilities effectively. When applied on RISC-V Boom v3, BPUFuzzer uncovered more Spectre types than the state-of-the-arts, including a previously unidentified variant, named Spectre-LOOP."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Rihui Sun",
@@ -6226,7 +6848,7 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "8af6a76f1870617226c1e5e5745378358450efa2f312a7e0709582fe33e13c88",
+    "content_hash": "66eb64f1cb1e71b151aeeb5ed9f339f44ef39416eb7307f10779f30e72ba64fc",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735544.3735586",
     "evidence_level": "abstract",
@@ -6234,7 +6856,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4411265269",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -6249,7 +6871,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6267,7 +6889,7 @@
     "source_id": "https://openalex.org/W4411265269",
     "title": "Scalable Language Agnostic Taint Tracking using Explicit Data Dependencies",
     "title_key": "scalable language agnostic taint tracking using explicit data dependencies",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3735544.3735586",
     "venue": "未记录"
   },
@@ -6281,7 +6903,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "3ca7beb9a9974e0d8e6f47853089d538c8f962980eaa2395ad07d9808927868c",
+    "content_hash": "cf7b79e30c7ed70995946a3bfe2a78e6d1a62ea291755a74e8323b281db87955",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers14060226",
     "evidence_level": "abstract",
@@ -6289,7 +6911,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4411153552",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -6304,7 +6926,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Scrutiny",
@@ -6317,7 +6939,7 @@
     "source_id": "https://openalex.org/W4411153552",
     "title": "Ethereum Smart Contracts Under Scrutiny: A Survey of Security Verification Tools, Techniques, and Challenges",
     "title_key": "ethereum smart contracts under scrutiny a survey of security verification tools techniques and challenges",
-    "updated": "2026-07-05",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/computers14060226",
     "venue": "Computers"
   },
@@ -6543,6 +7165,81 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Once hardware is manufactured, it becomes immutable, and any design flaws or vulnerabilities are permanent. Therefore, comprehensive testing of hardware designs is essential before production. However, the increasing complexity of modern processors makes static analysis and formal verification increasingly challenging. Fuzzing is a highly effective technique for detecting software vulnerabilities but adapting it to hardware presents unique challenges due to the fundamental differences between software and hardware. However, the current state-of-the-art in hardware fuzzing still has significant limitations, particularly in terms of performance, practicality, and the need for human intervention. To address these issues, we introduce RLFuzz, a novel hardware fuzzer that employs reinforcement learning to explore processors autonomously, achieving faster and more comprehensive coverage. Reinforcement learning enables the fuzzer to learn from its interactions with the processor without requiring labeled data, allowing it to more effectively select modifications for test cases and target previously unexplored areas. RLFuzz uses an asynchronous training mechanism that permits concurrent fuzzing and neural network training. To optimize RLFuzz, we performed an extensive evaluation of various deep Q-learning optimization techniques and hyperparameters. We then tested the optimized fuzzer on three complex RISC-V cores-the Rocket core, CVA6, and BOOM-and compared its performance to a current hardware fuzzer, TheHuzz [20]. Our results show that RLFuzz achieved up to 1.77 % higher coverage, and on average 2.35 times faster, and demonstrated a maximum speedup of up to 6.93 times. For branch coverage, the average speedup was 7.85 times, with a peak speedup of 92.98 times. Additionally, RLFuzz needed less time to complete 100,000 test cases and did not require any human intervention.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《RLFuzz: Accelerating Hardware Fuzzing with Deep Reinforcement Learning》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Once hardware is manufactured, it becomes immutable, and any design flaws or vulnerabilities are permanent. Therefore, comprehensive testing of hardware designs is essential before production. However, the increasing complexity of modern processors makes static analysis and formal verification increasingly challenging. Fuzzing is a highly effective technique for detecting software vulnerabilities but adapting it to hardware presents unique challenges due to the fundamental differences between software and hardware. However, the current state-of-the-art in hardware fuzzing still has significant limitations, particularly in terms of performance, practicality, and the need for human intervention. To address these issues, we introduce RLFuzz, a novel hardware fuzzer that employs reinforcement learning to explore processors autonomously, achieving faster and more comprehensive coverage. Reinforcement learning enables the fuzzer to learn from its interactions with the processor without requiring labeled data, allowing it to more effectively select modifications for test cases and target previously unexplored areas. RLFuzz uses an asynchronous training mechanism that permits concurrent fuzzing and neural network training. To optimize RLFuzz, we performed an extensive evaluation of various deep Q-learning optimization techniques and hyperparameters. We then tested the optimized fuzzer on three complex RISC-V cores-the Rocket core, CVA6, and BOOM-and compared its performance to a current hardware fuzzer, TheHuzz [20]. Our results show that RLFuzz achieved up to 1.77 % higher coverage, and on average 2.35 times faster, and demonstrated a maximum speedup of up to 6.93 times. For branch coverage, the average speedup was 7.85 times, with a peak speedup of 92.98 times. Additionally, RLFuzz needed less time to complete 100,000 test cases and did not require any human intervention."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "Raphael Götz",
+      "Christoph Sendner",
+      "Nico Ruck",
+      "Mohamadreza Rostami",
+      "Alexandra Dmitrienko",
+      "Ahmad Sadeghi"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing",
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "36b3b72ef5ac6b0be80215bde437646014cde0823acee6ff595aa5cab53e0f22",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1109/HOST64725.2025.11050051",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [],
+    "id": "semantic-scholar-84263a859862223de3a6a6f8d3bbf333ba035271",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "2968d77ff2f40863219117957d36c9a407dbd9f60b62d3422a1ee09518037043",
+    "pdf_url": "",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2025-05-05",
+    "relevance_reasons": [
+      "strong phrase in title: hardware fuzzing",
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: fuzz, verification, formal verification"
+    ],
+    "relevance_score": 9,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "84263a859862223de3a6a6f8d3bbf333ba035271",
+    "title": "RLFuzz: Accelerating Hardware Fuzzing with Deep Reinforcement Learning",
+    "title_key": "rlfuzz accelerating hardware fuzzing with deep reinforcement learning",
+    "updated": "",
+    "url": "https://doi.org/10.1109/HOST64725.2025.11050051",
+    "venue": "IEEE International Symposium on Hardware Oriented Security and Trust"
+  },
+  {
     "abstract": "This dissertation revisits the topic of programmable cache coherence engines in the context of modern shared-memory multicore processors. First, the open-source BedRock cache coherence protocol is described. BedRock employs the canonical MOESIF coherence states and reduces implementation burden by eliminating transient coherence states from the protocol. The protocol's design complexity, concurrency, and verification effort are analyzed and compared to a canonical directory-based invalidate coherence protocol. Second, the architecture and microarchitecture of three separate cache coherence directories implementing the BedRock protocol within the BlackParrot 64-bit RISC-V multicore processor, collectively called BlackParrot-BedRock (BP-BedRock), are described. A fixed-function coherence directory engine implementation provides a baseline design for performance and area comparisons. A microcode-programmable coherence directory implementation demonstrates the feasibility of implementing a programmable coherence engine capable of maintaining sufficient protocol processing performance. A hybrid fixed-function and programmable coherence directory blends the protocol processing performance of the fixed-function design with the programmable flexibility of the microcode-programmable design. Collectively, the BedRock coherence protocol and its three BP-BedRock implementations demonstrate the feasibility and challenges of including programmable logic within the coherence system of modern shared-memory multicore processors, paving the way for future research into the application- and system-level benefits of programmable coherence engines.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 188 页，提取 100000 字符",
@@ -6611,6 +7308,94 @@
     "updated": "2025-05-02",
     "url": "http://arxiv.org/abs/2505.00962v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Transient execution vulnerabilities have emerged as a critical threat to modern processors. Hardware fuzzing testing techniques have recently shown promising results in discovering transient execution bugs in large-scale out-of-order processor designs. However, their poor microarchitectural controllability and observability prevent them from effectively and efficiently detecting transient execution vulnerabilities. This paper proposes DejaVuzz, a novel pre-silicon stage processor transient execution bug fuzzer. DejaVuzz utilizes two innovative operating primitives: dynamic swappable memory and differential information flow tracking, enabling more effective and efficient transient execution vulnerability detection. The dynamic swappable memory enables the isolation of different instruction streams within the same address space. Leveraging this capability, DejaVuzz generates targeted training for arbitrary transient windows and eliminates ineffective training, enabling efficient triggering of diverse transient windows. The differential information flow tracking aids in observing the propagation of sensitive data across the microarchitecture. Based on taints, DejaVuzz designs the taint coverage matrix to guide mutation and uses taint liveness annotations to identify exploitable leakages. Our evaluation shows that DejaVuzz outperforms the state-of-the-art fuzzer SpecDoctor, triggering more comprehensive transient windows with lower training overhead and achieving a 4.7x coverage improvement. And DejaVuzz also mitigates control flow over-tainting with acceptable overhead and identifies 5 previously undiscovered transient execution vulnerabilities (with 6 CVEs assigned) on BOOM and XiangShan.",
+    "analysis": {
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 16 页，提取 87419 字符",
+      "conclusion": "DejaVuzz利用swapMem和diffIFT增强微架构可控性和可观测性，在BOOM和XiangShan上比SpecDoctor提升4.7倍覆盖率，发现5个新漏洞（6个CVE），证明了有效性。",
+      "deep_reading": "建议重点阅读第3节（Operating Primitives）、第4节（DejaVuzz Framework）、第6节（Evaluation）中的Table 3、Table 4、Figure 7。特别关注训练缩减策略和污点活性分析的设计细节。",
+      "evaluation": "baseline: 与SpecDoctor比较，并在BOOM上比较DejaVuzz*（随机训练）和DejaVuzz-（无污点覆盖率）。实验预算：2500个瞬态窗口，20,000次迭代（覆盖率实验），5次重复。统计：平均训练指令数（TO/ETO），覆盖点数，仿真时间。bug/CVE：发现5个新漏洞，分配6个CVE（CVE-2024-44590至44595）。开销：diffIFT编译时间比Base增加约2.2倍（BOOM 268 vs 122秒），仿真时间增加约2-3倍；CellIFT在BOOM上编译用时2856秒且仿真慢。Artifact：代码开源在https://github.com/sycuricon/DejaVuzz。",
+      "evidence_level": "full-text",
+      "follow_up_questions": [
+        "1) diffIFT的假阴性率如何定量评估？作者仅给出worst-case实验。",
+        "2) swapMem在真实硬件（如黑盒处理器）上的可移植性？",
+        "3) 能否将swapMem与多核/多hart场景结合用于一致性测试？",
+        "4) 污点活性注释能否自动化？",
+        "5) 与形式化验证方法相比，DejaVuzz的覆盖完备性如何？"
+      ],
+      "introduction": "现有硬件fuzzing方法如SpecDoctor、IntroSpectre等在触发瞬态窗口时受限于地址空间冲突（类型有限、训练开销高），在观测敏感数据时缺乏覆盖率反馈和精确oracle（控制流过沾染）。本文提出动态可交换内存（swapMem）实现地址空间分时复用以增强可控性，提出差分信息流追踪（diffIFT）通过对比不同秘密实例的控制信号消除过沾染以增强可观测性，并构建DejaVuzz fuzzer实现更高效的漏洞检测。",
+      "key_contribution": "1) 总结了瞬态执行fuzzing的微架构可控性和可观测性挑战，提出swapMem和diffIFT两个原语。2) 基于原语设计DejaVuzz，包括训练推导/缩减、污点覆盖率、污点活性分析。3) 在真实处理器上发现5个新漏洞并分配CVE。",
+      "language": "zh-CN",
+      "limitations": "1) diffIFT是近似解，可能因秘密对产生相同控制信号导致假阴性（可通过尝试不同秘密对缓解）。2) 训练缩减策略倾向于选择开销最小的训练序列，可能忽略需要更长时间训练的预测器。3) 生成的刺激只能在swapMem上运行，迁移到标准内存模型需手动拼接。4) 污点活性注释目前需手动进行，未来可考虑自动注释。",
+      "method": "输入生成：基于种子随机生成触发指令，利用swapMem隔离训练和瞬态序列以生成任意瞬态窗口；训练推导策略根据瞬态窗口信息生成针对性训练；训练缩减策略通过逐一移除训练包并重仿真判断必要性。反馈/覆盖率：diffIFT生成污点，定义污点覆盖率（模块内污点寄存器数量作为索引记录覆盖点），引导变异。Oracle：首先检查瞬态窗口是否常量时间执行；若否则报告；若是则利用污点活性注释（绑定状态寄存器与污点寄存器）过滤不可利用泄露。DUT/平台：BOOM和XiangShan，使用Synopsys VCS仿真。是否需要golden model：否，采用差分测试（两个DUT实例加载不同秘密）。",
+      "relevance_to_repo": "直接相关（处理器Fuzzing、微架构安全自动测试、Oracle）。与多hart/一致性路径关系：论文聚焦单处理器内核，未涉及多hart或内存一致性验证，但diffIFT的差分思路可推广到一致性验证中的状态比较。",
+      "research_problem": "瞬态执行漏洞在乱序处理器中检测困难，现有硬件fuzzing方法在微架构可控性和可观测性方面存在不足，无法有效触发多样瞬态窗口且无法精确追踪敏感数据传播。"
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-22",
+    "analysis_status": "fulltext_verified",
+    "authors": [
+      "Jinyan Xu",
+      "Yangye Zhou",
+      "Xingzhi Zhang",
+      "Yinshuai Li",
+      "Qinhan Tan",
+      "Yinqian Zhang",
+      "Yajin Zhou",
+      "Rui Chang",
+      "Wenbo Shen"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing",
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "a9600612b5ae4199f89811b2deedeb4b4717453e3e31cb182e283c1257c9cd75",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1145/3676642.3736115",
+    "evidence_level": "full-text",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-22",
+    "fulltext_pages": 16,
+    "fulltext_source": "https://arxiv.org/pdf/2504.20934v1",
+    "fulltext_text_chars": 87419,
+    "id": "arxiv-2504-20934v1",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "OpenAlex: RISC-V RTL fuzzing differential testing",
+      "OpenAlex: transient execution RTL fuzzing",
+      "Semantic Scholar: formal assisted processor fuzzing",
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "ffec297fe46dad0d16fc0bdd96f0d45946452c256bb538580bdc2811e4676ac1",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3676642.3736115",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2025-04-29",
+    "relevance_reasons": [
+      "strong phrase in title: processor fuzzing",
+      "hardware/processor object: processor, microarchitecture, microarchitectural",
+      "verification/fuzzing method: fuzz, information flow tracking",
+      "security relevance: vulnerability, transient execution, leakage"
+    ],
+    "relevance_score": 10,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 10,
+    "source": "arXiv",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "2504.20934v1",
+    "title": "DejaVuzz: Disclosing Transient Execution Bugs with Dynamic Swappable Memory and Differential Information Flow Tracking Assisted Processor Fuzzing",
+    "title_key": "dejavuzz disclosing transient execution bugs with dynamic swappable memory and differential information flow tracking assisted processor fuzzing",
+    "updated": "2026-07-14",
+    "url": "https://doi.org/10.1145/3676642.3736115",
+    "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems"
   },
   {
     "abstract": "In the evolving landscape of integrated circuit (IC) design, the increasing complexity of modern processors and intellectual property (IP) cores has introduced new challenges in ensuring design correctness and security. The recent advancements in hardware fuzzing techniques have shown their efficacy in detecting hardware bugs and vulnerabilities at the RTL abstraction level of hardware. However, they suffer from several limitations, including an inability to address vulnerabilities introduced during synthesis and gate-level transformations. These methods often fail to detect issues arising from library adversaries, where compromised or malicious library components can introduce backdoors or unintended behaviors into the design. In this paper, we present a novel hardware fuzzer, SynFuzz, designed to overcome the limitations of existing hardware fuzzing frameworks. SynFuzz focuses on fuzzing hardware at the gate-level netlist to identify synthesis bugs and vulnerabilities that arise during the transition from RTL to the gate-level. We analyze the intrinsic hardware behaviors using coverage metrics specifically tailored for the gate-level. Furthermore, SynFuzz implements differential fuzzing to uncover bugs associated with EDA libraries. We evaluated SynFuzz on popular open-source processors and IP designs, successfully identifying 7 new synthesis bugs. Additionally, by exploiting the optimization settings of EDA tools, we performed a compromised library mapping attack (CLiMA), creating a malicious version of hardware designs that remains undetectable by traditional verification methods. We also demonstrate how SynFuzz overcomes the limitations of the industry-standard formal verification tool, Cadence Conformal, providing a more robust and comprehensive approach to hardware verification.",
@@ -6908,6 +7693,57 @@
     "venue": "未记录"
   },
   {
+    "abstract": "—Graphics Processing Units (GPUs) have become an indispensable part of modern computing infrastructure. They can execute massively parallel tasks on large data sets and have rich user space-accessible APIs for 3D rendering and general-purpose parallel programming. Unfortunately, the GPU drivers that bridge the gap between these APIs and the underlying hardware have grown increasingly large and complex over the years. Many GPU drivers now expose broad attack surfaces and pose serious security risks. Fuzzing is a proven automated testing method that mitigates these risks by identifying potential vulnerabilities. However, when applied to GPU drivers, existing fuzzers incur high costs and scale poorly because they rely on physical GPUs. Furthermore, they achieve limited effectiveness because they often fail to meet dependency and timing constraints while generating and executing input events. We present Moneta, a new ex-vivo approach to driver fuzzing that can statefully and effectively fuzz GPU drivers at scale. The key idea is (i) to recall past, in-vivo GPU driver execution states by synergistically combining snapshot-and-rehost and record-and-replay along with our proposed suite of GPU stack virtualization and introspection techniques, and (ii) to start parallel and stateful ex-vivo GPU driver fuzzing from the recalled states. We implemented a prototype of Moneta and evaluated it on three mainstream GPU drivers. Our prototype triggered deep, live GPU driver states during fuzzing, and found five previously unknown bugs in the NVIDIA GPU driver, three in the AMD Radeon GPU driver, and two in the ARM Mali GPU driver. These ten bugs were all confirmed by the respective vendors in response to our responsible disclosure, and five",
+    "analysis": {},
+    "authors": [
+      "Joonkyo Jung",
+      "Jisoo Jang",
+      "Yongwan Jo",
+      "Jonas Vinck DistriNet",
+      "K. Leuven",
+      "Alexios Voulimeneas",
+      "Tu Delft",
+      "Stijn Volckaert",
+      "KU DistriNet",
+      "Leuven Dokyung Song"
+    ],
+    "categories": [],
+    "content_hash": "32ce38f2b60bca0e121a434548a25c855751af4c0036645e08262349e8d86fa4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14722/ndss.2025.230218",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-fa64a4170d7e31854ef4df1b9e4a21161a835c4e",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.14722/ndss.2025.230218",
+    "primary_category": "",
+    "published": "2025",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "fa64a4170d7e31854ef4df1b9e4a21161a835c4e",
+    "title": "Moneta: Ex-Vivo GPU Driver Fuzzing by Recalling In-Vivo Execution States",
+    "title_key": "moneta ex vivo gpu driver fuzzing by recalling in vivo execution states",
+    "updated": "",
+    "url": "https://doi.org/10.14722/ndss.2025.230218",
+    "venue": "Network and Distributed System Security Symposium"
+  },
+  {
     "abstract": "The increasing complexity of modern processor and IP designs presents significant challenges in identifying and mitigating hardware flaws early in the IC design cycle. Traditional hardware fuzzing techniques, inspired by software testing, have shown promise but face scalability issues, especially at the gate-level netlist where bugs introduced during synthesis are often missed by RTL-level verification due to longer simulation times. To address this, we introduce GraphFuzz, a graph-based hardware fuzzer designed for gate-level netlist verification. In this approach, hardware designs are modeled as graph nodes, with gate behaviors encoded as features. By leveraging graph learning algorithms, GraphFuzz efficiently detects hardware vulnerabilities by analyzing node patterns. Our evaluation across benchmark circuits and open-source processors demonstrates an average prediction accuracy of 80% and bug detection accuracy of 70%, highlighting the potential of graph-based methods for enhancing hardware verification.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 15 页，提取 92464 字符",
@@ -7197,8 +8033,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Designing correct and secure hardware is challenging. Dynamic information flow tracking (DIFT) enhances RTL testing flows, for example, by providing formal guarantees on detecting information leakage. However, existing DIFT solutions do not scale to large memories encountered in complex processors. A formal analysis of existing DIFT mechanisms reveals the two factors that fundamentally limit the scalability of instrumenting memories: existing mechanisms enforce that all memory words must be accessible simultaneously, and dependent reads and writes must happen concurrently. These aspects that are detrimental to scalability are all due to precise tracking of implicit flows for every memory word, which is not required in many scenarios of interest. Based on this insight, we design HybriDIFT, a module-level DIFT memory instrumentation based on SRAM deduplication and on a single state bit that tracks implicit information flows. HybriDIFT can automatically identify memories and their protocols by combining static and dynamic analysis. HybriDIFT is precise in practice and scalable to RTL designs that feature large memories. We evaluate HybriDIFT by automatically instrumenting a set of open-source hardware designs. With Verilator, HybriDIFT accelerates build time by 1.06× to 3.5× and simulation by 2.6× to 5.1× on default target configurations, and instruments a larger OpenC910 configuration that was out of reach for the state-of-the-art DIFT mechanisms, while preserving sufficient precision for all known applications."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Flavien Solt",
@@ -7826,7 +8662,7 @@
     "venue": "arXiv"
   },
   {
-    "abstract": "Microarchitectural attacks represent a challenging and persistent threat to modern processors, exploiting inherent design vulnerabilities in processors to leak sensitive information or compromise systems. Of particular concern is the susceptibility of Speculative Execution, a fundamental part of performance enhancement, to such attacks. We introduce Specure, a novel pre-silicon verification method composing hardware fuzzing with Information Flow Tracking (IFT) to address speculative execution leakages. Integrating IFT enables two significant and non-trivial enhancements over the existing fuzzing approaches: i) automatic detection of microarchitectural information leakages vulnerabilities without golden model and ii) a novel Leakage Path coverage metric for efficient vulnerability detection. Specure identifies previously overlooked speculative execution vulnerabilities on the RISC-V BOOM processor and explores the vulnerability search space 6.45× faster than existing fuzzing techniques. Moreover, Specure detected known vulnerabilities 20× faster.",
+    "abstract": "Microarchitectural attacks represent a challenging and persistent threat to modern processors, exploiting inherent design vulnerabilities in processors to leak sensitive information or compromise systems. Of particular concern is the susceptibility of Speculative Execution, a fundamental part of performance enhancement, to such attacks.We introduce Specure, a novel pre-silicon verification method composing hardware fuzzing with Information Flow Tracking (IFT) to address speculative execution leakages. Integrating IFT enables two significant and non-trivial enhancements over the existing fuzzing approaches: i) automatic detection of microarchitectural information leakages vulnerabilities without golden model and ii) a novel Leakage Path coverage metric for efficient vulnerability detection. Specure identifies previously overlooked speculative execution vulnerabilities on the RISC-V BOOM processor and explores the vulnerability search space 6.45× faster than existing fuzzing techniques. Moreover, Specure detected known vulnerabilities 20× faster.CCS Concepts: • Security and privacy → Security in hardware.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 6 页，提取 34040 字符",
       "conclusion": "Specure通过组合硬件模糊测试和IFT，利用LP覆盖高效检测推测执行漏洞，无需黄金模型或硬件修改，并在BOOM处理器上验证了其有效性。",
@@ -7851,19 +8687,19 @@
     "analysis_status": "fulltext_verified",
     "authors": [
       "Mohamadreza Rostami",
-      "Shaza Zeitouni",
+      "S. Zeitouni",
       "Rahul Kande",
       "Chen Chen",
       "Pouya Mahmoody",
       "Jeyavijayan Rajendran",
-      "Ahmad‐Reza Sadeghi"
+      "A. Sadeghi"
     ],
     "categories": [
       "RISC-V Processor Fuzzing",
       "Microarchitectural Security Testing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "f9715afe53948683cb30af9a67fa5f29401d82e1d9362a5e433ecf088b33db09",
+    "content_hash": "c9cf11236ac39a220d989e328e8dc73ddd72ddfe19be21374964439aa3cc486f",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3649329.3658469",
     "evidence_level": "full-text",
@@ -7874,7 +8710,7 @@
     "fulltext_text_chars": 34040,
     "id": "arxiv-2410-22555v1",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -7882,7 +8718,8 @@
       "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "OpenAlex: RISC-V RTL fuzzing differential testing",
-      "OpenAlex: transient execution RTL fuzzing"
+      "OpenAlex: transient execution RTL fuzzing",
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
     ],
     "pdf_candidate_fingerprint": "204bcda18572002e13284e7dc0ecb3183f16cfde42120d22eba31f023fe3cad6",
     "pdf_url": "https://arxiv.org/pdf/2410.22555",
@@ -7892,31 +8729,22 @@
       "strong phrase in abstract: hardware fuzzing",
       "hardware/processor object: risc-v, processor, microarchitectural",
       "verification/fuzzing method: fuzz, verification, information flow tracking",
-      "security relevance: vulnerability, speculative execution, leakage"
+      "security relevance: security, vulnerability, speculative execution"
     ],
     "relevance_score": 8,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 7,
+    "seen_count": 10,
     "source": "arXiv",
     "source_categories": [
-      "Speculation",
-      "Speculative multithreading",
-      "Vulnerability (computing)",
-      "Computer science",
-      "Computer security",
-      "Economics",
-      "Operating system",
-      "Finance",
-      "Multithreading",
-      "Thread (computing)"
+      "Computer Science"
     ],
     "source_id": "2410.22555v1",
     "title": "Lost and Found in Speculation: Hybrid Speculative Vulnerability Detection",
     "title_key": "lost and found in speculation hybrid speculative vulnerability detection",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3649329.3658469",
-    "venue": "未记录"
+    "venue": "Design Automation Conference"
   },
   {
     "abstract": "Transient execution attacks have been one of the widely explored microarchitectural side channels since the discovery of Spectre and Meltdown. However, much of the research has been driven by manual discovery of new transient paths through well-known speculative events. Although a few attempts exist in literature on automating transient leakage discovery, such tools focus on finding variants of known transient attacks and explore a small subset of instruction set. Further, they take a random fuzzing approach that does not scale as the complexity of search space increases. In this work, we identify that the search space of bad speculation is disjointedly fragmented into equivalence classes, and then use this observation to develop a framework named Shesha, inspired by Particle Swarm Optimization, which exhibits faster convergence rates than state-of-the-art fuzzing techniques for automatic discovery of transient execution attacks. We then use Shesha to explore the vast search space of extensions to the x86 Instruction Set Architecture (ISAs), thereby focusing on previously unexplored avenues of bad speculation. As such, we report five previously unreported transient execution paths in Instruction Set Extensions (ISEs) on new generation of Intel processors. We then perform extensive reverse engineering of each of the transient execution paths and provide root-cause analysis. Using the discovered transient execution paths, we develop attack building blocks to exhibit exploitable transient windows. Finally, we demonstrate data leakage from Fused Multiply-Add instructions through SIMD buffer and extract victim data from various cryptographic implementations.",
@@ -8138,8 +8966,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Hardware execution attacks exploit subtle microarchitectural interactions to leak secret data. While checking programs for the existence of such attacks is essential, verification of software against the full hardware implementation does not scale. Verification using abstract formal models of the hardware can help provide strong security guarantees while leveraging abstraction to achieve scalability. However, handwriting accurate abstract models is tedious and error-prone. Hence, we need techniques to generate models that enable sound yet scalable security analysis automatically."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-07-22",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-07-29",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Adwait Godbole",
@@ -8385,7 +9213,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "bdb2c51a01dcdebfecc0ebd6838c8ce50f02f98ad8ae6924e16ed34183f04c00",
+    "content_hash": "fba1776359ca09d9ac6fa7d9ec63605a1cff1899277478e47f7bb209f9fde2a4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -8393,7 +9221,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8408,7 +9236,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8420,7 +9248,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-07-20",
+    "updated": "2026-07-26",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -8522,7 +9350,7 @@
       "Mohamadreza Rostami",
       "Nikhilesh Singh",
       "Rahul Kande",
-      "Ahmad-Reza Sadeghi",
+      "A. Sadeghi",
       "Chester Rebeiro",
       "Jeyavijayan Rajendran"
     ],
@@ -8532,8 +9360,9 @@
       "RTL & SoC Hardware Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "7ce627ad7c7caee9cd4d170dc5cffebe718fb8d928070925081421d025b75aa3",
+    "content_hash": "54265ef002e92bcf9e86926e947f707609dd57be72930ce42afa7a5a7f2ed3d1",
     "curation_status": "included",
+    "doi": "https://doi.org/10.48550/arXiv.2402.03704",
     "evidence_level": "full-text",
     "exclusion_reason": "",
     "first_seen": "2026-07-22",
@@ -8542,13 +9371,14 @@
     "fulltext_text_chars": 88230,
     "id": "arxiv-2402-03704v2",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:\"timing vulnerability\" OR all:\"microarchitectural leakage\") AND (all:fuzzing OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
     ],
     "pdf_candidate_fingerprint": "e77685d72bbf8f735b95861f427c7dbf616244723b14d7e227a5577f1fd989e3",
     "pdf_url": "https://arxiv.org/pdf/2402.03704v2",
@@ -8560,17 +9390,17 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "arXiv",
     "source_categories": [
-      "cs.CR"
+      "Computer Science"
     ],
     "source_id": "2402.03704v2",
     "title": "WhisperFuzz: White-Box Fuzzing for Detecting and Locating Timing Vulnerabilities in Processors",
     "title_key": "whisperfuzz white box fuzzing for detecting and locating timing vulnerabilities in processors",
     "updated": "2024-03-14",
-    "url": "http://arxiv.org/abs/2402.03704v2",
-    "venue": "arXiv"
+    "url": "https://doi.org/10.48550/arXiv.2402.03704",
+    "venue": "USENIX Security Symposium"
   },
   {
     "abstract": "Bugs exist in hardware, such as CPU. Unlike software bugs, these hardware bugs need to be detected before deployment. Previous fuzzing work in CPU bug detection has several disadvantages, e.g., the length of RTL input instructions keeps growing, and longer inputs are ineffective for fuzzing. In this paper, we propose INSTILLER (Instruction Distiller), an RTL fuzzer based on ant colony optimization (ACO). First, to keep the input instruction length short and efficient in fuzzing, it distills input instructions with a variant of ACO (VACO). Next, related work cannot simulate realistic interruptions well in fuzzing, and INSTILLER solves the problem of inserting interruptions and exceptions in generating the inputs. Third, to further improve the fuzzing performance of INSTILLER, we propose hardware-based seed selection and mutation strategies. We implement a prototype and conduct extensive experiments against state-of-the-art fuzzing work in real-world target CPU cores. In experiments, INSTILLER has 29.4% more coverage than DiFuzzRTL. In addition, 17.0% more mismatches are detected by INSTILLER. With the VACO algorithm, INSTILLER generates 79.3% shorter input instructions than DiFuzzRTL, demonstrating its effectiveness in distilling the input instructions. In addition, the distillation leads to a 6.7% increase in execution speed on average.",
@@ -8732,6 +9562,80 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Modern Systems-on-Chips (SoCs) integrate numerous insecure intellectual properties to meet design-cost and time-to-market constraints. Incorporating these SoCs into security-critical systems severely threatens users’ privacy. Traditional formal/simulation-based verification techniques detect vulnerabilities to some extent. However, these approaches face challenges in detecting unknown vulnerabilities and suffer from significant manual efforts, false alarms, low coverage, and scalability. Several fuzzing techniques have been developed to mitigate pre-silicon hardware verification limitations. Nevertheless, these techniques suffer from major challenges such as slow simulation platforms, extensive design knowledge requirements, and lacking consideration of untrusted inter-module communications. To overcome these shortcomings, we developed FormalFuzzer, an emulation-based hybrid framework by combining formal verification and fuzz testing, leveraging their own benefits. FormalFuzzer incorporates formal-verification-based pre-processing using template-based assertion generation to narrow down the search space for fuzz testing and appropriate mutation strategy selection by dynamic feedback derived from a security-oriented cost function. The cost function is developed using vulnerability databases and specifications, indicating the likelihood of triggering a vulnerability. A vulnerability is detected when the cost function reaches global or local minima. Our experiments on RISC-V-based Ariane SoC demonstrate the efficiency of proposed formal-verification-based pre-processing strategies and cost function-driven feedback on fuzzing in detecting both known and unknown vulnerabilities expeditiously.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《FormalFuzzer: Formal Verification Assisted Fuzz Testing for SoC Vulnerability Detection》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Modern Systems-on-Chips (SoCs) integrate numerous insecure intellectual properties to meet design-cost and time-to-market constraints. Incorporating these SoCs into security-critical systems severely threatens users’ privacy. Traditional formal/simulation-based verification techniques detect vulnerabilities to some extent. However, these approaches face challenges in detecting unknown vulnerabilities and suffer from significant manual efforts, false alarms, low coverage, and scalability. Several fuzzing techniques have been developed to mitigate pre-silicon hardware verification limitations. Nevertheless, these techniques suffer from major challenges such as slow simulation platforms, extensive design knowledge requirements, and lacking consideration of untrusted inter-module communications. To overcome these shortcomings, we developed FormalFuzzer, an emulation-based hybrid framework by combining formal verification and fuzz testing, leveraging their own benefits. FormalFuzzer incorporates formal-verification-based pre-processing using template-based assertion generation to narrow down the search space for fuzz testing and appropriate mutation strategy selection by dynamic feedback derived from a security-oriented cost function. The cost function is developed using vulnerability databases and specifications, indicating the likelihood of triggering a vulnerability. A vulnerability is detected when the cost function reaches global or local minima. Our experiments on RISC-V-based Ariane SoC demonstrate the efficiency of proposed formal-verification-based pre-processing strategies and cost function-driven feedback on fuzzing in detecting both known and unknown vulnerabilities expeditiously."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "Nusrat Farzana Dipu",
+      "Muhammad Monir Hossain",
+      "K. Z. Azar",
+      "Farimah Farahmandi",
+      "M. Tehranipoor"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing",
+      "RTL & SoC Hardware Fuzzing",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "eb538dce898ba4c356daae3136e2bd45e8693d65f645eedc5c9c1f25f53558f6",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1109/ASP-DAC58780.2024.10473911",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [],
+    "id": "semantic-scholar-ad78ccda3ec356c85e06d5ef557c0f57ccaa19bc",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "16527ca9db9a1cf4922f307e926a5636cb132b76e49490c0ae9e7a5348dd5398",
+    "pdf_url": "",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2024-01-22",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, soc",
+      "verification/fuzzing method: fuzz, verification, formal verification",
+      "security relevance: security, vulnerability"
+    ],
+    "relevance_score": 5,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "ad78ccda3ec356c85e06d5ef557c0f57ccaa19bc",
+    "title": "FormalFuzzer: Formal Verification Assisted Fuzz Testing for SoC Vulnerability Detection",
+    "title_key": "formalfuzzer formal verification assisted fuzz testing for soc vulnerability detection",
+    "updated": "",
+    "url": "https://doi.org/10.1109/ASP-DAC58780.2024.10473911",
+    "venue": "Asia and South Pacific Design Automation Conference"
+  },
+  {
     "abstract": "Microarchitectural attacks compromise security by exploiting software-visible artifacts of microarchitectural optimizations such as caches and speculative execution. Defending against such attacks at the software level requires an appropriate abstraction at the instruction set architecture (ISA) level that captures microarchitectural leakage. Hardware-software leakage contracts have recently been proposed as such an abstraction. In this paper, we propose a semi-automatic methodology for synthesizing hardware-software leakage contracts for open-source microarchitectures. For a given ISA, our approach relies on human experts to (a) capture the space of possible contracts in the form of contract templates and (b) devise a test-case generation strategy to explore a microarchitecture's potential leakage. For a given implementation of an ISA, these two ingredients are then used to automatically synthesize the most precise leakage contract that is satisfied by the microarchitecture. We have instantiated this methodology for the RISC-V ISA and applied it to the Ibex and CVA6 open-source processors. Our experiments demonstrate the practical applicability of the methodology and uncover subtle and unexpected leaks.",
     "analysis": {},
     "authors": [
@@ -8818,6 +9722,49 @@
     "updated": "2024-01-08",
     "url": "http://arxiv.org/abs/2401.04221v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Xiaoyue Ma",
+      "Lannan Luo",
+      "Qiang Zeng"
+    ],
+    "categories": [],
+    "content_hash": "71b2a1bf22efd249b5d760a2631b70b2c9e26e536c4ba651921e2102cdb9c17d",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2024",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "title": "From One Thousand Pages of Specification to Unveiling Hidden Bugs: Large Language Model Assisted Fuzzing of Matter IoT Devices",
+    "title_key": "from one thousand pages of specification to unveiling hidden bugs large language model assisted fuzzing of matter iot devices",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "venue": "USENIX Security Symposium"
   },
   {
     "abstract": "As technology continues to advance and we usher in the era of Industry 5.0, there has been a profound paradigm shift in operating systems, file systems, web, and network applications. The conventional utilization of multiprocessing and multicore systems has made concurrent programming increasingly pervasive. However, this transformation has brought about a new set of issues known as concurrency bugs, which, due to their wide prevalence in concurrent programs, have led to severe failures and potential security exploits. Over the past two decades, numerous researchers have dedicated their efforts to unveiling, detecting, mitigating, and preventing these bugs, with the last decade witnessing a surge in research within this domain. Among the spectrum of concurrency bugs, data races or race condition vulnerabilities stand out as the most prevalent, accounting for a staggering 80\\% of all concurrency bugs. This survey paper is focused on the realm of race condition bug detectors. We systematically categorize these detectors based on the diverse methodologies they employ. Additionally, we delve into the techniques and algorithms associated with race detection, tracing the evolution of this field over time. Furthermore, we shed light on the application of fuzzing techniques in the detection of race condition vulnerabilities. By reviewing these detectors and their static analyses, we draw conclusions and outline potential future research directions, including enhancing accuracy, performance, applicability, and comprehensiveness in race condition vulnerability detection.",
@@ -9085,6 +10032,58 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Microarchitectural timing side channels have been thoroughly investigated as a security threat in hardware designs featuring shared buffers (e.g., caches) and/or parallelism between attacker and victim task execution. However, contradicting common intuitions, recent activities demonstrate that this threat is real even in microcontroller SoCs without such features. In this paper, we describe SoC-wide timing side channels previously neglected by security analysis and present a new formal method to close this gap. In a case study on the RISC-V Pulpissimo SoC, our method detected a vulnerability to a previously unknown attack variant that allows an attacker to obtain information about a victim’s memory access behavior. After implementing a conservative fix, we were able to verify that the SoC is now secure w.r.t. the considered class of timing side channels.",
+    "analysis": {},
+    "authors": [
+      "Johannes Muller",
+      "A. L. D. Antón",
+      "Lucas Deutschmann",
+      "Dino Mehmedagi'c",
+      "Cristiano Rodrigues",
+      "Daniel Oliveira",
+      "Keerthikumara Devarajegowda",
+      "M. R. Fadiheh",
+      "Sandro Pinto",
+      "D. Stoffel",
+      "W. Kunz"
+    ],
+    "categories": [],
+    "content_hash": "f049175dae7cbd82bcf9037a8867bb4bd040aa36fad5d958a161e8fdca0265ba",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3649329.3656541",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, microarchitectural, soc; security relevance: security, vulnerability, side channel; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-b62c1d8f29256bc7e30102e6f7276d0c66e3788a",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://hdl.handle.net/1822/100922",
+    "primary_category": "",
+    "published": "2023-09-22",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, microarchitectural, soc",
+      "security relevance: security, vulnerability, side channel",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "b62c1d8f29256bc7e30102e6f7276d0c66e3788a",
+    "title": "MCU-Wide Timing Side Channels and Their Detection",
+    "title_key": "mcu wide timing side channels and their detection",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3649329.3656541",
+    "venue": "Design Automation Conference"
+  },
+  {
     "abstract": "High assurance of information-flow security (IFS) for concurrent systems is challenging. A promising way for formal verification of concurrent systems is the rely-guarantee method. However, existing compositional reasoning approaches for IFS concentrate on language-based IFS. It is often not applicable for system-level security, such as multicore operating system kernels, in which secrecy of actions should also be considered. On the other hand, existing studies on the rely-guarantee method are basically built on concurrent programming languages, by which semantics of concurrent systems cannot be completely captured in a straightforward way. In order to formally verify state-action based IFS for concurrent systems, we propose a rely-guarantee-based compositional reasoning approach for IFS in this paper. We first design a language by incorporating ``Event'' into concurrent languages and give the IFS semantics of the language. As a primitive element, events offer an extremely neat framework for modeling system and are not necessarily atomic in our language. For compositional reasoning of IFS, we use rely-guarantee specification to define new forms of unwinding conditions (UCs) on events, i.e., event UCs. By a rely-guarantee proof system of the language and the soundness of event UCs, we have that event UCs imply IFS of concurrent systems. In such a way, we relax the atomicity constraint of actions in traditional UCs and provide a compositional reasoning way for IFS in which security proof of systems can be discharged by independent security proof on individual events. Finally, we mechanize the approach in Isabelle/HOL and develop a formal specification and its IFS proof for multicore separation kernels as a study case according to an industrial standard -- ARINC 653.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 12 页，提取 72790 字符",
@@ -9317,6 +10316,80 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Traditional modeling approaches in computer architecture aim to obtain an accurate estimation of performance, area, and energy of a processor design. With the advent of speculative execution attacks and their security concerns, these traditional modeling techniques fall short when used for security evaluation of defenses against these attacks. This paper presents Pensieve, a security evaluation framework targeting early-stage microarchitectural defenses against speculative execution attacks. At the core, it introduces a modeling discipline for systematically studying early-stage defenses. This discipline allows us to cover a space of designs that are functionally equivalent while precisely capturing timing variations due to resource contention and microarchitectural optimizations. We implement a model checking framework to automatically find vulnerabilities in designs. We use Pensieve to evaluate a series of state-of-the-art invisible speculation defense schemes, including Delay-on-Miss, InvisiSpec, and GhostMinion, against a formally defined security property, speculative non-interference. Pensieve finds Spectre-like attacks in all those defenses, including a new speculative interference attack variant that breaks GhostMinion, one of the latest defenses.",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "abstract",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《Pensieve: Microarchitectural Modeling for Security Evaluation》，初步归入“Microarchitectural Security Testing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：Traditional modeling approaches in computer architecture aim to obtain an accurate estimation of performance, area, and energy of a processor design. With the advent of speculative execution attacks and their security concerns, these traditional modeling techniques fall short when used for security evaluation of defenses against these attacks. This paper presents Pensieve, a security evaluation framework targeting early-stage microarchitectural defenses against speculative execution attacks. At the core, it introduces a modeling discipline for systematically studying early-stage defenses. This discipline allows us to cover a space of designs that are functionally equivalent while precisely capturing timing variations due to resource contention and microarchitectural optimizations. We implement a model checking framework to automatically find vulnerabilities in designs. We use Pensieve to evaluate a series of state-of-the-art invisible speculation defense schemes, including Delay-on-Miss, InvisiSpec, and GhostMinion, against a formally defined security property, speculative non-interference. Pensieve finds Spectre-like attacks in all those defenses, including a new speculative interference attack variant that breaks GhostMinion, one of the latest defenses."
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "Yuheng Yang",
+      "Thomas Bourgeat",
+      "S. Lau",
+      "Mengjia Yan"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "e3f44fb425e1c44e2bf0ddecc7cbcaee27d832921e0f1fce5efd5bd5e7625b9a",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1145/3579371.3589094",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [
+      "https://dl.acm.org/doi/pdf/10.1145/3579371.3589094"
+    ],
+    "id": "semantic-scholar-5c33e1680cdfa0127247c2c8f0c48e7073cc65d5",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "6810fa397c0945dbf2e2d9180f02945883c414bbc49ab20c6a7d2336b0df74e4",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3579371.3589094",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2023-06-17",
+    "relevance_reasons": [
+      "hardware/processor object: processor, microarchitectural",
+      "verification/fuzzing method: model checking",
+      "security relevance: security, speculative execution"
+    ],
+    "relevance_score": 5,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5c33e1680cdfa0127247c2c8f0c48e7073cc65d5",
+    "title": "Pensieve: Microarchitectural Modeling for Security Evaluation",
+    "title_key": "pensieve microarchitectural modeling for security evaluation",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3579371.3589094",
+    "venue": "International Symposium on Computer Architecture"
+  },
+  {
     "abstract": "Precise exceptions are a cornerstone of modern computing as they provide the abstraction of sequential instruction execution to programmers while accommodating microarchitectural optimizations. However, increasing compute capabilities in deep memory hierarchies (e.g., software event handlers, programmable accelerators) expose long exception detection latencies that forgo precise exception semantics for retired stores awaiting completion. Unfortunately, well-known post-retirement speculation mechanisms to tolerate these latencies require excessively large microarchitectural structures per core. This paper rethinks the role of architecture and OS in supporting precise exceptions. We show that instead of forcing the architecture to support precise exceptions transparently in all cases, it is preferable to employ hardware-software co-design to handle imprecise store exceptions efficiently. We develop formalism to prove that this approach complies with underlying memory consistency models and design a RISC-V prototype that passes all litmus tests, demonstrating its efficacy.",
     "analysis": {},
     "authors": [
@@ -9528,6 +10601,82 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Recent research has shown that hardware fuzzers can effectively detect security vulnerabilities in modern processors. However, existing hardware fuzzers do not fuzz well the hard-to-reach design spaces. Consequently, these fuzzers cannot effectively fuzz security-critical control- and data-flow logic in the processors, hence missing security vulnerabilities. To tackle this challenge, we present HyPFuzz, a hybrid fuzzer that leverages formal verification tools to help fuzz the hard-to-reach part of the processors. To increase the effectiveness of HyPFuzz, we perform optimizations in time and space. First, we develop a scheduling strategy to prevent under- or over-utilization of the capabilities of formal tools and fuzzers. Second, we develop heuristic strategies to select points in the design space for the formal tool to target. We evaluate HyPFuzz on five widely-used open-source processors. HyPFuzz detected all the vulnerabilities detected by the most recent processor fuzzer and found three new vulnerabilities that were missed by previous extensive fuzzing and formal verification. This led to two new common vulnerabilities and exposures (CVE) entries. HyPFuzz also achieves 11.68$\\times$ faster coverage than the most recent processor fuzzer.",
+    "analysis": {
+      "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 19 页，提取 88875 字符",
+      "conclusion": "HyPFuzz通过结合形式化工具和fuzzing，解决了现有fuzzer难以覆盖硬核区域的问题。在五个开源处理器上评估，覆盖率比最先进fuzzer快11.68×，发现了三个新漏洞和两个CVE。它是第一次尝试构建混合硬件fuzzer。",
+      "deep_reading": "建议深入阅读调度策略（Section 4.3）和点选择策略（Section 4.4），以及漏洞检测方法（Section 5.5）。特别关注形式化工具输出如何转化为fuzzer种子的流程（Section 4.5）。",
+      "evaluation": "baseline：与最先进的处理器fuzzer TheHuzz和随机回归比较。实验预算：每个实验运行72小时，重复3次；硬件为32核2.6GHz Intel Xeon，512GB RAM。统计：覆盖率、速度（覆盖率加速比）、漏洞检测时间、指令数。HyPFuzz平均比TheHuzz快11.68×覆盖率加速，3.06×运行时间加速；比随机回归快239.93×。bug/CVE：检测到TheHuzz所有11个漏洞，新发现3个漏洞（V1、V2、V3），其中V2和V3获得CVE-2022-33021和CVE-2022-33023。开销：形式化工具JasperGold在CVA6上处理所有分支点需8天，但HyPFuzz通过调度在50.71小时达到相同覆盖率；每个属性设置时间限制（通过生存分析求得）。Artifact：未提及。",
+      "evidence_level": "full-text",
+      "follow_up_questions": [
+        "HyPFuzz的动态调度策略是否可适用于其他硬件fuzzer？",
+        "对于多核处理器（multi-hart）的内存一致性验证，HyPFuzz的覆盖指标和Oracle是否需要扩展？",
+        "如何将HyPFuzz扩展到FPGA仿真以加速？",
+        "除了分支覆盖，其他覆盖指标（如状态机覆盖）下HyPFuzz的效果如何？",
+        "点选择策略中的MaxUncovd在更大规模处理器中是否始终最优？"
+      ],
+      "introduction": "硬件设计日益复杂，安全漏洞在制造后难以修复。现有硬件验证技术包括形式化验证和模拟（随机回归、fuzzing）。形式化验证虽能穷举，但需人工编写属性且存在状态爆炸问题，无法验证整个处理器。随机回归难以触发硬核区域。硬件fuzzer虽优于传统方法，但覆盖率不足70%，尤其难以覆盖安全关键的控制流和数据流逻辑。本文提出HyPFuzz，一种结合形式化工具和fuzzing的混合fuzzer，利用形式化工具生成种子帮助fuzzer探索难到达区域，并通过调度和选择策略优化。",
+      "key_contribution": "提出首个结合形式化验证和fuzzing的混合硬件fuzzer HyPFuzz；开发动态调度策略和点选择策略（MaxUncovd等）；实现属性生成器和测试用例转换器；在五个处理器上评估达到更快覆盖率和发现新漏洞。",
+      "language": "zh-CN",
+      "limitations": "目前仅使用分支、条件、FSM覆盖率；形式化工具JasperGold可能无法处理所有覆盖点（undetermined结果）；不支持FPGA仿真；点选择策略基于经验，小处理器上RandSel可能更好；依赖商业形式化工具（JasperGold），可能限制可移植性。",
+      "method": "输入生成：通过形式化工具（Cadence JasperGold）的cover property生成布尔赋值，再经test case converter转换为可执行二进制文件（指令序列）作为fuzzer种子。反馈/coverage：fuzzer使用分支覆盖率作为反馈，同时支持condition和FSM覆盖率；HyPFuzz收集覆盖率数据指导点选择。Oracle：差分测试，比较DUT（处理器RTL仿真）和黄金参考模型（GRM，RISC-V用Spike，OpenRISC用or1ksim）的架构状态（GPR、CSR、指令提交、异常），不一致表示漏洞。DUT/平台：五个开源处理器（Rocket Core、CVA6、BOOM、mor1kx、OR1200），仿真使用Synopsys VCS和Chipyard，形式化工具为Cadence JasperGold。是否需要golden model：是，使用Spike或or1ksim作为GRM。",
+      "relevance_to_repo": "直接相关（Directly relevant）。HyPFuzz专门针对处理器fuzzing，涉及RISC-V处理器，使用覆盖率反馈和差分测试Oracle，属于Coverage, Oracles & Fuzzing Methodology范畴。与多hart/一致性路径研究无直接关联，但其方法和覆盖指标可借鉴用于多核fuzzing。",
+      "research_problem": "现有硬件fuzzer无法有效探索处理器设计中难以到达的设计空间（hard-to-reach design spaces），导致覆盖率低于70%，远低于行业90%标准，从而遗漏安全漏洞。"
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-07-29",
+    "analysis_status": "fulltext_verified",
+    "authors": [
+      "Chen Chen",
+      "Rahul Kande",
+      "Nathan Nguyen",
+      "Flemming Andersen",
+      "Aakash Tyagi",
+      "A. Sadeghi",
+      "Jeyavijayan Rajendran"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "5e8c1512e88e464e693619b7b83458863496229a0230407423fd06e6e6b5bb59",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.48550/arXiv.2304.02485",
+    "evidence_level": "full-text",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "fulltext_pages": 19,
+    "fulltext_source": "https://arxiv.org/pdf/2304.02485",
+    "fulltext_text_chars": 88875,
+    "id": "semantic-scholar-3a134f4793cb954657a99494827abcc4401544db",
+    "included": true,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "3e9eefdef3f6c0367abacef909df2bc9d0116d5c34b7dec47c25678e71357179",
+    "pdf_url": "http://arxiv.org/pdf/2304.02485",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2023-04-05",
+    "relevance_reasons": [
+      "manual direct seed title"
+    ],
+    "relevance_score": 100,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3a134f4793cb954657a99494827abcc4401544db",
+    "title": "HyPFuzz: Formal-Assisted Processor Fuzzing",
+    "title_key": "hypfuzz formal assisted processor fuzzing",
+    "updated": "",
+    "url": "https://doi.org/10.48550/arXiv.2304.02485",
+    "venue": "USENIX Security Symposium"
+  },
+  {
     "abstract": "Concolic testing is a scalable solution for automated generation of directed tests for validation of hardware designs. Unfortunately, concolic testing also fails to cover complex corner cases such as hard-to-activate branches. In this paper, we propose an incremental concolic testing technique to cover hard-to-activate branches in register-transfer level models. We show that a complex branch condition can be viewed as a sequence of easy-to-activate events. We map the branch coverage problem to the coverage of a sequence of events. We propose an efficient algorithm to cover the sequence of events using concolic testing. Specifically, the test generated to activate the current event is used as the starting point to activate the next event in the sequence. Experimental results demonstrate that our approach can be used to generate directed tests to cover complex corner cases while state-of-the-art methods fail to activate them.",
     "analysis": {},
     "authors": [
@@ -9613,6 +10762,92 @@
     "updated": "2023-06-21",
     "url": "http://arxiv.org/abs/2301.13346v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Yuheng Yang",
+      "Thomas Bourgeat",
+      "S. Lau",
+      "Mengjia Yan",
+      "Mit Csail"
+    ],
+    "categories": [],
+    "content_hash": "11ff93fbb41e76085ad71360b9f5d265d1d28dbbd3f412f74364f7f7cd232773",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: microarchitectural; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2023",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "title": "Pensieve: A Modular Approach for Security Evaluation of Microarchitectural Designs",
+    "title_key": "pensieve a modular approach for security evaluation of microarchitectural designs",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Kevin Loughlin"
+    ],
+    "categories": [],
+    "content_hash": "8e704dab025c905213aeffe2a0a0597058e0fa2109ed867ea1e765ad2ba418fd",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: microarchitectural; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2023",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "title": "Mitigating Microarchitectural Vulnerabilities to Improve Cloud Security and Reliability",
+    "title_key": "mitigating microarchitectural vulnerabilities to improve cloud security and reliability",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "venue": "未记录"
   },
   {
     "abstract": "",
@@ -10572,15 +11807,15 @@
     "analysis_status": "fulltext_verified",
     "authors": [
       "Daniel Weber",
-      "Ahmad Ibrahim",
+      "A. Ibrahim",
       "Hamed Nemati",
       "Michael Schwarz",
-      "Christian Rossow"
+      "C. Rossow"
     ],
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "2295b57997759db78d8a0fa74fadea462ad24a806b6120aba5916ef8b6f94524",
+    "content_hash": "68f7e1e0cea556d7ba9b1b01e69fba0f8a157153f83f5e8a0b4bf637d99d86aa",
     "curation_status": "included",
     "evidence_level": "full-text",
     "exclusion_reason": "",
@@ -10590,10 +11825,11 @@
     "fulltext_text_chars": 93096,
     "id": "arxiv-2106-03470v1",
     "included": true,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
-      "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+      "((all:microarchitectural OR all:microarchitecture) AND (all:fuzzing OR all:\"automated testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
     ],
     "pdf_candidate_fingerprint": "14945b2a8f1ad8bda916954020e9ee087b953947f18a8e4938c182e97ace76cb",
     "pdf_url": "https://arxiv.org/pdf/2106.03470v1",
@@ -10605,17 +11841,17 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
-      "cs.CR"
+      "Computer Science"
     ],
     "source_id": "2106.03470v1",
     "title": "Osiris: Automated Discovery of Microarchitectural Side Channels",
     "title_key": "osiris automated discovery of microarchitectural side channels",
     "updated": "2021-06-07",
-    "url": "http://arxiv.org/abs/2106.03470v1",
-    "venue": "arXiv"
+    "url": "https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2",
+    "venue": "USENIX Security Symposium"
   },
   {
     "abstract": "Concise and abstract models of system-level behaviors are invaluable in design analysis, testing, and validation. In this paper, we consider the problem of inferring models from communication traces of system-on-chip~(SoC) designs. The traces capture communications among different blocks of a SoC design in terms of messages exchanged. The extracted models characterize the system-level communication protocols governing how blocks exchange messages, and coordinate with each other to realize various system functions. In this paper, the above problem is formulated as a constraint satisfaction problem, which is then fed to a SMT solver. The solutions returned by the SMT solver are used to extract the models that accept the input traces. In the experiments, we demonstrate the proposed approach with traces collected from a transaction-level simulation model of a multicore SoC design and traces of a more detailed multicore SoC design developed in GEM5 environment.",
@@ -11491,6 +12727,56 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Despite its effectiveness in uncovering software defects, American Fuzzy Lop (AFL), one of the best grey-box fuzzers, is inefficient when fuzz-testing source-unavailable programs. AFL's binary-only fuzzing mode, QEMU-AFL, is typically 2-5× slower than its source- available fuzzing mode. The slowdown is largely caused by the heavy dynamic instrumentation. Recent fuzzing techniques use Intel Processor Tracing (PT), a light-weight tracing feature supported by recent Intel CPUs, to re- move the need of dynamic instrumentation. However, we found that these PT-based fuzzing techniques are even slower than QEMU-AFL when fuzzing real-world programs, making them less effective than QEMU-AFL. This poor performance is caused by the slow extraction of code coverage information from highly compressed PT traces. In this work, we present the design and implementation of PTrix, which fully unleashes the benefits of PT for fuzzing via three novel techniques. First, PTrix introduces a scheme to highly parallel the processing of PT trace and target program execution. Second, it directly takes decoded PT trace as feedback for fuzzing, avoiding the expensive reconstruction of code coverage information. Third, PTrix maintains the new feedback with stronger feedback than edge-based code coverage, which helps reach new code space and defects that AFL may not. We evaluated PTrix by comparing its performance with the state- of-the-art fuzzers. Our results show that, given the same amount of time, PTrix achieves a significantly higher fuzzing speed and reaches into code regions missed by the other fuzzers. In addition, PTrix identifies 35 new vulnerabilities in a set of previously well- fuzzed binaries, showing its ability to complement existing fuzzers.",
+    "analysis": {},
+    "authors": [
+      "Yaohui Chen",
+      "Dongliang Mu",
+      "Jun Xu",
+      "Zhichuang Sun",
+      "Wenbo Shen",
+      "Xinyu Xing",
+      "Long Lu",
+      "Bing Mao"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "f82237692d0adaeeff9d184d8ba5d00bfbe0b5a1e561e368ff40f4b33174a480",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3321705.3329828",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-5cad8024ea75450b2991e43be91ab68a791e0cf6",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3321705.3329828",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2019-05-25",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cpu",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5cad8024ea75450b2991e43be91ab68a791e0cf6",
+    "title": "PTrix: Efficient Hardware-Assisted Fuzzing for COTS Binary",
+    "title_key": "ptrix efficient hardware assisted fuzzing for cots binary",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3321705.3329828",
+    "venue": "ACM Asia Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "SpecFuzz is the first tool that enables dynamic testing for speculative execution vulnerabilities (e.g., Spectre). The key is a novel concept of speculation exposure: The program is instrumented to simulate speculative execution in software by forcefully executing the code paths that could be triggered due to mispredictions, thereby making the speculative memory accesses visible to integrity checkers (e.g., AddressSanitizer). Combined with the conventional fuzzing techniques, speculation exposure enables more precise identification of potential vulnerabilities compared to state-of-the-art static analyzers. Our prototype for detecting Spectre V1 vulnerabilities successfully identifies all known variations of Spectre V1 and decreases the mitigation overheads across the evaluated applications, reducing the amount of instrumented branches by up to 77% given a sufficient test coverage.",
     "analysis": {},
     "authors": [
@@ -11852,6 +13138,49 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Jo Van Bulck",
+      "F. Piessens",
+      "Raoul Strackx"
+    ],
+    "categories": [],
+    "content_hash": "fd38f8968ef566e08f904aedc2577d9004152ccdc5ec19b2efbde81291199934",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3243734.3243822",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: cpu, microarchitectural; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-91f7825d2c8f0f3e93a72befba9f76b4b9c901cb",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://lirias.kuleuven.be/handle/123456789/626944",
+    "primary_category": "",
+    "published": "2018-10-08",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, microarchitectural",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "91f7825d2c8f0f3e93a72befba9f76b4b9c901cb",
+    "title": "Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic",
+    "title_key": "nemesis studying microarchitectural timing leaks in rudimentary cpu interrupt logic",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3243734.3243822",
+    "venue": "Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "Microarchitectural side channels expose unprotected software to information leakage attacks where a software adversary is able to track runtime behavior of a benign process and steal secrets such as cryptographic keys. As suggested by incremental software patches for the RSA algorithm against variants of side-channel attacks within different versions of cryptographic libraries, protecting security-critical algorithms against side channels is an intricate task. Software protections avoid leakages by operating in constant time with a uniform resource usage pattern independent of the processed secret. In this respect, automated testing and verification of software binaries for leakage-free behavior is of importance, particularly when the source code is not available. In this work, we propose a novel technique based on Dynamic Binary Instrumentation and Mutual Information Analysis to efficiently locate and quantify memory based and control-flow based microarchitectural leakages. We develop a software framework named \\tool~for side-channel analysis of binaries which can be extended to support new classes of leakage. For the first time, by utilizing \\tool, we perform rigorous leakage analysis of two widely-used closed-source cryptographic libraries: \\emph{Intel IPP} and \\emph{Microsoft CNG}. We analyze $15$ different cryptographic implementations consisting of $112$ million instructions in about $105$ minutes of CPU time. By locating previously unknown leakages in hardened implementations, our results suggest that \\tool~can efficiently find microarchitectural leakages in software binaries.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 12 页，提取 76960 字符",
@@ -12130,6 +13459,51 @@
     "updated": "2018-02-04",
     "url": "http://arxiv.org/abs/1802.01089v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Sergej Schumilo",
+      "Cornelius Aschermann",
+      "R. Gawlik",
+      "Sebastian Schinzel",
+      "Thorsten Holz"
+    ],
+    "categories": [],
+    "content_hash": "8718c4818c9d514bd38afa883b3c6808e18961673f587dd1f0f66cc76029af34",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-30023acba3ac198a7d260228dc51fda8414b8860",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2017",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "30023acba3ac198a7d260228dc51fda8414b8860",
+    "title": "kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels",
+    "title_key": "kafl hardware assisted feedback fuzzing for os kernels",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/30023acba3ac198a7d260228dc51fda8414b8860",
+    "venue": "USENIX Security Symposium"
   },
   {
     "abstract": "Memory consistency models (MCMs) which govern inter-module interactions in a shared memory system, are a significant, yet often under-appreciated, aspect of system design. MCMs are defined at the various layers of the hardware-software stack, requiring thoroughly verified specifications, compilers, and implementations at the interfaces between layers. Current verification techniques evaluate segments of the system stack in isolation, such as proving compiler mappings from a high-level language (HLL) to an ISA or proving validity of a microarchitectural implementation of an ISA. This paper makes a case for full-stack MCM verification and provides a toolflow, TriCheck, capable of verifying that the HLL, compiler, ISA, and implementation collectively uphold MCM requirements. The work showcases TriCheck's ability to evaluate a proposed ISA MCM in order to ensure that each layer and each mapping is correct and complete. Specifically, we apply TriCheck to the open source RISC-V ISA, seeking to verify accurate, efficient, and legal compilations from C11. We uncover under-specifications and potential inefficiencies in the current RISC-V ISA documentation and identify possible solutions for each. As an example, we find that a RISC-V-compliant microarchitecture allows 144 outcomes forbidden by C11 to be observed out of 1,701 litmus tests examined. Overall, this paper demonstrates the necessity of full-stack verification for detecting MCM-related bugs in the hardware-software stack.",

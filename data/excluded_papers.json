@@ -1,5 +1,105 @@
 [
   {
+    "abstract": "Scaling monolithic multicores is increasingly constrained by power/thermal limits, yield, and rising manufacturing and testing costs. Chiplet designs address these challenges by partitioning large dies into smaller parts (typically multiple core-complex dies and an I/O die) linked via high-bandwidth physical fabrics (PHY). As bandwidth and wiring density scale, however, these short-reach links are pushed closer to their signal-integrity limits, increasing susceptibility to noise, crosstalk, and channel loss, motivating stronger link-level reliability mechanisms such as forward error correction (FEC). Despite this trend, state-of-the-art simulation infrastructures often approximate inter-chiplet links using oversimplified, fixed-latency models. Such abstractions overlook the inherently dynamic, runtime-dependent behavior of the PHY -- including channel conditions (e.g., signal-to-noise ratio shifts, signal crosstalk, clock jitter), iterative decoder convergence and packet retransmissions, and application dynamics (e.g., LLC-misses that travel across chiplet boundaries) -- all of which are hard to determine offline. We show that neglecting these effects distorts inter-chiplet packet-level timing and high-level performance metrics such as IPC, leading to off-trend simulation results. We present DICE, an in-simulation, runtime PHY modeling in gem5 that captures the end-to-end inter-chiplet datapath, including QC-LDPC encoding/decoding, PAM4 modulation, lossy-channel transmission, LLR-based demodulation, adaptive packet re-sending, and PHY-level flow control between chiplets.",
+    "analysis": {},
+    "authors": [
+      "Rashid Aligholipour",
+      "Stefanos kaxiras",
+      "Yuan Yao"
+    ],
+    "categories": [],
+    "content_hash": "13e1add26a62af0917399a256e82103054784d08c391d29743a32a7dcd81c6b6",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: multicore; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "arxiv-2607-24221v2",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.24221v2",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2607.24221v2",
+    "title": "DICE: Detailed Inter-Chiplet End-to-End PHY Modeling for Accurate Chiplet Simulation",
+    "title_key": "dice detailed inter chiplet end to end phy modeling for accurate chiplet simulation",
+    "updated": "2026-07-28",
+    "url": "http://arxiv.org/abs/2607.24221v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "This book addresses a systematically overlooked reality in Ecuadorian higher education: the statistically inevitable presence of neurodiverse students those with ADHD, dyslexia, and ASD in university EFL courses. Grounded in the neurodiversity paradigm, which frames neurological variation as natural human difference rather than deficit, the book constructs a conceptual, pedagogical, and legal framework that equips EFL instructors to respond with academic rigour and genuine inclusion. The first four chapters analyse the neurobiological bases of each condition, translating that knowledge into differentiated skill profiles, evidence-based strategies, and assessment options. Chapter 5 integrates these within the UDL framework; Chapter 6 addresses assessment redesign for validity, fairness, and accessibility; Chapter 7 closes with three composite Ecuadorian case studies and a Professional Development Plan. Twenty-two ready-to-use instruments are offered, applicable without additional resources.",
+    "analysis": {},
+    "authors": [
+      "Diego Nieto Herrera",
+      "Lister Antonio Ramos Saltos",
+      "Lady Viviana Quintuña Barrera",
+      "Margarita Elisa Montero Bastidas",
+      "Jefferson Alberto Sánchez Paguay"
+    ],
+    "categories": [],
+    "content_hash": "ff3061531cbdae916ac85c379115e52bec4b643ecd7ef2fd1226b09592f50d66",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.65488/9789907016215",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7170079079",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://libros.revistaricac.com/index.php/home/catalog/download/21/28/135",
+    "primary_category": "",
+    "published": "2026-07-22",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Rigour",
+      "Psychology",
+      "Linguistics",
+      "Natural (archaeology)",
+      "Foreign language",
+      "English as a foreign language",
+      "Variation (astronomy)",
+      "Narrative",
+      "Pedagogy",
+      "Sociology",
+      "Natural language",
+      "Cognitive science",
+      "Epistemology",
+      "English language",
+      "Applied linguistics"
+    ],
+    "source_id": "https://openalex.org/W7170079079",
+    "title": "NEURODIVERSITY AND THE TEACHING OF ENGLISH AS A FOREIGN LANGUAGE",
+    "title_key": "neurodiversity and the teaching of english as a foreign language",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.65488/9789907016215",
+    "venue": "未记录"
+  },
+  {
     "abstract": "The Linux kernel is one of the most complex software systems, where automated fuzzing continuously exposes thousands of crashes, yet root-cause diagnosis remains a manual and time-consuming bottleneck. Existing LLM-based root cause analysis (RCA) techniques, effective for distributed systems, do not readily generalize to kernel debugging due to sparse low-level artifacts, heterogeneous diagnostic evidence (e.g., syscalls, logs, and crash reports), and complex non-linear fault propagation that demands fine-grained method-level reasoning. To address these challenges, we propose KernelDiag, an agent-based framework for kernel root-cause diagnosis via structured causal reasoning. KernelDiag first aligns heterogeneous diagnostic artifacts through log-to-code mapping, and then employs artifact-specialized agents to iteratively reason over source-level program semantics and crash-specific kernel configurations. The inferred causal dependencies are incrementally organized into structured Evidence Graphs, enabling accurate faulty-method localization and causal explanations. We evaluate KernelDiag on the real-world KGYM benchmark. KernelDiag consistently outperforms state-of-the-art localization approaches at both file and method levels, achieving significant improvements in Top@k accuracy, including up to 4x and 2x gains in challenging settings without explicit hints. Furthermore, both human and LLM-assisted evaluations show that KernelDiag generates accurate, coherent, and actionable diagnostic explanations. Overall, this work lays the foundation for automated kernel root-cause diagnosis by bridging low-level diagnostic evidence with source-level causal reasoning.",
     "analysis": {},
     "authors": [
@@ -58,7 +158,7 @@
       "H Wang"
     ],
     "categories": [],
-    "content_hash": "6513f6ab51fe7261d7a4cda2dcf9d886ed2bb4b569659cd34dc8a9a12ec03a4b",
+    "content_hash": "68c79766736a34b20ce5618c58a897951ba35eafb54b45a5b4801f787af3587e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.5194/egusphere-2026-3343",
     "evidence_level": "abstract",
@@ -66,7 +166,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168867454",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing"
     ],
@@ -79,7 +179,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Flood myth",
@@ -105,7 +205,7 @@
     "source_id": "https://openalex.org/W7168867454",
     "title": "Review article: Global flood research across four decades: An analysis of 57,474 research articles based on a large language model",
     "title_key": "review article global flood research across four decades an analysis of 57 474 research articles based on a large language model",
-    "updated": "2026-07-17",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.5194/egusphere-2026-3343",
     "venue": "未记录"
   },
@@ -403,7 +503,7 @@
       "Chenyan Xiong"
     ],
     "categories": [],
-    "content_hash": "a6008a4622fdd4cd053e9e8667709559affc99ac96b1697aa9f0d679c6c84a56",
+    "content_hash": "943872399d2a082218febafe68515832d7e0abef82185040a97983473816e68a",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3805712.3809627",
     "evidence_level": "abstract",
@@ -411,7 +511,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7159642999",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation",
       "OpenAlex: cache coherence transition coverage verification"
@@ -425,7 +525,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -457,7 +557,7 @@
     "source_id": "https://openalex.org/W7159642999",
     "title": "Agentic Search in the Wild: Intents and Trajectory Dynamics from 14M+ Real Search Requests",
     "title_key": "agentic search in the wild intents and trajectory dynamics from 14m real search requests",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3805712.3809627",
     "venue": "未记录"
   },
@@ -475,7 +575,7 @@
       "Yiqun Liu"
     ],
     "categories": [],
-    "content_hash": "e47291c12966bb83c5ffed13f66040504ed3216cb458804ee43404a6765f5a19",
+    "content_hash": "daaff05861580cfd64aaec21915077c2d22027eb2d4b4277d128a9aa9729f848",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3805712.3808598",
     "evidence_level": "abstract",
@@ -483,7 +583,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414968348",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: cache coherence transition coverage verification"
     ],
@@ -496,7 +596,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Benchmark (surveying)",
@@ -521,7 +621,7 @@
     "source_id": "https://openalex.org/W4414968348",
     "title": "SurGE: A Benchmark and Evaluation Framework for Scientific Survey Generation",
     "title_key": "surge a benchmark and evaluation framework for scientific survey generation",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3805712.3808598",
     "venue": "未记录"
   },
@@ -618,6 +718,72 @@
     "updated": "2026-07-08",
     "url": "http://arxiv.org/abs/2607.07007v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "This paper examines the psychological dimension of Mikhail Bulgakov's The Master and Margarita through the development of Ivan Bezdomny.Rather than treating the character as a secondary witness to the novel's supernatural events, the study argues that his intellectual and psychological transformation constitutes one of the central mechanisms through which the novel reshapes its ontological structure.Drawing on the theoretical perspectives of Yuri Lotman, Sigmund Freud, and Carl Gustav Jung, the paper interprets Ivan's crisis as a transition from doctrinal certainty to reflective worldview, revealing the interaction between traumatic experience, symbolic space, and the reconstruction of personal identity.The analysis demonstrates that Ivan's psychological evolution serves not only as an individual narrative trajectory but also as the principal epistemological framework through which Bulgakov redefines the relationship between ideological and metaphysical reality.",
+    "analysis": {},
+    "authors": [
+      "Кучерук С. В.",
+      "Анічкіна О. В.",
+      "Авдєєв С. В.",
+      "Ходюк О. В."
+    ],
+    "categories": [],
+    "content_hash": "824327604a9d17ac6656dd77d98cb6a7197c9443147741341b3e80d7538da862",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70286/isu-08.07.2026",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7168043356",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://isu-conference.com/wp-content/uploads/2026/07/Sofia_Bulgaria_08.07.26.pdf",
+    "primary_category": "",
+    "published": "2026-07-08",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Competence (human resources)",
+      "Component (thermodynamics)",
+      "Public relations",
+      "Cultural diversity",
+      "Context (archaeology)",
+      "Intercultural communication",
+      "Sociology",
+      "Knowledge management",
+      "Engineering ethics",
+      "Intercultural competence",
+      "Cultural communication",
+      "Information and Communications Technology",
+      "Political science",
+      "Cultural issues",
+      "Cross-cultural communication",
+      "Social relation",
+      "Cultural competence",
+      "International communication",
+      "Social environment",
+      "Globalization",
+      "Social issues",
+      "Cultural environment",
+      "Business",
+      "Culturally appropriate"
+    ],
+    "source_id": "https://openalex.org/W7168043356",
+    "title": "Cross-Cultural Communication and Its Problem Areas",
+    "title_key": "cross cultural communication and its problem areas",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.70286/isu-08.07.2026",
+    "venue": "未记录"
   },
   {
     "abstract": "Practical AI for Professionals: Understanding, Using, and Surviving AI bridges the gap between high-level philosophy and technical implementation, delivering actionable AI knowledge for educated professionals without specialized training in computation, statistics, or modeling. This book focuses on what matters most: understanding how to use AI effectively in law, medicine, finance, engineering, and other domains without needing to master the technical foundations of AI systems. Readers are guided through essential competencies including prompt engineering, no-code analytics, tool selection, autonomous agents, and strategic deployment. Real-world case studies demonstrate AI in action with immediate applications, spanning prompt refinement strategies, building custom analytics dashboards without coding, implementing enterprise AI systems, understanding autonomous weapons in modern warfare, and navigating copyright disputes. The book also examines critical forces shaping AI's trajectory including safety frameworks, legal liability, geopolitical competition, cybersecurity threats, and economic transformation. Each chapter balances practical techniques readers can apply straight away with analysis of broader implications for professional practice, helping readers evaluate emerging AI developments with confidence. The authors take a balanced view, addressing both opportunities and genuine risks within a five-to-ten year horizon that matters most for career and organizational strategy. Practical AI for Professionals:Understanding, Using, and Surviving AI serves all professionals, particularly lawyers, physicians, financial analysts, engineers, managers, and other domain experts who need to understand AI deeply enough to deploy it effectively, assess vendor claims critically, and position themselves strategically in a transforming professional landscape. The book assumes no technical background but delivers substantive technical understanding through clear explanations and concrete examples.",
@@ -1141,6 +1307,118 @@
     "venue": "ERA"
   },
   {
+    "abstract": "Zero-knowledge virtual machine (zkVM) is a powerful infrastructure for proving the correctness of a program execution with a succinct proof, attracting significant interest from researchers, developers, and users. It has been widely used in applications such as blockchain rollups, privacy-preserving machine learning, and off-chain computation. As the field grows, a wide range of zkVMs have been proposed. However, they adopt different choices in instruction formats, trace layouts, and proving backends, which results in a highly heterogeneous design landscape and makes it difficult to understand the relations among these systems.To bridge this gap, we provide a comprehensive study of zkVMs that covers both their theoretical foundations and practical implementations. We decompose zkVMs into three layers: (1) the ISA layer, which defines instruction semantics and determines the structure of the execution trace, (2) the VM layer, which captures program execution and organizes constraints through modular circuit components, and (3) the proving layer, which converts execution traces into algebraic constraints and generates the final proofs. This decomposition allows us to isolate the role of each layer while also examining how they interact in real systems. To give readers a more direct understanding of how these design choices affect performance, scalability, and usability, we conduct a comprehensive experimental evaluation of representative zkVMs following this layered framework. Finally, we conclude the paper by summarizing the main observations from our analysis and outlining several potential directions for zkVM design and implementation.",
+    "analysis": {},
+    "authors": [
+      "Guomin Yang",
+      "Yunbo Yang",
+      "Yuejia Cheng",
+      "Haibo Tang",
+      "Bingsheng Zhang",
+      "Kui Ren"
+    ],
+    "categories": [],
+    "content_hash": "b8706c231a48f322a76930574c5542d1a8e39408ee789501379e37ba9f09a854",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3779208.3805964",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "openalex-w7163556769",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3779208.3805964",
+    "primary_category": "",
+    "published": "2026-06-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Correctness",
+      "Programming language",
+      "Modular design",
+      "Semantics (computer science)",
+      "TRACE (psycholinguistics)",
+      "Field (mathematics)",
+      "Bridge (graph theory)",
+      "Software engineering",
+      "Decomposition",
+      "Range (aeronautics)",
+      "Theoretical computer science",
+      "Simple (philosophy)",
+      "Operational semantics",
+      "Program analysis",
+      "Layer (electronics)",
+      "Process (computing)",
+      "Abstract machine",
+      "Symbolic execution",
+      "Component (thermodynamics)",
+      "Program Design Language"
+    ],
+    "source_id": "https://openalex.org/W7163556769",
+    "title": "SoK: Understanding zkVM: From Research to Practice",
+    "title_key": "sok understanding zkvm from research to practice",
+    "updated": "2026-07-23",
+    "url": "https://doi.org/10.1145/3779208.3805964",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Caches are fundamental to modern processor performance, but are also a well-known source of side-channel vulnerabilities. Recent advancements in “weird computation” leverage data caches in conjunction with speculative execution to enable hidden computations, primarily for program obfuscation. This work extends the paradigm of microarchitectural weird machines to the TLB, an address translation cache that has received less attention in this context and is often less susceptible to common cache defense techniques. We demonstrate the feasibility of using TLB entries as “weird registers” to encode binary states and construct logic gates. Our adaptation of the Flexo compiler framework, termed Flexo-TLB, enables the creation of complex weird circuits on the TLB. Through extensive experimentation on modern Intel Meteorlake P-core and E-core and Kabylake architectures, we characterize the timing behavior of the TLB, optimize transient window sizes, and evaluate the performance and accuracy of TLB-based weird gates and circuits. While proving the viability of the TLB as an alternative microarchitectural state for hidden computations, we identify key limitations, including a reduced gate input capacity and increased sensitivity to circuit complexity and architectural differences. Our findings highlight the potential of the TLB as a resilient, albeit constrained, medium for microarchitectural computation, particularly in scenarios where conventional data cache-based approaches are mitigated.",
+    "analysis": {},
+    "authors": [
+      "Jonah Heller",
+      "Marcel Pflaeging",
+      "T. Tiemann",
+      "Thomas Eisenbarth"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "05f378fcee2e4e170c57daded5af08d3931bc1cff3f59664f587dc9c3d68b35d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3779208.3785280",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor, microarchitectural; security relevance: speculative execution; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-3f135695656e0b06996b144513a69b23d34690f4",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3779208.3785280",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-06-01",
+    "relevance_reasons": [
+      "hardware/processor object: processor, microarchitectural",
+      "security relevance: speculative execution",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3f135695656e0b06996b144513a69b23d34690f4",
+    "title": "CTRL+ALT+TLB: Exploring Microarchitectural Weird Machines on Translation Look-aside Buffers",
+    "title_key": "ctrl alt tlb exploring microarchitectural weird machines on translation look aside buffers",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3779208.3785280",
+    "venue": "ACM Asia Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "Large Language Models with Chain-of-Thought reasoning capabilities represent valuable intellectual property, yet existing black-box watermarking methods often trade robustness for reasoning fidelity by perturbing final answers or relying on fragile trigger patterns. We propose BiCoT, a watermarking framework that embeds ownership signals into the internal geometry of reasoning traces by aligning high-saliency structural anchors with a private signature subspace while regularizing ordinary control tokens to preserve semantic capacity. This design couples the watermark with reasoning-relevant representations, making removal difficult without disrupting the features that support coherent reasoning. To enable verification under model theft and representation drift, we introduce Robust Subspace Registration (RSR), a Top- logprob-based black-box verifier that uses sentinel tokens to calibrate systematic shifts in the output distribution. Experiments show that BiCoT preserves reasoning fidelity across diverse complex reasoning tasks while achieving robust detection under fine-tuning, quantization, model-level perturbations, and adaptive output-level attacks across in-domain and out-of-distribution settings.",
     "analysis": {},
     "authors": [
@@ -1616,6 +1894,51 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "As IoT and embedded devices proliferate across various domains, securing their firmware has become critical. Fuzzing offers a systematic approach to uncovering vulnerabilities in firmware, and coverage feedback can improve its effectiveness by guiding exploration. However, many devices make coverage information impossible to obtain by preventing firmware extraction, instrumentation, or accurate emulation; in such cases, testers are left with only inefficient black-box fuzzing. In this paper, we present an approach that leverages electromagnetic (EM) side-channel emanations to guide firmware fuzzing in purely black-box settings. However, turning raw EM measurements into reliable guidance is challenging: EM traces are noisy, and timing jitter causes corresponding features in different traces to shift in time. We address these challenges by combining frequency band selection based on the activity-to-idle signal contrast with dynamic time warping to align per-input traces and detect sustained divergence, while maintaining scalability by organizing executions in a tree structure based on their divergence times. We evaluate our approach on four real firmware targets and demonstrate that EM-derived feedback enhances path exploration, yielding higher code coverage than unguided fuzzing.",
+    "analysis": {},
+    "authors": [
+      "Fatemeh Moradihaghighi",
+      "Zihao Zhan",
+      "Yanan Guo",
+      "Ziming Zhao",
+      "Mashrur Chowdhury",
+      "Zhenkai Zhang"
+    ],
+    "categories": [],
+    "content_hash": "6c674743b82ccdcb884cffe70e5e62c9f785ead07382d909737cd3e9630a8677",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/HOST68814.2026.11604975",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: firmware fuzzing",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-5b75153b112348556d78013ada82dea420ee7686",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2026-05-04",
+    "relevance_reasons": [
+      "excluded phrase: firmware fuzzing"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5b75153b112348556d78013ada82dea420ee7686",
+    "title": "Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing",
+    "title_key": "fuzz emup leveraging em side channel emanation to guide black box embedded firmware fuzzing",
+    "updated": "",
+    "url": "https://doi.org/10.1109/HOST68814.2026.11604975",
+    "venue": "IEEE International Symposium on Hardware Oriented Security and Trust"
+  },
+  {
     "abstract": "Operating system specialization is a well-known approach to optimize a specific application's performance, memory usage, security, or other important metrics. Specializing an OS for an application is typically a manual process that requires great expertise. Specialization through configuration lends itself well to automation; however, it is challenging due to the sheer size of the configuration space of modern OSes, the difficulty to quantify that space, the long time it takes to evaluate a configuration, and the large number of invalid configurations. Hence, existing attempts at specializing OSes automatically are limited to switching features on and off to minimize memory consumption or attack surface, and cannot target metrics such as performance.",
     "analysis": {},
     "authors": [
@@ -1629,7 +1952,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "5b2e8b0a3894573b3a0ca5e199dae910f23fc82a8c137982cb1c7660663c0cb8",
+    "content_hash": "0c6b54fe5bc9e1a5ec6c828e637cd4128369158bfcc7f26d8d2d17da486f6cc7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -1637,7 +1960,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -1651,7 +1974,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1675,7 +1998,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -1689,7 +2012,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "20f44946d47956db3ed62a47c0b646fcd7906ba68d08c53170c268e326f4d149",
+    "content_hash": "566167e4859f43048ff7a519bdb000902251b0893d780e659734fdc8a8309405",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -1697,7 +2020,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -1712,7 +2035,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -1723,7 +2046,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -2007,7 +2330,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "6b069b6f432e74a1b98e32672a311178cba597d32b0cb4f4e853549913f7fe2a",
+    "content_hash": "6be5760f2cdc4a97ba062e6aca22c9edc09e20b2139ad1f73487caf789168f58",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -2015,7 +2338,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -2029,7 +2352,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -2063,7 +2386,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-07-05",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -2153,7 +2476,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "28760d2b7f1f91a4637472fc78833f1b4e5894157abf53522cada9a01d975685",
+    "content_hash": "ed97211617a5e8f485f6db346fe744699002555520d1604fb90dc5302961f484",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -2161,7 +2484,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -2175,7 +2498,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -2208,7 +2531,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-07-16",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -2283,7 +2606,7 @@
       "Xi Wang"
     ],
     "categories": [],
-    "content_hash": "f5269cbfcd48bc6b8a204420b70f75391c3b601a26ccfe1d9d0934f895307de0",
+    "content_hash": "b586ece8ca9ebb26a9317c9e13e6a564e9a4320b59131e11818341770a0f7619",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "evidence_level": "abstract",
@@ -2291,7 +2614,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4416469058",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -2305,7 +2628,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Expediting",
@@ -2343,7 +2666,7 @@
     "source_id": "https://openalex.org/W4416469058",
     "title": "ChatHLS: Towards Systematic Design Automation and Optimization for High-Level Synthesis",
     "title_key": "chathls towards systematic design automation and optimization for high level synthesis",
-    "updated": "2026-07-18",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "venue": "未记录"
   },
@@ -2805,6 +3128,54 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Windows printing services remain a notable vector for attacks. Previous studies have predominantly targeted vulnerabilities within various control aspects of printing services, such as spooler services and firmware updates. Yet, we contend that an essential aspect of data processing—the document parser within printer drivers—has been overlooked in past research. We present a coverage-based fuzzing system, PrintXPSurge, specifically crafted to detect weaknesses in the XPS printer driver's parsing function. To craft semantically correct XPS files, we leverage a large language model-assisted repair approach to automate the creation of semantically correct XPS files that comply with necessary constraints. To ensure our fuzzing process effectively interacts with the XPS printer driver, we develop a progressive state reconstruction method that addresses individual dependency requirements across the entire printing service workflow. Furthermore, when a crash is detected, we employ backtracing to confirm its origin in the XPS parser, isolating it from other components in the pipeline. Our evaluation reveals that PrintXPSurge surpasses existing top Windows fuzzers in performance, successfully identifying 102 bugs in 10 drivers from major brands, including 17 zero-day vulnerabilities confirmed by Microsoft and third-party vendors.",
+    "analysis": {},
+    "authors": [
+      "Yunpeng Tian",
+      "Feng Dong",
+      "Junhai Wang",
+      "Mu Zhang",
+      "Zhiniang Peng",
+      "Zesen Ye",
+      "Xiapu Luo",
+      "Haoyu Wang"
+    ],
+    "categories": [],
+    "content_hash": "0f75951fc1aca42021540a7ecc8209cc0a15c6d73a0920c3a0bcae0ae847d810",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3719027.3744807",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-43f21c042be5b5da08a75034609483635f368bfa",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3719027.3744807",
+    "primary_category": "",
+    "published": "2025-11-19",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "43f21c042be5b5da08a75034609483635f368bfa",
+    "title": "Error Messages to Fuzzing: Detecting XPS Parsing Vulnerabilities in Windows Printing Components",
+    "title_key": "error messages to fuzzing detecting xps parsing vulnerabilities in windows printing components",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3719027.3744807",
+    "venue": "Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "Recent surge in adoption of Large Language Models (LLMs) have made them vulnerable to sophisticated adversarial attacks, manipulative prompts, and encoded malicious inputs. Existing countermeasures often require retraining models, a process that is computationally expensive and impractical for deployment. This paper introduces a novel defense framework that enables LLMs to autonomously detect, filter, and fend off malicious or adversarial inputs without requiring retraining or fine-tuning. The proposed framework consists of two core components: (1) A summarization module that processes and summarizes adversarial research literature to provide the LLM with context-aware defense knowledge and (2) A prompt filtering module that detects, decodes, and classifies harmful inputs through advanced Natural Language Processing (NLP) techniques, such as zero-shot classification, keyword analysis, and encoded content detection. By combining text extraction, summarization, and malicious prompt analysis, this approach enhances the robustness of LLMs against adversarial misuse. Experimental results demonstrate that this integrated approach successfully identifies encoded prompts, malicious patterns, and manipulative language structures with a success rate of 98.7%. The framework also enables the model to respond appropriately to malicious prompts with a higher percentage of jailbreak resistance and refusal rate, using minimal quantity of adversarial research literature as context. The framework significantly reduces LLM Attack Success Rate (ASR) as a lightweight, efficient alternative to retraining-based time and resource-consuming defenses, while upholding LLM response quality.",
     "analysis": {},
     "authors": [
@@ -2812,7 +3183,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "91fcfdbaa91644d76da219fddb4036247e10f5c719168e3d3153d787fe35608a",
+    "content_hash": "b2686af26fb6c3fdebc725b1291123d98ccd5fb9063d35a4cfeb0840f4c91900",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -2820,7 +3191,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -2833,7 +3204,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -2858,7 +3229,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-07-21",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -2996,6 +3367,46 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "A. Desai"
+    ],
+    "categories": [],
+    "content_hash": "656a92993e2907ae06e9b0c015afb6c528fca332c1d75de9ec57597c0555c177",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.34727/2025/isbn.978-3-85448-084-6_2",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-7a1b21afe816161e568370db81287d10092237ca",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2025-10-06",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "7a1b21afe816161e568370db81287d10092237ca",
+    "title": "Systems Correctness Practices at AWS: Leveraging Formal and Semi-formal Methods",
+    "title_key": "systems correctness practices at aws leveraging formal and semi formal methods",
+    "updated": "",
+    "url": "https://doi.org/10.34727/2025/isbn.978-3-85448-084-6_2",
+    "venue": "Formal Methods in Computer-Aided Design"
+  },
+  {
     "abstract": "Single-address-space operating systems have well-known lightweightness benefits that result from their central design idea: the kernel and applications share a unique address space. This model makes these operating systems (OSes) incompatible by design with a large class of software: multiprocess POSIX applications. Indeed, the semantics of the primitive used to create POSIX processes, fork, are inextricably tied to the existence of multiple address spaces.",
     "analysis": {},
     "authors": [
@@ -3004,7 +3415,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "2a61f1a4f43918471d0fd2c59a598d392f1c4298f0bbceb3dc4f22f79c532487",
+    "content_hash": "9c841771cc137b54175e0fa8415f25f43e3bad3b9057fe032a9386834b623ee1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3731569.3764809",
     "evidence_level": "abstract",
@@ -3012,7 +3423,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414735884",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3025,7 +3436,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "POSIX",
@@ -3044,7 +3455,7 @@
     "source_id": "https://openalex.org/W4414735884",
     "title": "μFork: Supporting POSIX fork Within a Single-Address-Space OS",
     "title_key": "fork supporting posix fork within a single address space os",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3731569.3764809",
     "venue": "未记录"
   },
@@ -3306,7 +3717,7 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "8af6a76f1870617226c1e5e5745378358450efa2f312a7e0709582fe33e13c88",
+    "content_hash": "66eb64f1cb1e71b151aeeb5ed9f339f44ef39416eb7307f10779f30e72ba64fc",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735544.3735586",
     "evidence_level": "abstract",
@@ -3314,7 +3725,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4411265269",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3329,7 +3740,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3347,7 +3758,7 @@
     "source_id": "https://openalex.org/W4411265269",
     "title": "Scalable Language Agnostic Taint Tracking using Explicit Data Dependencies",
     "title_key": "scalable language agnostic taint tracking using explicit data dependencies",
-    "updated": "2026-07-14",
+    "updated": "2026-07-28",
     "url": "https://doi.org/10.1145/3735544.3735586",
     "venue": "未记录"
   },
@@ -3361,7 +3772,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "3ca7beb9a9974e0d8e6f47853089d538c8f962980eaa2395ad07d9808927868c",
+    "content_hash": "cf7b79e30c7ed70995946a3bfe2a78e6d1a62ea291755a74e8323b281db87955",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers14060226",
     "evidence_level": "abstract",
@@ -3369,7 +3780,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4411153552",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3384,7 +3795,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Scrutiny",
@@ -3397,7 +3808,7 @@
     "source_id": "https://openalex.org/W4411153552",
     "title": "Ethereum Smart Contracts Under Scrutiny: A Survey of Security Verification Tools, Techniques, and Challenges",
     "title_key": "ethereum smart contracts under scrutiny a survey of security verification tools techniques and challenges",
-    "updated": "2026-07-05",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/computers14060226",
     "venue": "Computers"
   },
@@ -3677,6 +4088,57 @@
     "updated": "2026-05-21",
     "url": "https://doi.org/10.5463/thesis.948",
     "venue": "未记录"
+  },
+  {
+    "abstract": "—Graphics Processing Units (GPUs) have become an indispensable part of modern computing infrastructure. They can execute massively parallel tasks on large data sets and have rich user space-accessible APIs for 3D rendering and general-purpose parallel programming. Unfortunately, the GPU drivers that bridge the gap between these APIs and the underlying hardware have grown increasingly large and complex over the years. Many GPU drivers now expose broad attack surfaces and pose serious security risks. Fuzzing is a proven automated testing method that mitigates these risks by identifying potential vulnerabilities. However, when applied to GPU drivers, existing fuzzers incur high costs and scale poorly because they rely on physical GPUs. Furthermore, they achieve limited effectiveness because they often fail to meet dependency and timing constraints while generating and executing input events. We present Moneta, a new ex-vivo approach to driver fuzzing that can statefully and effectively fuzz GPU drivers at scale. The key idea is (i) to recall past, in-vivo GPU driver execution states by synergistically combining snapshot-and-rehost and record-and-replay along with our proposed suite of GPU stack virtualization and introspection techniques, and (ii) to start parallel and stateful ex-vivo GPU driver fuzzing from the recalled states. We implemented a prototype of Moneta and evaluated it on three mainstream GPU drivers. Our prototype triggered deep, live GPU driver states during fuzzing, and found five previously unknown bugs in the NVIDIA GPU driver, three in the AMD Radeon GPU driver, and two in the ARM Mali GPU driver. These ten bugs were all confirmed by the respective vendors in response to our responsible disclosure, and five",
+    "analysis": {},
+    "authors": [
+      "Joonkyo Jung",
+      "Jisoo Jang",
+      "Yongwan Jo",
+      "Jonas Vinck DistriNet",
+      "K. Leuven",
+      "Alexios Voulimeneas",
+      "Tu Delft",
+      "Stijn Volckaert",
+      "KU DistriNet",
+      "Leuven Dokyung Song"
+    ],
+    "categories": [],
+    "content_hash": "32ce38f2b60bca0e121a434548a25c855751af4c0036645e08262349e8d86fa4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14722/ndss.2025.230218",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-fa64a4170d7e31854ef4df1b9e4a21161a835c4e",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.14722/ndss.2025.230218",
+    "primary_category": "",
+    "published": "2025",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "fa64a4170d7e31854ef4df1b9e4a21161a835c4e",
+    "title": "Moneta: Ex-Vivo GPU Driver Fuzzing by Recalling In-Vivo Execution States",
+    "title_key": "moneta ex vivo gpu driver fuzzing by recalling in vivo execution states",
+    "updated": "",
+    "url": "https://doi.org/10.14722/ndss.2025.230218",
+    "venue": "Network and Distributed System Security Symposium"
   },
   {
     "abstract": "Presented are two techniques that are designed to help streamline the discretization of complex vascular geometries within the numerical modeling process. The first method integrates multiple software tools into a single pipeline which can generate adaptive anisotropic meshes from segmented medical images. The pipeline is shown to satisfy quality, fidelity, smoothness, and robustness requirements while providing near real-time performance for medical image-to-mesh conversion. The second method approximates a user-defined sizing function to generate adaptive isotropic meshes of good quality and fidelity in real-time. Tested with two brain aneurysm cases and utilizing up to 96 CPU cores within a single, multicore node on Purdue University's Anvil supercomputer, the parallel adaptive anisotropic meshing method utilizes a hierarchical load balancing model (designed for large, cc-NUMA shared memory architectures) and contains an optimized local reconnection operation that performs three times faster than its original implementation from previous studies. The adaptive isotropic method is shown to generate a mesh of up to approximately 50 million elements in less than a minute while the adaptive anisotropic method is shown to generate approximately the same number of elements in about 5 minutes.",
@@ -4057,7 +4519,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "bdb2c51a01dcdebfecc0ebd6838c8ce50f02f98ad8ae6924e16ed34183f04c00",
+    "content_hash": "fba1776359ca09d9ac6fa7d9ec63605a1cff1899277478e47f7bb209f9fde2a4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -4065,7 +4527,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -4080,7 +4542,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4092,7 +4554,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-07-20",
+    "updated": "2026-07-26",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -4140,6 +4602,101 @@
     "updated": "2024-01-17",
     "url": "http://arxiv.org/abs/2401.09383v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Xiaoyue Ma",
+      "Lannan Luo",
+      "Qiang Zeng"
+    ],
+    "categories": [],
+    "content_hash": "71b2a1bf22efd249b5d760a2631b70b2c9e26e536c4ba651921e2102cdb9c17d",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2024",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "title": "From One Thousand Pages of Specification to Unveiling Hidden Bugs: Large Language Model Assisted Fuzzing of Matter IoT Devices",
+    "title_key": "from one thousand pages of specification to unveiling hidden bugs large language model assisted fuzzing of matter iot devices",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
+    "venue": "USENIX Security Symposium"
+  },
+  {
+    "abstract": "Microarchitectural timing side channels have been thoroughly investigated as a security threat in hardware designs featuring shared buffers (e.g., caches) and/or parallelism between attacker and victim task execution. However, contradicting common intuitions, recent activities demonstrate that this threat is real even in microcontroller SoCs without such features. In this paper, we describe SoC-wide timing side channels previously neglected by security analysis and present a new formal method to close this gap. In a case study on the RISC-V Pulpissimo SoC, our method detected a vulnerability to a previously unknown attack variant that allows an attacker to obtain information about a victim’s memory access behavior. After implementing a conservative fix, we were able to verify that the SoC is now secure w.r.t. the considered class of timing side channels.",
+    "analysis": {},
+    "authors": [
+      "Johannes Muller",
+      "A. L. D. Antón",
+      "Lucas Deutschmann",
+      "Dino Mehmedagi'c",
+      "Cristiano Rodrigues",
+      "Daniel Oliveira",
+      "Keerthikumara Devarajegowda",
+      "M. R. Fadiheh",
+      "Sandro Pinto",
+      "D. Stoffel",
+      "W. Kunz"
+    ],
+    "categories": [],
+    "content_hash": "f049175dae7cbd82bcf9037a8867bb4bd040aa36fad5d958a161e8fdca0265ba",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3649329.3656541",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, microarchitectural, soc; security relevance: security, vulnerability, side channel; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-b62c1d8f29256bc7e30102e6f7276d0c66e3788a",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://hdl.handle.net/1822/100922",
+    "primary_category": "",
+    "published": "2023-09-22",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, microarchitectural, soc",
+      "security relevance: security, vulnerability, side channel",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "b62c1d8f29256bc7e30102e6f7276d0c66e3788a",
+    "title": "MCU-Wide Timing Side Channels and Their Detection",
+    "title_key": "mcu wide timing side channels and their detection",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3649329.3656541",
+    "venue": "Design Automation Conference"
   },
   {
     "abstract": "Safety-critical domains, such as automotive, space, and robotics, are adopting increasingly powerful multicores with abundant hardware shared resources for higher performance and efficiency. However, mutual interference due to parallel operation within the SoC must be properly validated. Recently, the SafeTI traffic injector has been released and integrated in a homogeneous RISC-V multicore for testing, otherwise untestable casuistic for software-only solutions. This paper introduces some enhancements performed on the SafeTI, which include internal pipelining for higher-rate traffic injection, and its tailoring to multiple interfaces, as well as its integration in a more powerful heterogeneous RISC-V multicore based on Gaisler's technology for the space domain.",
@@ -4403,6 +4960,92 @@
     "updated": "2023-06-21",
     "url": "http://arxiv.org/abs/2301.13346v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Yuheng Yang",
+      "Thomas Bourgeat",
+      "S. Lau",
+      "Mengjia Yan",
+      "Mit Csail"
+    ],
+    "categories": [],
+    "content_hash": "11ff93fbb41e76085ad71360b9f5d265d1d28dbbd3f412f74364f7f7cd232773",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: microarchitectural; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2023",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "title": "Pensieve: A Modular Approach for Security Evaluation of Microarchitectural Designs",
+    "title_key": "pensieve a modular approach for security evaluation of microarchitectural designs",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/67590a6a7a2a8051dd651c36bbb7d42b0fd73ed8",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Kevin Loughlin"
+    ],
+    "categories": [],
+    "content_hash": "8e704dab025c905213aeffe2a0a0597058e0fa2109ed867ea1e765ad2ba418fd",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: microarchitectural; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2023",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "title": "Mitigating Microarchitectural Vulnerabilities to Improve Cloud Security and Reliability",
+    "title_key": "mitigating microarchitectural vulnerabilities to improve cloud security and reliability",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "venue": "未记录"
   },
   {
     "abstract": "",
@@ -5304,6 +5947,49 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Jo Van Bulck",
+      "F. Piessens",
+      "Raoul Strackx"
+    ],
+    "categories": [],
+    "content_hash": "fd38f8968ef566e08f904aedc2577d9004152ccdc5ec19b2efbde81291199934",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3243734.3243822",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: cpu, microarchitectural; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-91f7825d2c8f0f3e93a72befba9f76b4b9c901cb",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://lirias.kuleuven.be/handle/123456789/626944",
+    "primary_category": "",
+    "published": "2018-10-08",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, microarchitectural",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "91f7825d2c8f0f3e93a72befba9f76b4b9c901cb",
+    "title": "Nemesis: Studying Microarchitectural Timing Leaks in Rudimentary CPU Interrupt Logic",
+    "title_key": "nemesis studying microarchitectural timing leaks in rudimentary cpu interrupt logic",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3243734.3243822",
+    "venue": "Conference on Computer and Communications Security"
+  },
+  {
     "abstract": "The Spectre vulnerability in modern processors has been widely reported. The key insight in this vulnerability is that speculative execution in processors can be misused to access the secrets. Subsequently, even though the speculatively executed instructions are squashed, the secret may linger in micro-architectural states such as cache, and can potentially be accessed by an attacker via side channels. In this paper, we propose oo7, a static analysis approach that can mitigate Spectre attacks by detecting potentially vulnerable code snippets in program binaries and protecting them against the attack by patching them. Our key contribution is to balance the concerns of effectiveness, analysis time and run-time overheads. We employ control flow extraction, taint analysis, and address analysis to detect tainted conditional branches and speculative memory accesses. oo7 can detect all fifteen purpose-built Spectre-vulnerable code patterns, whereas Microsoft compiler with Spectre mitigation option can only detect two of them. We also report the results of a large-scale study on applying oo7 to over 500 program binaries (average binary size 261 KB) from different real-world projects. We protect programs against Spectre attack by selectively inserting fences only at vulnerable conditional branches to prevent speculative execution. Our approach is experimentally observed to incur around 5.9% performance overheads on SPECint benchmarks.",
     "analysis": {},
     "authors": [
@@ -5395,6 +6081,51 @@
     "updated": "2018-02-04",
     "url": "http://arxiv.org/abs/1802.01089v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Sergej Schumilo",
+      "Cornelius Aschermann",
+      "R. Gawlik",
+      "Sebastian Schinzel",
+      "Thorsten Holz"
+    ],
+    "categories": [],
+    "content_hash": "8718c4818c9d514bd38afa883b3c6808e18961673f587dd1f0f66cc76029af34",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-30023acba3ac198a7d260228dc51fda8414b8860",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2017",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "30023acba3ac198a7d260228dc51fda8414b8860",
+    "title": "kAFL: Hardware-Assisted Feedback Fuzzing for OS Kernels",
+    "title_key": "kafl hardware assisted feedback fuzzing for os kernels",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/30023acba3ac198a7d260228dc51fda8414b8860",
+    "venue": "USENIX Security Symposium"
   },
   {
     "abstract": "The HSA Foundation has produced the HSA Platform System Architecture Specification that goes a long way towards addressing the need for a clear and consistent method for specifying weakly consistent memory. HSA is specified in a natural language which makes it open to multiple ambiguous interpretations and could render bugs in implementations of it in hardware and software. In this paper we present a formal model of HSA which can be used in the development and verification of both concurrent software applications as well as in the development and verification of the HSA-compliant platform itself. We use the Event-B language to build a provably correct hierarchy of models from the most abstract to a detailed refinement of HSA close to implementation level. Our memory models are general in that they represent an arbitrary number of masters, programs and instruction interleavings. We reason about such general models using refinements. Using Rodin tool we are able to model and verify an entire hierarchy of models using proofs to establish that each refinement is correct. We define an automated validation method that allows us to test baseline compliance of the model against a suite of published HSA litmus tests. Once we complete model validation we develop a coverage driven method to extract a richer set of tests from the Event-B model and a user specified coverage model. These tests are used for extensive regression testing of hardware and software systems. Our method of refinement based formal modelling, baseline compliance testing of the model and coverage driven test extraction using the single language of Event-B is a new way to address a key challenge facing the design and verification of multi-core systems.",

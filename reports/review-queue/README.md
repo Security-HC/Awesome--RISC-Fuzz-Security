@@ -1,6 +1,6 @@
 # 待人工复核
 
-共 31 篇。该列表不进入主 README。
+共 32 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
@@ -28,6 +28,7 @@
 | 2021-02-13 | [Model Synthesis for Communication Traces of System-on-Chip Designs](http://arxiv.org/abs/2102.06989v1) | 4 | hardware/processor object: system-on-chip, soc, multicore；verification/fuzzing method: validation |
 | 2019-10-24 | [Leveraging access mode declarations in a model for memory consistency in heterogeneous systems](http://arxiv.org/abs/1910.11110v1) | 4 | hardware/processor object: cpu, memory consistency；verification/fuzzing method: verification |
 | 2019-08-19 | [Boosting the Bounds of Symbolic QED for Effective Pre-Silicon Verification of Processor Cores](http://arxiv.org/abs/1908.06757v4) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification, model checking |
+| 2019-05-25 | [PTrix: Efficient Hardware-Assisted Fuzzing for COTS Binary](https://doi.org/10.1145/3321705.3329828) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: fuzz |
 | 2018-12-04 | [A small and adaptive coprocessor for information flow tracking in ARM SoCs](http://arxiv.org/abs/1812.01541v1) | 4 | hardware/processor object: processor, soc；verification/fuzzing method: information flow tracking |
 | 2018-11-13 | [Towards a hardware-assisted information flow tracking ecosystem for ARM processors](http://arxiv.org/abs/1811.05465v1) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: information flow tracking |
 | 2018-10-18 | [An Event-based Compositional Reasoning Approach for Concurrent Reactive Systems](http://arxiv.org/abs/1810.07855v1) | 4 | hardware/processor object: soc, multicore；verification/fuzzing method: verification |

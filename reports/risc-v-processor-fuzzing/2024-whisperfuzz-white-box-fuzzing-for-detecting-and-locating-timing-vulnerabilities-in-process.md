@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Pallavi Borkar、Chen Chen、Mohamadreza Rostami、Nikhilesh Singh、Rahul Kande、Ahmad-Reza Sadeghi、Chester Rebeiro、Jeyavijayan Rajendran
+- 作者：Pallavi Borkar、Chen Chen、Mohamadreza Rostami、Nikhilesh Singh、Rahul Kande、A. Sadeghi、Chester Rebeiro、Jeyavijayan Rajendran
 - 发表日期：2024-02-06
-- 会议/期刊：arXiv
+- 会议/期刊：USENIX Security Symposium
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=100）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、Microarchitectural Security Testing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
-- 论文页面：[http://arxiv.org/abs/2402.03704v2](http://arxiv.org/abs/2402.03704v2)
+- 论文页面：[https://doi.org/10.48550/arXiv.2402.03704](https://doi.org/10.48550/arXiv.2402.03704)
 - PDF：[https://arxiv.org/pdf/2402.03704v2](https://arxiv.org/pdf/2402.03704v2)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 19 页，提取 88230 字符
 

@@ -1,6 +1,6 @@
 # 覆盖、Oracle 与 Fuzzing 方法
 
-本目录仅按主分类收录，共 11 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 12 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
@@ -12,6 +12,7 @@
 | 2024-10-27 | [HybriDIFT: Scalable Memory-Aware Dynamic Information Flow Tracking for Hardware](./2024-hybridift-scalable-memory-aware-dynamic-information-flow-tracking-for-hardware.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《HybriDIFT: Scalable Memory-Aware Dynamic Information Flow Tracking for Hardware》，初步归入“Coverage, Oracles & Fuzzing Methodology”。 原因：… | [页面](https://doi.org/10.1145/3676536.3676658) / [PDF](https://dl.acm.org/doi/pdf/10.1145/3676536.3676658) |
 | 2024-01-29 | [Data-Oblivious ML Accelerators using Hardware Security Extensions](./2024-data-oblivious-ml-accelerators-using-hardware-security-extensions.md) | arXiv | A·直接相关 | 全文核验 | 1. 首次将 BliMe 的 DIFT 扩展到矩阵乘法加速器（Gemmini），实现端到端数据机密性保证；2. 提出行粒度 DIFT 优化，利用脉动阵列的固定行为减少面积开销（相对通用 CPU DIFT）；3. 集成到 Chipyard 并评估实际 ML 工作负载，显示低开销；4. 扩展 BliM… | [页面](http://arxiv.org/abs/2401.16583v1) / [PDF](https://arxiv.org/pdf/2401.16583v1) |
 | 2023-07-26 | [PSOFuzz: Fuzzing Processors with Particle Swarm Optimization](./2023-psofuzz-fuzzing-processors-with-particle-swarm-optimization.md) | arXiv | A·直接相关 | 全文核验 | 1) 首次将PSO用于硬件fuzzing的变异操作符调度和种子生成；2) 解决PSO应用于硬件fuzzing的挑战：粒子饱和问题（重置策略）和无效种子生成（PSO种子生成）；3) 实验验证在三个处理器上加速漏洞检测和覆盖率。 | [页面](http://arxiv.org/abs/2307.14480v2) / [PDF](https://arxiv.org/pdf/2307.14480v2) |
+| 2023-04-05 | [HyPFuzz: Formal-Assisted Processor Fuzzing](./2023-hypfuzz-formal-assisted-processor-fuzzing.md) | USENIX Security Symposium | A·直接相关 | 全文核验 | 提出首个结合形式化验证和fuzzing的混合硬件fuzzer HyPFuzz；开发动态调度策略和点选择策略（MaxUncovd等）；实现属性生成器和测试用例转换器；在五个处理器上评估达到更快覆盖率和发现新漏洞。 | [页面](https://doi.org/10.48550/arXiv.2304.02485) / [PDF](http://arxiv.org/pdf/2304.02485) |
 | 2022-04-20 | [BliMe: Verifiably Secure Outsourced Computation with Hardware-Enforced Taint Tracking](./2022-blime-verifiably-secure-outsourced-computation-with-hardware-enforced-taint-tracking.md) | arXiv | A·直接相关 | 全文核验 | 1) BliMe架构及ISA污点跟踪扩展；2) 基于BOOM的RTL实现BliMe-BOOM；3) 简化模型ISA的形式化安全证明；4) 全面的性能评估显示低开销。 | [页面](http://arxiv.org/abs/2204.09649v8) / [PDF](https://arxiv.org/pdf/2204.09649v8) |
 | 2021-06-14 | [Isadora: Automated Information Flow Property Generation for Hardware Designs](./2021-isadora-automated-information-flow-property-generation-for-hardware-designs.md) | arXiv | A·直接相关 | 全文核验 | 首次结合信息流追踪与规范挖掘，全自动生成硬件信息流安全属性，无需用户提供安全目标或威胁模型。 | [页面](http://arxiv.org/abs/2106.07449v2) / [PDF](https://arxiv.org/pdf/2106.07449v2) |
 | 2019-12-18 | [PAGURUS: Low-Overhead Dynamic Information Flow Tracking on Loosely Coupled Accelerators](./2019-pagurus-low-overhead-dynamic-information-flow-tracking-on-loosely-coupled-accelerators.md) | arXiv | A·直接相关 | 全文核验 | 1) 提出低开销DIFT shell方法，实现双解耦、粗粒度DIFT；2) 定义信息泄漏指标量化安全；3) 展示设计空间探索，实现性能-成本-安全权衡；4) 在RISC-V平台上集成DIFT的案例研究。 | [页面](http://arxiv.org/abs/1912.11153v1) / [PDF](https://arxiv.org/pdf/1912.11153v1) |

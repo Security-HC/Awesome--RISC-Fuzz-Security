@@ -3,21 +3,21 @@
 ## 基本信息
 
 - 作者：Jinyan Xu、Yangye Zhou、Xingzhi Zhang、Yinshuai Li、Qinhan Tan、Yinqian Zhang、Yajin Zhou、Rui Chang、Wenbo Shen
-- 发表日期：2025-08-06
-- 会议/期刊：未记录
+- 发表日期：2025-04-29
+- 会议/期刊：International Conference on Architectural Support for Programming Languages and Operating Systems
 - 主分类：微架构安全自动测试
 - 相关性：A·直接相关（score=10）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：Microarchitectural Security Testing、Coverage, Oracles & Fuzzing Methodology
-- 纳入依据：strong phrase in title: processor fuzzing；hardware/processor object: processor, microarchitectural；verification/fuzzing method: fuzz, information flow tracking；security relevance: transient execution
+- 纳入依据：strong phrase in title: processor fuzzing；hardware/processor object: processor, microarchitecture, microarchitectural；verification/fuzzing method: fuzz, information flow tracking；security relevance: vulnerability, transient execution, leakage
 - 论文页面：[https://doi.org/10.1145/3676642.3736115](https://doi.org/10.1145/3676642.3736115)
 - PDF：[https://dl.acm.org/doi/pdf/10.1145/3676642.3736115](https://dl.acm.org/doi/pdf/10.1145/3676642.3736115)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 16 页，提取 87419 字符
 
 ## 摘要
 
-Transient execution vulnerabilities have emerged as a critical threat to modern processors. Hardware fuzzing testing techniques have recently shown promising results in discovering transient execution bugs in large-scale out-of-order processor designs. However, their poor microarchitectural controllability and observability prevent them from effectively and efficiently detecting transient execution vulnerabilities.
+Transient execution vulnerabilities have emerged as a critical threat to modern processors. Hardware fuzzing testing techniques have recently shown promising results in discovering transient execution bugs in large-scale out-of-order processor designs. However, their poor microarchitectural controllability and observability prevent them from effectively and efficiently detecting transient execution vulnerabilities. This paper proposes DejaVuzz, a novel pre-silicon stage processor transient execution bug fuzzer. DejaVuzz utilizes two innovative operating primitives: dynamic swappable memory and differential information flow tracking, enabling more effective and efficient transient execution vulnerability detection. The dynamic swappable memory enables the isolation of different instruction streams within the same address space. Leveraging this capability, DejaVuzz generates targeted training for arbitrary transient windows and eliminates ineffective training, enabling efficient triggering of diverse transient windows. The differential information flow tracking aids in observing the propagation of sensitive data across the microarchitecture. Based on taints, DejaVuzz designs the taint coverage matrix to guide mutation and uses taint liveness annotations to identify exploitable leakages. Our evaluation shows that DejaVuzz outperforms the state-of-the-art fuzzer SpecDoctor, triggering more comprehensive transient windows with lower training overhead and achieving a 4.7x coverage improvement. And DejaVuzz also mitigates control flow over-tainting with acceptable overhead and identifies 5 previously undiscovered transient execution vulnerabilities (with 6 CVEs assigned) on BOOM and XiangShan.
 
 ## 研究问题
 

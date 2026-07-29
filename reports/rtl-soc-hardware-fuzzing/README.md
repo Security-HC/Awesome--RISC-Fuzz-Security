@@ -1,6 +1,6 @@
 # RTL 与 SoC 硬件 Fuzzing
 
-本目录仅按主分类收录，共 9 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 10 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
@@ -8,6 +8,7 @@
 |---|---|---|---|---|---|---|
 | 2026-07-11 | [When Fuzzing Meets Understanding: LLM-Driven Semantic Test Generation for RTL Verification](./2026-when-fuzzing-meets-understanding-llm-driven-semantic-test-generation-for-rtl-verification.md) | arXiv | A·直接相关 | 全文核验 | 提出LLM驱动的双阶段硬件fuzzing框架，引入控制流相似性索引、差异分析、历史bug引导和语义种子融合策略。 | [页面](http://arxiv.org/abs/2607.10340v1) / [PDF](https://arxiv.org/pdf/2607.10340v1) |
 | 2026-04-20 | [Fine-Grained Code Analysis for Processor Fuzzing](./2026-fine-grained-code-analysis-for-processor-fuzzing.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《Fine-Grained Code Analysis for Processor Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中… | [页面](https://doi.org/10.23919/date69613.2026.11539325) |
+| 2025-10-17 | [SymbFuzz: Symbolic Execution Guided Hardware Fuzzing](./2025-symbfuzz-symbolic-execution-guided-hardware-fuzzing.md) | Micro | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《SymbFuzz: Symbolic Execution Guided Hardware Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.js… | [页面](https://doi.org/10.1145/3725843.3756131) / [PDF](https://doi.org/10.1145/3725843.3756131) |
 | 2025-09-30 | [Logic Solver Guided Directed Fuzzing for Hardware Designs](./2025-logic-solver-guided-directed-fuzzing-for-hardware-designs.md) | arXiv | A·直接相关 | 全文核验 | 首次将SAT求解器应用于定向硬件模糊测试；提出目标状态覆盖度和目标站点覆盖度指标；在原生硬件抽象级实现高效定向测试；实验证明覆盖和速度优势。 | [页面](http://arxiv.org/abs/2509.26509v1) / [PDF](https://arxiv.org/pdf/2509.26509v1) |
 | 2025-04-26 | [SynFuzz: Leveraging Fuzzing of Netlist to Detect Synthesis Bugs](./2025-synfuzz-leveraging-fuzzing-of-netlist-to-detect-synthesis-bugs.md) | arXiv | A·直接相关 | 全文核验 | 1) First hardware fuzzer operating on gate-level netlist for synthesis bug detection. 2) Novel CLiMA attack exploiting optimization settings to inser… | [页面](http://arxiv.org/abs/2504.18812v3) / [PDF](https://arxiv.org/pdf/2504.18812v3) |
 | 2024-12-17 | [Accelerating Hardware Verification with Graph Models](./2024-accelerating-hardware-verification-with-graph-models.md) | arXiv | A·直接相关 | 全文核验 | ['提出将门级网表建模为图（NetGraph）并编码门行为作为特征。', '设计图循环神经网络（GRNN）用于预测节点逻辑值，实现加速模糊测试。', '利用EDA工具生成训练数据集（逻辑值、切换覆盖）。', '实现NetGraph模糊测试器，基于图节点覆盖引导输入变异。'] | [页面](http://arxiv.org/abs/2412.13374v2) / [PDF](https://arxiv.org/pdf/2412.13374v2) |

@@ -9,7 +9,7 @@
       "Vasile Gheorghiţă Găitan"
     ],
     "categories": [],
-    "content_hash": "a7a726166a66cd39aae679fe98f3b73cec6536fad910515eeec20dac67ff5074",
+    "content_hash": "8b333497e43097388bcb874895362d9226a2648a6c5e0f585a5c0410a8cbf5b9",
     "curation_status": "review",
     "doi": "https://doi.org/10.3390/computers15070447",
     "evidence_level": "abstract",
@@ -17,7 +17,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168574757",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-07-29",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -31,7 +31,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -72,7 +72,7 @@
     "source_id": "https://openalex.org/W7168574757",
     "title": "nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency",
     "title_key": "nsim rv a reproducible risc v framework for scheduler aware timing scalability under increasing task concurrency",
-    "updated": "2026-07-17",
+    "updated": "2026-07-22",
     "url": "https://doi.org/10.3390/computers15070447",
     "venue": "Computers"
   },
@@ -1196,6 +1196,56 @@
     "updated": "2021-06-17",
     "url": "http://arxiv.org/abs/1908.06757v4",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Despite its effectiveness in uncovering software defects, American Fuzzy Lop (AFL), one of the best grey-box fuzzers, is inefficient when fuzz-testing source-unavailable programs. AFL's binary-only fuzzing mode, QEMU-AFL, is typically 2-5× slower than its source- available fuzzing mode. The slowdown is largely caused by the heavy dynamic instrumentation. Recent fuzzing techniques use Intel Processor Tracing (PT), a light-weight tracing feature supported by recent Intel CPUs, to re- move the need of dynamic instrumentation. However, we found that these PT-based fuzzing techniques are even slower than QEMU-AFL when fuzzing real-world programs, making them less effective than QEMU-AFL. This poor performance is caused by the slow extraction of code coverage information from highly compressed PT traces. In this work, we present the design and implementation of PTrix, which fully unleashes the benefits of PT for fuzzing via three novel techniques. First, PTrix introduces a scheme to highly parallel the processing of PT trace and target program execution. Second, it directly takes decoded PT trace as feedback for fuzzing, avoiding the expensive reconstruction of code coverage information. Third, PTrix maintains the new feedback with stronger feedback than edge-based code coverage, which helps reach new code space and defects that AFL may not. We evaluated PTrix by comparing its performance with the state- of-the-art fuzzers. Our results show that, given the same amount of time, PTrix achieves a significantly higher fuzzing speed and reaches into code regions missed by the other fuzzers. In addition, PTrix identifies 35 new vulnerabilities in a set of previously well- fuzzed binaries, showing its ability to complement existing fuzzers.",
+    "analysis": {},
+    "authors": [
+      "Yaohui Chen",
+      "Dongliang Mu",
+      "Jun Xu",
+      "Zhichuang Sun",
+      "Wenbo Shen",
+      "Xinyu Xing",
+      "Long Lu",
+      "Bing Mao"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "f82237692d0adaeeff9d184d8ba5d00bfbe0b5a1e561e368ff40f4b33174a480",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3321705.3329828",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-07-29",
+    "id": "semantic-scholar-5cad8024ea75450b2991e43be91ab68a791e0cf6",
+    "included": false,
+    "last_seen": "2026-07-29",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3321705.3329828",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2019-05-25",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cpu",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5cad8024ea75450b2991e43be91ab68a791e0cf6",
+    "title": "PTrix: Efficient Hardware-Assisted Fuzzing for COTS Binary",
+    "title_key": "ptrix efficient hardware assisted fuzzing for cots binary",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3321705.3329828",
+    "venue": "ACM Asia Conference on Computer and Communications Security"
   },
   {
     "abstract": "DIFT (Dynamic Information Flow Tracking) has been a hot topic for more than a decade. Unfortunately, existing hardware DIFT approaches have not been widely used neither by research community nor by hardware vendors. It is due to two major reasons: current hardware DIFT solutions lack support for multi-threaded applications and implementations for hardcore processors. This work addresses both issues by introducing an approach with some unique features: DIFT for multi-threaded software, virtual memory protection (rather than physical memory as in related works) and Linux kernel support using an information flow monitor called RFBlare. These goals are accomplished by taking advantage of a notable feature of ARM CoreSight components (context ID) combined with a custom DIFT coprocessor and RFBlare. The communication time overhead, major source of slowdown in total DIFT time overhead, is divided by a factor 3.8 compared to existing solutions with similar software constraints as in this work. The area overhead of this work is lower than 1% and power overhead is 16.2% on a middle-class Xilinx Zynq SoC.",
