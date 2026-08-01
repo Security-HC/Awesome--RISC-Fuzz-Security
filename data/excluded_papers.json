@@ -1,5 +1,192 @@
 [
   {
+    "abstract": "Data-driven approaches with formal guarantees have recently emerged as a powerful means for the verification and controller synthesis of complex dynamical systems. Interest in these methods is rapidly growing, as system models are often unavailable in practice, and challenges such as nonlinear behavior, uncertainty, and the curse of dimensionality typically render accurate modeling infeasible. These difficulties motivate leveraging limited data collected from the system while still providing formal guarantees on its overall behavior. The community has therefore proposed a few hundred articles on the development of data-driven frameworks that enable the formal verification and synthesis of dynamical systems without explicit models, addressing complex specifications beyond stability. Despite this rapid growth, existing results remain scattered and lack a coherent organization, limiting a clear understanding of their principles, distinctions, and practical potential. This survey fills this gap by providing a comprehensive overview of these data-driven methods for both deterministic and stochastic dynamical systems. We structure the literature around three main methodological pillars in formal methods: (in)finite-abstraction-based techniques, functional certificate approaches, such as control barrier certificates, and compositional methods. For each of these approaches, we classify the resulting data-driven guarantees into three main categories: (i) statistical guarantees grounded in probably approximately correct and scenario-based frameworks, (ii) guarantees derived from Lipschitz continuity, and (iii) guarantees exploiting structural properties. While the literature on deterministic systems is considerably richer, we also devote particular attention to the stochastic counterpart, highlighting the inherent differences and challenges that arise compared to the deterministic case.",
+    "analysis": {},
+    "authors": [
+      "Behrad Samari",
+      "Alessandro Abate",
+      "Antoine Girard",
+      "Majid Zamani",
+      "Amy Nejati",
+      "Abolfazl Lavaei"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "388cefe8063fb35d25a6ed0fc8faf313204c3bcc61ddcb79e850d6e230dc85a4",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification, formal verification; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "arxiv-2607-27908v1",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2607.27908v1",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification, formal verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "eess.SY"
+    ],
+    "source_id": "2607.27908v1",
+    "title": "Data-Driven Formal Methods for Complex Dynamical Systems: A Survey",
+    "title_key": "data driven formal methods for complex dynamical systems a survey",
+    "updated": "2026-07-30",
+    "url": "http://arxiv.org/abs/2607.27908v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Large language models (LLMs) offer promise for dynamic game content generation, but they face critical barriers, including narrative incoherence and high operational costs. Due to their large size, they are often accessed in the cloud, limiting their application in offline games. Many of these practical issues are solved by pivoting to small language models (SLMs), but existing studies using SLMs have resulted in poor output quality. We propose a strategy of achieving high-quality SLM generation through aggressive fine-tuning on deliberately scoped tasks with narrow context, constrained structure, or both. In short, more difficult tasks require narrower scope and higher specialization to the training corpus. Training data is synthetically generated via a DAG-based approach, grounding models in the specific game world. Such models can form the basis for agentic networks designed around the narratological framework at hand, representing a more practical and robust solution than cloud-dependent LLMs. To validate this approach, we present a proof-of-concept focusing on a single specialized SLM as the fundamental building block. We introduce a minimal RPG loop revolving around rhetorical battles of reputations, powered by this model. We demonstrate that a simple retry-until-success strategy reaches adequate quality (as defined by a rubric-based LLM-as-a-judge scheme) with predictable latency suitable for real-time generation. Generation time estimates based on human annotation and cross-model validation suggest that the retry strategy remains practical even under substantially stricter quality requirements for the quantized models. While local quality assessment remains an open question, our results demonstrate feasibility for real-time generation under typical game engine constraints.",
+    "analysis": {},
+    "authors": [
+      "Morten I. K. Munk",
+      "Arturo Valdivia",
+      "Paolo Burelli"
+    ],
+    "categories": [],
+    "content_hash": "db82b4a08fe840a13290a3acb85441b85a8f0fa6e6f6df8df5822163b1126f15",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3815598.3815605",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w7162004637",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3815598.3815605",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Scope (computer science)",
+      "Limiting",
+      "Quality (philosophy)",
+      "Simple (philosophy)",
+      "Face (sociological concept)",
+      "Variety (cybernetics)",
+      "Sequential game",
+      "Outcome (game theory)",
+      "Language model",
+      "Game design",
+      "Artificial intelligence",
+      "Narrative",
+      "Scheme (mathematics)",
+      "Human–computer interaction",
+      "Latency (audio)",
+      "Key (lock)",
+      "Lift (data mining)",
+      "Simultaneous game"
+    ],
+    "source_id": "https://openalex.org/W7162004637",
+    "title": "High-quality generation of dynamic game content via small language models: A proof of concept",
+    "title_key": "high quality generation of dynamic game content via small language models a proof of concept",
+    "updated": "2026-07-31",
+    "url": "https://doi.org/10.1145/3815598.3815605",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Microarchitectural side-channels leak data through caches, branch predictors, store buffers, and speculative execution. Evaluating defenses at cycle-model fidelity has forced a choice between functional tools (Spike, QEMU) and gem5’s hours-long Linux boots. ARCHER is a cycle-model-relative RV64IMAFDC RISC-V emulator with pluggable superscalar out-of-order execution, coherent caches, simultaneous multithreading, 1 to 16 harts, and thirteen speculation policies: an unrestricted baseline plus five classical defenses and seven new defenses spanning issue-gate, predictive-redirect, and selective-cleanup mechanism families. It boots Linux 6.6 in under three minutes, runs 3.7× faster (geometric mean) than gem5’s DerivO3CPU on head-to-head bare-metal microbench, matches gem5 within ±20% on 4 of 10 workloads, matches Chipyard’s fab-ready RTL to a 9.4% mean cycle-count deviation under two fitted match-configurations, and produces bit-identical architectural output to QEMU at a median 88× host-throughput advantage over Chipyard’s Verilator flow. Every published Spectre-family defense drives leakage to zero at sub-0.3% instructions-per-cycle (IPC) loss on a full Linux boot, and each new policy is validated on the attack surface its mechanism defends. The Adaptive Memory Encryption Scheme (AMES) adds a bus-layer engine with four authenticated ciphers (each validated bit-exact against its published specification) and per-leaf mask-XOR for Differential Power Analysis (DPA) hardening; a first-order Correlation Power Analysis consistency check confirms the direction of the theoretical bound under the shipped leakage model. Together, ARCHER and AMES provide a single INI-configurable environment for cycle-model side-channel evaluation in minutes rather than hours.",
+    "analysis": {},
+    "authors": [
+      "Jyotiprakash Mishra",
+      "Sanjay K. Sahay",
+      "Swati Mishra",
+      "Aman Pathak"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "ea839a91f81b352bd9839c4110cc6c01c8d6fc3f1740d40d05cbfe869efe2f45",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.3390/computers15080479",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, cpu, microarchitectural, rtl; security relevance: speculative execution, leakage; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w7171559005",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact",
+      "OpenAlex: cache coherence transition coverage verification",
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "https://www.mdpi.com/2073-431X/15/8/479/pdf?version=1785241785",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, cpu, microarchitectural, rtl",
+      "security relevance: speculative execution, leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 3,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Embedded system",
+      "Power analysis",
+      "AES implementations",
+      "Operating system",
+      "Microarchitecture",
+      "Spec#",
+      "Advanced Encryption Standard",
+      "Encryption",
+      "Consistency (knowledge bases)",
+      "Static timing analysis",
+      "Parallel computing",
+      "Leakage (economics)",
+      "Memory controller",
+      "Cryptography",
+      "Branch predictor",
+      "Lock (firearm)",
+      "Protocol (science)",
+      "Profiling (computer programming)",
+      "Scheme (mathematics)",
+      "Computer hardware",
+      "ARM architecture",
+      "Register file",
+      "Power (physics)",
+      "Clock rate",
+      "Random access memory",
+      "Information leakage",
+      "Guard (computer science)",
+      "Chip",
+      "Real-time computing",
+      "Serpent (symbolism)"
+    ],
+    "source_id": "https://openalex.org/W7171559005",
+    "title": "ARCHER: A Cycle-Accurate RISC-V Emulator for Microarchitectural Side-Channel and Memory Encryption Research",
+    "title_key": "archer a cycle accurate risc v emulator for microarchitectural side channel and memory encryption research",
+    "updated": "2026-07-30",
+    "url": "https://doi.org/10.3390/computers15080479",
+    "venue": "Computers"
+  },
+  {
     "abstract": "Scaling monolithic multicores is increasingly constrained by power/thermal limits, yield, and rising manufacturing and testing costs. Chiplet designs address these challenges by partitioning large dies into smaller parts (typically multiple core-complex dies and an I/O die) linked via high-bandwidth physical fabrics (PHY). As bandwidth and wiring density scale, however, these short-reach links are pushed closer to their signal-integrity limits, increasing susceptibility to noise, crosstalk, and channel loss, motivating stronger link-level reliability mechanisms such as forward error correction (FEC). Despite this trend, state-of-the-art simulation infrastructures often approximate inter-chiplet links using oversimplified, fixed-latency models. Such abstractions overlook the inherently dynamic, runtime-dependent behavior of the PHY -- including channel conditions (e.g., signal-to-noise ratio shifts, signal crosstalk, clock jitter), iterative decoder convergence and packet retransmissions, and application dynamics (e.g., LLC-misses that travel across chiplet boundaries) -- all of which are hard to determine offline. We show that neglecting these effects distorts inter-chiplet packet-level timing and high-level performance metrics such as IPC, leading to off-trend simulation results. We present DICE, an in-simulation, runtime PHY modeling in gem5 that captures the end-to-end inter-chiplet datapath, including QC-LDPC encoding/decoding, PAM4 modulation, lossy-channel transmission, LLR-based demodulation, adaptive packet re-sending, and PHY-level flow control between chiplets.",
     "analysis": {},
     "authors": [
@@ -40,6 +227,83 @@
     "updated": "2026-07-28",
     "url": "http://arxiv.org/abs/2607.24221v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Theories of organisational adaptation rest on a largely unexamined assumption: that disruption is episodic. Organisations are jolted, they respond, and they settle into a new equilibrium. This paper argues that this assumption fails in African digital ecosystems, where infrastructural scarcity, institutional fluidity, and successive global shocks make disruption a continuous operating condition rather than an interruption of normality. When disruption never ends, adaptation cannot be theorised as an episodic strategic response. It must instead be theorised as a permanent organisational capability. The paper takes digital tutoring enterprises, platform-based ventures that deliver learning support across formal and in-formal African markets, as its anchoring phenomenon, and develops the Disrup-tion-Hybridisation-Transformation (DHT) model. The model theorises hybridisation, understood as the joint operation of hybrid value logic, hybrid resource orchestration, and hybrid technological adaptation, as the capability through which ventures convert continuous disruption into structural, capability-based, and institutional transformation. The paper then develops inclusive resilience as a distinct theoretical construct: the capacity of a digitally mediated ecosystem to maintain essential functions under continuous disruption while widening, rather than narrowing, the distribution of participation, capability, and le-gitimacy. The construct is differentiated from organisational resilience, ecosystem resilience, adaptive capacity, social resilience, and developmental resilience. Against purely virtuous readings, the model specifies trade-offs. Hybridisation builds legitimacy while eroding strategic coherence. Platform scaling widens access while deepening stratification. The feedback loops that reinforce adaptation can harden into path dependence. Nine proposition families (fourteen sub-propositions), explicit boundary conditions, and a treatment of alternative explanations translate the model into a falsifiable research agenda for digitally enabled ventures in emerging markets.",
+    "analysis": {},
+    "authors": [
+      "Adnan Ali Khan",
+      "Jacqueline Rawlinson",
+      "Maleeha Khan"
+    ],
+    "categories": [],
+    "content_hash": "f87aca51f8a74f55fd30f0a328ac2207f77cf1bcf1eeca5be028d2803a86d910",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.67728/bmp.2026.005",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w7171835959",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://bmp.apollojournals.com/article/165650.pdf",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Legitimacy",
+      "Adaptation (eye)",
+      "Psychological resilience",
+      "Resilience (materials science)",
+      "Knowledge management",
+      "Resource (disambiguation)",
+      "Proposition",
+      "Capability approach",
+      "Construct (python library)",
+      "Business",
+      "Economics",
+      "Value proposition",
+      "Process (computing)",
+      "Sociology",
+      "Context (archaeology)",
+      "Complex adaptive system",
+      "Process management",
+      "Economic system",
+      "Adaptive management",
+      "Social learning",
+      "Sustainability",
+      "Boundary (topology)",
+      "Function (biology)",
+      "Resource allocation",
+      "Capacity building",
+      "Computer science",
+      "Empowerment",
+      "Institutionalisation",
+      "Boundary spanning",
+      "Marketing",
+      "Distribution (mathematics)",
+      "Resource management (computing)",
+      "Industrial organization",
+      "Public relations",
+      "Sociality"
+    ],
+    "source_id": "https://openalex.org/W7171835959",
+    "title": "When Disruption Never Ends: Hybridisation as Permanent Adaptive Capability and the Emergence of Inclusive Resilience in African Digital Tutoring Ecosystems",
+    "title_key": "when disruption never ends hybridisation as permanent adaptive capability and the emergence of inclusive resilience in african digital tutoring ecosystems",
+    "updated": "2026-07-31",
+    "url": "https://doi.org/10.67728/bmp.2026.005",
+    "venue": "未记录"
   },
   {
     "abstract": "This book addresses a systematically overlooked reality in Ecuadorian higher education: the statistically inevitable presence of neurodiverse students those with ADHD, dyslexia, and ASD in university EFL courses. Grounded in the neurodiversity paradigm, which frames neurological variation as natural human difference rather than deficit, the book constructs a conceptual, pedagogical, and legal framework that equips EFL instructors to respond with academic rigour and genuine inclusion. The first four chapters analyse the neurobiological bases of each condition, translating that knowledge into differentiated skill profiles, evidence-based strategies, and assessment options. Chapter 5 integrates these within the UDL framework; Chapter 6 addresses assessment redesign for validity, fairness, and accessibility; Chapter 7 closes with three composite Ecuadorian case studies and a Professional Development Plan. Twenty-two ready-to-use instruments are offered, applicable without additional resources.",
@@ -158,7 +422,7 @@
       "H Wang"
     ],
     "categories": [],
-    "content_hash": "68c79766736a34b20ce5618c58a897951ba35eafb54b45a5b4801f787af3587e",
+    "content_hash": "4b41f05514a511ebe91132773a88bf54df3088df50e2f8b17b6912db8869f85e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.5194/egusphere-2026-3343",
     "evidence_level": "abstract",
@@ -166,7 +430,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168867454",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing"
     ],
@@ -179,7 +443,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Flood myth",
@@ -205,7 +469,7 @@
     "source_id": "https://openalex.org/W7168867454",
     "title": "Review article: Global flood research across four decades: An analysis of 57,474 research articles based on a large language model",
     "title_key": "review article global flood research across four decades an analysis of 57 474 research articles based on a large language model",
-    "updated": "2026-07-22",
+    "updated": "2026-07-30",
     "url": "https://doi.org/10.5194/egusphere-2026-3343",
     "venue": "未记录"
   },
@@ -503,7 +767,7 @@
       "Chenyan Xiong"
     ],
     "categories": [],
-    "content_hash": "943872399d2a082218febafe68515832d7e0abef82185040a97983473816e68a",
+    "content_hash": "bf03a2753a16ec78bd602301c5a94062e0a850a70d9803f5fbde200cc94cd54c",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3805712.3809627",
     "evidence_level": "abstract",
@@ -511,7 +775,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7159642999",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation",
       "OpenAlex: cache coherence transition coverage verification"
@@ -525,7 +789,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -557,7 +821,7 @@
     "source_id": "https://openalex.org/W7159642999",
     "title": "Agentic Search in the Wild: Intents and Trajectory Dynamics from 14M+ Real Search Requests",
     "title_key": "agentic search in the wild intents and trajectory dynamics from 14m real search requests",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3805712.3809627",
     "venue": "未记录"
   },
@@ -985,16 +1249,17 @@
       "Ben Slivinski"
     ],
     "categories": [],
-    "content_hash": "5cd4f73120a2926631bb5925dd3af04e897d75a26bc1265a0261f5095d0f480a",
+    "content_hash": "ffb7c4fd3318a8c70ed2f97337b0da542c2a38869d0316d95cd8f6d6a4928529",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2607-01223v4",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
-      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "Semantic Scholar: cache coherence transition coverage verification"
     ],
     "pdf_url": "https://arxiv.org/pdf/2607.01223v4",
     "primary_category": "",
@@ -1006,21 +1271,17 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.LG",
-      "cs.LO",
-      "cs.SE"
+      "Computer Science"
     ],
     "source_id": "2607.01223v4",
     "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
     "title_key": "theoria rewrite acceptability verification over informal reasoning states",
     "updated": "2026-07-20",
-    "url": "http://arxiv.org/abs/2607.01223v4",
-    "venue": "arXiv"
+    "url": "https://www.semanticscholar.org/paper/1b7f5d662bcbfad7e808eeb6ef991b71ab01a58f",
+    "venue": "未记录"
   },
   {
     "abstract": "Abstract: Harmonic analysis supplies a disciplined language for interpreting how periodicity, resonance, temporal variation, and multiscale structure organize contemporary media signals. This monograph develops that language into an integrated research architecture for music technology, film analytics, and digital consumer systems. It connects Fourier, time–frequency, wavelet, graph-spectral, and operator-based representations with uncertainty-aware research design; statistical explanation and causal inference; trustworthy machine learning; and reproducible big-data engineering. Particular attention is given to the difference between measurable signal regularity and culturally meaningful interpretation, because computational accuracy alone cannot establish perceptual validity, causal relevance, or legitimate intervention. The book therefore treats representations, estimands, model behavior, deployment controls, and governance obligations as parts of one analytical lifecycle. Original frameworks specify how multimodal audio, image, text, interaction, and contextual streams can be aligned, evaluated, documented, monitored, and translated into decision tools. Applications span adaptive music production, audiovisual editing, audience forecasting, recommendation, accessibility, rights management, consumer protection, and cultural policy. Comparative deployment logic addresses infrastructures and institutions in South Asia, Europe, Africa, and the Americas. The resulting research program is intended for scholars, engineers, creative practitioners, industry leaders, and policymakers seeking scalable media intelligence that remains interpretable, reproducible, culturally responsive, and accountable. Keywords harmonic analysis, signal processing, music technology, film analytics, digital consumer systems, time–frequency analysis, wavelets, spectral methods, multimodal learning, causal inference, Bayesian modeling, representation learning, trustworthy artificial intelligence, algorithmic fairness, uncertainty quantification, streaming analytics, big data engineering, reproducible MLOps, cultural analytics, recommendation systems, computational creativity, digital rights, media governance, consumer protection",
@@ -1190,7 +1451,7 @@
       "Zheng Wang"
     ],
     "categories": [],
-    "content_hash": "2bfbaedff57727f3a364c4ccd9c56b53a75c829121b89ec43eb7bf7f3c324087",
+    "content_hash": "ba5c8e1ec6655be47a86252bdb4e9c84a4a8b927d792e0a77a7fefba6396c7cb",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3814942.3816133",
     "evidence_level": "abstract",
@@ -1198,7 +1459,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7164318503",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: RISC-V processor verification benchmark artifact"
@@ -1213,7 +1474,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1232,8 +1493,49 @@
     "source_id": "https://openalex.org/W7164318503",
     "title": "Interpreter Memory Safety via Differential Fuzzing with a CHERI on Top",
     "title_key": "interpreter memory safety via differential fuzzing with a cheri on top",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3814942.3816133",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Recurrent neural networks maintain a hidden state $h_t$, but its probabilistic meaning is often unclear. We study hidden-state stability through \\emph{backward coherence}: the extent to which $h_t$ can be reconstructed from $h_{t+1}$ by a learned backward projector $g_\\phi$. Under contraction and summable backward drift, the hidden-state sequence forms a quasi-reverse-martingale. This yields almost-sure convergence, rates under mixing, an interpretable limiting representation, finite pathwise stopping times, and a theoretical framework for time-uniform confidence sequences. Simulations support the theory. Backward-coherence regularisation reduces the empirical quasi-martingale total $\\hat Q$ by $43$--$58%$, reaches stability $28$--$44%$ earlier than an unregularised RNN, and gives tracking-error recovery consistent with geometric bounds. Additional tests confirm echo-state forgetting rates bounded by $\\rho$ and verify the increment-sum tube $R_t$ with $100%$ simultaneous coverage, although $R_t$ is conservative; in practice, the defect-tail proxy $\\hat Q_t$ is the more useful monitor. The backward-coherence loss is also equivalent to minimising a Kullback--Leibler divergence in a Gaussian backward model, linking the method to variational inference. Extensions cover $\\phi$-mixing inputs, change-point tracking, and finite-sample concentration. Three real-data studies further validate the approach. On PhysioNet 2012 ICU data, the Reverse Martingale RNN (RMRNN) matches RNN mortality-prediction AUC while reaching stable representations 13 hours earlier. On FRED-MD, it reduces one-month-ahead forecast error by about fourfold under concept drift. On UCI Human Activity Recognition, it maintains lower post-transition tracking error with geometric decay. The guarantees apply under the stated assumptions; universality is not claimed.",
+    "analysis": {},
+    "authors": [
+      "Y. Chang"
+    ],
+    "categories": [],
+    "content_hash": "2ca5f0edf860ad388e0b718369857d0a65048e77c47aad368d53b8ab34441106",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-762f3f0e6576a5c24e32308d9dea6bb352952ef6",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2026-06-08",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science",
+      "Mathematics"
+    ],
+    "source_id": "762f3f0e6576a5c24e32308d9dea6bb352952ef6",
+    "title": "Backward Coherence and Hidden-State Stability in Recurrent Neural Networks: A Quasi-Reverse-Martingale Theory",
+    "title_key": "backward coherence and hidden state stability in recurrent neural networks a quasi reverse martingale theory",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/762f3f0e6576a5c24e32308d9dea6bb352952ef6",
     "venue": "未记录"
   },
   {
@@ -1318,7 +1620,7 @@
       "Kui Ren"
     ],
     "categories": [],
-    "content_hash": "b8706c231a48f322a76930574c5542d1a8e39408ee789501379e37ba9f09a854",
+    "content_hash": "1efae7c2b9aea9011e3902684b413daebb7491d1f6c5b2d150e39f37bcd64e46",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3779208.3805964",
     "evidence_level": "abstract",
@@ -1326,7 +1628,7 @@
     "first_seen": "2026-07-29",
     "id": "openalex-w7163556769",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing"
     ],
@@ -1339,7 +1641,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1367,7 +1669,7 @@
     "source_id": "https://openalex.org/W7163556769",
     "title": "SoK: Understanding zkVM: From Research to Practice",
     "title_key": "sok understanding zkvm from research to practice",
-    "updated": "2026-07-23",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3779208.3805964",
     "venue": "未记录"
   },
@@ -1702,7 +2004,7 @@
       "Xin Wang"
     ],
     "categories": [],
-    "content_hash": "0e6508e82cd280ba4145ef47a66391a4153850bc09440a0c78cd7c29375e39d0",
+    "content_hash": "5c9d2f4981e7788bb212cdea1440d46f7564d950d69bf2bffe33d2ff04e412b1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/cscwd68734.2026.11582098",
     "evidence_level": "abstract",
@@ -1710,7 +2012,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7167464912",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: processor hardware sanitizer fuzzing"
@@ -1725,7 +2027,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1744,7 +2046,7 @@
     "source_id": "https://openalex.org/W7167464912",
     "title": "Evaluating and Enhancing Memory Safety in LLM-Generated Code on CHERI",
     "title_key": "evaluating and enhancing memory safety in llm generated code on cheri",
-    "updated": "2026-07-20",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1109/cscwd68734.2026.11582098",
     "venue": "未记录"
   },
@@ -1952,7 +2254,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "0c6b54fe5bc9e1a5ec6c828e637cd4128369158bfcc7f26d8d2d17da486f6cc7",
+    "content_hash": "5374fd5ed1c0c028133bcd83f8454e9cc62b8b6412a63475ec82fc2149a47206",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -1960,7 +2262,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -1974,7 +2276,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1998,7 +2300,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -2012,7 +2314,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "566167e4859f43048ff7a519bdb000902251b0893d780e659734fdc8a8309405",
+    "content_hash": "32f7ff6618fbdaa4f18d6b8a77fa03ff729a10463be614157e18ea0ce59e8ad4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -2020,7 +2322,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -2035,7 +2337,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -2046,7 +2348,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -2476,7 +2778,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "ed97211617a5e8f485f6db346fe744699002555520d1604fb90dc5302961f484",
+    "content_hash": "f248e7262ab4ec9e833b26442a0c51a112209531f31d42a18a55082a1a83c84f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -2484,7 +2786,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -2498,7 +2800,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -2531,7 +2833,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -2548,7 +2850,7 @@
       "Wenyuan Xu"
     ],
     "categories": [],
-    "content_hash": "e4765fe05ee553a67fab35592e18f4e1ba076209eec88960f977ac2cd0e5e1f9",
+    "content_hash": "e4e008f160bbf3c5f129eddad113f112cdb58a7ad666ab6bbf0518450a387657",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240029",
     "evidence_level": "abstract",
@@ -2556,7 +2858,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161007696",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -2571,7 +2873,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2588,7 +2890,7 @@
     "source_id": "https://openalex.org/W7161007696",
     "title": "PhyFuzz: Detecting Sensor Vulnerabilities with Physical Signal Fuzzing",
     "title_key": "phyfuzz detecting sensor vulnerabilities with physical signal fuzzing",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.14722/ndss.2026.240029",
     "venue": "未记录"
   },
@@ -2606,7 +2908,7 @@
       "Xi Wang"
     ],
     "categories": [],
-    "content_hash": "b586ece8ca9ebb26a9317c9e13e6a564e9a4320b59131e11818341770a0f7619",
+    "content_hash": "c3011311414d511f94168d94a6e98a5ba06e98cbd7a6064709232947bf09e1fa",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "evidence_level": "abstract",
@@ -2614,7 +2916,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4416469058",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -2628,7 +2930,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Expediting",
@@ -2666,7 +2968,7 @@
     "source_id": "https://openalex.org/W4416469058",
     "title": "ChatHLS: Towards Systematic Design Automation and Optimization for High-Level Synthesis",
     "title_key": "chathls towards systematic design automation and optimization for high level synthesis",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.18653/v1/2026.acl-long.962",
     "venue": "未记录"
   },
@@ -2734,7 +3036,7 @@
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "b3694bd8d24744b23ee0b44121906b3325351d3a5717ca2b4243f0ec3eb8d644",
+    "content_hash": "948d10c63e99eed426d40294ab2c3d4b372c41747e16be5986aa511c1ab93194",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
@@ -2742,7 +3044,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
     ],
@@ -2757,7 +3059,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2774,7 +3076,7 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
     "venue": "未记录"
   },
@@ -3072,7 +3374,7 @@
       "Michael Schwarz"
     ],
     "categories": [],
-    "content_hash": "80fa23207a42e77ebf98dd408fc3c87e1e440d9993c9c14b1928c15228b7b1c9",
+    "content_hash": "3f5fedea3fd8983cae219bbdec216cd78be2b2b5056cbacea64bfc98cb543b61",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3719027.3765061",
     "evidence_level": "abstract",
@@ -3080,7 +3382,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4416549424",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -3095,7 +3397,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Cache",
@@ -3123,7 +3425,7 @@
     "source_id": "https://openalex.org/W4416549424",
     "title": "<scp>ExfilState:</scp> Automated Discovery of Timer-Free Cache Side Channels on ARM CPUs",
     "title_key": "scp exfilstate scp automated discovery of timer free cache side channels on arm cpus",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3719027.3765061",
     "venue": "未记录"
   },
@@ -3183,7 +3485,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "b2686af26fb6c3fdebc725b1291123d98ccd5fb9063d35a4cfeb0840f4c91900",
+    "content_hash": "0a2cd61f20fd2f1550557811743e7e806e3c37173f29acfcdc63f666b99ce20b",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -3191,7 +3493,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3204,7 +3506,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -3229,7 +3531,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-07-28",
+    "updated": "2026-07-31",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -3367,6 +3669,90 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Dynamic program analysis is invaluable for malware detection, debugging, and performance profiling. However, software-based instrumentation incurs high overhead and can be evaded by anti-analysis techniques. In this paper, we propose LibIHT, a hardware-assisted tracing framework that leverages on-CPU branch tracing features (Intel Last Branch Record and Branch Trace Store) to efficiently capture program control-flow with minimal performance impact. Our approach reconstructs control-flow graphs (CFGs) by collecting hardware generated branch execution data in the kernel, preserving program behavior against evasive malware. We implement LibIHT as an OS kernel module and user-space library, and evaluate it on both benign benchmark programs and adversarial anti-instrumentation samples. Our results indicate that LibIHT reduces runtime overhead by over 150× compared to Intel Pin (7× vs 1,053× slowdowns), while achieving high fidelity in CFG reconstruction (capturing over 99% of execution basic blocks and edges). Although this hardware-assisted approach sacrifices the richer semantic detail available from full software instrumentation by capturing only branch addresses, this trade-off is acceptable for many applications where performance and low detectability are paramount. Our findings show that hardware-based tracing captures control flow information significantly faster, reduces detection risk and performs dynamic analysis with minimal interference.",
+    "analysis": {},
+    "authors": [
+      "Changyu Zhao",
+      "Yohan Beugin",
+      "Jean-Charles Noirot Ferrand",
+      "Quinn Burke",
+      "Guancheng Li",
+      "Patrick McDaniel"
+    ],
+    "categories": [],
+    "content_hash": "430535b58b9dcd3e1741558b06896ce36aed530f96b05c825c3c0d94e256fb58",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3733822.3764670",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: malware detection",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w4415722000",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3733822.3764670",
+    "primary_category": "",
+    "published": "2025-10-13",
+    "relevance_reasons": [
+      "excluded phrase: malware detection"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Tracing",
+      "Overhead (engineering)",
+      "Benchmark (surveying)",
+      "Instrumentation (computer programming)",
+      "Control flow",
+      "TRACE (psycholinguistics)",
+      "Dynamic program analysis",
+      "Program analysis",
+      "Malware",
+      "Static analysis",
+      "Software",
+      "System call",
+      "Kernel (algebra)",
+      "Branch predictor",
+      "Parallel computing",
+      "Computer engineering",
+      "Data-flow analysis",
+      "Control flow graph",
+      "Programming language",
+      "Speculative execution",
+      "Real-time computing",
+      "Fidelity",
+      "Static program analysis",
+      "Symbolic execution",
+      "Data flow diagram",
+      "Distributed computing",
+      "Theoretical computer science",
+      "Spec#",
+      "Machine code",
+      "Compiler",
+      "Malware analysis",
+      "Data structure",
+      "Optimizing compiler",
+      "Program transformation",
+      "Binary number",
+      "Call graph",
+      "Compile time",
+      "Algorithm",
+      "Data mining"
+    ],
+    "source_id": "https://openalex.org/W4415722000",
+    "title": "LibIHT: A Hardware-Based Approach to Efficient and Evasion-Resistant Dynamic Binary Analysis",
+    "title_key": "libiht a hardware based approach to efficient and evasion resistant dynamic binary analysis",
+    "updated": "2026-07-31",
+    "url": "https://doi.org/10.1145/3733822.3764670",
+    "venue": "未记录"
+  },
+  {
     "abstract": "",
     "analysis": {},
     "authors": [
@@ -3415,7 +3801,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "9c841771cc137b54175e0fa8415f25f43e3bad3b9057fe032a9386834b623ee1",
+    "content_hash": "dc808aec58fa5377033ec9286b237e846226b1e7433f1ce74509c0192f753137",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3731569.3764809",
     "evidence_level": "abstract",
@@ -3423,7 +3809,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414735884",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3436,7 +3822,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "POSIX",
@@ -3455,7 +3841,7 @@
     "source_id": "https://openalex.org/W4414735884",
     "title": "μFork: Supporting POSIX fork Within a Single-Address-Space OS",
     "title_key": "fork supporting posix fork within a single address space os",
-    "updated": "2026-07-28",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3731569.3764809",
     "venue": "未记录"
   },
@@ -3602,7 +3988,7 @@
     "venue": "arXiv"
   },
   {
-    "abstract": "Large language models represent significant investments in computation, data, and engineering expertise, making them extraordinarily valuable intellectual assets. Nevertheless, these AI assets remain vulnerable to unauthorized redistribution and commercial exploitation through fine-tuning or black-box deployment. Current fingerprinting approaches face a fundamental trade-off: intrinsic methods require full parameter access, while backdoor-based techniques employ statistically anomalous triggers easily detected and filtered by adversaries. To address these limitations, we introduce FPEdit, a novel framework that leverages knowledge editing to inject semantically coherent natural language fingerprints through sparse, targeted modifications to model weights. Our approach introduces Promote-Suppress Value Vector Optimization, which simultaneously enhances target token likelihood while suppressing competing tokens, ensuring robust fingerprint integration without degrading core model functionality. Extensive experiments show that FPEdit achieves 95-100% fingerprint retention under both full-parameter fine-tuning and parameter-efficient adaptation, while preserving performance on downstream benchmarks. Moreover, FPEdit remains robust under quantization, pruning, and stochastic decoding, and can embed 10 fingerprint pairs into LLaMA2-7B in under 2 minutes using less than 30 GB of GPU memory, which represents a substantial reduction in resource requirements. These advances establish FPEdit as the first fingerprinting approach to simultaneously achieve robustness against adaptation, resistance to detection, and preservation of model utility, thereby providing a minimally invasive solution for reliable provenance verification of large language models in adversarial deployment scenarios.",
+    "abstract": "Large language models represent significant investments in computation, data, and engineering expertise, making them extraordinarily valuable intellectual assets. Nevertheless, these AI assets remain vulnerable to unauthorized redistribution and commercial exploitation through fine-tuning or black-box deployment. Current fingerprinting approaches face a fundamental trade-off: intrinsic methods require full parameter access, while backdoor-based techniques employ statistically anomalous triggers easily detected and filtered by adversaries. To address these limitations, we introduce FPEdit, a novel framework that leverages knowledge editing to inject semantically coherent natural language fingerprints through sparse, targeted modifications to model weights. Our approach introduces Promote-Suppress Value Vector Optimization, which simultaneously enhances target token likelihood while suppressing competing tokens, ensuring robust fingerprint integration without degrading core model functionality. Extensive experiments show that FPEdit achieves 94-100% fingerprint retention under both full-parameter fine-tuning and parameter-efficient adaptation, while preserving performance on downstream benchmarks. Moreover, FPEdit remains robust under quantization, pruning, and stochastic decoding, and can embed 10 fingerprint pairs into LLaMA2-7B in under 2 minutes using less than 30 GB of GPU memory, which represents a substantial reduction in resource requirements. These advances establish FPEdit as the first fingerprinting approach to simultaneously achieve robustness against adaptation, resistance to detection, and preservation of model utility, thereby providing a minimally invasive solution for reliable provenance verification of large language models in adversarial deployment scenarios.",
     "analysis": {},
     "authors": [
       "Shida Wang",
@@ -3611,18 +3997,18 @@
       "Linli Xu"
     ],
     "categories": [],
-    "content_hash": "bc9967e57b7f30930f8e54be24a19cfbb10252908d0908473711fed03edcdc28",
+    "content_hash": "e5962fc1d08de2943158fbcf32135f4ce829cd6e72e96c12d8bacbd10d2da207",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2508-02092v2",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2508.02092v2",
+    "pdf_url": "https://arxiv.org/pdf/2508.02092v3",
     "primary_category": "",
     "published": "2025-08-04",
     "relevance_reasons": [
@@ -3632,7 +4018,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.CR",
@@ -3641,8 +4027,8 @@
     "source_id": "2508.02092v2",
     "title": "FPEdit: Robust LLM Fingerprinting through Localized Parameter Editing",
     "title_key": "fpedit robust llm fingerprinting through localized parameter editing",
-    "updated": "2025-10-17",
-    "url": "http://arxiv.org/abs/2508.02092v2",
+    "updated": "2026-07-29",
+    "url": "http://arxiv.org/abs/2508.02092v3",
     "venue": "arXiv"
   },
   {
@@ -3703,6 +4089,76 @@
     "title_key": "debugging the localization bugs and improve microprocessor performance using machine learning",
     "updated": "2026-05-21",
     "url": "https://doi.org/10.46632/jemm/9/3/6",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Cloud workloads combine software components from different parties to process sensitive data. Each component has its own trust model - it must protect its assets from the rest of the system, yet share sensitive data with components it cannot trust to keep confidential. This tension requires composing isolation boundaries for confidentiality and encapsulation. Unfortunately, the cloud offers no direct way to compose such boundaries, forcing tenants to assemble, deploy, and maintain their own solutions. This paper shifts that burden back to the infrastructure by making composable, attestable isolation a first-class systems abstraction. We present Tyche, a security monitor that centers isolation around a unified composable abstraction: security domains (SDs). An SD is an execution environment whose access to machine resources - memory, cores, devices - is controlled through explicit capabilities. A small set of capability operations enables SDs to partition, share, and reclaim resources; by nesting recursively, SDs compose attestable trust boundaries for confidentiality and encapsulation. Tyche attests these compositions, providing end-to-end security guarantees for workloads made of mutually distrustful components. As a first-class cloud primitive, this single abstraction subsumes enclaves, sandboxes, CVMs, and their compositions. Tyche provides composable isolation without sacrificing compatibility with existing hardware and software stacks. It runs on commodity x86 64 hardware without security extensions, and a RISC-V prototype demonstrates portability across platforms. Our SDK composes isolation for unmodified workloads within SDs with minimal overhead. In a confidential LLM inference scenario with mutually distrustful users, model owners, and cloud providers, the slowdown is just 2% compared to bare-metal Linux.",
+    "analysis": {},
+    "authors": [
+      "Adrien Ghosn",
+      "Charly Castes",
+      "Neelu S. Kalani",
+      "Yuchen Qian",
+      "Marios Kogias",
+      "Edouard Bugnion"
+    ],
+    "categories": [],
+    "content_hash": "a6626d2b78d9627b72136e685fa805d4e14166bf2feb25077ac84d585f965c34",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w4415142875",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2507.12364",
+    "primary_category": "",
+    "published": "2025-07-16",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Cloud computing",
+      "Computer security",
+      "Confidentiality",
+      "Mandatory access control",
+      "Isolation (microbiology)",
+      "Abstraction",
+      "Access control",
+      "Software portability",
+      "Correctness",
+      "Cloud computing security",
+      "Threat model",
+      "Debugging",
+      "Distributed computing",
+      "Cryptography",
+      "Trusted computing base",
+      "Service provider",
+      "Overhead (engineering)",
+      "Operating system",
+      "Backward compatibility",
+      "Computer security model",
+      "Trusted Computing",
+      "Trusted Platform Module",
+      "Security analysis"
+    ],
+    "source_id": "https://openalex.org/W4415142875",
+    "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
+    "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
+    "updated": "2026-07-31",
+    "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
   {
@@ -4046,7 +4502,7 @@
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "35c5c9a4dd8f0c6e87e93ea5ac9911297b2f304e0095a872569c001598fccf9b",
+    "content_hash": "009ad104e06bca5e3d6df407d1afb4d5f81834f61e58024f47b6431918aa567f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.5463/thesis.948",
     "evidence_level": "abstract",
@@ -4054,14 +4510,14 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4406713735",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing",
       "OpenAlex: transient execution RTL fuzzing"
     ],
     "pdf_url": "https://research.vu.nl/files/390813542/out%20-%206766fe9490e0c.pdf",
     "primary_category": "Microarchitectural Security Testing",
-    "published": "2025-01-23",
+    "published": "2025-01-22",
     "relevance_reasons": [
       "hardware/processor object: cpu, microarchitecture, microarchitectural",
       "security relevance: security, transient execution",
@@ -4070,7 +4526,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Implementation",
@@ -4085,7 +4541,7 @@
     "source_id": "https://openalex.org/W4406713735",
     "title": "UNVEILING MICROARCHITECTURAL SECRETS: THE SECURITY IMPACT OF CPU IMPLEMENTATIONS",
     "title_key": "unveiling microarchitectural secrets the security impact of cpu implementations",
-    "updated": "2026-05-21",
+    "updated": "2026-07-31",
     "url": "https://doi.org/10.5463/thesis.948",
     "venue": "未记录"
   },
@@ -4195,7 +4651,7 @@
       "Daniel Große"
     ],
     "categories": [],
-    "content_hash": "39b93704e040e07696a86f7bea7b1ddf2b952eea554c7183bf72472a88e2e558",
+    "content_hash": "cb665369591a0843415d377799e5c5fb16c0693e006dfde98fe2acc3c3c8966b",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676755",
     "evidence_level": "abstract",
@@ -4203,7 +4659,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282730",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -4217,7 +4673,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Isolation (microbiology)",
@@ -4233,7 +4689,7 @@
     "source_id": "https://openalex.org/W4409282730",
     "title": "Single Instruction Isolation for RISC-V Vector Test Failures",
     "title_key": "single instruction isolation for risc v vector test failures",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3676536.3676755",
     "venue": "未记录"
   },
@@ -4250,7 +4706,7 @@
       "Shweta Shinde"
     ],
     "categories": [],
-    "content_hash": "8eef483d9cb6f55c2b1c17860951dc714eaaf6bd42fd9cf807e04dc126154181",
+    "content_hash": "87040a908497e980e21d7e862a43b72133715682e13f45107ff0f73930fb01f3",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676844",
     "evidence_level": "abstract",
@@ -4258,7 +4714,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282636",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -4273,7 +4729,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Implementation",
@@ -4284,9 +4740,52 @@
     "source_id": "https://openalex.org/W4409282636",
     "title": "eXpect: On the Security Implications of Violations in AXI Implementations",
     "title_key": "expect on the security implications of violations in axi implementations",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1145/3676536.3676844",
     "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Jasmin Schult",
+      "B. Fiedler",
+      "David A. Cock",
+      "Timothy Roscoe"
+    ],
+    "categories": [],
+    "content_hash": "b49e29387c9f16ade0a302073a67295899fd5f28a07d90750f5efa5b9032bcbc",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.34727/2024/isbn.978-3-85448-065-5_21",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-6c4055797803ed828c7c1331fffd3205ab0c2a16",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2024-10-15",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6c4055797803ed828c7c1331fffd3205ab0c2a16",
+    "title": "Semi-Open-State Testing for in-Silicon Coherent Interconnects",
+    "title_key": "semi open state testing for in silicon coherent interconnects",
+    "updated": "",
+    "url": "https://doi.org/10.34727/2024/isbn.978-3-85448-065-5_21",
+    "venue": "Formal Methods in Computer-Aided Design"
   },
   {
     "abstract": "Large Language Models (LLMs) have excelled in various tasks but are still vulnerable to jailbreaking attacks, where attackers create jailbreak prompts to mislead the model to produce harmful or offensive content. Current jailbreak methods either rely heavily on manually crafted templates, which pose challenges in scalability and adaptability, or struggle to generate semantically coherent prompts, making them easy to detect. Additionally, most existing approaches involve lengthy prompts, leading to higher query costs. In this paper, to remedy these challenges, we introduce a novel jailbreaking attack framework called PAPILLON, which is an automated, black-box jailbreaking attack framework that adapts the black-box fuzz testing approach with a series of customized designs. Instead of relying on manually crafted templates,PAPILLON starts with an empty seed pool, removing the need to search for any related jailbreaking templates. We also develop three novel question-dependent mutation strategies using an LLM helper to generate prompts that maintain semantic coherence while significantly reducing their length. Additionally, we implement a two-level judge module to accurately detect genuine successful jailbreaks. We evaluated PAPILLON on 7 representative LLMs and compared it with 5 state-of-the-art jailbreaking attack strategies. For proprietary LLM APIs, such as GPT-3.5 turbo, GPT-4, and Gemini-Pro, PAPILLONs achieves attack success rates of over 90%, 80%, and 74%, respectively, exceeding existing baselines by more than 60\\%. Additionally, PAPILLON can maintain high semantic coherence while significantly reducing the length of jailbreak prompts. When targeting GPT-4, PAPILLON can achieve over 78% attack success rate even with 100 tokens. Moreover, PAPILLON demonstrates transferability and is robust to state-of-the-art defenses. Code: https://github.com/aaFrostnova/Papillon",
@@ -4519,7 +5018,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "fba1776359ca09d9ac6fa7d9ec63605a1cff1899277478e47f7bb209f9fde2a4",
+    "content_hash": "c4de94fa359e20bf6a952cb42c6bb39958c05955536f48109eb483218b5534b4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -4527,7 +5026,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -4542,7 +5041,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4554,7 +5053,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-07-26",
+    "updated": "2026-07-31",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -5045,6 +5544,48 @@
     "title_key": "mitigating microarchitectural vulnerabilities to improve cloud security and reliability",
     "updated": "",
     "url": "https://www.semanticscholar.org/paper/6917f7484b10e8afdfc1e1612698e4274ddc17b0",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Thomas Emanuel Benz",
+      "Paul Scheffler",
+      "Jannis Schönleber",
+      "Luca Benini"
+    ],
+    "categories": [],
+    "content_hash": "a8b73a141e3b65b4c4df2490d1dc5d40590923c6cc8ebcad968e038b30e3256e",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: risc-v, soc; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-9157f7da34d715538c0c846cd3291f55703b8bbd",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2023",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "9157f7da34d715538c0c846cd3291f55703b8bbd",
+    "title": "Iguana: An End-to-End Open-Source Linux-capable RISC-V SoC in 130nm CMOS",
+    "title_key": "iguana an end to end open source linux capable risc v soc in 130nm cmos",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/9157f7da34d715538c0c846cd3291f55703b8bbd",
     "venue": "未记录"
   },
   {
@@ -5625,6 +6166,53 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "We present HieraGen, a new tool for automatically generating hierarchical cache coherence protocols. HieraGen’s inputs are the simple, atomic, stable state protocols for each level of the hierarchy. HieraGen’s output is a highly concurrent hierarchical protocol, in the form of the finite state machines for all of the cache and directory controllers. HieraGen thus reduces the complexity that architects face, by offloading the challenging tasks of composing protocols and managing concurrency. Experiments show that HieraGen can automatically generate correct-by-construction MOESI family of hierarchical protocols with dozens of states and hundreds of transitions. We have verified all of the generated protocols for safety and deadlock freedom using a model checker.",
+    "analysis": {},
+    "authors": [
+      "Nicolai Oswald",
+      "V. Nagarajan",
+      "D. Sorin"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "3a3f788bec71c0e082d3b978432cf069f9e43d02f3997df6c58a5451ca9f863d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/ISCA45697.2020.00077",
+    "evidence_level": "abstract",
+    "exclusion_reason": "strong phrase in title: cache coherence protocol; hardware/processor object: cache coherence; security relevance: deadlock; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-6eea1491f0f82104f668bc0b8e4e7bff7ba97951",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.research.ed.ac.uk/files/149921378/HieraGen_OSWALD_DOA04032020_AFV.pdf",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2020-05-01",
+    "relevance_reasons": [
+      "strong phrase in title: cache coherence protocol",
+      "hardware/processor object: cache coherence",
+      "security relevance: deadlock",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6eea1491f0f82104f668bc0b8e4e7bff7ba97951",
+    "title": "HieraGen: Automated Generation of Concurrent, Hierarchical Cache Coherence Protocols",
+    "title_key": "hieragen automated generation of concurrent hierarchical cache coherence protocols",
+    "updated": "",
+    "url": "https://doi.org/10.1109/ISCA45697.2020.00077",
+    "venue": "International Symposium on Computer Architecture"
+  },
+  {
     "abstract": "Modeling distributed computing in a way enabling the use of formal methods is a challenge that has been approached from different angles, among which two techniques emerged at the turn of the century: protocol complexes, and directed algebraic topology. In both cases, the considered computational model generally assumes communication via shared objects, typically a shared memory consisting of a collection of read-write registers. Our paper is concerned with network computing, where the processes are located at the nodes of a network, and communicate by exchanging messages along the edges of that network. Applying the topological approach for verification in network computing is a considerable challenge, mainly because the presence of identifiers assigned to the nodes yields protocol complexes whose size grows exponentially with the size of the underlying network. However, many of the problems studied in this context are of local nature, and their definitions do not depend on the identifiers or on the size of the network. We leverage this independence in order to meet the above challenge, and present $\\textit{local}$ protocol complexes, whose sizes do not depend on the size of the network. As an application of the design of \"compact\" protocol complexes, we reformulate the celebrated lower bound of $Ω(\\log^*n)$ rounds for 3-coloring the $n$-node ring, in the algebraic topology framework.",
     "analysis": {},
     "authors": [
@@ -5854,7 +6442,7 @@
       "Kevin Butler"
     ],
     "categories": [],
-    "content_hash": "d9c1f15304d60b8b07e434e12a1feae2bdafc232ab05b451ef1c7090d2cc206c",
+    "content_hash": "b2306b7f5b8f7a6795783ef04a36059f2b8b016aad4b3ef87ce2981c299dff06",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -5862,7 +6450,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -5876,7 +6464,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5901,7 +6489,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-07-14",
+    "updated": "2026-07-29",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },
@@ -6172,6 +6760,49 @@
     "updated": "2016-05-16",
     "url": "http://arxiv.org/abs/1605.04744v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Inderpreet Singh"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "567f4c6e8b46c30e0bca4cd2cc1a572c65b4e97c9f0b3079f1d7d0e96c06788f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14288/1.0073882",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: cache coherence; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-9a78b72d3887e99a9b1df57912fe4128b5f7f5ac",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2013",
+    "relevance_reasons": [
+      "hardware/processor object: cache coherence",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "9a78b72d3887e99a9b1df57912fe4128b5f7f5ac",
+    "title": "Improving GPU programming models through hardware cache coherence",
+    "title_key": "improving gpu programming models through hardware cache coherence",
+    "updated": "",
+    "url": "https://doi.org/10.14288/1.0073882",
+    "venue": "未记录"
   },
   {
     "abstract": "The draft paper defines a system, which is capable of maintaining bases of test cases for logical specifications. The specifications, which are subject to this system are transformed from their original shape in first-order logic to form-based expressions as originally introduced in logics of George Spencer-Brown. The innovation comes from the operations the system provides when injecting faults - so-called mutations - to the specifications. The system presented here applies to logical specifications from areas as different as programming, ontologies or hardware specifications.",

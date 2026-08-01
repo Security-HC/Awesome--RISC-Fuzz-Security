@@ -2,22 +2,22 @@
 
 ## 基本信息
 
-- 作者：Yang Zhong、Haoran Wu、Xueqi Li、Sa Wang、David Boland、Yungang Bao、Kan Shi
+- 作者：Yang Zhong、Haoran Wu、Xueqi Li、Sa Wang、D. Boland、Yungang Bao、Kan Shi
 - 发表日期：2025-09-12
-- 会议/期刊：arXiv
+- 会议/期刊：International Symposium on High-Performance Computer Architecture
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=9）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: hardware fuzzing；hardware/processor object: risc-v, processor；verification/fuzzing method: fuzz, test generation, verification
-- 论文页面：[http://arxiv.org/abs/2509.10400v2](http://arxiv.org/abs/2509.10400v2)
+- 论文页面：[https://doi.org/10.1109/HPCA68181.2026.11408489](https://doi.org/10.1109/HPCA68181.2026.11408489)
 - PDF：[https://arxiv.org/pdf/2509.10400v2](https://arxiv.org/pdf/2509.10400v2)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 14 页，提取 71964 字符
 
 ## 摘要
 
-Verification is a critical process for ensuring the correctness of modern processors. The increasing complexity of processor designs and the emergence of new instruction set architectures (ISAs) like RISC-V have created demands for more agile and efficient verification methodologies, particularly regarding verification efficiency and faster coverage convergence. While simulation-based approaches now attempt to incorporate advanced software testing techniques such as fuzzing to improve coverage, they face significant limitations when applied to processor verification, notably poor performance and inadequate test case quality. Hardware-accelerated solutions using FPGA or ASIC platforms have tried to address these issues, yet they struggle with challenges including host-FPGA communication overhead, inefficient test pattern generation, and suboptimal implementation of the entire multi-step verification process. In this paper, we present TurboFuzz, an end-to-end hardware-accelerated verification framework that implements the entire Test Generation-Simulation-Coverage Feedback loop on a single FPGA for modern processor verification. TurboFuzz enhances test quality through optimized test case (seed) control flow, efficient inter-seed scheduling, and hybrid fuzzer integration, thereby improving coverage and execution efficiency. Additionally, it employs a feedback-driven generation mechanism to accelerate coverage convergence. Experimental results show that TurboFuzz achieves up to 2.23x more coverage collection than software-based fuzzers within the same time budget, and up to 571x performance speedup when detecting real-world issues, while maintaining full visibility and debugging capabilities with moderate area overhead.
+Verification is a critical process for ensuring the correctness of modern processors. The increasing complexity of processor designs and the emergence of new instruction set architectures (ISAs) like RISC-V have created demands for more agile and efficient verification methodologies, particularly regarding verification efficiency and faster coverage convergence. While simulation-based approaches now attempt to incorporate advanced software testing techniques such as fuzzing to improve coverage, they face significant limitations when applied to processor verification, notably poor performance and inadequate test case quality. Hardware-accelerated solutions using FPGA or ASIC platforms have tried to address these issues, yet they struggle with challenges including host-FPGA communication overhead, inefficient test pattern generation, and suboptimal implementation of the entire multi-step verification process. In this paper, we present TurboFuzz, an end-to-end hardwareaccelerated verification framework that implements the entire Test Generation-Simulation-Coverage Feedback loop on a single FPGA for modern processor verification. TurboFuzz enhances test quality through optimized test case (seed) control flow, efficient inter-seed scheduling, and hybrid fuzzer integration, thereby improving coverage and execution efficiency. Additionally, it employs a feedback-driven generation mechanism to accelerate coverage convergence. Experimental results show that TurboFuzz achieves up to 2.23× more coverage collection than software-based fuzzers within the same time budget, and up to 571× performance speedup when detecting real-world issues, while maintaining full visibility and debugging capabilities with moderate area overhead.
 
 ## 研究问题
 

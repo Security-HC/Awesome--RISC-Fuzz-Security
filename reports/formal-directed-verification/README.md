@@ -1,6 +1,6 @@
 # 形式化与定向处理器验证
 
-本目录仅按主分类收录，共 7 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 9 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
@@ -13,3 +13,5 @@
 | 2025-08-06 | [<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching](./2025-scp-syl-scp-q-sv-scaling-symbolic-execution-of-hardware-designs-with-query-caching.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching》，初步归入“Formal & Directed Processor Verificati… | [页面](https://doi.org/10.1145/3676642.3736123) / [PDF](https://dl.acm.org/doi/pdf/10.1145/3676642.3736123) |
 | 2024-04-22 | [Lifting Micro-Update Models from RTL for Formal Security Analysis](./2024-lifting-micro-update-models-from-rtl-for-formal-security-analysis.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《Lifting Micro-Update Models from RTL for Formal Security Analysis》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PDF… | [页面](https://doi.org/10.1145/3620665.3640418) / [PDF](https://doi.org/10.1145/3620665.3640418) |
 | 2023-12-11 | [VGF: Value-Guided Fuzzing -- Fuzzing Hardware as Hardware](./2023-vgf-value-guided-fuzzing-fuzzing-hardware-as-hardware.md) | arXiv | A·直接相关 | 全文核验 | 1) 重新审视硬件fuzzing假设，揭示代码覆盖率在微架构实现中的不足；2) 提出基于信号状态变化的覆盖率度量VGF；3) 实现与HDL和模拟器无关的VGF框架（VGF和VGF fast）；4) 通过静态分析自动选择相关信号和权重；5) 实验证明VGF在多个设计上执行次数少于HW-Fuzz，并能… | [页面](http://arxiv.org/abs/2312.06580v1) / [PDF](https://arxiv.org/pdf/2312.06580v1) |
+| 2023-10-28 | [CRYSTALS-Dilithium on RISC-V Processor: Lightweight Secure Boot Using Post-Quantum Digital Signature](./2023-crystals-dilithium-on-risc-v-processor-lightweight-secure-boot-using-post-quantum-digital.md) | 2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD) | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《CRYSTALS-Dilithium on RISC-V Processor: Lightweight Secure Boot Using Post-Quantum Digital Signature》，初步归入“Formal & Directed Proces… | [页面](https://doi.org/10.1109/ICCAD57390.2023.10323688) |
+| 2021-03-17 | [RTL-ConTest: Concolic Testing on RTL for Detecting Security Vulnerabilities](./2021-rtl-contest-concolic-testing-on-rtl-for-detecting-security-vulnerabilities.md) | IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《RTL-ConTest: Concolic Testing on RTL for Detecting Security Vulnerabilities》，初步归入“Formal & Directed Processor Verification”。 原因：未找到… | [页面](https://doi.org/10.1109/TCAD.2021.3066560) |

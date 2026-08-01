@@ -9,7 +9,7 @@
       "Vasile Gheorghiţă Găitan"
     ],
     "categories": [],
-    "content_hash": "8b333497e43097388bcb874895362d9226a2648a6c5e0f585a5c0410a8cbf5b9",
+    "content_hash": "318eecf0913add1c02aec9be790d9e23c3c768f8e3ab714c2634a74f4f38764f",
     "curation_status": "review",
     "doi": "https://doi.org/10.3390/computers15070447",
     "evidence_level": "abstract",
@@ -17,7 +17,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168574757",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -31,7 +31,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -72,7 +72,7 @@
     "source_id": "https://openalex.org/W7168574757",
     "title": "nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency",
     "title_key": "nsim rv a reproducible risc v framework for scheduler aware timing scalability under increasing task concurrency",
-    "updated": "2026-07-22",
+    "updated": "2026-07-30",
     "url": "https://doi.org/10.3390/computers15070447",
     "venue": "Computers"
   },
@@ -582,6 +582,51 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "The RISC-V instruction set architecture (ISA) offers flexibility for domain-specific custom instruction extensions. While the basic RISC-V ISA contains common instructions, the extended accelerators provide additional computing power to meet diverse needs. High-level synthesis (HLS) is often used to agilely create custom extension accelerators, allowing engineers to design complex digital circuits using high-level languages such as C/C++, further improving development efficiency. However, verifying a design that includes RISC-V cores and custom extensions is rarely studied and can be challenging. Traditional approaches for verifying HLS-generated designs use C-RTL co-simulation, primarily focusing on the unit level. This method can be extremely time-consuming and often makes impractical assumptions about interactions between HLS-generated circuits and the processor. Therefore, system-level verification is essential to extensively exercise the RISC-V cores, the custom extensions, and their interconnections. To efficiently verify a RISC-V processor design with custom instruction extensions, we propose Corvus: a novel co-verification framework that combines the benefits of the high-level abstraction of C/C++ simulation and cycle-accurate modeling of C-RTL co-simulations. Corvus provides hardware wrapper templates that efficiently connect HLS-generated accelerators and the RISC-V core, and a tool flow that automatically translates HLS unit-level tests into system-level stimulus. Corvus maps the core and the accelerators, along with their corresponding C/C++ software models, onto the same FPGA with hardened processors, allowing them to run simultaneously whilst checking both results on the fly with dedicated hardware monitors and checkers. If a mismatch is detected, we capture a snapshot of the accelerator hardware and reconstruct the simulation in external software simulators for detailed debugging. When potential issues are fixed, the accelerator region can be partially reconfigured without recompiling the entire design, further improving the design-verification efficiency. Results show a significant performance improvement over conventional approaches, from 4423× to 16626×.",
+    "analysis": {},
+    "authors": [
+      "Zijian Jiang",
+      "Keran Zheng",
+      "David Boland",
+      "Yungang Bao",
+      "Kan Shi"
+    ],
+    "categories": [],
+    "content_hash": "0b82c9150954db5d8148b61ac01250e5743c5b4c8ece490f6ec0507279b43647",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3658617.3697757",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-2e56155176bbc5ce284c1596402f99289f0ef2cc",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2025-01-20",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, rtl",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "2e56155176bbc5ce284c1596402f99289f0ef2cc",
+    "title": "Corvus: Efficient HW/SW Co-Verification Framework for RISC-V Instruction Extensions with FPGA Acceleration",
+    "title_key": "corvus efficient hw sw co verification framework for risc v instruction extensions with fpga acceleration",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3658617.3697757",
+    "venue": "Asia and South Pacific Design Automation Conference"
+  },
+  {
     "abstract": "This paper presents an automated infrastructure for the verification of RISC-V processors, using continuous integration techniques combined with FPGAs from multiple vendors, such as Altera/Intel, Xilinx/AMD, Gowin, and Lattice.We designed a robust and scalable environment that facilitates early detection of faults in various RISC-V processor implementations, ensuring compliance with ISA specifications.Preliminary results demonstrate the effectiveness of the approach, highlighting the methodology's ability to quickly identify errors and gather essential data for processor selection and verification.",
     "analysis": {},
     "authors": [],
@@ -821,7 +866,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "46cb313379d4a174cb82f974422f4c3b2688261618eb6065f4dc0a4ef2934aad",
+    "content_hash": "29bd26fce9bb175d7cd38c54b9c6c817ed28fd09935a25ac45d5fd56cbfb79be",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -829,11 +874,11 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-01",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
-    "pdf_url": "https://infoscience.epfl.ch/bitstreams/29d202e7-152f-4063-a5d3-42668af91e77/download",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3579371.3589087",
     "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
     "published": "2023-06-16",
     "relevance_reasons": [
@@ -843,7 +888,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -878,7 +923,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-07-14",
+    "updated": "2026-07-31",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },
@@ -927,6 +972,52 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Cache coherence and relaxed memory consistency challenge the design verification of multicore chips. The well-known self-checking approach based on litmus tests has been successful in uncovering design errors, but it leads to limited coverage. That is why random or directed test generation approaches are used for proper coverage control, but they require a specialized checker to verify shared memory behavior. Unfortunately, the inference-based checkers that provide guarantees against false positives and false negatives are not scalable with core count (unless some memory orderings are known beforehand). On the other hand, scoreboard-based checkers are scalable, but do not offer guarantees against false diagnosis. This article proposes an event-driven algorithm that is scalable without renouncing verification quality, because it relies on direct partial order verification, on-the-fly detection of improper memory orderings, exploitation of extended observability not hampered by design optimizations, and agnostic handling of store atomicity at the implementation level. We compared the new algorithm with two scoreboard-based and one inference-based checker reported in the literature. EveCheck often reaches full error detection with half the test size required by the other checkers, has superior verification quality, and less sensitivity to test generation parameters. Its effort to detect errors was one order of magnitude inferior as compared to the inference-based checker. It did not raise false positives in correct designs, and it was able to discover all the errors studied in faulty designs.",
+    "analysis": {},
+    "authors": [
+      "Marleson Graf",
+      "Gabriel A. G. Andrade",
+      "Luiz C. V. dos Santos"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "841dddc16bf114a92fd4fd043708a8ac99c0327d89344a50b09027a0740e2234",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/TCAD.2022.3178051",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-e9ec1cd8bddc71ea44ba1f9cd01f44b2e30322e4",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2023-02-01",
+    "relevance_reasons": [
+      "hardware/processor object: cache coherence, memory consistency, multicore",
+      "verification/fuzzing method: directed test generation, test generation, verification, litmus"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "e9ec1cd8bddc71ea44ba1f9cd01f44b2e30322e4",
+    "title": "EveCheck: An Event-Driven, Scalable Algorithm for Coherent Shared Memory Verification",
+    "title_key": "evecheck an event driven scalable algorithm for coherent shared memory verification",
+    "updated": "",
+    "url": "https://doi.org/10.1109/TCAD.2022.3178051",
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+  },
+  {
     "abstract": "In recent years, more people have seen their work depend on data manipulation tasks. However, many of these users do not have the background in programming required to write complex programs, particularly SQL queries. One way of helping these users is automatically synthesizing the SQL query given a small set of examples. Several program synthesizers for SQL have been recently proposed, but they do not leverage multicore architectures. This paper proposes CUBES, a parallel program synthesizer for the domain of SQL queries using input-output examples. Since input-output examples are an under-specification of the desired SQL query, sometimes, the synthesized query does not match the user's intent. CUBES incorporates a new disambiguation procedure based on fuzzing techniques that interacts with the user and increases the confidence that the returned query matches the user intent. We perform an extensive evaluation on around 4000 SQL queries from different domains. Experimental results show that our sequential version can solve more instances than other state-of-the-art SQL synthesizers. Moreover, the parallel approach can scale up to 16 processes with super-linear speedups for many hard instances. Our disambiguation approach is critical to achieving an accuracy of around 60%, significantly larger than other SQL synthesizers.",
     "analysis": {},
     "authors": [
@@ -973,6 +1064,50 @@
     "updated": "2024-02-01",
     "url": "http://arxiv.org/abs/2203.04995v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Niklas Bruns",
+      "V. Herdt",
+      "E. Jentzsch",
+      "R. Drechsler"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "d6626e43c229949009359ad411009af522966f66f1afca6b7ae47fbc0e9ce828",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-562a5c3164bebf082c367539040e88143676ad18",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2022",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: coverage-guided"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "562a5c3164bebf082c367539040e88143676ad18",
+    "title": "RISC-V Processor Veriﬁcation with Coverage-guided Aging *",
+    "title_key": "risc v processor veri cation with coverage guided aging",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/562a5c3164bebf082c367539040e88143676ad18",
+    "venue": "未记录"
   },
   {
     "abstract": "CPUs are becoming more complex with every generation, at both the logical and the physical levels. This potentially leads to more logic bugs and electrical defects in CPUs being overlooked during testing, which causes data corruption or other undesirable effects when these CPUs are used in production. These ever-present problems may also have simply become more evident as more CPUs are operated and monitored by large cloud providers. If the RTL (\"source code\") of a CPU were available, we could apply greybox fuzzing to the CPU model almost as we do to any other software [arXiv:2102.02308]. However our targets are general purpose x86_64 CPUs produced by third parties, where we do not have the RTL design, so in our case CPU implementations are opaque. Moreover, we are more interested in electrical defects as opposed to logic bugs. We present SiliFuzz, a work-in-progress system that finds CPU defects by fuzzing software proxies, like CPU simulators or disassemblers, and then executing the accumulated test inputs (known as the corpus) on actual CPUs on a large scale. The major difference between this work and traditional software fuzzing is that a software bug fixed once will be fixed for all installations of the software, while for CPU defects we have to test every individual core repeatedly over its lifetime due to wear and tear. In this paper we also analyze four groups of CPU defects that SiliFuzz has uncovered and describe patterns shared by other SiliFuzz findings.",
@@ -1107,6 +1242,138 @@
     "updated": "2021-02-13",
     "url": "http://arxiv.org/abs/2102.06989v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Compliance testing for RISC-V is very important. Therefore, an official hand-written compliance test-suite is being actively developed. However, besides requiring significant manual effort, it focuses on positive testing (the implemented instructions work as expected) only and neglects negative testing (consider illegal instructions to also ensure that no additional/unexpected behavior is accidentally added). This leaves a large gap in compliance testing.In this paper we propose a fuzzing-based test-suite generation approach to close this gap. We found new bugs in several RISC-V simulators including riscvOVPsim from Imperas which is the official reference simulator for compliance testing.",
+    "analysis": {},
+    "authors": [
+      "V. Herdt",
+      "Daniel Große",
+      "R. Drechsler"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "c7ae45b148eece3f7abbef68bc3727755373e7a7581d61a293171a3423110596",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/DAC18072.2020.9218629",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-e702d0c7d8547fa84760385a836ef22fa38b2599",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2020-07-01",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, riscv",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "e702d0c7d8547fa84760385a836ef22fa38b2599",
+    "title": "Closing the RISC-V Compliance Gap: Looking from the Negative Testing Side*",
+    "title_key": "closing the risc v compliance gap looking from the negative testing side",
+    "updated": "",
+    "url": "https://doi.org/10.1109/DAC18072.2020.9218629",
+    "venue": "Design Automation Conference"
+  },
+  {
+    "abstract": "Since nondeterministic behavior is key to exposing shared-memory errors, nonsynchronized parallel programs are often used for verification and test of multicore chips. In the verification phase, however, the slow execution in a simulator requires nonconventional constraints for enabling error exposure with shorter programs. This paper proposes two novel techniques that build upon conventional random test generation for efficient shared-memory verification. The first technique exploits canonical dependence chains for constraining the random generation of instruction sequences so that the races induced at runtime are likely to raise the coverage of state transitions due to memory events conflicting at a same shared location. The second one exploits address space constraints for biasing random address assignment so that the competition of distinct shared locations for a same cache set can be controlled for raising the coverage of state transitions due to eviction events. We built generators relying on each of the proposed techniques, as well as on their combination, and we compared them to a conventional constrained random test generator for 8, 16, and 32-core architectures. Each of the four generators synthesized 1200 distinct test programs for verifying ten faulty designs derived from each of the three architectures (144 000 verification runs in total). For 32-core designs, the combination of the proposed techniques made at least 50% of the generation space capable of exposing errors, improved the median functional coverage by 44% and 83% at the two highest hierarchical levels, and reduced the average verification effort by one order of magnitude in many cases.",
+    "analysis": {},
+    "authors": [
+      "Gabriel A. G. Andrade",
+      "Marleson Graf",
+      "Luiz C. V. dos Santos"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "f74a54c438be77b291867316ecb02366eceffad5c6c90688969cd3151d8cfb57",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/TCAD.2019.2894376",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-0f63f2ace326d316a66ec9494328c0c644bc50a3",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2020-03-01",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: test generation, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "0f63f2ace326d316a66ec9494328c0c644bc50a3",
+    "title": "Chaining and Biasing: Test Generation Techniques for Shared-Memory Verification",
+    "title_key": "chaining and biasing test generation techniques for shared memory verification",
+    "updated": "",
+    "url": "https://doi.org/10.1109/TCAD.2019.2894376",
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Adi Maymon",
+      "Shay Harari",
+      "Lee Moore",
+      "Larry Lapides"
+    ],
+    "categories": [],
+    "content_hash": "3fb9f9c84b18ab986971ddc1773982ffd6c0d01b5616e3f8db02799776b1f974",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-1e81d54fff8740797b24c8479fde71f9433c13c1",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2020",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "1e81d54fff8740797b24c8479fde71f9433c13c1",
+    "title": "RISC-V Processor Verification: Case Study",
+    "title_key": "risc v processor verification case study",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/1e81d54fff8740797b24c8479fde71f9433c13c1",
+    "venue": "未记录"
   },
   {
     "abstract": "On a system that exposes disjoint memory spaces to the software, a program has to address memory consistency issues and perform data transfers so that it always accesses valid data. Several approaches exist to ensure the consistency of the memory accessed. Here we are interested in the verification of a declarative approach where each component of a computation is annotated with an access mode declaring which part of the memory is read or written by the component. The programming framework uses the component annotations to guarantee the validity of the memory accesses. This is the mechanism used in VectorPU, a C++ library for programming CPU-GPU heterogeneous systems. This article proves the correctness of the software cache-coherence mechanism used in VectorPU. Beyond the scope of VectorPU, this article provides a simple and effective formalisation of memory consistency mechanisms based on the explicit declaration of the effect of each component on each memory space. The formalism we propose also takes into account arrays for which a single validity status is stored for the whole array; additional mechanisms for dealing with overlapping arrays are also studied.",
@@ -1343,6 +1610,53 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "This paper proposes a framework for functional verification of shared memory that relies on reusable coverage-driven directed test generation. It reveals a new mechanism to improve the quality of non-deterministic tests. The generator exploits general properties of coherence protocols and cache memories for better control on transition coverage, which serves as a proxy for increasing the actual coverage metric adopted in a given verification environment. Being independent of coverage metric, coherence protocol, and cache parameters, the proposed generator is reusable across quite different designs and verification environments. We report the coverage for 8, 16, and 32-core designs and the effort required for exposing nine different types of errors. The proposed technique was always able to reach similar coverage as a state-of-the-art generator, and it always did it faster above a certain threshold. For instance, when executing tests with 1K operations for verifying 32-core designs, the former reached 65% coverage around 5 times faster than the latter. Besides, we identified challenging errors that could hardly be found by the latter within one hour, but were exposed by our technique in 5 to 30 minutes.",
+    "analysis": {},
+    "authors": [
+      "Gabriel A. G. Andrade",
+      "Marleson Graf",
+      "Nícolas Pfeifer",
+      "L. Santos"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "8bfbfddd73989afdeadaebe32d65a34c0a5912ef3949e2ed390ed7c48e3b7ccb",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3240765.3240852",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-74cf07f179e0d63f9fc1f509218f02f64858d64d",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2018-11-05",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: directed test generation, test generation, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "74cf07f179e0d63f9fc1f509218f02f64858d64d",
+    "title": "Steep Coverage-Ascent Directed Test Generation for Shared-Memory Verification of Multicore Chips",
+    "title_key": "steep coverage ascent directed test generation for shared memory verification of multicore chips",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3240765.3240852",
+    "venue": "2018 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)"
+  },
+  {
     "abstract": "Reactive systems are composed of a well defined set of input events that the system reacts with by executing an associated handler to each event. In concurrent environments, event handlers can interact with the execution of other programs such as hardware interruptions in preemptive systems, or other instances of the reactive system in multicore architectures. State of the art rely-guarantee based verification frameworks only focus on imperative programs, being difficult to capture in the rely and guarantee relations interactions with possible infinite sequences of event handlers, and the input arguments to event handlers. In this paper, we propose the formalisation in Isabelle/HOL of an event-based rely-guarantee approach for concurrent reactive systems. We develop a Pi-Core language which incorporates a concurrent imperative and system specification language by `events', and we build a rely-guarantee proof system for Pi-Core and prove its soundness. Our approach can deal with multicore and interruptible concurrency. We use two case studies to show this: an interruptible controller for stepper motors and an ARINC 653 multicore kernel, and prove the functional correctness and preservation of invariants of them in Isabelle/HOL.",
     "analysis": {},
     "authors": [
@@ -1524,6 +1838,88 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Les architectures des systèmes sur puce (System-on-Chip, SoC) actuelles intègrent de nombreux composants différents tels que les processeurs, les accélérateurs, les mémoires et les blocs d'entrée/sortie, certains pouvant contenir des caches. Vu que l'effort de validation basée sur la simulation, actuellement utilisée dans l'industrie, croît de façon exponentielle avec la complexité des SoCs, nous nous intéressons à des techniques de vérification formelle. Nous utilisons la boîte à outils CADP pour développer et valider un modèle formel d'un SoC générique conforme à la spécification AMBA 4 ACE récemment proposée par ARM dans le but de mettre en œuvre la cohérence de cache au niveau système. Nous utilisons une spécification orientée contraintes pour modéliser les exigences générales de cette spécification. Les propriétés du système sont vérifié à la fois sur le modèle avec contraintes et le modèle sans contraintes pour détecter les cas intéressants pour la cohérence de cache. La paramétrisation du modèle proposé a permis de produire l'ensemble complet des contre-exemples qui ne satisfont pas une certaine propriété dans le modèle non contraint. Notre approche améliore les techniques industrielles de vérification basées sur la simulation en deux aspects. D'une part, nous suggérons l'utilisation du modèle formel pour évaluer la bonne construction d'une unité de vérification d'interface. D'autre part, dans l'objectif de générer des cas de test semi-dirigés intelligents à partir des propriétés de logique temporelle, nous proposons une approche en deux étapes. La première étape consiste à générer des cas de tests abstraits au niveau système en utilisant des outils de test basé sur modèle de la boîte à outils CADP. La seconde étape consiste à affiner ces tests en cas de tests concrets au niveau de l'interface qui peuvent être exécutés en RTL grâce aux services d'un outil commercial de génération de tests dirigés par les mesures de couverture. Nous avons constaté que notre approche participe dans la transition entre la vérification du niveau interface, classiquement pratiquée dans l'industrie du matériel, et la vérification au niveau système. Notre approche facilite aussi la validation des propriétés globales du système, et permet une détection précoce des bugs, tant dans le SoC que dans les bancs de test commerciales.",
+    "analysis": {},
+    "authors": [
+      "Abderahman Kriouile"
+    ],
+    "categories": [],
+    "content_hash": "06a61de2c8c6cfbba83d230404fa0e62f60a60906ba23445e2ae2f7062f896fc",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.70675/f79a290azc193z4d7fza536zffe11157794b",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-dd25604632bb01735ac40c77030706d6c4d9cb15",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2015-09-17",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, system-on-chip, soc",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "dd25604632bb01735ac40c77030706d6c4d9cb15",
+    "title": "Méthodes Formelles pour la vérification fonctionnelle des systèmes sur puce cache cohérent",
+    "title_key": "m thodes formelles pour la v rification fonctionnelle des syst mes sur puce cache coh rent",
+    "updated": "",
+    "url": "https://doi.org/10.70675/f79a290azc193z4d7fza536zffe11157794b",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Abderahman Kriouile"
+    ],
+    "categories": [],
+    "content_hash": "fd36a48312b9598eca3b3c63547833bac9e0d7bb338bf625191f16b8a27ee9f6",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-bcca33055c33caf0b0d1fac4556b22872925319a",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2015-09-17",
+    "relevance_reasons": [
+      "hardware/processor object: system-on-chip",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "bcca33055c33caf0b0d1fac4556b22872925319a",
+    "title": "Formal Methods for Functional Verification of Cache-Coherent System-on-Chip. (Méthodes Formelles pour la vérification fonctionnelle des systèmes sur puce cache cohérent)",
+    "title_key": "formal methods for functional verification of cache coherent system on chip m thodes formelles pour la v rification fonctionnelle des syst mes sur puce cache coh rent",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/bcca33055c33caf0b0d1fac4556b22872925319a",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Modern architectures provide weaker memory consistency guarantees than sequential consistency. These weaker guarantees allow programs to exhibit behaviours where the program statements appear to have executed out of program order. Fortunately, modern architectures provide memory barriers (fences) to enforce the program order between a pair of statements if needed. Due to the intricate semantics of weak memory models, the placement of fences is challenging even for experienced programmers. Too few fences lead to bugs whereas overuse of fences results in performance degradation. This motivates automated placement of fences. Tools that restore sequential consistency in the program may insert more fences than necessary for the program to be correct. Therefore, we propose a property-driven technique that introduces \"reorder-bounded exploration\" to identify the smallest number of program locations for fence placement. We implemented our technique on top of CBMC; however, in principle, our technique is generic enough to be used with any model checker. Our experimental results show that our technique is faster and solves more instances of relevant benchmarks as compared to earlier approaches.",
     "analysis": {},
     "authors": [
@@ -1566,5 +1962,140 @@
     "updated": "2015-06-01",
     "url": "http://arxiv.org/abs/1407.7443v3",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "While scalable coherence has been extensively studied in the context of general purpose chip multiprocessors (CMPs), GPU architectures present a new set of challenges. Introducing conventional directory protocols adds unnecessary coherence traffic overhead to existing GPU applications. Moreover, these protocols increase the verification complexity of the GPU memory system. Recent research, Library Cache Coherence (LCC) [34, 54], explored the use of time-based approaches in CMP coherence protocols. This paper describes a time-based coherence framework for GPUs, called Temporal Coherence (TC), that exploits globally synchronized counters in single-chip systems to develop a streamlined GPU coherence protocol. Synchronized counters enable all coherence transitions, such as invalidation of cache blocks, to happen synchronously, eliminating all coherence traffic and protocol races. We present an implementation of TC, called TC-Weak, which eliminates LCC's trade-off between stalling stores and increasing L1 miss rates to improve performance and reduce interconnect traffic. By providing coherent L1 caches, TC-Weak improves the performance of GPU applications with inter-workgroup communication by 85% over disabling the non-coherent L1 caches in the baseline GPU. We also find that write-through protocols outperform a writeback protocol on a GPU as the latter suffers from increased traffic due to unnecessary refills of write-once data.",
+    "analysis": {},
+    "authors": [
+      "Inderpreet Singh",
+      "Arrvindh Shriraman",
+      "Wilson W. L. Fung",
+      "Mike O'Connor",
+      "T. Aamodt"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "7869e6a9f1c545bd73747816c68fef17ec9a2e2caa16fb6f3e37bff0f9f3d150",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/HPCA.2013.6522351",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-ea50a5b410977c63da4d2e5e58abc4af9e46384a",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "http://www.ece.ubc.ca/%7Eaamodt/papers/isingh.hpca2013.pdf",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2013-02-23",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cache coherence",
+      "verification/fuzzing method: verification, validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "ea50a5b410977c63da4d2e5e58abc4af9e46384a",
+    "title": "Cache coherence for GPU architectures",
+    "title_key": "cache coherence for gpu architectures",
+    "updated": "",
+    "url": "https://doi.org/10.1109/HPCA.2013.6522351",
+    "venue": "International Symposium on High-Performance Computer Architecture"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Mingsong Chen",
+      "Xiaoke Qin",
+      "Heon-Mo Koo",
+      "P. Mishra"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "d796a353e72038a123628e8709419f46924906f3b56aa190b23488317fe9fce3",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1007/978-1-4614-1359-2_11",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-b0a10e399798654855907b170f4b49f55f144b42",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2013",
+    "relevance_reasons": [
+      "hardware/processor object: cache coherence",
+      "verification/fuzzing method: test generation, validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "b0a10e399798654855907b170f4b49f55f144b42",
+    "title": "Test Generation for Cache Coherence Validation",
+    "title_key": "test generation for cache coherence validation",
+    "updated": "",
+    "url": "https://doi.org/10.1007/978-1-4614-1359-2_11",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Xu Zhang"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "c55e0f98f3e6100ee8b129a4d9f4006473c7eaac03cefe470aae0542745ee75a",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-01",
+    "id": "semantic-scholar-3b35cefccf9cebdf271b90f94e3f4c1ad127d571",
+    "included": false,
+    "last_seen": "2026-08-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2013",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cache coherence",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "3b35cefccf9cebdf271b90f94e3f4c1ad127d571",
+    "title": "Verification Strategy of Cache Coherence for OpenSPARC T 2 Multi-processor Systems ( Under the direction of Dr",
+    "title_key": "verification strategy of cache coherence for opensparc t 2 multi processor systems under the direction of dr",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/3b35cefccf9cebdf271b90f94e3f4c1ad127d571",
+    "venue": "未记录"
   }
 ]

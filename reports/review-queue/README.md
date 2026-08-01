@@ -1,6 +1,6 @@
 # 待人工复核
 
-共 32 篇。该列表不进入主 README。
+共 44 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
@@ -15,6 +15,7 @@
 | 2025-08-18 | [XAMT: Cross-Framework API Matching for Testing Deep Learning Libraries](http://arxiv.org/abs/2508.12546v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, differential testing |
 | 2025-06-05 | [ROSGuard: A Bandwidth Regulation Mechanism for ROS2-based Applications](http://arxiv.org/abs/2506.04640v1) | 4 | hardware/processor object: multicore；verification/fuzzing method: verification, validation |
 | 2025-04-09 | [ShadowBinding: Realizing Effective Microarchitectures for In-Core Secure Speculation Schemes](http://arxiv.org/abs/2504.07018v1) | 4 | hardware/processor object: risc-v, processor, microarchitecture, microarchitectural；verification/fuzzing method: taint tracking |
+| 2025-01-20 | [Corvus: Efficient HW/SW Co-Verification Framework for RISC-V Instruction Extensions with FPGA Acceleration](https://doi.org/10.1145/3658617.3697757) | 4 | hardware/processor object: risc-v, processor, rtl；verification/fuzzing method: verification |
 | 2024-10-23 | [Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)](https://doi.org/10.5753/sscad_estendido.2024) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification |
 | 2024-06-03 | [VerilogReader: LLM-Aided Hardware Test Generation](http://arxiv.org/abs/2406.04373v1) | 4 | hardware/processor object: verilog；verification/fuzzing method: random testing, directed test generation, test generation, verification |
 | 2024-04-03 | [QED: Scalable Verification of Hardware Memory Consistency](http://arxiv.org/abs/2404.03113v1) | 4 | hardware/processor object: risc-v, processor, rtl, cache coherence；verification/fuzzing method: verification, validation |
@@ -22,17 +23,28 @@
 | 2023-11-16 | [LightEMU: Hardware Assisted Fuzzing of Trusted Applications](http://arxiv.org/abs/2311.09532v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, coverage-guided |
 | 2023-06-16 | [Imprecise Store Exceptions](https://doi.org/10.1145/3579371.3589087) | 4 | hardware/processor object: risc-v, microarchitectural, memory consistency；verification/fuzzing method: litmus |
 | 2023-02-23 | [Sequence-Based Incremental Concolic Testing of RTL Models](http://arxiv.org/abs/2302.12241v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: validation |
+| 2023-02-01 | [EveCheck: An Event-Driven, Scalable Algorithm for Coherent Shared Memory Verification](https://doi.org/10.1109/TCAD.2022.3178051) | 4 | hardware/processor object: cache coherence, memory consistency, multicore；verification/fuzzing method: directed test generation, test generation, verification, litmus |
 | 2022-03-09 | [CUBES: A Parallel Synthesizer for SQL Using Examples](http://arxiv.org/abs/2203.04995v2) | 4 | hardware/processor object: multicore；verification/fuzzing method: fuzz |
+| 2022 | [RISC-V Processor Veriﬁcation with Coverage-guided Aging *](https://www.semanticscholar.org/paper/562a5c3164bebf082c367539040e88143676ad18) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: coverage-guided |
 | 2021-10-05 | [SiliFuzz: Fuzzing CPUs by proxy](http://arxiv.org/abs/2110.11519v1) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: fuzz |
 | 2021-06-22 | [Assertion Based Functional Verification of March Algorithm Based MBIST Controller](http://arxiv.org/abs/2106.11461v1) | 4 | hardware/processor object: rtl, verilog；verification/fuzzing method: verification |
 | 2021-02-13 | [Model Synthesis for Communication Traces of System-on-Chip Designs](http://arxiv.org/abs/2102.06989v1) | 4 | hardware/processor object: system-on-chip, soc, multicore；verification/fuzzing method: validation |
+| 2020-07-01 | [Closing the RISC-V Compliance Gap: Looking from the Negative Testing Side*](https://doi.org/10.1109/DAC18072.2020.9218629) | 4 | hardware/processor object: risc-v, riscv；verification/fuzzing method: fuzz |
+| 2020-03-01 | [Chaining and Biasing: Test Generation Techniques for Shared-Memory Verification](https://doi.org/10.1109/TCAD.2019.2894376) | 4 | hardware/processor object: multicore；verification/fuzzing method: test generation, verification |
+| 2020 | [RISC-V Processor Verification: Case Study](https://www.semanticscholar.org/paper/1e81d54fff8740797b24c8479fde71f9433c13c1) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification |
 | 2019-10-24 | [Leveraging access mode declarations in a model for memory consistency in heterogeneous systems](http://arxiv.org/abs/1910.11110v1) | 4 | hardware/processor object: cpu, memory consistency；verification/fuzzing method: verification |
 | 2019-08-19 | [Boosting the Bounds of Symbolic QED for Effective Pre-Silicon Verification of Processor Cores](http://arxiv.org/abs/1908.06757v4) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification, model checking |
 | 2019-05-25 | [PTrix: Efficient Hardware-Assisted Fuzzing for COTS Binary](https://doi.org/10.1145/3321705.3329828) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: fuzz |
 | 2018-12-04 | [A small and adaptive coprocessor for information flow tracking in ARM SoCs](http://arxiv.org/abs/1812.01541v1) | 4 | hardware/processor object: processor, soc；verification/fuzzing method: information flow tracking |
 | 2018-11-13 | [Towards a hardware-assisted information flow tracking ecosystem for ARM processors](http://arxiv.org/abs/1811.05465v1) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: information flow tracking |
+| 2018-11-05 | [Steep Coverage-Ascent Directed Test Generation for Shared-Memory Verification of Multicore Chips](https://doi.org/10.1145/3240765.3240852) | 4 | hardware/processor object: multicore；verification/fuzzing method: directed test generation, test generation, verification |
 | 2018-10-18 | [An Event-based Compositional Reasoning Approach for Concurrent Reactive Systems](http://arxiv.org/abs/1810.07855v1) | 4 | hardware/processor object: soc, multicore；verification/fuzzing method: verification |
 | 2018-07-14 | [Timing Driven C-Slow Retiming on RTL for MultiCores on FPGAs](http://arxiv.org/abs/1807.05446v1) | 4 | hardware/processor object: rtl, multicore；verification/fuzzing method: verification |
 | 2016-08-26 | [TriCheck: Memory Model Verification at the Trisection of Software, Hardware, and ISA](http://arxiv.org/abs/1608.07547v2) | 4 | hardware/processor object: risc-v, microarchitecture, microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |
 | 2016-08-21 | [Reducing State Explosion for Software Model Checking with Relaxed Memory Consistency Models](http://arxiv.org/abs/1608.05893v1) | 4 | hardware/processor object: memory consistency；verification/fuzzing method: model checking |
+| 2015-09-17 | [Méthodes Formelles pour la vérification fonctionnelle des systèmes sur puce cache cohérent](https://doi.org/10.70675/f79a290azc193z4d7fza536zffe11157794b) | 4 | hardware/processor object: rtl, system-on-chip, soc；verification/fuzzing method: validation |
+| 2015-09-17 | [Formal Methods for Functional Verification of Cache-Coherent System-on-Chip. (Méthodes Formelles pour la vérification fonctionnelle des systèmes sur puce cache cohérent)](https://www.semanticscholar.org/paper/bcca33055c33caf0b0d1fac4556b22872925319a) | 4 | hardware/processor object: system-on-chip；verification/fuzzing method: verification |
 | 2014-07-28 | [Property-Driven Fence Insertion using Reorder Bounded Model Checking](http://arxiv.org/abs/1407.7443v3) | 4 | hardware/processor object: memory consistency；verification/fuzzing method: model checking |
+| 2013-02-23 | [Cache coherence for GPU architectures](https://doi.org/10.1109/HPCA.2013.6522351) | 4 | hardware/processor object: processor, cache coherence；verification/fuzzing method: verification, validation |
+| 2013 | [Test Generation for Cache Coherence Validation](https://doi.org/10.1007/978-1-4614-1359-2_11) | 4 | hardware/processor object: cache coherence；verification/fuzzing method: test generation, validation |
+| 2013 | [Verification Strategy of Cache Coherence for OpenSPARC T 2 Multi-processor Systems ( Under the direction of Dr](https://www.semanticscholar.org/paper/3b35cefccf9cebdf271b90f94e3f4c1ad127d571) | 4 | hardware/processor object: processor, cache coherence；verification/fuzzing method: verification |
