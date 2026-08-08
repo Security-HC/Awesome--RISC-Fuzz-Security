@@ -1,5 +1,117 @@
 [
   {
+    "abstract": "Long-horizon tasks require agents to maintain coherent state and goals across nested and branching work. We call this capability goal-directed execution (GDE): the repeated application of four behaviors, namely selecting goals, constructing task-relevant state, maintaining fidelity to higher-level objectives, and verifying completion against the environment. We hypothesize that long-horizon post-training strengthens these behaviors across domains. We test this by post-training Qwen3.5-122B-A10B on 363 Long-Horizon Multi-Tool Agent (LHMTA) tasks drawn from office workflows. The collection contained no software-engineering tasks, yet the model's pass@1 improved by 5.8 points on SWE-Bench Pro. Matched trajectory analysis shows gains in all four GDE behaviors in both office workflows and software repositories. Aggregate SWE-Bench Pro statistics showed related changes in information gathering, implementation, and verification. Together, the results support a behavioral interpretation in which long-horizon post-training changed how the model organized and applied knowledge across tasks, with effects extending beyond the training domain.",
+    "analysis": {},
+    "authors": [
+      "Logan Ritchie",
+      "Sushant Mehta",
+      "Liudas Panavas",
+      "Edwin Chen"
+    ],
+    "categories": [],
+    "content_hash": "1af8f70677ef58a7a876cc2fd3aa254e8166e6e172bb67ca52c6d0c19e7791cd",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "arxiv-2608-01604v1",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.01604v1",
+    "primary_category": "",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "source_id": "2608.01604v1",
+    "title": "Post-Training on Office Work Improves Software Engineering: A Behavioral Account of Cross-Domain Transfer",
+    "title_key": "post training on office work improves software engineering a behavioral account of cross domain transfer",
+    "updated": "2026-08-03",
+    "url": "http://arxiv.org/abs/2608.01604v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Due to the explosive growth in cloud-native infrastructures, the attack surface has dramatically increased in modern enterprise identity systems, where privilege escalation has become a major security risk. Conventional rule-based intrusion detection systems fall short in identifying multi-hop privilege inheritance paths and lateral movements over heterogeneous and dynamic identity graphs. This study introduces PEGraphSec-Net, a graph-theoretical framework for detecting privilege-escalation-relevant identity behavior, modeling cloud identity interactions as dynamic heterogeneous graphs of users, services, roles, tokens, and workloads. The core contribution of this framework is a graph-based detection pipeline—an Identity Relationship Graph Constructor, a Privilege-Escalation Path Encoder, and a Temporal Graph Attention Detection layer—evaluated on privilege-escalation-relevant attack categories using a documented proxy identity-graph construction derived from the UNSW-NB15 network-traffic benchmark, and benchmarked against six non-graph tabular classifiers (CNN, LightGBM, XGBoost, Random Forest, SVM, and MLP) trained under identical preprocessing; this pipeline achieves 98.78% accuracy, a weighted F1-score of 0.98692 (macro F1-score of 0.91828), and an AUC of 1.000 on the held-out test partition. PEGraphSec-Net is further benchmarked against three graph neural network baselines (GCN, GAT, and GraphSAGE) trained on the identical identity-graph topology and node attributes; all three substantially underperform PEGraphSec-Net (best case, GraphSAGE: 63.66% accuracy, 0.239 macro F1-score), indicating that a large share of PEGraphSec-Net’s performance derives from its explicit privilege-path encoding and temporal attention mechanisms rather than from the graph topology alone. An Adaptive Containment and Isolation Engine and a Mitigation Policy Reinforcement Optimizer are further proposed as risk-scoring and reward-driven policy-learning components, whose contribution is validated through module-wise ablation on classification performance; live containment action and reinforcement-learning-specific evaluation are left for future validation. The term “privilege escalation” is used throughout to denote the evaluated proxy attack categories (Exploits, Backdoor/Backdoors, and Reconnaissance) under a documented, decade-old (2015) network-intrusion benchmark, rather than production cloud-native IAM behavior, for which native-dataset validation remains an open direction. SHAP-based interpretability analysis links the model’s top-ranked traffic-level features back to the identity-graph risk, role, and trust-transition attributes they populate, evidencing that the learned representation captures semantically meaningful identity-behavior patterns within this proxy setting.",
+    "analysis": {},
+    "authors": [
+      "Md Nuruzzaman Pranto",
+      "Md Deluar Hossen",
+      "Mamunur R. Raja",
+      "Md Sharfuddin",
+      "Balayet Hossain",
+      "Khandakar Rabbi Ahmed"
+    ],
+    "categories": [],
+    "content_hash": "3cfd3c90cc02daa2b6a33b04f097195c1c31452e609b82ede4647ac81d059bc1",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.3390/computers15080501",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172275041",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://www.mdpi.com/2073-431X/15/8/501/pdf?version=1785767496",
+    "primary_category": "",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Reinforcement learning",
+      "Graph",
+      "Artificial intelligence",
+      "Data mining",
+      "Network topology",
+      "ENCODE",
+      "Machine learning",
+      "Cloud computing",
+      "Distributed computing",
+      "Theoretical computer science",
+      "Identity (music)",
+      "Analytics",
+      "A priori and a posteriori",
+      "Intrusion detection system",
+      "Proxy (statistics)",
+      "Vulnerability assessment",
+      "Graph theory",
+      "Flow network",
+      "Node (physics)",
+      "Pipeline (software)",
+      "Artificial neural network"
+    ],
+    "source_id": "https://openalex.org/W7172275041",
+    "title": "Predictive Analytics in Cloud-Native Privilege-Escalation Detection: Enhancing Accuracy Through Temporal Graph Attention and Reinforcement Learning",
+    "title_key": "predictive analytics in cloud native privilege escalation detection enhancing accuracy through temporal graph attention and reinforcement learning",
+    "updated": "2026-08-05",
+    "url": "https://doi.org/10.3390/computers15080501",
+    "venue": "Computers"
+  },
+  {
     "abstract": "Data-driven approaches with formal guarantees have recently emerged as a powerful means for the verification and controller synthesis of complex dynamical systems. Interest in these methods is rapidly growing, as system models are often unavailable in practice, and challenges such as nonlinear behavior, uncertainty, and the curse of dimensionality typically render accurate modeling infeasible. These difficulties motivate leveraging limited data collected from the system while still providing formal guarantees on its overall behavior. The community has therefore proposed a few hundred articles on the development of data-driven frameworks that enable the formal verification and synthesis of dynamical systems without explicit models, addressing complex specifications beyond stability. Despite this rapid growth, existing results remain scattered and lack a coherent organization, limiting a clear understanding of their principles, distinctions, and practical potential. This survey fills this gap by providing a comprehensive overview of these data-driven methods for both deterministic and stochastic dynamical systems. We structure the literature around three main methodological pillars in formal methods: (in)finite-abstraction-based techniques, functional certificate approaches, such as control barrier certificates, and compositional methods. For each of these approaches, we classify the resulting data-driven guarantees into three main categories: (i) statistical guarantees grounded in probably approximately correct and scenario-based frameworks, (ii) guarantees derived from Lipschitz continuity, and (iii) guarantees exploiting structural properties. While the literature on deterministic systems is considerably richer, we also devote particular attention to the stochastic counterpart, highlighting the inherent differences and challenges that arise compared to the deterministic case.",
     "analysis": {},
     "authors": [
@@ -108,18 +220,141 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Abstract: Nanophotonic semiconductors and advanced materials intelligence are emerging as a unified foundation for energy-efficient computation, optical communication, precision sensing, quantum and neuromorphic systems, and resilient industrial innovation. This monograph develops a multiscale scholarly architecture linking material composition, electronic structure, nanoscale geometry, light-matter interaction, fabrication processes, device performance, system integration and lifecycle sustainability. It advances research designs that treat uncertainty, reproducibility and governance as integral parts of scientific reasoning. Statistical chapters formulate hierarchical, causal, Bayesian and reliability models for explaining process-structure-property relationships and supporting robust multiobjective decisions. Machine-learning chapters examine multimodal representation learning, physics-informed operators, generative inverse design, transfer across laboratories and foundries, and assurance through calibration, interpretability and monitoring. A scalable engineering lifecycle connects semantic data architectures, digital twins, high-performance and edge computing, provenance, MLOps and cybersecurity. Sectoral analysis extends the framework to optical interconnects, sustainable accelerators, environmental and health sensing, quantum and secure communication, circular manufacturing and regional innovation systems. Throughout, the analysis connects South Asian, European, African and American research ecosystems while emphasizing evidence quality, material responsibility, supply resilience and public value. The resulting models, protocols, metrics and governance artifacts support adaptation into research handbooks, advanced curricula, industrial roadmaps and multi-year DeepTech programmes. Keywords nanophotonics, semiconductor materials, advanced materials intelligence, sustainable computing, light-matter interaction, photonic integrated circuits, inverse design, materials informatics, physics-informed machine learning, neural operators, causal inference, Bayesian calibration, reliability engineering, digital twins, scientific MLOps, optical interconnects, neuromorphic photonics, quantum photonics, lifecycle assessment, circular electronics, semiconductor manufacturing, trustworthy artificial intelligence, DeepTech governance, planetary resilience",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "07a9ca9416885d6848ec1eed59830fb3075c350ac7dbb6fa288d98eacb797751",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb5jy-978-81-688921-5-6",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172377876",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1731833/Download Full-Text Research Book PDF Pp1-76PII5.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Nanophotonics",
+      "Systems engineering",
+      "Resilience (materials science)",
+      "Reliability (semiconductor)",
+      "Engineering",
+      "Data science",
+      "Neuromorphic engineering",
+      "Artificial intelligence",
+      "Knowledge management",
+      "Aerospace",
+      "Management science",
+      "Terminology",
+      "Stakeholder",
+      "Coherence (philosophical gambling strategy)",
+      "Consumables",
+      "Architecture framework",
+      "Big data",
+      "Photonics"
+    ],
+    "source_id": "https://openalex.org/W7172377876",
+    "title": "Nanophotonic Semiconductors and Advanced Materials Intelligence for Sustainable Computing and DeepTech Innovation",
+    "title_key": "nanophotonic semiconductors and advanced materials intelligence for sustainable computing and deeptech innovation",
+    "updated": "2026-08-06",
+    "url": "https://doi.org/10.62311/nesx/rb5jy-978-81-688921-5-6",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Abstract: Sparse tensor-network quantum machine learning offers a disciplined route for representing, learning and reasoning over high-dimensional systems whose structure is too costly to treat as an undifferentiated state space. This monograph develops an integrated research architecture connecting sparse encodings, tensor-network factorizations, hybrid quantum-classical learning, uncertainty analysis, causal explanation, predictive validation, scalable data engineering and governance. The argument is that quantum advantage, where it becomes scientifically meaningful, must be evaluated as a property of an end-to-end research design rather than of an isolated circuit or benchmark. Five chapters move from foundational representation and uncertainty to probabilistic and causal modeling, trustworthy prediction, reproducible MLOps, and sectoral applications in simulation, cybersecurity, materials research, climate intelligence, space systems and scientific discovery. Mathematical formulations, algorithmic protocols, evaluation metrics, risk controls and decision artifacts are embedded throughout. The framework is designed for heterogeneous research ecosystems across South Asia, Europe, Africa and the Americas, where infrastructure, regulation, skills and public-interest priorities differ substantially. The resulting perspective treats sparse tensor-network quantum machine learning as a program of accountable scientific computation: one that compresses complex structure while preserving inferential meaning, records assumptions and provenance, tests robustness under realistic deployment conditions, and converts technical outputs into governable research and policy instruments. Keywords Sparse tensor networks, quantum machine learning, matrix product states, tensor trains, quantum feature maps, hybrid quantum-classical computing, scientific simulation, cybersecurity analytics, causal inference, Bayesian calibration, uncertainty quantification, distribution shift, adversarial robustness, explainable quantum AI, reproducible research, quantum MLOps, data provenance, privacy engineering, digital twins, materials discovery, climate intelligence, post-quantum security, research governance",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "717d1b7051eea590ae50137a3d87895895247c2902aae9aa344bb0450fd09526",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb8jy-978-81-688729-2-9",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: adversarial robustness",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172132965",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1728592/Download Full-Text Research Book PDF Pp 1-81B8.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "excluded phrase: adversarial robustness"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Robustness (evolution)",
+      "Probabilistic logic",
+      "Data science",
+      "Artificial intelligence",
+      "Scalability",
+      "Machine learning",
+      "Theoretical computer science",
+      "Quantum",
+      "Tensor product",
+      "Quantum computer",
+      "Argument (complex analysis)",
+      "Quantum machine learning",
+      "Causal structure",
+      "Raw data",
+      "Feature vector",
+      "Big data",
+      "Quantum state",
+      "Data structure",
+      "Bayesian inference",
+      "Quantum key distribution",
+      "Data mining",
+      "Representation (politics)",
+      "Perspective (graphical)"
+    ],
+    "source_id": "https://openalex.org/W7172132965",
+    "title": "Sparse Tensor-Network Quantum Machine Learning for Simulation, Cybersecurity and Scientific Discovery",
+    "title_key": "sparse tensor network quantum machine learning for simulation cybersecurity and scientific discovery",
+    "updated": "2026-08-03",
+    "url": "https://doi.org/10.62311/nesx/rb8jy-978-81-688729-2-9",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Microarchitectural side-channels leak data through caches, branch predictors, store buffers, and speculative execution. Evaluating defenses at cycle-model fidelity has forced a choice between functional tools (Spike, QEMU) and gem5’s hours-long Linux boots. ARCHER is a cycle-model-relative RV64IMAFDC RISC-V emulator with pluggable superscalar out-of-order execution, coherent caches, simultaneous multithreading, 1 to 16 harts, and thirteen speculation policies: an unrestricted baseline plus five classical defenses and seven new defenses spanning issue-gate, predictive-redirect, and selective-cleanup mechanism families. It boots Linux 6.6 in under three minutes, runs 3.7× faster (geometric mean) than gem5’s DerivO3CPU on head-to-head bare-metal microbench, matches gem5 within ±20% on 4 of 10 workloads, matches Chipyard’s fab-ready RTL to a 9.4% mean cycle-count deviation under two fitted match-configurations, and produces bit-identical architectural output to QEMU at a median 88× host-throughput advantage over Chipyard’s Verilator flow. Every published Spectre-family defense drives leakage to zero at sub-0.3% instructions-per-cycle (IPC) loss on a full Linux boot, and each new policy is validated on the attack surface its mechanism defends. The Adaptive Memory Encryption Scheme (AMES) adds a bus-layer engine with four authenticated ciphers (each validated bit-exact against its published specification) and per-leaf mask-XOR for Differential Power Analysis (DPA) hardening; a first-order Correlation Power Analysis consistency check confirms the direction of the theoretical bound under the shipped leakage model. Together, ARCHER and AMES provide a single INI-configurable environment for cycle-model side-channel evaluation in minutes rather than hours.",
     "analysis": {},
     "authors": [
       "Jyotiprakash Mishra",
       "Sanjay K. Sahay",
       "Swati Mishra",
-      "Aman Pathak"
+      "aman Pathak"
     ],
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "ea839a91f81b352bd9839c4110cc6c01c8d6fc3f1740d40d05cbfe869efe2f45",
+    "content_hash": "f517cb308112b578af99faae5416d6a107146cc4617ce2bcf5f6e032ddc97be1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers15080479",
     "evidence_level": "abstract",
@@ -127,7 +362,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171559005",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact",
       "OpenAlex: cache coherence transition coverage verification",
@@ -144,7 +379,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -237,7 +472,7 @@
       "Maleeha Khan"
     ],
     "categories": [],
-    "content_hash": "f87aca51f8a74f55fd30f0a328ac2207f77cf1bcf1eeca5be028d2803a86d910",
+    "content_hash": "fa22ce52e10a8902c29a916bcf391bac695f69df29925eeecebad8716360e735",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.67728/bmp.2026.005",
     "evidence_level": "abstract",
@@ -245,7 +480,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171835959",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: cache coherence transition coverage verification"
     ],
@@ -259,7 +494,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Legitimacy",
@@ -301,8 +536,118 @@
     "source_id": "https://openalex.org/W7171835959",
     "title": "When Disruption Never Ends: Hybridisation as Permanent Adaptive Capability and the Emergence of Inclusive Resilience in African Digital Tutoring Ecosystems",
     "title_key": "when disruption never ends hybridisation as permanent adaptive capability and the emergence of inclusive resilience in african digital tutoring ecosystems",
-    "updated": "2026-07-31",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.67728/bmp.2026.005",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "LLM-based web navigation agents fail on the majority of tasks while consuming substantial computational resources before failure becomes apparent. This thesis investigates whether closed sequential pattern mining on the first K steps of agent execution traces can predict task failure early enough to enable meaningful computational savings with interpretable justification. We develop a two-phase system: an offline pipeline that symbolizes agent traces, extracts K-step prefixes, mines closed patterns via BIDE+, and ranks them by failure precision; and an online detector that matches live executions against the resulting pattern library. We evaluate on 1,544 MiniWoB++ traces across three open-weight language models (Llama-3.2-3B, Qwen-2.5-7B, Mistral-7B) using five evaluation configurations of increasing difficulty, with cross-benchmark transfer analysis on 577 WebArena shopping traces. Eight detection methods are compared, including neural baselines (Bi-LSTM, DeepLog), feature-engineering methods, and targeted pattern mining. BIDE Coverage achieves the highest failure detection F1 at K=3 (0.717) across all configurations, outperforming neural methods that require 8–10 steps to reach comparable accuracy. On the hardest evaluation—natural failures versus multi-step successes only—BIDE leads all methods from K=5 through K=10. At the recommended operating point (K=5, 92% precision), the system achieves 26.3% overall token savings with 3.2% impact on successful tasks. The mined pattern library of 32 closed patterns organizes into four interpretable failure categories—recovery, validation, navigation, and context failures—each with concrete repair recommendations. Cross-benchmark transfer is model-dependent, with an inverse correlation between models’ self-monitoring capability and pattern transferability.",
+    "analysis": {},
+    "authors": [
+      "Sergio Talavera"
+    ],
+    "categories": [],
+    "content_hash": "dc89a52ce86005790684540d7d8decc00b8a70d7ed63f25f70c69354527648d4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31979/etd.mha6-7b5u",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171973064",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/context/etd_theses/article/9351/viewcontent/1275602.pdf",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Pipeline (software)",
+      "Computer science",
+      "Context (archaeology)",
+      "Task (project management)",
+      "Security token",
+      "Point (geometry)",
+      "Artificial intelligence",
+      "Data mining",
+      "Single point of failure",
+      "Machine learning",
+      "Sequential Pattern Mining",
+      "Transfer (computing)",
+      "Artificial neural network",
+      "Crawling",
+      "Event (particle physics)",
+      "Transfer of learning",
+      "Bayesian probability",
+      "Pattern recognition (psychology)"
+    ],
+    "source_id": "https://openalex.org/W7171973064",
+    "title": "Early Failure Detection in Web Navigation Agents via Closed Sequential Pattern Mining",
+    "title_key": "early failure detection in web navigation agents via closed sequential pattern mining",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.mha6-7b5u",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Advancements in artificial intelligence (AI) improve the lives of people every day with tools like the auto-captioning of videos, improved screen-reader capabilities, and advanced mobility control through speech. However, are all groups of people benefiting from AI or are some being overlooked and left out? Although AI tools made for people with disabilities (PWDs) have improved their lives, AI for the general population generally ignores the experiences of PWDs, making them unable to interact with and benefit from technology. This research evaluates ChatGPT and Gemini in Gmail for usability fairness and analyzes how current regulations and development processes fail to account for the uniqueness of GenAI. Through manual and automatic testing, common end-user GenAI experiences are evaluated using current technical standards and a proposed AI-specific framework. The framework has been ratified in accordance with findings of user testing. This framework serves to build on the experiences of PWD using these technologies, to create a more robust guide for developers, and to showcase how usable experiences for PWD are possible and achievable.",
+    "analysis": {},
+    "authors": [
+      "Megan Gross"
+    ],
+    "categories": [],
+    "content_hash": "925c041faead781d2b389eb2c343f8410af41e94eafbdb5d92894e04ab0b457d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31979/etd.4bfb-28gb",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171959882",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9330&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "USable",
+      "Usability",
+      "Computer science",
+      "Population",
+      "Control (management)",
+      "Knowledge management",
+      "Human–computer interaction",
+      "Management science",
+      "Data science",
+      "Process management",
+      "Internet privacy",
+      "Artificial intelligence",
+      "Applications of artificial intelligence"
+    ],
+    "source_id": "https://openalex.org/W7171959882",
+    "title": "Accessibility Fairness Practices in AI Applications for People with Disabilities",
+    "title_key": "accessibility fairness practices in ai applications for people with disabilities",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.4bfb-28gb",
     "venue": "未记录"
   },
   {
@@ -1249,14 +1594,14 @@
       "Ben Slivinski"
     ],
     "categories": [],
-    "content_hash": "ffb7c4fd3318a8c70ed2f97337b0da542c2a38869d0316d95cd8f6d6a4928529",
+    "content_hash": "5cd4f73120a2926631bb5925dd3af04e897d75a26bc1265a0261f5095d0f480a",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2607-01223v4",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "Semantic Scholar: cache coherence transition coverage verification"
@@ -1271,16 +1616,92 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.LO",
+      "cs.SE"
     ],
     "source_id": "2607.01223v4",
     "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
     "title_key": "theoria rewrite acceptability verification over informal reasoning states",
     "updated": "2026-07-20",
-    "url": "https://www.semanticscholar.org/paper/1b7f5d662bcbfad7e808eeb6ef991b71ab01a58f",
+    "url": "http://arxiv.org/abs/2607.01223v4",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Cloud workloads combine software components from different parties to process sensitive data. Each component has its own trust model - it must protect its assets from the rest of the system, yet share sensitive data with components it cannot trust to keep confidential. This tension requires composing isolation boundaries for confidentiality and encapsulation. Unfortunately, the cloud offers no direct way to compose such boundaries, forcing tenants to assemble, deploy, and maintain their own solutions. This paper shifts that burden back to the infrastructure by making composable, attestable isolation a first-class systems abstraction. We present Tyche, a security monitor that centers isolation around a unified composable abstraction: security domains (SDs). An SD is an execution environment whose access to machine resources - memory, cores, devices - is controlled through explicit capabilities. A small set of capability operations enables SDs to partition, share, and reclaim resources; by nesting recursively, SDs compose attestable trust boundaries for confidentiality and encapsulation. Tyche attests these compositions, providing end-to-end security guarantees for workloads made of mutually distrustful components. As a first-class cloud primitive, this single abstraction subsumes enclaves, sandboxes, CVMs, and their compositions. Tyche provides composable isolation without sacrificing compatibility with existing hardware and software stacks. It runs on commodity x86 64 hardware without security extensions, and a RISC-V prototype demonstrates portability across platforms. Our SDK composes isolation for unmodified workloads within SDs with minimal overhead. In a confidential LLM inference scenario with mutually distrustful users, model owners, and cloud providers, the slowdown is just 2% compared to bare-metal Linux.",
+    "analysis": {},
+    "authors": [
+      "Adrien Ghosn",
+      "Charly Castes",
+      "Neelu S. Kalani",
+      "Yuchen Qian",
+      "Marios Kogias",
+      "Edouard Bugnion"
+    ],
+    "categories": [],
+    "content_hash": "293730e68adaf3da85969efebecff084a4e3ad142618cf9eb39d6e60bcf04e6d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w4415142875",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing",
+      "OpenAlex: microarchitectural path coverage processor fuzzing",
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2507.12364",
+    "primary_category": "",
+    "published": "2026-07-01",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 3,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Cloud computing",
+      "Computer security",
+      "Confidentiality",
+      "Mandatory access control",
+      "Isolation (microbiology)",
+      "Abstraction",
+      "Access control",
+      "Software portability",
+      "Correctness",
+      "Cloud computing security",
+      "Threat model",
+      "Debugging",
+      "Distributed computing",
+      "Cryptography",
+      "Trusted computing base",
+      "Service provider",
+      "Overhead (engineering)",
+      "Operating system",
+      "Backward compatibility",
+      "Computer security model",
+      "Trusted Computing",
+      "Trusted Platform Module",
+      "Security analysis"
+    ],
+    "source_id": "https://openalex.org/W4415142875",
+    "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
+    "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
+    "updated": "2026-08-01",
+    "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
   {
@@ -3081,6 +3502,60 @@
     "venue": "未记录"
   },
   {
+    "abstract": "NVIDIA GPUs underpin the vast majority of modern AI workloads.These workloads are ultimately executed in the form of Streaming Assembly (SASS), the lowest-level assembly for NVIDIA hardware.However, SASS remains largely undocumented, let alone well studied, posing a significant barrier to downstream security applications, such as security auditing, vulnerability discovery, binary hardening, etc.In this paper, we address this challenge with NVLift, a systematic framework that lifts NVIDIA GPU SASS into LLVM IR to enable downstream GPU binary analysis.To lift SASS instructions, NVLift reconstructs instruction semantics by consolidating prior reverse-engineering efforts and validating execution behaviors at runtime using cuda-gdb.To verify the semantic correctness of the lifted IR, we design and implement a differential testing pipeline by compiling the lifted IR into SASS and comparing the GPU execution results against the SASS generated from the reference CUDA kernel compilation.In total, NVLift supports 47 commonly used SASS instructions on the Turing architecture (SM75), covering 88.39% of instruction occurrence count in popular CUDA libraries.Using NVLift, we lifted 11 CUDA kernels, including representative DNN operators, and verified the semantic correctness of 5 kernels.We further provide a PoC implementation of GPU binary decompilation by translating the lifted LLVM IR into pseudo C code using RetDec.In sum, NVLift is a critical step towards enabling GPU binary analysis and downstream security applications.",
+    "analysis": {},
+    "authors": [
+      "Junpeng Wan",
+      "Louis Zheng-Hua Tan",
+      "Dave (Jing) Tian"
+    ],
+    "categories": [],
+    "content_hash": "180e1d646f25db199958450543c3f807c29204335164badd7f0d66ec68a95b4e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14722/bar.2026.23028",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: differential testing; security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172206056",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing",
+      "OpenAlex: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://doi.org/10.14722/bar.2026.23028",
+    "primary_category": "",
+    "published": "2026-01-01",
+    "relevance_reasons": [
+      "verification/fuzzing method: differential testing",
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Embedded system",
+      "Computational science",
+      "Software",
+      "Downstream (manufacturing)",
+      "Parallel computing",
+      "Key (lock)",
+      "Computer graphics (images)",
+      "Operating system",
+      "Cloud computing"
+    ],
+    "source_id": "https://openalex.org/W7172206056",
+    "title": "NVLift: Lifting NVIDIA GPU Assembly to LLVM IR for Downstream Security Applications",
+    "title_key": "nvlift lifting nvidia gpu assembly to llvm ir for downstream security applications",
+    "updated": "2026-08-06",
+    "url": "https://doi.org/10.14722/bar.2026.23028",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Hardware security has become a critical research area as integrated circuits increasingly serve as the foundation of sensitive and safety-critical systems. This chapter focuses on two key research directions: secure hardware design (secure-by-design) and hardware Trojans with their countermeasures. Secure-by-design emphasizes integrating security features such as access control, encryption, isolation, and side-channel resistance early in the VLSI design phase, rather than treating security as an afterthought. Early-stage security analysis using modern EDA tools enables the detection of vulnerabilities before fabrication, significantly reducing cost and risk. Since hardware flaws cannot be patched post-production, proactive security-aware design is essential for building trustworthy systems. The chapter also examines hardware Trojans—malicious modifications introduced during design or fabrication that can compromise functionality or leak sensitive information. It reviews major Trojan detection and prevention strategies, including trusted design flows, formal verification, and post-fabrication testing techniques. Together, these approaches highlight the importance of embedding security throughout the hardware lifecycle to ensure robust and reliable VLSI systems.",
     "analysis": {},
     "authors": [
@@ -3485,7 +3960,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "0a2cd61f20fd2f1550557811743e7e806e3c37173f29acfcdc63f666b99ce20b",
+    "content_hash": "2e03bea743d297c0ce9cddb9a9956f3f07c8f7dbfe3e0ec0b6aa30cce1dd1e08",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -3493,7 +3968,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3506,7 +3981,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -3531,7 +4006,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-07-31",
+    "updated": "2026-08-05",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -4092,76 +4567,6 @@
     "venue": "未记录"
   },
   {
-    "abstract": "Cloud workloads combine software components from different parties to process sensitive data. Each component has its own trust model - it must protect its assets from the rest of the system, yet share sensitive data with components it cannot trust to keep confidential. This tension requires composing isolation boundaries for confidentiality and encapsulation. Unfortunately, the cloud offers no direct way to compose such boundaries, forcing tenants to assemble, deploy, and maintain their own solutions. This paper shifts that burden back to the infrastructure by making composable, attestable isolation a first-class systems abstraction. We present Tyche, a security monitor that centers isolation around a unified composable abstraction: security domains (SDs). An SD is an execution environment whose access to machine resources - memory, cores, devices - is controlled through explicit capabilities. A small set of capability operations enables SDs to partition, share, and reclaim resources; by nesting recursively, SDs compose attestable trust boundaries for confidentiality and encapsulation. Tyche attests these compositions, providing end-to-end security guarantees for workloads made of mutually distrustful components. As a first-class cloud primitive, this single abstraction subsumes enclaves, sandboxes, CVMs, and their compositions. Tyche provides composable isolation without sacrificing compatibility with existing hardware and software stacks. It runs on commodity x86 64 hardware without security extensions, and a RISC-V prototype demonstrates portability across platforms. Our SDK composes isolation for unmodified workloads within SDs with minimal overhead. In a confidential LLM inference scenario with mutually distrustful users, model owners, and cloud providers, the slowdown is just 2% compared to bare-metal Linux.",
-    "analysis": {},
-    "authors": [
-      "Adrien Ghosn",
-      "Charly Castes",
-      "Neelu S. Kalani",
-      "Yuchen Qian",
-      "Marios Kogias",
-      "Edouard Bugnion"
-    ],
-    "categories": [],
-    "content_hash": "a6626d2b78d9627b72136e685fa805d4e14166bf2feb25077ac84d585f965c34",
-    "curation_status": "excluded",
-    "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
-    "evidence_level": "abstract",
-    "exclusion_reason": "hardware/processor object: risc-v; security relevance: security; missing object-method conjunction",
-    "first_seen": "2026-08-01",
-    "id": "openalex-w4415142875",
-    "included": false,
-    "last_seen": "2026-08-01",
-    "matched_queries": [
-      "OpenAlex: multi-hart RISC-V fuzzing"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2507.12364",
-    "primary_category": "",
-    "published": "2025-07-16",
-    "relevance_reasons": [
-      "hardware/processor object: risc-v",
-      "security relevance: security",
-      "missing object-method conjunction"
-    ],
-    "relevance_score": 2,
-    "relevance_tier": "D",
-    "scope": "excluded",
-    "seen_count": 1,
-    "source": "OpenAlex",
-    "source_categories": [
-      "Computer science",
-      "Cloud computing",
-      "Computer security",
-      "Confidentiality",
-      "Mandatory access control",
-      "Isolation (microbiology)",
-      "Abstraction",
-      "Access control",
-      "Software portability",
-      "Correctness",
-      "Cloud computing security",
-      "Threat model",
-      "Debugging",
-      "Distributed computing",
-      "Cryptography",
-      "Trusted computing base",
-      "Service provider",
-      "Overhead (engineering)",
-      "Operating system",
-      "Backward compatibility",
-      "Computer security model",
-      "Trusted Computing",
-      "Trusted Platform Module",
-      "Security analysis"
-    ],
-    "source_id": "https://openalex.org/W4415142875",
-    "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
-    "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-07-31",
-    "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
-    "venue": "未记录"
-  },
-  {
     "abstract": "Taint analysis using explicit whole-program data-dependence graphs is powerful for vulnerability discovery but faces two major challenges. First, accurately modeling taint propagation through calls to external library procedures requires extensive manual annotations, which becomes impractical for large ecosystems. Second, the sheer size of whole-program graph representations leads to serious scalability and performance issues, particularly when quick analysis is needed in continuous development pipelines.",
     "analysis": {},
     "authors": [
@@ -4400,6 +4805,62 @@
     "updated": "2025-06-24",
     "url": "http://arxiv.org/abs/2505.12987v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "With increasingly complex circuits and systems, the need for advanced design methodologies is growing. These methodologies shift the designers’ focus from technology-specific implementations to more abstract electronic system design (ESL). SystemC was developed to address this need. Being an open standard based on C++, SystemC facilitates hardware and software modeling across multiple levels of abstraction, with a particular emphasis on ESL. It is further enhanced by including the transaction-level modeling (TLM) layer, strengthening its capability to model communication between components, and even full-system simulators. Traditionally, SystemC/TLM has been deployed to provide hardware prototypes for software development early in the design process. However, surveys and literature reviews showing other capabilities of SystemC/TLM are scarce. Hence, it is essential to explore SystemC/TLM’s new capabilities in different domains such as in-circuit fault propagation, security assessment, and verification. In this article, we conduct a systematic mapping study (SMS) of SystemC/TLM modeling capabilities in certain research domains. We elaborate on the state-of-the-art ESL with an emphasis on SystemC/TLM-based system modeling. Subsequently, we present how such technologies can be applied to the new research domains within the field of circuit and system modeling, namely: (D.1) architecture exploration, (D.2) power estimation, (D.3) fault-injection analysis, (D.4) functional and security verification, and (D.5) side-channel analysis. This SMS highlights the advantages and disadvantages of the investigated SystemC/TLM capabilities and addresses the open challenges in these domains, concluding that SystemC/TLM offers significant potential in performance evaluation, verification, and security assessment of circuits and systems at ESL.",
+    "analysis": {},
+    "authors": [
+      "Ahmed Mahmoudi",
+      "Andrija Nešković",
+      "Celine Thermann",
+      "Robin Sehm",
+      "Christoph Hübner",
+      "Tavia Plattenteich",
+      "Rolf Meyer",
+      "Rainer Buchty",
+      "Mladen Bereković",
+      "Saleh Mulhem"
+    ],
+    "categories": [],
+    "content_hash": "a4e0ab9caf5d6e6e35eeee5b69e575c9f3f721d6517c3da54be871547fb1dadf",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3735641",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w4410321356",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3735641",
+    "primary_category": "",
+    "published": "2025-05-13",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "SystemC",
+      "Computer architecture",
+      "Embedded system",
+      "Software engineering",
+      "Human–computer interaction"
+    ],
+    "source_id": "https://openalex.org/W4410321356",
+    "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
+    "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
+    "updated": "2026-08-01",
+    "url": "https://doi.org/10.1145/3735641",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
   {
     "abstract": "System design automation aims to manage the design of embedded systems with ever-increasing complexity. To the success of system design automation, there is still a lack of systematic and formal design process because an entire design process, from a system's specification to its implementation, has to deal with inherent concerns about the systems' different aspects and, consequently, inherent semantic gaps. These gaps make it hard for a design process to be traceable or transparent. Particularly, guaranteeing the correctness of produced implementations becomes the main challenge for a system design process. SynQ (Synchronous system design with Quantitative types) is an embedded domain specification language (EDSL) targeting the design of systems obeying the perfect synchrony hypothesis. SynQ is based on a component-based design framework and, by design, facilitates semantic coherency by leveraging the quantitative type theory (QTT) and language embedding. SynQ enables a semantically coherent design process, including formal specification and verification, modelling, simulation and code generation. This paper presents SynQ and its underlying formalism and demonstrates its features and potential for semantically coherent system design through a case study.",
@@ -5018,7 +5479,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "c4de94fa359e20bf6a952cb42c6bb39958c05955536f48109eb483218b5534b4",
+    "content_hash": "cdb1fe646dcda2efaae6ea91eef90ba7f6001a724ac6a066e6fbc2311d163d5c",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -5026,7 +5487,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -5041,7 +5502,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5053,7 +5514,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-07-31",
+    "updated": "2026-08-04",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -6442,7 +6903,7 @@
       "Kevin Butler"
     ],
     "categories": [],
-    "content_hash": "b2306b7f5b8f7a6795783ef04a36059f2b8b016aad4b3ef87ce2981c299dff06",
+    "content_hash": "5fb4244664b0a56184055527fa91dd9120238bb64054a71f79589abbedd442aa",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -6450,7 +6911,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -6464,7 +6925,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6489,7 +6950,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-07-29",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },
@@ -6765,6 +7226,51 @@
     "abstract": "",
     "analysis": {},
     "authors": [
+      "H. Ferrari",
+      "R. Farengo",
+      "P. García-Martínez",
+      "M. Chris",
+      "A. Lifschitz"
+    ],
+    "categories": [],
+    "content_hash": "3f30971f35aff4a16224682265577437fe4118585e6a661b16fad835cf302168",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-20db5bb5a3770335d04667717d9fa580b671df90",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2014",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Political Science"
+    ],
+    "source_id": "20db5bb5a3770335d04667717d9fa580b671df90",
+    "title": "Abstract Submitted for the DPP14 Meeting of The American Physical Society",
+    "title_key": "abstract submitted for the dpp14 meeting of the american physical society",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/20db5bb5a3770335d04667717d9fa580b671df90",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
       "Inderpreet Singh"
     ],
     "categories": [
@@ -6802,6 +7308,92 @@
     "title_key": "improving gpu programming models through hardware cache coherence",
     "updated": "",
     "url": "https://doi.org/10.14288/1.0073882",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Qicheng Zhao",
+      "J. Rhodes",
+      "Lu-Gang Yu"
+    ],
+    "categories": [],
+    "content_hash": "421cb6b960b5a47504feab0860383aa1345ef8e821877b2c3db8e03e37cbd4b0",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1016/S0016-5085(10)62350-5",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-1b265077d8d276ff5eb90e782c92e94bca77398c",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://doi.org/10.1016/s0016-5085(10)62350-5",
+    "primary_category": "",
+    "published": "2010-05-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Medicine"
+    ],
+    "source_id": "1b265077d8d276ff5eb90e782c92e94bca77398c",
+    "title": "T1195 Peanut Agglutinin, Which Enters the Circulation After Peanut Ingestion, Increases Human Colon Cancer HT29-5f7 Cell Aggregation and Adhesion to Human Lung Endothelial Cells In Vitro: Implications for Metastasis",
+    "title_key": "t1195 peanut agglutinin which enters the circulation after peanut ingestion increases human colon cancer ht29 5f7 cell aggregation and adhesion to human lung endothelial cells in vitro implications for metastasis",
+    "updated": "",
+    "url": "https://doi.org/10.1016/S0016-5085(10)62350-5",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "K. Goryca",
+      "M. Skrzypczak",
+      "T. Rubel",
+      "A. Paziewska",
+      "J. Ostrowski"
+    ],
+    "categories": [],
+    "content_hash": "a6a5975b64e39160ad7dcca1ea1e0dab265c8984462ff898a7ca863c8e8b15e8",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1016/S0016-5085(10)62349-9",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-d54aaa663dba07d1d5dcf7fae278ba8176f78314",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://doi.org/10.1016/s0016-5085(10)62349-9",
+    "primary_category": "",
+    "published": "2010-05-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Biology"
+    ],
+    "source_id": "d54aaa663dba07d1d5dcf7fae278ba8176f78314",
+    "title": "T1194 Potential and Challenges of Microarray Data Analyses for Predicting Oncogenic Signaling in Colon Tumors",
+    "title_key": "t1194 potential and challenges of microarray data analyses for predicting oncogenic signaling in colon tumors",
+    "updated": "",
+    "url": "https://doi.org/10.1016/S0016-5085(10)62349-9",
     "venue": "未记录"
   },
   {
@@ -6846,5 +7438,173 @@
     "updated": "2010-02-03",
     "url": "http://arxiv.org/abs/1002.0678v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Our project focuses on gene expression and proteomics of the whitefly Bemisia tabaci (Gennadius) species complex in relation to the internal anatomy and localization of expressed genes and virions in the whitefly vector, which poses a major constraint to vegetable and fiber production in Israel and the USA. While many biological parameters are known for begomovirus transmission, nothing is known about vector proteins involved in the specific interactions between begomoviruses and their whitefly vectors. Identifying such proteins is expected to lead to the design of novel control methods that interfere with whitefly-mediated begomovirus transmission. The project objectives were to: 1) Perform gene expression analyses using microarrays to study the response of whiteflies (B, Q and A biotypes) to the acquisition of begomoviruses (Tomato yellow leaf curl (TYLCV) and Squash leaf curl (SLCV). 2) Construct a whitefly proteome from whole whiteflies and dissected organs after begomovirus acquisition. 3) Validate gene expression by q-RTPCR and sub-cellular localization of candidate ESTs identified in microarray and proteomic analyses. 4) Verify functionality of candidate ESTs using an RNAi approach, and to link these datasets to overall functional whitefly anatomical studies. During the first and second years biological experiments with TYLCV and SLCV acquisition and transmission were completed to verify the suitable parameters for sample collection for microarray experiments. The parameters were generally found to be similar to previously published results by our groups and others. Samples from whole whiteflies and midguts of the B, A and Q biotypes that acquired TYLCV and SLCV were collected in both the US and Israel and hybridized to B. tabaci microarray. The data we analyzed, candidate genes that respond to both viruses in the three tested biotypes were identified and their expression that included quantitative real-time PCR and co-localization was verified for HSP70 by the Israeli group. In addition, experiments were undertaken to employ in situ hybridization to localize several candidate genes (in progress) using an oligonucleotide probe to the primary endosymbiont as a positive control. A proteome and corresponding transcriptome to enable more effective protein identification of adult whiteflies was constructed by the US group. Further validation of the transmission route of begomoviruses, mainly SLCV and the involvement of the digestive and salivary systems was investigated (Cicero and Brown). Due to time and budget constraints the RNAi-mediated silencing objective to verify gene function was not accomplished as anticipated. HSP70, a strong candidate protein that showed over-expression after TYLCV and SLCV acquisition and retention by B. tabaci, and co-localization with TYLCV in the midgut, was further studies. Besides this protein, our joint research resulted in the identification of many intriguing candidate genes and proteins that will be followed up by additional experiments during our future research. To identify these proteins it was necessary to increase the number and breadth of whitefly ESTs substantially and so whitefly cDNAs from various libraries made during the project were sequenced (Sanger, 454). As a result, the proteome annotation (ID) was far more successful than in the initial attempt to identify proteins using Uniprot or translated insect ESTs from public databases. The extent of homology shared by insects in different orders was surprisingly low, underscoring the imperative need for genome and transcriptome sequencing of homopteran insects. Having increased the number of EST from the original usable 5500 generated several years ago to >600,000 (this project+NCBI data mining), we have identified about one fifth of the whitefly proteome using these new resources. Also we have created a database that links all identified whitefly proteins to the PAVEdb-ESTs in the database, resulting in a useful dataset to which additional ESTS will be added. We are optimistic about the prospect of linking the proteome ID results to the transcriptome database to enable our own and other labs the opportunity to functionally annotate not only genes and proteins involved in our area of interest (whitefly mediated transmission) but for the plethora of other functionalities that will emerge from mining and functionally annotating other key genes and gene families in whitefly metabolism, development, among others. This joint grant has resulted in the identification of numerous candidate proteins involved in begomovirus transmission by B. tabaci. A next major step will be to capitalize on validated genes/proteins to develop approaches to interfere with the virus transmission.",
+    "analysis": {},
+    "authors": [
+      "M. Ghanim",
+      "J. Cicero",
+      "Judith K. Brown",
+      "H. Czosnek"
+    ],
+    "categories": [],
+    "content_hash": "976ce3a55834d484aeb5d46afefcd767983e5d6043ce4b6b0b6eaf6011d535e5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.32747/2010.7592654.bard",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-d72f0432ae49a9fc99384da29529b66ff929c96e",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://naldc.nal.usda.gov/download/7592654/PDF",
+    "primary_category": "",
+    "published": "2010-02-01",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "d72f0432ae49a9fc99384da29529b66ff929c96e",
+    "title": "Dissection of Whitefly-geminivirus Interactions at the Transcriptomic, Proteomic and Cellular Levels",
+    "title_key": "dissection of whitefly geminivirus interactions at the transcriptomic proteomic and cellular levels",
+    "updated": "",
+    "url": "https://doi.org/10.32747/2010.7592654.bard",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "J. Watson",
+      "P. Witham",
+      "Timothy St. Louis"
+    ],
+    "categories": [],
+    "content_hash": "5255459d6a83da3829b88cd09a85426dfd1c9a770bb53b3b7413cf2e4fa37cfe",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2010",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Political Science"
+    ],
+    "source_id": "102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "title": "Evaluating Student-Teacher Linkage Data in Teacher Incentive Fund (TIF) Sites: Acquisition, Verification, and System Development. The Harvesting Project.",
+    "title_key": "evaluating student teacher linkage data in teacher incentive fund tif sites acquisition verification and system development the harvesting project",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "S. Cai",
+      "M. Zhao",
+      "Z. Chen"
+    ],
+    "categories": [],
+    "content_hash": "75ad606de425ab9d84c1085c43d386cb36f5dc69cbe07306903e6486d716c389",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2009",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "title": "A new detection scheme for ultrafast 2 D COSY",
+    "title_key": "a new detection scheme for ultrafast 2 d cosy",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "J. Sedlacik",
+      "R. Williams",
+      "M. Johnson",
+      "C. Calabrese",
+      "A. Davidoff",
+      "C. Hillenbrand"
+    ],
+    "categories": [],
+    "content_hash": "49050b06040d2a4afec746018de5a9f90eb633b8b2d35d58900e21e39e3437ce",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-dbe3e14d41985965fc0faa24ae15fd104e635763",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2008",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "dbe3e14d41985965fc0faa24ae15fd104e635763",
+    "title": "Design and setup of dynamic contrast enhanced experiments for longitudinal preclinical studies of tumor response to anti-angiogenic therapy",
+    "title_key": "design and setup of dynamic contrast enhanced experiments for longitudinal preclinical studies of tumor response to anti angiogenic therapy",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/dbe3e14d41985965fc0faa24ae15fd104e635763",
+    "venue": "未记录"
   }
 ]

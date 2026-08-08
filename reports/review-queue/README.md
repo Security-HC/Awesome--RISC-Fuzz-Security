@@ -1,9 +1,12 @@
 # 待人工复核
 
-共 44 篇。该列表不进入主 README。
+共 47 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](http://arxiv.org/abs/2608.02915v1) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
+| 2026-07-28 | [Timelines Over Tokens](https://doi.org/10.31979/etd.ewrn-xhac) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
+| 2026-07-28 | [RThermaL](https://doi.org/10.31979/etd.x48p-hs5d) | 4 | hardware/processor object: processor, rtl, verilog；verification/fuzzing method: validation |
 | 2026-07-15 | [nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency](https://doi.org/10.3390/computers15070447) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: validation |
 | 2026-07-05 | [EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR](https://doi.org/10.1145/3803437.3806400) | 4 | hardware/processor object: verilog；verification/fuzzing method: verification, formal verification |
 | 2026-05-05 | [täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)](http://arxiv.org/abs/2605.04172v1) | 4 | hardware/processor object: microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |

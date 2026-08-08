@@ -1,5 +1,186 @@
 [
   {
+    "abstract": "Domain-specific Instruction Set Architecture eXtensions (ISAX) are widely adopted in the RISC-V ecosystem to accelerate emerging workloads, but implementing and validating ISAXes across different cores remains slow and fragmented. Existing frameworks still require per-core interface adaptation, and differential testing often breaks once either the microarchitecture or the ISAX changes. We present LACE, an LLM-aided multi-agent workflow that translates natural-language ISAX intents into a compact two-level IR (operation-level and HDL task-level), performs retrieval-guided localized RTL edits over large repositories, and closes the loop with a compiler-agnostic riscv-formal checking flow (assuming RVFI availability or instrumentation). Across four embedded RISC-V cores, LACE raises pass@1 generation accuracy from near-zero to 72.8\\% within our evaluation setup, while improving code localization and reducing integration rework. The code of LACE is available at https://github.com/UMN-ZhaoLab/LACE.",
+    "analysis": {},
+    "authors": [
+      "Pingqing Zheng",
+      "Jiayin Qin",
+      "Fuqi Zhang",
+      "Zishen Wan",
+      "Shang Wu",
+      "Yu Cao",
+      "Caiwen Ding",
+      "Yang Katie Zhao"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "48f411566223bb0122c633be52906a35b6e737dff5fdbe196bb4426a26344596",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "arxiv-2608-02915v1",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.02915v1",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, riscv, microarchitecture, rtl",
+      "verification/fuzzing method: differential testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.CL",
+      "cs.SE"
+    ],
+    "source_id": "2608.02915v1",
+    "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
+    "title_key": "lace large language model aided multi agent framework for agile risc v instruction extension",
+    "updated": "2026-08-03",
+    "url": "http://arxiv.org/abs/2608.02915v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "This research presents a two-stage pipeline for user-level suicide risk detection from Reddit: first, inference-only prompting with summarization; second, fine-tuned encoder classification with explainability and expert validation. The data are user-level: each of the 500 C-SSRS Reddit items is one user’s chronologically concatenated posts and comments (a user timeline), annotated by psychiatrists. Stage one: six prompting strategies zero-shot, few-shot, chain-of-thought, tree-of-thought, least-to-most, and self-consistency are evaluated across six LLMs on multi-class and binary formulations; simple zero-shot achieves the highest balanced accuracy (0.53 multi-class). Error analysis shows longer inputs associate with misclassification (p = 0.002); domain-specific summarization (timelines >2,000 tokens) reduces length by 44%, preserves semantic fidelity (BERTScore F1 = 0.85), improves smaller models (up to 10%), and yields roughly 32% cost savings. Classical baselines (best BA = 0.31) underscore LLM advantages. Stage two: the mental-longformer-base-4096 encoder is fine-tuned on summarized C-SSRS and eRisk 2025 timelines for binary (risk vs. no risk) classification. A 7-configuration ablation over C-SSRS, eRisk, and ReDSM5 motivates the C-SSRS+eRisk main model (mean BA 0.89±0.01; best 0.90), with zero-shot transfer to external datasets (e.g., Twitter BA 0.85, ROC-AUC 0.92). Integrated Gradients and attention visualizations provide token-level explanations; three independent clinicians rate clinical-style summaries of model rationales (84% majority agreement). Multi-class addresses granularity; binary and fine-tuning address robustness. Deployment requires large-scale validation, fairness assessment, and human oversight.",
+    "analysis": {},
+    "authors": [
+      "Aditya Tekale"
+    ],
+    "categories": [],
+    "content_hash": "8ee046791a9c92aff080ef15376a2042f06e39b82fc09da6539cfe10413513a1",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.31979/etd.ewrn-xhac",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171966200",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9298&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Timeline",
+      "Pipeline (software)",
+      "Automatic summarization",
+      "Fidelity",
+      "Encoder",
+      "Binary number",
+      "Information retrieval",
+      "Artificial intelligence",
+      "Semantics (computer science)",
+      "Software deployment",
+      "Authentication (law)",
+      "Natural language processing",
+      "Transfer (computing)",
+      "Backup",
+      "Binary data",
+      "Binary code",
+      "Data mining",
+      "Machine learning",
+      "Data science",
+      "World Wide Web",
+      "Point (geometry)",
+      "Matching (statistics)",
+      "Swap (finance)",
+      "Scheme (mathematics)",
+      "Decoding methods",
+      "Binary classification"
+    ],
+    "source_id": "https://openalex.org/W7171966200",
+    "title": "Timelines Over Tokens",
+    "title_key": "timelines over tokens",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.ewrn-xhac",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "As the number of transistors in modern processors increases, heat dissipation has become a major bottleneck to scalability. The use of 3D stacking further intensifies this problem, as heat from multiple layers can accumulate vertically. These challenges create a growing need for tools that can accurately and efficiently simulate the thermal behavior of 3D chips during design and validation. Several existing tools model thermal behavior for 3D-stacked chips and can simulate average heat over large spatial regions or long time intervals. However, when heat is concentrated in a small area or over a short time window, such models can miss localized hotspots. Conversely, when heat is distributed broadly, coarse averaging can overstate thermal risk. More fine-grained simulation results can be achieved through gate-level simulation. However, these exhibit prohibitively long runtimes when simulating real-world workloads. To this end, this thesis presents RThermaL, a novel method for gate-level power and thermal simulation by using per-instruction power mappings with a GPU-accelerated thermal simulation workflow. RThermaL works by linking individual instructions to gate-level power dissipation in a physically accurate implementation of a processor layout. Starting from RTL-level Verilog designs, the framework performs post-layout instruction characterization to construct a database of per-instruction spatial power maps. These maps can then be used to reconstruct temporal and spatial heat inputs to achieve significant speedups for thermal simulations. Our evaluation shows that, for the same targeted workload, our approach achieves a 5000× runtime improvement over full gate-level simulation. Compared to existing thermal solvers, it delivers a 6× runtime improvement. Equivalently, under the same time budget, our method provides 15,000× finer temporal resolution and 4× finer spatial resolution, making detailed thermal analysis practical for real-world workloads.",
+    "analysis": {},
+    "authors": [
+      "Peter Xiong"
+    ],
+    "categories": [],
+    "content_hash": "4b29abdce6c07502281f5c3ea4a470d0b9aeda3fcc18de302f0a9ebe798eaf69",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.31979/etd.x48p-hs5d",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171978116",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9343&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: processor, rtl, verilog",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Bottleneck",
+      "Computer science",
+      "Thermal",
+      "Thermal management of electronic devices and systems",
+      "Power (physics)",
+      "Construct (python library)",
+      "Stacking",
+      "Verilog",
+      "Dissipation",
+      "Computational science",
+      "Parallel computing",
+      "Transistor",
+      "Co-simulation",
+      "Thermal resistance",
+      "Context (archaeology)",
+      "Real-time computing",
+      "Backup",
+      "Heat transfer",
+      "Real-time simulation",
+      "Simulation",
+      "Transient (computer programming)",
+      "Heat generation",
+      "Rollback"
+    ],
+    "source_id": "https://openalex.org/W7171978116",
+    "title": "RThermaL",
+    "title_key": "rthermal",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.x48p-hs5d",
+    "venue": "未记录"
+  },
+  {
     "abstract": "As RISC-V processors are increasingly considered for embedded real-time and control-oriented systems, evaluating how timing behavior changes under increasing task concurrency becomes essential. Adding runnable tasks can amplify preemptions, context-switch activity, response-time variability, execution jitter, and deadline pressure. Existing RISC-V simulation and virtual-platform environments mainly target architectural exploration, functional validation, or full-system execution, and do not directly provide a controlled workflow for isolating scheduler-induced timing degradation across large configuration spaces. This paper presents nSim-RV, a configurable and reproducible RISC-V simulation and orchestration framework for scheduler-aware timing scalability evaluation. The framework combines automated campaign generation, deterministic workload configuration, structured dataset aggregation, duplicate validation, and timing-oriented metric extraction. The evaluation compares a standard shared-pipeline execution model with an nMPRA-inspired preserved-context mode under identical scheduler and workload conditions. The campaign includes CoreMark, Dhrystone, and a deterministic synthetic RT-Control workload, 2–32 concurrent tasks, 50 k–1 M cycle observation windows, cache-disabled and cache-enabled configurations, and four-stage and five-stage pipeline organizations, resulting in 864 validated configurations. Results show that increasing task concurrency amplifies timing variability and deadline pressure. Preserved-context execution reduces switching-induced disturbance and delays or reduces higher-pressure timing behavior in several trajectories. Under the five-stage cache-disabled RT-Control configuration at N = 32, it reduces the deadline miss ratio from 3.74% to 2.21%, corresponding to a 41.1% relative reduction, with the clearest benefits observed for Dhrystone and RT-Control at intermediate–high task counts.",
     "analysis": {},
     "authors": [
@@ -631,7 +812,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "de3d32ffafa1ec9b84304bce83c6bc3051998c447ff8f3ccc1c509a2c23e58ea",
+    "content_hash": "976030a6846d70190526369eeae78ac5f2a7447041b256dc331d9542f960c07f",
     "curation_status": "review",
     "doi": "https://doi.org/10.5753/sscad_estendido.2024",
     "evidence_level": "abstract",
@@ -639,7 +820,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4403683349",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -653,7 +834,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -662,7 +843,7 @@
     "source_id": "https://openalex.org/W4403683349",
     "title": "Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)",
     "title_key": "anais estendidos do xxv simp sio em sistemas computacionais de alto desempenho sscad estendido 2024",
-    "updated": "2026-04-21",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.5753/sscad_estendido.2024",
     "venue": "未记录"
   },
@@ -866,7 +1047,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "29bd26fce9bb175d7cd38c54b9c6c817ed28fd09935a25ac45d5fd56cbfb79be",
+    "content_hash": "cfa1d60f133052dd340fc99e7181e1bbf55985e449c1a5200705aa677e94178d",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -874,7 +1055,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -888,7 +1069,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -923,7 +1104,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-07-31",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },

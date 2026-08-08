@@ -4,14 +4,14 @@
 
 - 作者：Rihui Sun、Jin Wu、Hanyin Liu、Zikang Tao、Gang Qu、Dongsheng Wang、Yongqiang Lyu、Jian Dong
 - 发表日期：2025-06-22
-- 会议/期刊：Design Automation Conference
+- 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级
 - 全文状态：PDF待补
 - 标签：RISC-V Processor Fuzzing、Microarchitectural Security Testing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：hardware/processor object: risc-v, cpu, rtl；verification/fuzzing method: fuzz；security relevance: transient execution
-- 论文页面：[https://doi.org/10.1109/DAC63849.2025.11133085](https://doi.org/10.1109/DAC63849.2025.11133085)
+- 论文页面：[https://doi.org/10.1109/dac63849.2025.11133085](https://doi.org/10.1109/dac63849.2025.11133085)
 - PDF：未记录
 - 分析模式：摘要级占位（未全文核验）
 

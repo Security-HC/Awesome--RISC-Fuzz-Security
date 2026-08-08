@@ -1,5 +1,168 @@
 [
   {
+    "abstract": "Domain-specific Instruction Set Architecture eXtensions (ISAX) are widely adopted in the RISC-V ecosystem to accelerate emerging workloads, but implementing and validating ISAXes across different cores remains slow and fragmented. Existing frameworks still require per-core interface adaptation, and differential testing often breaks once either the microarchitecture or the ISAX changes. We present LACE, an LLM-aided multi-agent workflow that translates natural-language ISAX intents into a compact two-level IR (operation-level and HDL task-level), performs retrieval-guided localized RTL edits over large repositories, and closes the loop with a compiler-agnostic riscv-formal checking flow (assuming RVFI availability or instrumentation). Across four embedded RISC-V cores, LACE raises pass@1 generation accuracy from near-zero to 72.8\\% within our evaluation setup, while improving code localization and reducing integration rework. The code of LACE is available at https://github.com/UMN-ZhaoLab/LACE.",
+    "analysis": {},
+    "authors": [
+      "Pingqing Zheng",
+      "Jiayin Qin",
+      "Fuqi Zhang",
+      "Zishen Wan",
+      "Shang Wu",
+      "Yu Cao",
+      "Caiwen Ding",
+      "Yang Katie Zhao"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "48f411566223bb0122c633be52906a35b6e737dff5fdbe196bb4426a26344596",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "arxiv-2608-02915v1",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.02915v1",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, riscv, microarchitecture, rtl",
+      "verification/fuzzing method: differential testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.CL",
+      "cs.SE"
+    ],
+    "source_id": "2608.02915v1",
+    "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
+    "title_key": "lace large language model aided multi agent framework for agile risc v instruction extension",
+    "updated": "2026-08-03",
+    "url": "http://arxiv.org/abs/2608.02915v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Long-horizon tasks require agents to maintain coherent state and goals across nested and branching work. We call this capability goal-directed execution (GDE): the repeated application of four behaviors, namely selecting goals, constructing task-relevant state, maintaining fidelity to higher-level objectives, and verifying completion against the environment. We hypothesize that long-horizon post-training strengthens these behaviors across domains. We test this by post-training Qwen3.5-122B-A10B on 363 Long-Horizon Multi-Tool Agent (LHMTA) tasks drawn from office workflows. The collection contained no software-engineering tasks, yet the model's pass@1 improved by 5.8 points on SWE-Bench Pro. Matched trajectory analysis shows gains in all four GDE behaviors in both office workflows and software repositories. Aggregate SWE-Bench Pro statistics showed related changes in information gathering, implementation, and verification. Together, the results support a behavioral interpretation in which long-horizon post-training changed how the model organized and applied knowledge across tasks, with effects extending beyond the training domain.",
+    "analysis": {},
+    "authors": [
+      "Logan Ritchie",
+      "Sushant Mehta",
+      "Liudas Panavas",
+      "Edwin Chen"
+    ],
+    "categories": [],
+    "content_hash": "1af8f70677ef58a7a876cc2fd3aa254e8166e6e172bb67ca52c6d0c19e7791cd",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "arxiv-2608-01604v1",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.01604v1",
+    "primary_category": "",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "source_id": "2608.01604v1",
+    "title": "Post-Training on Office Work Improves Software Engineering: A Behavioral Account of Cross-Domain Transfer",
+    "title_key": "post training on office work improves software engineering a behavioral account of cross domain transfer",
+    "updated": "2026-08-03",
+    "url": "http://arxiv.org/abs/2608.01604v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Due to the explosive growth in cloud-native infrastructures, the attack surface has dramatically increased in modern enterprise identity systems, where privilege escalation has become a major security risk. Conventional rule-based intrusion detection systems fall short in identifying multi-hop privilege inheritance paths and lateral movements over heterogeneous and dynamic identity graphs. This study introduces PEGraphSec-Net, a graph-theoretical framework for detecting privilege-escalation-relevant identity behavior, modeling cloud identity interactions as dynamic heterogeneous graphs of users, services, roles, tokens, and workloads. The core contribution of this framework is a graph-based detection pipeline—an Identity Relationship Graph Constructor, a Privilege-Escalation Path Encoder, and a Temporal Graph Attention Detection layer—evaluated on privilege-escalation-relevant attack categories using a documented proxy identity-graph construction derived from the UNSW-NB15 network-traffic benchmark, and benchmarked against six non-graph tabular classifiers (CNN, LightGBM, XGBoost, Random Forest, SVM, and MLP) trained under identical preprocessing; this pipeline achieves 98.78% accuracy, a weighted F1-score of 0.98692 (macro F1-score of 0.91828), and an AUC of 1.000 on the held-out test partition. PEGraphSec-Net is further benchmarked against three graph neural network baselines (GCN, GAT, and GraphSAGE) trained on the identical identity-graph topology and node attributes; all three substantially underperform PEGraphSec-Net (best case, GraphSAGE: 63.66% accuracy, 0.239 macro F1-score), indicating that a large share of PEGraphSec-Net’s performance derives from its explicit privilege-path encoding and temporal attention mechanisms rather than from the graph topology alone. An Adaptive Containment and Isolation Engine and a Mitigation Policy Reinforcement Optimizer are further proposed as risk-scoring and reward-driven policy-learning components, whose contribution is validated through module-wise ablation on classification performance; live containment action and reinforcement-learning-specific evaluation are left for future validation. The term “privilege escalation” is used throughout to denote the evaluated proxy attack categories (Exploits, Backdoor/Backdoors, and Reconnaissance) under a documented, decade-old (2015) network-intrusion benchmark, rather than production cloud-native IAM behavior, for which native-dataset validation remains an open direction. SHAP-based interpretability analysis links the model’s top-ranked traffic-level features back to the identity-graph risk, role, and trust-transition attributes they populate, evidencing that the learned representation captures semantically meaningful identity-behavior patterns within this proxy setting.",
+    "analysis": {},
+    "authors": [
+      "Md Nuruzzaman Pranto",
+      "Md Deluar Hossen",
+      "Mamunur R. Raja",
+      "Md Sharfuddin",
+      "Balayet Hossain",
+      "Khandakar Rabbi Ahmed"
+    ],
+    "categories": [],
+    "content_hash": "3cfd3c90cc02daa2b6a33b04f097195c1c31452e609b82ede4647ac81d059bc1",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.3390/computers15080501",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172275041",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://www.mdpi.com/2073-431X/15/8/501/pdf?version=1785767496",
+    "primary_category": "",
+    "published": "2026-08-03",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Reinforcement learning",
+      "Graph",
+      "Artificial intelligence",
+      "Data mining",
+      "Network topology",
+      "ENCODE",
+      "Machine learning",
+      "Cloud computing",
+      "Distributed computing",
+      "Theoretical computer science",
+      "Identity (music)",
+      "Analytics",
+      "A priori and a posteriori",
+      "Intrusion detection system",
+      "Proxy (statistics)",
+      "Vulnerability assessment",
+      "Graph theory",
+      "Flow network",
+      "Node (physics)",
+      "Pipeline (software)",
+      "Artificial neural network"
+    ],
+    "source_id": "https://openalex.org/W7172275041",
+    "title": "Predictive Analytics in Cloud-Native Privilege-Escalation Detection: Enhancing Accuracy Through Temporal Graph Attention and Reinforcement Learning",
+    "title_key": "predictive analytics in cloud native privilege escalation detection enhancing accuracy through temporal graph attention and reinforcement learning",
+    "updated": "2026-08-05",
+    "url": "https://doi.org/10.3390/computers15080501",
+    "venue": "Computers"
+  },
+  {
     "abstract": "Data-driven approaches with formal guarantees have recently emerged as a powerful means for the verification and controller synthesis of complex dynamical systems. Interest in these methods is rapidly growing, as system models are often unavailable in practice, and challenges such as nonlinear behavior, uncertainty, and the curse of dimensionality typically render accurate modeling infeasible. These difficulties motivate leveraging limited data collected from the system while still providing formal guarantees on its overall behavior. The community has therefore proposed a few hundred articles on the development of data-driven frameworks that enable the formal verification and synthesis of dynamical systems without explicit models, addressing complex specifications beyond stability. Despite this rapid growth, existing results remain scattered and lack a coherent organization, limiting a clear understanding of their principles, distinctions, and practical potential. This survey fills this gap by providing a comprehensive overview of these data-driven methods for both deterministic and stochastic dynamical systems. We structure the literature around three main methodological pillars in formal methods: (in)finite-abstraction-based techniques, functional certificate approaches, such as control barrier certificates, and compositional methods. For each of these approaches, we classify the resulting data-driven guarantees into three main categories: (i) statistical guarantees grounded in probably approximately correct and scenario-based frameworks, (ii) guarantees derived from Lipschitz continuity, and (iii) guarantees exploiting structural properties. While the literature on deterministic systems is considerably richer, we also devote particular attention to the stochastic counterpart, highlighting the inherent differences and challenges that arise compared to the deterministic case.",
     "analysis": {},
     "authors": [
@@ -108,18 +271,141 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Abstract: Nanophotonic semiconductors and advanced materials intelligence are emerging as a unified foundation for energy-efficient computation, optical communication, precision sensing, quantum and neuromorphic systems, and resilient industrial innovation. This monograph develops a multiscale scholarly architecture linking material composition, electronic structure, nanoscale geometry, light-matter interaction, fabrication processes, device performance, system integration and lifecycle sustainability. It advances research designs that treat uncertainty, reproducibility and governance as integral parts of scientific reasoning. Statistical chapters formulate hierarchical, causal, Bayesian and reliability models for explaining process-structure-property relationships and supporting robust multiobjective decisions. Machine-learning chapters examine multimodal representation learning, physics-informed operators, generative inverse design, transfer across laboratories and foundries, and assurance through calibration, interpretability and monitoring. A scalable engineering lifecycle connects semantic data architectures, digital twins, high-performance and edge computing, provenance, MLOps and cybersecurity. Sectoral analysis extends the framework to optical interconnects, sustainable accelerators, environmental and health sensing, quantum and secure communication, circular manufacturing and regional innovation systems. Throughout, the analysis connects South Asian, European, African and American research ecosystems while emphasizing evidence quality, material responsibility, supply resilience and public value. The resulting models, protocols, metrics and governance artifacts support adaptation into research handbooks, advanced curricula, industrial roadmaps and multi-year DeepTech programmes. Keywords nanophotonics, semiconductor materials, advanced materials intelligence, sustainable computing, light-matter interaction, photonic integrated circuits, inverse design, materials informatics, physics-informed machine learning, neural operators, causal inference, Bayesian calibration, reliability engineering, digital twins, scientific MLOps, optical interconnects, neuromorphic photonics, quantum photonics, lifecycle assessment, circular electronics, semiconductor manufacturing, trustworthy artificial intelligence, DeepTech governance, planetary resilience",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "07a9ca9416885d6848ec1eed59830fb3075c350ac7dbb6fa288d98eacb797751",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb5jy-978-81-688921-5-6",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172377876",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1731833/Download Full-Text Research Book PDF Pp1-76PII5.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Nanophotonics",
+      "Systems engineering",
+      "Resilience (materials science)",
+      "Reliability (semiconductor)",
+      "Engineering",
+      "Data science",
+      "Neuromorphic engineering",
+      "Artificial intelligence",
+      "Knowledge management",
+      "Aerospace",
+      "Management science",
+      "Terminology",
+      "Stakeholder",
+      "Coherence (philosophical gambling strategy)",
+      "Consumables",
+      "Architecture framework",
+      "Big data",
+      "Photonics"
+    ],
+    "source_id": "https://openalex.org/W7172377876",
+    "title": "Nanophotonic Semiconductors and Advanced Materials Intelligence for Sustainable Computing and DeepTech Innovation",
+    "title_key": "nanophotonic semiconductors and advanced materials intelligence for sustainable computing and deeptech innovation",
+    "updated": "2026-08-06",
+    "url": "https://doi.org/10.62311/nesx/rb5jy-978-81-688921-5-6",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Abstract: Sparse tensor-network quantum machine learning offers a disciplined route for representing, learning and reasoning over high-dimensional systems whose structure is too costly to treat as an undifferentiated state space. This monograph develops an integrated research architecture connecting sparse encodings, tensor-network factorizations, hybrid quantum-classical learning, uncertainty analysis, causal explanation, predictive validation, scalable data engineering and governance. The argument is that quantum advantage, where it becomes scientifically meaningful, must be evaluated as a property of an end-to-end research design rather than of an isolated circuit or benchmark. Five chapters move from foundational representation and uncertainty to probabilistic and causal modeling, trustworthy prediction, reproducible MLOps, and sectoral applications in simulation, cybersecurity, materials research, climate intelligence, space systems and scientific discovery. Mathematical formulations, algorithmic protocols, evaluation metrics, risk controls and decision artifacts are embedded throughout. The framework is designed for heterogeneous research ecosystems across South Asia, Europe, Africa and the Americas, where infrastructure, regulation, skills and public-interest priorities differ substantially. The resulting perspective treats sparse tensor-network quantum machine learning as a program of accountable scientific computation: one that compresses complex structure while preserving inferential meaning, records assumptions and provenance, tests robustness under realistic deployment conditions, and converts technical outputs into governable research and policy instruments. Keywords Sparse tensor networks, quantum machine learning, matrix product states, tensor trains, quantum feature maps, hybrid quantum-classical computing, scientific simulation, cybersecurity analytics, causal inference, Bayesian calibration, uncertainty quantification, distribution shift, adversarial robustness, explainable quantum AI, reproducible research, quantum MLOps, data provenance, privacy engineering, digital twins, materials discovery, climate intelligence, post-quantum security, research governance",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "717d1b7051eea590ae50137a3d87895895247c2902aae9aa344bb0450fd09526",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb8jy-978-81-688729-2-9",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: adversarial robustness",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172132965",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1728592/Download Full-Text Research Book PDF Pp 1-81B8.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "excluded phrase: adversarial robustness"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Robustness (evolution)",
+      "Probabilistic logic",
+      "Data science",
+      "Artificial intelligence",
+      "Scalability",
+      "Machine learning",
+      "Theoretical computer science",
+      "Quantum",
+      "Tensor product",
+      "Quantum computer",
+      "Argument (complex analysis)",
+      "Quantum machine learning",
+      "Causal structure",
+      "Raw data",
+      "Feature vector",
+      "Big data",
+      "Quantum state",
+      "Data structure",
+      "Bayesian inference",
+      "Quantum key distribution",
+      "Data mining",
+      "Representation (politics)",
+      "Perspective (graphical)"
+    ],
+    "source_id": "https://openalex.org/W7172132965",
+    "title": "Sparse Tensor-Network Quantum Machine Learning for Simulation, Cybersecurity and Scientific Discovery",
+    "title_key": "sparse tensor network quantum machine learning for simulation cybersecurity and scientific discovery",
+    "updated": "2026-08-03",
+    "url": "https://doi.org/10.62311/nesx/rb8jy-978-81-688729-2-9",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Microarchitectural side-channels leak data through caches, branch predictors, store buffers, and speculative execution. Evaluating defenses at cycle-model fidelity has forced a choice between functional tools (Spike, QEMU) and gem5’s hours-long Linux boots. ARCHER is a cycle-model-relative RV64IMAFDC RISC-V emulator with pluggable superscalar out-of-order execution, coherent caches, simultaneous multithreading, 1 to 16 harts, and thirteen speculation policies: an unrestricted baseline plus five classical defenses and seven new defenses spanning issue-gate, predictive-redirect, and selective-cleanup mechanism families. It boots Linux 6.6 in under three minutes, runs 3.7× faster (geometric mean) than gem5’s DerivO3CPU on head-to-head bare-metal microbench, matches gem5 within ±20% on 4 of 10 workloads, matches Chipyard’s fab-ready RTL to a 9.4% mean cycle-count deviation under two fitted match-configurations, and produces bit-identical architectural output to QEMU at a median 88× host-throughput advantage over Chipyard’s Verilator flow. Every published Spectre-family defense drives leakage to zero at sub-0.3% instructions-per-cycle (IPC) loss on a full Linux boot, and each new policy is validated on the attack surface its mechanism defends. The Adaptive Memory Encryption Scheme (AMES) adds a bus-layer engine with four authenticated ciphers (each validated bit-exact against its published specification) and per-leaf mask-XOR for Differential Power Analysis (DPA) hardening; a first-order Correlation Power Analysis consistency check confirms the direction of the theoretical bound under the shipped leakage model. Together, ARCHER and AMES provide a single INI-configurable environment for cycle-model side-channel evaluation in minutes rather than hours.",
     "analysis": {},
     "authors": [
       "Jyotiprakash Mishra",
       "Sanjay K. Sahay",
       "Swati Mishra",
-      "Aman Pathak"
+      "aman Pathak"
     ],
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "ea839a91f81b352bd9839c4110cc6c01c8d6fc3f1740d40d05cbfe869efe2f45",
+    "content_hash": "f517cb308112b578af99faae5416d6a107146cc4617ce2bcf5f6e032ddc97be1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers15080479",
     "evidence_level": "abstract",
@@ -127,7 +413,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171559005",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact",
       "OpenAlex: cache coherence transition coverage verification",
@@ -144,7 +430,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -185,6 +471,136 @@
     "updated": "2026-07-30",
     "url": "https://doi.org/10.3390/computers15080479",
     "venue": "Computers"
+  },
+  {
+    "abstract": "This research presents a two-stage pipeline for user-level suicide risk detection from Reddit: first, inference-only prompting with summarization; second, fine-tuned encoder classification with explainability and expert validation. The data are user-level: each of the 500 C-SSRS Reddit items is one user’s chronologically concatenated posts and comments (a user timeline), annotated by psychiatrists. Stage one: six prompting strategies zero-shot, few-shot, chain-of-thought, tree-of-thought, least-to-most, and self-consistency are evaluated across six LLMs on multi-class and binary formulations; simple zero-shot achieves the highest balanced accuracy (0.53 multi-class). Error analysis shows longer inputs associate with misclassification (p = 0.002); domain-specific summarization (timelines >2,000 tokens) reduces length by 44%, preserves semantic fidelity (BERTScore F1 = 0.85), improves smaller models (up to 10%), and yields roughly 32% cost savings. Classical baselines (best BA = 0.31) underscore LLM advantages. Stage two: the mental-longformer-base-4096 encoder is fine-tuned on summarized C-SSRS and eRisk 2025 timelines for binary (risk vs. no risk) classification. A 7-configuration ablation over C-SSRS, eRisk, and ReDSM5 motivates the C-SSRS+eRisk main model (mean BA 0.89±0.01; best 0.90), with zero-shot transfer to external datasets (e.g., Twitter BA 0.85, ROC-AUC 0.92). Integrated Gradients and attention visualizations provide token-level explanations; three independent clinicians rate clinical-style summaries of model rationales (84% majority agreement). Multi-class addresses granularity; binary and fine-tuning address robustness. Deployment requires large-scale validation, fairness assessment, and human oversight.",
+    "analysis": {},
+    "authors": [
+      "Aditya Tekale"
+    ],
+    "categories": [],
+    "content_hash": "8ee046791a9c92aff080ef15376a2042f06e39b82fc09da6539cfe10413513a1",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.31979/etd.ewrn-xhac",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171966200",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9298&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Timeline",
+      "Pipeline (software)",
+      "Automatic summarization",
+      "Fidelity",
+      "Encoder",
+      "Binary number",
+      "Information retrieval",
+      "Artificial intelligence",
+      "Semantics (computer science)",
+      "Software deployment",
+      "Authentication (law)",
+      "Natural language processing",
+      "Transfer (computing)",
+      "Backup",
+      "Binary data",
+      "Binary code",
+      "Data mining",
+      "Machine learning",
+      "Data science",
+      "World Wide Web",
+      "Point (geometry)",
+      "Matching (statistics)",
+      "Swap (finance)",
+      "Scheme (mathematics)",
+      "Decoding methods",
+      "Binary classification"
+    ],
+    "source_id": "https://openalex.org/W7171966200",
+    "title": "Timelines Over Tokens",
+    "title_key": "timelines over tokens",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.ewrn-xhac",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "As the number of transistors in modern processors increases, heat dissipation has become a major bottleneck to scalability. The use of 3D stacking further intensifies this problem, as heat from multiple layers can accumulate vertically. These challenges create a growing need for tools that can accurately and efficiently simulate the thermal behavior of 3D chips during design and validation. Several existing tools model thermal behavior for 3D-stacked chips and can simulate average heat over large spatial regions or long time intervals. However, when heat is concentrated in a small area or over a short time window, such models can miss localized hotspots. Conversely, when heat is distributed broadly, coarse averaging can overstate thermal risk. More fine-grained simulation results can be achieved through gate-level simulation. However, these exhibit prohibitively long runtimes when simulating real-world workloads. To this end, this thesis presents RThermaL, a novel method for gate-level power and thermal simulation by using per-instruction power mappings with a GPU-accelerated thermal simulation workflow. RThermaL works by linking individual instructions to gate-level power dissipation in a physically accurate implementation of a processor layout. Starting from RTL-level Verilog designs, the framework performs post-layout instruction characterization to construct a database of per-instruction spatial power maps. These maps can then be used to reconstruct temporal and spatial heat inputs to achieve significant speedups for thermal simulations. Our evaluation shows that, for the same targeted workload, our approach achieves a 5000× runtime improvement over full gate-level simulation. Compared to existing thermal solvers, it delivers a 6× runtime improvement. Equivalently, under the same time budget, our method provides 15,000× finer temporal resolution and 4× finer spatial resolution, making detailed thermal analysis practical for real-world workloads.",
+    "analysis": {},
+    "authors": [
+      "Peter Xiong"
+    ],
+    "categories": [],
+    "content_hash": "4b29abdce6c07502281f5c3ea4a470d0b9aeda3fcc18de302f0a9ebe798eaf69",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.31979/etd.x48p-hs5d",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171978116",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9343&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-28",
+    "relevance_reasons": [
+      "hardware/processor object: processor, rtl, verilog",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Bottleneck",
+      "Computer science",
+      "Thermal",
+      "Thermal management of electronic devices and systems",
+      "Power (physics)",
+      "Construct (python library)",
+      "Stacking",
+      "Verilog",
+      "Dissipation",
+      "Computational science",
+      "Parallel computing",
+      "Transistor",
+      "Co-simulation",
+      "Thermal resistance",
+      "Context (archaeology)",
+      "Real-time computing",
+      "Backup",
+      "Heat transfer",
+      "Real-time simulation",
+      "Simulation",
+      "Transient (computer programming)",
+      "Heat generation",
+      "Rollback"
+    ],
+    "source_id": "https://openalex.org/W7171978116",
+    "title": "RThermaL",
+    "title_key": "rthermal",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.x48p-hs5d",
+    "venue": "未记录"
   },
   {
     "abstract": "Scaling monolithic multicores is increasingly constrained by power/thermal limits, yield, and rising manufacturing and testing costs. Chiplet designs address these challenges by partitioning large dies into smaller parts (typically multiple core-complex dies and an I/O die) linked via high-bandwidth physical fabrics (PHY). As bandwidth and wiring density scale, however, these short-reach links are pushed closer to their signal-integrity limits, increasing susceptibility to noise, crosstalk, and channel loss, motivating stronger link-level reliability mechanisms such as forward error correction (FEC). Despite this trend, state-of-the-art simulation infrastructures often approximate inter-chiplet links using oversimplified, fixed-latency models. Such abstractions overlook the inherently dynamic, runtime-dependent behavior of the PHY -- including channel conditions (e.g., signal-to-noise ratio shifts, signal crosstalk, clock jitter), iterative decoder convergence and packet retransmissions, and application dynamics (e.g., LLC-misses that travel across chiplet boundaries) -- all of which are hard to determine offline. We show that neglecting these effects distorts inter-chiplet packet-level timing and high-level performance metrics such as IPC, leading to off-trend simulation results. We present DICE, an in-simulation, runtime PHY modeling in gem5 that captures the end-to-end inter-chiplet datapath, including QC-LDPC encoding/decoding, PAM4 modulation, lossy-channel transmission, LLR-based demodulation, adaptive packet re-sending, and PHY-level flow control between chiplets.",
@@ -237,7 +653,7 @@
       "Maleeha Khan"
     ],
     "categories": [],
-    "content_hash": "f87aca51f8a74f55fd30f0a328ac2207f77cf1bcf1eeca5be028d2803a86d910",
+    "content_hash": "fa22ce52e10a8902c29a916bcf391bac695f69df29925eeecebad8716360e735",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.67728/bmp.2026.005",
     "evidence_level": "abstract",
@@ -245,7 +661,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171835959",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: cache coherence transition coverage verification"
     ],
@@ -259,7 +675,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Legitimacy",
@@ -301,8 +717,118 @@
     "source_id": "https://openalex.org/W7171835959",
     "title": "When Disruption Never Ends: Hybridisation as Permanent Adaptive Capability and the Emergence of Inclusive Resilience in African Digital Tutoring Ecosystems",
     "title_key": "when disruption never ends hybridisation as permanent adaptive capability and the emergence of inclusive resilience in african digital tutoring ecosystems",
-    "updated": "2026-07-31",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.67728/bmp.2026.005",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "LLM-based web navigation agents fail on the majority of tasks while consuming substantial computational resources before failure becomes apparent. This thesis investigates whether closed sequential pattern mining on the first K steps of agent execution traces can predict task failure early enough to enable meaningful computational savings with interpretable justification. We develop a two-phase system: an offline pipeline that symbolizes agent traces, extracts K-step prefixes, mines closed patterns via BIDE+, and ranks them by failure precision; and an online detector that matches live executions against the resulting pattern library. We evaluate on 1,544 MiniWoB++ traces across three open-weight language models (Llama-3.2-3B, Qwen-2.5-7B, Mistral-7B) using five evaluation configurations of increasing difficulty, with cross-benchmark transfer analysis on 577 WebArena shopping traces. Eight detection methods are compared, including neural baselines (Bi-LSTM, DeepLog), feature-engineering methods, and targeted pattern mining. BIDE Coverage achieves the highest failure detection F1 at K=3 (0.717) across all configurations, outperforming neural methods that require 8–10 steps to reach comparable accuracy. On the hardest evaluation—natural failures versus multi-step successes only—BIDE leads all methods from K=5 through K=10. At the recommended operating point (K=5, 92% precision), the system achieves 26.3% overall token savings with 3.2% impact on successful tasks. The mined pattern library of 32 closed patterns organizes into four interpretable failure categories—recovery, validation, navigation, and context failures—each with concrete repair recommendations. Cross-benchmark transfer is model-dependent, with an inverse correlation between models’ self-monitoring capability and pattern transferability.",
+    "analysis": {},
+    "authors": [
+      "Sergio Talavera"
+    ],
+    "categories": [],
+    "content_hash": "dc89a52ce86005790684540d7d8decc00b8a70d7ed63f25f70c69354527648d4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31979/etd.mha6-7b5u",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171973064",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/context/etd_theses/article/9351/viewcontent/1275602.pdf",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Pipeline (software)",
+      "Computer science",
+      "Context (archaeology)",
+      "Task (project management)",
+      "Security token",
+      "Point (geometry)",
+      "Artificial intelligence",
+      "Data mining",
+      "Single point of failure",
+      "Machine learning",
+      "Sequential Pattern Mining",
+      "Transfer (computing)",
+      "Artificial neural network",
+      "Crawling",
+      "Event (particle physics)",
+      "Transfer of learning",
+      "Bayesian probability",
+      "Pattern recognition (psychology)"
+    ],
+    "source_id": "https://openalex.org/W7171973064",
+    "title": "Early Failure Detection in Web Navigation Agents via Closed Sequential Pattern Mining",
+    "title_key": "early failure detection in web navigation agents via closed sequential pattern mining",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.mha6-7b5u",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Advancements in artificial intelligence (AI) improve the lives of people every day with tools like the auto-captioning of videos, improved screen-reader capabilities, and advanced mobility control through speech. However, are all groups of people benefiting from AI or are some being overlooked and left out? Although AI tools made for people with disabilities (PWDs) have improved their lives, AI for the general population generally ignores the experiences of PWDs, making them unable to interact with and benefit from technology. This research evaluates ChatGPT and Gemini in Gmail for usability fairness and analyzes how current regulations and development processes fail to account for the uniqueness of GenAI. Through manual and automatic testing, common end-user GenAI experiences are evaluated using current technical standards and a proposed AI-specific framework. The framework has been ratified in accordance with findings of user testing. This framework serves to build on the experiences of PWD using these technologies, to create a more robust guide for developers, and to showcase how usable experiences for PWD are possible and achievable.",
+    "analysis": {},
+    "authors": [
+      "Megan Gross"
+    ],
+    "categories": [],
+    "content_hash": "925c041faead781d2b389eb2c343f8410af41e94eafbdb5d92894e04ab0b457d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31979/etd.4bfb-28gb",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7171959882",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=9330&context=etd_theses",
+    "primary_category": "",
+    "published": "2026-07-27",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "USable",
+      "Usability",
+      "Computer science",
+      "Population",
+      "Control (management)",
+      "Knowledge management",
+      "Human–computer interaction",
+      "Management science",
+      "Data science",
+      "Process management",
+      "Internet privacy",
+      "Artificial intelligence",
+      "Applications of artificial intelligence"
+    ],
+    "source_id": "https://openalex.org/W7171959882",
+    "title": "Accessibility Fairness Practices in AI Applications for People with Disabilities",
+    "title_key": "accessibility fairness practices in ai applications for people with disabilities",
+    "updated": "2026-08-02",
+    "url": "https://doi.org/10.31979/etd.4bfb-28gb",
     "venue": "未记录"
   },
   {
@@ -923,8 +1449,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：RISC-V’s open and extensible design improves flexibility, but it also permits vendors to customize trap behavior and reserved opcode space in ways that can affect exception handling. This paper presents a scoping review of RISC-V exception-handling security, focusing on how traps, privilege transitions, control registers, and handler routines can become attack surfaces when they are not correctly protected. We organize the literature by a five-stage exception lifecycle and map documented attacks and defenses to the architectural state they affect. Our review shows that exception-handling vulnerabilities arise from exposed control registers, insufficiently protected trap entry and return paths, and flawed handler execution. Recent attacks, such as GhostWrite, halt-and-catch-fire conditions, and side-channel exploits, illustrate how weaknesses in exception management can lead to privilege escalation, denial of service, or data leakage. In contrast, defenses are unevenly distributed across the lifecycle: backward-edge return-time integrity is addressed by multiple dedicated mechanisms, while dispatch-time and privilege-transition protection remain largely indirect and are often embedded within broader trusted-execution designs. Because the primary studies report heterogeneous cost metrics, the overhead values we extract are presented as reported rather than normalized across a common benchmark. The literature suggests that lightweight mechanisms, such as Physical Memory Protection and software-based control-flow enforcement, generally incur modest overhead, whereas stronger approaches, such as CHERI-RISC-V and Trusted-Execution Environments, may impose substantially higher costs on exception-heavy workloads. Overall, our findings indicate that exception handling should be treated as a security-critical boundary and that future work should emphasize stage-specific defenses, formal verification, and tighter integration between hardware and software protections."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Mina Soltani Siapoush",
@@ -1813,14 +2339,14 @@
       "Ben Slivinski"
     ],
     "categories": [],
-    "content_hash": "ffb7c4fd3318a8c70ed2f97337b0da542c2a38869d0316d95cd8f6d6a4928529",
+    "content_hash": "5cd4f73120a2926631bb5925dd3af04e897d75a26bc1265a0261f5095d0f480a",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2607-01223v4",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "Semantic Scholar: cache coherence transition coverage verification"
@@ -1835,16 +2361,92 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.LO",
+      "cs.SE"
     ],
     "source_id": "2607.01223v4",
     "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
     "title_key": "theoria rewrite acceptability verification over informal reasoning states",
     "updated": "2026-07-20",
-    "url": "https://www.semanticscholar.org/paper/1b7f5d662bcbfad7e808eeb6ef991b71ab01a58f",
+    "url": "http://arxiv.org/abs/2607.01223v4",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Cloud workloads combine software components from different parties to process sensitive data. Each component has its own trust model - it must protect its assets from the rest of the system, yet share sensitive data with components it cannot trust to keep confidential. This tension requires composing isolation boundaries for confidentiality and encapsulation. Unfortunately, the cloud offers no direct way to compose such boundaries, forcing tenants to assemble, deploy, and maintain their own solutions. This paper shifts that burden back to the infrastructure by making composable, attestable isolation a first-class systems abstraction. We present Tyche, a security monitor that centers isolation around a unified composable abstraction: security domains (SDs). An SD is an execution environment whose access to machine resources - memory, cores, devices - is controlled through explicit capabilities. A small set of capability operations enables SDs to partition, share, and reclaim resources; by nesting recursively, SDs compose attestable trust boundaries for confidentiality and encapsulation. Tyche attests these compositions, providing end-to-end security guarantees for workloads made of mutually distrustful components. As a first-class cloud primitive, this single abstraction subsumes enclaves, sandboxes, CVMs, and their compositions. Tyche provides composable isolation without sacrificing compatibility with existing hardware and software stacks. It runs on commodity x86 64 hardware without security extensions, and a RISC-V prototype demonstrates portability across platforms. Our SDK composes isolation for unmodified workloads within SDs with minimal overhead. In a confidential LLM inference scenario with mutually distrustful users, model owners, and cloud providers, the slowdown is just 2% compared to bare-metal Linux.",
+    "analysis": {},
+    "authors": [
+      "Adrien Ghosn",
+      "Charly Castes",
+      "Neelu S. Kalani",
+      "Yuchen Qian",
+      "Marios Kogias",
+      "Edouard Bugnion"
+    ],
+    "categories": [],
+    "content_hash": "293730e68adaf3da85969efebecff084a4e3ad142618cf9eb39d6e60bcf04e6d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-01",
+    "id": "openalex-w4415142875",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing",
+      "OpenAlex: microarchitectural path coverage processor fuzzing",
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2507.12364",
+    "primary_category": "",
+    "published": "2026-07-01",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 3,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Cloud computing",
+      "Computer security",
+      "Confidentiality",
+      "Mandatory access control",
+      "Isolation (microbiology)",
+      "Abstraction",
+      "Access control",
+      "Software portability",
+      "Correctness",
+      "Cloud computing security",
+      "Threat model",
+      "Debugging",
+      "Distributed computing",
+      "Cryptography",
+      "Trusted computing base",
+      "Service provider",
+      "Overhead (engineering)",
+      "Operating system",
+      "Backward compatibility",
+      "Computer security model",
+      "Trusted Computing",
+      "Trusted Platform Module",
+      "Security analysis"
+    ],
+    "source_id": "https://openalex.org/W4415142875",
+    "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
+    "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
+    "updated": "2026-08-01",
+    "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
   {
@@ -2354,6 +2956,85 @@
     "updated": "",
     "url": "https://doi.org/10.1145/3779208.3785280",
     "venue": "ACM Asia Conference on Computer and Communications Security"
+  },
+  {
+    "abstract": "",
+    "analysis": {
+      "analysis_mode": "摘要级占位（未全文核验）",
+      "conclusion": "尚未核验正文，因此不对论文最终结论作确定性概括。",
+      "deep_reading": "优先阅读 Introduction、Background/Threat Model、Method、Evaluation、Limitations/Discussion，并核对官方论文页、DOI、Artifact 和代码仓库。",
+      "evaluation": "尚未读取实验章节。当前不能确认实验平台、基线、公平预算、统计显著性、漏洞数量、运行开销或 Artifact 可复现性。",
+      "evidence_level": "metadata",
+      "follow_up_questions": [
+        "论文的在线反馈信号和最终 Oracle 分别是什么？",
+        "实验是否包含公平的 random、通用 RTL coverage 和领域专用 coverage 基线？",
+        "论文是否提供开源 Artifact、真实漏洞、CVE 或可复现 PoC？"
+      ],
+      "introduction": "尚未读取论文正文，不能可靠重建作者在 Introduction 中提出的研究缺口、威胁模型和贡献边界。",
+      "key_contribution": "待全文核验；当前仅能确认论文题名为《HARTBREAKER: Deterministic Fuzzing of Multi-Hart RISC-V CPUs with Non-Deterministic Programs》，初步归入“Multi-Hart, Memory Consistency & Cache Coherence”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+      "language": "zh-CN",
+      "limitations": "尚未核验正文。至少需要检查方法是否只适用于特定 ISA、处理器、协议、仿真器或人工模板，以及实验是否存在目标泄漏和基线不公平。",
+      "method": "尚未读取论文正文。请勿将检索关键词或摘要中的宣传性表述当作完整方法；后续需核对输入生成、反馈、Oracle、DUT、基线和实现细节。",
+      "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
+      "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
+    },
+    "analysis_attempts": 1,
+    "analysis_last_attempt": "2026-08-08",
+    "analysis_status": "fulltext_unavailable",
+    "authors": [
+      "Quentin Bordier",
+      "Tobias Kovats",
+      "Flavien Solt",
+      "Kaveh Razavi"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "3be4f53935eab174710ea53e288c730f66a308bc6b9e0b80448b5cf0237c4f4c",
+    "curation_status": "included",
+    "doi": "https://doi.org/10.1109/isca66397.2026.00155",
+    "evidence_level": "metadata",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-08",
+    "fulltext_error": "未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL",
+    "fulltext_tried_urls": [],
+    "id": "openalex-w7172445858",
+    "included": true,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_candidate_fingerprint": "5a59d2c857673d977ae8bce1e9063b16222efbd8d050be08766c350fb80d1890",
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2026-06-01",
+    "relevance_reasons": [
+      "manual direct seed title"
+    ],
+    "relevance_score": 100,
+    "relevance_tier": "A",
+    "scope": "core",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Fuzz testing",
+      "Computer science",
+      "Programming language",
+      "Algorithm",
+      "Software",
+      "Operating system",
+      "Parallel computing",
+      "Key (lock)",
+      "Theoretical computer science",
+      "Set (abstract data type)"
+    ],
+    "source_id": "https://openalex.org/W7172445858",
+    "title": "HARTBREAKER: Deterministic Fuzzing of Multi-Hart RISC-V CPUs with Non-Deterministic Programs",
+    "title_key": "hartbreaker deterministic fuzzing of multi hart risc v cpus with non deterministic programs",
+    "updated": "2026-08-05",
+    "url": "https://doi.org/10.1109/isca66397.2026.00155",
+    "venue": "未记录"
   },
   {
     "abstract": "Large Language Models with Chain-of-Thought reasoning capabilities represent valuable intellectual property, yet existing black-box watermarking methods often trade robustness for reasoning fidelity by perturbing final answers or relying on fragile trigger patterns. We propose BiCoT, a watermarking framework that embeds ownership signals into the internal geometry of reasoning traces by aligning high-saliency structural anchors with a private signature subspace while regularizing ordinary control tokens to preserve semantic capacity. This design couples the watermark with reasoning-relevant representations, making removal difficult without disrupting the features that support coherent reasoning. To enable verification under model theft and representation drift, we introduce Robust Subspace Registration (RSR), a Top- logprob-based black-box verifier that uses sentinel tokens to calibrate systematic shifts in the output distribution. Experiments show that BiCoT preserves reasoning fidelity across diverse complex reasoning tasks while achieving robust detection under fine-tuning, quantization, model-level perturbations, and adaptive output-level attacks across in-domain and out-of-distribution settings.",
@@ -3005,8 +3686,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The increasing complexity of modern processor designs has posed significant challenges in achieving comprehensive coverage metrics for functional verification of Register-Transfer Level (RTL) designs. Despite the availability of white-box RTL models, recent advancements in hardware fuzzing have predominantly focused on grey-box methodologies, which lack effective utilization of internal logic and structural information.This paper presents a novel approach that addresses this limitation by extracting control flow graphs (CFGs) from processor designs and analyzing the dependencies within these graphs. The analyzed CFGs serve as heuristic information to guide the generation of processor stimuli. By effectively leveraging internal logic information during the simulation of complex processors, this method provides interpretable heuristics for test generation. Experimental results demonstrate the effectiveness of utilizing control flow information derived from processor designs in enhancing the convergence speed of coverage metrics and guiding test sequences towards hard-to-reach states."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Ziyue Zheng",
@@ -3101,8 +3782,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern processors are increasingly complex, with rich microarchitectural features and heterogeneous components. This complexity expands the attack surface and makes security vulnerabilities harder to detect using traditional security techniques. Hardware fuzzing has emerged as a scalable approach for uncovering insecure behaviors in modern processors. However, it often struggles to (i) explore hard-to-reach design spaces due to its randomness and (ii) locate the root causes of vulnerabilities due to design complexity.This work presents advanced hybrid hardware fuzzing techniques that combine the complementary strengths of fuzzing, formal verification, and static analysis to systematically detect and localize vulnerabilities in processors. Specifically, we investigate (i) the use of formal verification to guide fuzzing toward hard-to-reach design spaces, thereby enabling the discovery of subtle vulnerabilities, and (ii) the use of static analysis to extract and monitor timing behaviors at the register-transfer level (RTL), enabling localization of timing vulnerabilities that can arise even in functionally correct designs.Finally, we outline future research directions, including using large language models to generate expert-informed tests, leveraging prior design knowledge to enhance fuzzing effectiveness on new processors, and transferring effective strategies from white-box fuzzing to black-box fuzzing environments."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Chen Chen",
@@ -3911,8 +4592,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The modularity of the RISC-V Instruction Set Architecture (ISA) has accelerated its adoption in security-critical domains, yet it introduces significant challenges for pre-silicon security validation. Current evaluation methods often rely on high-level emulation that overlooks microarchitectural side effects or post-silicon testing that identifies vulnerabilities too late in the design cycle. This paper presents RV-Sec5, a systematic framework for ISA-level security evaluation that leverages the gem5 simulator. Unlike standard simulators, RV-Sec5 introduces a methodology to map high-level security invariants—such as privilege isolation and memory protection—directly to automated, cycle-accurate instrumentation points within the ISA decoder. This approach bridges the semantic gap between abstract security policies and low-level hardware execution. We demonstrate the framework’s efficacy through a case study involving unauthorized Control and Status Register (CSR) modifications, showing how RV-Sec5 detects privilege escalation attempts and monitors microarchitectural anomalies, such as TLB flushes and cache state changes, in real-time."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Muhammad Awais",
@@ -4333,7 +5014,7 @@
     "fulltext_text_chars": 86567,
     "id": "arxiv-2512-21524v1",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -4349,7 +5030,7 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 7,
+    "seen_count": 9,
     "source": "arXiv",
     "source_categories": [
       "Fuzz testing",
@@ -4402,7 +5083,7 @@
       "Coverage, Oracles & Fuzzing Methodology",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "55a6eb8968605e5fa5cd49cacc897e171da294c2640497b76441c39e9bed934b",
+    "content_hash": "6371b67d3f2d21daf6eb9bee3059f2513935f44ec14ee778f7a45e61422a3e6c",
     "curation_status": "included",
     "doi": "https://doi.org/10.14722/ndss.2026.231486",
     "evidence_level": "full-text",
@@ -4413,7 +5094,7 @@
     "fulltext_text_chars": 100000,
     "id": "arxiv-2512-23438v1",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -4437,7 +5118,7 @@
     "relevance_score": 8,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 12,
+    "seen_count": 14,
     "source": "arXiv",
     "source_categories": [
       "Computer science",
@@ -4469,7 +5150,7 @@
     "source_id": "2512.23438v1",
     "title": "Fuzzilicon: A Post-Silicon Microcode-Guided x86 CPU Fuzzer",
     "title_key": "fuzzilicon a post silicon microcode guided x86 cpu fuzzer",
-    "updated": "2026-07-31",
+    "updated": "2026-08-05",
     "url": "https://doi.org/10.14722/ndss.2026.231486",
     "venue": "未记录"
   },
@@ -4510,7 +5191,7 @@
       "RISC-V Processor Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "9265f109f20d1424405a9dd9307dc55b7fefeb311a17df2c701a6b4eb9e245ec",
+    "content_hash": "aec78a817bdd8d39efc347cffee93b0e0a90cfb615791cd19d8d9b4e5a8ef16f",
     "curation_status": "included",
     "doi": "https://doi.org/10.14722/ndss.2026.240118",
     "evidence_level": "full-text",
@@ -4521,7 +5202,7 @@
     "fulltext_text_chars": 100000,
     "id": "arxiv-2512-04436v2",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -4540,7 +5221,7 @@
     "relevance_score": 100,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 10,
+    "seen_count": 12,
     "source": "arXiv",
     "source_categories": [
       "Fuzz testing",
@@ -4565,7 +5246,7 @@
     "source_id": "2512.04436v2",
     "title": "ReFuzz: Reusing Tests for Processor Fuzzing with Contextual Bandits",
     "title_key": "refuzz reusing tests for processor fuzzing with contextual bandits",
-    "updated": "2026-07-29",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.14722/ndss.2026.240118",
     "venue": "未记录"
   },
@@ -4999,6 +5680,60 @@
     "venue": "未记录"
   },
   {
+    "abstract": "NVIDIA GPUs underpin the vast majority of modern AI workloads.These workloads are ultimately executed in the form of Streaming Assembly (SASS), the lowest-level assembly for NVIDIA hardware.However, SASS remains largely undocumented, let alone well studied, posing a significant barrier to downstream security applications, such as security auditing, vulnerability discovery, binary hardening, etc.In this paper, we address this challenge with NVLift, a systematic framework that lifts NVIDIA GPU SASS into LLVM IR to enable downstream GPU binary analysis.To lift SASS instructions, NVLift reconstructs instruction semantics by consolidating prior reverse-engineering efforts and validating execution behaviors at runtime using cuda-gdb.To verify the semantic correctness of the lifted IR, we design and implement a differential testing pipeline by compiling the lifted IR into SASS and comparing the GPU execution results against the SASS generated from the reference CUDA kernel compilation.In total, NVLift supports 47 commonly used SASS instructions on the Turing architecture (SM75), covering 88.39% of instruction occurrence count in popular CUDA libraries.Using NVLift, we lifted 11 CUDA kernels, including representative DNN operators, and verified the semantic correctness of 5 kernels.We further provide a PoC implementation of GPU binary decompilation by translating the lifted LLVM IR into pseudo C code using RetDec.In sum, NVLift is a critical step towards enabling GPU binary analysis and downstream security applications.",
+    "analysis": {},
+    "authors": [
+      "Junpeng Wan",
+      "Louis Zheng-Hua Tan",
+      "Dave (Jing) Tian"
+    ],
+    "categories": [],
+    "content_hash": "180e1d646f25db199958450543c3f807c29204335164badd7f0d66ec68a95b4e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14722/bar.2026.23028",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: differential testing; security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w7172206056",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing",
+      "OpenAlex: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://doi.org/10.14722/bar.2026.23028",
+    "primary_category": "",
+    "published": "2026-01-01",
+    "relevance_reasons": [
+      "verification/fuzzing method: differential testing",
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Embedded system",
+      "Computational science",
+      "Software",
+      "Downstream (manufacturing)",
+      "Parallel computing",
+      "Key (lock)",
+      "Computer graphics (images)",
+      "Operating system",
+      "Cloud computing"
+    ],
+    "source_id": "https://openalex.org/W7172206056",
+    "title": "NVLift: Lifting NVIDIA GPU Assembly to LLVM IR for Downstream Security Applications",
+    "title_key": "nvlift lifting nvidia gpu assembly to llvm ir for downstream security applications",
+    "updated": "2026-08-06",
+    "url": "https://doi.org/10.14722/bar.2026.23028",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Hardware security has become a critical research area as integrated circuits increasingly serve as the foundation of sensitive and safety-critical systems. This chapter focuses on two key research directions: secure hardware design (secure-by-design) and hardware Trojans with their countermeasures. Secure-by-design emphasizes integrating security features such as access control, encryption, isolation, and side-channel resistance early in the VLSI design phase, rather than treating security as an afterthought. Early-stage security analysis using modern EDA tools enables the detection of vulnerabilities before fabrication, significantly reducing cost and risk. Since hardware flaws cannot be patched post-production, proactive security-aware design is essential for building trustworthy systems. The chapter also examines hardware Trojans—malicious modifications introduced during design or fabrication that can compromise functionality or leak sensitive information. It reviews major Trojan detection and prevention strategies, including trusted design flows, formal verification, and post-fabrication testing techniques. Together, these approaches highlight the importance of embedding security throughout the hardware lifecycle to ensure robust and reliable VLSI systems.",
     "analysis": {},
     "authors": [
@@ -5382,8 +6117,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Comprehensive exploration of the CPU architectural states in fuzzing is akin to generating diverse test cases, which include a reasonable distribution of opcode and diversity in instruction execution results (typically measured through write-back data). However, our analysis of state-of-the-art CPU fuzzers reveals that they exhibit high repetition in write-back data and an imbalanced distribution of opcodes during fuzzing. This paper presents DiveFuzz, which diversifies write-back data by finely controlling the operands of instructions at runtime, coupled with correlated contextual semantics, to generate instruction streams with diverse write-back data and semantic associations. Furthermore, DiveFuzz introduces a novel mutator that monitors the fuzzing process to dynamically adjust opcode distribution and accurately eliminate false positives. Our evaluations show that DiveFuzz significantly increases the diversity of instruction write-back data and achieves a more balanced opcode distribution compared to state-of-the-art fuzzers. Across five common coverage metrics, DiveFuzz achieves coverage 204× faster than DifuzzRTL and 114× faster than Cascade. We evaluated DiveFuzz on four well-known open-source RISC-V CPUs—XiangShan, CVA6, Rocket, and NutShell—uncovering 26 new bugs, 15 of which have CVE identifiers."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Zihui Guo",
@@ -5539,8 +6274,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Microarchitectural performance optimizations introduce information flows inside CPU implementations that exceed those defined by the Instruction Set Architecture (ISA). Microarchitectural vulnerabilities, such as constant-time violations and various classes of transient execution attacks, are subsets of these excessive information flows. We observe that an exploitable microarchitectural leakage is an excessive information flow that can affect the time it takes for the CPU to execute a particular instruction, creating a timing covert channel. We design MileSan, the first RTL sanitizer that is capable of detecting exploitable microarchitectural leakage by checking for the architecturally-observable differences between architectural and microarchitectural information flows. For a given program and CPU implementation, MileSan computes architectural flows using software taint tracking and microarchitectural flows using RTL taint tracking. Evaluating the exploitability of proof of concepts generated by previous microarchitectural fuzzers, we find cases that are in fact not exploitable and discover the particular microarchitectural components that enable exploitation for the rest. In addition to assessing exploitability, MileSan enables the generation of random test programs with strictly-defined architectural information flows of secret data using a novel technique called taint-aware in-situ simulation. Leveraging this capability, we build RandOS, a new microarchitectural fuzzer that generates random programs traversing different privilege levels and address spaces, akin to random operating systems. Evaluation using five RISC-V CPUs shows that RandOS not only detects known exploitable vulnerabilities 4.5x faster than the state of the art, but also discovers 19 new constant-time violations and transient execution vulnerabilities in well-tested CPUs, such as BOOM, CVA6 and OpenC910."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "T. Kovats",
@@ -5661,8 +6396,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The open and extensible RISC-V instruction set has enabled many new CPU vendors and implementations, but most commercial CPUs are closed-source, significantly hindering vulnerability analysis—especially for bugs exploitable from unprivileged user space. We present RISCover, a user-space framework for detecting architectural vulnerabilities in closed-source RISC-V CPUs. It compares instruction-sequence behavior across CPUs, identifying deviations without source code, hardware changes, or models, and achieving orders-of-magnitude speedups over RTL-based methods. Unlike prior work, RISCover runs user code on Linux directly on real hardware, exposing vulnerabilities exploitable by unprivileged attackers. Evaluated on 8 off-the-shelf CPUs from 3 different vendors, it uncovers 4 previously unknown vulnerabilities. Notably, GhostWrite lets unprivileged code write chosen bytes to physical memory, enabling arbitrary data leakage and full machine-mode execution, while 3 unprivileged ''halt-and-catch-fire'' bugs halt CPUs and misaligned zero-stores silently corrupt data. Our results highlight the pressing need for post-silicon fuzzing techniques. RISCover complements existing RTL-level fuzzers by enabling rapid and automated security analysis of closed-source CPUs."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Fabian Thomas",
@@ -5723,7 +6458,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "0a2cd61f20fd2f1550557811743e7e806e3c37173f29acfcdc63f666b99ce20b",
+    "content_hash": "2e03bea743d297c0ce9cddb9a9956f3f07c8f7dbfe3e0ec0b6aa30cce1dd1e08",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -5731,7 +6466,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -5744,7 +6479,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -5769,7 +6504,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-07-31",
+    "updated": "2026-08-05",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -6079,8 +6814,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Contention-based side channels, rooted in resource sharing, have emerged as a significant security threat in modern processors. These side channels allow attackers to leverage timing differences caused by conflicts in execution ports, caches, or interconnects to infer secret information such as cryptographic keys or enclave-resident data. Despite increasing awareness, detecting such channels remains challenging because triggering contentions requires precisely orchestrating specific microarchitectural states, which is often difficult in practice, especially for timing-sensitive contentions. This paper introduces Sonar, the first systematic and automated fuzzing framework designed to uncover contention side channels in processors. Our core idea is to leverage microarchitectural states to guide testcase generation, enabling the precise triggering of microarchitectural events with stringent conditions. Sonar is built on the key observation that multiplexers (MUXes) are hotspots for contention, as resource contention frequently involves data routing and signal selection, which are fundamentally implemented by MUXes in circuits. We first identify contention-critical states with side channel risks based on MUXes, and then utilize these runtime states to directly guide testcase generation via fuzzing, progressively approaching and ultimately triggering contentions. Finally, we employ a dual-differential comparison method to efficiently detect contention-induced side channels and simulate attack scenarios to assess their exploitability. Evaluated on two out-of-order RISC-V processors, Sonar uncovers 14 contention side channels, including 11 previously unknown. These results demonstrate the effectiveness of Sonar in uncovering potentially exploitable microarchitectural contentions."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kanqi Zhang",
@@ -6160,8 +6895,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern hardware incorporates reusable designs to reduce cost and time to market, inadvertently increasing exposure to security vulnerabilities. While formal verification and simulation-based approaches have been traditionally utilized to mitigate these vulnerabilities, formal techniques are hindered by scalability issues, while conventional simulation methods frequently overlook critical edge cases. Fuzzing, as a simulation-based strategy, has demonstrated considerable promise in enhancing the security of both software and hardware; however, it is impeded by challenges such as limited input coverage, difficulties in traversing branching paths, and the complexity of managing circuit parameters, in addition to the limited adaptability of existing hardware fuzzing techniques within industrial workflows. To address these limitations, we propose SymbFuzz, an innovative hybrid hardware fuzzing methodology that leverages symbolic execution to achieve superior coverage. SymbFuzz is the first hardware fuzzing technique to be implemented on the industry-standard Universal Verification Methodology (UVM), facilitating seamless integration into commercial hardware verification flows. SymbFuzz was evaluated on a diverse set of processor RTLs, including OpenTitan (Ibex), CVA6, Rocket-Core, and Mor1kx. These designs span a range of processor architectures and complexities. SymbFuzz detected all bugs previously found by existing fuzzers and additionally uncovered 14 new bugs, including a vulnerability in OpenTitan, reported in the CWE 2025 database. It also achieved up to 6.8 × faster convergence compared to traditional UVM random testing and over 2 × 104 additional functional coverage points compared to state-of-the-art fuzzers, demonstrating its effectiveness in improving RTL validation across varied processor architectures."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "S. Miftah",
@@ -6683,7 +7418,7 @@
     "venue": "arXiv"
   },
   {
-    "abstract": "Verification is a critical process for ensuring the correctness of modern processors. The increasing complexity of processor designs and the emergence of new instruction set architectures (ISAs) like RISC-V have created demands for more agile and efficient verification methodologies, particularly regarding verification efficiency and faster coverage convergence. While simulation-based approaches now attempt to incorporate advanced software testing techniques such as fuzzing to improve coverage, they face significant limitations when applied to processor verification, notably poor performance and inadequate test case quality. Hardware-accelerated solutions using FPGA or ASIC platforms have tried to address these issues, yet they struggle with challenges including host-FPGA communication overhead, inefficient test pattern generation, and suboptimal implementation of the entire multi-step verification process. In this paper, we present TurboFuzz, an end-to-end hardwareaccelerated verification framework that implements the entire Test Generation-Simulation-Coverage Feedback loop on a single FPGA for modern processor verification. TurboFuzz enhances test quality through optimized test case (seed) control flow, efficient inter-seed scheduling, and hybrid fuzzer integration, thereby improving coverage and execution efficiency. Additionally, it employs a feedback-driven generation mechanism to accelerate coverage convergence. Experimental results show that TurboFuzz achieves up to 2.23× more coverage collection than software-based fuzzers within the same time budget, and up to 571× performance speedup when detecting real-world issues, while maintaining full visibility and debugging capabilities with moderate area overhead.",
+    "abstract": "Verification is a critical process for ensuring the correctness of modern processors. The increasing complexity of processor designs and the emergence of new instruction set architectures (ISAs) like RISC-V have created demands for more agile and efficient verification methodologies, particularly regarding verification efficiency and faster coverage convergence. While simulation-based approaches now attempt to incorporate advanced software testing techniques such as fuzzing to improve coverage, they face significant limitations when applied to processor verification, notably poor performance and inadequate test case quality. Hardware-accelerated solutions using FPGA or ASIC platforms have tried to address these issues, yet they struggle with challenges including host-FPGA communication overhead, inefficient test pattern generation, and suboptimal implementation of the entire multi-step verification process. In this paper, we present TurboFuzz, an end-to-end hardware-accelerated verification framework that implements the entire Test Generation-Simulation-Coverage Feedback loop on a single FPGA for modern processor verification. TurboFuzz enhances test quality through optimized test case (seed) control flow, efficient inter-seed scheduling, and hybrid fuzzer integration, thereby improving coverage and execution efficiency. Additionally, it employs a feedback-driven generation mechanism to accelerate coverage convergence. Experimental results show that TurboFuzz achieves up to 2.23x more coverage collection than software-based fuzzers within the same time budget, and up to 571x performance speedup when detecting real-world issues, while maintaining full visibility and debugging capabilities with moderate area overhead.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 14 页，提取 71964 字符",
       "conclusion": "本文提出TurboFuzz，一个端到端硬件加速验证框架，在单个FPGA上实现覆盖驱动生成、自检和覆盖收集。实验表明覆盖收集最多2.23倍，性能加速最高571倍，并发现新bug。未来工作包括资源感知覆盖度量、多FPGA扩展、支持非RISC-V ISA。",
@@ -6712,7 +7447,7 @@
       "Haoran Wu",
       "Xueqi Li",
       "Sa Wang",
-      "D. Boland",
+      "David Boland",
       "Yungang Bao",
       "Kan Shi"
     ],
@@ -6720,7 +7455,7 @@
       "RISC-V Processor Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "deaccaba350034423783c6089fc03a1c4a711e4626201daaec75e62632a0e5be",
+    "content_hash": "dc31125e85bd60b3ae6858fd6c0aab8bd4e930eb6386c73fedbcd05795ae04bd",
     "curation_status": "included",
     "doi": "https://doi.org/10.1109/HPCA68181.2026.11408489",
     "evidence_level": "full-text",
@@ -6731,7 +7466,7 @@
     "fulltext_text_chars": 71964,
     "id": "arxiv-2509-10400v2",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -6749,17 +7484,17 @@
     "relevance_score": 9,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AR"
     ],
     "source_id": "2509.10400v2",
     "title": "TurboFuzz: FPGA Accelerated Hardware Fuzzing for Processor Agile Verification",
     "title_key": "turbofuzz fpga accelerated hardware fuzzing for processor agile verification",
     "updated": "2026-02-03",
-    "url": "https://doi.org/10.1109/HPCA68181.2026.11408489",
-    "venue": "International Symposium on High-Performance Computer Architecture"
+    "url": "http://arxiv.org/abs/2509.10400v2",
+    "venue": "arXiv"
   },
   {
     "abstract": "Virtual Prototypes (VPs) are important tools in modern hardware development. At high abstractions, they are often implemented in SystemC and offer early analysis of increasingly complex designs. These complex designs often combine one or more processors, interconnects, and peripherals to perform tasks in hardware or interact with the environment. Verifying these subsystems is a well-suited task for VPs, as they allow reasoning across different abstraction levels. While modern verification techniques like symbolic execution can be seamlessly integrated into VP-based workflows, they require modifications in the SystemC kernel. Hence, existing approaches modify and replace the SystemC kernel, or ignore the opportunity of cross-level scenarios completely, and would not allow focusing on special challenges of particular subsystems like peripherals. We propose CrosSym and SEFOS, two opposing approaches for a versatile symbolic execution of peripherals. CrosSym modifies the SystemC kernel, while SEFOS instead modifies a modern symbolic execution engine. Our extensive evaluation applies our tools to various peripherals on different levels of abstractions. Both tools' extensive sets of features are demonstrated for (1) different verification scenarios, and (2) identifying 300+ mutants. In comparison with each other, SEFOS convinces with the unmodified SystemC kernel and peripheral, while CrosSym offers slightly better runtime and memory usage. In comparison to the state-of-the-art, that is limited to Transaction Level Modelling (TLM), our tools offered comparable runtime, while enabling cross-level verification with symbolic execution.",
@@ -6963,8 +7698,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Symbolic execution of hardware designs is a path-based analysis that can deliver high quality coverage and security verification results. Unfortunately, the technique has historically struggled with the path explosion problem and, despite recent advances, remains expensive. We present SylQ-SV, a dedicated SystemVerilog symbolic execution engine that uses SMT query caching to improve execution times, reducing run time by up to 17% over the state of the art. SylQ-SV provides language support for all necessary SystemVerilog constructs, including SystemVerilog Assertions, to provide end-to-end verification workflows of the open-source designs most commonly appearing in the literature. We evaluate SYLQ-SV on the OR1200 CPU, the OpenTitan SoC with Ibex core, and two SoC designs from the HACK@DAC competitions (with PULPissimo core and CVA6 core, respectively). We make the SylQ-SV source code and all data used in the evaluation publicly available."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kaki Ryan",
@@ -6973,7 +7708,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "a31bfd19dfeb6857978fc1357487b8d6f1106783d5caa451727981ad198c98b7",
+    "content_hash": "3d65ce8bd2962ee4c40f8a6ebbcc21ccfa9f423c543247f3a635773da1795feb",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3676642.3736123",
     "evidence_level": "abstract",
@@ -6985,7 +7720,7 @@
     ],
     "id": "openalex-w4413014921",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -7001,7 +7736,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7014,7 +7749,7 @@
     "source_id": "https://openalex.org/W4413014921",
     "title": "<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching",
     "title_key": "scp syl scp q sv scaling symbolic execution of hardware designs with query caching",
-    "updated": "2026-07-29",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1145/3676642.3736123",
     "venue": "未记录"
   },
@@ -7070,7 +7805,7 @@
     "fulltext_text_chars": 87419,
     "id": "arxiv-2504-20934v1",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:\"transient execution\" OR all:\"speculative execution\") AND (all:fuzzing OR all:\"automated detection\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -7094,7 +7829,7 @@
     "relevance_score": 10,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 12,
+    "seen_count": 14,
     "source": "arXiv",
     "source_categories": [
       "Fuzz testing",
@@ -7136,8 +7871,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Tags, or metadata, enrich software with domain-specific information that is consumed by hardware to enforce security and testing policies during runtime. However, given a target architecture, developing custom compilers that encode tags can be tedious and time-consuming. We present COGENT, a highly flexible and feature-rich compiler toolchain for instruction tag generation on the RISC-V architecture. Central to this effort is a LLVM-based compiler that is supplemented with a tag-aware disassembler and a tag integrity checker. COGENT is capable of: (a) generating tags at one or more of varying granularity (per function, per basic block, or per instruction), and (b) associating variable-width tags (1-32 bits) to instructions, and arbitrary-width tags to each function or basic block. Additionally, COGENT is capable of emitting control-flow labels, which are crucial in asserting control-flow integrity (CFI), a runtime property that aids in detecting bugs and exploits that violate control flow. We evaluate the correctness of tags generated by COGENT's compiler and the associated performance penalties, along with how well COGENT preserves IR-level tags at the lower level. We provide three exemplar applications-Control Flow Integrity, Adaptive Tracing, and Hardware-Level Function Tracing that can leverage COGENT. The tagged code incurs an average cycle count overhead from 5.24% to 0.94% in the worst and best cases, respectively, making it ideal for debugging and testing applications, including fuzzing."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "David Demicco",
@@ -7297,76 +8032,6 @@
     "venue": "未记录"
   },
   {
-    "abstract": "Cloud workloads combine software components from different parties to process sensitive data. Each component has its own trust model - it must protect its assets from the rest of the system, yet share sensitive data with components it cannot trust to keep confidential. This tension requires composing isolation boundaries for confidentiality and encapsulation. Unfortunately, the cloud offers no direct way to compose such boundaries, forcing tenants to assemble, deploy, and maintain their own solutions. This paper shifts that burden back to the infrastructure by making composable, attestable isolation a first-class systems abstraction. We present Tyche, a security monitor that centers isolation around a unified composable abstraction: security domains (SDs). An SD is an execution environment whose access to machine resources - memory, cores, devices - is controlled through explicit capabilities. A small set of capability operations enables SDs to partition, share, and reclaim resources; by nesting recursively, SDs compose attestable trust boundaries for confidentiality and encapsulation. Tyche attests these compositions, providing end-to-end security guarantees for workloads made of mutually distrustful components. As a first-class cloud primitive, this single abstraction subsumes enclaves, sandboxes, CVMs, and their compositions. Tyche provides composable isolation without sacrificing compatibility with existing hardware and software stacks. It runs on commodity x86 64 hardware without security extensions, and a RISC-V prototype demonstrates portability across platforms. Our SDK composes isolation for unmodified workloads within SDs with minimal overhead. In a confidential LLM inference scenario with mutually distrustful users, model owners, and cloud providers, the slowdown is just 2% compared to bare-metal Linux.",
-    "analysis": {},
-    "authors": [
-      "Adrien Ghosn",
-      "Charly Castes",
-      "Neelu S. Kalani",
-      "Yuchen Qian",
-      "Marios Kogias",
-      "Edouard Bugnion"
-    ],
-    "categories": [],
-    "content_hash": "a6626d2b78d9627b72136e685fa805d4e14166bf2feb25077ac84d585f965c34",
-    "curation_status": "excluded",
-    "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
-    "evidence_level": "abstract",
-    "exclusion_reason": "hardware/processor object: risc-v; security relevance: security; missing object-method conjunction",
-    "first_seen": "2026-08-01",
-    "id": "openalex-w4415142875",
-    "included": false,
-    "last_seen": "2026-08-01",
-    "matched_queries": [
-      "OpenAlex: multi-hart RISC-V fuzzing"
-    ],
-    "pdf_url": "https://arxiv.org/pdf/2507.12364",
-    "primary_category": "",
-    "published": "2025-07-16",
-    "relevance_reasons": [
-      "hardware/processor object: risc-v",
-      "security relevance: security",
-      "missing object-method conjunction"
-    ],
-    "relevance_score": 2,
-    "relevance_tier": "D",
-    "scope": "excluded",
-    "seen_count": 1,
-    "source": "OpenAlex",
-    "source_categories": [
-      "Computer science",
-      "Cloud computing",
-      "Computer security",
-      "Confidentiality",
-      "Mandatory access control",
-      "Isolation (microbiology)",
-      "Abstraction",
-      "Access control",
-      "Software portability",
-      "Correctness",
-      "Cloud computing security",
-      "Threat model",
-      "Debugging",
-      "Distributed computing",
-      "Cryptography",
-      "Trusted computing base",
-      "Service provider",
-      "Overhead (engineering)",
-      "Operating system",
-      "Backward compatibility",
-      "Computer security model",
-      "Trusted Computing",
-      "Trusted Platform Module",
-      "Security analysis"
-    ],
-    "source_id": "https://openalex.org/W4415142875",
-    "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
-    "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-07-31",
-    "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
-    "venue": "未记录"
-  },
-  {
     "abstract": "Modern processors are equipped with single instruction multiple data (SIMD) instructions for fine-grained data parallelism. Compiler auto-vectorization techniques that target SIMD instructions face performance limitations due to insufficient information available at compile time, requiring programmers to manually manipulate SIMD instructions. SIMD intrinsics, a type of built-in function provided by modern compilers, enable programmers to manipulate SIMD instructions within high-level programming languages. Bugs in compilers for SIMD intrinsics can introduce potential threats to software security, producing unintended calculation results, data loss, program crashes, etc. To detect bugs in compilers for SIMD intrinsics, we propose RVISmith, a randomized fuzzer that generates well-defined C programs that include various invocation sequences of RVV (RISC-V Vector Extension) intrinsics. We design RVISmith to achieve the following objectives: (i) achieving high intrinsic coverage, (ii) improving sequence variety, and (iii) without known undefined behaviors. We implement RVISmith based on the ratified RVV intrinsic specification and evaluate our approach with three modern compilers: GCC, LLVM, and XuanTie. Experimental results show that RVISmith achieves 11.5 times higher intrinsic coverage than the state-of-the-art fuzzer for RVV intrinsics. By differential testing that compares results across different compilers, optimizations, and equivalent programs, we detect and report 13 previously unknown bugs of the three compilers under test to date. Of these bugs, 10 are confirmed and another 3 are fixed by the compiler developers.",
     "analysis": {
       "analysis_mode": "DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 15 页，提取 88355 字符",
@@ -7465,8 +8130,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：This paper presents BPUFuzzer, a fuzz testing tool for detecting branching transient execution vulnerabilities in CPU RTL design. BPUFuzzer addresses two key challenges: generating testcases that capture complex control flows, and extracting essential data from vast hardware states to guide testcase selection. Utilizing a control flow graph-based testcase generation strategy with anomaly detection and employing fitness and coverage metrics, BPUFuzzer works on testcases that cover broader program flows and deliberately selects testcases to discover transient execution vulnerabilities effectively. When applied on RISC-V Boom v3, BPUFuzzer uncovered more Spectre types than the state-of-the-arts, including a previously unidentified variant, named Spectre-LOOP."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Rihui Sun",
@@ -7484,9 +8149,9 @@
       "RTL & SoC Hardware Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "4abe5e310a7762ef5ccaade0970ffb9905d1f906c0c1ee9293d3c948e94b023c",
+    "content_hash": "92c9c0e6aa8cff2a2adc4c3c4dcbfaa1e1da4d9122de75594b094892cff3b774",
     "curation_status": "included",
-    "doi": "https://doi.org/10.1109/DAC63849.2025.11133085",
+    "doi": "https://doi.org/10.1109/dac63849.2025.11133085",
     "evidence_level": "abstract",
     "exclusion_reason": "",
     "first_seen": "2026-07-22",
@@ -7494,12 +8159,12 @@
     "fulltext_tried_urls": [],
     "id": "openalex-w4414198185",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing",
       "Semantic Scholar: RISC-V RTL fuzzing differential testing"
     ],
-    "pdf_candidate_fingerprint": "0c98031033a375fc7eda35ce9d48dcf3a9fd4d2b5ef274fd43a03c8d8464cefe",
+    "pdf_candidate_fingerprint": "a9d286fee095401f3e0a350905fdae46cce6a7c3a4a5d5b4bdcd2dbf9d8a7932",
     "pdf_url": "",
     "primary_category": "RISC-V Processor Fuzzing",
     "published": "2025-06-22",
@@ -7511,17 +8176,38 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
-      "Computer Science"
+      "Fuzz testing",
+      "Computer science",
+      "Control flow",
+      "Transient (computer programming)",
+      "Key (lock)",
+      "Anomaly detection",
+      "Cover (algebra)",
+      "Task (project management)",
+      "Scan chain",
+      "Branching (polymer chemistry)",
+      "Boom",
+      "Data-flow analysis",
+      "Data flow diagram",
+      "Symbolic execution",
+      "Exploit",
+      "Data mining",
+      "Subroutine",
+      "Real-time computing",
+      "Embedded system",
+      "Control (management)",
+      "Engineering",
+      "False alarm"
     ],
     "source_id": "https://openalex.org/W4414198185",
     "title": "BPUFuzzer: Effective Fuzz Testing for Branching Transient Execution Vulnerabilities of RISC-V CPU",
     "title_key": "bpufuzzer effective fuzz testing for branching transient execution vulnerabilities of risc v cpu",
     "updated": "2026-07-29",
-    "url": "https://doi.org/10.1109/DAC63849.2025.11133085",
-    "venue": "Design Automation Conference"
+    "url": "https://doi.org/10.1109/dac63849.2025.11133085",
+    "venue": "未记录"
   },
   {
     "abstract": "Taint analysis using explicit whole-program data-dependence graphs is powerful for vulnerability discovery but faces two major challenges. First, accurately modeling taint propagation through calls to external library procedures requires extensive manual annotations, which becomes impractical for large ecosystems. Second, the sheer size of whole-program graph representations leads to serious scalability and performance issues, particularly when quick analysis is needed in continuous development pipelines.",
@@ -7810,6 +8496,62 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "With increasingly complex circuits and systems, the need for advanced design methodologies is growing. These methodologies shift the designers’ focus from technology-specific implementations to more abstract electronic system design (ESL). SystemC was developed to address this need. Being an open standard based on C++, SystemC facilitates hardware and software modeling across multiple levels of abstraction, with a particular emphasis on ESL. It is further enhanced by including the transaction-level modeling (TLM) layer, strengthening its capability to model communication between components, and even full-system simulators. Traditionally, SystemC/TLM has been deployed to provide hardware prototypes for software development early in the design process. However, surveys and literature reviews showing other capabilities of SystemC/TLM are scarce. Hence, it is essential to explore SystemC/TLM’s new capabilities in different domains such as in-circuit fault propagation, security assessment, and verification. In this article, we conduct a systematic mapping study (SMS) of SystemC/TLM modeling capabilities in certain research domains. We elaborate on the state-of-the-art ESL with an emphasis on SystemC/TLM-based system modeling. Subsequently, we present how such technologies can be applied to the new research domains within the field of circuit and system modeling, namely: (D.1) architecture exploration, (D.2) power estimation, (D.3) fault-injection analysis, (D.4) functional and security verification, and (D.5) side-channel analysis. This SMS highlights the advantages and disadvantages of the investigated SystemC/TLM capabilities and addresses the open challenges in these domains, concluding that SystemC/TLM offers significant potential in performance evaluation, verification, and security assessment of circuits and systems at ESL.",
+    "analysis": {},
+    "authors": [
+      "Ahmed Mahmoudi",
+      "Andrija Nešković",
+      "Celine Thermann",
+      "Robin Sehm",
+      "Christoph Hübner",
+      "Tavia Plattenteich",
+      "Rolf Meyer",
+      "Rainer Buchty",
+      "Mladen Bereković",
+      "Saleh Mulhem"
+    ],
+    "categories": [],
+    "content_hash": "a4e0ab9caf5d6e6e35eeee5b69e575c9f3f721d6517c3da54be871547fb1dadf",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3735641",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "openalex-w4410321356",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "OpenAlex: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3735641",
+    "primary_category": "",
+    "published": "2025-05-13",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "SystemC",
+      "Computer architecture",
+      "Embedded system",
+      "Software engineering",
+      "Human–computer interaction"
+    ],
+    "source_id": "https://openalex.org/W4410321356",
+    "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
+    "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
+    "updated": "2026-08-01",
+    "url": "https://doi.org/10.1145/3735641",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems"
+  },
+  {
     "abstract": "System design automation aims to manage the design of embedded systems with ever-increasing complexity. To the success of system design automation, there is still a lack of systematic and formal design process because an entire design process, from a system's specification to its implementation, has to deal with inherent concerns about the systems' different aspects and, consequently, inherent semantic gaps. These gaps make it hard for a design process to be traceable or transparent. Particularly, guaranteeing the correctness of produced implementations becomes the main challenge for a system design process. SynQ (Synchronous system design with Quantitative types) is an embedded domain specification language (EDSL) targeting the design of systems obeying the perfect synchrony hypothesis. SynQ is based on a component-based design framework and, by design, facilitates semantic coherency by leveraging the quantitative type theory (QTT) and language embedding. SynQ enables a semantically coherent design process, including formal specification and verification, modelling, simulation and code generation. This paper presents SynQ and its underlying formalism and demonstrates its features and potential for semantically coherent system design through a case study.",
     "analysis": {},
     "authors": [
@@ -7872,8 +8614,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Once hardware is manufactured, it becomes immutable, and any design flaws or vulnerabilities are permanent. Therefore, comprehensive testing of hardware designs is essential before production. However, the increasing complexity of modern processors makes static analysis and formal verification increasingly challenging. Fuzzing is a highly effective technique for detecting software vulnerabilities but adapting it to hardware presents unique challenges due to the fundamental differences between software and hardware. However, the current state-of-the-art in hardware fuzzing still has significant limitations, particularly in terms of performance, practicality, and the need for human intervention. To address these issues, we introduce RLFuzz, a novel hardware fuzzer that employs reinforcement learning to explore processors autonomously, achieving faster and more comprehensive coverage. Reinforcement learning enables the fuzzer to learn from its interactions with the processor without requiring labeled data, allowing it to more effectively select modifications for test cases and target previously unexplored areas. RLFuzz uses an asynchronous training mechanism that permits concurrent fuzzing and neural network training. To optimize RLFuzz, we performed an extensive evaluation of various deep Q-learning optimization techniques and hyperparameters. We then tested the optimized fuzzer on three complex RISC-V cores-the Rocket core, CVA6, and BOOM-and compared its performance to a current hardware fuzzer, TheHuzz [20]. Our results show that RLFuzz achieved up to 1.77 % higher coverage, and on average 2.35 times faster, and demonstrated a maximum speedup of up to 6.93 times. For branch coverage, the average speedup was 7.85 times, with a peak speedup of 92.98 times. Additionally, RLFuzz needed less time to complete 100,000 test cases and did not require any human intervention."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Raphael Götz",
@@ -8677,8 +9419,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Designing correct and secure hardware is challenging. Dynamic information flow tracking (DIFT) enhances RTL testing flows, for example, by providing formal guarantees on detecting information leakage. However, existing DIFT solutions do not scale to large memories encountered in complex processors. A formal analysis of existing DIFT mechanisms reveals the two factors that fundamentally limit the scalability of instrumenting memories: existing mechanisms enforce that all memory words must be accessible simultaneously, and dependent reads and writes must happen concurrently. These aspects that are detrimental to scalability are all due to precise tracking of implicit flows for every memory word, which is not required in many scenarios of interest. Based on this insight, we design HybriDIFT, a module-level DIFT memory instrumentation based on SRAM deduplication and on a single state bit that tracks implicit information flows. HybriDIFT can automatically identify memories and their protocols by combining static and dynamic analysis. HybriDIFT is precise in practice and scalable to RTL designs that feature large memories. We evaluate HybriDIFT by automatically instrumenting a set of open-source hardware designs. With Verilator, HybriDIFT accelerates build time by 1.06× to 3.5× and simulation by 2.6× to 5.1× on default target configurations, and instruments a larger OpenC910 configuration that was out of reach for the state-of-the-art DIFT mechanisms, while preserving sufficient precision for all known applications."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Flavien Solt",
@@ -8877,7 +9619,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "de3d32ffafa1ec9b84304bce83c6bc3051998c447ff8f3ccc1c509a2c23e58ea",
+    "content_hash": "976030a6846d70190526369eeae78ac5f2a7447041b256dc331d9542f960c07f",
     "curation_status": "review",
     "doi": "https://doi.org/10.5753/sscad_estendido.2024",
     "evidence_level": "abstract",
@@ -8885,7 +9627,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4403683349",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -8899,7 +9641,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8908,7 +9650,7 @@
     "source_id": "https://openalex.org/W4403683349",
     "title": "Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)",
     "title_key": "anais estendidos do xxv simp sio em sistemas computacionais de alto desempenho sscad estendido 2024",
-    "updated": "2026-04-21",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.5753/sscad_estendido.2024",
     "venue": "未记录"
   },
@@ -9386,7 +10128,7 @@
       "Microarchitectural Security Testing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "fd49572a90b0944411a5d2b193b039aabf1a94a507702b81168aff0756a1f456",
+    "content_hash": "87d496377104124e32939fc5256d91ad8f553d3ef25b2673f6dc48447b7a77fd",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3649329.3658469",
     "evidence_level": "full-text",
@@ -9397,7 +10139,7 @@
     "fulltext_text_chars": 34040,
     "id": "arxiv-2410-22555v1",
     "included": true,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
@@ -9421,7 +10163,7 @@
     "relevance_score": 8,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 12,
+    "seen_count": 14,
     "source": "arXiv",
     "source_categories": [
       "Speculation",
@@ -9438,7 +10180,7 @@
     "source_id": "2410.22555v1",
     "title": "Lost and Found in Speculation: Hybrid Speculative Vulnerability Detection",
     "title_key": "lost and found in speculation hybrid speculative vulnerability detection",
-    "updated": "2026-07-29",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1145/3649329.3658469",
     "venue": "未记录"
   },
@@ -9662,8 +10404,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Hardware execution attacks exploit subtle microarchitectural interactions to leak secret data. While checking programs for the existence of such attacks is essential, verification of software against the full hardware implementation does not scale. Verification using abstract formal models of the hardware can help provide strong security guarantees while leveraging abstraction to achieve scalability. However, handwriting accurate abstract models is tedious and error-prone. Hence, we need techniques to generate models that enable sound yet scalable security analysis automatically."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Adwait Godbole",
@@ -9909,7 +10651,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "c4de94fa359e20bf6a952cb42c6bb39958c05955536f48109eb483218b5534b4",
+    "content_hash": "cdb1fe646dcda2efaae6ea91eef90ba7f6001a724ac6a066e6fbc2311d163d5c",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -9917,7 +10659,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -9932,7 +10674,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -9944,7 +10686,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-07-31",
+    "updated": "2026-08-04",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -10278,8 +11020,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern Systems-on-Chips (SoCs) integrate numerous insecure intellectual properties to meet design-cost and time-to-market constraints. Incorporating these SoCs into security-critical systems severely threatens users’ privacy. Traditional formal/simulation-based verification techniques detect vulnerabilities to some extent. However, these approaches face challenges in detecting unknown vulnerabilities and suffer from significant manual efforts, false alarms, low coverage, and scalability. Several fuzzing techniques have been developed to mitigate pre-silicon hardware verification limitations. Nevertheless, these techniques suffer from major challenges such as slow simulation platforms, extensive design knowledge requirements, and lacking consideration of untrusted inter-module communications. To overcome these shortcomings, we developed FormalFuzzer, an emulation-based hybrid framework by combining formal verification and fuzz testing, leveraging their own benefits. FormalFuzzer incorporates formal-verification-based pre-processing using template-based assertion generation to narrow down the search space for fuzz testing and appropriate mutation strategy selection by dynamic feedback derived from a security-oriented cost function. The cost function is developed using vulnerability databases and specifications, indicating the likelihood of triggering a vulnerability. A vulnerability is detected when the cost function reaches global or local minima. Our experiments on RISC-V-based Ariane SoC demonstrate the efficiency of proposed formal-verification-based pre-processing strategies and cost function-driven feedback on fuzzing in detecting both known and unknown vulnerabilities expeditiously."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Nusrat Farzana Dipu",
@@ -10748,8 +11490,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：With the ongoing efforts for transitioning towards post-quantum security, NIST has recently selected the digital signature algorithm CRYSTALS-Dilithium for standardization. In this work, we demonstrate the first Dilithium based hardware accelerated secure boot architecture developed around Ariane, an open-source RISC- V core. By utilizing a compact design with novel verification engine, a secure boot flow is implemented with only 3.48ms runtime overhead compared to normal boot, while requiring 10.4K LUTs and 5.7K FFs on an FPGA. Compared to the state-of-the-art we achieve a reduction of 3.42× and 7.88 × for LUTs and FFs respectively. Also, the design when realized in 65nm ASIC requires only 125 kGE and 6.3 mW power at 100 MHz. Further, as secure boot is one of the critical processes and the security of the whole system depends on it, we implemented hardware fault countermeasures and evaluated their effectiveness in preventing secure boot bypass."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Naina Gupta",
@@ -11102,8 +11844,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Traditional modeling approaches in computer architecture aim to obtain an accurate estimation of performance, area, and energy of a processor design. With the advent of speculative execution attacks and their security concerns, these traditional modeling techniques fall short when used for security evaluation of defenses against these attacks. This paper presents Pensieve, a security evaluation framework targeting early-stage microarchitectural defenses against speculative execution attacks. At the core, it introduces a modeling discipline for systematically studying early-stage defenses. This discipline allows us to cover a space of designs that are functionally equivalent while precisely capturing timing variations due to resource contention and microarchitectural optimizations. We implement a model checking framework to automatically find vulnerabilities in designs. We use Pensieve to evaluate a series of state-of-the-art invisible speculation defense schemes, including Delay-on-Miss, InvisiSpec, and GhostMinion, against a formally defined security property, speculative non-interference. Pensieve finds Spectre-like attacks in all those defenses, including a new speculative interference attack variant that breaks GhostMinion, one of the latest defenses."
     },
-    "analysis_attempts": 2,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 3,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Yuheng Yang",
@@ -11170,7 +11912,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "29bd26fce9bb175d7cd38c54b9c6c817ed28fd09935a25ac45d5fd56cbfb79be",
+    "content_hash": "cfa1d60f133052dd340fc99e7181e1bbf55985e449c1a5200705aa677e94178d",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -11178,7 +11920,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -11192,7 +11934,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -11227,7 +11969,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-07-31",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },
@@ -11885,8 +12627,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Transient execution vulnerabilities have critical security impacts to software systems since those break the fundamental security assumptions guaranteed by the CPU. Detecting these critical vulnerabilities in the RTL development stage is particularly important, as it offers a chance to fix the vulnerability early before reaching the chip manufacturing stage. This paper proposes SpecDoctor, an automated RTL fuzzer to discover transient execution vulnerabilities in the CPU. To be specific, SpecDoctor designs a fuzzing template, allowing it to test all different scenarios of transient execution vulnerabilities (e.g., Meltdown, Spectre, ForeShadow, etc.) with a single template. Then SpecDoctor performs a multi-phased fuzzing, where each phase is dedicated to solve an individual vulnerability constraint in the RTL context, thereby effectively finding the vulnerabilities. We implemented and evaluated SpecDoctor on two out-of-order RISC-V CPUs, Boom and NutShell-Argo. During the evaluation, SpecDoctor found transient-execution vulnerabilities which share the similar attack vectors as the previous works. Furthermore, SpecDoctor found two interesting variants which abuse unique attack vectors: Boombard, and Birgus. Boombard exploits an unknown implementation bug in RISC-V Boom, exacerbating it into a critical transient execution vulnerability. Birgus launches a Spectre-type attack with a port contention side channel in NutShell CPU, which is constructed using a unique combination of instructions. We reported the vulnerabilities, and both are confirmed by the developers, illustrating the strong practical impact of SpecDoctor."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Jaewon Hur",
@@ -12845,8 +13587,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：This article presents RTL-ConTest, a register transfer-level (RTL) security vulnerability detection algorithm, that extracts critical process flows from a RTL design and executes RTL-level concolic testing to generate security test cases for identifying critical exploits manifested in a System on Chip (SoC). The efficiency of the proposed approach is evaluated on opensource RISC-V-based SoCs. Our technique is successful in detecting the security vulnerabilities manifested in the processor core as well as in the rest of the SoC, e.g., debug modules, peripherals, etc., thereby providing a thorough vulnerability check on the entire hardware design. As demonstrated by our experimental results, in circumstances where conventional security verification tools are limited, RTL-ConTest furnishes significantly improved efficiency in detecting SoC security vulnerabilities."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Xingyu Meng",
@@ -14055,7 +14797,7 @@
       "Kevin Butler"
     ],
     "categories": [],
-    "content_hash": "b2306b7f5b8f7a6795783ef04a36059f2b8b016aad4b3ef87ce2981c299dff06",
+    "content_hash": "5fb4244664b0a56184055527fa91dd9120238bb64054a71f79589abbedd442aa",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -14063,7 +14805,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -14077,7 +14819,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -14102,7 +14844,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-07-29",
+    "updated": "2026-08-06",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },
@@ -14198,8 +14940,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Computing systems utilize multicore processors with complex cache coherence protocols to meet the increasing need for performance and energy improvement. It is a major challenge to verify the correctness of a cache coherence protocol since the number of reachable states grows exponentially with the number of cores. In this paper, we propose an efficient test generation technique, which can be used to achieve full state and transition coverage in simulation-based verification for a wide variety of cache coherence protocols. Based on effective analysis of the state space structure, our method can generate more efficient test sequences (50% shorter) on-the-fly compared with tests generated by BFS. While our on-the-fly method can reduce the numbers of required tests by half, it can still be impractical to verify all possible transitions in the presence of large number of cores. We propose scalable on-the-fly test generation techniques using quotient state space. The proposed approach guarantees selection of important transitions by utilizing equivalence classes, and omits only similar transitions. Our experimental results demonstrate that our proposed approaches can efficiently tradeoff between transition coverage and validation effort."
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Yangdi Lyu",
@@ -15115,6 +15857,51 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "H. Ferrari",
+      "R. Farengo",
+      "P. García-Martínez",
+      "M. Chris",
+      "A. Lifschitz"
+    ],
+    "categories": [],
+    "content_hash": "3f30971f35aff4a16224682265577437fe4118585e6a661b16fad835cf302168",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-20db5bb5a3770335d04667717d9fa580b671df90",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2014",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Political Science"
+    ],
+    "source_id": "20db5bb5a3770335d04667717d9fa580b671df90",
+    "title": "Abstract Submitted for the DPP14 Meeting of The American Physical Society",
+    "title_key": "abstract submitted for the dpp14 meeting of the american physical society",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/20db5bb5a3770335d04667717d9fa580b671df90",
+    "venue": "未记录"
+  },
+  {
     "abstract": "While scalable coherence has been extensively studied in the context of general purpose chip multiprocessors (CMPs), GPU architectures present a new set of challenges. Introducing conventional directory protocols adds unnecessary coherence traffic overhead to existing GPU applications. Moreover, these protocols increase the verification complexity of the GPU memory system. Recent research, Library Cache Coherence (LCC) [34, 54], explored the use of time-based approaches in CMP coherence protocols. This paper describes a time-based coherence framework for GPUs, called Temporal Coherence (TC), that exploits globally synchronized counters in single-chip systems to develop a streamlined GPU coherence protocol. Synchronized counters enable all coherence transitions, such as invalidation of cache blocks, to happen synchronously, eliminating all coherence traffic and protocol races. We present an implementation of TC, called TC-Weak, which eliminates LCC's trade-off between stalling stores and increasing L1 miss rates to improve performance and reduce interconnect traffic. By providing coherent L1 caches, TC-Weak improves the performance of GPU applications with inter-workgroup communication by 85% over disabling the non-coherent L1 caches in the baseline GPU. We also find that write-through protocols outperform a writeback protocol on a GPU as the latter suffers from increased traffic due to unnecessary refills of write-once data.",
     "analysis": {},
     "authors": [
@@ -15182,8 +15969,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "王恩东",
@@ -15387,8 +16174,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "B. Bingham",
@@ -15458,8 +16245,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Bi Zhongqin",
@@ -15506,6 +16293,92 @@
     "venue": "未记录"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Qicheng Zhao",
+      "J. Rhodes",
+      "Lu-Gang Yu"
+    ],
+    "categories": [],
+    "content_hash": "421cb6b960b5a47504feab0860383aa1345ef8e821877b2c3db8e03e37cbd4b0",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1016/S0016-5085(10)62350-5",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-1b265077d8d276ff5eb90e782c92e94bca77398c",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://doi.org/10.1016/s0016-5085(10)62350-5",
+    "primary_category": "",
+    "published": "2010-05-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Medicine"
+    ],
+    "source_id": "1b265077d8d276ff5eb90e782c92e94bca77398c",
+    "title": "T1195 Peanut Agglutinin, Which Enters the Circulation After Peanut Ingestion, Increases Human Colon Cancer HT29-5f7 Cell Aggregation and Adhesion to Human Lung Endothelial Cells In Vitro: Implications for Metastasis",
+    "title_key": "t1195 peanut agglutinin which enters the circulation after peanut ingestion increases human colon cancer ht29 5f7 cell aggregation and adhesion to human lung endothelial cells in vitro implications for metastasis",
+    "updated": "",
+    "url": "https://doi.org/10.1016/S0016-5085(10)62350-5",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "K. Goryca",
+      "M. Skrzypczak",
+      "T. Rubel",
+      "A. Paziewska",
+      "J. Ostrowski"
+    ],
+    "categories": [],
+    "content_hash": "a6a5975b64e39160ad7dcca1ea1e0dab265c8984462ff898a7ca863c8e8b15e8",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1016/S0016-5085(10)62349-9",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-d54aaa663dba07d1d5dcf7fae278ba8176f78314",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://doi.org/10.1016/s0016-5085(10)62349-9",
+    "primary_category": "",
+    "published": "2010-05-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Biology"
+    ],
+    "source_id": "d54aaa663dba07d1d5dcf7fae278ba8176f78314",
+    "title": "T1194 Potential and Challenges of Microarray Data Analyses for Predicting Oncogenic Signaling in Colon Tumors",
+    "title_key": "t1194 potential and challenges of microarray data analyses for predicting oncogenic signaling in colon tumors",
+    "updated": "",
+    "url": "https://doi.org/10.1016/S0016-5085(10)62349-9",
+    "venue": "未记录"
+  },
+  {
     "abstract": "The draft paper defines a system, which is capable of maintaining bases of test cases for logical specifications. The specifications, which are subject to this system are transformed from their original shape in first-order logic to form-based expressions as originally introduced in logics of George Spencer-Brown. The innovation comes from the operations the system provides when injecting faults - so-called mutations - to the specifications. The system presented here applies to logical specifications from areas as different as programming, ontologies or hardware specifications.",
     "analysis": {},
     "authors": [
@@ -15547,6 +16420,91 @@
     "updated": "2010-02-03",
     "url": "http://arxiv.org/abs/1002.0678v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Our project focuses on gene expression and proteomics of the whitefly Bemisia tabaci (Gennadius) species complex in relation to the internal anatomy and localization of expressed genes and virions in the whitefly vector, which poses a major constraint to vegetable and fiber production in Israel and the USA. While many biological parameters are known for begomovirus transmission, nothing is known about vector proteins involved in the specific interactions between begomoviruses and their whitefly vectors. Identifying such proteins is expected to lead to the design of novel control methods that interfere with whitefly-mediated begomovirus transmission. The project objectives were to: 1) Perform gene expression analyses using microarrays to study the response of whiteflies (B, Q and A biotypes) to the acquisition of begomoviruses (Tomato yellow leaf curl (TYLCV) and Squash leaf curl (SLCV). 2) Construct a whitefly proteome from whole whiteflies and dissected organs after begomovirus acquisition. 3) Validate gene expression by q-RTPCR and sub-cellular localization of candidate ESTs identified in microarray and proteomic analyses. 4) Verify functionality of candidate ESTs using an RNAi approach, and to link these datasets to overall functional whitefly anatomical studies. During the first and second years biological experiments with TYLCV and SLCV acquisition and transmission were completed to verify the suitable parameters for sample collection for microarray experiments. The parameters were generally found to be similar to previously published results by our groups and others. Samples from whole whiteflies and midguts of the B, A and Q biotypes that acquired TYLCV and SLCV were collected in both the US and Israel and hybridized to B. tabaci microarray. The data we analyzed, candidate genes that respond to both viruses in the three tested biotypes were identified and their expression that included quantitative real-time PCR and co-localization was verified for HSP70 by the Israeli group. In addition, experiments were undertaken to employ in situ hybridization to localize several candidate genes (in progress) using an oligonucleotide probe to the primary endosymbiont as a positive control. A proteome and corresponding transcriptome to enable more effective protein identification of adult whiteflies was constructed by the US group. Further validation of the transmission route of begomoviruses, mainly SLCV and the involvement of the digestive and salivary systems was investigated (Cicero and Brown). Due to time and budget constraints the RNAi-mediated silencing objective to verify gene function was not accomplished as anticipated. HSP70, a strong candidate protein that showed over-expression after TYLCV and SLCV acquisition and retention by B. tabaci, and co-localization with TYLCV in the midgut, was further studies. Besides this protein, our joint research resulted in the identification of many intriguing candidate genes and proteins that will be followed up by additional experiments during our future research. To identify these proteins it was necessary to increase the number and breadth of whitefly ESTs substantially and so whitefly cDNAs from various libraries made during the project were sequenced (Sanger, 454). As a result, the proteome annotation (ID) was far more successful than in the initial attempt to identify proteins using Uniprot or translated insect ESTs from public databases. The extent of homology shared by insects in different orders was surprisingly low, underscoring the imperative need for genome and transcriptome sequencing of homopteran insects. Having increased the number of EST from the original usable 5500 generated several years ago to >600,000 (this project+NCBI data mining), we have identified about one fifth of the whitefly proteome using these new resources. Also we have created a database that links all identified whitefly proteins to the PAVEdb-ESTs in the database, resulting in a useful dataset to which additional ESTS will be added. We are optimistic about the prospect of linking the proteome ID results to the transcriptome database to enable our own and other labs the opportunity to functionally annotate not only genes and proteins involved in our area of interest (whitefly mediated transmission) but for the plethora of other functionalities that will emerge from mining and functionally annotating other key genes and gene families in whitefly metabolism, development, among others. This joint grant has resulted in the identification of numerous candidate proteins involved in begomovirus transmission by B. tabaci. A next major step will be to capitalize on validated genes/proteins to develop approaches to interfere with the virus transmission.",
+    "analysis": {},
+    "authors": [
+      "M. Ghanim",
+      "J. Cicero",
+      "Judith K. Brown",
+      "H. Czosnek"
+    ],
+    "categories": [],
+    "content_hash": "976ce3a55834d484aeb5d46afefcd767983e5d6043ce4b6b0b6eaf6011d535e5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.32747/2010.7592654.bard",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-d72f0432ae49a9fc99384da29529b66ff929c96e",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "https://naldc.nal.usda.gov/download/7592654/PDF",
+    "primary_category": "",
+    "published": "2010-02-01",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "d72f0432ae49a9fc99384da29529b66ff929c96e",
+    "title": "Dissection of Whitefly-geminivirus Interactions at the Transcriptomic, Proteomic and Cellular Levels",
+    "title_key": "dissection of whitefly geminivirus interactions at the transcriptomic proteomic and cellular levels",
+    "updated": "",
+    "url": "https://doi.org/10.32747/2010.7592654.bard",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "J. Watson",
+      "P. Witham",
+      "Timothy St. Louis"
+    ],
+    "categories": [],
+    "content_hash": "5255459d6a83da3829b88cd09a85426dfd1c9a770bb53b3b7413cf2e4fa37cfe",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2010",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Political Science"
+    ],
+    "source_id": "102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "title": "Evaluating Student-Teacher Linkage Data in Teacher Incentive Fund (TIF) Sites: Acquisition, Verification, and System Development. The Harvesting Project.",
+    "title_key": "evaluating student teacher linkage data in teacher incentive fund tif sites acquisition verification and system development the harvesting project",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/102334961eb759e5d6a15fdd08ae5d5ee8d018f0",
+    "venue": "未记录"
   },
   {
     "abstract": "In multiprocessor systems, various problems are treated with Lamport's logical clock and the resultant logical time orders between operations. However, one often needs to face the high complexities caused by the lack of logical time order information in practice. In this paper, we utilize the \\emph{global clock} to infuse the so-called \\emph{pending period} to each operation in a multiprocessor system, where the pending period is a time interval that contains the performed time of the operation. Further, we define the \\emph{physical time order} for any two operations with disjoint pending periods. The physical time order is obeyed by any real execution in multiprocessor systems due to that it is part of the truly happened operation orders restricted by global clock, and it is then proven to be independent and consistent with traditional logical time orders. The above novel yet fundamental concepts enables new effective approaches for analyzing multiprocessor systems, which are named \\emph{pending period analysis} as a whole. As a consequence of pending period analysis, many important problems of multiprocessor systems can be tackled effectively. As a significant application example, complete memory consistency verification, which was known as an NP-hard problem, can be solved with the complexity of $O(n^2)$ (where $n$ is the number of operations). Moreover, the two event ordering problems, which were proven to be Co-NP-Hard and NP-hard respectively, can both be solved with the time complexity of O(n) if restricted by pending period information.",
@@ -15640,8 +16598,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 1,
-    "analysis_last_attempt": "2026-08-01",
+    "analysis_attempts": 2,
+    "analysis_last_attempt": "2026-08-08",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Pang Zhengbin"
@@ -15685,6 +16643,89 @@
     "title_key": "a biased correlation analysis based verification method for cache coherence protocol",
     "updated": "",
     "url": "https://www.semanticscholar.org/paper/f9ec2364b66266bb3ca24a2f2bf4eb6f7d0fe694",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "S. Cai",
+      "M. Zhao",
+      "Z. Chen"
+    ],
+    "categories": [],
+    "content_hash": "75ad606de425ab9d84c1085c43d386cb36f5dc69cbe07306903e6486d716c389",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2009",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "title": "A new detection scheme for ultrafast 2 D COSY",
+    "title_key": "a new detection scheme for ultrafast 2 d cosy",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "J. Sedlacik",
+      "R. Williams",
+      "M. Johnson",
+      "C. Calabrese",
+      "A. Davidoff",
+      "C. Hillenbrand"
+    ],
+    "categories": [],
+    "content_hash": "49050b06040d2a4afec746018de5a9f90eb633b8b2d35d58900e21e39e3437ce",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-08",
+    "id": "semantic-scholar-dbe3e14d41985965fc0faa24ae15fd104e635763",
+    "included": false,
+    "last_seen": "2026-08-08",
+    "matched_queries": [
+      "Semantic Scholar: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2008",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "dbe3e14d41985965fc0faa24ae15fd104e635763",
+    "title": "Design and setup of dynamic contrast enhanced experiments for longitudinal preclinical studies of tumor response to anti-angiogenic therapy",
+    "title_key": "design and setup of dynamic contrast enhanced experiments for longitudinal preclinical studies of tumor response to anti angiogenic therapy",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/dbe3e14d41985965fc0faa24ae15fd104e635763",
     "venue": "未记录"
   },
   {
