@@ -1,11 +1,12 @@
 # 覆盖、Oracle 与 Fuzzing 方法
 
-本目录仅按主分类收录，共 12 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 13 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
 | 日期 | 论文 | 会议/期刊 | 相关性 | 证据 | 核心贡献 | 链接 |
 |---|---|---|---|---|---|---|
+| 2026-08-13 | [InSPECtor: Improving SLEIGH Processor Specification Veracity via Proxy](./2026-inspector-improving-sleigh-processor-specification-veracity-via-proxy.md) | arXiv | A·直接相关 | 全文核验 | 设计符号遍历 SLEIGH 解码规则生成指令和初始状态的框架；实现原型 InSPECtor（GenSYS + JuxtaPlayer）；在五个不同 ISA 上发现 125 个 unique bugs 并提出修复；基于根因分析给出 8 条 SLEIGH DSL 改进建议。 | [页面](http://arxiv.org/abs/2608.13042v1) / [PDF](https://arxiv.org/pdf/2608.13042v1) |
 | 2026-06-11 | [Information Flow Paths from RTL Traces](./2026-information-flow-paths-from-rtl-traces.md) | arXiv | B·强邻近 | 全文核验 | 提出从RTL跟踪数据构建信息流路径的算法，包括时间流提取、图构建、候选边推广和路径回环；实现并应用于PicoRV32，发现实际漏洞路径。 | [页面](http://arxiv.org/abs/2606.13860v1) / [PDF](https://arxiv.org/pdf/2606.13860v1) |
 | 2026-04-16 | [Emulation-based System-on-Chip Security Verification: Challenges and Opportunities](./2026-emulation-based-system-on-chip-security-verification-challenges-and-opportunities.md) | arXiv | B·强邻近 | 全文核验 | 1）厘清了硬件仿真在SoC安全验证中的定位；2）提出了ESV工作流的三维分类法（刺激驱动、引擎集成、可观测性）；3）分析了工程权衡和主要挑战；4）指出了未来研究方向和开放问题。 | [页面](http://arxiv.org/abs/2604.15073v1) / [PDF](https://arxiv.org/pdf/2604.15073v1) |
 | 2025-09-23 | [Semantic-Aware Fuzzing: An Empirical Framework for LLM-Guided, Reasoning-Driven Input Mutation](./2025-semantic-aware-fuzzing-an-empirical-framework-for-llm-guided-reasoning-driven-input-mutati.md) | arXiv | A·直接相关 | 全文核验 | 开源微服务框架集成推理LLM与AFL++；首次系统比较不同shot策略和四个推理LLM；发现平衡语法正确性和多样性重要；提供经验性基线。 | [页面](http://arxiv.org/abs/2509.19533v1) / [PDF](https://arxiv.org/pdf/2509.19533v1) |

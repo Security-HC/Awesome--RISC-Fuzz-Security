@@ -1,5 +1,91 @@
 [
   {
+    "abstract": "Deep learning libraries underpin many safety- and reliability-critical applications, yet existing API-level testing techniques often rely on intra-library properties or CPU--GPU differential oracles and may miss defects that behave consistently across hardware backends. We present Xamt, a cross-framework differential fuzzing approach for deep learning library APIs. Xamt constructs and tests execution-validated groups of APIs intended to implement equivalent operations across seven libraries. It uses explicit API aliases and parameter-role normalization to construct candidate correspondences and validates them through pairwise execution and a group-level behavioral check on canonical ordinary inputs. The resulting groups are explored using variance-guided differential fuzzing with ordinary, boundary, and non-finite inputs. Crash and inconsistency oracles flag executions exhibiting abnormal termination or inconsistent outputs for subsequent reproduction and analysis. Across the seven libraries, Xamt constructs 676 execution-validated groups containing 2,563 matched APIs. Among these, Xamt identifies 72 independently reproduced discrepancy cases, including 4 crash cases and 68 output inconsistencies. Among the 72 developer reports, 25 have been confirmed, including 23 that have been fixed.",
+    "analysis": {},
+    "authors": [
+      "Bin Duan",
+      "Ruican Dong",
+      "Naipeng Dong",
+      "Dan Dongseong Kim",
+      "Guowei Yang"
+    ],
+    "categories": [],
+    "content_hash": "7b49e773d1fe0a6588c4775c2a922c4561cb950063209b810ab9733e2f2048b9",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-15",
+    "id": "arxiv-2608-11886v1",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.11886v1",
+    "primary_category": "",
+    "published": "2026-08-12",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2608.11886v1",
+    "title": "Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing",
+    "title_key": "testing deep learning library apis via cross framework differential fuzzing",
+    "updated": "2026-08-12",
+    "url": "http://arxiv.org/abs/2608.11886v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Benchmarks for evaluating large language models on register-transfer-level (RTL) hardware design have proliferated rapidly, yet none reports having applied mutation testing, an established hardware-verification technique for quantifying testbench quality, to ask whether its own testbenches are trustworthy. A testbench that never fails is not evidence of a correct design; it may simply never stimulate the logic that is actually broken. We introduce GateTruth, a mutation-testing engine and methodology for auditing RTL benchmark testbench rigor: inject a deterministic, seeded set of semantic mutants into a reference design and measure what fraction the testbench catches. We validate the methodology against our own 68-task, dual-track reference suite -- 60 specification-to-RTL generation tasks and 8 agentic-repair tasks, scored through a pinned, deterministic synthesis-to-timing flow with correctness enforced as a strict gate -- certifying that 46 of 60 Track A testbenches kill at least 95% of injected mutants under sequential, reproducible execution; we disclose why the other 14 do not, including a Goodhart effect on testbenches revised to pass this gate. We then point the same engine, unmodified, at RTLLM v2.0, a widely adopted external benchmark: of 46 auditable designs, 72% fall below the 95% floor our own suite is held to, and three score 0% outright. A comparable audit of NVIDIA's CVDP benchmark is structurally impossible: its public release withholds reference solutions, removing the golden RTL mutation testing requires. Auditing our own instrument also surfaced a second finding: an initially uniform 4096-token output cap silently truncated three of seven evaluated models, and re-running at 16,384 tokens moved one model from fifth place to first. We argue mutation-kill certification should become a standard reporting requirement for RTL-generation benchmarks generally.",
+    "analysis": {},
+    "authors": [
+      "Meet Bhadra"
+    ],
+    "categories": [
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "508945819bb409c70b1e3f63fb476320d3b37b9e00d286b38386edb20bc2e98b",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-15",
+    "id": "arxiv-2608-12635v1",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.12635v1",
+    "primary_category": "Benchmarks, Bug Injection & Artifacts",
+    "published": "2026-08-12",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "verification/fuzzing method: verification, mutation testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2608.12635v1",
+    "title": "GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing",
+    "title_key": "gatetruth auditing the rigor of rtl design benchmarks via mutation testing",
+    "updated": "2026-08-12",
+    "url": "http://arxiv.org/abs/2608.12635v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Domain-specific Instruction Set Architecture eXtensions (ISAX) are widely adopted in the RISC-V ecosystem to accelerate emerging workloads, but implementing and validating ISAXes across different cores remains slow and fragmented. Existing frameworks still require per-core interface adaptation, and differential testing often breaks once either the microarchitecture or the ISAX changes. We present LACE, an LLM-aided multi-agent workflow that translates natural-language ISAX intents into a compact two-level IR (operation-level and HDL task-level), performs retrieval-guided localized RTL edits over large repositories, and closes the loop with a compiler-agnostic riscv-formal checking flow (assuming RVFI availability or instrumentation). Across four embedded RISC-V cores, LACE raises pass@1 generation accuracy from near-zero to 72.8\\% within our evaluation setup, while improving code localization and reducing integration rework. The code of LACE is available at https://github.com/UMN-ZhaoLab/LACE.",
     "analysis": {},
     "authors": [
@@ -49,6 +135,72 @@
     "updated": "2026-08-03",
     "url": "http://arxiv.org/abs/2608.02915v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Abstract Brain connectivity is increasingly understood as a dynamic, multiscale relational system in which cognitive states emerge from coordinated patterns rather than isolated regional activity. This monograph develops an integrated research architecture for explaining and predicting such states through quantum topological data analysis (QTDA), network statistics, causal reasoning, trustworthy machine learning, and scalable neuroinformatics engineering. The central premise is that topology can preserve mesoscopic structure across noisy, heterogeneous measurements, while quantum and quantum-inspired representations may offer alternative computational geometries for comparing complex connectivity configurations. The book formalizes uncertainty at measurement, model, and decision levels; distinguishes associational prediction from causal explanation; and links persistent topological summaries to interpretable state discovery. It further specifies validation regimes for calibration, transportability, robustness, fairness, privacy, and reproducibility, together with MLOps practices for multimodal and distributed data. Applications span clinical decision support, neuroergonomics, learning systems, population brain health, and public policy, with comparative relevance to South Asia, Europe, Africa, and the Americas. The resulting framework is designed as a reusable scholarly platform for hypothesis generation, computational experimentation, governance design, and responsible translation of brain-connectivity analytics into research, industry, and policy settings. Keywords brain connectivity, cognitive-state discovery, quantum topological data analysis, explainable neuroinformatics, network neuroscience, persistent homology, simplicial complexes, quantum kernels, causal inference, hierarchical modeling, dynamic state-space models, machine learning, calibration, out-of-distribution generalization, algorithmic fairness, privacy-preserving analytics, multimodal neurodata, MLOps, federated learning, data provenance, neuroergonomics, population brain health, AI governance",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "b4999070d29dd4dda6e2f1545d3d7398dedcbbdcd84a8958a21bf989d6330d81",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w7202267074",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1741275/Download Full-Text Research Book PDF Pp 1-84PIII1.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "verification/fuzzing method: validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Neuroinformatics",
+      "Computer science",
+      "Topological data analysis",
+      "Population",
+      "Scalability",
+      "Relevance (law)",
+      "Artificial intelligence",
+      "Topology (electrical circuits)",
+      "Big data",
+      "Theoretical computer science",
+      "Quantum computer",
+      "Data science",
+      "Data integration",
+      "Premise",
+      "Network topology",
+      "Quantum",
+      "Open data",
+      "Analytics",
+      "Data analysis",
+      "Cyberinfrastructure",
+      "Quantum state",
+      "Data exchange",
+      "Machine learning",
+      "Data modeling",
+      "Interoperability",
+      "Complex network"
+    ],
+    "source_id": "https://openalex.org/W7202267074",
+    "title": "Brain-Connectivity Modelling and Cognitive-State Discovery using Quantum Topological Data Analysis for Explainable Neuroinformatics",
+    "title_key": "brain connectivity modelling and cognitive state discovery using quantum topological data analysis for explainable neuroinformatics",
+    "updated": "2026-08-14",
+    "url": "https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3",
+    "venue": "未记录"
   },
   {
     "abstract": "This research presents a two-stage pipeline for user-level suicide risk detection from Reddit: first, inference-only prompting with summarization; second, fine-tuned encoder classification with explainability and expert validation. The data are user-level: each of the 500 C-SSRS Reddit items is one user’s chronologically concatenated posts and comments (a user timeline), annotated by psychiatrists. Stage one: six prompting strategies zero-shot, few-shot, chain-of-thought, tree-of-thought, least-to-most, and self-consistency are evaluated across six LLMs on multi-class and binary formulations; simple zero-shot achieves the highest balanced accuracy (0.53 multi-class). Error analysis shows longer inputs associate with misclassification (p = 0.002); domain-specific summarization (timelines >2,000 tokens) reduces length by 44%, preserves semantic fidelity (BERTScore F1 = 0.85), improves smaller models (up to 10%), and yields roughly 32% cost savings. Classical baselines (best BA = 0.31) underscore LLM advantages. Stage two: the mental-longformer-base-4096 encoder is fine-tuned on summarized C-SSRS and eRisk 2025 timelines for binary (risk vs. no risk) classification. A 7-configuration ablation over C-SSRS, eRisk, and ReDSM5 motivates the C-SSRS+eRisk main model (mean BA 0.89±0.01; best 0.90), with zero-shot transfer to external datasets (e.g., Twitter BA 0.85, ROC-AUC 0.92). Integrated Gradients and attention visualizations provide token-level explanations; three independent clinicians rate clinical-style summaries of model rationales (84% majority agreement). Multi-class addresses granularity; binary and fine-tuning address robustness. Deployment requires large-scale validation, fairness assessment, and human oversight.",
@@ -441,6 +593,60 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Functional verification has become the most time-consuming phase in IC development, and Assertion-Based Verification (ABV) is key to reducing debugging time. However, existing LLM-based assertion generation methods typically pursue indiscriminate verification, aiming for maximal coverage without considering signal criticality, whereas industrial practice demands maximizing coverage with minimal verification cost. Consequently, identifying signals that have the greatest impact on design functionality and error propagation-enabling a shift from indiscriminate to targeted verification-remains a key challenge. To address this, we propose AgileAssert, a key signal-driven assertion generation framework that constructs RTL semantic graphs and identifies the top-K critical signals via a hybrid scoring and selection mechanism, followed by structure-aware RTL slicing to provide the LLM with precise targets and contextual information, thereby guiding LLMs to generate tightly constrained targeted assertions for efficient verification. Evaluated on block- and CPU-level designs, with an average 66.68% reduction in assertions, our approach outperforms three existing SOTA methods, and significantly improving coverage metrics while reducing input token consumption by 64%. In mutation testing, when our approach surpasses existing methods in error detection rate, the average number of assertions used decreases by 72.74%.",
+    "analysis": {},
+    "authors": [
+      "Yonghao Wang",
+      "Hongqin Lyu",
+      "Boling Chen",
+      "Jiaxin Zhou",
+      "MinYang Bao",
+      "Wenchao Ding",
+      "Feng Gu",
+      "Zhiteng Chao",
+      "Jianan Mu",
+      "Kan Shi",
+      "Tiancheng Wang",
+      "Huawei Li"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "3c7b5659beed0b97b36caa5757030f78e79de07ca3687e4efbc93482459cbff7",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-15",
+    "id": "arxiv-2604-08932v2",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2604.08932v2",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-04-10",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, rtl",
+      "verification/fuzzing method: verification, mutation testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2604.08932v2",
+    "title": "From Indiscriminate to Targeted: Functionally Critical Signal-Driven Assertion Generation using LLMs for Efficient RTL Verification",
+    "title_key": "from indiscriminate to targeted functionally critical signal driven assertion generation using llms for efficient rtl verification",
+    "updated": "2026-08-11",
+    "url": "http://arxiv.org/abs/2604.08932v2",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Modern computing is shifting from homogeneous CPU-centric systems to heterogeneous systems with closely integrated CPUs and GPUs. While the CPU software stack has benefited from decades of memory safety hardening, the GPU software stack remains dangerously immature. This discrepancy presents a critical ethical challenge: the world's most advanced AI and scientific workloads are increasingly deployed on vulnerable hardware components. In this paper, we study the key challenges of ensuring memory safety on heterogeneous systems. We show that, while the number of exploitable bugs in heterogeneous systems rises every year, current mitigation methods often rely on unfaithful translations, i.e., converting GPU programs to run on CPUs for testing, which fails to capture the architectural differences between CPUs and GPUs. We argue that the faithfulness of the program behavior is at the core of secure and reliable heterogeneous systems design. To ensure faithfulness, we discuss several design considerations of a GPU-native fuzzing pipeline for CUDA programs.",
     "analysis": {},
     "authors": [
@@ -482,6 +688,57 @@
     "updated": "2026-03-05",
     "url": "http://arxiv.org/abs/2603.05725v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies, yet in practice this structure remains embedded implicitly in regulatory documents such as SASB, TCFD, and IFRS S2 and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies define formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction frequently produces semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. OntoMetric is an ontology-guided framework for the automated construction and governance of ESG metric knowledge graphs from regulatory documents that operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint embedded directly into the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction enriched with semantic fields and deterministic identifiers, and two-phase validation combining semantic type verification with rule-based schema checking, while preserving segment-level and page-level provenance to ensure traceability to regulatory source text. Evaluation on five ESG regulatory standards shows that ontology-guided extraction achieves 65-90 percent semantic accuracy and over 80 percent schema compliance, compared with 3-10 percent for unconstrained baseline extraction, and yields stable cost efficiency with a cost per validated entity of 0.01-0.02 USD and a 48 times efficiency improvement over baseline.",
+    "analysis": {},
+    "authors": [
+      "Mingqin Yu",
+      "F. Rabhi",
+      "Boming Xia",
+      "Zhengyi Yang",
+      "Felix Tan",
+      "Qinghua Lu University of New South Wales",
+      "Sydney",
+      "Australia",
+      "U. Adelaide",
+      "Adelaide",
+      "Csiro Data61"
+    ],
+    "categories": [],
+    "content_hash": "6b5a21b9bc760addc5ed15bccf1b390b222f214a435f36bb99d906295fabeff8",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-534f308e0feef5bc1a9c5cc53103fbc20b4a0c11",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2025-12-01",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "verification/fuzzing method: verification, validation"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "534f308e0feef5bc1a9c5cc53103fbc20b4a0c11",
+    "title": "OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation",
+    "title_key": "ontometric an ontology driven llm assisted framework for automated esg metric knowledge graph generation",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/534f308e0feef5bc1a9c5cc53103fbc20b4a0c11",
+    "venue": "未记录"
   },
   {
     "abstract": "Remote Direct Memory Access (RDMA) is a memory technology that allows remote devices to directly write to and read from each other's memory, bypassing components such as the CPU and operating system. This enables low-latency high-throughput networking, as required for many modern data centres, HPC applications and AI/ML workloads. However, baseline RDMA comprises a highly permissive weak memory model that is difficult to use in practice and has only recently been formalised. In this paper, we introduce the Library of Composable Objects (LOCO), a formally verified library for building multi-node objects on RDMA, filling the gap between shared memory and distributed system programming. LOCO objects are well-encapsulated and take advantage of the strong locality and the weak consistency characteristics of RDMA. They have performance comparable to custom RDMA systems (e.g. distributed maps), but with a far simpler programming model amenable to formal proofs of correctness. To support verification, we develop a novel modular declarative verification framework, called Mowgli, that is flexible enough to model multinode objects and is independent of a memory consistency model. We instantiate Mowgli with the RDMA memory model, and use it to verify correctness of LOCO libraries.",
@@ -1047,7 +1304,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "cfa1d60f133052dd340fc99e7181e1bbf55985e449c1a5200705aa677e94178d",
+    "content_hash": "b4636aacc01092748b64306b891d408a4b502ec1cf7084275b4b187c01743c55",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1055,7 +1312,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1069,7 +1326,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1104,7 +1361,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-08-06",
+    "updated": "2026-08-13",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },

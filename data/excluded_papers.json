@@ -1,5 +1,322 @@
 [
   {
+    "abstract": "View-based development is an important technique to manage complexity and facilitate cooperation in the development of modern and complex systems of systems. This approach places high demands on view definition languages used in the development process. First, such a language needs to be approachable and extremely versatile so that developers from diverse backgrounds are able to use it and can define views for a diverse set of different tasks. Yet, the language also needs to have a precise and formal semantics so that it is possible to integrate the work performed on various views in a controlled manner to obtain a coherent overall system. In this paper, we continue previous work of equipping the NeoJoin view definition language with a formal semantics that is based on triple graph grammars (TGGs). This paves the way for obtaining automated and incremental synchronization procedures between models and views that come with high formal guarantees for their behavior. Simultaneously, our work serves as a further case study of the expressivity and usability of TGGs. We identify one gap, namely convenient support for the translation of overlapping queries from the view definition language, and tackle that gap by introducing a skip semantics for TGG rules, i.e., allowing to skip certain actions a rule prescribes, depending on the application context.",
+    "analysis": {},
+    "authors": [
+      "Lars König",
+      "Jens Kosiol"
+    ],
+    "categories": [],
+    "content_hash": "cf8a6a0ce77e4ee0e7de7fa8127b63fae0fca685859de4a2adcfed7c1508e54d",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "arxiv-2608-10785v1",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2608.10785v1",
+    "primary_category": "",
+    "published": "2026-08-11",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2608.10785v1",
+    "title": "Extending Triple Graph Grammars to Formalize Complex View Definitions on Families of Models - Long Version",
+    "title_key": "extending triple graph grammars to formalize complex view definitions on families of models long version",
+    "updated": "2026-08-11",
+    "url": "http://arxiv.org/abs/2608.10785v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Result reproduction of computer networking research is challenging as the scarcity of open-source implementations and the complexity of heterogeneous system architectures. Even though Large Language Models have demonstrated potential in code generation, existing code generation frameworks often fail to address the long-context constraints and intricate logical dependencies, which are vital in reproducing network systems from academic papers. Thus, we introduce RepLLM, an end-to-end multi-agent framework designed to automate code reproduction from paper content. RepLLM features a collaborative architecture comprising four specialized agents—Content Parsing, Architecture Design, Code Generation, and Audit & Repair, which are coordinated through Shared Memory mechanism to ensure global context consistency. With the enhancement of Structured Chain-of-Thought LLM reasoning and a sandbox-isolated static-dynamic debugging methodology, our framework effectively resolves semantic discrepancies and runtime errors, thereby improving reliable reproductions. Extensive evaluations on representative papers in top conferences demonstrate that RepLLM outperforms state-of-the-art system-level LLM frameworks in generating compile-ready and logically correct systems. Our results show that, with the aid of RepLLM, we can reproduce 95% of the original benchmarks within approximately two hours while reducing token consumption by up to 10% compared with state-of-the-art baselines.",
+    "analysis": {},
+    "authors": [
+      "Yining Jiang",
+      "Yunxin Xu",
+      "Wei Xu",
+      "Yufan Zhu",
+      "X. Shirley Liu",
+      "Tangtang He",
+      "Haiying Huang",
+      "Letian Zhu",
+      "Qingyu Song",
+      "Qiang Su",
+      "Lizhao You",
+      "Lu Tang",
+      "Wanjian Feng",
+      "Yuchao Zhang",
+      "Linghe Kong",
+      "Qiao Xiang",
+      "Jiwu Shu"
+    ],
+    "categories": [],
+    "content_hash": "bc4af540423485971a42248c83e69436827ccc8b7aaadc40eee4c71ee1d95c81",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3789240.3829170",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w4414790478",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3789240.3829170",
+    "primary_category": "",
+    "published": "2026-08-11",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Executable",
+      "Debugging",
+      "Scripting language",
+      "Context (archaeology)",
+      "Programming language",
+      "Software engineering",
+      "Code (set theory)",
+      "Implementation",
+      "Distributed computing",
+      "Source code",
+      "Architecture",
+      "Theoretical computer science",
+      "Semantic Web",
+      "Data science",
+      "Code generation",
+      "Model transformation",
+      "Semantics (computer science)",
+      "Modeling language",
+      "Code refactoring",
+      "Artificial intelligence",
+      "Java",
+      "Audit",
+      "Transformation (genetics)"
+    ],
+    "source_id": "https://openalex.org/W4414790478",
+    "title": "RepLLM: Toward Automatically Reproducing Network Research Results",
+    "title_key": "repllm toward automatically reproducing network research results",
+    "updated": "2026-08-13",
+    "url": "https://doi.org/10.1145/3789240.3829170",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Despite massive investments in scale, deep models for click-through rate (CTR) prediction often exhibit rapidly diminishing returns—a stark contrast to the predictable scaling laws seen in large language models (LLMs). We identify the root cause as a fundamental structural misalignment: standard Transformers assume sequential compositionality, whereas CTR data demand combinatorial reasoning over heterogeneous fields. To restore alignment, we introduce the Field-Aware Transformer (FAT). By reconstructing the standard Transformer block with field-centric parameters, FAT achieves structured expressivity, fundamentally shifting the model complexity dependence from the total vocabulary size n with the number of fields F (n ≫ F ). Crucially, to decouple model capacity from field cardinality, FAT employs a Basis-Composed Hypernetwork to synthesize field-specific parameters from shared bases, further reducing parameter complexity. Theoretically, we ground this scaling behavior through a formal scaling law based on Rademacher complexity. Empirically, FAT outperforms exisiting state-of-the-art methods with up to +4.38% AUC improvement, and delivers +2.33% CTR and +0.66% RPM in live production. Our work establishes that scalable recommendation arises not from size alone, but from structured expressivity—architectural coherence with data semantics.",
+    "analysis": {},
+    "authors": [
+      "Bencheng Yan",
+      "Yuejie Lei",
+      "Zhi Zeng",
+      "Zheye Deng",
+      "Di Wang",
+      "Kaiyi Lin",
+      "Pengjie Wang",
+      "Chuan Yu",
+      "Jian Xu",
+      "B. Zheng"
+    ],
+    "categories": [],
+    "content_hash": "f500c3447dbdadefd1ed73f38fc55183556e06b46811259bf83e13725a5c8621",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770855.3818420",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w4416454731",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3770855.3818420",
+    "primary_category": "",
+    "published": "2026-08-07",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Scaling",
+      "Transformer",
+      "Scalability",
+      "Computer science",
+      "Vocabulary",
+      "Prior probability",
+      "Perplexity",
+      "Algorithm",
+      "Language model",
+      "Coherence (philosophical gambling strategy)",
+      "Artificial intelligence",
+      "Generalization",
+      "Theoretical computer science",
+      "Data mining",
+      "Gumbel distribution",
+      "Noise (video)",
+      "Data modeling",
+      "Computational complexity theory"
+    ],
+    "source_id": "https://openalex.org/W4416454731",
+    "title": "From Scaling to Structured Expressivity: Rethinking Transformers for CTR Prediction",
+    "title_key": "from scaling to structured expressivity rethinking transformers for ctr prediction",
+    "updated": "2026-08-08",
+    "url": "https://doi.org/10.1145/3770855.3818420",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "As increasingly capable open-weight large language models (LLMs) are deployed, improving their tamper resistance against unsafe modifications, whether accidental or intentional, becomes critical to minimize risks. However, there is no standard approach to evaluate tamper resistance. Varied datasets, metrics, and tampering configurations make it difficult to compare safety, utility, and robustness across different models and defenses. To address this, we introduce TamperBench, the first unified framework to systematically evaluate the tamper resistance of LLMs. TamperBench (i) curates a repository of state-of-the-art weight-space fine-tuning attacks, latent-space representation attacks, and alignment-stage defenses; (ii) enables realistic adversarial evaluation through systematic hyperparameter sweeps per attack–model pair; and (iii) provides both safety and utility evaluations. We use TamperBench to evaluate 21 open-weight LLMs, including defense-augmented variants, across nine tampering threats using standardized safety and capability metrics with hyperparameter sweeps per model–attack pair. The results provide insights including effects of post-training on tamper resistance, that jailbreak-tuning is typically the most severe attack, and that current alignment-stage defenses largely fail to withstand attack sweeps. Code is available at https://github.com/criticalml-uw/TamperBench.",
+    "analysis": {},
+    "authors": [
+      "Saad Hossain",
+      "Tom Tseng",
+      "Punya Syon Pandey",
+      "S Kant Vajpayee",
+      "Matthew Kowal",
+      "Nayeema Nonta",
+      "Samuel Simko",
+      "Stephen Casper",
+      "Zhijing Jin",
+      "Kellin Pelrine",
+      "Sirisha Rambhatla"
+    ],
+    "categories": [],
+    "content_hash": "2eea6870ce77454cb86d2460e6ba555cfd5caf255812d3adf3ad6c6efbee5cb8",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770855.3817557",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w7163678819",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3770855.3817557",
+    "primary_category": "",
+    "published": "2026-08-06",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Robustness (evolution)",
+      "Computer security",
+      "Hyperparameter",
+      "Adversarial system",
+      "Tamper resistance",
+      "Threat model",
+      "Poison control",
+      "Software",
+      "Key (lock)",
+      "Artificial intelligence",
+      "Machine learning",
+      "Risk analysis (engineering)",
+      "Resistance (ecology)",
+      "Code (set theory)",
+      "Representation (politics)",
+      "Arms race",
+      "Frame (networking)"
+    ],
+    "source_id": "https://openalex.org/W7163678819",
+    "title": "<scp>TamperBench</scp> : Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering",
+    "title_key": "scp tamperbench scp systematically stress testing llm safety under fine tuning and tampering",
+    "updated": "2026-08-08",
+    "url": "https://doi.org/10.1145/3770855.3817557",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Cyber Threat Intelligence (CTI) is foundational to modern cybersecurity, enabling organizations to proactively defend against evolving threats. However, the sheer volume and heterogeneity of CTI data, spanning structured knowledge bases (CVE, CWE, CAPEC, MITRE ATT&amp;CK) and unstructured threat reports, far exceed the capacity of manual analysis. The strong contextual understanding and reasoning of Large Language Models (LLMs) have driven growing interest in applying them to CTI tasks. Yet no existing benchmark evaluates LLMs in a retrieval-augmented setting with a proper evaluation harness that grants access to the heterogeneous domain knowledge sources analysts rely on in practice. To address this gap, we present CTIConnect, a benchmark for systematically evaluating retrieval-augmented LLMs across the CTI task landscape. We construct a unified evaluation environment integrating five heterogeneous CTI sources into 1,860 expert-verified QA pairs spanning nine tasks across three categories: Entity Linking, Multi-Document Synthesis, and Entity Attribution. Extensive experiments on ten state-of-the-art LLMs reveal that the cross-source semantic gap manifests differently across task categories, demanding fundamentally different retrieval strategies, and that the performance bottleneck shifts between retrieval infrastructure and evidence utilization depending on the task. Our domain-specific strategies further outperform stronger general-purpose retrieval paradigms (retrieve-then-rerank, IRCoT), showing that closing this gap requires structural interventions rather than generic retrieval improvements. These findings hold across all ten LLMs, remain consistent on the full benchmark, and stay stable under temporal splits spanning 2008-2025. Together, they provide actionable guidance for designing scalable retrieval architectures over heterogeneous CTI ecosystems.",
+    "analysis": {},
+    "authors": [
+      "Yutong Cheng",
+      "Yang Liu",
+      "Changze Li",
+      "Dawn Song",
+      "Peng Gao"
+    ],
+    "categories": [],
+    "content_hash": "cf57e3e43540220bc28390689f6c4ced95ba13fbec190dacb8351beb0a1b5a21",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770855.3817527",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w4415257529",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3770855.3817527",
+    "primary_category": "",
+    "published": "2026-08-06",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Benchmarking",
+      "Computer science",
+      "Set (abstract data type)",
+      "Data science",
+      "Benchmark (surveying)",
+      "Cover (algebra)",
+      "Intelligence analysis",
+      "Knowledge management",
+      "Exploit",
+      "Automated reasoning",
+      "Artificial intelligence",
+      "Quality (philosophy)",
+      "Human intelligence",
+      "Matching (statistics)",
+      "Business intelligence",
+      "Comprehension",
+      "Knowledge representation and reasoning",
+      "Computer security",
+      "Natural language",
+      "Applications of artificial intelligence"
+    ],
+    "source_id": "https://openalex.org/W4415257529",
+    "title": "CTIConnect: A Benchmark for Retrieval-Augmented LLMs over Heterogeneous Cyber Threat Intelligence",
+    "title_key": "cticonnect a benchmark for retrieval augmented llms over heterogeneous cyber threat intelligence",
+    "updated": "2026-08-11",
+    "url": "https://doi.org/10.1145/3770855.3817527",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Long-horizon tasks require agents to maintain coherent state and goals across nested and branching work. We call this capability goal-directed execution (GDE): the repeated application of four behaviors, namely selecting goals, constructing task-relevant state, maintaining fidelity to higher-level objectives, and verifying completion against the environment. We hypothesize that long-horizon post-training strengthens these behaviors across domains. We test this by post-training Qwen3.5-122B-A10B on 363 Long-Horizon Multi-Tool Agent (LHMTA) tasks drawn from office workflows. The collection contained no software-engineering tasks, yet the model's pass@1 improved by 5.8 points on SWE-Bench Pro. Matched trajectory analysis shows gains in all four GDE behaviors in both office workflows and software repositories. Aggregate SWE-Bench Pro statistics showed related changes in information gathering, implementation, and verification. Together, the results support a behavioral interpretation in which long-horizon post-training changed how the model organized and applied knowledge across tasks, with effects extending beyond the training domain.",
     "analysis": {},
     "authors": [
@@ -340,6 +657,74 @@
     "title_key": "sparse tensor network quantum machine learning for simulation cybersecurity and scientific discovery",
     "updated": "2026-08-03",
     "url": "https://doi.org/10.62311/nesx/rb8jy-978-81-688729-2-9",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Abstract Carbon credits transform quantified mitigation or removal claims into financial instruments, yet their credibility depends on evidence that is temporally consistent, causally defensible, environmentally complete, and governable across heterogeneous markets. This monograph develops an integrated research architecture for AI-verified carbon credit intelligence, combining uncertainty-aware measurement, statistical explanation, causal additionality analysis, machine learning, geospatial analytics, reproducible digital measurement-reporting-verification systems, and market governance. The framework treats verification as a layered inference problem rather than a single classification task: observed activity must be linked to atmospheric outcomes, counterfactual baselines must be interrogated, leakage and reversal risks must be represented, model confidence must be calibrated, and every decision must remain traceable to evidence provenance. Subsequent chapters connect causal estimation to predictive risk scoring, anomaly detection, multimodal learning, scalable data engineering, MLOps, cybersecurity, and portfolio-level climate-finance decisions. Sectoral pathways cover land systems, energy and industry, engineered removals, financial portfolios, and public governance, with comparative relevance to South Asia, Europe, Africa, and the Americas. The resulting monograph offers reusable models, metrics, audit protocols, governance artifacts, and deployment strategies for research programs and high-integrity net-zero market design. Keywords carbon credit intelligence, climate finance, net-zero governance, AI verification, carbon accounting, measurement uncertainty, additionality, counterfactual baselines, leakage risk, permanence, reversal risk, digital MRV, causal inference, geospatial analytics, anomaly detection, probabilistic calibration, explainable AI, data provenance, MLOps, market integrity, portfolio risk, climate governance, responsible AI",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "0b73a23777eefe3709aae4a19be1fded47b7751029a8eb5c0e68c0c81d905686",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb2jy-978-81-689097-8-6",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; security relevance: security, leakage; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "openalex-w7202275640",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1741308/Download Full-Text Research Book PDF Pp 1-77PIII2.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "security relevance: security, leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Counterfactual thinking",
+      "Geospatial analysis",
+      "Corporate governance",
+      "Portfolio",
+      "Economics",
+      "Business",
+      "Credibility",
+      "Causal inference",
+      "Probabilistic logic",
+      "Carbon credit",
+      "Debt",
+      "Climate change mitigation",
+      "Revenue",
+      "Environmental economics",
+      "Finance",
+      "Financial market",
+      "Climate risk",
+      "Market failure",
+      "Probability of default",
+      "Actuarial science",
+      "Climate Finance",
+      "Computer science",
+      "Inference",
+      "Capital market",
+      "Risk governance",
+      "Audit",
+      "Climate governance"
+    ],
+    "source_id": "https://openalex.org/W7202275640",
+    "title": "AI-Verified Carbon Credit Intelligence for High-Integrity Climate Finance and Net-Zero Market Governance",
+    "title_key": "ai verified carbon credit intelligence for high integrity climate finance and net zero market governance",
+    "updated": "2026-08-14",
+    "url": "https://doi.org/10.62311/nesx/rb2jy-978-81-689097-8-6",
     "venue": "未记录"
   },
   {
@@ -1644,7 +2029,7 @@
       "Edouard Bugnion"
     ],
     "categories": [],
-    "content_hash": "293730e68adaf3da85969efebecff084a4e3ad142618cf9eb39d6e60bcf04e6d",
+    "content_hash": "9341837ad660f1faa5476c2154367d87ce9f6defac98af5b6846ef6e32ab0755",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "evidence_level": "abstract",
@@ -1652,7 +2037,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w4415142875",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: microarchitectural path coverage processor fuzzing",
@@ -1669,7 +2054,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1700,7 +2085,7 @@
     "source_id": "https://openalex.org/W4415142875",
     "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
     "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-08-01",
+    "updated": "2026-08-11",
     "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
@@ -2317,6 +2702,54 @@
     "updated": "2026-05-22",
     "url": "http://arxiv.org/abs/2605.24216v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Transient execution attacks continue to pose serious security risks, even years after their initial discovery in the form of Meltdown and Spectre. Despite growing awareness and research, most attacks have been discovered manually. Existing automated approaches only focus on variants of known attacks or make strict assumptions, such as access to the CPU's RTL, a given leakage contract, or an ISA emulator. These limitations hinder broader and more generic detection, especially in postsilicon environments. In this paper, we present TREVEX, a post-silicon black-box detection framework designed to discover data-flow transient execution vulnerabilities automatically. TREVEX does not rely on RTL access or semantics of the ISA. Instead, TREVEX detects any unexpected transient data flow between different execution contexts by employing novel techniques informed by insights from prior transient execution attacks. We evaluate TREVEX across 20 microarchitectures from Intel, AMD, and Zhaoxin. Hereby, TREVEX discovers Floating Point Divider State Sampling (FP-DSS), a novel transient execution attack affecting AMD CPUs. We show that FP-DSS allows an unprivileged attacker and even a malicious website to leak data from different security domains, including the operating system. TREVEX further discovers a new variant of FPVI on AMD CPUs and that Zhaoxin CPUs are affected by FPVI. Our study shows that TREVEX reliably discovers known vulnerabilities on affected machines. Our study shows that TREVEX detects known vulnerabilities on affected CPUs, while also closing gaps in existing vendor documentation. Our findings highlight the urgent need for more diverse automated tools and demonstrate that TREVEX fills an important gap in current CPU vulnerability research.",
+    "analysis": {},
+    "authors": [
+      "Daniel Weber",
+      "Fabian Thomas",
+      "Leon Trampert",
+      "Ruiyi Zhang",
+      "Michael Schwarz"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "b5b302fa4163b25271daab9fa0a53b91f4d3fcbeac2ca7651a7678afb25da46e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/SP63933.2026.00135",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: cpu, microarchitecture, rtl; security relevance: security, vulnerability, transient execution; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-906e816bc3ec34eeb77a7b8fe1a4aa2c094e79b1",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-05-18",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, microarchitecture, rtl",
+      "security relevance: security, vulnerability, transient execution",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "906e816bc3ec34eeb77a7b8fe1a4aa2c094e79b1",
+    "title": "Trevex: A Black-Box Detection Framework for Data-Flow Transient Execution Vulnerabilities",
+    "title_key": "trevex a black box detection framework for data flow transient execution vulnerabilities",
+    "updated": "",
+    "url": "https://doi.org/10.1109/SP63933.2026.00135",
+    "venue": "IEEE Symposium on Security and Privacy"
   },
   {
     "abstract": "Training tool-calling agents requires large-scale trajectory data with verifiable labels, yet existing approaches either synthesize environments that diverge from real API behavior or generate tasks without ground-truth outcomes for verification. We present FireFly, a pipeline for generating verified tool-call data from real-world MCP servers. Our key insight is to invert the standard synthesis pipeline: rather than generating tasks and hoping they are solvable, we first let a strong LLM explore real APIs along graph-guided DAG structures, then synthesize tasks backward from observed outcomes, guaranteeing label correctness by construction. To handle the scale of real-world tool spaces (${\\sim}$1,000 tools), we build a pairwise tool graph and sample sub-DAGs to focus exploration on semantically coherent workflows. To address environment drift in live APIs, we construct a retrieval-augmented simulator that caches all exploration results and replays them during training and evaluation, enabling fully offline and reproducible RL. Applying this pipeline yields 5,144 verified tasks spanning 240 servers and 993 tools. A 4B-parameter model trained with GRPO on FireFly matches Claude Sonnet 4.6 on our held-out test set and shows improvements on multiple tool-calling benchmarks including Tau2-Bench, MCPMark, and MCP-Atlas.",
@@ -3053,7 +3486,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "6be5760f2cdc4a97ba062e6aca22c9edc09e20b2139ad1f73487caf789168f58",
+    "content_hash": "87e0807a61041437bc516984dd89a42f3232a8a1cb023e7f5a0c8f3ee23a619e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -3061,7 +3494,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3075,7 +3508,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -3109,7 +3542,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-07-22",
+    "updated": "2026-08-12",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -3199,7 +3632,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "f248e7262ab4ec9e833b26442a0c51a112209531f31d42a18a55082a1a83c84f",
+    "content_hash": "7b462a5d58327f791afb1ccddc7ee0e7f533a7cd04113b8b252fc9d935fb7e95",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -3207,7 +3640,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -3221,7 +3654,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -3254,7 +3687,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-07-29",
+    "updated": "2026-08-12",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -3510,7 +3943,7 @@
       "Dave (Jing) Tian"
     ],
     "categories": [],
-    "content_hash": "180e1d646f25db199958450543c3f807c29204335164badd7f0d66ec68a95b4e",
+    "content_hash": "c5e1afae17492debe093b66e20aa2e872be05d3f49a1269d8c56b8097cb5a905",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/bar.2026.23028",
     "evidence_level": "abstract",
@@ -3518,7 +3951,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w7172206056",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: multicore processor fuzzing shared memory"
@@ -3534,7 +3967,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3551,7 +3984,7 @@
     "source_id": "https://openalex.org/W7172206056",
     "title": "NVLift: Lifting NVIDIA GPU Assembly to LLVM IR for Downstream Security Applications",
     "title_key": "nvlift lifting nvidia gpu assembly to llvm ir for downstream security applications",
-    "updated": "2026-08-06",
+    "updated": "2026-08-13",
     "url": "https://doi.org/10.14722/bar.2026.23028",
     "venue": "未记录"
   },
@@ -3849,7 +4282,7 @@
       "Michael Schwarz"
     ],
     "categories": [],
-    "content_hash": "3f5fedea3fd8983cae219bbdec216cd78be2b2b5056cbacea64bfc98cb543b61",
+    "content_hash": "c1bfc31c696ba3bdf2756c6bd5442a69fa768970b1d08bc070f588a52ab2df0d",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3719027.3765061",
     "evidence_level": "abstract",
@@ -3857,7 +4290,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4416549424",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -3872,7 +4305,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Cache",
@@ -3900,7 +4333,7 @@
     "source_id": "https://openalex.org/W4416549424",
     "title": "<scp>ExfilState:</scp> Automated Discovery of Timer-Free Cache Side Channels on ARM CPUs",
     "title_key": "scp exfilstate scp automated discovery of timer free cache side channels on arm cpus",
-    "updated": "2026-07-29",
+    "updated": "2026-08-11",
     "url": "https://doi.org/10.1145/3719027.3765061",
     "venue": "未记录"
   },
@@ -3960,7 +4393,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "2e03bea743d297c0ce9cddb9a9956f3f07c8f7dbfe3e0ec0b6aa30cce1dd1e08",
+    "content_hash": "157d0e877c82bfb724ad8ac73e6fc4d67f8ff1eae4fdc51de9185cd4ed5cb1da",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -3968,7 +4401,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3981,7 +4414,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -4006,7 +4439,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-08-05",
+    "updated": "2026-08-08",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -5167,7 +5600,7 @@
       "Shweta Shinde"
     ],
     "categories": [],
-    "content_hash": "87040a908497e980e21d7e862a43b72133715682e13f45107ff0f73930fb01f3",
+    "content_hash": "0886766430b71dc870627a8e19f8d71f06fd4116cc18a7813ae297dc56ff68ae",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676844",
     "evidence_level": "abstract",
@@ -5175,7 +5608,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282636",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -5190,7 +5623,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Implementation",
@@ -5201,7 +5634,7 @@
     "source_id": "https://openalex.org/W4409282636",
     "title": "eXpect: On the Security Implications of Violations in AXI Implementations",
     "title_key": "expect on the security implications of violations in axi implementations",
-    "updated": "2026-07-29",
+    "updated": "2026-08-11",
     "url": "https://doi.org/10.1145/3676536.3676844",
     "venue": "未记录"
   },
@@ -5479,7 +5912,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "cdb1fe646dcda2efaae6ea91eef90ba7f6001a724ac6a066e6fbc2311d163d5c",
+    "content_hash": "5e9d3b381871b1d87a6fe9d17d8b3b91c32ea224a4e3d76ed2472e7c7afb167f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -5487,7 +5920,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -5502,7 +5935,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5514,7 +5947,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-08-04",
+    "updated": "2026-08-12",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -5605,6 +6038,53 @@
     "updated": "",
     "url": "https://www.semanticscholar.org/paper/3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
     "venue": "USENIX Security Symposium"
+  },
+  {
+    "abstract": "To address transient execution vulnerabilities, processor architects have proposed both defensive designs and formal descriptions of the security they provide. However, these designs are not typically formally proven to enforce the claimed guarantees; more importantly, there are few tools to automatically ensure that Register Transfer Level (RTL) descriptions are faithful to high-level designs. In this paper, we demonstrate how to extend an existing security-typed hardware description language to express speculative security conditions and to verify the security of synthesizable implementations. Our tool can statically verify that an RTL hardware design is free of transient execution vulnerabilities without manual proof effort. Our key insight is that erasure labelsi> can be adapted both to be statically checkable and to represent transiently accessed or modified data and its mandatory erasure under misspeculation. Further, we show how to use erasure labels to defend a strong formal definition of speculative security. To validate our approach, we implement several components that are critical to speculative, out-of-order processors and are also common vectors for transient execution vulnerabilities. We show that the security of existing defenses can be correctly validated and that the absence of necessary defenses is detected as a potential vulnerability.",
+    "analysis": {},
+    "authors": [
+      "Drew Zagieboylo",
+      "C. Sherk",
+      "Andrew C. Myers",
+      "G. E. Suh"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "a6482a3829b20c1f599402d933f6ce943e6409b6d81a0f29374d4ee3cdadc87b",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3576915.3623074",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor, rtl, verilog; security relevance: security, vulnerability, transient execution; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-98f5be384d3279545af9b94284995b430c848aaf",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3576915.3623074",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2023-11-15",
+    "relevance_reasons": [
+      "hardware/processor object: processor, rtl, verilog",
+      "security relevance: security, vulnerability, transient execution",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "98f5be384d3279545af9b94284995b430c848aaf",
+    "title": "SpecVerilog: Adapting Information Flow Control for Secure Speculation",
+    "title_key": "specverilog adapting information flow control for secure speculation",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3576915.3623074",
+    "venue": "Conference on Computer and Communications Security"
   },
   {
     "abstract": "Microarchitectural timing side channels have been thoroughly investigated as a security threat in hardware designs featuring shared buffers (e.g., caches) and/or parallelism between attacker and victim task execution. However, contradicting common intuitions, recent activities demonstrate that this threat is real even in microcontroller SoCs without such features. In this paper, we describe SoC-wide timing side channels previously neglected by security analysis and present a new formal method to close this gap. In a case study on the RISC-V Pulpissimo SoC, our method detected a vulnerability to a previously unknown attack variant that allows an attacker to obtain information about a victim’s memory access behavior. After implementing a conservative fix, we were able to verify that the SoC is now secure w.r.t. the considered class of timing side channels.",
@@ -6413,6 +6893,53 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Transient execution vulnerabilities originate in the extensive speculation implemented in modern high-performance microprocessors. Identifying all possible vulnerabilities in complex designs is very challenging. One of the challenges stems from the lack of visibility into the transient micro-architectural state of the processor. Prior work has used covert channels to identify data leakage from transient state, which limits the systematic discovery of all potential leakage sources.This paper presents INTROSPECTRE, a pre-silicon framework for early discovery of transient execution vulnerabilities. IN- TROSPECTRE addresses the lack of visibility into the micro- architectural processor state by integrating into the register transfer level (RTL) design flow, gaining full access to the internal state of the processor. Full visibility into the processor state enables INTROSPECTRE to perform a systematic leakage analysis that includes all micro-architectural structures, allowing it to identify potential leakage that may not be reachable with known side channels. We implement INTROSPECTRE on an RTL simulator and use it to perform transient leakage analysis on the RISC-V BOOM processor. We identify multiple transient leakage scenarios, most of which had not been highlighted on this processor design before.",
+    "analysis": {},
+    "authors": [
+      "Moein Ghaniyoun",
+      "Kristin Barber",
+      "Yinqian Zhang",
+      "R. Teodorescu"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "68d77e287896c48364880cc624bc9d5e7fa54f655fc8611195dde79043b610c5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/ISCA52012.2021.00073",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, processor, rtl; security relevance: side channel, transient execution, leakage; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-6c80646421bbc776426a87d88373872ec7083ef0",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2021-06-01",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, rtl",
+      "security relevance: side channel, transient execution, leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6c80646421bbc776426a87d88373872ec7083ef0",
+    "title": "INTROSPECTRE: A Pre-Silicon Framework for Discovery and Analysis of Transient Execution Vulnerabilities",
+    "title_key": "introspectre a pre silicon framework for discovery and analysis of transient execution vulnerabilities",
+    "updated": "",
+    "url": "https://doi.org/10.1109/ISCA52012.2021.00073",
+    "venue": "International Symposium on Computer Architecture"
+  },
+  {
     "abstract": "Measurement-based analysis of software timing behavior provides important insight and evidence for flight certification of modern avionics systems. For multicore systems, however, this analysis is challenging due to interference effects from shared hardware resource usage. We present an approach to multicore timing analysis that uses interference generators to stress interference channels in multicore systems. The test methodology comprises two steps. First, platform characterization measures the sensitivity of the hardware and RTOS to targeted interference channels using a combination of interference generators. Second, software characterization measures the timing behavior of instrumented applications while interference is generated on shared resources.",
     "analysis": {},
     "authors": [
@@ -6715,6 +7242,51 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Daniel Moghimi",
+      "Moritz Lipp",
+      "B. Sunar",
+      "Michael Schwarz"
+    ],
+    "categories": [],
+    "content_hash": "9cc25b86230ac40be4f2b70eda5317b5301ecf1fb65447820499ccbc9b8c629d",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: microarchitectural; security relevance: leakage; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-b91d3d2a187501a76143822d9ce1ed24b1360b36",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2020",
+    "relevance_reasons": [
+      "hardware/processor object: microarchitectural",
+      "security relevance: leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "b91d3d2a187501a76143822d9ce1ed24b1360b36",
+    "title": "Medusa: Microarchitectural Data Leakage via Automated Attack Synthesis",
+    "title_key": "medusa microarchitectural data leakage via automated attack synthesis",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/b91d3d2a187501a76143822d9ce1ed24b1360b36",
+    "venue": "USENIX Security Symposium"
+  },
+  {
     "abstract": "Timing-based side or covert channels in processor caches continue to present a threat to computer systems, and they are the key to many of the recent Spectre and Meltdown attacks. Based on improvements to an existing three-step model for cache timing-based attacks, this work presents 88 Strong types of theoretical timing-based vulnerabilities in processor caches. To understand and evaluate all possible types of vulnerabilities in processor caches, this work further presents and implements a new benchmark suite which can be used to test to which types of cache timing-based attacks a given processor or cache design is vulnerable. In total, there are 1094 automatically-generated test programs which cover the 88 theoretical vulnerabilities. The benchmark suite generates the Cache Timing Vulnerability Score which can be used to evaluate how vulnerable a specific cache implementation is to different attacks. A smaller Cache Timing Vulnerability Score means the design is more secure, and the scores among different machines can be easily compared. Evaluation is conducted on commodity Intel and AMD processors and shows the differences in processor implementations can result in different types of attacks that they are vulnerable to. Beyond testing commodity processors, the benchmarks and the Cache Timing Vulnerability Score can be used to help designers of new secure processor caches evaluate their design's susceptibility to cache timing-based attacks.",
     "analysis": {},
     "authors": [
@@ -6800,6 +7372,49 @@
     "updated": "2019-11-10",
     "url": "http://arxiv.org/abs/1911.03991v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Current and future multicore architectures can significantly accelerate the performance of test automation procedures depending on the underlying architecture and the scalability of their algorithms. This paper proposes a new parallel methodology targeting the fault simulation problem, for shared memory multicore systems, that maintains scalability with the increase of the number of cores. The method is based on a simple single thread process that allows focusing on the optimization of the parallelization process in different dimensions. Additionally, a number of optimizations are incorporated in the approach to control fault dropping and to avoid unnecessary work. The reported experimental results, for both random and deterministic test sets, demonstrate the scalability of the method. As the number of cores increases, the reported speed-up increases proportionally, where comparable recent methods report saturation or even reduction of the obtained speed-up.",
+    "analysis": {},
+    "authors": [
+      "Stavros Hadjitheophanous",
+      "Stelios N. Neophytou",
+      "M. Michael"
+    ],
+    "categories": [],
+    "content_hash": "610b2c489d761f6150a9312acdadbb591a3fac5630bc1b8c4c1bc7ffdfe4dc2a",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/TCAD.2018.2855131",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: multicore; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-6dc58360db7a65673da37d71ca87e16230accf88",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://zenodo.org/record/1313832/files/Hadjitheophanous%20Parallel%20Fault%20Simulation.pdf",
+    "primary_category": "",
+    "published": "2019-08-01",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "6dc58360db7a65673da37d71ca87e16230accf88",
+    "title": "Exploiting Shared-Memory to Steer Scalability of Fault Simulation Using Multicore Systems",
+    "title_key": "exploiting shared memory to steer scalability of fault simulation using multicore systems",
+    "updated": "",
+    "url": "https://doi.org/10.1109/TCAD.2018.2855131",
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
   },
   {
     "abstract": "As Computed Tomography (CT) scans are an essential medical test, many techniques have been proposed to reconstruct high-quality images using a smaller amount of radiation. One approach is to employ algebraic factorization methods to reconstruct the images, using fewer views than the traditional analytical methods. However, their main drawback is the high computational cost and hence the time needed to obtain the images, which is critical in the daily clinical practice. For this reason, faster methods for solving this problem are required. In this paper, we propose a new reconstruction method based on the QR factorization that is very efficient on affordable equipment (standard multicore processors and standard Solid-State Drives) by using out-of-core techniques. Combining both affordable hardware and the new software, we can boost the performance of the reconstructions and implement a reliable and competitive method that reconstructs high-quality CT images quickly.",
@@ -7135,6 +7750,47 @@
     "abstract": "",
     "analysis": {},
     "authors": [
+      "H. Dogan"
+    ],
+    "categories": [],
+    "content_hash": "b3f04bb6f92fa21066db5a2175d30cd6223ac14169a3b804339d4a99a2545e82",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: processor, multicore; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-fc2671063ab60994821a9abd2b4f0afa017adb4b",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2018",
+    "relevance_reasons": [
+      "hardware/processor object: processor, multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "fc2671063ab60994821a9abd2b4f0afa017adb4b",
+    "title": "Accelerating Synchronization on Futuristic 1000-cores Multicore Processor with Moving Compute to Data Model",
+    "title_key": "accelerating synchronization on futuristic 1000 cores multicore processor with moving compute to data model",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/fc2671063ab60994821a9abd2b4f0afa017adb4b",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
       "Sergej Schumilo",
       "Cornelius Aschermann",
       "R. Gawlik",
@@ -7175,6 +7831,46 @@
     "updated": "",
     "url": "https://www.semanticscholar.org/paper/30023acba3ac198a7d260228dc51fda8414b8860",
     "venue": "USENIX Security Symposium"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [
+      "Priya P. Sajan",
+      "S. Kumar"
+    ],
+    "categories": [],
+    "content_hash": "4a0ec12c8557ed2e541a246a315af78ea695d9f5964c6d344396679f716fbfc2",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: multicore; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-7a85332d79ef3104127850a754237e848831b320",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2017",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "7a85332d79ef3104127850a754237e848831b320",
+    "title": "An Improved Shared Memory Parallelization of Image Segmentation Algorithms in Multicore Architecture",
+    "title_key": "an improved shared memory parallelization of image segmentation algorithms in multicore architecture",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/7a85332d79ef3104127850a754237e848831b320",
+    "venue": "未记录"
   },
   {
     "abstract": "The HSA Foundation has produced the HSA Platform System Architecture Specification that goes a long way towards addressing the need for a clear and consistent method for specifying weakly consistent memory. HSA is specified in a natural language which makes it open to multiple ambiguous interpretations and could render bugs in implementations of it in hardware and software. In this paper we present a formal model of HSA which can be used in the development and verification of both concurrent software applications as well as in the development and verification of the HSA-compliant platform itself. We use the Event-B language to build a provably correct hierarchy of models from the most abstract to a detailed refinement of HSA close to implementation level. Our memory models are general in that they represent an arbitrary number of masters, programs and instruction interleavings. We reason about such general models using refinements. Using Rodin tool we are able to model and verify an entire hierarchy of models using proofs to establish that each refinement is correct. We define an automated validation method that allows us to test baseline compliance of the model against a suite of published HSA litmus tests. Once we complete model validation we develop a coverage driven method to extract a richer set of tests from the Event-B model and a user specified coverage model. These tests are used for extensive regression testing of hardware and software systems. Our method of refinement based formal modelling, baseline compliance testing of the model and coverage driven test extraction using the single language of Event-B is a new way to address a key challenge facing the design and verification of multi-core systems.",
@@ -7221,6 +7917,45 @@
     "updated": "2016-05-16",
     "url": "http://arxiv.org/abs/1605.04744v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "3d3bd3fcfeabc887122f3a56b824808699c3ef8c7443bc28730f34e1c3e5f37d",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "hardware/processor object: multicore; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-f0a214feba7c57a8a7233bbacb4bb236e83f47b0",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2015-11-06",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "f0a214feba7c57a8a7233bbacb4bb236e83f47b0",
+    "title": "Shared Memory Application Programming: Concepts and Strategies in Multicore Application Programming",
+    "title_key": "shared memory application programming concepts and strategies in multicore application programming",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/f0a214feba7c57a8a7233bbacb4bb236e83f47b0",
+    "venue": "未记录"
   },
   {
     "abstract": "",
@@ -7562,6 +8297,43 @@
     "title_key": "a new detection scheme for ultrafast 2 d cosy",
     "updated": "",
     "url": "https://www.semanticscholar.org/paper/a27454abd4d58218a3c3b9261b4ab10828d241b2",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "5e35aa6520702cb71fcb58c4d66ca574b00c9ff091f73b32c57361bac1a051cb",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "metadata",
+    "exclusion_reason": "security relevance: vulnerability; missing object-method conjunction",
+    "first_seen": "2026-08-15",
+    "id": "semantic-scholar-ed56e97133ad2c361afb08fe0c13112253996356",
+    "included": false,
+    "last_seen": "2026-08-15",
+    "matched_queries": [
+      "Semantic Scholar: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2009",
+    "relevance_reasons": [
+      "security relevance: vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [],
+    "source_id": "ed56e97133ad2c361afb08fe0c13112253996356",
+    "title": "Characterizing the Use of Program Vulnerability Factors for Studying Transient Fault Tolerance in Multi-core Architectures",
+    "title_key": "characterizing the use of program vulnerability factors for studying transient fault tolerance in multi core architectures",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/ed56e97133ad2c361afb08fe0c13112253996356",
     "venue": "未记录"
   },
   {

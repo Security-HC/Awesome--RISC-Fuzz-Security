@@ -1,17 +1,22 @@
 # 待人工复核
 
-共 47 篇。该列表不进入主 README。
+共 52 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
+| 2026-08-12 | [GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing](http://arxiv.org/abs/2608.12635v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](http://arxiv.org/abs/2608.02915v1) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
+| 2026-07-30 | [Brain-Connectivity Modelling and Cognitive-State Discovery using Quantum Topological Data Analysis for Explainable Neuroinformatics](https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [Timelines Over Tokens](https://doi.org/10.31979/etd.ewrn-xhac) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [RThermaL](https://doi.org/10.31979/etd.x48p-hs5d) | 4 | hardware/processor object: processor, rtl, verilog；verification/fuzzing method: validation |
 | 2026-07-15 | [nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency](https://doi.org/10.3390/computers15070447) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: validation |
 | 2026-07-05 | [EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR](https://doi.org/10.1145/3803437.3806400) | 4 | hardware/processor object: verilog；verification/fuzzing method: verification, formal verification |
 | 2026-05-05 | [täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)](http://arxiv.org/abs/2605.04172v1) | 4 | hardware/processor object: microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |
 | 2026-04-10 | [From Indiscriminate to Targeted: Efficient RTL Verification via Functionally Key Signal-Driven LLM Assertion Generation](http://arxiv.org/abs/2604.08932v1) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: verification, mutation testing |
+| 2026-04-10 | [From Indiscriminate to Targeted: Functionally Critical Signal-Driven Assertion Generation using LLMs for Efficient RTL Verification](http://arxiv.org/abs/2604.08932v2) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-03-05 | [Challenges and Design Considerations for Finding CUDA Bugs Through GPU-Native Fuzzing](http://arxiv.org/abs/2603.05725v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
+| 2025-12-01 | [OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation](https://www.semanticscholar.org/paper/534f308e0feef5bc1a9c5cc53103fbc20b4a0c11) | 4 | hardware/processor object: soc；verification/fuzzing method: verification, validation |
 | 2025-10-12 | [A Verified High-Performance Composable Object Library for Remote Direct Memory Access (Extended Version)](http://arxiv.org/abs/2510.10531v1) | 4 | hardware/processor object: cpu, memory consistency；verification/fuzzing method: verification |
 | 2025-09-28 | [AssertGen: Enhancement of LLM-aided Assertion Generation through Cross-Layer Signal Bridging](http://arxiv.org/abs/2509.23674v1) | 4 | hardware/processor object: rtl, verilog, systemverilog；verification/fuzzing method: verification, mutation testing |
 | 2025-09-05 | [Comparing Methods for the Cross-Level Verification of SystemC Peripherals with Symbolic Execution](http://arxiv.org/abs/2509.05504v2) | 4 | hardware/processor object: processor；verification/fuzzing method: verification |

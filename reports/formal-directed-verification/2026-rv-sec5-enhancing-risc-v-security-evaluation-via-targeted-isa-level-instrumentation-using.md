@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Muhammad Awais、Maria Mushtaq、Lirida Naviner、Florent Bruguier、Jawad Haj Yahya
+- 作者：Muhammad Awais、Maria Mushtaq、Lirida Naviner、Florent Bruguier、Jawad Haj-Yahya
 - 发表日期：2026-02-11
 - 会议/期刊：未记录
 - 主分类：形式化与定向处理器验证

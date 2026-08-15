@@ -2,26 +2,26 @@
 
 ## 基本信息
 
-- 作者：Quentin Bordier、Tobias Kovats、Flavien Solt、Kaveh Razavi
+- 作者：Quentin Bordier、T. Kovats、Flavien Solt、Kaveh Razavi
 - 发表日期：2026-06-01
-- 会议/期刊：未记录
+- 会议/期刊：International Symposium on Computer Architecture
 - 主分类：多 Hart、内存一致性与缓存一致性
 - 相关性：A·直接相关（score=100）
-- 证据等级：元数据
+- 证据等级：摘要级
 - 全文状态：PDF待补
-- 标签：Multi-Hart, Memory Consistency & Cache Coherence、RISC-V Processor Fuzzing
+- 标签：Multi-Hart, Memory Consistency & Cache Coherence、RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
-- 论文页面：[https://doi.org/10.1109/isca66397.2026.00155](https://doi.org/10.1109/isca66397.2026.00155)
+- 论文页面：[https://doi.org/10.1109/ISCA66397.2026.00155](https://doi.org/10.1109/ISCA66397.2026.00155)
 - PDF：未记录
 - 分析模式：摘要级占位（未全文核验）
 
 ## 摘要
 
-
+Hardware bugs threaten the correctness and security of modern CPUs. Relying on a deterministic correct baseline, pre-silicon fuzzing has proven to be an effective strategy for discovering deviations from correct behavior (i.e., bugs) in single-core CPUs. Modern CPUs, however, often feature multiple cores with complex interconnects that implement communication channels such as inter-processor interrupts or shared memory. Is it possible to effectively fuzz multicore CPUs despite their inherent non-deterministic operations? We make a key observation that multi-hart interactions may result in non-deterministic data flows, control flows, or combinations thereof. An efficient fuzzing campaign needs to manage this non-determinism without limiting the exploration of the possible state space that may lead to bugs. Our new multi-hart RISC-V fuzzer, called HartBreaker, achieves this with a judicious use of three determinism anchors: control- and data-flow anchors enable non-deterministic control- and dataflow interactions between harts while ensuring a correct execution of multi-hart test programs, achieving high testing throughput and simplified bug detection. Synchronization anchors bound the non-deterministic window across harts, enabling HartBreaker to detect bugs that do not contaminate the control flow. We test HartBreaker on five multi-hart designs, namely Rocket, BOOM, Toooba, NaxRiscv and XiangShan. HartBreaker discovers five new concurrency bugs in these designs.
 
 ## 研究问题
 
-摘要级初步判断（未核验正文）：当前记录没有可用摘要。
+摘要级初步判断（未核验正文）：Hardware bugs threaten the correctness and security of modern CPUs. Relying on a deterministic correct baseline, pre-silicon fuzzing has proven to be an effective strategy for discovering deviations from correct behavior (i.e., bugs) in single-core CPUs. Modern CPUs, however, often feature multiple cores with complex interconnects that implement communication channels such as inter-processor interrupts or shared memory. Is it possible to effectively fuzz multicore CPUs despite their inherent non-deterministic operations? We make a key observation that multi-hart interactions may result in non-deterministic data flows, control flows, or combinations thereof. An efficient fuzzing campaign needs to manage this non-determinism without limiting the exploration of the possible state space that may lead to bugs. Our new multi-hart RISC-V fuzzer, called HartBreaker, achieves this with a judicious use of three determinism anchors: control- and data-flow anchors enable non-deterministic control- and dataflow interactions between harts while ensuring a correct execution of multi-hart test programs, achieving high testing throughput and simplified bug detection. Synchronization anchors bound the non-deterministic window across harts, enabling HartBreaker to detect bugs that do not contaminate the control flow. We test HartBreaker on five multi-hart designs, namely Rocket, BOOM, Toooba, NaxRiscv and XiangShan. HartBreaker discovers five new concurrency bugs in these designs.
 
 ## Introduction 梳理
 

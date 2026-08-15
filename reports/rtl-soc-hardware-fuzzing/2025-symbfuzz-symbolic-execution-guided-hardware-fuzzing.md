@@ -12,7 +12,7 @@
 - 标签：RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology、Formal & Directed Processor Verification
 - 纳入依据：strong phrase in title: hardware fuzzing；hardware/processor object: processor, rtl；verification/fuzzing method: fuzz, random testing, verification, validation；security relevance: security, vulnerability
 - 论文页面：[https://doi.org/10.1145/3725843.3756131](https://doi.org/10.1145/3725843.3756131)
-- PDF：[https://doi.org/10.1145/3725843.3756131](https://doi.org/10.1145/3725843.3756131)
+- PDF：[https://dl.acm.org/doi/pdf/10.1145/3725843.3756131](https://dl.acm.org/doi/pdf/10.1145/3725843.3756131)
 - 分析模式：摘要级占位（未全文核验）
 
 ## 摘要
