@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Quentin Bordier、T. Kovats、Flavien Solt、Kaveh Razavi
+- 作者：Quentin Bordier、Tobias Kovats、Flavien Solt、Kaveh Razavi
 - 发表日期：2026-06-01
-- 会议/期刊：International Symposium on Computer Architecture
+- 会议/期刊：未记录
 - 主分类：多 Hart、内存一致性与缓存一致性
 - 相关性：A·直接相关（score=100）
 - 证据等级：摘要级
 - 全文状态：PDF待补
 - 标签：Multi-Hart, Memory Consistency & Cache Coherence、RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
-- 论文页面：[https://doi.org/10.1109/ISCA66397.2026.00155](https://doi.org/10.1109/ISCA66397.2026.00155)
+- 论文页面：[https://doi.org/10.1109/isca66397.2026.00155](https://doi.org/10.1109/isca66397.2026.00155)
 - PDF：未记录
 - 分析模式：摘要级占位（未全文核验）
 

@@ -1,5 +1,213 @@
 [
   {
+    "abstract": "Cloud-to-Edge computing is a fundamental shift in architectural thinking to today's infrastructure. The seamless integration of cloud-scale analytics and edge-responsive execution is becoming a must-have technology and a research frontier as the next generation of applications seek ever greater responsiveness, intelligence, and agility. This book covers the architectures, enabling technologies, resource management approaches, and security frameworks needed for successful cloud-edge integration in a systematic manner. Seven chapters take the reader from theory to practice and explore new areas such as the metaverse, autonomous systems and smart infrastructure. This work builds on existing research work and industry advances, while also incorporating critical reviews of new challenges. Every chapter has the same academic rigor but is accessible to researchers, practitioners and advanced students. The outcome is an all-in-one reference that stimulates theoretical advancements as well as the practical implementation of the integrated cloud-edge systems for next-generation applications.",
+    "analysis": {},
+    "authors": [
+      "Harish Chamarthi"
+    ],
+    "categories": [],
+    "content_hash": "a985f735da180d1515bb67c9aedf970532a81b2e4d391868c1229cbf219ca8b0",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70593/978-81-69589-26-0",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203630014",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://deepscienceresearch.com/dsr/catalog/download/789/3417/5957",
+    "primary_category": "",
+    "published": "2026-08-17",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Software engineering",
+      "Work (physics)",
+      "Resource (disambiguation)",
+      "Engineering management",
+      "Systems engineering",
+      "System integration",
+      "Analytics",
+      "Data science",
+      "Frontier",
+      "Outcome (game theory)",
+      "Architecture framework",
+      "Cloud computing",
+      "Architecture",
+      "Key (lock)",
+      "Interoperability",
+      "Information technology",
+      "Industry 4.0",
+      "Model-driven architecture",
+      "Information system",
+      "Legacy system",
+      "Best practice",
+      "Management science"
+    ],
+    "source_id": "https://openalex.org/W7203630014",
+    "title": "Integrated Cloud–Edge Computing Architectures for Next-Generation Applications",
+    "title_key": "integrated cloud edge computing architectures for next generation applications",
+    "updated": "2026-08-18",
+    "url": "https://doi.org/10.70593/978-81-69589-26-0",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "The decisive information struggle of the digital age is not confined to the question of whether a statement is allowed to exist.Power also operates through attention, selection, ranking, recommendation, labeling, context, credibility signals, search visibility, monetization, and the architecture by which people encounter claims at all.This chapter examines that wider field of epistemic power.It traces the historical movement from scarce print channels and concentrated broadcasting to a platform society in which publishers, search engines, social networks, cloud systems, recommender algorithms, fact-checking organizations, governments, regulators, artificial-intelligence systems, advertisers, and users jointly shape the practical conditions under which public reality is perceived.The evidence supports several strong conclusions.Media organizations and platforms inevitably gatekeep because attention is scarce.Agenda-setting, framing, ranking, and recommendation can materially alter what people see and what receives public salience.Major platforms have openly reduced distribution of content they classify as borderline or harmful while elevating sources they regard as authoritative.Governments have communicated extensively with platforms about misinformation, and the record in Murthy v. Missouri shows that federal actors played a role in at least some moderation choices, although the United States Supreme Court did not decide the constitutional merits because the plaintiffs failed to establish Article III standing.The European Union has meanwhile moved toward auditable transparency duties for content moderation, recommender systems, and AIgenerated content.Generative AI adds a new layer because search and conversational systems increasingly synthesize answers rather than merely list sources, while deepfakes and synthetic media can imitate human speech and documentary evidence at scale.These findings do not establish that one hidden committee centrally controls the global information environment.Experimental research also cautions against treating algorithms as mind-control devices: changes in feeds can strongly alter exposure and platform use without necessarily producing detectable short-term changes in polarization or political attitudes.Fact-checking can improve accuracy judgments, yet fact-checkers remain human institutions whose methods, scope, funding, correction procedures, and authority require scrutiny.The opposite error is equally dangerous.Assuming every official statement is false merely replaces one outsourced authority with another.Biblically, the information battlefield is first a battle over truth, testimony, worship, and allegiance.Scripture warns that deceivers may themselves be deceived, that people may gather teachers to suit their desires, and that spiritual deception can operate through teaching.Yet Scripture also forbids panic, slander, and indiscriminate suspicion.Christian discernment therefore joins Sola Scriptura with intellectual humility, primary evidence, corroboration, repentance, holiness, and love of neighbor.The Church is called neither to trust institutions blindly nor to romanticize forbidden knowledge.Its final confidence is Jesus Christ, who is the truth, whose Word judges every human narrative, and whose return is the believer's Blessed Hope.",
+    "analysis": {},
+    "authors": [
+      "Sixbert Sangwa"
+    ],
+    "categories": [],
+    "content_hash": "9b97960abb63b75cededfb4c2bede1c9c1a48e54e00d82bb96f427053e6fcf2a",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.65655/ocp.m21.c40",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203576491",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://books.openchristian.education/index.php/ocp/catalog/download/21/87/253",
+    "primary_category": "",
+    "published": "2026-08-16",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Transparency (behavior)",
+      "Credibility",
+      "Plaintiff",
+      "Internet privacy",
+      "Phone",
+      "Statute",
+      "Public relations",
+      "Supreme court",
+      "Political science",
+      "Disinformation",
+      "Recommender system",
+      "World Wide Web",
+      "European union",
+      "Legislation",
+      "Law",
+      "Social media",
+      "Sociology",
+      "Computer science",
+      "Metadata",
+      "Broadcasting (networking)",
+      "Public opinion",
+      "Statement (logic)",
+      "The Internet",
+      "Presentation (obstetrics)",
+      "Public domain",
+      "Field (mathematics)",
+      "Democracy",
+      "Notice",
+      "Voting",
+      "Common law",
+      "Information privacy",
+      "Public policy",
+      "Plain language",
+      "Social movement",
+      "Right to be forgotten",
+      "Architecture"
+    ],
+    "source_id": "https://openalex.org/W7203576491",
+    "title": "THE INFORMATION BATTLEFIELD: WHO DEFINES REALITY?",
+    "title_key": "the information battlefield who defines reality",
+    "updated": "2026-08-18",
+    "url": "https://doi.org/10.65655/ocp.m21.c40",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "This is the first book dedicated to Alexandria’s religious world, reconstructing its sacred topography, material culture, and ritual life across seven centuries from the establishment of the Ptolemaic Kingdom through its transformation under Roman imperial rule, up to the twilight of pagan antiquity. It offers a systematic, evidence-based reconstruction of religious life in ancient Alexandria, examining the emergence of a structured ‘sacred confederation’ of cults under the Ptolemies, the mechanics of ruler worship and sacred kingship, and the formation of a distinctive Alexandrian religious identity from both Greek and Egyptian traditions. The study extends into the Roman period, tracing the transformation of the city’s major sanctuaries, the richness of its civic and funerary culture, and glimpses of domestic cult and folk practice where the material record allows. Drawing on architecture, sculpture, inscriptions, funerary art, and recent underwater and salvage discoveries, the study treats material evidence as an independent record of religious life rather than an illustration of ancient literary sources – a methodological approach that repeatedly challenges and revises the city’s inherited scholarly image. Alexandria of Egypt, The Divine Cosmopolis is suitable for students and scholars of Hellenistic and Roman archaeology and history, Egyptian archaeology and Egyptology, and ancient religion. It is also of interest to researchers working on sacred topography, multicultural urbanism, and the archaeology of religion in the ancient Mediterranean world.",
+    "analysis": {},
+    "authors": [
+      "Kyriakos Savvopoulos"
+    ],
+    "categories": [],
+    "content_hash": "c5cedbb510b407656fa0980dd5d7c8065a34798648ac96ee47ee3c91287ce64f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.4324/9781003248613",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203467170",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.4324/9781003248613&type=googlepdf",
+    "primary_category": "",
+    "published": "2026-08-14",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Worship",
+      "Cult",
+      "Religious life",
+      "Ruler",
+      "Zoroastrianism",
+      "Ancient history",
+      "Identity (music)",
+      "Art",
+      "Buddhism",
+      "Multiculturalism",
+      "History",
+      "Religious identity",
+      "Sculpture",
+      "Judaism",
+      "Papyrus",
+      "Classics",
+      "Meditation",
+      "Epitome",
+      "Painting",
+      "Mesopotamia",
+      "Pilgrimage",
+      "Kingdom",
+      "Mythology",
+      "Literature",
+      "Folk religion",
+      "Scholarship",
+      "Indigenous",
+      "Archaeology",
+      "Roman Empire",
+      "Interpretation (philosophy)"
+    ],
+    "source_id": "https://openalex.org/W7203467170",
+    "title": "Alexandria of Egypt, The Divine Cosmopolis",
+    "title_key": "alexandria of egypt the divine cosmopolis",
+    "updated": "2026-08-16",
+    "url": "https://doi.org/10.4324/9781003248613",
+    "venue": "未记录"
+  },
+  {
     "abstract": "View-based development is an important technique to manage complexity and facilitate cooperation in the development of modern and complex systems of systems. This approach places high demands on view definition languages used in the development process. First, such a language needs to be approachable and extremely versatile so that developers from diverse backgrounds are able to use it and can define views for a diverse set of different tasks. Yet, the language also needs to have a precise and formal semantics so that it is possible to integrate the work performed on various views in a controlled manner to obtain a coherent overall system. In this paper, we continue previous work of equipping the NeoJoin view definition language with a formal semantics that is based on triple graph grammars (TGGs). This paves the way for obtaining automated and incremental synchronization procedures between models and views that come with high formal guarantees for their behavior. Simultaneously, our work serves as a further case study of the expressivity and usability of TGGs. We identify one gap, namely convenient support for the translation of overlapping queries from the view definition language, and tackle that gap by introducing a skip semantics for TGG rules, i.e., allowing to skip certain actions a rule prescribes, depending on the application context.",
     "analysis": {},
     "authors": [
@@ -62,7 +270,7 @@
       "Jiwu Shu"
     ],
     "categories": [],
-    "content_hash": "bc4af540423485971a42248c83e69436827ccc8b7aaadc40eee4c71ee1d95c81",
+    "content_hash": "26e15e9ae11725a301bf0a271f95c044492551770a1d90648a592cab15c0fb9f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3789240.3829170",
     "evidence_level": "abstract",
@@ -70,7 +278,7 @@
     "first_seen": "2026-08-15",
     "id": "openalex-w4414790478",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation",
       "OpenAlex: memory consistency checker processor trace"
@@ -84,7 +292,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -115,8 +323,117 @@
     "source_id": "https://openalex.org/W4414790478",
     "title": "RepLLM: Toward Automatically Reproducing Network Research Results",
     "title_key": "repllm toward automatically reproducing network research results",
-    "updated": "2026-08-13",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3789240.3829170",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Artificial intelligence has become an essential part of academic writing, where researchers rely on it at nearly every stage of the research, writing and publication process. This review works through 13 widely used AI research tools. These tools are GitMind, SciSpace, Consensus, Paperpal, Jenni, CitedEvidence, Elicit, Scite, Logically, Genspark, Gemini Notebook, Julius, and Claude. The review is organized into two complementary parts. The first part maps each tool to the stage of academic writing where it performs several tasks such as idea generation, literature searching, evidence verification, drafting, language editing, data analysis, citation management, peer-review preparation, and journal selection. The second part involves a hands-on look at each platform on its own, covering its main features, interface, supported workflows, and export options. Finally, a comparative workflow, quick-reference tables, and a worked case study show how several tools can fit together into one coherent research work flow. The review also addresses some of the common limitations, citation inaccuracies, AI hallucinations, and data privacy concerns. It emphasizes on the case that human judgment and verification still matter more than ever. It closes with a summary of current recommendations from major publishing organizations on transparency and disclosure around AI-assisted writing. Rather than favoring any platform, this article provides researchers, graduate students, and educators with a practical framework for choosing appropriate AI tools and integrating them responsibly across the full academic writing lifecycle.",
+    "analysis": {},
+    "authors": [
+      "Abdulmajid Hesham",
+      "Asma Sharfeddin"
+    ],
+    "categories": [],
+    "content_hash": "4aea13655ac63de4c7e132404ddde32f67efd13135fa52febe081bd83d3b56ca",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.67525/6pnc0868",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203532184",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://smupas.smu.edu.ly/index.php/smupas/article/download/14/6",
+    "primary_category": "",
+    "published": "2026-08-09",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Workflow",
+      "Transparency (behavior)",
+      "Computer science",
+      "Citation",
+      "Publishing",
+      "Artificial intelligence",
+      "Data science",
+      "Applications of artificial intelligence",
+      "Software engineering",
+      "Work (physics)",
+      "Graduate students",
+      "Knowledge management",
+      "Engineering ethics",
+      "Order (exchange)",
+      "Human intelligence"
+    ],
+    "source_id": "https://openalex.org/W7203532184",
+    "title": "Artificial Intelligence in Academic Writing: A Comprehensive Workflow and Practical Guide to 13 AI Research Assistants",
+    "title_key": "artificial intelligence in academic writing a comprehensive workflow and practical guide to 13 ai research assistants",
+    "updated": "2026-08-18",
+    "url": "https://doi.org/10.67525/6pnc0868",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Artificial intelligence is rapidly transforming the landscape of higher education by reshaping teaching, learning, research, and institutional management. This book provides a concise yet comprehensive overview of AI applications in curriculum design, personalized learning, intelligent tutoring systems, academic research, and administrative decision-making. It also examines the ethical, legal, and strategic challenges associated with AI adoption, offering practical insights and evidence-based approaches for responsible implementation. Designed for educators, researchers, administrators, and students, this volume serves as a valuable resource for understanding and leveraging AI to enhance innovation, academic excellence, and institutional effectiveness in the evolving higher education ecosystem.",
+    "analysis": {},
+    "authors": [
+      "Jyotirmay Patel",
+      "Ramjeet Singh Yadav",
+      "Paramjit Singh",
+      "Vinod Prakash"
+    ],
+    "categories": [],
+    "content_hash": "7071ab46f26ebd293eac8673e4451091fb434d090e81ce6f89fa4d401071e7c9",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70593/978-93-7185-995-0",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203453702",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://deepscienceresearch.com/dsr/catalog/download/774/3349/5884",
+    "primary_category": "",
+    "published": "2026-08-08",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Artificial intelligence",
+      "Computer science",
+      "Generative grammar",
+      "Feature (linguistics)",
+      "Applications of artificial intelligence",
+      "Generative model",
+      "Machine learning",
+      "Interpretation (philosophy)",
+      "Component (thermodynamics)",
+      "Set (abstract data type)"
+    ],
+    "source_id": "https://openalex.org/W7203453702",
+    "title": "Generative Artificial Intelligence in Higher Education: Foundations, Curriculum, Teaching, and Assessment",
+    "title_key": "generative artificial intelligence in higher education foundations curriculum teaching and assessment",
+    "updated": "2026-08-16",
+    "url": "https://doi.org/10.70593/978-93-7185-995-0",
     "venue": "未记录"
   },
   {
@@ -253,7 +570,7 @@
     "venue": "未记录"
   },
   {
-    "abstract": "Cyber Threat Intelligence (CTI) is foundational to modern cybersecurity, enabling organizations to proactively defend against evolving threats. However, the sheer volume and heterogeneity of CTI data, spanning structured knowledge bases (CVE, CWE, CAPEC, MITRE ATT&amp;CK) and unstructured threat reports, far exceed the capacity of manual analysis. The strong contextual understanding and reasoning of Large Language Models (LLMs) have driven growing interest in applying them to CTI tasks. Yet no existing benchmark evaluates LLMs in a retrieval-augmented setting with a proper evaluation harness that grants access to the heterogeneous domain knowledge sources analysts rely on in practice. To address this gap, we present CTIConnect, a benchmark for systematically evaluating retrieval-augmented LLMs across the CTI task landscape. We construct a unified evaluation environment integrating five heterogeneous CTI sources into 1,860 expert-verified QA pairs spanning nine tasks across three categories: Entity Linking, Multi-Document Synthesis, and Entity Attribution. Extensive experiments on ten state-of-the-art LLMs reveal that the cross-source semantic gap manifests differently across task categories, demanding fundamentally different retrieval strategies, and that the performance bottleneck shifts between retrieval infrastructure and evidence utilization depending on the task. Our domain-specific strategies further outperform stronger general-purpose retrieval paradigms (retrieve-then-rerank, IRCoT), showing that closing this gap requires structural interventions rather than generic retrieval improvements. These findings hold across all ten LLMs, remain consistent on the full benchmark, and stay stable under temporal splits spanning 2008-2025. Together, they provide actionable guidance for designing scalable retrieval architectures over heterogeneous CTI ecosystems.",
+    "abstract": "Cyber Threat Intelligence (CTI) is foundational to modern cybersecurity, enabling organizations to proactively defend against evolving threats. However, the sheer volume and heterogeneity of CTI data, spanning structured knowledge bases (CVE, CWE, CAPEC, MITRE ATT&CK) and unstructured threat reports, far exceed the capacity of manual analysis. The strong contextual understanding and reasoning of Large Language Models (LLMs) have driven growing interest in applying them to CTI tasks. Yet no existing benchmark evaluates LLMs in a retrieval-augmented setting with a proper evaluation harness that grants access to the heterogeneous domain knowledge sources analysts rely on in practice. To address this gap, we present CTIConnect, a benchmark for systematically evaluating retrieval-augmented LLMs across the CTI task landscape. We construct a unified evaluation environment integrating five heterogeneous CTI sources into 1,860 expert-verified QA pairs spanning nine tasks across three categories: Entity Linking, Multi-Document Synthesis, and Entity Attribution. Extensive experiments on ten state-of-the-art LLMs reveal that the cross-source semantic gap manifests differently across task categories, demanding fundamentally different retrieval strategies, and that the performance bottleneck shifts between retrieval infrastructure and evidence utilization depending on the task. Our domain-specific strategies further outperform stronger general-purpose retrieval paradigms (retrieve-then-rerank, IRCoT), showing that closing this gap requires structural interventions rather than generic retrieval improvements. These findings hold across all ten LLMs, remain consistent on the full benchmark, and stay stable under temporal splits spanning 2008-2025. Together, they provide actionable guidance for designing scalable retrieval architectures over heterogeneous CTI ecosystems.",
     "analysis": {},
     "authors": [
       "Yutong Cheng",
@@ -263,7 +580,7 @@
       "Peng Gao"
     ],
     "categories": [],
-    "content_hash": "cf57e3e43540220bc28390689f6c4ced95ba13fbec190dacb8351beb0a1b5a21",
+    "content_hash": "86bcab378c366b20f872aab72a4f0785040442f648187f1127db8f04b63c2058",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3770855.3817527",
     "evidence_level": "abstract",
@@ -271,7 +588,7 @@
     "first_seen": "2026-08-15",
     "id": "openalex-w4415257529",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing"
     ],
@@ -285,7 +602,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Benchmarking",
@@ -312,7 +629,7 @@
     "source_id": "https://openalex.org/W4415257529",
     "title": "CTIConnect: A Benchmark for Retrieval-Augmented LLMs over Heterogeneous Cyber Threat Intelligence",
     "title_key": "cticonnect a benchmark for retrieval augmented llms over heterogeneous cyber threat intelligence",
-    "updated": "2026-08-11",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3770855.3817527",
     "venue": "未记录"
   },
@@ -728,6 +1045,72 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Abstract: This monograph develops an integrated research architecture for precision oncology that combines photonic quantum–AI, topological data analysis, persistent homology, spatial proteomics and multi-omic modelling of cancer evolution. Its central argument is that tumour intelligence should be treated as a multiscale inferential problem in which molecular state, cellular ecology, clonal dynamics, assay uncertainty and clinical context are explicitly separated before being recombined through auditable analytical workflows. Five chapters progress from foundations and uncertainty-aware study design to hierarchical statistical explanation, causal inference, evolutionary state-space modelling, trustworthy predictive learning, scalable multi-omic data engineering, reproducible MLOps and translational governance. Persistent homology provides scale-aware structural summaries of molecular and spatial systems, while photonic quantum computation is positioned as a selectively benchmarked hybrid resource for kernels, sampling and representation rather than presumed to supersede classical methods. Spatial proteomics anchors molecular activity within tissue architecture, enabling microenvironmental and immune niches to be analysed alongside genomics, transcriptomics and longitudinal outcomes. The manuscript emphasizes calibration, transportability, subgroup robustness, biospecimen provenance, genomic privacy, human oversight and globally adaptive governance. Its outputs include conceptual models, mathematical formulations, validation protocols, biomarker-development frameworks, evolutionary forecasting designs and policy-ready assurance artifacts relevant to South Asia, Europe, Africa and the Americas. Keywords precision oncology, photonic quantum computing, quantum artificial intelligence, topological data analysis, persistent homology, multi-omics, spatial proteomics, cancer evolution, tumour heterogeneity, clonal dynamics, tumour microenvironment, immuno-oncology, biomarker discovery, causal inference, state-space modelling, multimodal learning, calibration, uncertainty quantification, MLOps, federated analytics, genomic privacy, adaptive trials, digital twins, clinical governance",
+    "analysis": {},
+    "authors": [
+      "Murali Krishna Pasupuleti"
+    ],
+    "categories": [],
+    "content_hash": "4a1914d08b3b6ace4f991482f973207d21ef919f65d04f76ad5adf3eb32ff50f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.62311/nesx/rb3jy-978-81-689340-7-8",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w7203766308",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.nationaleducationservices.org/file-download/1748206/Download Full-Text Research Bookr PDF Pp1-92IV3.pdf",
+    "primary_category": "",
+    "published": "2026-07-30",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Context (archaeology)",
+      "Computational biology",
+      "Persistent homology",
+      "Photonics",
+      "Topological data analysis",
+      "Quantum",
+      "Theoretical computer science",
+      "Artificial intelligence",
+      "Scalability",
+      "Spatial analysis",
+      "Quantum computer",
+      "Biology",
+      "Systems biology",
+      "Representation (politics)",
+      "Genome",
+      "Topology (electrical circuits)",
+      "Epigenome",
+      "Quantum entanglement",
+      "Data science",
+      "Genomics",
+      "Cancer",
+      "ENCODE",
+      "Physics",
+      "Translational research",
+      "Precision medicine"
+    ],
+    "source_id": "https://openalex.org/W7203766308",
+    "title": "Photonic Quantum Topological Multi-Omics for Precision Oncology: Persistent Homology, Spatial Proteomics, and Cancer Evolution",
+    "title_key": "photonic quantum topological multi omics for precision oncology persistent homology spatial proteomics and cancer evolution",
+    "updated": "2026-08-21",
+    "url": "https://doi.org/10.62311/nesx/rb3jy-978-81-689340-7-8",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Microarchitectural side-channels leak data through caches, branch predictors, store buffers, and speculative execution. Evaluating defenses at cycle-model fidelity has forced a choice between functional tools (Spike, QEMU) and gem5’s hours-long Linux boots. ARCHER is a cycle-model-relative RV64IMAFDC RISC-V emulator with pluggable superscalar out-of-order execution, coherent caches, simultaneous multithreading, 1 to 16 harts, and thirteen speculation policies: an unrestricted baseline plus five classical defenses and seven new defenses spanning issue-gate, predictive-redirect, and selective-cleanup mechanism families. It boots Linux 6.6 in under three minutes, runs 3.7× faster (geometric mean) than gem5’s DerivO3CPU on head-to-head bare-metal microbench, matches gem5 within ±20% on 4 of 10 workloads, matches Chipyard’s fab-ready RTL to a 9.4% mean cycle-count deviation under two fitted match-configurations, and produces bit-identical architectural output to QEMU at a median 88× host-throughput advantage over Chipyard’s Verilator flow. Every published Spectre-family defense drives leakage to zero at sub-0.3% instructions-per-cycle (IPC) loss on a full Linux boot, and each new policy is validated on the attack surface its mechanism defends. The Adaptive Memory Encryption Scheme (AMES) adds a bus-layer engine with four authenticated ciphers (each validated bit-exact against its published specification) and per-leaf mask-XOR for Differential Power Analysis (DPA) hardening; a first-order Correlation Power Analysis consistency check confirms the direction of the theoretical bound under the shipped leakage model. Together, ARCHER and AMES provide a single INI-configurable environment for cycle-model side-channel evaluation in minutes rather than hours.",
     "analysis": {},
     "authors": [
@@ -739,7 +1122,7 @@
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "f517cb308112b578af99faae5416d6a107146cc4617ce2bcf5f6e032ddc97be1",
+    "content_hash": "41546f678449c9b6684904bfe05205721ced8aa5c289fe79735ab4e350a5a8ea",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers15080479",
     "evidence_level": "abstract",
@@ -747,7 +1130,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171559005",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact",
       "OpenAlex: cache coherence transition coverage verification",
@@ -764,7 +1147,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -802,7 +1185,7 @@
     "source_id": "https://openalex.org/W7171559005",
     "title": "ARCHER: A Cycle-Accurate RISC-V Emulator for Microarchitectural Side-Channel and Memory Encryption Research",
     "title_key": "archer a cycle accurate risc v emulator for microarchitectural side channel and memory encryption research",
-    "updated": "2026-07-30",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.3390/computers15080479",
     "venue": "Computers"
   },
@@ -2029,7 +2412,7 @@
       "Edouard Bugnion"
     ],
     "categories": [],
-    "content_hash": "9341837ad660f1faa5476c2154367d87ce9f6defac98af5b6846ef6e32ab0755",
+    "content_hash": "c2948e88200766c5349325bd05d05a2b21b6de92ea6eaeabf4a815f9332e3116",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "evidence_level": "abstract",
@@ -2037,7 +2420,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w4415142875",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: microarchitectural path coverage processor fuzzing",
@@ -2054,7 +2437,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2085,7 +2468,7 @@
     "source_id": "https://openalex.org/W4415142875",
     "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
     "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-08-11",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
@@ -2257,7 +2640,7 @@
       "Zheng Wang"
     ],
     "categories": [],
-    "content_hash": "ba5c8e1ec6655be47a86252bdb4e9c84a4a8b927d792e0a77a7fefba6396c7cb",
+    "content_hash": "44a5b0c880019cedde5f3163511ecb200c30e4cb79ec1ef3b04c499e44b5c9d4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3814942.3816133",
     "evidence_level": "abstract",
@@ -2265,7 +2648,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7164318503",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: RISC-V processor verification benchmark artifact"
@@ -2280,7 +2663,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2299,7 +2682,7 @@
     "source_id": "https://openalex.org/W7164318503",
     "title": "Interpreter Memory Safety via Differential Fuzzing with a CHERI on Top",
     "title_key": "interpreter memory safety via differential fuzzing with a cheri on top",
-    "updated": "2026-07-29",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3814942.3816133",
     "venue": "未记录"
   },
@@ -2426,7 +2809,7 @@
       "Kui Ren"
     ],
     "categories": [],
-    "content_hash": "1efae7c2b9aea9011e3902684b413daebb7491d1f6c5b2d150e39f37bcd64e46",
+    "content_hash": "8d87af36181f3458a2a50dcbce051683051acf6e70827952bf4e7ced09e3f0e9",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3779208.3805964",
     "evidence_level": "abstract",
@@ -2434,7 +2817,7 @@
     "first_seen": "2026-07-29",
     "id": "openalex-w7163556769",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing"
     ],
@@ -2447,7 +2830,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2475,7 +2858,7 @@
     "source_id": "https://openalex.org/W7163556769",
     "title": "SoK: Understanding zkVM: From Research to Practice",
     "title_key": "sok understanding zkvm from research to practice",
-    "updated": "2026-07-29",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3779208.3805964",
     "venue": "未记录"
   },
@@ -3108,7 +3491,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "5374fd5ed1c0c028133bcd83f8454e9cc62b8b6412a63475ec82fc2149a47206",
+    "content_hash": "05200c2fbb1de2e6e607f46d9bd071ddec9612ed76c1b3f69752ffc6f9e43939",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -3116,7 +3499,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3130,7 +3513,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3154,7 +3537,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-07-29",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -3168,7 +3551,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "32f7ff6618fbdaa4f18d6b8a77fa03ff729a10463be614157e18ea0ce59e8ad4",
+    "content_hash": "00463f057da81d26ae27424425cab04e69c0125eb48a010a6e4fc62cad6c11fa",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -3176,7 +3559,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -3191,7 +3574,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -3202,7 +3585,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-07-29",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -3486,7 +3869,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "87e0807a61041437bc516984dd89a42f3232a8a1cb023e7f5a0c8f3ee23a619e",
+    "content_hash": "485c19de00d004b8b9dc8f774914017b2b920125d4d6c9cd5b8e5ac0e07d3b2f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -3494,7 +3877,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3508,7 +3891,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -3542,7 +3925,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-08-12",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -3632,7 +4015,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "7b462a5d58327f791afb1ccddc7ee0e7f533a7cd04113b8b252fc9d935fb7e95",
+    "content_hash": "c5e594672a75bf5153b0bb5a0eda793a36911b4ce3a50b3004a40a4e2df3433e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -3640,7 +4023,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -3654,7 +4037,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -3687,7 +4070,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-08-12",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -3833,7 +4216,7 @@
       "Luke James Geeson"
     ],
     "categories": [],
-    "content_hash": "a3bde19fb1015080ea1672a2287bb8ad8d23c7567fa93ea8601f5a8cc7ef514e",
+    "content_hash": "8ba501ad53e69af1fef6c8cb456b33b18a79014ebdd186745ae26a6c674af1f7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -3841,7 +4224,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3854,7 +4237,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3878,7 +4261,7 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-05-21",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
@@ -3890,7 +4273,7 @@
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "948d10c63e99eed426d40294ab2c3d4b372c41747e16be5986aa511c1ab93194",
+    "content_hash": "821e0f698255cb0278ac971c3966af846c6caa6da860c708ec65ef0919e41468",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
@@ -3898,7 +4281,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
     ],
@@ -3913,7 +4296,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3930,7 +4313,7 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-07-29",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
     "venue": "未记录"
   },
@@ -4157,7 +4540,7 @@
       "Brauckmann, Alexander"
     ],
     "categories": [],
-    "content_hash": "6b581210d7cd694bf89820ad253d59e85e20346bb1cdd292d2e6fbcf2fc7dca7",
+    "content_hash": "369dcf0f92b37c1ea66bc297e2b1316065f5d71fd82d25f6f66b1540797d5955",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.7488/era/6825",
     "evidence_level": "abstract",
@@ -4165,7 +4548,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7114903694",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4179,7 +4562,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4222,7 +4605,7 @@
     "source_id": "https://openalex.org/W7114903694",
     "title": "Tensor program optimization through program synthesis",
     "title_key": "tensor program optimization through program synthesis",
-    "updated": "2026-07-15",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.7488/era/6825",
     "venue": "ERA"
   },
@@ -4393,7 +4776,7 @@
       "Spyridon Mastorakis"
     ],
     "categories": [],
-    "content_hash": "157d0e877c82bfb724ad8ac73e6fc4d67f8ff1eae4fdc51de9185cd4ed5cb1da",
+    "content_hash": "7efb1d65a568a7009c838d514e4a3dc8ed35932fcdd47353b6370c9aa816af2f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "evidence_level": "abstract",
@@ -4401,7 +4784,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4415025828",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4414,7 +4797,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Automatic summarization",
@@ -4439,7 +4822,7 @@
     "source_id": "https://openalex.org/W4415025828",
     "title": "Learning from Literature: A Retraining-Free Framework for LLM Jailbreak Defense via NLP-Based Adversarial Literature Analysis",
     "title_key": "learning from literature a retraining free framework for llm jailbreak defense via nlp based adversarial literature analysis",
-    "updated": "2026-08-08",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.1109/tps-isa67132.2025.00036",
     "venue": "未记录"
   },
@@ -4709,7 +5092,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "dc808aec58fa5377033ec9286b237e846226b1e7433f1ce74509c0192f753137",
+    "content_hash": "330ce16690d954e62a80d22dadbd2fa1bbb00404de829d6f4733cbdb3912e0f4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3731569.3764809",
     "evidence_level": "abstract",
@@ -4717,7 +5100,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414735884",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4730,7 +5113,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "POSIX",
@@ -4749,24 +5132,24 @@
     "source_id": "https://openalex.org/W4414735884",
     "title": "μFork: Supporting POSIX fork Within a Single-Address-Space OS",
     "title_key": "fork supporting posix fork within a single address space os",
-    "updated": "2026-07-29",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.1145/3731569.3764809",
     "venue": "未记录"
   },
   {
-    "abstract": "",
+    "abstract": "Welcome to ESWEEK 2025 in Tapei!We would like to warmly welcome you to the 21 st edi on of the Embedded Systems Week (ESWEEK).ESWEEK is the premier event covering all aspects of embedded systems and so ware, which brings together three leading conferences (CASES, CODES+ISSS, and EMSOFT), one symposium, three hot-topic workshops, five special sessions, a panel, five tutorials, five educa on classes, a so ware compe on with demos, an ACM SIGBED student research compe on, and a Ph.D. forum and recrui ng event.As such, ESWEEK presents a endees a wide range of choices unveiling state-of-the-art embedded-systems design and hardware/so ware architectures.Following the journal-integrated publica on model for the three conferences (CASES, CODES+ISSS, and EMSOFT), all presented regular papers are published in the ACM Transac ons on Embedded Compu ng Systems (TECS).In addi on, authors had the possibility to publish Late Breaking papers in IEEE Embedded Systems Le ers, and Workin-Progress papers in the form of extended abstracts in the ESWEEK Proceedings.The technical program on Monday, Tuesday, and Wednesday consists of 20 regular sessions and 5 special sessions from the three conferences.A strong emphasis on interac on is ensured thanks to a poster presenta on for each paper, during which the par cipants can discuss the papers with the authors.In par cular, a poster session is arranged a er each regular session.The program also features a so ware compe on on Monday, and a panel on \"In-Memory Compu ng for Embedded Systems\" as well as the PhD Forum and recrui ng event on Wednesday. CODES+ISSS 2025 Welcome Message from the Program ChairsWelcome to the ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS 2025), which is part of the Embedded Systems Week (ESWEEK), 2025.CODES+ISSS is the leading conference in the domain of hardware/software codesign, embedded systems, cyber-physical systems, and Internet-of-Things, offering unique opportunities for sharing ideas and disseminating results on system-level design, modeling, analysis, and implementation aspects.The conference spans a wide range of design abstractions, from system-level specification and optimization down to synthesis of multiprocessor systems, and hardware/software implementations and optimizations.Following ESWEEK's publication model, CODES+ISSS 2025 papers are categorized into three tracks, namely the Journal track, the Late Breaking (LB) results track, and the Work-in-Progress (WIP) track.The Journal-track papers, which are full-length papers (25 pages) describing mature work, have been published in the ACM Transactions on Embedded Computing Systems (TECS).The LB-track papers, introduced at ESWEEK 2023 to disseminate mature works written in a condensed form (4 pages), have been published in the IEEE Embedded Systems Letters (ESL).The WIP-track papers, which are short (2-page) papers representing promising research work, have been published in the ESWEEK proceedings.We have used a two-stage review process to enable a thorough evaluation of the submitted papers while giving an opportunity to the authors to respond to the reviewers' concerns.We received a total of 92 journaltrack submissions.After the first round of reviews, 31 journal-track papers entered the second round of review.In the end, 25 of these papers were accepted for presentation at the conference.This represents a highly selective acceptance rate of 27%.Most of the papers were reviewed by five experts in the respective domain, with every paper receiving at least four reviews.We have introduced artifact evaluation this year.We received 28 LB paper submissions, out of which 8 high-quality papers were selected for a short presentation and publication.Finally, we have accepted 10 WIP papers for a short presentation.We have put together an exciting program this year consisting of seven regular sessions, covering a wide range of traditional and emerging topics on the design and implementation of embedded systems.Regular sessions will follow a 90-minute format consisting of 20-minute presentations of journal-track papers and 5-minute presentations of LB and WIP papers.The regular session is followed by a poster session where the authors will present their ideas in an interactive fashion.We encourage all attendees to take full advantage of this format, which targets close interaction between the authors and the audience.We thank all the Technical Program Committee members as well as the external reviewers for their dedicated efforts in selecting outstanding papers.We would also like to thank all the authors for submitting exciting research contributions.Special thanks to the General Chairs, Tei-Wei Kuo and Andy Pimentel, who helped us coordinate with the sister conferences (CASES and EMSOFT) to organize joint keynotes, panels, special sessions, and the final program.We are grateful to the anonymous members of several award committees for their help in selecting",
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "ea2735321bccf93812dbe5a1cf0a969e26ebb2a48a9c6ccf4c89078eb4714abc",
+    "content_hash": "98e984bd46886dfddaa34449fc0c169303b1feef1bbdc4b97d3139ca0758d2c3",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3742873",
-    "evidence_level": "metadata",
-    "exclusion_reason": "missing object-method conjunction",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "openalex-w7111013464",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: transient execution RTL fuzzing"
@@ -4775,12 +5158,13 @@
     "primary_category": "",
     "published": "2025-09-28",
     "relevance_reasons": [
+      "hardware/processor object: processor",
       "missing object-method conjunction"
     ],
-    "relevance_score": 0,
+    "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4797,7 +5181,7 @@
     "source_id": "https://openalex.org/W7111013464",
     "title": "Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis",
     "title_key": "proceedings of the international conference on hardware software codesign and system synthesis",
-    "updated": "2026-04-21",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.1145/3742873",
     "venue": "未记录"
   },
@@ -4808,7 +5192,7 @@
       "Shashwat Khandelwal"
     ],
     "categories": [],
-    "content_hash": "655c717c56be70548741b95063f34ff7433cbc3a2ab26b58f660aab6d114c386",
+    "content_hash": "832a7ec2706e3978813bc00960096d42c9b5d935228dbb6c23a10aee79c73ae3",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.31237/osf.io/zw5b4_v1",
     "evidence_level": "abstract",
@@ -4816,7 +5200,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4413852971",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4831,7 +5215,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Automotive industry",
@@ -4845,7 +5229,7 @@
     "source_id": "https://openalex.org/W4413852971",
     "title": "On Enabling Intrusion Detection Systems for Automotive Networks",
     "title_key": "on enabling intrusion detection systems for automotive networks",
-    "updated": "2026-07-14",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.31237/osf.io/zw5b4_v1",
     "venue": "未记录"
   },
@@ -5255,7 +5639,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "a4e0ab9caf5d6e6e35eeee5b69e575c9f3f721d6517c3da54be871547fb1dadf",
+    "content_hash": "edefe655f11dc5a76998f4d21beececfd7edc9be6efca839991fd3bc81bf6801",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -5263,7 +5647,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -5278,7 +5662,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5291,7 +5675,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-08-01",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -5545,7 +5929,7 @@
       "Daniel Große"
     ],
     "categories": [],
-    "content_hash": "cb665369591a0843415d377799e5c5fb16c0693e006dfde98fe2acc3c3c8966b",
+    "content_hash": "de478d6872b60f504dcf3f6c07ceade8b6ec81034ddd35a91c6ea9a33300558b",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676755",
     "evidence_level": "abstract",
@@ -5553,7 +5937,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282730",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -5567,7 +5951,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Isolation (microbiology)",
@@ -5583,7 +5967,7 @@
     "source_id": "https://openalex.org/W4409282730",
     "title": "Single Instruction Isolation for RISC-V Vector Test Failures",
     "title_key": "single instruction isolation for risc v vector test failures",
-    "updated": "2026-07-29",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.1145/3676536.3676755",
     "venue": "未记录"
   },
@@ -5600,7 +5984,7 @@
       "Shweta Shinde"
     ],
     "categories": [],
-    "content_hash": "0886766430b71dc870627a8e19f8d71f06fd4116cc18a7813ae297dc56ff68ae",
+    "content_hash": "89fba5b2da7f39bcbd4c3a8c87ed752ad02ca8003fde1be6510d260359fdc76f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676844",
     "evidence_level": "abstract",
@@ -5608,7 +5992,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282636",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -5623,7 +6007,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Implementation",
@@ -5634,8 +6018,55 @@
     "source_id": "https://openalex.org/W4409282636",
     "title": "eXpect: On the Security Implications of Violations in AXI Implementations",
     "title_key": "expect on the security implications of violations in axi implementations",
-    "updated": "2026-08-11",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3676536.3676844",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Este artigo apresenta uma infraestrutura automatizada para a verificação de processadores RISC-V, utilizando técnicas de integração contínua combinadas com FPGAs de múltiplos fornecedores, como Altera/Intel, Xilinx/AMD, Gowin e Lattice. Foi projetado um ambiente robusto e escalável que facilite a detecção precoce de falhas em diversas implementações de processadores RISC-V, garantindo a conformidade com as especificações da ISA. Resultados preliminares demonstram a eficácia da abordagem, destacando a capacidade da metodologia em identificar rapidamente erros e coletar dados essenciais para a seleção e verificação de processadores.",
+    "analysis": {},
+    "authors": [
+      "Julio N. Avelar",
+      "Victor P. Lago",
+      "Ângelo R. P. Malaguti",
+      "Rodolfo Azevedo"
+    ],
+    "categories": [],
+    "content_hash": "9ff9274a4b771308aa8df464518f54dc457cba2c58af83df4211df8616637d42",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.5753/sscad_estendido.2024.244745",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, processor; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w4403683016",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "https://sol.sbc.org.br/index.php/sscad_estendido/article/download/30962/30765",
+    "primary_category": "",
+    "published": "2024-10-23",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Field-programmable gate array",
+      "Computer science",
+      "Parallel computing",
+      "Embedded system"
+    ],
+    "source_id": "https://openalex.org/W4403683016",
+    "title": "ProcessorCI: Integração Contínua para processadores RISC-V em FPGAs",
+    "title_key": "processorci integra o cont nua para processadores risc v em fpgas",
+    "updated": "2026-08-18",
+    "url": "https://doi.org/10.5753/sscad_estendido.2024.244745",
     "venue": "未记录"
   },
   {
@@ -5912,7 +6343,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "5e9d3b381871b1d87a6fe9d17d8b3b91c32ea224a4e3d76ed2472e7c7afb167f",
+    "content_hash": "3a071708c42507b83dbe2180d191caceb0b0ea86330c8b8ec8144187e723f7fd",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -5920,11 +6351,11 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
-    "pdf_url": "https://theses.hal.science/tel-04690882v1/document",
+    "pdf_url": "https://theses.hal.science/tel-04690882v1/file/2024DucasseQuentin.pdf",
     "primary_category": "",
     "published": "2024-03-29",
     "relevance_reasons": [
@@ -5935,7 +6366,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5947,7 +6378,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-08-12",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -6534,7 +6965,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "f2585eae3c6b60f218adf8a55ae54f2834d8b5110f86434cbb0da09c8276863e",
+    "content_hash": "2d3414c12ec8e772a55094f35c009780971680309f37aaa119e59270f76b30f6",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "evidence_level": "metadata",
@@ -6542,7 +6973,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4328028375",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -6555,7 +6986,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6565,7 +6996,7 @@
     "source_id": "https://openalex.org/W4328028375",
     "title": "Table of Contents",
     "title_key": "table of contents",
-    "updated": "2026-07-14",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "venue": "未记录"
   },
@@ -7917,6 +8348,57 @@
     "updated": "2016-05-16",
     "url": "http://arxiv.org/abs/1605.04744v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "As Moore’s Law slows and process scaling yields only small returns, computer architecture and design are poised to undergo a renaissance. This thesis brings the productivity of modern software tools to bear on the design of future energy-efficient hardware architectures.In particular, it targets one of the most difficult design tasks in the hardware domain: Coherent hierarchies of on-chip caches. I have extended the capabilities of Chisel, a new hardware description language, by providing libraries for hardware developers to use to describe the configuration and behavior of such memory hierarchies, with a focus on the cache coherence protocols that work behind the scenes to preserve their abstraction of global shared memory. I discuss how the methods I provide enable productive and extensible memory hierarchy design by separating the concerns of different hierarchy components, and I explain how this forms the basis for a generative approach to agile hardware design.This thesis describes a general framework for context-dependent parameterization of any hardware generator, defines a specific set of Chisel libraries for generating extensible cache-coherent memory hierarchies, and provides a methodology for decomposing high-level descriptions of cache coherence protocols into controller-localized, object-oriented transactions.This methodology has been used to generate the memory hierarchies of a lineage of RISC-V chips fabricated as part of the ASPIRE Lab’s investigations into application-specific processor design.",
+    "analysis": {},
+    "authors": [
+      "Henry Cook"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "089796ffbfe922b0b42097c74839c88014d208f0445d8bc0b6b341fb6d11d4ea",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "strong phrase in abstract: cache coherence protocol; hardware/processor object: risc-v, processor, cache coherence; missing object-method conjunction",
+    "first_seen": "2026-08-22",
+    "id": "openalex-w2552025361",
+    "included": false,
+    "last_seen": "2026-08-22",
+    "matched_queries": [
+      "OpenAlex: TileLink Probe Acquire Grant verification"
+    ],
+    "pdf_url": "http://pqdtopen.proquest.com/#viewpdf?dispub=10150942",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2016-01-01",
+    "relevance_reasons": [
+      "strong phrase in abstract: cache coherence protocol",
+      "hardware/processor object: risc-v, processor, cache coherence",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Computer architecture",
+      "Cache",
+      "Cache coherence",
+      "Embedded system",
+      "CPU cache",
+      "Parallel computing",
+      "Cache algorithms"
+    ],
+    "source_id": "https://openalex.org/W2552025361",
+    "title": "Productive Design of Extensible On-Chip Memory Hierarchies",
+    "title_key": "productive design of extensible on chip memory hierarchies",
+    "updated": "2026-08-21",
+    "url": "https://openalex.org/W2552025361",
+    "venue": "未记录"
   },
   {
     "abstract": "",

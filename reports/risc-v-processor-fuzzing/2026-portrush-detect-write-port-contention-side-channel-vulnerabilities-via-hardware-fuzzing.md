@@ -2,9 +2,9 @@
 
 ## 基本信息
 
-- 作者：Peihong Lin、Pengfei Wang、Lei Zhou、Gen Zhang、Xu Zhou、Wei Xie、Zhiyuan Jiang、Kai Lu
-- 发表日期：2026
-- 会议/期刊：Network and Distributed System Security Symposium
+- 作者：Peihong Lin、Pengfei Wang、Lei Zhou、Gen Zhang、Xu Zhou、Wei Xie、Zhiyuan Jiang、Kai Lu、Peihong Lin
+- 发表日期：2026-01-01
+- 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=10）
 - 证据等级：全文核验
@@ -17,7 +17,7 @@
 
 ## 摘要
 
-—CPU vulnerabilities pose ongoing security challenges in modern CPU architectures. Among the CPU vulnerabilities, write port contention—caused by multiple functional modules simultaneously competing for a limited number of shared write ports—remains insufficiently studied. In this paper, we study write port contention side-channel vulnerabilities in CPUs and propose P ORT R USH , a novel fuzzing framework designed to detect and validate such vulnerabilities at the register-transfer level (RTL). First, P ORT R USH constructs a Write Request Graph (WRG) to statically identify potential write port contention instances by modeling write paths and priority relationships among functional modules that target shared storage elements. Second, within the WRG, P ORT R USH implements a Hierarchical Aggregation and Decoding method to efficiently detect write port contention by monitoring relevant hardware signals across design hierarchies. Third, P ORT R USH employs a Contention-guided Hardware Fuzzing approach to trigger write port contention and automatically combine contention-triggered instruction sequences with transient execution attack patterns, enabling validation of write port contention side-channel vulnerabilities. We evaluate P ORT R USH on three RISC-V CPUs (BOOM, NutShell, and Rocket Core) and demonstrate its effectiveness in identifying and triggering write port contention. Furthermore, we validate that the discovered vulnerabilities can be exploited in realistic write port contention attack scenarios. Based on these vulnerabilities, we present two novel attack vectors: Birgus-variant , which exploits contention at the physical register file in the Reorder Buffer, and MSHRush , which leverages contention be-tween the Load / Store Unit ( LSU ) and Miss Status Handling Register ( MSHR ) at the L1 data cache to induce secret-dependent execution delays. We also propose mitigation strategies for CPU developers to prevent such vulnerabilities.
+CPU vulnerabilities pose ongoing security challenges in modern CPU architectures.Among the CPU vulnerabilities, write port contention-caused by multiple functional modules simultaneously competing for a limited number of shared write ports-remains insufficiently studied.In this paper, we study write port contention side-channel vulnerabilities in CPUs and propose PORTRUSH, a novel fuzzing framework designed to detect and validate such vulnerabilities at the register-transfer level (RTL).First, PORTRUSH constructs a Write Request Graph (WRG) to statically identify potential write port contention instances by modeling write paths and priority relationships among functional modules that target shared storage elements.Second, within the WRG, PORTRUSH implements a Hierarchical Aggregation and Decoding method to efficiently detect write port contention by monitoring relevant hardware signals across design hierarchies.Third, PORTRUSH employs a Contention-guided Hardware Fuzzing approach to trigger write port contention and automatically combine contention-triggered instruction sequences with transient execution attack patterns, enabling validation of write port contention side-channel vulnerabilities.We evaluate PORTRUSH on three RISC-V CPUs (BOOM, NutShell, and Rocket Core) and demonstrate its effectiveness in identifying and triggering write port contention.Furthermore, we validate that the discovered vulnerabilities can be exploited in realistic write port contention attack scenarios.Based on these vulnerabilities, we present two novel attack vectors: Birgus-variant, which exploits contention at the physical register file in the Reorder Buffer, and MSHRush, which leverages contention between the Load/Store Unit (LSU) and Miss Status Handling Register (MSHR) at the L1 data cache to induce secret-dependent execution delays.We also propose mitigation strategies for CPU developers to prevent such vulnerabilities.
 
 ## 研究问题
 

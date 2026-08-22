@@ -1,4 +1,4 @@
-# <scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching
+# SYL Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching
 
 ## 基本信息
 
@@ -37,7 +37,7 @@ Symbolic execution of hardware designs is a path-based analysis that can deliver
 
 ## 核心贡献
 
-待全文核验；当前仅能确认论文题名为《<scp>SYL</scp> Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
+待全文核验；当前仅能确认论文题名为《SYL Q-SV: Scaling Symbolic Execution of Hardware Designs with Query Caching》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中补充作者版或官方 PDF URL
 
 ## 与本仓库研究主线的关系
 

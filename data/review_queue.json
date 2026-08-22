@@ -276,7 +276,7 @@
       "Peter Xiong"
     ],
     "categories": [],
-    "content_hash": "4b29abdce6c07502281f5c3ea4a470d0b9aeda3fcc18de302f0a9ebe798eaf69",
+    "content_hash": "85e3e2379d6125d4deb363d1bd295b792500f59dd09da9341ad60dfe4c7e1a70",
     "curation_status": "review",
     "doi": "https://doi.org/10.31979/etd.x48p-hs5d",
     "evidence_level": "abstract",
@@ -284,7 +284,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w7171978116",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -298,7 +298,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Bottleneck",
@@ -328,7 +328,7 @@
     "source_id": "https://openalex.org/W7171978116",
     "title": "RThermaL",
     "title_key": "rthermal",
-    "updated": "2026-08-02",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.31979/etd.x48p-hs5d",
     "venue": "未记录"
   },
@@ -342,7 +342,7 @@
       "Vasile Gheorghiţă Găitan"
     ],
     "categories": [],
-    "content_hash": "318eecf0913add1c02aec9be790d9e23c3c768f8e3ab714c2634a74f4f38764f",
+    "content_hash": "fb795f3c88cf50ffcd8de2395af04f3f01521d773f31564f226e9c2f40a1f238",
     "curation_status": "review",
     "doi": "https://doi.org/10.3390/computers15070447",
     "evidence_level": "abstract",
@@ -350,7 +350,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7168574757",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -364,7 +364,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -405,7 +405,7 @@
     "source_id": "https://openalex.org/W7168574757",
     "title": "nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency",
     "title_key": "nsim rv a reproducible risc v framework for scheduler aware timing scalability under increasing task concurrency",
-    "updated": "2026-07-30",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.3390/computers15070447",
     "venue": "Computers"
   },
@@ -1069,7 +1069,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "976030a6846d70190526369eeae78ac5f2a7447041b256dc331d9542f960c07f",
+    "content_hash": "27412dc17191bc4d60367b3ea3adcc4ee5e22ceb42bcdaf16e0404035118961f",
     "curation_status": "review",
     "doi": "https://doi.org/10.5753/sscad_estendido.2024",
     "evidence_level": "abstract",
@@ -1077,7 +1077,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4403683349",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -1091,7 +1091,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1100,7 +1100,7 @@
     "source_id": "https://openalex.org/W4403683349",
     "title": "Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)",
     "title_key": "anais estendidos do xxv simp sio em sistemas computacionais de alto desempenho sscad estendido 2024",
-    "updated": "2026-08-06",
+    "updated": "2026-08-18",
     "url": "https://doi.org/10.5753/sscad_estendido.2024",
     "venue": "未记录"
   },
@@ -1304,7 +1304,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "b4636aacc01092748b64306b891d408a4b502ec1cf7084275b4b187c01743c55",
+    "content_hash": "4b39b4d90a6aadf852aea905c776d66bb44174bb99fd993624b76c86dcc1ef19",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1312,7 +1312,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-08-22",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1326,7 +1326,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1361,7 +1361,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-08-13",
+    "updated": "2026-08-21",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },

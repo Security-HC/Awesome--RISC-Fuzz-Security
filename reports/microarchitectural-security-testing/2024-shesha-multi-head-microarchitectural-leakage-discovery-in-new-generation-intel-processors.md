@@ -4,14 +4,14 @@
 
 - 作者：Anirban Chakraborty、Nimish Mishra、Debdeep Mukhopadhyay
 - 发表日期：2024-06-10
-- 会议/期刊：USENIX Security Symposium
+- 会议/期刊：arXiv
 - 主分类：微架构安全自动测试
 - 相关性：A·直接相关（score=5）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：Microarchitectural Security Testing
 - 纳入依据：hardware/processor object: processor, microarchitectural；verification/fuzzing method: fuzz；security relevance: side channel, transient execution, leakage
-- 论文页面：[https://doi.org/10.48550/arXiv.2406.06034](https://doi.org/10.48550/arXiv.2406.06034)
+- 论文页面：[http://arxiv.org/abs/2406.06034v2](http://arxiv.org/abs/2406.06034v2)
 - PDF：[https://arxiv.org/pdf/2406.06034v2](https://arxiv.org/pdf/2406.06034v2)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 22 页，提取 100000 字符
 
