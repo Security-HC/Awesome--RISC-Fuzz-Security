@@ -1,11 +1,12 @@
 # 形式化与定向处理器验证
 
-本目录仅按主分类收录，共 9 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 10 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
 | 日期 | 论文 | 会议/期刊 | 相关性 | 证据 | 核心贡献 | 链接 |
 |---|---|---|---|---|---|---|
+| 2026-08-20 | [Engineering the Intelligent Enterprise: The Complete Guide to Data and AI Platform Engineering](./2026-engineering-the-intelligent-enterprise-the-complete-guide-to-data-and-ai-platform-engineer.md) | 未记录 | B·强邻近 | 摘要级 | 待全文核验；当前仅能确认论文题名为《Engineering the Intelligent Enterprise: The Complete Guide to Data and AI Platform Engineering》，初步归入“Formal & Directed Processor Ve… | [页面](https://doi.org/10.70593/978-81-69589-46-8) / [PDF](https://deepscienceresearch.com/dsr/catalog/download/797/3474/6044) |
 | 2026-07-10 | [From RISC to Risk: Exception Handling as a Gateway to Exploitation](./2026-from-risc-to-risk-exception-handling-as-a-gateway-to-exploitation.md) | Computers | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《From RISC to Risk: Exception Handling as a Gateway to Exploitation》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PD… | [页面](https://doi.org/10.3390/computers15070440) / [PDF](https://www.mdpi.com/2073-431X/15/7/440/pdf?version=1783694420) |
 | 2026-07-01 | [Rise From The Ashes: LLM-based Static Analysis for Deep Learning Framework Bugs](./2026-rise-from-the-ashes-llm-based-static-analysis-for-deep-learning-framework-bugs.md) | arXiv | A·直接相关 | 全文核验 | 1. 提出跨语言张量语义不一致的静态分析新视角；2. 设计Phoenix技术，基于LLM的多智能体工作流（总结、提取、生成、分析）和语义桥接中间表示SBIR；3. 在PyTorch上发现31个真实bug，26个确认，20个补丁合并；4. 证明静态分析与动态fuzzing正交互补，联合覆盖50个bu… | [页面](http://arxiv.org/abs/2607.00555v1) / [PDF](https://arxiv.org/pdf/2607.00555v1) |
 | 2026-02-11 | [RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5](./2026-rv-sec5-enhancing-risc-v-security-evaluation-via-targeted-isa-level-instrumentation-using.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5》，初步归入“Formal & Directed Processor V… | [页面](https://doi.org/10.1145/3793638.3793640) / [PDF](https://doi.org/10.1145/3793638.3793640) |

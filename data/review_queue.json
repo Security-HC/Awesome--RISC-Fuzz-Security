@@ -1,5 +1,61 @@
 [
   {
+    "abstract": "Modern heterogeneous systems-on-chip require both lightweight register access and coherent shared-memory communication, yet these needs are often discussed as if AXI4-Lite and ACE were a single protocol layer.This paper presents a transaction-level architecture that deliberately separates an AXI4-Lite control plane from an ACE/ACE-Lite coherent data plane while sharing address-routing, arbitration, response-handling, monitoring, and verification services.The architecture targets CPU cores, accelerators, DMA engines, memory controllers, and memory-mapped peripherals.A deterministic cycle-abstract reference model is used to evaluate class-aware round-robin arbitration, filtered snooping, error responses, back-pressure, and cache-visible data consistency before RTL implementation.Verification covers 100,000 randomized address/response transactions, 20,000 cycles of continuous four-master contention, and 50,000 coherent memory operations, with no decode, response, mutual-exclusion, or stale-read violations in the reference model.At an offered load of 0.12 transactions/cycle, the proposed splitplane architecture reduces mean latency by 40.6%, 50.7%, and 76.3% for control-dominant, balanced, and memory-dominant mixes, respectively, compared with a serialized fixed-priority/broadcast-snoop baseline.Filtered snooping reduces peer snoop probes by 52.2-57.7%.A balanced-load sweep further shows that the baseline saturates near 0.154 transactions/cycle, whereas the proposed model sustains approximately 0.178 transactions/cycle at an offered load of 0.18.The results establish a reproducible architectural baseline for subsequent System Verilog/UVM implementation and FPGA/ASIC evaluation.",
+    "analysis": {},
+    "authors": [
+      "T. Leelavathi, Abdul Maqseed Shaik, Manga Rajalaxmi, Cheguri Mahesh"
+    ],
+    "categories": [],
+    "content_hash": "f86f4fe475b13c8d39dd29ba8564c84140bb6e2157c254a79677376261e26e52",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-29",
+    "id": "openalex-w7203836071",
+    "included": false,
+    "last_seen": "2026-08-29",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://exceljournals.org.in/admin/uploads/EIJTEM_2026_13_3_157-164.pdf",
+    "primary_category": "",
+    "published": "2026-08-20",
+    "relevance_reasons": [
+      "hardware/processor object: cpu, rtl, verilog, soc",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Interconnection",
+      "Embedded system",
+      "Scalability",
+      "System on a chip",
+      "Scale (ratio)",
+      "Computer architecture",
+      "Chip",
+      "Modularity (biology)",
+      "Component (thermodynamics)",
+      "Integrated circuit design",
+      "Key (lock)",
+      "Process (computing)",
+      "Computer hardware",
+      "Scheme (mathematics)",
+      "Circuit design"
+    ],
+    "source_id": "https://openalex.org/W7203836071",
+    "title": "Transaction-Level Design and Verification of a Hybrid AMBA AXI4-Lite/ACE Interconnect for Scalable Heterogeneous SoCs",
+    "title_key": "transaction level design and verification of a hybrid amba axi4 lite ace interconnect for scalable heterogeneous socs",
+    "updated": "2026-08-22",
+    "url": "https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Deep learning libraries underpin many safety- and reliability-critical applications, yet existing API-level testing techniques often rely on intra-library properties or CPU--GPU differential oracles and may miss defects that behave consistently across hardware backends. We present Xamt, a cross-framework differential fuzzing approach for deep learning library APIs. Xamt constructs and tests execution-validated groups of APIs intended to implement equivalent operations across seven libraries. It uses explicit API aliases and parameter-role normalization to construct candidate correspondences and validates them through pairwise execution and a group-level behavioral check on canonical ordinary inputs. The resulting groups are explored using variance-guided differential fuzzing with ordinary, boundary, and non-finite inputs. Crash and inconsistency oracles flag executions exhibiting abnormal termination or inconsistent outputs for subsequent reproduction and analysis. Across the seven libraries, Xamt constructs 676 execution-validated groups containing 2,563 matched APIs. Among these, Xamt identifies 72 independently reproduced discrepancy cases, including 4 crash cases and 68 output inconsistencies. Among the 72 developer reports, 25 have been confirmed, including 23 that have been fixed.",
     "analysis": {},
     "authors": [
@@ -276,7 +332,7 @@
       "Peter Xiong"
     ],
     "categories": [],
-    "content_hash": "85e3e2379d6125d4deb363d1bd295b792500f59dd09da9341ad60dfe4c7e1a70",
+    "content_hash": "fd91b546b26f826c6c0393f78f83478a980f1e72a9011e7abd5a9ab78ea144ef",
     "curation_status": "review",
     "doi": "https://doi.org/10.31979/etd.x48p-hs5d",
     "evidence_level": "abstract",
@@ -284,7 +340,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w7171978116",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-08-29",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -298,7 +354,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Bottleneck",
@@ -328,7 +384,7 @@
     "source_id": "https://openalex.org/W7171978116",
     "title": "RThermaL",
     "title_key": "rthermal",
-    "updated": "2026-08-21",
+    "updated": "2026-08-27",
     "url": "https://doi.org/10.31979/etd.x48p-hs5d",
     "venue": "未记录"
   },
@@ -1065,11 +1121,11 @@
     "venue": "Asia and South Pacific Design Automation Conference"
   },
   {
-    "abstract": "This paper presents an automated infrastructure for the verification of RISC-V processors, using continuous integration techniques combined with FPGAs from multiple vendors, such as Altera/Intel, Xilinx/AMD, Gowin, and Lattice.We designed a robust and scalable environment that facilitates early detection of faults in various RISC-V processor implementations, ensuring compliance with ISA specifications.Preliminary results demonstrate the effectiveness of the approach, highlighting the methodology's ability to quickly identify errors and gather essential data for processor selection and verification.",
+    "abstract": "This paper presents an automated infrastructure for the verification of RISC-V processors, using continuous integration techniques combined with FPGAs from multiple vendors, such as Altera/Intel, Xilinx/AMD, Gowin, and Lattice.We designed a robust and scalable environment that facilitates early detection of faults in various RISC-V processor implementations, ensuring compliance with ISA specifications.Preliminary results demonstrate the effectiveness of the approach, highlighting the methodology's ability to quickly identify errors and gather essential data for processor selection and verification.Resumo.Este artigo apresenta uma infraestrutura automatizada para a verificac ¸ão de processadores RISC-V, utilizando técnicas de integrac ¸ão contínua combinadas com FPGAs de múltiplos fornecedores, como Altera/Intel, Xilinx/AMD, Gowin e Lattice.Foi projetado um ambiente robusto e escalável que facilite a detecc ¸ão precoce de falhas em diversas implementac ¸ões de processadores RISC-V, garantindo a conformidade com as especificac ¸ões da ISA.Resultados preliminares demonstram a eficácia da abordagem, destacando a capacidade da metodologia em identificar rapidamente erros e coletar dados essenciais para a selec ¸ão e verificac ¸ão de processadores.",
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "27412dc17191bc4d60367b3ea3adcc4ee5e22ceb42bcdaf16e0404035118961f",
+    "content_hash": "5e7d36b0e9dd8de7b0cb157ca5de9c7853404b8158d61e5e0ac8e40d2f2d018e",
     "curation_status": "review",
     "doi": "https://doi.org/10.5753/sscad_estendido.2024",
     "evidence_level": "abstract",
@@ -1077,7 +1133,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4403683349",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-08-29",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -1091,7 +1147,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1100,7 +1156,7 @@
     "source_id": "https://openalex.org/W4403683349",
     "title": "Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)",
     "title_key": "anais estendidos do xxv simp sio em sistemas computacionais de alto desempenho sscad estendido 2024",
-    "updated": "2026-08-18",
+    "updated": "2026-08-23",
     "url": "https://doi.org/10.5753/sscad_estendido.2024",
     "venue": "未记录"
   },
@@ -1304,7 +1360,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "4b39b4d90a6aadf852aea905c776d66bb44174bb99fd993624b76c86dcc1ef19",
+    "content_hash": "a7203ad6077c66a6810b04faa21d52b7d3c0cfff6ca745ae3225448e36765ce2",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1312,7 +1368,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-08-29",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1326,7 +1382,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1361,7 +1417,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-08-21",
+    "updated": "2026-08-25",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "未记录"
   },
@@ -1429,8 +1485,9 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-e9ec1cd8bddc71ea44ba1f9cd01f44b2e30322e4",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
     "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
     "pdf_url": "",
@@ -1443,7 +1500,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -1680,6 +1737,53 @@
     "updated": "2021-02-13",
     "url": "http://arxiv.org/abs/2102.06989v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "The functional verification of multicore chips requires the generation of parallel test programs able to expose design errors and ensure high coverage in less time. Albeit the coherence hardware can scale gracefully as the number of cores grows, the state space of the coherence protocol increases exponentially. That is why this article describes a directed test generation approach that exploits random test generation (RTG) for avoiding explicit enumeration of the coherence state space while memory consistency is verified. The novel approach was designed for synergy between a data-driven engine that explores neighborhoods toward higher coverage and a model-based engine that exploits constraints while driving RTG toward faster coverage evolution. As compared to a state-of-the-art data-driven generator and to a model-based generator, the proposed approach led to superior coverage evolution with time, when targeting 32-core designs relying on different protocols. For MOESI 2-level, the novel approach was from 4.8 to 18.7 faster to reach the data-driven generator’s maximal coverage, and it was up to 2.7 faster to reach the model-driven generator’s. For MESI 3-level, it found, in 10 to 15 min, a few errors whose detection required the data-driven generator 45 min to 7 h.",
+    "analysis": {},
+    "authors": [
+      "Gabriel A. G. Andrade",
+      "Marleson Graf",
+      "Nícolas Pfeifer",
+      "Luiz C. V. dos Santos"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "b0323fb35040c62c76645a53d5f0ef1ad1db863543163568a17832befde024ec",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/TCAD.2020.2974343",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-08-29",
+    "id": "semantic-scholar-ad9d7b1ee04a6b4579fd2919bba684bdef3455de",
+    "included": false,
+    "last_seen": "2026-08-29",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation"
+    ],
+    "pdf_url": "",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2020-12-01",
+    "relevance_reasons": [
+      "hardware/processor object: memory consistency, multicore",
+      "verification/fuzzing method: directed test generation, test generation, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "ad9d7b1ee04a6b4579fd2919bba684bdef3455de",
+    "title": "A Directed Test Generator for Shared-Memory Verification of Multicore Chip Designs",
+    "title_key": "a directed test generator for shared memory verification of multicore chip designs",
+    "updated": "",
+    "url": "https://doi.org/10.1109/TCAD.2020.2974343",
+    "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
   },
   {
     "abstract": "Compliance testing for RISC-V is very important. Therefore, an official hand-written compliance test-suite is being actively developed. However, besides requiring significant manual effort, it focuses on positive testing (the implemented instructions work as expected) only and neglects negative testing (consider illegal instructions to also ensure that no additional/unexpected behavior is accidentally added). This leaves a large gap in compliance testing.In this paper we propose a fuzzing-based test-suite generation approach to close this gap. We found new bugs in several RISC-V simulators including riscvOVPsim from Imperas which is the official reference simulator for compliance testing.",
@@ -2068,8 +2172,9 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-74cf07f179e0d63f9fc1f509218f02f64858d64d",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
     "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
     "pdf_url": "",
@@ -2082,7 +2187,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -2469,8 +2574,9 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-b0a10e399798654855907b170f4b49f55f144b42",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
     "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
     "pdf_url": "",
@@ -2483,7 +2589,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -2512,8 +2618,9 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-3b35cefccf9cebdf271b90f94e3f4c1ad127d571",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-08-29",
     "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
     "pdf_url": "",
@@ -2526,7 +2633,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [],
     "source_id": "3b35cefccf9cebdf271b90f94e3f4c1ad127d571",

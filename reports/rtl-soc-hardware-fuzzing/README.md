@@ -1,11 +1,12 @@
 # RTL 与 SoC 硬件 Fuzzing
 
-本目录仅按主分类收录，共 12 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 13 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
 | 日期 | 论文 | 会议/期刊 | 相关性 | 证据 | 核心贡献 | 链接 |
 |---|---|---|---|---|---|---|
+| 2026-08-25 | [SoK: ARCUS: On the Efficiency and Efficacy of Hardware Fuzzing](./2026-sok-arcus-on-the-efficiency-and-efficacy-of-hardware-fuzzing.md) | arXiv | A·直接相关 | 全文核验 | 1. 进行首个跨ISA、µArch（post-silicon）和RTL（pre-silicon）三层的硬件fuzzer综合分析。2. 引入两层分类法，按抽象层和方法论对fuzzer分类。3. 定义核心分析维度（如输入刺激、fuzzing算法、覆盖反馈、GRM等），系统化比较现有方法。4. 识别关键… | [页面](http://arxiv.org/abs/2608.23933v1) / [PDF](https://arxiv.org/pdf/2608.23933v1) |
 | 2026-07-11 | [When Fuzzing Meets Understanding: LLM-Driven Semantic Test Generation for RTL Verification](./2026-when-fuzzing-meets-understanding-llm-driven-semantic-test-generation-for-rtl-verification.md) | arXiv | A·直接相关 | 全文核验 | 提出LLM驱动的双阶段硬件fuzzing框架，引入控制流相似性索引、差异分析、历史bug引导和语义种子融合策略。 | [页面](http://arxiv.org/abs/2607.10340v1) / [PDF](https://arxiv.org/pdf/2607.10340v1) |
 | 2026-04-20 | [Fine-Grained Code Analysis for Processor Fuzzing](./2026-fine-grained-code-analysis-for-processor-fuzzing.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《Fine-Grained Code Analysis for Processor Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.json 中… | [页面](https://doi.org/10.23919/date69613.2026.11539325) |
 | 2025-10-17 | [SymbFuzz: Symbolic Execution Guided Hardware Fuzzing](./2025-symbfuzz-symbolic-execution-guided-hardware-fuzzing.md) | Micro | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《SymbFuzz: Symbolic Execution Guided Hardware Fuzzing》，初步归入“RTL & SoC Hardware Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pdf_overrides.js… | [页面](https://doi.org/10.1145/3725843.3756131) / [PDF](https://dl.acm.org/doi/pdf/10.1145/3725843.3756131) |

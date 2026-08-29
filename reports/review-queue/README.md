@@ -1,9 +1,10 @@
 # 待人工复核
 
-共 52 篇。该列表不进入主 README。
+共 54 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-08-20 | [Transaction-Level Design and Verification of a Hybrid AMBA AXI4-Lite/ACE Interconnect for Scalable Heterogeneous SoCs](https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026) | 4 | hardware/processor object: cpu, rtl, verilog, soc；verification/fuzzing method: verification |
 | 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2026-08-12 | [GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing](http://arxiv.org/abs/2608.12635v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](http://arxiv.org/abs/2608.02915v1) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
@@ -37,6 +38,7 @@
 | 2021-10-05 | [SiliFuzz: Fuzzing CPUs by proxy](http://arxiv.org/abs/2110.11519v1) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: fuzz |
 | 2021-06-22 | [Assertion Based Functional Verification of March Algorithm Based MBIST Controller](http://arxiv.org/abs/2106.11461v1) | 4 | hardware/processor object: rtl, verilog；verification/fuzzing method: verification |
 | 2021-02-13 | [Model Synthesis for Communication Traces of System-on-Chip Designs](http://arxiv.org/abs/2102.06989v1) | 4 | hardware/processor object: system-on-chip, soc, multicore；verification/fuzzing method: validation |
+| 2020-12-01 | [A Directed Test Generator for Shared-Memory Verification of Multicore Chip Designs](https://doi.org/10.1109/TCAD.2020.2974343) | 4 | hardware/processor object: memory consistency, multicore；verification/fuzzing method: directed test generation, test generation, verification |
 | 2020-07-01 | [Closing the RISC-V Compliance Gap: Looking from the Negative Testing Side*](https://doi.org/10.1109/DAC18072.2020.9218629) | 4 | hardware/processor object: risc-v, riscv；verification/fuzzing method: fuzz |
 | 2020-03-01 | [Chaining and Biasing: Test Generation Techniques for Shared-Memory Verification](https://doi.org/10.1109/TCAD.2019.2894376) | 4 | hardware/processor object: multicore；verification/fuzzing method: test generation, verification |
 | 2020 | [RISC-V Processor Verification: Case Study](https://www.semanticscholar.org/paper/1e81d54fff8740797b24c8479fde71f9433c13c1) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification |
