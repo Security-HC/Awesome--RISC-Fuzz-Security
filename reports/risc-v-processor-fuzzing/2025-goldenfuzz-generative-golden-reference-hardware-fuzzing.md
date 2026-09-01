@@ -3,16 +3,16 @@
 ## 基本信息
 
 - 作者：Lichao Wu、Mohamadreza Rostami、Huimin Li、Nikhilesh Singh、Ahmad-Reza Sadeghi
-- 发表日期：2026-01-01
-- 会议/期刊：未记录
+- 发表日期：2025-12-25
+- 会议/期刊：arXiv
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=100）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
-- 论文页面：[https://doi.org/10.14722/ndss.2026.231663](https://doi.org/10.14722/ndss.2026.231663)
-- PDF：[https://doi.org/10.14722/ndss.2026.231663](https://doi.org/10.14722/ndss.2026.231663)
+- 论文页面：[http://arxiv.org/abs/2512.21524v1](http://arxiv.org/abs/2512.21524v1)
+- PDF：[https://arxiv.org/pdf/2512.21524v1](https://arxiv.org/pdf/2512.21524v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 16 页，提取 86567 字符
 
 ## 摘要

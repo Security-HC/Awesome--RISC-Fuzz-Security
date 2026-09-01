@@ -1,5 +1,81 @@
 [
   {
+    "abstract": "The global agri-food system sits at a critical crossroads: it must meet growing food demand while urgently curbing its environmental impact. Responsible for roughly one-third of global greenhouse gas emissions and a leading driver of soil degradation, freshwater depletion and biodiversity loss, the sector faces mounting pressure as climate change simultaneously erodes agricultural productivity through droughts and extreme weather.This guide provides development practitioners with practical tools to embed climate adaptation and mitigation into agri-food project design, and to measure resulting environmental outcomes. It addresses adaptation through indicators that can assess effects on key environmental capitals (biodiversity, soil, water), on-farm practice changes, and long-term resilience strategies. On mitigation, the guide describes indicators to measure the carbon footprint of a project and carbon sequestration potential, including enabling technologies and socio-economic drivers. The guide highlights how project results can inform national and international policy processes, strengthen climate finance mobilisation, and support institutional capacity building.",
+    "analysis": {},
+    "authors": [
+      "OECD"
+    ],
+    "categories": [],
+    "content_hash": "d9be5c3aa2beb95118d4e8339f5d7d8fb239bd23029790beba16181cd473035a",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1787/a4e26a65-en",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; missing object-method conjunction",
+    "first_seen": "2026-09-01",
+    "id": "openalex-w7204579435",
+    "included": false,
+    "last_seen": "2026-09-01",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/09/improving-environmental-and-climate-outcomes-in-agri-food-projects_a7fd7860/a4e26a65-en.pdf",
+    "primary_category": "",
+    "published": "2026-08-28",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Greenhouse gas",
+      "Carbon footprint",
+      "Environmental resource management",
+      "Climate resilience",
+      "Resilience (materials science)",
+      "Climate change",
+      "Agriculture",
+      "Natural resource economics",
+      "Environmental planning",
+      "Business",
+      "Productivity",
+      "Sustainability",
+      "Ecological footprint",
+      "Global warming",
+      "Psychological resilience",
+      "Environmental science",
+      "Adaptation (eye)",
+      "Extreme weather",
+      "Global environmental analysis",
+      "Agricultural productivity",
+      "Environmental economics",
+      "Environmental issue",
+      "Carbon sequestration",
+      "Climate policy",
+      "Climate change mitigation",
+      "Food security",
+      "Environmental protection",
+      "Environmental impact assessment",
+      "Climate Finance",
+      "Ecological forecasting",
+      "Biodiversity",
+      "Green infrastructure",
+      "Global climate",
+      "Government (linguistics)",
+      "Best practice"
+    ],
+    "source_id": "https://openalex.org/W7204579435",
+    "title": "Improving Environmental and Climate Outcomes in Agri-food Projects",
+    "title_key": "improving environmental and climate outcomes in agri food projects",
+    "updated": "2026-08-30",
+    "url": "https://doi.org/10.1787/a4e26a65-en",
+    "venue": "未记录"
+  },
+  {
     "abstract": "A self-organising map turns a large corpus into a browsable two-dimensional atlas, but building one at MEDLINE scale has been impractical: the best-matching-unit (BMU) search that dominates training is bound by the bandwidth needed to read the codebook every epoch. I show that this bottleneck is largely an artefact of codebook layout. Storing it feature-major with each feature's weights contiguous, W[v.M+i], recasts the search as a tiled sparse-dense product in which every loaded weight column is reused across a tile of samples. Varying only the layout, with implementation, precision and update rule held fixed, accelerates the BMU search by 4.5-8.5x. Because an exact-argmin BMU is invariant to how the codebook is stored, this gain costs nothing: held-out quantisation error agrees with a cuSPARSE baseline to within 0.5% at every map size. Against that baseline the advantage is a crossover rather than a constant: cuSPARSE.SOM is faster at small maps, SparseBin.SOM is 1.5x faster at 128x128 and 2.6x at 256x256, and at 512x512 it is the only one that runs at all on 24 GB. Paired with a radius-independent box-blur update and a convergence-based stopping rule, it trains a converged map over 29.9 million MEDLINE articles in about 72 s at 64x64 on one 24 GB GPU, and accommodates 262,144 neurons (512x512 edges) where every alternative algorithm I tested exceeds memory constraints. On a 141 GB H200 it reaches 1,048,576 neurons (1024x1024 edges) - to my knowledge the largest self-organising map yet reported. Held-out error follows a smooth power law with no elbow across three decades of map size, so the limit on resolution is compute rather than any breakpoint in the data. At matched work the design is ~82x faster than MedSOM, the CUDA implementation behind our earlier MEDLINE atlases and, at 128x128, 621x faster than the best available multicore-CPU library.",
     "analysis": {},
     "authors": [
@@ -1303,7 +1379,7 @@
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "cf001ccb7e0af354036cd985f8e4c0dcb725efe9e1972199065f7c5c221a16a1",
+    "content_hash": "53fb0bab8173f03af7a3530da1d96c780fd76ff0ffec32ff04f0c4fc919bb7fd",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers15080479",
     "evidence_level": "abstract",
@@ -1311,7 +1387,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171559005",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-01",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact",
       "OpenAlex: cache coherence transition coverage verification",
@@ -1328,7 +1404,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1366,7 +1442,7 @@
     "source_id": "https://openalex.org/W7171559005",
     "title": "ARCHER: A Cycle-Accurate RISC-V Emulator for Microarchitectural Side-Channel and Memory Encryption Research",
     "title_key": "archer a cycle accurate risc v emulator for microarchitectural side channel and memory encryption research",
-    "updated": "2026-08-25",
+    "updated": "2026-08-29",
     "url": "https://doi.org/10.3390/computers15080479",
     "venue": "Computers"
   },
@@ -8170,7 +8246,7 @@
       "Kevin Butler"
     ],
     "categories": [],
-    "content_hash": "5fb4244664b0a56184055527fa91dd9120238bb64054a71f79589abbedd442aa",
+    "content_hash": "4c64ad2df24981fadd76da88acb98950bd1e1989e2bb2bcf111290f517a78866",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -8178,7 +8254,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-09-01",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8192,7 +8268,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8217,7 +8293,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-08-06",
+    "updated": "2026-08-30",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },
@@ -8620,7 +8696,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "66ae41c1f27ad655a2580c11d32d5f19553f5db8f71c5fe31a2bfd38e1d7b103",
+    "content_hash": "3804734e83ce716d0b01e7e454f547e0e64febc8ebf456f55498510c90eac9b6",
     "curation_status": "excluded",
     "doi": "",
     "evidence_level": "abstract",
@@ -8628,7 +8704,7 @@
     "first_seen": "2026-08-22",
     "id": "openalex-w2552025361",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-01",
     "matched_queries": [
       "OpenAlex: TileLink Probe Acquire Grant verification"
     ],
@@ -8643,7 +8719,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8658,7 +8734,7 @@
     "source_id": "https://openalex.org/W2552025361",
     "title": "Productive Design of Extensible On-Chip Memory Hierarchies",
     "title_key": "productive design of extensible on chip memory hierarchies",
-    "updated": "2026-08-26",
+    "updated": "2026-08-31",
     "url": "https://openalex.org/W2552025361",
     "venue": "未记录"
   },
