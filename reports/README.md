@@ -1,8 +1,8 @@
 # RISC-V 处理器 Fuzzing 与安全验证文献库
 
-数据更新日期：2026-09-01
+数据更新日期：2026-09-08
 
-当前纳入 102 篇；其中全文核验 67 篇、摘要/元数据待回填 35 篇；待人工复核 54 篇；自动排除 180 篇。
+当前纳入 102 篇；其中全文核验 67 篇、摘要/元数据待回填 35 篇；待人工复核 54 篇；自动排除 182 篇。
 
 ## 收录范围
 
@@ -55,7 +55,7 @@
 | 2026-01-17 | [SimFuzz: Similarity-guided Block-level Mutation for RISC-V Processor Fuzzing](risc-v-processor-fuzzing/2026-simfuzz-similarity-guided-block-level-mutation-for-risc-v-processor-fuzzing.md) | arXiv | A·直接相关 | 全文核验 | 1) 构建了来自真实世界RISC-V处理器bug触发测试用例的高质量种子语料库；2) 提出了SimFuzz框架，以指令相似性引导的块级变异替代传统覆盖率反馈机制；3) 实验证明SimFuzz在三个主流RISC-V处理器上达到较高覆盖率，并发现14个新bug（7个CVE）。 | [页面](http://arxiv.org/abs/2601.11838v1) / [PDF](https://arxiv.org/pdf/2601.11838v1) |
 | 2026-01-01 | [ReFuzz: Reusing Tests for Processor Fuzzing with Contextual Bandits](risc-v-processor-fuzzing/2026-refuzz-reusing-tests-for-processor-fuzzing-with-contextual-bandits.md) | 未记录 | A·直接相关 | 全文核验 | 1) 首个利用上下文强盗算法复用先前处理器测试的硬件fuzzing框架。2) 提出了自适应CB算法和测试最小化器，有效识别高效应测试。3) 实验证明该方法可检测到已知漏洞的变体以及新漏洞，覆盖速度提升511.23×，总覆盖提升1.89%。 | [页面](https://doi.org/10.14722/ndss.2026.240118) / [PDF](https://doi.org/10.14722/ndss.2026.240118) |
 | 2026-01-01 | [PortRush: Detect Write Port Contention Side-Channel Vulnerabilities via Hardware Fuzzing](risc-v-processor-fuzzing/2026-portrush-detect-write-port-contention-side-channel-vulnerabilities-via-hardware-fuzzing.md) | 未记录 | A·直接相关 | 全文核验 | 首次系统化研究写端口竞争侧信道漏洞，提出包含静态识别、实时监测、竞争引导Fuzzing和自动利用验证的完整框架PORTRUSH；发现两个新攻击变体MSHRush和Birgus-variant，并复现已知Spectre-STC攻击。 | [页面](https://doi.org/10.14722/ndss.2026.240587) / [PDF](https://doi.org/10.14722/ndss.2026.240587) |
-| 2025-12-25 | [GoldenFuzz: Generative Golden Reference Hardware Fuzzing](risc-v-processor-fuzzing/2025-goldenfuzz-generative-golden-reference-hardware-fuzzing.md) | arXiv | A·直接相关 | 全文核验 | ['首次利用GRM进行低成本fuzzing策略优化', '块级指令生成与混合评分机制', '基于语言模型和偏好优化的在线策略更新', '发现5个新漏洞（4个严重）和2个商业核心漏洞'] | [页面](http://arxiv.org/abs/2512.21524v1) / [PDF](https://arxiv.org/pdf/2512.21524v1) |
+| 2026-01-01 | [GoldenFuzz: Generative Golden Reference Hardware Fuzzing](risc-v-processor-fuzzing/2026-goldenfuzz-generative-golden-reference-hardware-fuzzing.md) | 未记录 | A·直接相关 | 全文核验 | ['首次利用GRM进行低成本fuzzing策略优化', '块级指令生成与混合评分机制', '基于语言模型和偏好优化的在线策略更新', '发现5个新漏洞（4个严重）和2个商业核心漏洞'] | [页面](https://doi.org/10.14722/ndss.2026.231663) / [PDF](https://doi.org/10.14722/ndss.2026.231663) |
 | 2025-12-15 | [Lyra: A Hardware-Accelerated RISC-V Verification Framework with Generative Model-Based Processor Fuzzing](risc-v-processor-fuzzing/2025-lyra-a-hardware-accelerated-risc-v-verification-framework-with-generative-model-based-proc.md) | arXiv | A·直接相关 | 全文核验 | 1. 首次提出GPU-CPU-FPGA异构协同验证框架，将测试执行、微分检查、覆盖收集卸载到硬件，生成模型驱动高效激励生成。2. 开发LyraGen，通过RISC-V指令分词方案和监督覆盖条件训练，生成语义丰富的指令序列。3. 实验证明覆盖率最高提升1.27倍，端到端速度提升107-3343倍，收… | [页面](http://arxiv.org/abs/2512.13686v3) / [PDF](https://arxiv.org/pdf/2512.13686v3) |
 | 2025-11-19 | [DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction](risc-v-processor-fuzzing/2025-divefuzz-enhancing-cpu-fuzzing-via-diverse-instruction-construction.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《DiveFuzz: Enhancing CPU Fuzzing via Diverse Instruction Construction》，初步归入“RISC-V Processor Fuzzing”。 原因：未找到可直接下载的 PDF；请在 config/pd… | [页面](https://doi.org/10.1145/3719027.3765167) / [PDF](https://dl.acm.org/doi/pdf/10.1145/3719027.3765167) |
 | 2025-11-19 | [MileSan: Detecting Exploitable Microarchitectural Leakage via Differential Hardware-Software Taint Tracking](risc-v-processor-fuzzing/2025-milesan-detecting-exploitable-microarchitectural-leakage-via-differential-hardware-softwar.md) | Conference on Computer and Communications Security | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《MileSan: Detecting Exploitable Microarchitectural Leakage via Differential Hardware-Software Taint Tracking》，初步归入“RISC-V Processor… | [页面](https://doi.org/10.1145/3719027.3765066) / [PDF](https://doi.org/10.1145/3719027.3765066) |

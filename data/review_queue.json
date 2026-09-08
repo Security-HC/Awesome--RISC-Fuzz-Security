@@ -332,7 +332,7 @@
       "Peter Xiong"
     ],
     "categories": [],
-    "content_hash": "b9e57557450f80d4bb1b871188dcfa0359cddaae2186254e7ff3328ed872bfec",
+    "content_hash": "98eac33f48ab9c16c3c4e782b5514ed4e51ddacb0c363311429f0865c007deab",
     "curation_status": "review",
     "doi": "https://doi.org/10.31979/etd.x48p-hs5d",
     "evidence_level": "abstract",
@@ -340,7 +340,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w7171978116",
     "included": false,
-    "last_seen": "2026-09-01",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -354,7 +354,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Bottleneck",
@@ -384,7 +384,7 @@
     "source_id": "https://openalex.org/W7171978116",
     "title": "RThermaL",
     "title_key": "rthermal",
-    "updated": "2026-08-29",
+    "updated": "2026-09-03",
     "url": "https://doi.org/10.31979/etd.x48p-hs5d",
     "venue": "未记录"
   },

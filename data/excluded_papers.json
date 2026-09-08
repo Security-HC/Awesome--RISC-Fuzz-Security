@@ -1,5 +1,46 @@
 [
   {
+    "abstract": "Software agents make digital execution elastic: repository analysis, code generation, testing, migration, tool use, and operations can be replicated and parallelized without proportional human headcount. Problem framing, semantic commitment, verification, integration, attention, and residual-risk acceptance remain bounded by human cognition, organizational authority, and economic capacity. How should scalable execution be governed so organizations can accept and sustain its changes? Our testable framework has two constructs and one execution abstraction. Trustworthy Change (TC) is the engineering object moving from intent through delegated execution, verification, integration, acceptance, and operation. Responsibility Topology classifies organizations by the distribution of independent residual-risk acceptance authority. A single-center topology has one final baseline responsibility anchor; a multi-anchor topology requires joint acceptance across independently governed domains. The Human-Agent Cell (HAC) produces candidates, proposals, and evidence; execution grants no acceptance authority. As execution and authority scale differently, distributed HACs create context-coherence and invalidation pressures, while multi-anchor governance adds joint acceptance and explicit responsibility closure. Responsibility, accountability, change management, specification, verification, and human oversight predate this work; our claim is only that agent-scaled execution changes how they fit together. We make that authority an explicit classification axis and derive consequences for change state, shared engineering facts, verification, and flow control. Progressive Specification and bounded-capacity analysis remain hypotheses to test, not laws. We contribute theory construction and operationalization; empirical validity remains open to controlled, longitudinal, and field studies.",
+    "analysis": {},
+    "authors": [
+      "Zhongjie Wang",
+      "Mingyi Liu"
+    ],
+    "categories": [],
+    "content_hash": "4d047d8fee971277727639abf0c7c93daf34a87b08f97865d595cc9c3608fe57",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification, validation; missing object-method conjunction",
+    "first_seen": "2026-09-08",
+    "id": "arxiv-2609-04630v1",
+    "included": false,
+    "last_seen": "2026-09-08",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.04630v1",
+    "primary_category": "",
+    "published": "2026-09-04",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification, validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2609.04630v1",
+    "title": "Software Engineering in the Agent Era From Trustworthy Change to Human Agent Software Organizations",
+    "title_key": "software engineering in the agent era from trustworthy change to human agent software organizations",
+    "updated": "2026-09-04",
+    "url": "http://arxiv.org/abs/2609.04630v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "The global agri-food system sits at a critical crossroads: it must meet growing food demand while urgently curbing its environmental impact. Responsible for roughly one-third of global greenhouse gas emissions and a leading driver of soil degradation, freshwater depletion and biodiversity loss, the sector faces mounting pressure as climate change simultaneously erodes agricultural productivity through droughts and extreme weather.This guide provides development practitioners with practical tools to embed climate adaptation and mitigation into agri-food project design, and to measure resulting environmental outcomes. It addresses adaptation through indicators that can assess effects on key environmental capitals (biodiversity, soil, water), on-farm practice changes, and long-term resilience strategies. On mitigation, the guide describes indicators to measure the carbon footprint of a project and carbon sequestration potential, including enabling technologies and socio-economic drivers. The guide highlights how project results can inform national and international policy processes, strengthen climate finance mobilisation, and support institutional capacity building.",
     "analysis": {},
     "authors": [
@@ -76,24 +117,24 @@
     "venue": "未记录"
   },
   {
-    "abstract": "A self-organising map turns a large corpus into a browsable two-dimensional atlas, but building one at MEDLINE scale has been impractical: the best-matching-unit (BMU) search that dominates training is bound by the bandwidth needed to read the codebook every epoch. I show that this bottleneck is largely an artefact of codebook layout. Storing it feature-major with each feature's weights contiguous, W[v.M+i], recasts the search as a tiled sparse-dense product in which every loaded weight column is reused across a tile of samples. Varying only the layout, with implementation, precision and update rule held fixed, accelerates the BMU search by 4.5-8.5x. Because an exact-argmin BMU is invariant to how the codebook is stored, this gain costs nothing: held-out quantisation error agrees with a cuSPARSE baseline to within 0.5% at every map size. Against that baseline the advantage is a crossover rather than a constant: cuSPARSE.SOM is faster at small maps, SparseBin.SOM is 1.5x faster at 128x128 and 2.6x at 256x256, and at 512x512 it is the only one that runs at all on 24 GB. Paired with a radius-independent box-blur update and a convergence-based stopping rule, it trains a converged map over 29.9 million MEDLINE articles in about 72 s at 64x64 on one 24 GB GPU, and accommodates 262,144 neurons (512x512 edges) where every alternative algorithm I tested exceeds memory constraints. On a 141 GB H200 it reaches 1,048,576 neurons (1024x1024 edges) - to my knowledge the largest self-organising map yet reported. Held-out error follows a smooth power law with no elbow across three decades of map size, so the limit on resolution is compute rather than any breakpoint in the data. At matched work the design is ~82x faster than MedSOM, the CUDA implementation behind our earlier MEDLINE atlases and, at 128x128, 621x faster than the best available multicore-CPU library.",
+    "abstract": "Building a self-organising map at MEDLINE scale has been impractical: the best-matching-unit (BMU) search that dominates training is bound by the bandwidth needed to read the codebook every epoch. I show that this bottleneck is largely an artefact of codebook layout. Storing it feature-major with each feature's weights contiguous, W[v.M+i], recasts the search as a tiled sparse-dense product in which every loaded weight column is reused across a tile of samples. Varying only the layout, with implementation, precision and update rule held fixed, accelerates the BMU search by 4.5-8.5x, and because an exact-argmin BMU is invariant to codebook layout, this costs nothing: held-out quantisation error agrees with a cuSPARSE baseline to within 0.5% at every map size. The advantage is a crossover: cuSPARSE$.$SOM is faster at small maps, SparseBin$.$SOM is 1.5x faster at 128x128 and 2.6x at 256x256, and at 512x512 it is the only one that runs on 24 GB without re-engineering its memory path. Paired with a radius-independent box-blur update and a convergence-based stopping rule, it trains a converged map over 29.9 million MEDLINE articles in about 72 s at 64x64 on one 24 GB GPU, and fits 262,144 neurons (512x512) where every alternative I tested exceeds memory; on a 141 GB H200 it reaches 1,048,576 neurons (1024x1024), to my knowledge the largest self-organising map yet reported. Held-out error follows a smooth power law with no elbow across three decades of map size. At matched work, in the configuration benchmarked here, the design is ~82x faster than MedSOM and, at 128x128, 621x faster than the best multicore-CPU library. A post-submission addendum, tuning both implementations symmetrically, accelerates the search a further 5.6-10.1x, brings that 64x64 run to about 13 s, removes the crossover, raises those margins to ~385x and ~3,000x, and narrows two mechanism claims.",
     "analysis": {},
     "authors": [
       "Andrew James Amos"
     ],
     "categories": [],
-    "content_hash": "12e4414be89dd38488c4d210fb74ebf266930e6546d0f7565e5545b48150889b",
+    "content_hash": "cb87ea2052d6401761e4e5ce2bc14ed84d55cde3344a4cfbd21065095329c821",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "hardware/processor object: cpu, multicore; missing object-method conjunction",
     "first_seen": "2026-08-29",
     "id": "arxiv-2608-24067v1",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2608.24067v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.24067v2",
     "primary_category": "",
     "published": "2026-08-25",
     "relevance_reasons": [
@@ -103,7 +144,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.LG",
@@ -112,8 +153,8 @@
     "source_id": "2608.24067v1",
     "title": "A Feature-Major Codebook for Memory-Efficient Sparse-Binary Self-Organizing Maps: Scaling a MEDLINE Atlas to 1.05 Million Neurons on a Single Consumer GPU",
     "title_key": "a feature major codebook for memory efficient sparse binary self organizing maps scaling a medline atlas to 1 05 million neurons on a single consumer gpu",
-    "updated": "2026-08-25",
-    "url": "http://arxiv.org/abs/2608.24067v1",
+    "updated": "2026-09-02",
+    "url": "http://arxiv.org/abs/2608.24067v2",
     "venue": "arXiv"
   },
   {
@@ -2669,7 +2710,7 @@
       "Edouard Bugnion"
     ],
     "categories": [],
-    "content_hash": "3200af2f7fc65fd029cc706c0bc1320bc77b43f704865f04d529bb7565a2a455",
+    "content_hash": "cda5e810ffbdae70e57aaeb62a2348e8c4febc36be345fa715ccc12786af0724",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "evidence_level": "abstract",
@@ -2677,7 +2718,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w4415142875",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: microarchitectural path coverage processor fuzzing",
@@ -2694,7 +2735,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2725,7 +2766,7 @@
     "source_id": "https://openalex.org/W4415142875",
     "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
     "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-08-26",
+    "updated": "2026-09-04",
     "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
@@ -3789,7 +3830,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "5db52daeb7c4acbc0344c019400c8c979fb0ae77d60ce0203501fdadba62ba04",
+    "content_hash": "68cc49cfee906c0df20fb2a712b2285a9a75bd55798196c829e80e287570e8eb",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -3797,7 +3838,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -3811,7 +3852,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3835,7 +3876,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-08-26",
+    "updated": "2026-09-01",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -3849,7 +3890,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "e76c74da27abfe112caa04701a0568ef98b10de3e65c25e77f49feabd0493e30",
+    "content_hash": "d297dc21e910303bf4aac156dcd5f50e7e0e384ed789020f19a787c866799462",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -3857,7 +3898,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -3872,7 +3913,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -3883,7 +3924,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-08-26",
+    "updated": "2026-09-06",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -5390,7 +5431,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "3c5433e46e4eef19f3a5ad4037b7d2cb1cbebed2327d24f7021d4988a2b68059",
+    "content_hash": "c486183fabb83c5b3f88e0c35abbc04f2490631a80023cc7f9406e8d80a88bea",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3731569.3764809",
     "evidence_level": "abstract",
@@ -5398,7 +5439,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4414735884",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -5411,7 +5452,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "POSIX",
@@ -5430,7 +5471,7 @@
     "source_id": "https://openalex.org/W4414735884",
     "title": "μFork: Supporting POSIX fork Within a Single-Address-Space OS",
     "title_key": "fork supporting posix fork within a single address space os",
-    "updated": "2026-08-26",
+    "updated": "2026-09-01",
     "url": "https://doi.org/10.1145/3731569.3764809",
     "venue": "未记录"
   },
@@ -7262,7 +7303,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "2d3414c12ec8e772a55094f35c009780971680309f37aaa119e59270f76b30f6",
+    "content_hash": "2dc15093dbad7405205f80d333715971552fd31afdc69cb161b36146469f6f04",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "evidence_level": "metadata",
@@ -7270,7 +7311,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4328028375",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -7283,7 +7324,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7293,7 +7334,7 @@
     "source_id": "https://openalex.org/W4328028375",
     "title": "Table of Contents",
     "title_key": "table of contents",
-    "updated": "2026-08-21",
+    "updated": "2026-09-05",
     "url": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "venue": "未记录"
   },
@@ -7666,6 +7707,59 @@
     "updated": "",
     "url": "https://doi.org/10.1109/ISCA52012.2021.00073",
     "venue": "International Symposium on Computer Architecture"
+  },
+  {
+    "abstract": "The abundance of cheap, portable computing has allowed for complex applications of robotics, especially in the medical rehabilitation field. The emergence of wearable robotics which simulate the movement of healthy individuals is seen as a new option for treating and rehabilitating individuals with paraplegia and other motor disorders. This thesis presents the design and implementation of a miniaturized, low-power, extensible hardware platform for control of a fully-assistive lower-body exoskeleton. A preliminary ARM Cortex-M4-based control platform using modular COTS parts was developed and implemented in a medical exoskeleton (the Bionik Laboratories’ ARKE) and was evaluated through human medical trials. Clinical feedback was used to drive the design of a new platform. A functional prototype of the design was constructed and retrofitted onto an exoskeleton. Data acquisition and MATLAB was then used to evaluate and compare the performance of the two designs. A size reduction of 29% is achieved.",
+    "analysis": {},
+    "authors": [
+      "Bryan Bonnici"
+    ],
+    "categories": [],
+    "content_hash": "93d9881cbb3f3c8547a7a647e62f55575b331c405ad02795000c3676979cd4ee",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.32920/ryerson.14655987.v1",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-08",
+    "id": "openalex-w4244531942",
+    "included": false,
+    "last_seen": "2026-09-08",
+    "matched_queries": [
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_url": "https://rshare.library.ryerson.ca/articles/thesis/Design_and_development_of_hardware_platform_for_fully-assistive_lower_leg_exoskeleton/14655987/1/files/28137822.pdf",
+    "primary_category": "",
+    "published": "2021-05-23",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Exoskeleton",
+      "Modular design",
+      "Powered exoskeleton",
+      "Robotics",
+      "Wearable computer",
+      "Computer science",
+      "Embedded system",
+      "Rehabilitation robotics",
+      "Simulation",
+      "Artificial intelligence",
+      "Control engineering",
+      "Engineering",
+      "Robot",
+      "Operating system"
+    ],
+    "source_id": "https://openalex.org/W4244531942",
+    "title": "Design and development of hardware platform for fully-assistive lower leg exoskeleton",
+    "title_key": "design and development of hardware platform for fully assistive lower leg exoskeleton",
+    "updated": "2026-09-05",
+    "url": "https://doi.org/10.32920/ryerson.14655987.v1",
+    "venue": "未记录"
   },
   {
     "abstract": "Measurement-based analysis of software timing behavior provides important insight and evidence for flight certification of modern avionics systems. For multicore systems, however, this analysis is challenging due to interference effects from shared hardware resource usage. We present an approach to multicore timing analysis that uses interference generators to stress interference channels in multicore systems. The test methodology comprises two steps. First, platform characterization measures the sensitivity of the hardware and RTOS to targeted interference channels using a combination of interference generators. Second, software characterization measures the timing behavior of instrumented applications while interference is generated on shared resources.",
@@ -8246,7 +8340,7 @@
       "Kevin Butler"
     ],
     "categories": [],
-    "content_hash": "4c64ad2df24981fadd76da88acb98950bd1e1989e2bb2bcf111290f517a78866",
+    "content_hash": "0c68e7c2636743badd051fe88c0948a148ce1d107a3ff6e4f757b13eec6a8500",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -8254,7 +8348,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-09-01",
+    "last_seen": "2026-09-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8268,7 +8362,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8293,7 +8387,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-08-30",
+    "updated": "2026-09-07",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },
