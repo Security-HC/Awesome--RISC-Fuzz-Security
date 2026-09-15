@@ -1,5 +1,195 @@
 [
   {
+    "abstract": "Deploying large language models on edge devices is increasingly limited by a widening gap between model size and available memory. Existing approaches such as quantization, smaller models, and offloading can raise the effective memory limit, but they still assume that the model can be compressed or partitioned to fit within some budget. We target the harder model-exceeds-memory setting, in which the model remains larger than resident memory throughout execution and storage becomes an active source of weights on the critical path. We observe that MLP activity during autoregressive decoding has strong temporal locality: approximately 82–85% of active neurons persist from one token to the next. This means that most sparse weights needed for the current token are already resident, and only the newly needed rows must be fetched from storage. We present NeuroPrefetcher, a storage-backed LLM inference system that exploits this property through predictive delta prefetching. After layer 0, a single GPU-resident predictor, occupying 2.86% of base model parameters, predicts sparse activity for all downstream MLP layers in one forward pass. The runtime compares these predictions against resident GPU buffers and issues application-scheduled NVMe reads only for incoming delta rows, replacing reactive operating-system demand paging with explicit, model-aware weight movement. On real unified-memory edge hardware, NeuroPrefetcher achieves 7.9–12.0 × speedup over llama.cpp across constrained memory budgets.",
+    "analysis": {},
+    "authors": [
+      "Nobel Dhar",
+      "Md Romyull Islam",
+      "Xuechen Zhang",
+      "Gongjin Sun",
+      "Sahidul Islam",
+      "Bobin Deng",
+      "Kun Suo"
+    ],
+    "categories": [],
+    "content_hash": "4054db1784f2c1ed73207042240cd67537b97299a86532191a5bf7c0e97c5b3e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3832810.3832862",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7204178878",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3832810.3832862",
+    "primary_category": "",
+    "published": "2026-09-13",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Security token",
+      "Inference",
+      "Speedup",
+      "Enhanced Data Rates for GSM Evolution",
+      "Property (philosophy)",
+      "Exploit",
+      "Edge device",
+      "Row",
+      "Layer (electronics)",
+      "Autoregressive model",
+      "Decoding methods",
+      "Encoding (memory)",
+      "Base (topology)",
+      "Data modeling",
+      "Artificial intelligence",
+      "Memory model",
+      "Memory management",
+      "Algorithm",
+      "Parallel computing",
+      "Pattern recognition (psychology)",
+      "Auxiliary memory",
+      "Approximate inference",
+      "Language model",
+      "Multi-core processor",
+      "Data structure",
+      "Greedy algorithm",
+      "Deep learning",
+      "Sparse matrix",
+      "Random access"
+    ],
+    "source_id": "https://openalex.org/W7204178878",
+    "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
+    "title_key": "neuroprefetcher storage aware sparse llm inference via delta prefetching",
+    "updated": "2026-09-14",
+    "url": "https://doi.org/10.1145/3832810.3832862",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Complementary Metal-Oxide-Semiconductor (CMOS) nanoelectronics are approaching their physical limits, leading to issues such as excessive leakage and increased power consumption. New materials, computing methods, and state variables are being investigated to solve these issues. These emerging technologies embrace a wide range of cutting-edge developments aimed at surpassing the physical constraints of traditional CMOS devices. This research is vital for enabling future computing abilities, particularly in devices that could serve new functions in fields such as artificial intelligence and quantum information processing. Beyond Complementary Metal-Oxide-Semiconductor Nanoelectronics offers an in-depth examination of the challenges associated with conventional CMOS technology, outlining the obstacles and issues encountered with traditional CMOS scaling, including power and energy consumption, as well as variability, and highlighting the necessity for alternative technologies. It presents possible successor technologies to CMOS, including emerging logic devices, memory chips, compute-in-memory architectures, new materials, and integration methods. These technologies leverage alternative physical effects, including spintronics, neuromorphic computing, and quantum phenomena, and introduce novel functionalities to enhance performance. Providing an engaging and clear perspective on the future of nanoelectronics, this book will be a valuable reference for graduate students specializing in electrical engineering, computer engineering, materials science, and physics, as well as for university instructors delivering advanced coursework on nanoelectronics, very large scale integration (VLSI) design, and solid-state devices. Professional engineers and designers in the semiconductor field who wish to stay up to date on new technologies, as well as investigators in nanoelectronics and semiconductor technology, will also find it useful. Explains why conventional CMOS scaling is reaching its physical and technological limits and outlines new approaches necessary to improve performance. Highlights the importance of moving beyond electric-charge-based computing to explore alternative properties such as electron spin, for information storage and processing. Bridges the gap between devices and systems by integrating the core physics and materials science of devices with high-level architectural design and advanced packaging techniques.",
+    "analysis": {},
+    "authors": [
+      "Vinod Kumar Khanna"
+    ],
+    "categories": [],
+    "content_hash": "883ffd8dc7af8782c736bffbe99cab23a864e1b37d1f574d11b63a70abe2fa97",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1201/9781003753469",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; security relevance: leakage; missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7212113744",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.1201/9781003753469&type=googlepdf",
+    "primary_category": "",
+    "published": "2026-09-10",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "security relevance: leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Nanoelectronics",
+      "Nanotechnology",
+      "Computer science",
+      "Physics",
+      "Materials science",
+      "Engineering",
+      "Context (archaeology)",
+      "Population",
+      "Identification (biology)",
+      "Field (mathematics)"
+    ],
+    "source_id": "https://openalex.org/W7212113744",
+    "title": "Beyond Complementary Metal-Oxide-Semiconductor Nanoelectronics",
+    "title_key": "beyond complementary metal oxide semiconductor nanoelectronics",
+    "updated": "2026-09-12",
+    "url": "https://doi.org/10.1201/9781003753469",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Groundwater registries can be extensive yet fail to demonstrate the evidence chain required to answer a hydrogeological question. We present PIH MS, an experimental framework that audits a bounded corpus of acquired records and makes knowledge gaps visible without predicting groundwater occurrence. The framework organises 12 evidence layers, nine knowledge dimensions, 39 declared requirement instances, five questions, and six families of scientific units. The corpus contains 3,877 provisional well identifiers. The audit recovered 1,591 stable hydraulic-test identities, 1,970 stable chemical-sample identities, 3,213 exact well-to-test-date links for hydraulic parameters, and 2,557 consistent chemical result-to-sample links. These relationships did not form a complete evidence chain. Captured-interval identity, verified units, complete analytical quality assurance, stable same-variable series, and a declared monitoring-network design remained unavailable. No complete case was demonstrated for Q01 to Q04 or Q05a, and Q05b could not be evaluated. This result diagnoses corpus fitness under explicit evidence contracts. It neither indicates methodological failure nor implies an absence of hydrogeological knowledge in the state. Controlled synthetic inputs reached UNKNOWN and every implemented stage from P1 to P4, confirming that P4 is attainable. Experimental context gates influenced intermediate stages and mapped patterns but have not yet undergone external validation. Full-chain blockers were assessed separately. Twelve question-requirement combinations, corresponding to eight unique fields, acted as universal blockers. Enumeration of 1,472 subsets yielded minimum failure distances of one, three, three, two, and four requirements for Q01 to Q05, respectively. Five grid scales and four origins were compared at 14,284 fixed support points. Overall agreement among origins ranged from 64.24% to 66.81%, whereas agreement at locations classified under at least one origin ranged from 29.82% to 34.86%. The primary grids comprised 45,145 cell-question pairs, of which 32,405 were UNKNOWN, 2,801 P1, 5,448 P2, 4,491 P3, and none P4. P5 was not implemented. A single execution regenerated 21 priority outputs as byte-identical files. The proposed contribution is an auditable architecture that specifies evidence before mapping, preserves unknown states, exposes concurrent blockers, evaluates logical and spatial sensitivity, and retains a reverse path to source records.",
+    "analysis": {},
+    "authors": [
+      "Carlos Busón Buesa",
+      "Sandra Gabas"
+    ],
+    "categories": [],
+    "content_hash": "6e3540417ac3cbda2ff56bb665b47ecbff5d22c37468607492a5f5270f8eb7c9",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31223/x5pr53",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7212136950",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://eartharxiv.org/repository/object/14900/download/25899/",
+    "primary_category": "",
+    "published": "2026-09-10",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Audit",
+      "Context (archaeology)",
+      "Hydrogeology",
+      "Computer science",
+      "Audit trail",
+      "Medical diagnosis",
+      "Quality (philosophy)",
+      "Bounded function",
+      "Groundwater",
+      "Metric (unit)",
+      "Business",
+      "Water resource management",
+      "Groundwater resources",
+      "Groundwater contamination",
+      "Environmental resource management",
+      "Risk analysis (engineering)",
+      "Data mining",
+      "Operations management",
+      "Geography",
+      "Operations research",
+      "Reliability (semiconductor)",
+      "Water quality",
+      "Sample (material)"
+    ],
+    "source_id": "https://openalex.org/W7212136950",
+    "title": "From data availability to evidence sufficiency. PIH MS as an auditable framework for diagnosing hydrogeological knowledge gaps in Mato Grosso do Sul, Brazil",
+    "title_key": "from data availability to evidence sufficiency pih ms as an auditable framework for diagnosing hydrogeological knowledge gaps in mato grosso do sul brazil",
+    "updated": "2026-09-13",
+    "url": "https://doi.org/10.31223/x5pr53",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Software agents make digital execution elastic: repository analysis, code generation, testing, migration, tool use, and operations can be replicated and parallelized without proportional human headcount. Problem framing, semantic commitment, verification, integration, attention, and residual-risk acceptance remain bounded by human cognition, organizational authority, and economic capacity. How should scalable execution be governed so organizations can accept and sustain its changes? Our testable framework has two constructs and one execution abstraction. Trustworthy Change (TC) is the engineering object moving from intent through delegated execution, verification, integration, acceptance, and operation. Responsibility Topology classifies organizations by the distribution of independent residual-risk acceptance authority. A single-center topology has one final baseline responsibility anchor; a multi-anchor topology requires joint acceptance across independently governed domains. The Human-Agent Cell (HAC) produces candidates, proposals, and evidence; execution grants no acceptance authority. As execution and authority scale differently, distributed HACs create context-coherence and invalidation pressures, while multi-anchor governance adds joint acceptance and explicit responsibility closure. Responsibility, accountability, change management, specification, verification, and human oversight predate this work; our claim is only that agent-scaled execution changes how they fit together. We make that authority an explicit classification axis and derive consequences for change state, shared engineering facts, verification, and flow control. Progressive Specification and bounded-capacity analysis remain hypotheses to test, not laws. We contribute theory construction and operationalization; empirical validity remains open to controlled, longitudinal, and field studies.",
     "analysis": {},
     "authors": [
@@ -3890,7 +4080,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "d297dc21e910303bf4aac156dcd5f50e7e0e384ed789020f19a787c866799462",
+    "content_hash": "75c121108a75614c983a31edc32a62db1bd84893a3a1ff1194126cd6bf295fb1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -3898,7 +4088,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -3913,7 +4103,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -3924,7 +4114,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-09-06",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -4555,7 +4745,7 @@
       "Luke James Geeson"
     ],
     "categories": [],
-    "content_hash": "8ba501ad53e69af1fef6c8cb456b33b18a79014ebdd186745ae26a6c674af1f7",
+    "content_hash": "6588e761fc30c41709124f5ca59702dcc2ecd0249b4912ea2c556ef4161132cb",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -4563,7 +4753,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4576,7 +4766,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4600,7 +4790,7 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-08-21",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
@@ -6681,7 +6871,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "782d83b0307df2ad55200c13eed0801fdf417f75118988fe2602f5dd8e913ae9",
+    "content_hash": "1308b6684b7a477d557dc99f95ade72eb9e3bc3769ef5340f02ad96d95635a30",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -6689,7 +6879,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -6704,7 +6894,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6716,7 +6906,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-08-26",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -7303,7 +7493,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "2dc15093dbad7405205f80d333715971552fd31afdc69cb161b36146469f6f04",
+    "content_hash": "8613902602e0fd403946e9575174fbb42e61a75d49d1b8294c36f0b750cfe6e2",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "evidence_level": "metadata",
@@ -7311,7 +7501,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4328028375",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -7324,7 +7514,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7334,7 +7524,7 @@
     "source_id": "https://openalex.org/W4328028375",
     "title": "Table of Contents",
     "title_key": "table of contents",
-    "updated": "2026-09-05",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "venue": "未记录"
   },
@@ -7715,7 +7905,7 @@
       "Bryan Bonnici"
     ],
     "categories": [],
-    "content_hash": "93d9881cbb3f3c8547a7a647e62f55575b331c405ad02795000c3676979cd4ee",
+    "content_hash": "1dea914dcbfbe258eae9db287a51e093a4e5ab301814aaded64f6351365ee8ba",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.32920/ryerson.14655987.v1",
     "evidence_level": "abstract",
@@ -7723,7 +7913,7 @@
     "first_seen": "2026-09-08",
     "id": "openalex-w4244531942",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -7736,7 +7926,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Exoskeleton",
@@ -7757,7 +7947,7 @@
     "source_id": "https://openalex.org/W4244531942",
     "title": "Design and development of hardware platform for fully-assistive lower leg exoskeleton",
     "title_key": "design and development of hardware platform for fully assistive lower leg exoskeleton",
-    "updated": "2026-09-05",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.32920/ryerson.14655987.v1",
     "venue": "未记录"
   },

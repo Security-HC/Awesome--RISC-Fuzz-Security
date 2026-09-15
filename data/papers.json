@@ -1,5 +1,195 @@
 [
   {
+    "abstract": "Deploying large language models on edge devices is increasingly limited by a widening gap between model size and available memory. Existing approaches such as quantization, smaller models, and offloading can raise the effective memory limit, but they still assume that the model can be compressed or partitioned to fit within some budget. We target the harder model-exceeds-memory setting, in which the model remains larger than resident memory throughout execution and storage becomes an active source of weights on the critical path. We observe that MLP activity during autoregressive decoding has strong temporal locality: approximately 82–85% of active neurons persist from one token to the next. This means that most sparse weights needed for the current token are already resident, and only the newly needed rows must be fetched from storage. We present NeuroPrefetcher, a storage-backed LLM inference system that exploits this property through predictive delta prefetching. After layer 0, a single GPU-resident predictor, occupying 2.86% of base model parameters, predicts sparse activity for all downstream MLP layers in one forward pass. The runtime compares these predictions against resident GPU buffers and issues application-scheduled NVMe reads only for incoming delta rows, replacing reactive operating-system demand paging with explicit, model-aware weight movement. On real unified-memory edge hardware, NeuroPrefetcher achieves 7.9–12.0 × speedup over llama.cpp across constrained memory budgets.",
+    "analysis": {},
+    "authors": [
+      "Nobel Dhar",
+      "Md Romyull Islam",
+      "Xuechen Zhang",
+      "Gongjin Sun",
+      "Sahidul Islam",
+      "Bobin Deng",
+      "Kun Suo"
+    ],
+    "categories": [],
+    "content_hash": "4054db1784f2c1ed73207042240cd67537b97299a86532191a5bf7c0e97c5b3e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3832810.3832862",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7204178878",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3832810.3832862",
+    "primary_category": "",
+    "published": "2026-09-13",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Security token",
+      "Inference",
+      "Speedup",
+      "Enhanced Data Rates for GSM Evolution",
+      "Property (philosophy)",
+      "Exploit",
+      "Edge device",
+      "Row",
+      "Layer (electronics)",
+      "Autoregressive model",
+      "Decoding methods",
+      "Encoding (memory)",
+      "Base (topology)",
+      "Data modeling",
+      "Artificial intelligence",
+      "Memory model",
+      "Memory management",
+      "Algorithm",
+      "Parallel computing",
+      "Pattern recognition (psychology)",
+      "Auxiliary memory",
+      "Approximate inference",
+      "Language model",
+      "Multi-core processor",
+      "Data structure",
+      "Greedy algorithm",
+      "Deep learning",
+      "Sparse matrix",
+      "Random access"
+    ],
+    "source_id": "https://openalex.org/W7204178878",
+    "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
+    "title_key": "neuroprefetcher storage aware sparse llm inference via delta prefetching",
+    "updated": "2026-09-14",
+    "url": "https://doi.org/10.1145/3832810.3832862",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Complementary Metal-Oxide-Semiconductor (CMOS) nanoelectronics are approaching their physical limits, leading to issues such as excessive leakage and increased power consumption. New materials, computing methods, and state variables are being investigated to solve these issues. These emerging technologies embrace a wide range of cutting-edge developments aimed at surpassing the physical constraints of traditional CMOS devices. This research is vital for enabling future computing abilities, particularly in devices that could serve new functions in fields such as artificial intelligence and quantum information processing. Beyond Complementary Metal-Oxide-Semiconductor Nanoelectronics offers an in-depth examination of the challenges associated with conventional CMOS technology, outlining the obstacles and issues encountered with traditional CMOS scaling, including power and energy consumption, as well as variability, and highlighting the necessity for alternative technologies. It presents possible successor technologies to CMOS, including emerging logic devices, memory chips, compute-in-memory architectures, new materials, and integration methods. These technologies leverage alternative physical effects, including spintronics, neuromorphic computing, and quantum phenomena, and introduce novel functionalities to enhance performance. Providing an engaging and clear perspective on the future of nanoelectronics, this book will be a valuable reference for graduate students specializing in electrical engineering, computer engineering, materials science, and physics, as well as for university instructors delivering advanced coursework on nanoelectronics, very large scale integration (VLSI) design, and solid-state devices. Professional engineers and designers in the semiconductor field who wish to stay up to date on new technologies, as well as investigators in nanoelectronics and semiconductor technology, will also find it useful. Explains why conventional CMOS scaling is reaching its physical and technological limits and outlines new approaches necessary to improve performance. Highlights the importance of moving beyond electric-charge-based computing to explore alternative properties such as electron spin, for information storage and processing. Bridges the gap between devices and systems by integrating the core physics and materials science of devices with high-level architectural design and advanced packaging techniques.",
+    "analysis": {},
+    "authors": [
+      "Vinod Kumar Khanna"
+    ],
+    "categories": [],
+    "content_hash": "883ffd8dc7af8782c736bffbe99cab23a864e1b37d1f574d11b63a70abe2fa97",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1201/9781003753469",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: soc; security relevance: leakage; missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7212113744",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://api.taylorfrancis.com/content/books/mono/download?identifierName=doi&identifierValue=10.1201/9781003753469&type=googlepdf",
+    "primary_category": "",
+    "published": "2026-09-10",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "security relevance: leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Nanoelectronics",
+      "Nanotechnology",
+      "Computer science",
+      "Physics",
+      "Materials science",
+      "Engineering",
+      "Context (archaeology)",
+      "Population",
+      "Identification (biology)",
+      "Field (mathematics)"
+    ],
+    "source_id": "https://openalex.org/W7212113744",
+    "title": "Beyond Complementary Metal-Oxide-Semiconductor Nanoelectronics",
+    "title_key": "beyond complementary metal oxide semiconductor nanoelectronics",
+    "updated": "2026-09-12",
+    "url": "https://doi.org/10.1201/9781003753469",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Groundwater registries can be extensive yet fail to demonstrate the evidence chain required to answer a hydrogeological question. We present PIH MS, an experimental framework that audits a bounded corpus of acquired records and makes knowledge gaps visible without predicting groundwater occurrence. The framework organises 12 evidence layers, nine knowledge dimensions, 39 declared requirement instances, five questions, and six families of scientific units. The corpus contains 3,877 provisional well identifiers. The audit recovered 1,591 stable hydraulic-test identities, 1,970 stable chemical-sample identities, 3,213 exact well-to-test-date links for hydraulic parameters, and 2,557 consistent chemical result-to-sample links. These relationships did not form a complete evidence chain. Captured-interval identity, verified units, complete analytical quality assurance, stable same-variable series, and a declared monitoring-network design remained unavailable. No complete case was demonstrated for Q01 to Q04 or Q05a, and Q05b could not be evaluated. This result diagnoses corpus fitness under explicit evidence contracts. It neither indicates methodological failure nor implies an absence of hydrogeological knowledge in the state. Controlled synthetic inputs reached UNKNOWN and every implemented stage from P1 to P4, confirming that P4 is attainable. Experimental context gates influenced intermediate stages and mapped patterns but have not yet undergone external validation. Full-chain blockers were assessed separately. Twelve question-requirement combinations, corresponding to eight unique fields, acted as universal blockers. Enumeration of 1,472 subsets yielded minimum failure distances of one, three, three, two, and four requirements for Q01 to Q05, respectively. Five grid scales and four origins were compared at 14,284 fixed support points. Overall agreement among origins ranged from 64.24% to 66.81%, whereas agreement at locations classified under at least one origin ranged from 29.82% to 34.86%. The primary grids comprised 45,145 cell-question pairs, of which 32,405 were UNKNOWN, 2,801 P1, 5,448 P2, 4,491 P3, and none P4. P5 was not implemented. A single execution regenerated 21 priority outputs as byte-identical files. The proposed contribution is an auditable architecture that specifies evidence before mapping, preserves unknown states, exposes concurrent blockers, evaluates logical and spatial sensitivity, and retains a reverse path to source records.",
+    "analysis": {},
+    "authors": [
+      "Carlos Busón Buesa",
+      "Sandra Gabas"
+    ],
+    "categories": [],
+    "content_hash": "6e3540417ac3cbda2ff56bb665b47ecbff5d22c37468607492a5f5270f8eb7c9",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31223/x5pr53",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-09-15",
+    "id": "openalex-w7212136950",
+    "included": false,
+    "last_seen": "2026-09-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://eartharxiv.org/repository/object/14900/download/25899/",
+    "primary_category": "",
+    "published": "2026-09-10",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Audit",
+      "Context (archaeology)",
+      "Hydrogeology",
+      "Computer science",
+      "Audit trail",
+      "Medical diagnosis",
+      "Quality (philosophy)",
+      "Bounded function",
+      "Groundwater",
+      "Metric (unit)",
+      "Business",
+      "Water resource management",
+      "Groundwater resources",
+      "Groundwater contamination",
+      "Environmental resource management",
+      "Risk analysis (engineering)",
+      "Data mining",
+      "Operations management",
+      "Geography",
+      "Operations research",
+      "Reliability (semiconductor)",
+      "Water quality",
+      "Sample (material)"
+    ],
+    "source_id": "https://openalex.org/W7212136950",
+    "title": "From data availability to evidence sufficiency. PIH MS as an auditable framework for diagnosing hydrogeological knowledge gaps in Mato Grosso do Sul, Brazil",
+    "title_key": "from data availability to evidence sufficiency pih ms as an auditable framework for diagnosing hydrogeological knowledge gaps in mato grosso do sul brazil",
+    "updated": "2026-09-13",
+    "url": "https://doi.org/10.31223/x5pr53",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Software agents make digital execution elastic: repository analysis, code generation, testing, migration, tool use, and operations can be replicated and parallelized without proportional human headcount. Problem framing, semantic commitment, verification, integration, attention, and residual-risk acceptance remain bounded by human cognition, organizational authority, and economic capacity. How should scalable execution be governed so organizations can accept and sustain its changes? Our testable framework has two constructs and one execution abstraction. Trustworthy Change (TC) is the engineering object moving from intent through delegated execution, verification, integration, acceptance, and operation. Responsibility Topology classifies organizations by the distribution of independent residual-risk acceptance authority. A single-center topology has one final baseline responsibility anchor; a multi-anchor topology requires joint acceptance across independently governed domains. The Human-Agent Cell (HAC) produces candidates, proposals, and evidence; execution grants no acceptance authority. As execution and authority scale differently, distributed HACs create context-coherence and invalidation pressures, while multi-anchor governance adds joint acceptance and explicit responsibility closure. Responsibility, accountability, change management, specification, verification, and human oversight predate this work; our claim is only that agent-scaled execution changes how they fit together. We make that authority an explicit classification axis and derive consequences for change state, shared engineering facts, verification, and flow control. Progressive Specification and bounded-capacity analysis remain hypotheses to test, not laws. We contribute theory construction and operationalization; empirical validity remains open to controlled, longitudinal, and field studies.",
     "analysis": {},
     "authors": [
@@ -400,8 +590,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The company is in a new digital transformation era. The evolution of the organizations has progressed from transaction processing and enterprise integration to business intelligence, cloud computing, big data, machine learning, gen AI and now towards autonomous and agentic systems. However, technology is not intelligence, in an organization. This is no longer solely a matter of gathering more data, implementing more models and using the newest artificial intelligence tools. That's the challenge of how to create an enterprise-level capability that can help continuously convert observations into trusted information, information into insights and prediction, and knowledge into intelligence, and intelligence into governed actions leading to measurable results. This book tackles this issue from the engineering, architectural, operational and governance standpoint. The case for enterprise intelligence is defined as the socio-technical capability connecting a system of data, platforms, analytics, machine learning, generative AI, knowledge systems, autonomous agents, humans, processes, policies and feedback mechanisms. It is a technology-agnostic view that elevates decision quality, operational reliability and assured autonomy, learning, and business value to the heart of enterprise transformation. The book consists of a collection of Enterprise Intelligence Lifecycle, linking together data, information, insights, predictions, knowledge, intelligence, actions, and governed autonomy, all in an iterative process of continuous feedback. It's important to note that the lifecycle is not being presented as a straight technology pipeline. Each step raises semantic, ownership, reliability, security, governance, accountability and measurable value issues. The right idea is that intelligence is only an enterprise capability when technical products are linked to actual decisions, processes, stewards, process controls and outcomes. As such, the manuscript views intelligence as a continuously evolving product that is engineered to be an enterprise endeavor, and not anything specific like an isolated dashboard, machine learning model, chatbot, or AI agent. Chapter 1 lays the foundation for the concepts and architecture of the intelligent enterprise. It helps you define and distinguish between a data-driven organization and an intelligence-driven organization, while also introducing the Enterprise Intelligence Lifecycle, layered reference architecture, capability domains, maturity model, value measurement framework, principles of governance and an implementation blueprint. One key theme is keeping the goal based on appropriate and governed autonomy rather than the goal in front of it being maximum autonomy and automation. There must be a balance of autonomy to consequence, uncertainty, reversibility, level of evidence, permissions and escalation requirements. The second chapter focuses on Intelligence on the Platform. The way to build an Enterprise AI involves the ability to leverage a scalable, componentized and integrated set of projects, bespoke pipelines, manually deployed environments or approval queues. Instead the platform and the various components on it must be seen as an internal product, offering a coherent user journey, self-service, golden paths, cloud-native foundations, software supply-chain integrity, observability and reliability, security, cost management, and developer experience. The book focuses on re-usable capabilities and tangible benefits in engineering flow, reliability, risk, economics, and business results as three key differentiators between a platform and a portal, Kubernetes cluster, and centralized ops team. This Continuous Intelligence is built on a foundation of data engineering and a modern data platform, which is covered in the third and fourth chapters. In today's modern companies, it is essential to combine data warehouses, data lakes, data lake houses, data products, data mesh, data fabric, batch processing, streaming, change data capture, event-driven architectures, metadata, catalogs, data lineage, semantic models, data contracts, data quality, observability, security, privacy, resilience, and FinOps. The authors of the book expressly do not recommend any single architectural pattern as necessarily being the best. It promotes workload-driven architectures, however, based on latency, consistency, scale, governance, interoperability, reliability, team capabilities and costs. Also, Continuous Intelligence depends on reliable streams of data. As a result, batch, micro-batch, streaming, event time, stateful processing, delivery guarantees, idempotency, replay, schema evolution, orchestration, backfills, data contracts, testing, service-level objectives, security, privacy, lineage and recovery are discussed. The goal is not to move 100% of all workloads to become “real time” but to provide the right level of freshness, completeness, correctness, and confidence of data for the decision they are supporting. The fifth chapter takes a step from data engineering, to analytics engineering, to decision intelligence. There is a shift in understanding how to use Analytics – not merely as a reporting or visualization tool. It is the first large-scale point in time when the enterprise creates a common model of what is happening in the business. Grain, facts, dimensions, time, semantic models, metrics engineering, business ontologies, knowledge representation, data contracts, self-service analytics, analytical testing, lineage, experimentation, causal evidence, forecasting, scenario analysis, optimization and decision products these all come together to provide trustworthy analytical capabilities. The chapter highlights the difference between technically valid query, a reliable business measure and an operational decision system. Production decision capabilities are discussed in the sixth chapter as machine learning systems. Machine learning is more than an algorithm-selection challenge; it's a question of problem framing, decision value, training evidence, labels, temporal validation, leakage prevention, feature engineering, feature stores, experimentation, reproducibility, calibration, thresholds, models usefulness, training architecture, deployment, model serving, security, privacy, fairness, reliability, and cost. The pathways to a production accountable for progress based on an initially promising notebook is a key factor in the debate. Chapter Seven deals with the concept of MLOps and LLMOps, as production AI alters in a myriad ways other than just in application code. System behavior can vary based on data sources, labels, features, models, thresholds, prompts, retrieval indexes, context, foundation models, tools, memories and policies. Operations discipline via MLOps and LLMOps, thus, is essential for continuous integration, continuous delivery, continuous training, continuous evaluation, experiment tracking, registries, lineage, progressive delivery, monitoring, incident response, rollback, security, privacy, human oversight and cost control. Specifically, LLMOps considers the entire generative AI app (not just the foundation model) to be the production system. The eighth chapter looks at generative AI, enterprise knowledge systems, retrieval-augmented generation, foundation models, knowledge graphs, semantic layers, multimodal intelligent systems, and knowledge-intensive work. One key argument is that the enterprise knowledge cannot be captured as the pre-trained knowledge of a language model. The knowledge of the enterprise needs to be handled in a controlled manner, using governed sources of truth, Semantic structures, retrieval, reranking, context assembly, authorization, provenance, citation, freshness, evaluation, and uncertainty management. GenAI is thus proposed as a knowledge-interaction layer under human control and not an independent Oracle. The ninth chapter then takes this architecture to the next level to agentic AI and autonomous business systems. The novelties of agents, which can plan, invoke tools, maintain a state, interact with environments, and perform multi-step actions, make them inductive of a qualitatively different engineering problem. So, the chapter covers goal formulation, planning, execution, reflection, tool contracts, least-privilege permissions, state and memory considerations, identities, single-agent and multi-agent designs, orchestration, evaluation, security considerations, observability, recovery, human oversight and progressive autonomy. The guiding principle isn't \"as free as possible,\" but rather “useful autonomy” which is bounded, observable, interruptible, recoverable and proportional to consequence. The final chapter makes these technical capabilities come together via governance and scaling of the intelligent enterprise. Architecture isn't enough for enterprise transformation. All of these topics strategy, portfolio management, value realization, risk-tiered governance, platform architecture, team topologies, product ownership, security, privacy, compliance, sovereignty, resilience, financial management, sustainable engineering, workforce design, adoption, outcome measurement, and federated scaling – are essential for success. Final chapters intertwine the entire Enterprise Intelligence Lifecycle into an operating model for the EI lifecycle, and outline additional validation questions and areas for further research. An underlying theme throughout the book is that governance does not occur as an ‘add-on' after deployment. Security, privacy, fairness, transparency, accountability, reliability, observability, cost management, auditability and human oversight are also \"cross-cutting\" architectural concerns. As a result, the manuscript brings into the picture enterprise architecture in relation to current AI approaches on AI risk management, AI governance, responsible AI, trustworthy AI, privacy engineering, software supply-chain security, model accountability, and regulatory compliance. The risk of value becomes greater as AI becomes more pervasive in an organization, which also means greater systemic and organizational risk. A second pivotal aspect of this book is the use of evidence and feedback. The real measure of enterprise intelligence should be in the forms of business outcomes, decision quality, adoption, reliability, risk, the velocity of learning, speed and cost. Technical correctness of the model, or the platform's usability or the quality of the AI application's response alone is not enough to be enterprise value. Whether the goal of the complete decision system enhances an important decision outcome within acceptable operational, ethical, financial and regulatory constraints. This view also emphasizes the importance of experimentation, causal inference, observability, incident learning, continuous evaluation in enterprise intelligence. The book is geared for various target groups. The material is designed to be used by enterprise architects, data architects, cloud architects, platform engineers, data engineers, analytics engineers, machine learning engineers, MLOps and LLMOps practitioners, in addition to AI engineers, software engineers, technology leaders, CIOs, CTOs, CDOs, Chief AI Officers, product managers, risk professionals, security leaders, governance professionals, researchers, educators, and graduate students, based on their specific responsibilities. The chapters are carefully designed to be both accessible for conceptual learning and easy to put into practice: learning objectives, architecture, design principles, enterprise scenarios, decision tables, maturity models, implementation roadmaps, chapter summaries, key take-aways, discussion questions and references. The book also aims to inform the readers about the several communities talked about separately: Data Management, Data Engineering, Software Engineering, Cloud Computing, Platform Engineering, Analytics, Machine Learning, Artificial Intelligence, Generative AI, Knowledge Management, Autonomous Systems, Cybersecurity, Privacy, Enterprise Architecture, DevOps, SRE, FinOps, AI governance, and organizational transformation. Any one of these disciplines is insufficient to build the intelligent enterprise. Its performance is dependent on what interfaces among them are. We've introduced new frameworks that provide a common context in which to think about these interfaces, such as the Enterprise Intelligence Lifecycle, the Layered Enterprise Intelligence Reference Architecture, the Semantic Reliability and Decision-Product Framework, the Progressive Autonomy and Governed Learning Model, the Data-to-Decision Reliability Chain, the AI Change Evidence Chain, the Knowledge Trust Chain, and the Cohesive Enterprise Intelligence Operating Model. It is not meant to recommend nor mandate any specific vendor, any particular set of technologies, any particular cloud provider, any particular family of models, or any particular organization. Instead, they offer reusable engineering abstractions that enterprises can use to consider alternatives and fix a line of accountability from experimentation to production and back again to continuous learning. This book therefore has a fairly straightforward, albeit all-important, main theme: An intelligent enterprise is not bought, it is engineered. Cloud services, data platforms, machine learning models, foundation models, retrieval systems, copilots, and autonomous agents are all critical components, yet each serves as a foundation to achieve enterprise intelligence on its own. When combined with reliable data, common application of meaning, powerful platforms, production engineering, responsible decision-making mechanisms, metrics, governance and human decision, and feedback, this is where intelligence comes into play. The strategic question will not only be “how much can I deploy?” anymore as organisations advance toward the one becoming more capable with artificial intelligence. It will be their ability to sense, comprehend, forecast, recall, rationalize, decide, do, manage and gauge, restore and learn effectively. As businesses evolve these technologies into reliable, secure, accountable and economically sustainable reusable systems, they will be better equipped to scale and benefit from innovation while maintaining reliability, security, accountability and sustainability. This book is presented as a how-to, how-why text on that trip. It's also an invitation to see how data and AI are not just tools, but also a unified approach to enterprise engineering, where architecture, platforms, data, analytics, machine learning, generative AI, agentic systems, data governance, people and organizational learning, and experiences are in closer collaboration to build and deliver measurable and sustainable AI."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Sai Sandeep Koneti"
@@ -2950,8 +3140,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：RISC-V’s open and extensible design improves flexibility, but it also permits vendors to customize trap behavior and reserved opcode space in ways that can affect exception handling. This paper presents a scoping review of RISC-V exception-handling security, focusing on how traps, privilege transitions, control registers, and handler routines can become attack surfaces when they are not correctly protected. We organize the literature by a five-stage exception lifecycle and map documented attacks and defenses to the architectural state they affect. Our review shows that exception-handling vulnerabilities arise from exposed control registers, insufficiently protected trap entry and return paths, and flawed handler execution. Recent attacks, such as GhostWrite, halt-and-catch-fire conditions, and side-channel exploits, illustrate how weaknesses in exception management can lead to privilege escalation, denial of service, or data leakage. In contrast, defenses are unevenly distributed across the lifecycle: backward-edge return-time integrity is addressed by multiple dedicated mechanisms, while dispatch-time and privilege-transition protection remain largely indirect and are often embedded within broader trusted-execution designs. Because the primary studies report heterogeneous cost metrics, the overhead values we extract are presented as reported rather than normalized across a common benchmark. The literature suggests that lightweight mechanisms, such as Physical Memory Protection and software-based control-flow enforcement, generally incur modest overhead, whereas stronger approaches, such as CHERI-RISC-V and Trusted-Execution Environments, may impose substantially higher costs on exception-heavy workloads. Overall, our findings indicate that exception handling should be treated as a security-critical boundary and that future work should emphasize stage-specific defenses, formal verification, and tighter integration between hardware and software protections."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Mina Soltani Siapoush",
@@ -4479,8 +4669,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Hardware bugs threaten the correctness and security of modern CPUs. Relying on a deterministic correct baseline, pre-silicon fuzzing has proven to be an effective strategy for discovering deviations from correct behavior (i.e., bugs) in single-core CPUs. Modern CPUs, however, often feature multiple cores with complex interconnects that implement communication channels such as inter-processor interrupts or shared memory. Is it possible to effectively fuzz multicore CPUs despite their inherent non-deterministic operations? We make a key observation that multi-hart interactions may result in non-deterministic data flows, control flows, or combinations thereof. An efficient fuzzing campaign needs to manage this non-determinism without limiting the exploration of the possible state space that may lead to bugs. Our new multi-hart RISC-V fuzzer, called HartBreaker, achieves this with a judicious use of three determinism anchors: control- and data-flow anchors enable non-deterministic control- and dataflow interactions between harts while ensuring a correct execution of multi-hart test programs, achieving high testing throughput and simplified bug detection. Synchronization anchors bound the non-deterministic window across harts, enabling HartBreaker to detect bugs that do not contaminate the control flow. We test HartBreaker on five multi-hart designs, namely Rocket, BOOM, Toooba, NaxRiscv and XiangShan. HartBreaker discovers five new concurrency bugs in these designs."
     },
-    "analysis_attempts": 6,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 7,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Quentin Bordier",
@@ -4785,8 +4975,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Transient-execution attacks such as Meltdown, Foreshadow, and MDS expose fundamental flaws in modern CPUs, yet reproducing and comparing them today is increasingly complex: vulnerable CPUs are scarce, lab setups cannot be shared easily, and results are hard to compare. These challenges make it difficult to evaluate detection tools, study exploits, or integrate attacks into teaching environments. As vulnerable CPUs become rarer, hands-on experimentation and consistent benchmarking gradually become infeasible, complicating both research and education in microarchitectural security. In this paper, we introduce Crucible, a software-only framework that transparently simulates Meltdown-type transient execution vulnerabilities on any x86 CPU. Crucible simulates transient execution after a fault by shadowing the instruction stream in a different process to emulate key microarchitectural effects, such as cache leakage, transient windows, and fence behavior. Crucible runs unmodified public proofs-ofconcept and even complete exploits with leakage patterns that match real hardware. We reproduce 3 full end-to-end exploits for well-known vulnerabilities, such as key extraction from VeraCrypt with Meltdown, on unaffected hardware. Crucible supports testing of binary-only applications and integrates with state-of-the-art fuzzers, which detect simulated vulnerabilities with results comparable to real CPUs. We further simulate two artificial vulnerabilities to evaluate generalization in fuzzer behavior. Our work enables systematic, repeatable experiments, preserves legacy vulnerabilities for future use, allows comparison of vulnerability detection approaches, and provides an accessible platform for teaching and training in CPU security."
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Tristan Hornetz",
@@ -5348,8 +5538,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The increasing complexity of modern processor designs has posed significant challenges in achieving comprehensive coverage metrics for functional verification of Register-Transfer Level (RTL) designs. Despite the availability of white-box RTL models, recent advancements in hardware fuzzing have predominantly focused on grey-box methodologies, which lack effective utilization of internal logic and structural information.This paper presents a novel approach that addresses this limitation by extracting control flow graphs (CFGs) from processor designs and analyzing the dependencies within these graphs. The analyzed CFGs serve as heuristic information to guide the generation of processor stimuli. By effectively leveraging internal logic information during the simulation of complex processors, this method provides interpretable heuristics for test generation. Experimental results demonstrate the effectiveness of utilizing control flow information derived from processor designs in enhancing the convergence speed of coverage metrics and guiding test sequences towards hard-to-reach states."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Ziyue Zheng",
@@ -5444,8 +5634,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern processors are increasingly complex, with rich microarchitectural features and heterogeneous components. This complexity expands the attack surface and makes security vulnerabilities harder to detect using traditional security techniques. Hardware fuzzing has emerged as a scalable approach for uncovering insecure behaviors in modern processors. However, it often struggles to (i) explore hard-to-reach design spaces due to its randomness and (ii) locate the root causes of vulnerabilities due to design complexity.This work presents advanced hybrid hardware fuzzing techniques that combine the complementary strengths of fuzzing, formal verification, and static analysis to systematically detect and localize vulnerabilities in processors. Specifically, we investigate (i) the use of formal verification to guide fuzzing toward hard-to-reach design spaces, thereby enabling the discovery of subtle vulnerabilities, and (ii) the use of static analysis to extract and monitor timing behaviors at the register-transfer level (RTL), enabling localization of timing vulnerabilities that can arise even in functionally correct designs.Finally, we outline future research directions, including using large language models to generate expert-informed tests, leveraging prior design knowledge to enhance fuzzing effectiveness on new processors, and transferring effective strategies from white-box fuzzing to black-box fuzzing environments."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Chen Chen",
@@ -5606,7 +5796,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "d297dc21e910303bf4aac156dcd5f50e7e0e384ed789020f19a787c866799462",
+    "content_hash": "75c121108a75614c983a31edc32a62db1bd84893a3a1ff1194126cd6bf295fb1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -5614,7 +5804,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -5629,7 +5819,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -5640,7 +5830,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-09-06",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -6308,8 +6498,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The modularity of the RISC-V Instruction Set Architecture (ISA) has accelerated its adoption in security-critical domains, yet it introduces significant challenges for pre-silicon security validation. Current evaluation methods often rely on high-level emulation that overlooks microarchitectural side effects or post-silicon testing that identifies vulnerabilities too late in the design cycle. This paper presents RV-Sec5, a systematic framework for ISA-level security evaluation that leverages the gem5 simulator. Unlike standard simulators, RV-Sec5 introduces a methodology to map high-level security invariants—such as privilege isolation and memory protection—directly to automated, cycle-accurate instrumentation points within the ISA decoder. This approach bridges the semantic gap between abstract security policies and low-level hardware execution. We demonstrate the framework’s efficacy through a case study involving unauthorized Control and Status Register (CSR) modifications, showing how RV-Sec5 detects privilege escalation attempts and monitors microarchitectural anomalies, such as TLB flushes and cache state changes, in real-time."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Muhammad Awais",
@@ -6321,7 +6511,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "26be520bfc54589729478154a05e6ef321812a09a17a373ae40a00c70a405f85",
+    "content_hash": "36c558e6f3287604cc527263d45c922b8b5abb325b07a8316c88665453735359",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3793638.3793640",
     "evidence_level": "abstract",
@@ -6333,7 +6523,7 @@
     ],
     "id": "openalex-w7133240413",
     "included": true,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -6350,7 +6540,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6367,7 +6557,7 @@
     "source_id": "https://openalex.org/W7133240413",
     "title": "RV-Sec5: Enhancing RISC-V Security Evaluation via Targeted ISA-Level Instrumentation using gem5",
     "title_key": "rv sec5 enhancing risc v security evaluation via targeted isa level instrumentation using gem5",
-    "updated": "2026-08-26",
+    "updated": "2026-09-09",
     "url": "https://doi.org/10.1145/3793638.3793640",
     "venue": "未记录"
   },
@@ -6904,7 +7094,7 @@
       "Luke James Geeson"
     ],
     "categories": [],
-    "content_hash": "8ba501ad53e69af1fef6c8cb456b33b18a79014ebdd186745ae26a6c674af1f7",
+    "content_hash": "6588e761fc30c41709124f5ca59702dcc2ecd0249b4912ea2c556ef4161132cb",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -6912,7 +7102,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -6925,7 +7115,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6949,7 +7139,7 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-08-21",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
@@ -7886,8 +8076,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Comprehensive exploration of the CPU architectural states in fuzzing is akin to generating diverse test cases, which include a reasonable distribution of opcode and diversity in instruction execution results (typically measured through write-back data). However, our analysis of state-of-the-art CPU fuzzers reveals that they exhibit high repetition in write-back data and an imbalanced distribution of opcodes during fuzzing. This paper presents DiveFuzz, which diversifies write-back data by finely controlling the operands of instructions at runtime, coupled with correlated contextual semantics, to generate instruction streams with diverse write-back data and semantic associations. Furthermore, DiveFuzz introduces a novel mutator that monitors the fuzzing process to dynamically adjust opcode distribution and accurately eliminate false positives. Our evaluations show that DiveFuzz significantly increases the diversity of instruction write-back data and achieves a more balanced opcode distribution compared to state-of-the-art fuzzers. Across five common coverage metrics, DiveFuzz achieves coverage 204× faster than DifuzzRTL and 114× faster than Cascade. We evaluated DiveFuzz on four well-known open-source RISC-V CPUs—XiangShan, CVA6, Rocket, and NutShell—uncovering 26 new bugs, 15 of which have CVE identifiers."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Zihui Guo",
@@ -8043,8 +8233,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Microarchitectural performance optimizations introduce information flows inside CPU implementations that exceed those defined by the Instruction Set Architecture (ISA). Microarchitectural vulnerabilities, such as constant-time violations and various classes of transient execution attacks, are subsets of these excessive information flows. We observe that an exploitable microarchitectural leakage is an excessive information flow that can affect the time it takes for the CPU to execute a particular instruction, creating a timing covert channel. We design MileSan, the first RTL sanitizer that is capable of detecting exploitable microarchitectural leakage by checking for the architecturally-observable differences between architectural and microarchitectural information flows. For a given program and CPU implementation, MileSan computes architectural flows using software taint tracking and microarchitectural flows using RTL taint tracking. Evaluating the exploitability of proof of concepts generated by previous microarchitectural fuzzers, we find cases that are in fact not exploitable and discover the particular microarchitectural components that enable exploitation for the rest. In addition to assessing exploitability, MileSan enables the generation of random test programs with strictly-defined architectural information flows of secret data using a novel technique called taint-aware in-situ simulation. Leveraging this capability, we build RandOS, a new microarchitectural fuzzer that generates random programs traversing different privilege levels and address spaces, akin to random operating systems. Evaluation using five RISC-V CPUs shows that RandOS not only detects known exploitable vulnerabilities 4.5x faster than the state of the art, but also discovers 19 new constant-time violations and transient execution vulnerabilities in well-tested CPUs, such as BOOM, CVA6 and OpenC910."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "T. Kovats",
@@ -8166,8 +8356,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The open and extensible RISC-V instruction set has enabled many new CPU vendors and implementations, but most commercial CPUs are closed-source, significantly hindering vulnerability analysis—especially for bugs exploitable from unprivileged user space. We present RISCover, a user-space framework for detecting architectural vulnerabilities in closed-source RISC-V CPUs. It compares instruction-sequence behavior across CPUs, identifying deviations without source code, hardware changes, or models, and achieving orders-of-magnitude speedups over RTL-based methods. Unlike prior work, RISCover runs user code on Linux directly on real hardware, exposing vulnerabilities exploitable by unprivileged attackers. Evaluated on 8 off-the-shelf CPUs from 3 different vendors, it uncovers 4 previously unknown vulnerabilities. Notably, GhostWrite lets unprivileged code write chosen bytes to physical memory, enabling arbitrary data leakage and full machine-mode execution, while 3 unprivileged ''halt-and-catch-fire'' bugs halt CPUs and misaligned zero-stores silently corrupt data. Our results highlight the pressing need for post-silicon fuzzing techniques. RISCover complements existing RTL-level fuzzers by enabling rapid and automated security analysis of closed-source CPUs."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Fabian Thomas",
@@ -8585,8 +8775,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Contention-based side channels, rooted in resource sharing, have emerged as a significant security threat in modern processors. These side channels allow attackers to leverage timing differences caused by conflicts in execution ports, caches, or interconnects to infer secret information such as cryptographic keys or enclave-resident data. Despite increasing awareness, detecting such channels remains challenging because triggering contentions requires precisely orchestrating specific microarchitectural states, which is often difficult in practice, especially for timing-sensitive contentions. This paper introduces Sonar, the first systematic and automated fuzzing framework designed to uncover contention side channels in processors. Our core idea is to leverage microarchitectural states to guide testcase generation, enabling the precise triggering of microarchitectural events with stringent conditions. Sonar is built on the key observation that multiplexers (MUXes) are hotspots for contention, as resource contention frequently involves data routing and signal selection, which are fundamentally implemented by MUXes in circuits. We first identify contention-critical states with side channel risks based on MUXes, and then utilize these runtime states to directly guide testcase generation via fuzzing, progressively approaching and ultimately triggering contentions. Finally, we employ a dual-differential comparison method to efficiently detect contention-induced side channels and simulate attack scenarios to assess their exploitability. Evaluated on two out-of-order RISC-V processors, Sonar uncovers 14 contention side channels, including 11 previously unknown. These results demonstrate the effectiveness of Sonar in uncovering potentially exploitable microarchitectural contentions."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kanqi Zhang",
@@ -8666,8 +8856,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern hardware incorporates reusable designs to reduce cost and time to market, inadvertently increasing exposure to security vulnerabilities. While formal verification and simulation-based approaches have been traditionally utilized to mitigate these vulnerabilities, formal techniques are hindered by scalability issues, while conventional simulation methods frequently overlook critical edge cases. Fuzzing, as a simulation-based strategy, has demonstrated considerable promise in enhancing the security of both software and hardware; however, it is impeded by challenges such as limited input coverage, difficulties in traversing branching paths, and the complexity of managing circuit parameters, in addition to the limited adaptability of existing hardware fuzzing techniques within industrial workflows. To address these limitations, we propose SymbFuzz, an innovative hybrid hardware fuzzing methodology that leverages symbolic execution to achieve superior coverage. SymbFuzz is the first hardware fuzzing technique to be implemented on the industry-standard Universal Verification Methodology (UVM), facilitating seamless integration into commercial hardware verification flows. SymbFuzz was evaluated on a diverse set of processor RTLs, including OpenTitan (Ibex), CVA6, Rocket-Core, and Mor1kx. These designs span a range of processor architectures and complexities. SymbFuzz detected all bugs previously found by existing fuzzers and additionally uncovered 14 new bugs, including a vulnerability in OpenTitan, reported in the CWE 2025 database. It also achieved up to 6.8 × faster convergence compared to traditional UVM random testing and over 2 × 104 additional functional coverage points compared to state-of-the-art fuzzers, demonstrating its effectiveness in improving RTL validation across varied processor architectures."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "S. Miftah",
@@ -9470,8 +9660,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Symbolic execution of hardware designs is a path-based analysis that can deliver high quality coverage and security verification results. Unfortunately, the technique has historically struggled with the path explosion problem and, despite recent advances, remains expensive. We present SylQ-SV, a dedicated SystemVerilog symbolic execution engine that uses SMT query caching to improve execution times, reducing run time by up to 17% over the state of the art. SylQ-SV provides language support for all necessary SystemVerilog constructs, including SystemVerilog Assertions, to provide end-to-end verification workflows of the open-source designs most commonly appearing in the literature. We evaluate SYLQ-SV on the OR1200 CPU, the OpenTitan SoC with Ibex core, and two SoC designs from the HACK@DAC competitions (with PULPissimo core and CVA6 core, respectively). We make the SylQ-SV source code and all data used in the evaluation publicly available."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kaki Ryan",
@@ -9546,8 +9736,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Tags, or metadata, enrich software with domain-specific information that is consumed by hardware to enforce security and testing policies during runtime. However, given a target architecture, developing custom compilers that encode tags can be tedious and time-consuming. We present COGENT, a highly flexible and feature-rich compiler toolchain for instruction tag generation on the RISC-V architecture. Central to this effort is a LLVM-based compiler that is supplemented with a tag-aware disassembler and a tag integrity checker. COGENT is capable of: (a) generating tags at one or more of varying granularity (per function, per basic block, or per instruction), and (b) associating variable-width tags (1-32 bits) to instructions, and arbitrary-width tags to each function or basic block. Additionally, COGENT is capable of emitting control-flow labels, which are crucial in asserting control-flow integrity (CFI), a runtime property that aids in detecting bugs and exploits that violate control flow. We evaluate the correctness of tags generated by COGENT's compiler and the associated performance penalties, along with how well COGENT preserves IR-level tags at the lower level. We provide three exemplar applications-Control Flow Integrity, Adaptive Tracing, and Hardware-Level Function Tracing that can leverage COGENT. The tagged code incurs an average cycle count overhead from 5.24% to 0.94% in the worst and best cases, respectively, making it ideal for debugging and testing applications, including fuzzing."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "David Demicco",
@@ -9903,8 +10093,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：This paper presents BPUFuzzer, a fuzz testing tool for detecting branching transient execution vulnerabilities in CPU RTL design. BPUFuzzer addresses two key challenges: generating testcases that capture complex control flows, and extracting essential data from vast hardware states to guide testcase selection. Utilizing a control flow graph-based testcase generation strategy with anomaly detection and employing fitness and coverage metrics, BPUFuzzer works on testcases that cover broader program flows and deliberately selects testcases to discover transient execution vulnerabilities effectively. When applied on RISC-V Boom v3, BPUFuzzer uncovered more Spectre types than the state-of-the-arts, including a previously unidentified variant, named Spectre-LOOP."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Rihui Sun",
@@ -10388,8 +10578,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Once hardware is manufactured, it becomes immutable, and any design flaws or vulnerabilities are permanent. Therefore, comprehensive testing of hardware designs is essential before production. However, the increasing complexity of modern processors makes static analysis and formal verification increasingly challenging. Fuzzing is a highly effective technique for detecting software vulnerabilities but adapting it to hardware presents unique challenges due to the fundamental differences between software and hardware. However, the current state-of-the-art in hardware fuzzing still has significant limitations, particularly in terms of performance, practicality, and the need for human intervention. To address these issues, we introduce RLFuzz, a novel hardware fuzzer that employs reinforcement learning to explore processors autonomously, achieving faster and more comprehensive coverage. Reinforcement learning enables the fuzzer to learn from its interactions with the processor without requiring labeled data, allowing it to more effectively select modifications for test cases and target previously unexplored areas. RLFuzz uses an asynchronous training mechanism that permits concurrent fuzzing and neural network training. To optimize RLFuzz, we performed an extensive evaluation of various deep Q-learning optimization techniques and hyperparameters. We then tested the optimized fuzzer on three complex RISC-V cores-the Rocket core, CVA6, and BOOM-and compared its performance to a current hardware fuzzer, TheHuzz [20]. Our results show that RLFuzz achieved up to 1.77 % higher coverage, and on average 2.35 times faster, and demonstrated a maximum speedup of up to 6.93 times. For branch coverage, the average speedup was 7.85 times, with a peak speedup of 92.98 times. Additionally, RLFuzz needed less time to complete 100,000 test cases and did not require any human intervention."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Raphael Götz",
@@ -10463,8 +10653,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：The rapid advancements in semiconductor technol-ogy have fostered unprecedented innovation while simultane-ously increasing the risk of hardware Trojans (HTs)-malicious alterations introduced into integrated circuits (ICs) during de-sign or production. Despite extensive research on HT detection techniques, their practical implementation remains criti-cal for developing robust defenses. This paper quantitatively evaluates the effectiveness of three hardware design analysis techniques-bounded model checking, symbolic execution, and fuzzing - for detecting four types of HTs: combinational, sequential, input-based, and timing-based. We generate a HT benchmark set using a dynamic Trojan insertion framework, DTjRTL, which facilitates a systematic and comprehensive benchmarking process. This paper uses a variety of structural and semantic Trojan complexity metrics to evaluate the strengths and weaknesses of each of the hardware analyses techniques. Our findings show that there is no single technique that is effective for all HTs. Although, bounded model checking based techniques outperform other approaches for most HT types, they may be limited due to RTL features or the supported property specification syntax. We also find that among all the techniques, hardware fuzzing seems to be more sensitive to HT trigger complexity. Symbolic execution based techniques handle deep Timing-based Trojans in a scalable way when guided by fuzzing as an oracle towards suspicious parts of the design. Additionally, signal-dependent metrics have more impact on Trojan detection difficulty compared to the structural metrics."
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Ruochen Dai",
@@ -10997,8 +11187,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Alvise de Faveri Tron",
@@ -11424,8 +11614,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Designing correct and secure hardware is challenging. Dynamic information flow tracking (DIFT) enhances RTL testing flows, for example, by providing formal guarantees on detecting information leakage. However, existing DIFT solutions do not scale to large memories encountered in complex processors. A formal analysis of existing DIFT mechanisms reveals the two factors that fundamentally limit the scalability of instrumenting memories: existing mechanisms enforce that all memory words must be accessible simultaneously, and dependent reads and writes must happen concurrently. These aspects that are detrimental to scalability are all due to precise tracking of implicit flows for every memory word, which is not required in many scenarios of interest. Based on this insight, we design HybriDIFT, a module-level DIFT memory instrumentation based on SRAM deduplication and on a single state bit that tracks implicit information flows. HybriDIFT can automatically identify memories and their protocols by combining static and dynamic analysis. HybriDIFT is precise in practice and scalable to RTL designs that feature large memories. We evaluate HybriDIFT by automatically instrumenting a set of open-source hardware designs. With Verilator, HybriDIFT accelerates build time by 1.06× to 3.5× and simulation by 2.6× to 5.1× on default target configurations, and instruments a larger OpenC910 configuration that was out of reach for the state-of-the-art DIFT mechanisms, while preserving sufficient precision for all known applications."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Flavien Solt",
@@ -11434,7 +11624,7 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "7a74a526b2a40e9ddb7879667f3aa33f88adcbf2645da156dae176a15a62a250",
+    "content_hash": "1bfdf0e2a426cc35219889ca84113931a75ccf4b0a0f28323c566ee818d7d255",
     "curation_status": "included",
     "doi": "https://doi.org/10.1145/3676536.3676658",
     "evidence_level": "abstract",
@@ -11446,7 +11636,7 @@
     ],
     "id": "openalex-w4409282405",
     "included": true,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -11462,7 +11652,7 @@
     "relevance_score": 5,
     "relevance_tier": "A",
     "scope": "core",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -11488,7 +11678,7 @@
     "source_id": "https://openalex.org/W4409282405",
     "title": "HybriDIFT: Scalable Memory-Aware Dynamic Information Flow Tracking for Hardware",
     "title_key": "hybridift scalable memory aware dynamic information flow tracking for hardware",
-    "updated": "2026-08-21",
+    "updated": "2026-09-09",
     "url": "https://doi.org/10.1145/3676536.3676658",
     "venue": "未记录"
   },
@@ -12364,8 +12554,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Hardware execution attacks exploit subtle microarchitectural interactions to leak secret data. While checking programs for the existence of such attacks is essential, verification of software against the full hardware implementation does not scale. Verification using abstract formal models of the hardware can help provide strong security guarantees while leveraging abstraction to achieve scalability. However, handwriting accurate abstract models is tedious and error-prone. Hence, we need techniques to generate models that enable sound yet scalable security analysis automatically."
     },
-    "analysis_attempts": 9,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 10,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Adwait Godbole",
@@ -12611,7 +12801,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "782d83b0307df2ad55200c13eed0801fdf417f75118988fe2602f5dd8e913ae9",
+    "content_hash": "1308b6684b7a477d557dc99f95ade72eb9e3bc3769ef5340f02ad96d95635a30",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -12619,7 +12809,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -12634,7 +12824,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -12646,7 +12836,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-08-26",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -13052,8 +13242,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern Systems-on-Chips (SoCs) integrate numerous insecure intellectual properties to meet design-cost and time-to-market constraints. Incorporating these SoCs into security-critical systems severely threatens users’ privacy. Traditional formal/simulation-based verification techniques detect vulnerabilities to some extent. However, these approaches face challenges in detecting unknown vulnerabilities and suffer from significant manual efforts, false alarms, low coverage, and scalability. Several fuzzing techniques have been developed to mitigate pre-silicon hardware verification limitations. Nevertheless, these techniques suffer from major challenges such as slow simulation platforms, extensive design knowledge requirements, and lacking consideration of untrusted inter-module communications. To overcome these shortcomings, we developed FormalFuzzer, an emulation-based hybrid framework by combining formal verification and fuzz testing, leveraging their own benefits. FormalFuzzer incorporates formal-verification-based pre-processing using template-based assertion generation to narrow down the search space for fuzz testing and appropriate mutation strategy selection by dynamic feedback derived from a security-oriented cost function. The cost function is developed using vulnerability databases and specifications, indicating the likelihood of triggering a vulnerability. A vulnerability is detected when the cost function reaches global or local minima. Our experiments on RISC-V-based Ariane SoC demonstrate the efficiency of proposed formal-verification-based pre-processing strategies and cost function-driven feedback on fuzzing in detecting both known and unknown vulnerabilities expeditiously."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Nusrat Farzana Dipu",
@@ -13569,8 +13759,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：With the ongoing efforts for transitioning towards post-quantum security, NIST has recently selected the digital signature algorithm CRYSTALS-Dilithium for standardization. In this work, we demonstrate the first Dilithium based hardware accelerated secure boot architecture developed around Ariane, an open-source RISC- V core. By utilizing a compact design with novel verification engine, a secure boot flow is implemented with only 3.48ms runtime overhead compared to normal boot, while requiring 10.4K LUTs and 5.7K FFs on an FPGA. Compared to the state-of-the-art we achieve a reduction of 3.42× and 7.88 × for LUTs and FFs respectively. Also, the design when realized in 65nm ASIC requires only 125 kGE and 6.3 mW power at 100 MHz. Further, as secure boot is one of the critical processes and the security of the whole system depends on it, we implemented hardware fault countermeasures and evaluated their effectiveness in preventing secure boot bypass."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Naina Gupta",
@@ -13639,8 +13829,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Spectre and Meltdown attacks proved Transient Execution Side Channels to be a notable challenge for designing secure microarchitectures. Various countermeasures against these threats were proposed on the electronic system level. However, addressing all possible attack scenarios requires the design and analysis of bit-and cycle-accurate implementations. We present a novel secure-by-construction RTL design methodology based on a new hardware protection framework underpinned by a generic control infrastructure that can be integrated into industry-grade microarchitectures. The methodology uses formal verification to systematically detect possible leakage paths and to customize the generic infrastructure accordingly for the design. We propose an iterative flow which semi-automatically leads to an RTL design that is guaranteed to be secure w.r.t. transient execution attacks. A case study for the methodology is conducted on BOOMv3, an open-source RISC-V processor with a deep out-of-order pipeline, and the resulting secure RTL design is benchmarked on an FPGA setup. Our design outperforms a design based on conservative countermeasures, improving the incurred overhead by $\\boldsymbol{3}\\times/\\boldsymbol{4}\\times$ (depending on the threat model) while maintaining the same level of security."
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Tobias Jauch",
@@ -14000,8 +14190,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Traditional modeling approaches in computer architecture aim to obtain an accurate estimation of performance, area, and energy of a processor design. With the advent of speculative execution attacks and their security concerns, these traditional modeling techniques fall short when used for security evaluation of defenses against these attacks. This paper presents Pensieve, a security evaluation framework targeting early-stage microarchitectural defenses against speculative execution attacks. At the core, it introduces a modeling discipline for systematically studying early-stage defenses. This discipline allows us to cover a space of designs that are functionally equivalent while precisely capturing timing variations due to resource contention and microarchitectural optimizations. We implement a model checking framework to automatically find vulnerabilities in designs. We use Pensieve to evaluate a series of state-of-the-art invisible speculation defense schemes, including Delay-on-Miss, InvisiSpec, and GhostMinion, against a formally defined security property, speculative non-interference. Pensieve finds Spectre-like attacks in all those defenses, including a new speculative interference attack variant that breaks GhostMinion, one of the latest defenses."
     },
-    "analysis_attempts": 8,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 9,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Yuheng Yang",
@@ -14607,7 +14797,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "2dc15093dbad7405205f80d333715971552fd31afdc69cb161b36146469f6f04",
+    "content_hash": "8613902602e0fd403946e9575174fbb42e61a75d49d1b8294c36f0b750cfe6e2",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "evidence_level": "metadata",
@@ -14615,7 +14805,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4328028375",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -14628,7 +14818,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -14638,7 +14828,7 @@
     "source_id": "https://openalex.org/W4328028375",
     "title": "Table of Contents",
     "title_key": "table of contents",
-    "updated": "2026-09-05",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.1109/trustcom56396.2022.00004",
     "venue": "未记录"
   },
@@ -14784,8 +14974,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Transient execution vulnerabilities have critical security impacts to software systems since those break the fundamental security assumptions guaranteed by the CPU. Detecting these critical vulnerabilities in the RTL development stage is particularly important, as it offers a chance to fix the vulnerability early before reaching the chip manufacturing stage. This paper proposes SpecDoctor, an automated RTL fuzzer to discover transient execution vulnerabilities in the CPU. To be specific, SpecDoctor designs a fuzzing template, allowing it to test all different scenarios of transient execution vulnerabilities (e.g., Meltdown, Spectre, ForeShadow, etc.) with a single template. Then SpecDoctor performs a multi-phased fuzzing, where each phase is dedicated to solve an individual vulnerability constraint in the RTL context, thereby effectively finding the vulnerabilities. We implemented and evaluated SpecDoctor on two out-of-order RISC-V CPUs, Boom and NutShell-Argo. During the evaluation, SpecDoctor found transient-execution vulnerabilities which share the similar attack vectors as the previous works. Furthermore, SpecDoctor found two interesting variants which abuse unique attack vectors: Boombard, and Birgus. Boombard exploits an unknown implementation bug in RISC-V Boom, exacerbating it into a critical transient execution vulnerability. Birgus launches a Spectre-type attack with a port contention side channel in NutShell CPU, which is constructed using a unique combination of instructions. We reported the vulnerabilities, and both are confirmed by the developers, illustrating the strong practical impact of SpecDoctor."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Jaewon Hur",
@@ -15137,8 +15327,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：We solve the two challenges architects face when designing heterogeneous processors with cache coherent shared memory. First, we develop an automated tool, called HeteroGen, for composing clusters of cores, each with its own coherence protocol. Second, we show that the output of HeteroGen adheres to a precisely defined memory consistency model that we call a compound consistency model. For a wide variety of protocols—including the MOESI variants, as well as those that are targeted towards Total Store Order and Release Consistency—we show that HeteroGen can correctly fuse them. To validate HeteroGen, we develop the first litmus tests for verifying that heterogeneous protocols satisfy compound consistency models. To understand the possible performance implications of automatic protocol generation, we compared against a publicly available manually-generated heterogeneous protocol. Our results show that performance is comparable."
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Nicolai Oswald",
@@ -15927,7 +16117,7 @@
       "Bryan Bonnici"
     ],
     "categories": [],
-    "content_hash": "93d9881cbb3f3c8547a7a647e62f55575b331c405ad02795000c3676979cd4ee",
+    "content_hash": "1dea914dcbfbe258eae9db287a51e093a4e5ab301814aaded64f6351365ee8ba",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.32920/ryerson.14655987.v1",
     "evidence_level": "abstract",
@@ -15935,7 +16125,7 @@
     "first_seen": "2026-09-08",
     "id": "openalex-w4244531942",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -15948,7 +16138,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Exoskeleton",
@@ -15969,7 +16159,7 @@
     "source_id": "https://openalex.org/W4244531942",
     "title": "Design and development of hardware platform for fully-assistive lower leg exoskeleton",
     "title_key": "design and development of hardware platform for fully assistive lower leg exoskeleton",
-    "updated": "2026-09-05",
+    "updated": "2026-09-11",
     "url": "https://doi.org/10.32920/ryerson.14655987.v1",
     "venue": "未记录"
   },
@@ -15994,8 +16184,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：This article presents RTL-ConTest, a register transfer-level (RTL) security vulnerability detection algorithm, that extracts critical process flows from a RTL design and executes RTL-level concolic testing to generate security test cases for identifying critical exploits manifested in a System on Chip (SoC). The efficiency of the proposed approach is evaluated on opensource RISC-V-based SoCs. Our technique is successful in detecting the security vulnerabilities manifested in the processor core as well as in the rest of the SoC, e.g., debug modules, peripherals, etc., thereby providing a thorough vulnerability check on the entire hardware design. As demonstrated by our experimental results, in circumstances where conventional security verification tools are limited, RTL-ConTest furnishes significantly improved efficiency in detecting SoC security vulnerabilities."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Xingyu Meng",
@@ -17483,8 +17673,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Computing systems utilize multicore processors with complex cache coherence protocols to meet the increasing need for performance and energy improvement. It is a major challenge to verify the correctness of a cache coherence protocol since the number of reachable states grows exponentially with the number of cores. In this paper, we propose an efficient test generation technique, which can be used to achieve full state and transition coverage in simulation-based verification for a wide variety of cache coherence protocols. Based on effective analysis of the state space structure, our method can generate more efficient test sequences (50% shorter) on-the-fly compared with tests generated by BFS. While our on-the-fly method can reduce the numbers of required tests by half, it can still be impractical to verify all possible transitions in the presence of large number of cores. We propose scalable on-the-fly test generation techniques using quotient state space. The proposed approach guarantees selection of important transitions by utilizing equivalence classes, and omits only similar transitions. Our experimental results demonstrate that our proposed approaches can efficiently tradeoff between transition coverage and validation effort."
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Yangdi Lyu",
@@ -17743,8 +17933,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Dynamic verification is widely used to increase confidence in the correctness of RTL circuits during the pre-silicon design phase. Despite numerous attempts over the last decades to automate the stimuli generation based on coverage feedback, Coverage Directed Test Generation (CDG) has not found the widespread adoption that one would expect. Based on new ideas from the software testing community around coverage-guided mutational fuzz testing, we propose a new approach to the CDG problem which requires minimal setup and takes advantage of FPGA-accelerated simulation for rapid testing. We provide test input and coverage definitions that allow fuzz testing to be applied to RTL circuit verification. In addition we propose and implement a series of transformation passes that make it feasible to reset arbitrary RTL designs quickly, a requirement for deterministic test execution. Alongside this paper we provide rfuzz, a fully featured implementation of our testing methodology which we make available as open-source software to the research community. An empirical evaluation of RFUZZ shows promising results on archiving coverage for a wide range of different RTL designs ranging from communication IPs to an industry scale 64-bit CPU."
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Kevin Laeufer",
@@ -18492,8 +18682,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 3,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 4,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "M. Elver",
@@ -18869,8 +19059,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "王恩东",
@@ -19076,8 +19266,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "B. Bingham",
@@ -19147,8 +19337,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Bi Zhongqin",
@@ -19500,8 +19690,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：当前记录没有可用摘要。"
     },
-    "analysis_attempts": 7,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 8,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Pang Zhengbin"
@@ -19801,8 +19991,8 @@
       "relevance_to_repo": "该条目已通过自动相关性筛选，但尚未完成人工或全文级核验。",
       "research_problem": "摘要级初步判断（未核验正文）：Modern processors, engineered for maximum performance, have adopted complex microarchitectural features such as speculative and out-of-order execution. These optimizations, while delivering substantial speedups, have directly enabled a new class of security vulnerabilities: transient execution attacks. Attacks like Spectre and Meltdown exploit these very features, allowing adversaries to bypass architectural security boundaries and exfiltrate sensitive data through microarchitectural side channels. The emergence of these vulnerabilities has fundamentally redefined system security. Early research and industry responses—such as speculation barriers and microcode updates—focused on mitigating specific Spectre and Meltdown variants. However, it is now evident that transient execution vulnerabilities are far more pervasive and intricate than initially recognized. The core issue lies in the disconnect between the architectural guarantees of processors and the exploitable realities of their microarchitectures. This thesis systematically exposes and analyzes a wide spectrum of classes of transient execution vulnerabilities. The complexity of modern CPUs, coupled with evolving software abstractions, has created a landscape rife with novel attack vectors that span every layer of the computing stack. Addressing these threats demands not only the identification of new vulnerabilities but also the development of robust methodologies for their analysis and mitigation across all abstraction levels. To achieve this, the thesis rigorously investigates transient execution vulnerabilities from multiple angles. At the software level, it demonstrates how operating system mechanisms—such as synchronization primitives—are compromised by speculative execution, revealing previously overlooked attack surfaces. At the architecture-microarchitecture boundary, it uncovers how violations of architectural invariants give rise to new transient execution threats. The research further dissects the microcode of complex instructions, exposing for the first time ever transient cross-core leakage even in the presence of all conventional defenses. At the hardware design stage, it introduces directed fuzzing techniques that proactively and automatically detect instances of this class of vulnerabilities before chip design reaches production. The contributions of this work are organized around four comprehensive re- search papers, each targeting a distinct abstraction level: software-level vulnerabili- ties in synchronization primitives in GhostRace (Chapter 2), microarchitectural violations of architectural invariants in Rage Against the Machine Clear (Chap- ter 3), transient cross-core leakage via microcode and off-core instructions in CrossTalk (Chapter 4), and hardware design-level detection using directed fuzzing in BugsBunny (Chapter 5). Collectively, these research papers establish that deep microarchitectural optimizations such as transient execution can be identified and exploited across all abstraction layers, demanding holistic solutions that span the entire computing stack. This thesis also charts clear directions for future research to mitigate, detect, and prevent these vulnerabilities. In the short-term, advancing software gadget discovery and exploitability analysis will systematically eliminate code patterns exploitable by transient execution attacks from existing software running on existing vulnerable processors. While in the long-term, first, developing robust microarchitectural domain isolation will sharply curtail data leakage across microarchitectural security domain boundaries. Second, enhancing pre-silicon design fuzzing will ensure that instances of this class of vulnerabilities are caught early in the hard- ware lifecycle and fixed before tape out. Finally, integrating AI-driven verification into chip design will automate and scale the detection of subtle hardware design security flaws, providing a proactive defense against not only transient execution vulnerabilities, but also emerging hardware-design security threats. In summary, this thesis provides a comprehensive perspective on how transient execution vulnerabilities arise and can be exploited throughout the computing stack. By connecting insights from both software and hardware domains, it aims to contribute to a deeper understanding of these challenges and to offer practical approaches for improving the security of modern systems against this important class of vulnerabilities of the last decade."
     },
-    "analysis_attempts": 5,
-    "analysis_last_attempt": "2026-09-08",
+    "analysis_attempts": 6,
+    "analysis_last_attempt": "2026-09-15",
     "analysis_status": "fulltext_unavailable",
     "authors": [
       "Hany Ragab"
