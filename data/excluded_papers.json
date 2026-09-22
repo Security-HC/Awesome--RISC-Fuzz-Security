@@ -1,5 +1,74 @@
 [
   {
+    "abstract": "Contemporary artificial intelligence excels in stable and resource-rich settings, but many of the environments in which autonomy and adaptive restructuring are most needed are defined by noise, damage, scarcity, and unpredictability. Spacecraft, distributed sensors, medical implants, digital cell twins, and robotic swarms must often continue functioning despite partial hardware failure and network fragmentation. Here, we present oncomorphic computing as a paradigm for designing resilient machine intelligence across software and hardware. We abstract selected survival principles seen in cancer biology, particularly decentralized behavior, phenotypic plasticity, heterogeneous specialization, resource recruitment, migration of function, and tissue-level adaptation, and repurpose them bidirectionally to complement standard approaches: using cancer dynamics in computing and engineering, and, conversely, bringing biological decentralization to the center of digital cancer research. In this way, we shift the approach from a highly organized and predictable ideal of machine intelligence to computational systems defined as groups of agents continuously negotiating access to memory, power and processing bandwidth through independent restructuring under scarcity. We discuss how this paradigm could address current computing bottlenecks and outline its implications for future hardware applications.",
+    "analysis": {},
+    "authors": [
+      "Rosalia Moreddu",
+      "Philip Greulich",
+      "Christian Baumgartner",
+      "Francesca Borghi",
+      "Michael Levin"
+    ],
+    "categories": [],
+    "content_hash": "44e0fab8662544dbfd78942d45ee583b78e1f0c878a82b0730b53a6aa4fe15bd",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.31224/8240",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-22",
+    "id": "openalex-w7213408692",
+    "included": false,
+    "last_seen": "2026-09-22",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://engrxiv.org/preprint/download/8240/13384/11627",
+    "primary_category": "",
+    "published": "2026-09-16",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Control reconfiguration",
+      "Distributed computing",
+      "Software",
+      "Adaptation (eye)",
+      "Paradigm shift",
+      "Restructuring",
+      "Embedded system",
+      "Reconfigurable computing",
+      "Computer architecture",
+      "Emulation",
+      "Key (lock)",
+      "Negotiation",
+      "Decentralization",
+      "Software engineering",
+      "Resource (disambiguation)",
+      "Modular design",
+      "Locality",
+      "Artificial intelligence",
+      "Autonomic computing",
+      "Reboot",
+      "State (computer science)",
+      "Software system",
+      "Applications of artificial intelligence",
+      "Protocol (science)"
+    ],
+    "source_id": "https://openalex.org/W7213408692",
+    "title": "Oncomorphic computing: a bio-derived paradigm for decentralized adaptation across software and hardware",
+    "title_key": "oncomorphic computing a bio derived paradigm for decentralized adaptation across software and hardware",
+    "updated": "2026-09-18",
+    "url": "https://doi.org/10.31224/8240",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Deploying large language models on edge devices is increasingly limited by a widening gap between model size and available memory. Existing approaches such as quantization, smaller models, and offloading can raise the effective memory limit, but they still assume that the model can be compressed or partitioned to fit within some budget. We target the harder model-exceeds-memory setting, in which the model remains larger than resident memory throughout execution and storage becomes an active source of weights on the critical path. We observe that MLP activity during autoregressive decoding has strong temporal locality: approximately 82–85% of active neurons persist from one token to the next. This means that most sparse weights needed for the current token are already resident, and only the newly needed rows must be fetched from storage. We present NeuroPrefetcher, a storage-backed LLM inference system that exploits this property through predictive delta prefetching. After layer 0, a single GPU-resident predictor, occupying 2.86% of base model parameters, predicts sparse activity for all downstream MLP layers in one forward pass. The runtime compares these predictions against resident GPU buffers and issues application-scheduled NVMe reads only for incoming delta rows, replacing reactive operating-system demand paging with explicit, model-aware weight movement. On real unified-memory edge hardware, NeuroPrefetcher achieves 7.9–12.0 × speedup over llama.cpp across constrained memory budgets.",
     "analysis": {},
     "authors": [
@@ -12,7 +81,7 @@
       "Kun Suo"
     ],
     "categories": [],
-    "content_hash": "4054db1784f2c1ed73207042240cd67537b97299a86532191a5bf7c0e97c5b3e",
+    "content_hash": "0da8f896d70c941dc603b5450dddbbfac3a0a8691d328ceae483ddc93b33cb55",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3832810.3832862",
     "evidence_level": "abstract",
@@ -20,7 +89,7 @@
     "first_seen": "2026-09-15",
     "id": "openalex-w7204178878",
     "included": false,
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation"
     ],
@@ -33,7 +102,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -70,7 +139,7 @@
     "source_id": "https://openalex.org/W7204178878",
     "title": "NeuroPrefetcher: Storage-Aware Sparse LLM Inference via Delta Prefetching",
     "title_key": "neuroprefetcher storage aware sparse llm inference via delta prefetching",
-    "updated": "2026-09-14",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.1145/3832810.3832862",
     "venue": "未记录"
   },
@@ -229,6 +298,64 @@
     "updated": "2026-09-04",
     "url": "http://arxiv.org/abs/2609.04630v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Large Language Models (LLMs) are transforming blockchain security and analytics, yet a systematic evaluation of their capabilities remains limited. This survey provides a comprehensive, AI‑centric assessment of LLM‑based methods across over 70 recent studies spanning 11 application domains, such as security auditing, transaction fraud detection, and cryptocurrency portfolio management. Our unified taxonomy standardizes task formulations and evaluation practices to enable a comparison of six LLM roles across domains. For each domain, we review input representations tailored to blockchain data; LLM architectures, learning and inference paradigms, e.g., fine‑tuning, retrieval‑augmented generation, and agentic strategies. Our review analyzes the strengths, limitations, and emerging patterns of LLM roles observed in current systems. Finally, we provide practical guidance for selecting LLMs for specific roles and outline promising research directions.",
+    "analysis": {},
+    "authors": [
+      "Okundia, Collette, Eguakun",
+      "Cüneyt Gürcan Akçora",
+      "Arijit Khan"
+    ],
+    "categories": [],
+    "content_hash": "f176ece8a473b0f630f67116a3a6d912f653c6c65e01094a4668226553910dde",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.24963/ijcai.2026/885",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-09-22",
+    "id": "openalex-w7149884976",
+    "included": false,
+    "last_seen": "2026-09-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://www.ijcai.org/proceedings/2026/0885.pdf",
+    "primary_category": "",
+    "published": "2026-09-01",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Blockchain",
+      "Cryptocurrency",
+      "Database transaction",
+      "Computer science",
+      "Computer security",
+      "Portfolio",
+      "Data science",
+      "Smart contract",
+      "Taxonomy (biology)",
+      "Inference",
+      "Business",
+      "Task (project management)",
+      "Big data",
+      "Government (linguistics)",
+      "Data security",
+      "Computer security model"
+    ],
+    "source_id": "https://openalex.org/W7149884976",
+    "title": "Large Language Models for Blockchain Security and Analytics: A Survey",
+    "title_key": "large language models for blockchain security and analytics a survey",
+    "updated": "2026-09-17",
+    "url": "https://doi.org/10.24963/ijcai.2026/885",
+    "venue": "未记录"
   },
   {
     "abstract": "The global agri-food system sits at a critical crossroads: it must meet growing food demand while urgently curbing its environmental impact. Responsible for roughly one-third of global greenhouse gas emissions and a leading driver of soil degradation, freshwater depletion and biodiversity loss, the sector faces mounting pressure as climate change simultaneously erodes agricultural productivity through droughts and extreme weather.This guide provides development practitioners with practical tools to embed climate adaptation and mitigation into agri-food project design, and to measure resulting environmental outcomes. It addresses adaptation through indicators that can assess effects on key environmental capitals (biodiversity, soil, water), on-farm practice changes, and long-term resilience strategies. On mitigation, the guide describes indicators to measure the carbon footprint of a project and carbon sequestration potential, including enabling technologies and socio-economic drivers. The guide highlights how project results can inform national and international policy processes, strengthen climate finance mobilisation, and support institutional capacity building.",
@@ -4020,7 +4147,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "68cc49cfee906c0df20fb2a712b2285a9a75bd55798196c829e80e287570e8eb",
+    "content_hash": "f2fe77fd75dfdea2ab4ae20bbc0a2d8eb9bf488c41f1518fdba69a2db1a2f180",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -4028,7 +4155,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4042,7 +4169,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4066,7 +4193,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-09-01",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -4080,7 +4207,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "75c121108a75614c983a31edc32a62db1bd84893a3a1ff1194126cd6bf295fb1",
+    "content_hash": "65d8d5eb05b66b155e13b830a9815f86dc6548673bfbb0f81bbc907186b63a09",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -4088,7 +4215,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -4103,7 +4230,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 8,
+    "seen_count": 9,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -4114,7 +4241,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-09-11",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -4398,7 +4525,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "485c19de00d004b8b9dc8f774914017b2b920125d4d6c9cd5b8e5ac0e07d3b2f",
+    "content_hash": "055373f0ed2775b59868f0771800719c2377a8e0e5c1b55ee205e9bc4437bd99",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -4406,7 +4533,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4420,7 +4547,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -4454,7 +4581,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-08-21",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -6167,7 +6294,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "edefe655f11dc5a76998f4d21beececfd7edc9be6efca839991fd3bc81bf6801",
+    "content_hash": "c91a9eecf8fbc160a8b760ff97ce7537514fc5a77076625f2f2de4dac4dba9ed",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -6175,7 +6302,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -6190,7 +6317,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6203,7 +6330,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-08-21",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -6512,7 +6639,7 @@
       "Shweta Shinde"
     ],
     "categories": [],
-    "content_hash": "89fba5b2da7f39bcbd4c3a8c87ed752ad02ca8003fde1be6510d260359fdc76f",
+    "content_hash": "4e94f7326826f7a094d5a86471d48a2788cf57c1c22b5cd83bae5c23d57a36a0",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3676536.3676844",
     "evidence_level": "abstract",
@@ -6520,7 +6647,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4409282636",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-09-22",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing"
     ],
@@ -6535,7 +6662,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Implementation",
@@ -6546,7 +6673,7 @@
     "source_id": "https://openalex.org/W4409282636",
     "title": "eXpect: On the Security Implications of Violations in AXI Implementations",
     "title_key": "expect on the security implications of violations in axi implementations",
-    "updated": "2026-08-21",
+    "updated": "2026-09-21",
     "url": "https://doi.org/10.1145/3676536.3676844",
     "venue": "未记录"
   },
