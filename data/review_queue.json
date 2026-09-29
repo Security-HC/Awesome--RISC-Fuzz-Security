@@ -1,5 +1,71 @@
 [
   {
+    "abstract": "Abstract. Paleoclimate records stored in ice cores are facing great threat as on-going mass loss is rapidly accelerating. To study Amazon’s paleoclimate, an ice core was drilled in the Quelccaya ice cap, in Peru, in 2022. However, as a first step, post-depositional alterations need to be discussed and described. During drilling, one water table (WT) associated with the firn-ice transition and a major fracture at 45 m depth were identified. Here we present the first chemical results retrieved from the ice core and discuss the preservation state of the record in terms of post-depositional alterations. Concentrations of levoglucosan, Na+, K+, Cl−, SO42− and NO3− were analyzed and compared with the relatively insoluble and immobile black carbon signal. Furthermore, signal preservation was evaluated using descriptive statistics, covariance analysis, ionic balance, and multivariate classification. Statistical analyses reveal enhanced ion concentration atop the WT. The section below the WT extending to the fracture is marked by a highly altered chemical signal, as indicated by multivariate analysis. Within this interval, Cl− is strongly depleted and Na+ shows increased association with SO42− and NO3−, while the ionic balance indicates increased acidity relative to the WT onset. Below the fracture, chemical signals are attenuated but largely preserved. Principal Component Analysis coupled to Fuzzy C-Means clustering independently identifies the WT, altered ice interval, the fracture zone and a deep ice anomaly, suggesting variable preservation along the core. We define depth intervals characterized by preserved, amplified, altered and attenuated signals and show that despite significant meltwater influence, post-depositional alterations are locally concentrated rather than affecting the entire record. These results provide a basis for future paleoclimatic investigations using what could be the last Quelccaya Ice Cap ice core before continued melting irreversibly alters the record.",
+    "analysis": {},
+    "authors": [
+      "João Gomes Ilha",
+      "Manoela Brum Poitevin Portella",
+      "Oscar Vilca Gomez",
+      "Filipe Gaudie Ley Lindau",
+      "Mariusz Potocki",
+      "Elena Barbaro",
+      "Susan Kaspari",
+      "Carlo Barbante",
+      "Jefferson Cárdia Simões",
+      "Paul A. Mayewski"
+    ],
+    "categories": [],
+    "content_hash": "54b6254ee2cf4d7011a1fab405c3e3ebc5a02149386876b331a0cf13c9519a65",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.5194/egusphere-2026-4779",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-09-29",
+    "id": "openalex-w7214110607",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4779/egusphere-2026-4779.pdf",
+    "primary_category": "",
+    "published": "2026-09-23",
+    "relevance_reasons": [
+      "hardware/processor object: soc",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Ice core",
+      "Meltwater",
+      "Geology",
+      "Paleoclimatology",
+      "Fracture (geology)",
+      "Climatology",
+      "Snow",
+      "Principal component analysis",
+      "Physical geography",
+      "Table (database)",
+      "δ18O",
+      "Atmospheric sciences",
+      "Mineralogy",
+      "Chemical composition",
+      "Core (optical fiber)",
+      "Global warming",
+      "Climate change"
+    ],
+    "source_id": "https://openalex.org/W7214110607",
+    "title": "Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core",
+    "title_key": "preservation of glaciochemical signals in a warming tropical ice cap evidence from the 2022 quelccaya ice core",
+    "updated": "2026-09-26",
+    "url": "https://doi.org/10.5194/egusphere-2026-4779",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Modern heterogeneous systems-on-chip require both lightweight register access and coherent shared-memory communication, yet these needs are often discussed as if AXI4-Lite and ACE were a single protocol layer.This paper presents a transaction-level architecture that deliberately separates an AXI4-Lite control plane from an ACE/ACE-Lite coherent data plane while sharing address-routing, arbitration, response-handling, monitoring, and verification services.The architecture targets CPU cores, accelerators, DMA engines, memory controllers, and memory-mapped peripherals.A deterministic cycle-abstract reference model is used to evaluate class-aware round-robin arbitration, filtered snooping, error responses, back-pressure, and cache-visible data consistency before RTL implementation.Verification covers 100,000 randomized address/response transactions, 20,000 cycles of continuous four-master contention, and 50,000 coherent memory operations, with no decode, response, mutual-exclusion, or stale-read violations in the reference model.At an offered load of 0.12 transactions/cycle, the proposed splitplane architecture reduces mean latency by 40.6%, 50.7%, and 76.3% for control-dominant, balanced, and memory-dominant mixes, respectively, compared with a serialized fixed-priority/broadcast-snoop baseline.Filtered snooping reduces peer snoop probes by 52.2-57.7%.A balanced-load sweep further shows that the baseline saturates near 0.154 transactions/cycle, whereas the proposed model sustains approximately 0.178 transactions/cycle at an offered load of 0.18.The results establish a reproducible architectural baseline for subsequent System Verilog/UVM implementation and FPGA/ASIC evaluation.",
     "analysis": {},
     "authors": [
@@ -749,7 +815,7 @@
     "abstract": "Environmental, Social, and Governance (ESG) metric knowledge is inherently structured, connecting industries, reporting frameworks, metric categories, metrics, and calculation models through compositional dependencies, yet in practice this structure remains embedded implicitly in regulatory documents such as SASB, TCFD, and IFRS S2 and rarely exists as an explicit, governed, or machine-actionable artefact. Existing ESG ontologies define formal schemas but do not address scalable population and governance from authoritative regulatory sources, while unconstrained large language model (LLM) extraction frequently produces semantically incorrect entities, hallucinated relationships, and structurally invalid graphs. OntoMetric is an ontology-guided framework for the automated construction and governance of ESG metric knowledge graphs from regulatory documents that operationalises the ESG Metric Knowledge Graph (ESGMKG) ontology as a first-class constraint embedded directly into the extraction and population process. The framework integrates structure-aware segmentation, ontology-constrained LLM extraction enriched with semantic fields and deterministic identifiers, and two-phase validation combining semantic type verification with rule-based schema checking, while preserving segment-level and page-level provenance to ensure traceability to regulatory source text. Evaluation on five ESG regulatory standards shows that ontology-guided extraction achieves 65-90 percent semantic accuracy and over 80 percent schema compliance, compared with 3-10 percent for unconstrained baseline extraction, and yields stable cost efficiency with a cost per validated entity of 0.01-0.02 USD and a 48 times efficiency improvement over baseline.",
     "analysis": {},
     "authors": [
-      "Mingqin Yu",
+      "Ming-Qin Yu",
       "F. Rabhi",
       "Boming Xia",
       "Zhengyi Yang",
@@ -759,10 +825,10 @@
       "Australia",
       "U. Adelaide",
       "Adelaide",
-      "Csiro Data61"
+      "Csiro Data"
     ],
     "categories": [],
-    "content_hash": "6b5a21b9bc760addc5ed15bccf1b390b222f214a435f36bb99d906295fabeff8",
+    "content_hash": "aac07f0878e4873ed05452d6c44edd8c4fcb501b312ba93f228fbd7235c9dcbf",
     "curation_status": "review",
     "doi": "",
     "evidence_level": "abstract",
@@ -770,7 +836,7 @@
     "first_seen": "2026-08-15",
     "id": "semantic-scholar-534f308e0feef5bc1a9c5cc53103fbc20b4a0c11",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "Semantic Scholar: formal assisted processor fuzzing"
     ],
@@ -784,7 +850,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -1161,6 +1227,101 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Coverage metrics have been widely adopted to quantify the completeness of hardware verification. Recently, coverage-guided fuzzing has emerged as a popular method for automatically creating test inputs toward higher verification coverage reach. However, we observe that its effectiveness on CPUs is hindered by limited sources of seed corpus and efficiency of mutations. To broaden the fuzzing horizons, this paper proposes the PathFuzz framework incorporating an efficient input format for fuzzing CPUs, the footprint memory, with seed corpus from real-world large-scale programs. Experiments demonstrate that using PathFuzz reaches over 95% verification coverage with four long-standing bugs newly identified in two well-known open-source CPU designs.CCS CONCEPTS• Hardware → Simulation and emulation; Coverage metrics.",
+    "analysis": {},
+    "authors": [
+      "Yi-Nan Xu",
+      "Sa Wang",
+      "Dan Tang",
+      "Ninghui Sun",
+      "Yun-Gang Bao"
+    ],
+    "categories": [
+      "RTL & SoC Hardware Fuzzing",
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "e7c33212c1cf25e953914a747ac0bbf199efedfd429688a9ccd9ab0152c32b7a",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3649329.3655911",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-09-29",
+    "id": "semantic-scholar-3384a28e7725e1c79de3a613d8f603af7c5c5770",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "Semantic Scholar: CPU fuzzing hardware verification"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3649329.3655911",
+    "primary_category": "RTL & SoC Hardware Fuzzing",
+    "published": "2024-06-23",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz, coverage-guided, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "3384a28e7725e1c79de3a613d8f603af7c5c5770",
+    "title": "PathFuzz: Broadening Fuzzing Horizons with Footprint Memory for CPUs",
+    "title_key": "pathfuzz broadening fuzzing horizons with footprint memory for cpus",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3649329.3655911",
+    "venue": "Design Automation Conference"
+  },
+  {
+    "abstract": "The increasing complexity of semiconductor designs necessitates agile hardware development methodologies to keep pace with rapid technological advancements. Following this trend, the Large Language Models (LLMs) emerge as a potential solution, providing new opportunities in hardware design automation. However, existing LLMs exhibit challenges in HDL design and verification, especially for complicated hardware systems. Addressing this need, we introduce ChatCPU, the first end-to-end agile hardware design and verification platform with LLM. ChatCPU streamlines the ASIC design and verification process, guiding it from initial specifications to the final RTL implementations with enhanced design agility. Incorporating the LLM fine-tuning and the processor description language design for CPU design automation, ChatCPU significantly enhances the hardware design capability using LLM. Utilizing ChatCPU, we developed a 6-stage in-order RISC-V CPU prototype, achieving successful tape-out using SkyWater 130nm MPW project with Efabless, which is currently the largest CPU design generated by LLM. Our results demonstrate a remarkable improvement in CPU design efficiency, accelerating the design iteration process by an average of 3.81X, and peaking at 12X and 9.33X in HDL implementations and verification stages, respectively. The ChatCPU also enhances the design capability of LLM by 2.63X as compared to base LLama2. These advancements in ChatCPU represent a significant milestone in LLM-driven ASIC design and optimization.CCS Concepts: • Computing methodologies → Artificial intelligence; • Computer systems organization; • Hardware → Electronic design automation;",
+    "analysis": {},
+    "authors": [
+      "Xi Wang",
+      "Gwok-Waa Wan",
+      "Sam-Zaak Wong",
+      "Layton Zhang",
+      "Tianyang Liu",
+      "Qi Tian",
+      "Jianmin Ye"
+    ],
+    "categories": [],
+    "content_hash": "1c2b7598ad6ffa1bff808c961e464c5cb8991f4ad5d7032e6c445ca02640295f",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3649329.3658493",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-09-29",
+    "id": "semantic-scholar-e6fd0a19cb9c24281d49a08d897b9442e8f17d8d",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "Semantic Scholar: CPU fuzzing hardware verification"
+    ],
+    "pdf_url": "https://hal.science/hal-04642833/document",
+    "primary_category": "",
+    "published": "2024-06-23",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, cpu, rtl",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "e6fd0a19cb9c24281d49a08d897b9442e8f17d8d",
+    "title": "ChatCPU: An Agile CPU Design & Verification Platform with LLM",
+    "title_key": "chatcpu an agile cpu design verification platform with llm",
+    "updated": "",
+    "url": "https://doi.org/10.1145/3649329.3658493",
+    "venue": "Design Automation Conference"
+  },
+  {
     "abstract": "Test generation has been a critical and labor-intensive process in hardware design verification. Recently, the emergence of Large Language Model (LLM) with their advanced understanding and inference capabilities, has introduced a novel approach. In this work, we investigate the integration of LLM into the Coverage Directed Test Generation (CDG) process, where the LLM functions as a Verilog Reader. It accurately grasps the code logic, thereby generating stimuli that can reach unexplored code branches. We compare our framework with random testing, using our self-designed Verilog benchmark suite. Experiments demonstrate that our framework outperforms random testing on designs within the LLM's comprehension scope. Our work also proposes prompt engineering optimizations to augment LLM's understanding scope and accuracy.",
     "analysis": {},
     "authors": [
@@ -1298,13 +1459,13 @@
     "venue": "arXiv"
   },
   {
-    "abstract": "Trusted Execution Environments (TEEs) are deployed in many CPU designs because of the confidentiality and integrity guarantees they provide. ARM TrustZone is a TEE extensively deployed on smart phones, IoT devices, and notebooks. Specifically, TrustZone is used to separate code execution and data into two worlds, normal world and secure world. However, this separation inherently prevents traditional fuzzing approaches which rely upon coverage-guided feedback and existing fuzzing research is, therefore, extremely limited. In this paper, we present a native and generic method to perform efficient and scalable feedback-driven fuzzing on Trusted Applications (TAs) using ARM CoreSight. We propose LightEMU, a novel fuzzing framework that allows us to fuzz TAs by decoupling them from relied TEE. We argue that LightEMU is a promising first-stage approach for rapidly discovering TA vulnerabilities prior to investing effort in whole system TEE evaluation precisely because the majority of publicly disclosed TrustZone bugs reside in the TA code itself. We implement LightEMU and adapt it to Teegris, Trusty, OP-TEE and QSEE and evaluate 8 real-world TAs while triggering 3 unique crashes and achieving x10 time speedup when fuzzing TAs using the state-of-the-art TrustZone fuzzing framework.",
+    "abstract": "Trusted Execution Environments (TEEs) are deployed in many CPU designs because of the confidentiality and integrity guarantees they provide. ARM TrustZone is a TEE extensively deployed on smart phones, IoT devices, and notebooks. Specifically, TrustZone is used to separate code execution and data into two worlds, normal world and secure world. However, this separation inherently prevents traditional fuzzing approaches which rely upon coverage-guided feedback and existing fuzzing research is, therefore, extremely limited. In this paper, we present a native and generic method to perform efficient and scalable feedback-driven fuzzing on Trusted Applications (TAs) using ARM CoreSight. We propose LightEMU, a novel fuzzing framework that allows us to fuzz TAs by decoupling them from relied TEE. We argue that LightEMU is a promising first-stage approach for rapidly discovering TA vulnerabilities prior to investing effort in whole system TEE evaluation precisely because the majority of publicly disclosed TrustZone bugs reside in the TA code itself. We implement LightEMU and adapt it to Teegris, Trusty, OP- TEE and QSEE and evaluate 8 real-world TAs while triggering 3 unique crashes and achieving x10 time speedup when fuzzing TAs using the state-of-the-art TrustZone fuzzing framework.",
     "analysis": {},
     "authors": [
       "Haoqi Shan",
       "Sravani Nissankararao",
       "Yujia Liu",
-      "Moyao Huang",
+      "Mo-Yao Huang",
       "Shuo Wang",
       "Yier Jin",
       "Dean Sullivan"
@@ -1312,18 +1473,20 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "74a4317de41da40764e1f761da64ac1cac7455a2a96fc3ccdea2ba1ec3440beb",
+    "content_hash": "75fae783440437987bdfacc30420d41bb7df064e4b8b426fc8c9c44ff37e9a0f",
     "curation_status": "review",
+    "doi": "https://doi.org/10.1109/HOST55342.2024.10545377",
     "evidence_level": "abstract",
     "exclusion_reason": "",
     "first_seen": "2026-07-22",
     "id": "arxiv-2311-09532v1",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-09-29",
     "matched_queries": [
-      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "Semantic Scholar: CPU fuzzing hardware verification"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2311.09532v1",
+    "pdf_url": "https://arxiv.org/pdf/2311.09532",
     "primary_category": "Coverage, Oracles & Fuzzing Methodology",
     "published": "2023-11-16",
     "relevance_reasons": [
@@ -1333,17 +1496,62 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
-      "cs.CR"
+      "Computer Science"
     ],
     "source_id": "2311.09532v1",
     "title": "LightEMU: Hardware Assisted Fuzzing of Trusted Applications",
     "title_key": "lightemu hardware assisted fuzzing of trusted applications",
     "updated": "2023-11-16",
-    "url": "http://arxiv.org/abs/2311.09532v1",
-    "venue": "arXiv"
+    "url": "https://doi.org/10.1109/HOST55342.2024.10545377",
+    "venue": "IEEE International Symposium on Hardware Oriented Security and Trust"
+  },
+  {
+    "abstract": "Various verification methods have been proposed for bug detection in central processing unit (CPU) designs, yet their effectiveness remains insufficient. We have observed that such CPU bugs often occur in exceptional handling, such as pipeline stalls and flushes. We found that corner cases in such exceptional handling can be effectively verified through situations we term a ‘surge’. A surge refers to a situation where events leading to exceptional handling occur frequently over a short period of time. For instance, a surge caused by frequent queue insertions can eventually fill the capacity, triggering exceptional handling such as a pipeline stall. We propose a novel fuzzing method for CPU designs, named SurgeFuzz, that intentionally generates surges. SurgeFuzz mutates input instruction sequences based on annotations to increase the occurrence of surges. This results in a higher density of event occurrences, thereby enabling efficient verification of corner cases in exceptional handling. We evaluated SurgeFuzz on a large processor design and found several unknown hardware bugs that are difficult to find with existing methods.",
+    "analysis": {},
+    "authors": [
+      "Yuichi Sugiyama",
+      "Reoma Matsuo",
+      "Ryota Shioya"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "8b31d2e8a41c85e64bf70104168e160a4ceaeadcd8adf35c42b44ad8c8791652",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1109/ICCAD57390.2023.10323819",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-09-29",
+    "id": "semantic-scholar-4b405df30a2afb960580233a5709878ebe02fdc7",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "Semantic Scholar: CPU fuzzing hardware verification"
+    ],
+    "pdf_url": "",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2023-10-28",
+    "relevance_reasons": [
+      "hardware/processor object: processor, cpu",
+      "verification/fuzzing method: fuzz, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "4b405df30a2afb960580233a5709878ebe02fdc7",
+    "title": "SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs",
+    "title_key": "surgefuzz surge aware directed fuzzing for cpu designs",
+    "updated": "",
+    "url": "https://doi.org/10.1109/ICCAD57390.2023.10323819",
+    "venue": "2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)"
   },
   {
     "abstract": "Precise exceptions are a cornerstone of modern computing as they provide the abstraction of sequential instruction execution to programmers while accommodating microarchitectural optimizations. However, increasing compute capabilities in deep memory hierarchies (e.g., software event handlers, programmable accelerators) expose long exception detection latencies that forgo precise exception semantics for retired stores awaiting completion. Unfortunately, well-known post-retirement speculation mechanisms to tolerate these latencies require excessively large microarchitectural structures per core. This paper rethinks the role of architecture and OS in supporting precise exceptions. We show that instead of forcing the architecture to support precise exceptions transparently in all cases, it is preferable to employ hardware-software co-design to handle imprecise store exceptions efficiently. We develop formalism to prove that this approach complies with underlying memory consistency models and design a RISC-V prototype that passes all litmus tests, demonstrating its efficacy.",
@@ -2011,7 +2219,7 @@
     "analysis": {},
     "authors": [
       "Yaohui Chen",
-      "Dongliang Mu",
+      "Dong-Liang Mu",
       "Jun Xu",
       "Zhichuang Sun",
       "Wenbo Shen",
@@ -2022,7 +2230,7 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "f82237692d0adaeeff9d184d8ba5d00bfbe0b5a1e561e368ff40f4b33174a480",
+    "content_hash": "52db1d25d7ab75f5be1d5cb42e4e8ed52df5b34f5125f0ef898201c0e0e92c2d",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3321705.3329828",
     "evidence_level": "abstract",
@@ -2030,7 +2238,7 @@
     "first_seen": "2026-07-29",
     "id": "semantic-scholar-5cad8024ea75450b2991e43be91ab68a791e0cf6",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "Semantic Scholar: formal assisted processor fuzzing"
     ],
@@ -2044,7 +2252,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"

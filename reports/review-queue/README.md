@@ -1,9 +1,10 @@
 # 待人工复核
 
-共 54 篇。该列表不进入主 README。
+共 58 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-09-23 | [Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core](https://doi.org/10.5194/egusphere-2026-4779) | 4 | hardware/processor object: soc；verification/fuzzing method: fuzz |
 | 2026-08-20 | [Transaction-Level Design and Verification of a Hybrid AMBA AXI4-Lite/ACE Interconnect for Scalable Heterogeneous SoCs](https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026) | 4 | hardware/processor object: cpu, rtl, verilog, soc；verification/fuzzing method: verification |
 | 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2026-08-12 | [GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing](http://arxiv.org/abs/2608.12635v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification, mutation testing |
@@ -26,10 +27,13 @@
 | 2025-04-09 | [ShadowBinding: Realizing Effective Microarchitectures for In-Core Secure Speculation Schemes](http://arxiv.org/abs/2504.07018v1) | 4 | hardware/processor object: risc-v, processor, microarchitecture, microarchitectural；verification/fuzzing method: taint tracking |
 | 2025-01-20 | [Corvus: Efficient HW/SW Co-Verification Framework for RISC-V Instruction Extensions with FPGA Acceleration](https://doi.org/10.1145/3658617.3697757) | 4 | hardware/processor object: risc-v, processor, rtl；verification/fuzzing method: verification |
 | 2024-10-23 | [Anais Estendidos do XXV Simpósio em Sistemas Computacionais de Alto Desempenho (SSCAD Estendido 2024)](https://doi.org/10.5753/sscad_estendido.2024) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: verification |
+| 2024-06-23 | [PathFuzz: Broadening Fuzzing Horizons with Footprint Memory for CPUs](https://doi.org/10.1145/3649329.3655911) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, coverage-guided, verification |
+| 2024-06-23 | [ChatCPU: An Agile CPU Design & Verification Platform with LLM](https://doi.org/10.1145/3649329.3658493) | 4 | hardware/processor object: risc-v, processor, cpu, rtl；verification/fuzzing method: verification |
 | 2024-06-03 | [VerilogReader: LLM-Aided Hardware Test Generation](http://arxiv.org/abs/2406.04373v1) | 4 | hardware/processor object: verilog；verification/fuzzing method: random testing, directed test generation, test generation, verification |
 | 2024-04-03 | [QED: Scalable Verification of Hardware Memory Consistency](http://arxiv.org/abs/2404.03113v1) | 4 | hardware/processor object: risc-v, processor, rtl, cache coherence；verification/fuzzing method: verification, validation |
 | 2024-01-08 | [RaceFixer -- An Automated Data Race Fixer](http://arxiv.org/abs/2401.04221v1) | 4 | hardware/processor object: multicore；verification/fuzzing method: sanitizer |
-| 2023-11-16 | [LightEMU: Hardware Assisted Fuzzing of Trusted Applications](http://arxiv.org/abs/2311.09532v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, coverage-guided |
+| 2023-11-16 | [LightEMU: Hardware Assisted Fuzzing of Trusted Applications](https://doi.org/10.1109/HOST55342.2024.10545377) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, coverage-guided |
+| 2023-10-28 | [SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs](https://doi.org/10.1109/ICCAD57390.2023.10323819) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: fuzz, verification |
 | 2023-06-16 | [Imprecise Store Exceptions](https://doi.org/10.1145/3579371.3589087) | 4 | hardware/processor object: risc-v, microarchitectural, memory consistency；verification/fuzzing method: litmus |
 | 2023-02-23 | [Sequence-Based Incremental Concolic Testing of RTL Models](http://arxiv.org/abs/2302.12241v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: validation |
 | 2023-02-01 | [EveCheck: An Event-Driven, Scalable Algorithm for Coherent Shared Memory Verification](https://doi.org/10.1109/TCAD.2022.3178051) | 4 | hardware/processor object: cache coherence, memory consistency, multicore；verification/fuzzing method: directed test generation, test generation, verification, litmus |

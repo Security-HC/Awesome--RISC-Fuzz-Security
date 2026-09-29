@@ -1,5 +1,114 @@
 [
   {
+    "abstract": "Modeling evolving user preferences from interaction sequences remains a core problem in sequential recommendation (SR). Recent work highlights intent learning for uncovering latent user motivations. Yet, existing methods either model intents within individual sequences or treat global intent signals as auxiliary supervision, limiting the explicit use of collective behavioral patterns and causing information isolation. Meanwhile, existing contrastive learning strategies are often costly and rely on suboptimal view construction, e.g., random sequence editing or weakly controlled model perturbations. We propose BIPCL, an end-to-end Bilateral Intent-enhanced, Embedding Perturbation-based Contrastive Learning framework. BIPCL integrates collective intent priors into both sequence- and item-side representations via bilateral intent enhancement. Shared intent prototypes capture collective semantics from behaviorally similar entities and inject them into representations, alleviating information isolation and improving robustness. It further induces a non-separable cross-intent interaction, providing complementary sequence–item matching signals beyond unilateral intent modeling. To construct effective contrastive views, we introduce an embedding perturbation-based paradigm that directly perturbs structural item embeddings, yielding bounded and discriminative views while preserving temporal and structural dependencies. Compatibility studies across multiple CL-based SR backbones demonstrate the effectiveness of this paradigm beyond BIPCL. Extensive experiments show that BIPCL consistently outperforms state-of-the-art baselines. All code and datasets are publicly available at https://github.com/ZINUX1998/BIPCL.",
+    "analysis": {},
+    "authors": [
+      "Shanfan Zhang",
+      "Yuan Rao",
+      "Yongyi Lin",
+      "Jiawei Li",
+      "Linghan Zhang",
+      "Shuo Wang"
+    ],
+    "categories": [],
+    "content_hash": "8de7f0e6de8cff587bc6f32815f201c9d72762073a6a2cf2dded4a9195c16223",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3773078.3831827",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "openalex-w7151056674",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3773078.3831827",
+    "primary_category": "",
+    "published": "2026-09-25",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Robustness (evolution)",
+      "Exploit",
+      "Artificial intelligence",
+      "Embedding",
+      "Construct (python library)",
+      "Natural language processing",
+      "Semantics (computer science)",
+      "Isolation (microbiology)",
+      "Feature learning",
+      "Machine learning",
+      "Benchmark (surveying)",
+      "Representation (politics)",
+      "Recommender system",
+      "Human–computer interaction",
+      "Training set",
+      "Information retrieval",
+      "Computational linguistics",
+      "Feature extraction",
+      "Matching (statistics)"
+    ],
+    "source_id": "https://openalex.org/W7151056674",
+    "title": "Bilateral Intent-Enhanced Sequential Recommendation with Embedding Perturbation-Based Contrastive Learning",
+    "title_key": "bilateral intent enhanced sequential recommendation with embedding perturbation based contrastive learning",
+    "updated": "2026-09-27",
+    "url": "https://doi.org/10.1145/3773078.3831827",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Large language models are being integrated into malware triage workflows as reasoning components that summarize static evidence and produce analyst-facing verdicts. This paper shows that the same reasoning capability introduces a new attack surface. We present ALIBI, a semantic cover story attack against frontier LLM-based malware analyzers. ALIBI adds a small, non-executed read-only section to a compiled binary, containing a coherent but false security product narrative, without altering imports or executable behavior. Instead of issuing direct instructions to the model, it reframes suspicious evidence as expected behavior of a benign endpoint security tool. On a frozen PE set of 50 malicious samples, the payload flips 30 of the 35 baseline-malicious samples to benign on Gemini 2.5 Pro, while GPT-5.5 Pro and Claude Opus 4.7 produce substantial severity downgrades with significant confidence reductions even when verdict labels are preserved. The attack transfers to ELF binaries, where Gemini flips 16 of 40. A verification-guided defense prompt roughly halves the benign verdicts, but 42.9 percent of malicious samples still reach benign. LLM malware analyzers therefore require provenance checks that separate verified facts from attacker-controlled claims, not narrative trust.",
+    "analysis": {},
+    "authors": [
+      "Hyeongjun Choi",
+      "Wonyoung Jung",
+      "Haehoon Seo",
+      "Sungyup Nam"
+    ],
+    "categories": [],
+    "content_hash": "44e406155eb2d3f665dc4add3e53ffbbfd2a2aff935f070d74051504c61996c2",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-19722v1",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.19722v1",
+    "primary_category": "",
+    "published": "2026-09-17",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.LG"
+    ],
+    "source_id": "2609.19722v1",
+    "title": "ALIBI: Adversarial Legitimacy Injection in Binary Input against LLM Malware Analyzers",
+    "title_key": "alibi adversarial legitimacy injection in binary input against llm malware analyzers",
+    "updated": "2026-09-17",
+    "url": "http://arxiv.org/abs/2609.19722v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Contemporary artificial intelligence excels in stable and resource-rich settings, but many of the environments in which autonomy and adaptive restructuring are most needed are defined by noise, damage, scarcity, and unpredictability. Spacecraft, distributed sensors, medical implants, digital cell twins, and robotic swarms must often continue functioning despite partial hardware failure and network fragmentation. Here, we present oncomorphic computing as a paradigm for designing resilient machine intelligence across software and hardware. We abstract selected survival principles seen in cancer biology, particularly decentralized behavior, phenotypic plasticity, heterogeneous specialization, resource recruitment, migration of function, and tissue-level adaptation, and repurpose them bidirectionally to complement standard approaches: using cancer dynamics in computing and engineering, and, conversely, bringing biological decentralization to the center of digital cancer research. In this way, we shift the approach from a highly organized and predictable ideal of machine intelligence to computational systems defined as groups of agents continuously negotiating access to memory, power and processing bandwidth through independent restructuring under scarcity. We discuss how this paradigm could address current computing bottlenecks and outline its implications for future hardware applications.",
     "analysis": {},
     "authors": [
@@ -67,6 +176,104 @@
     "updated": "2026-09-18",
     "url": "https://doi.org/10.31224/8240",
     "venue": "未记录"
+  },
+  {
+    "abstract": "RTL source-level debugging research requires benchmark artifacts that provide faulty designs together with precise change locations, executable test stimuli, and reproducible configurations. Available Verilog resources usually provide only a subset of these elements. We present VeriBugBench, a framework for constructing Verilog RTL debugging benchmarks through empirically grounded fault construction, LLM-based testbench enhancement, and execution-based retention. The mutation library maps recurring, multi-granularity repair patterns observed in RTL bug-fix histories to 19 executable inverse operators. For each project, an LLM generates a design-specific stimulus phase from the clean DUT and original testbench; the phase is composed with the original testbench for candidate execution. Applying the framework to 45 open-source projects yields VeriBugBench-v1.0, with 2,608 executable single-fault instances whose effects are observable at design outputs. Across the 45 projects, the assembled testbenches increase mean project-level fault observability from 36.01% to 39.54% and improve line coverage and execution-trace diversity on average. VeriBugBench provides versioned RTL variants, source-level ground truth, testbenches, and execution artifacts for evaluating RTL debugging methods.",
+    "analysis": {},
+    "authors": [
+      "Xiankai Meng",
+      "Kejian Feng",
+      "Xinlin Zhao",
+      "Zhuo Zhang",
+      "Yan Lei",
+      "Xiaoguang Mao",
+      "Jiang Wu"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "5dd6e40ed0396cc862552447cb697a3f996c101d34e9e6a3e806367358c41449",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: rtl, verilog; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-18022v2",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.18022v2",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-09-16",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, verilog",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.SE"
+    ],
+    "source_id": "2609.18022v2",
+    "title": "VeriBugBench: An Empirically Grounded Framework for Constructing Verilog RTL Debugging Benchmarks",
+    "title_key": "veribugbench an empirically grounded framework for constructing verilog rtl debugging benchmarks",
+    "updated": "2026-09-18",
+    "url": "http://arxiv.org/abs/2609.18022v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "AI-assisted claims can appear authoritative when evidence, analysis, human authorization, presentation, and correction history refer to different states. Provenance, attestation, and transparency expose history but alone do not specify the publication transition examined here. We develop Publication Authority as an exact-state, non-transferable, single-use publication capability and instantiate it in PAC-2026 (Publication-Accountability Calculus), a machine-readable AIJIM Protocol candidate. We evaluate its fourth bounded semantic freeze (SF-4), a fixed-profile specification designed for replaceable bindings. Six obligations govern evidence, runs and artifacts, measurement disclosure, authorization, surface correspondence, and lifecycle continuity. Each yields a target-bound witness, localized counterexample, or localized unverifiability; none can compensate for another. Only a fresh, complete all-pass record derives the permit consumed by one atomic publication transition. We use identity vectors, adversarial cases, finite models, and historical implementations. Ten models explored 110,764 safe reachable states; 76 unsafe configurations produced the expected violation or observer countermodel. A reader surface passing its correspondence check cannot authorize publication unless the accepted record admits that surface. SF-4 separates evidence horizon from verification time and rejects an authentic but causally invalid authorization. A historical predecessor path reproduced 17 frozen authorization-successor outcomes. A later in-house, instance-blind test of known case classes matched all 183 scored expectations; same-host package execution reproduced its 240 archived observations. Results support internal coherence, bounded safety, fault sensitivity, and limited constructibility, but not factual truth, general refinement, blind interoperability, field efficacy, or standards status.",
+    "analysis": {},
+    "authors": [
+      "Torsten Olivi Tiltack",
+      "Yifei Dong",
+      "Kun Yu",
+      "Xu Wang",
+      "Wei Liu",
+      "Jianlong Zhou",
+      "Ren Ping Liu",
+      "Fang Chen"
+    ],
+    "categories": [],
+    "content_hash": "6082656897417e08fc5c7eb44a3aec24b22b245ed34b3544ea2f5c5ae44af0ee",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-17631v1",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.17631v1",
+    "primary_category": "",
+    "published": "2026-09-15",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AI",
+      "cs.CR",
+      "cs.CY"
+    ],
+    "source_id": "2609.17631v1",
+    "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
+    "title_key": "making ai assisted claims independently challengeable publication authority and a protocol for falsifiable publication records",
+    "updated": "2026-09-15",
+    "url": "http://arxiv.org/abs/2609.17631v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "Deploying large language models on edge devices is increasingly limited by a widening gap between model size and available memory. Existing approaches such as quantization, smaller models, and offloading can raise the effective memory limit, but they still assume that the model can be compressed or partitioned to fit within some budget. We target the harder model-exceeds-memory setting, in which the model remains larger than resident memory throughout execution and storage becomes an active source of weights on the critical path. We observe that MLP activity during autoregressive decoding has strong temporal locality: approximately 82–85% of active neurons persist from one token to the next. This means that most sparse weights needed for the current token are already resident, and only the newly needed rows must be fetched from storage. We present NeuroPrefetcher, a storage-backed LLM inference system that exploits this property through predictive delta prefetching. After layer 0, a single GPU-resident predictor, occupying 2.86% of base model parameters, predicts sparse activity for all downstream MLP layers in one forward pass. The runtime compares these predictions against resident GPU buffers and issues application-scheduled NVMe reads only for incoming delta rows, replacing reactive operating-system demand paging with explicit, model-aware weight movement. On real unified-memory edge hardware, NeuroPrefetcher achieves 7.9–12.0 × speedup over llama.cpp across constrained memory budgets.",
@@ -259,6 +466,94 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Register-Transfer Level (RTL) simulation is widely used to test hardware before it is fabricated. To allow testing for security related information flow properties, such as confidentiality and integrity, taint logic can be automatically added to the design to track how information flows through it. However, taint logic instrumented by the state-of-the-art, such as CellIFT, makes simulation-based testing prohibitively expensive: On our evaluation of Mega-BOOM (136K cells), it increases the instrumented design to 5.81x the original cell count and causes a 143.72x simulation slowdown. The taint logic could be simplified to improve simulation speed, but it will inevitably trade off its precision. This lightweight, imprecise taint logic will introduce false positives and may eventually result in even more overhead to check these false positives. This paper explores the research question of where precision is actually needed in the design to overcome the overhead of false positives. It presents CEGAR-T, a framework that automatically synthesizes taint logic that minimizes the taint-logic instrumentation overhead while guaranteeing no false positives (relative to the precise CellIFT baseline). We have implemented CEGAR-T and evaluated it on the safe instruction set problem for timing side-channel security across open-source RISC-V cores. Over all evaluated cores, CEGAR-T reduces both instrumentation and simulation overhead, in geometric-mean, from 5.64x to 1.42x and from 34.65x to 1.79x, respectively, without compromising the precision benefit of the CellIFT baseline.",
+    "analysis": {},
+    "authors": [
+      "Yu-Wei Fan",
+      "Yuheng Yang",
+      "Christine Guo",
+      "SooHyuk Cho",
+      "Thomas Bourgeat",
+      "Mengjia Yan",
+      "Sharad Malik"
+    ],
+    "categories": [],
+    "content_hash": "be7b8b7f4bdea33b3ad59db9e45a088997f2e4e995b6c6111d351b9d32ffa798",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, rtl; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-06791v1",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"hardware sanitizer\" OR all:\"information flow tracking\" OR all:taint) AND (all:processor OR all:RTL)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.06791v1",
+    "primary_category": "",
+    "published": "2026-09-06",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, rtl",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.LO"
+    ],
+    "source_id": "2609.06791v1",
+    "title": "Efficient Hardware Information-Flow Tracking for Pre-Silicon Security Testing",
+    "title_key": "efficient hardware information flow tracking for pre silicon security testing",
+    "updated": "2026-09-06",
+    "url": "http://arxiv.org/abs/2609.06791v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Hardware for lattice-based post-quantum cryptography spends a large share of its area on the number-theoretic transform (NTT), dominated by modular multipliers and twiddle storage. FoldNTT is a redesign of the released radix-2 CFNTT accelerator (TCHES 2022) for the Falcon / FN-DSA prime q = 12289 with one hardware multiplier per butterfly instead of three and about half the stored twiddle constants. The Proth shape q = 3*2^12 + 1 turns modular reduction into shift-and-add K-RED folds, and the bit-reversed twiddle table obeys w[N/2+j] = psi*w[j], so half the table is derived without a multiplier. Checking the released RTL against the mathematics also exposed a bug: its inverse transform omits a per-stage halving and returns 2^10*x, which the retrofit corrects. Every arithmetic block is proven by exact-width SMT and compositional SymbiYosys proofs, control-safety invariants by k-induction; the proofs are mutation-tested and the composed transform is validated by simulation, all rerun by CI. On Artix-7 in a fully open flow, the retrofit costs 3->1 DSP48 per butterfly and -50% stored twiddle bits at a whole-core Fmax cost of about 4% (best of three seeds; within the seed-to-seed spread), measured on the released datapath driven by a controller we reconstructed (the reference FSM was never released) and validated by full-core simulation; a sequential core with our own controller builds to a timing-gated Basys-3 bitstream.",
+    "analysis": {},
+    "authors": [
+      "Masato Kamba"
+    ],
+    "categories": [],
+    "content_hash": "45436d7af6305b16b489091ec9886b5c2184cfb7e9d363a07759c5b241638d50",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: rtl; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-06412v1",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.06412v1",
+    "primary_category": "",
+    "published": "2026-09-06",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "2609.06412v1",
+    "title": "FoldNTT: A Multiplier- and Twiddle-Lean NTT Core with Formally Verified Arithmetic for Proth Primes",
+    "title_key": "foldntt a multiplier and twiddle lean ntt core with formally verified arithmetic for proth primes",
+    "updated": "2026-09-06",
+    "url": "http://arxiv.org/abs/2609.06412v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Software agents make digital execution elastic: repository analysis, code generation, testing, migration, tool use, and operations can be replicated and parallelized without proportional human headcount. Problem framing, semantic commitment, verification, integration, attention, and residual-risk acceptance remain bounded by human cognition, organizational authority, and economic capacity. How should scalable execution be governed so organizations can accept and sustain its changes? Our testable framework has two constructs and one execution abstraction. Trustworthy Change (TC) is the engineering object moving from intent through delegated execution, verification, integration, acceptance, and operation. Responsibility Topology classifies organizations by the distribution of independent residual-risk acceptance authority. A single-center topology has one final baseline responsibility anchor; a multi-anchor topology requires joint acceptance across independently governed domains. The Human-Agent Cell (HAC) produces candidates, proposals, and evidence; execution grants no acceptance authority. As execution and authority scale differently, distributed HACs create context-coherence and invalidation pressures, while multi-anchor governance adds joint acceptance and explicit responsibility closure. Responsibility, accountability, change management, specification, verification, and human oversight predate this work; our claim is only that agent-scaled execution changes how they fit together. We make that authority an explicit classification axis and derive consequences for change state, shared engineering facts, verification, and flow control. Progressive Specification and bounded-capacity analysis remain hypotheses to test, not laws. We contribute theory construction and operationalization; empirical validity remains open to controlled, longitudinal, and field studies.",
     "analysis": {},
     "authors": [
@@ -297,6 +592,49 @@
     "title_key": "software engineering in the agent era from trustworthy change to human agent software organizations",
     "updated": "2026-09-04",
     "url": "http://arxiv.org/abs/2609.04630v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "With LLMs, creating software tutorials now involves steering the model's output and shaping it into a coherent, accurate learning resource, yet existing LLM tools offer writers little support for this work. By analyzing interviews with technical writers ($N=17$), we identify three requirements for how they assemble and structure multiple LLM responses, curate the context the model uses, and verify the generated content. We designed a tool called dBlocks with the following features: blocks to scope content, a context manager to edit context, and inline execution to verify code. Following a human-centered design method, we iteratively refined the design through a user study ($N=5$). In a within-subjects lab study ($N=16$) comparing dBlocks with participants' preferred workflows for LLM-assisted authoring, participants reported significantly higher confidence in the tutorials they produced with dBlocks. In addition, the tool reduced friction in verification, with writers verifying code as they drafted rather than deferring or skipping it, and helped them avoid searching long chat histories by scoping their work into blocks that kept each tutorial section and its LLM conversation together. More broadly, our work offers implications for tools that scaffold human-AI collaboration in SE workflows and shows how human-centered design can guide the development of LLM-integrated tools.",
+    "analysis": {},
+    "authors": [
+      "Avinash Bhat",
+      "Vy Bui",
+      "Jin L. C. Guo"
+    ],
+    "categories": [],
+    "content_hash": "14a1f160b21c534bc065fde274ddcf1b8488f6f54a7aeb8de740916cc56828e4",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "arxiv-2609-05563v1",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.05563v1",
+    "primary_category": "",
+    "published": "2026-09-03",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE",
+      "cs.HC"
+    ],
+    "source_id": "2609.05563v1",
+    "title": "Look Before You Prompt, and After: Scaffolding Human-AI Collaboration in Software Tutorial Creation",
+    "title_key": "look before you prompt and after scaffolding human ai collaboration in software tutorial creation",
+    "updated": "2026-09-03",
+    "url": "http://arxiv.org/abs/2609.05563v1",
     "venue": "arXiv"
   },
   {
@@ -3027,7 +3365,7 @@
       "Edouard Bugnion"
     ],
     "categories": [],
-    "content_hash": "cda5e810ffbdae70e57aaeb62a2348e8c4febc36be345fa715ccc12786af0724",
+    "content_hash": "7196f206c9070d5f097fadbab98e066039a090cae2f93d159d32c79e69b0ab69",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "evidence_level": "abstract",
@@ -3035,7 +3373,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w4415142875",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: microarchitectural path coverage processor fuzzing",
@@ -3052,7 +3390,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3083,7 +3421,7 @@
     "source_id": "https://openalex.org/W4415142875",
     "title": "Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud",
     "title_key": "tyche composable isolation as a foundation to manage trust in the cloud",
-    "updated": "2026-09-04",
+    "updated": "2026-09-24",
     "url": "https://doi.org/10.1109/eurosp68448.2026.00055",
     "venue": "未记录"
   },
@@ -4138,7 +4476,7 @@
     "analysis": {},
     "authors": [
       "Alexander Jung",
-      "Cezar Crăciunoiu",
+      "Cezar Craciunoiu",
       "Nikolaos Karaolidis",
       "Hugo Lefeuvre",
       "Daniel Oñoro Rubio",
@@ -4147,7 +4485,7 @@
       "Pierre Olivier"
     ],
     "categories": [],
-    "content_hash": "f2fe77fd75dfdea2ab4ae20bbc0a2d8eb9bf488c41f1518fdba69a2db1a2f180",
+    "content_hash": "2b979901e0dad93e573063f458529c13a3681e013f7ca41abd9fabdd1b4923b1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3767295.3803589",
     "evidence_level": "abstract",
@@ -4155,7 +4493,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7140879828",
     "included": false,
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4169,7 +4507,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4193,7 +4531,7 @@
     "source_id": "https://openalex.org/W7140879828",
     "title": "Wayfinder: Automated Operating System Specialization",
     "title_key": "wayfinder automated operating system specialization",
-    "updated": "2026-09-21",
+    "updated": "2026-09-26",
     "url": "https://doi.org/10.1145/3767295.3803589",
     "venue": "未记录"
   },
@@ -4525,7 +4863,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "055373f0ed2775b59868f0771800719c2377a8e0e5c1b55ee205e9bc4437bd99",
+    "content_hash": "0a79bfe459f62afe554882d3fcdb443b7421055d11a00ce7c9d1db075cf472e0",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -4533,7 +4871,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4547,7 +4885,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -4581,7 +4919,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-09-21",
+    "updated": "2026-09-25",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -4649,8 +4987,8 @@
       "Hyeong Tae Kim",
       "Mahsa Ghasemi",
       "Vijay Kumar Gupta",
-      "Noah Dahle",
-      "Robert Canady",
+      "Noah W. Dahle",
+      "Robert E. Canady",
       "Abel Diaz Gonzalez",
       "Austin Coursey",
       "Bryce Bjorkman",
@@ -4671,7 +5009,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "ab81c8ac78d5086be78ad96500e32980fe49a064dbd3e2ed17d3fd0dfba937a8",
+    "content_hash": "91ce89388d911d9f9b3300f37f23a4406190d1d140c47d67674b91122d172c84",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -4679,7 +5017,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -4693,7 +5031,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -4726,7 +5064,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-08-26",
+    "updated": "2026-09-27",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -4869,10 +5207,10 @@
     "abstract": "This thesis develops an automated testing framework and new testing techniques for discovering concurrency-related bugs in C and C++ compilers. Firstly, we present a technique that compares source and compiled program behaviours using source and architecture models. The Téléchat tool implements this technique and has found a number of new concurrency bugs. Secondly, we present the Mix testing technique, that tests the interoperability of compiler mappings. The Atomic-mixer tool implements mix testing, has found a number of new mixing bugs, and has been used to develop an Atomics Application Binary interface with Arm’s engineers. Lastly, we deploy Téléchat in automated testing, exposing the limits of current tools and models whilst exploring the state of concurrency compilation correctness in the LLVM and GCC compiler toolchains.",
     "analysis": {},
     "authors": [
-      "Luke James Geeson"
+      "Luke Geeson"
     ],
     "categories": [],
-    "content_hash": "6588e761fc30c41709124f5ca59702dcc2ecd0249b4912ea2c556ef4161132cb",
+    "content_hash": "41541c335430893e0140b697f726ffffae1e731edc07929968eac4c56ab5b9b6",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -4880,7 +5218,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4893,7 +5231,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4917,7 +5255,7 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
@@ -4979,10 +5317,10 @@
     "authors": [
       "Junpeng Wan",
       "Louis Zheng-Hua Tan",
-      "Dave (Jing) Tian"
+      "Dave Jing Tian"
     ],
     "categories": [],
-    "content_hash": "02656ec289e7a39258d3dba34a84336859ebcf2c0c2e07bac72651fa00da0f63",
+    "content_hash": "6b08bb46c6f561cb818d32f16ebd568710769a654a261b5a8c93fd1d5ff11312",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/bar.2026.23028",
     "evidence_level": "abstract",
@@ -4990,7 +5328,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w7172206056",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: multicore processor fuzzing shared memory"
@@ -5006,7 +5344,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5023,7 +5361,7 @@
     "source_id": "https://openalex.org/W7172206056",
     "title": "NVLift: Lifting NVIDIA GPU Assembly to LLVM IR for Downstream Security Applications",
     "title_key": "nvlift lifting nvidia gpu assembly to llvm ir for downstream security applications",
-    "updated": "2026-08-23",
+    "updated": "2026-09-25",
     "url": "https://doi.org/10.14722/bar.2026.23028",
     "venue": "未记录"
   },
@@ -5312,6 +5650,56 @@
     "venue": "arXiv"
   },
   {
+    "abstract": "Analyse des vulnérabilités des architectures de communication dans les systèmes sur puce vis à vis des attaques en fautes et proposition de contremesures pour des systèmes de confiance Les systèmes embarqués occupent une place essentielle dans les applications critiques et temps réel, où la fiabilité et la sécurité sont décisives. Si les approches classiques de tolérance aux fautes se concentrent principalement sur le processeur et la mémoire, des recherches récentes révèlent que les interconnexions internes—en particulier les bus sur puce—présentent également des vulnérabilités aux pannes accidentelles et aux attaques intentionnelles. Ce travail propose une analyse approfondie de trois architectures de bus largement utilisées (Wishbone, AXI-Lite et AXI) et met en évidence les faiblesses propres à l'architecture de communication interne. En s’appuyant sur une analyse approfondie de la vulnérabilité du bus Wishbone, nous introduisons une contre- mesure matérielle destinée à renforcer la sécurité sans compromettre les performances. La comparaison avec d’autres approches montre que la protection matérielle offre une défense plus robuste et plus fiable que les solutions uniquement logicielles, contribuant ainsi à améliorer larésilience des systèmes embarqués.",
+    "analysis": {},
+    "authors": [
+      "Hongwei Zhao"
+    ],
+    "categories": [],
+    "content_hash": "b239a8f95739be43dff04f5d49d4e096861d37b71989a440ed6b0a647b1b4ffe",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70675/5fd427bazfed8z4625zb976zdef4ecb34c38",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-09-29",
+    "id": "openalex-w7152728502",
+    "included": false,
+    "last_seen": "2026-09-29",
+    "matched_queries": [
+      "OpenAlex: multicore processor fuzzing shared memory",
+      "OpenAlex: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://hal.science/tel-05423516/document",
+    "primary_category": "",
+    "published": "2025-12-02",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Humanities",
+      "Political science",
+      "Computer science",
+      "Computer security",
+      "Domain (mathematical analysis)",
+      "Telecommunications",
+      "Proposition",
+      "Sociology",
+      "Interoperability",
+      "Countermeasure"
+    ],
+    "source_id": "https://openalex.org/W7152728502",
+    "title": "Analysis of vulnerabilities in communication architectures in systems-on-chip with regard to fault attacks and countermeasure propositions for trusted systems",
+    "title_key": "analysis of vulnerabilities in communication architectures in systems on chip with regard to fault attacks and countermeasure propositions for trusted systems",
+    "updated": "2026-09-25",
+    "url": "https://doi.org/10.70675/5fd427bazfed8z4625zb976zdef4ecb34c38",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Microarchitectural attacks and reverse-engineering efforts rely on inferring the cache state of cache lines. While high-resolution timers traditionally enable this, such timers are increasingly restricted or unavailable to unprivileged users on modern ARM64 systems.",
     "analysis": {},
     "authors": [
@@ -5380,17 +5768,17 @@
     "abstract": "Windows printing services remain a notable vector for attacks. Previous studies have predominantly targeted vulnerabilities within various control aspects of printing services, such as spooler services and firmware updates. Yet, we contend that an essential aspect of data processing—the document parser within printer drivers—has been overlooked in past research. We present a coverage-based fuzzing system, PrintXPSurge, specifically crafted to detect weaknesses in the XPS printer driver's parsing function. To craft semantically correct XPS files, we leverage a large language model-assisted repair approach to automate the creation of semantically correct XPS files that comply with necessary constraints. To ensure our fuzzing process effectively interacts with the XPS printer driver, we develop a progressive state reconstruction method that addresses individual dependency requirements across the entire printing service workflow. Furthermore, when a crash is detected, we employ backtracing to confirm its origin in the XPS parser, isolating it from other components in the pipeline. Our evaluation reveals that PrintXPSurge surpasses existing top Windows fuzzers in performance, successfully identifying 102 bugs in 10 drivers from major brands, including 17 zero-day vulnerabilities confirmed by Microsoft and third-party vendors.",
     "analysis": {},
     "authors": [
-      "Yunpeng Tian",
+      "Yun-Peng Tian",
       "Feng Dong",
-      "Junhai Wang",
+      "Jun-Hai Wang",
       "Mu Zhang",
       "Zhiniang Peng",
       "Zesen Ye",
-      "Xiapu Luo",
+      "Xia-Pu Luo",
       "Haoyu Wang"
     ],
     "categories": [],
-    "content_hash": "0f75951fc1aca42021540a7ecc8209cc0a15c6d73a0920c3a0bcae0ae847d810",
+    "content_hash": "a5a5d04927ffac4c2dcf3c2ef963a33a068d4ad7ff69b609a8876758ec176c37",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3719027.3744807",
     "evidence_level": "abstract",
@@ -5398,7 +5786,7 @@
     "first_seen": "2026-07-29",
     "id": "semantic-scholar-43f21c042be5b5da08a75034609483635f368bfa",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "Semantic Scholar: formal assisted processor fuzzing"
     ],
@@ -5412,7 +5800,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -6294,7 +6682,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "c91a9eecf8fbc160a8b760ff97ce7537514fc5a77076625f2f2de4dac4dba9ed",
+    "content_hash": "bf59259e8a0362ab844684220b171e6cdb8162c9b6a2aeda42f94e46a99dfe6d",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -6302,7 +6690,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -6317,7 +6705,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6330,7 +6718,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-09-21",
+    "updated": "2026-09-27",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -6998,7 +7386,7 @@
       "Q. Ducasse"
     ],
     "categories": [],
-    "content_hash": "1308b6684b7a477d557dc99f95ade72eb9e3bc3769ef5340f02ad96d95635a30",
+    "content_hash": "40d5a9ff9d7fe3b38e05a9e94824117f8e6533921a465bd9e2c5c15e1e3fe3e8",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -7006,7 +7394,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -7021,7 +7409,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 8,
+    "seen_count": 9,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7033,7 +7421,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-09-11",
+    "updated": "2026-09-24",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -7086,12 +7474,12 @@
     "abstract": "",
     "analysis": {},
     "authors": [
-      "Xiaoyue Ma",
+      "Xiao-Yue Ma",
       "Lannan Luo",
       "Qiang Zeng"
     ],
     "categories": [],
-    "content_hash": "71b2a1bf22efd249b5d760a2631b70b2c9e26e536c4ba651921e2102cdb9c17d",
+    "content_hash": "15aa5e3923346fb416f6c8880c4e5178f9de3587a683b99021527372d4c2ce11",
     "curation_status": "excluded",
     "doi": "",
     "evidence_level": "metadata",
@@ -7099,7 +7487,7 @@
     "first_seen": "2026-07-29",
     "id": "semantic-scholar-3e27c80ef6387282c0a7e87c7aec3ef80db4b33b",
     "included": false,
-    "last_seen": "2026-07-29",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "Semantic Scholar: formal assisted processor fuzzing"
     ],
@@ -7113,7 +7501,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -8032,7 +8420,7 @@
       "Bryan Bonnici"
     ],
     "categories": [],
-    "content_hash": "1dea914dcbfbe258eae9db287a51e093a4e5ab301814aaded64f6351365ee8ba",
+    "content_hash": "bc36cb34ce1e620cbc25dc8da016c0f072cf46f3eda797a15f5efb14e333b8e4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.32920/ryerson.14655987.v1",
     "evidence_level": "abstract",
@@ -8040,7 +8428,7 @@
     "first_seen": "2026-09-08",
     "id": "openalex-w4244531942",
     "included": false,
-    "last_seen": "2026-09-15",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8053,7 +8441,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Exoskeleton",
@@ -8074,7 +8462,7 @@
     "source_id": "https://openalex.org/W4244531942",
     "title": "Design and development of hardware platform for fully-assistive lower leg exoskeleton",
     "title_key": "design and development of hardware platform for fully assistive lower leg exoskeleton",
-    "updated": "2026-09-11",
+    "updated": "2026-09-24",
     "url": "https://doi.org/10.32920/ryerson.14655987.v1",
     "venue": "未记录"
   },
@@ -8649,15 +9037,15 @@
     "abstract": "Modern computer peripherals are diverse in their capabilities and functionality, ranging from keyboards and printers to smartphones and external GPUs. In recent years, peripherals increasingly connect over a small number of standardized communication protocols, including USB, Bluetooth, and NFC. The host operating system is responsible for managing these devices; however, malicious peripherals can request additional functionality from the OS resulting in system compromise, or can craft data packets to exploit vulnerabilities within OS software stacks. Defenses against malicious peripherals to date only partially cover the peripheral attack surface and are limited to specific protocols (e.g., USB). In this paper, we propose Linux (e)BPF Modules (LBM), a general security framework that provides a unified API for enforcing protection against malicious peripherals within the Linux kernel. LBM leverages the eBPF packet filtering mechanism for performance and extensibility and we provide a high-level language to facilitate the development of powerful filtering functionality. We demonstrate how LBM can provide host protection against malicious USB, Bluetooth, and NFC devices; we also instantiate and unify existing defenses under the LBM framework. Our evaluation shows that the overhead introduced by LBM is within 1 μs per packet in most cases, application and system overhead is negligible, and LBM outperforms other state-of-the-art solutions. To our knowledge, LBM is the first security framework designed to provide comprehensive protection against malicious peripherals within the Linux kernel.",
     "analysis": {},
     "authors": [
-      "Dave Tian",
+      "Dave Jing Tian",
       "Grant Hernandez",
       "Joseph I. Choi",
       "Vanessa Frost",
       "Peter C. Johnson",
-      "Kevin Butler"
+      "Kevin R. B. Butler"
     ],
     "categories": [],
-    "content_hash": "0c68e7c2636743badd051fe88c0948a148ce1d107a3ff6e4f757b13eec6a8500",
+    "content_hash": "45179bf0102c2b9bb13be82ad4a8adfc16e568b421638dc83b0648e9eb8791a8",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -8665,7 +9053,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-09-08",
+    "last_seen": "2026-09-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8679,7 +9067,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8704,7 +9092,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-09-07",
+    "updated": "2026-09-26",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "未记录"
   },

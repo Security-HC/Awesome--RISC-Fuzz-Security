@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Chen Chen、Zaiyan Xu、Mohamadreza Rostami、David Liu、Dileep Kalathil、Ahmad‐Reza Sadeghi、Jeyavijayan Rajendran
+- 作者：Chen Chen、Zaiyan Xu、Mohamadreza Rostami、David Liu、Dileep M. Kalathil、Ahmad‐Reza Sadeghi、Jeyavijayan Rajendran
 - 发表日期：2026-01-01
 - 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing

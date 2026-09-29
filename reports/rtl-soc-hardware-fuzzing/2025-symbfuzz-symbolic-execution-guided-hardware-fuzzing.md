@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：S. Miftah、Amisha Srivastava、Hyunmin Kim、Shiyi Wei、Kanad Basu
+- 作者：S. Miftah、Amisha Srivastava、Hyunmin Kim、Shi-Yi Wei、Kanad Basu
 - 发表日期：2025-10-17
 - 会议/期刊：Micro
 - 主分类：RTL 与 SoC 硬件 Fuzzing

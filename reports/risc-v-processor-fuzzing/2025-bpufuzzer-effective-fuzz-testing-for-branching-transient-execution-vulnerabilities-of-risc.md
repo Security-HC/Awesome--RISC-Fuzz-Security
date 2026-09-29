@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Rihui Sun、Jin Wu、Hanyin Liu、Zikang Tao、Gang Qu、Dongsheng Wang、Yongqiang Lyu、Jian Dong
+- 作者：Rihui Sun、Jin Xiang Wu、Hanyin Liu、Zikang Tao、Gang Qu、Dongsheng Wang、Yongqiang Lyu、Jian Dong
 - 发表日期：2025-06-22
 - 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing

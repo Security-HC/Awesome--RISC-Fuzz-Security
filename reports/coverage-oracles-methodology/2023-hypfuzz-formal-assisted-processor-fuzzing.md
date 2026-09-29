@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Chen Chen、Rahul Kande、Nathan Nguyen、Flemming Andersen、Aakash Tyagi、A. Sadeghi、Jeyavijayan Rajendran
+- 作者：Chen Chen、Rahul Kande、Nathan Nguyen、Flemming Andersen、Aakash Tyagi、A. Sadeghi、J. Rajendran
 - 发表日期：2023-04-05
 - 会议/期刊：USENIX Security Symposium
 - 主分类：覆盖、Oracle 与 Fuzzing 方法

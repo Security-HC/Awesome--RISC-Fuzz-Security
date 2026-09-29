@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Lichao Wu、Mohamadreza Rostami、Huimin Li、Nikhilesh Singh、Ahmad-Reza Sadeghi
+- 作者：Lichao Wu、Mohamadreza Rostami、Huimin Li、Nikhilesh Singh、Ahmad‐Reza Sadeghi
 - 发表日期：2026-01-01
 - 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing
