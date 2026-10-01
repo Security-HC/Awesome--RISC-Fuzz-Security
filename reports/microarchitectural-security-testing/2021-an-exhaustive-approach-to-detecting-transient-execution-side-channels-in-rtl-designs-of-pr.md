@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：M. R. Fadiheh、A. Wezel、Johannes Mueller、J. Bormann、Sayak Ray、Jason M. Fung、S. Mitra、D. Stoffel、W. Kunz
+- 作者：M. Fadiheh、A. Wezel、Johannes Müller、J. Bormann、Sayak Ray、Jason M. Fung、S. Mitra、D. Stoffel、W. Kunz
 - 发表日期：2021-08-04
 - 会议/期刊：IEEE transactions on computers
 - 主分类：微架构安全自动测试

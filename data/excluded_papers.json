@@ -1,5 +1,277 @@
 [
   {
+    "abstract": "Google AI Overviews (AIOs) are arguably the most widely encountered deployment of generative AI, reaching over 2 billion users who may not realize the answers they see are AI-generated. Where search engines have traditionally surfaced ranked sources and left users to evaluate them, AIOs synthesize and deliver a single answer — giving Google unprecedented editorial control over what users read and know. We present a large-scale longitudinal measurement study, issuing 55,393 trending queries across 19 topical categories over a 40-day window (March 13–April 21, 2026). We report four main findings. First, overall AIO activation is 13.7%, rising to 64.7% for question-form queries, while politically sensitive topics see markedly lower rates. Second, AIO-cited domains are more credible than co-displayed first-page results, yet nearly 30% do not appear in those results at all, indicating a source selection mechanism distinct from Google's ranking algorithm. Third, decomposing responses into 98,020 atomic claims, 11.0% are unsupported by the cited pages — with omission the dominant failure mode — and source quality and claim fidelity are largely independent. Fourth, well over half of AIO-cited pages carry display advertising, meaning publishers lose revenue when AIOs suppress the click-through, even as Google's own sponsored ads continue to appear on the same page. Together, these findings document a rapid transformation of the online information ecosystem whose consequences for epistemic security remain poorly understood.",
+    "analysis": {},
+    "authors": [
+      "Haofei Xu",
+      "Umar Iqbal",
+      "Jacob Montgomery"
+    ],
+    "categories": [],
+    "content_hash": "a525e31750dcd3840b23fdd641cebfa744a551f2808a83db902baf44100b9c86",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3777912.3839818",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7161263975",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3777912.3839818",
+    "primary_category": "",
+    "published": "2026-09-29",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Ranking (information retrieval)",
+      "Computer science",
+      "World Wide Web",
+      "Selection (genetic algorithm)",
+      "Revenue",
+      "Fidelity",
+      "Meaning (existential)",
+      "Quality (philosophy)",
+      "Information retrieval",
+      "Software deployment",
+      "Internet privacy",
+      "Control (management)",
+      "Data science",
+      "Trustworthiness",
+      "Filter (signal processing)",
+      "The Internet",
+      "Window (computing)",
+      "Search engine indexing",
+      "Credibility",
+      "Key (lock)",
+      "Matching (statistics)",
+      "Topic model",
+      "Task (project management)"
+    ],
+    "source_id": "https://openalex.org/W7161263975",
+    "title": "Measuring Google AI Overviews: Activation, Source Quality, Claim Fidelity, and Publisher Impact",
+    "title_key": "measuring google ai overviews activation source quality claim fidelity and publisher impact",
+    "updated": "2026-09-30",
+    "url": "https://doi.org/10.1145/3777912.3839818",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "The security of the modern web depends on the correctness of JavaScript (JS) engines, yet these complex systems remain vulnerable to high-impact bugs. A critical limitation of state-of-the-art fuzzers is the coverage plateau: once a fuzzer saturates the control-flow graph, edge coverage loses its ability to guide discovery. Because complex engine behaviors, such as JIT optimization tiers and hidden class transitions, often share identical edge coverage, standard coverage metrics are blind to the distinct internal states required to trigger deep errors. To bridge this gap, we present StateLens, a framework that employs Large Language Models (LLM) to automate the discovery of deep internal states. Blindly placing instrumentation probes at all states is infeasible due to the vast state space and the high runtime overhead. State-Lens introduces a novel agent-based reasoning pipeline that emulates the intuition of a security researcher. By iteratively traversing code and developer comments, our agents intelligently select high-value instrumentation targets, effectively separating logic-driving states from irrelevant data. This results in synthesizable, high-signal feedback probes that map the engine's hidden configurations. This instrumentation feeds a dual-feedback mechanism, effectively guiding the fuzzer toward unexplored engine semantics. Our evaluation confirms that StateLens significantly outperforms state-of-the-art fuzzers and uncovers 68 new bugs.",
+    "analysis": {},
+    "authors": [
+      "Wai Kin Wong",
+      "Dongwei Xiao",
+      "Anthony Cheuk Tung Lai",
+      "Ping Fan Ke",
+      "Shuai Wang"
+    ],
+    "categories": [],
+    "content_hash": "3ff1451b89b30386b98fb8aeae36eb75f886148a40764e59734067e4c32d5cca",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3830418.3843900",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7214031606",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing",
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3830418.3843900",
+    "primary_category": "",
+    "published": "2026-09-28",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Fuzz testing",
+      "Computer science",
+      "JavaScript",
+      "Instrumentation (computer programming)",
+      "Correctness",
+      "Programming language",
+      "Expert system",
+      "Intuition",
+      "Enhanced Data Rates for GSM Evolution",
+      "State (computer science)",
+      "Artificial intelligence",
+      "Source code",
+      "Code (set theory)",
+      "Software engineering",
+      "Suite",
+      "Traverse",
+      "Memory safety",
+      "Computer engineering",
+      "Software bug",
+      "Embedded system",
+      "Static analysis",
+      "Taint checking",
+      "Pipeline (software)",
+      "Interfacing",
+      "Python (programming language)",
+      "Operating system",
+      "Java",
+      "Coding (social sciences)",
+      "Machine learning",
+      "Class (philosophy)",
+      "Data mining",
+      "Distributed computing",
+      "FLEX"
+    ],
+    "source_id": "https://openalex.org/W7214031606",
+    "title": "State-Aware Fuzzing of JavaScript Engines with LLM-Guided Instrumentation",
+    "title_key": "state aware fuzzing of javascript engines with llm guided instrumentation",
+    "updated": "2026-09-30",
+    "url": "https://doi.org/10.1145/3830418.3843900",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Wireless networking technologies have become a foundational element of today’s digital infrastructure, yet their open transmission nature exposes them to a wide spectrum of security threats . This paper introduces an empirically-validated analytical framework for examining Wi-Fi attack techniques and assessing corresponding defense mechanisms, with emphasis on protocol weaknesses and layered protection models. Multiple attack categories—including passive interception, Man-in-the-Middle manipulation, management frame abuse, password-guessing attacks, and rogue access point scenarios—are examined through controlled experimental validation across four protocol generations.The proposed framework connects attack behaviors to protocol design limitations across legacy and modern standards, including WEP, WPA, WPA2, and WPA3. Modern countermeasures—such as SAE authentication, Protected Management Frames, wireless intrusion detection platforms, and segmented network architectures—are evaluated using empirical data from 240 controlled attack executions in a dedicated wireless testbed .The experimental results demonstrate that WPA3-SAE provides complete resistance to offline dictionary attacks (0% success rate vs. 90% for WPA2-PSK) and key reinstallation attacks (0% vs. 95% for unpatched WPA2), while layered defense strategies reduce overall attack success by 94% compared to protocol-only protection The study highlights that sustainable wireless protection requires a multi-layer defensive strategy that combines protocol hardening, monitoring, and enforcement policies .",
+    "analysis": {},
+    "authors": [
+      "Mohammed Ameen Saleh Al-Bareda"
+    ],
+    "categories": [],
+    "content_hash": "04b4620d650ae4fd49e61e6bdc3176c5cd36b22a34a9f29431359fffc81f8eff",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.59628/jast.v4i9.2816",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7214639222",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing",
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://journals.su.edu.ye/index.php/jast/article/download/2816/1653",
+    "primary_category": "",
+    "published": "2026-09-28",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer security",
+      "Computer science",
+      "Testbed",
+      "Protocol (science)",
+      "Intrusion detection system",
+      "Key (lock)",
+      "Computer network",
+      "Wireless network",
+      "Frame (networking)",
+      "Key management",
+      "Wireless",
+      "Cryptographic protocol",
+      "Transmission (telecommunications)",
+      "Access control",
+      "Law enforcement",
+      "Enforcement",
+      "Element (criminal law)",
+      "Wireless intrusion prevention system",
+      "Authentication (law)",
+      "Attack model",
+      "Network security",
+      "Communications protocol",
+      "Engineering"
+    ],
+    "source_id": "https://openalex.org/W7214639222",
+    "title": "An Analytical Framework for Wi-Fi Network Attacks and Protection Techniques.",
+    "title_key": "an analytical framework for wi fi network attacks and protection techniques",
+    "updated": "2026-09-30",
+    "url": "https://doi.org/10.59628/jast.v4i9.2816",
+    "venue": "مجلة جامعة صنعاء للعلوم التطبيقية والتكنولوجيا"
+  },
+  {
+    "abstract": "[TE2.1][TE2.2]This report describes the progress of a prototype GUI, nicknamed LightStar, that enables engineers to convert existing test scripts into IEEE-compliant, XML-based documents, as well use these documents to automatically generate executable scripts.",
+    "analysis": {},
+    "authors": [
+      "Sandia National Laboratories (SNL-NM), Albuquerque, NM (United States)",
+      "Rudeger H. T. Wilke",
+      "USDOE National Nuclear Security Administration (NNSA)",
+      "Jonathan Smith"
+    ],
+    "categories": [],
+    "content_hash": "5f2f1443135186b2e7700818ee025174d7fd2a3df7c79f249742673ce38cf6b7",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.2172/3943090",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7214493291",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://www.osti.gov/servlets/purl/3943090",
+    "primary_category": "",
+    "published": "2026-09-26",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Scripting language",
+      "Test (biology)",
+      "Programming language",
+      "Software engineering",
+      "Executable",
+      "Test script",
+      "Test Management Approach",
+      "Software",
+      "Automation",
+      "Artificial intelligence",
+      "Natural language processing",
+      "Semantics (computer science)",
+      "Test suite",
+      "Test case",
+      "Unified Modeling Language",
+      "Sequence diagram",
+      "System testing",
+      "Debugging",
+      "Data mining",
+      "Natural language"
+    ],
+    "source_id": "https://openalex.org/W7214493291",
+    "title": "Facilitating the use of Common Test Definitions by Converting Test Sequences to IEEE Standards using Large Language Models",
+    "title_key": "facilitating the use of common test definitions by converting test sequences to ieee standards using large language models",
+    "updated": "2026-09-29",
+    "url": "https://doi.org/10.2172/3943090",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Modeling evolving user preferences from interaction sequences remains a core problem in sequential recommendation (SR). Recent work highlights intent learning for uncovering latent user motivations. Yet, existing methods either model intents within individual sequences or treat global intent signals as auxiliary supervision, limiting the explicit use of collective behavioral patterns and causing information isolation. Meanwhile, existing contrastive learning strategies are often costly and rely on suboptimal view construction, e.g., random sequence editing or weakly controlled model perturbations. We propose BIPCL, an end-to-end Bilateral Intent-enhanced, Embedding Perturbation-based Contrastive Learning framework. BIPCL integrates collective intent priors into both sequence- and item-side representations via bilateral intent enhancement. Shared intent prototypes capture collective semantics from behaviorally similar entities and inject them into representations, alleviating information isolation and improving robustness. It further induces a non-separable cross-intent interaction, providing complementary sequence–item matching signals beyond unilateral intent modeling. To construct effective contrastive views, we introduce an embedding perturbation-based paradigm that directly perturbs structural item embeddings, yielding bounded and discriminative views while preserving temporal and structural dependencies. Compatibility studies across multiple CL-based SR backbones demonstrate the effectiveness of this paradigm beyond BIPCL. Extensive experiments show that BIPCL consistently outperforms state-of-the-art baselines. All code and datasets are publicly available at https://github.com/ZINUX1998/BIPCL.",
     "analysis": {},
     "authors": [
@@ -19,9 +291,10 @@
     "first_seen": "2026-09-29",
     "id": "openalex-w7151056674",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
-      "OpenAlex: cache coherence directed test generation"
+      "OpenAlex: cache coherence directed test generation",
+      "OpenAlex: cache coherence transition coverage verification"
     ],
     "pdf_url": "https://doi.org/10.1145/3773078.3831827",
     "primary_category": "",
@@ -32,7 +305,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -61,6 +334,74 @@
     "title_key": "bilateral intent enhanced sequential recommendation with embedding perturbation based contrastive learning",
     "updated": "2026-09-27",
     "url": "https://doi.org/10.1145/3773078.3831827",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Optimizing large-scale retrieval hinges on the ability to efficiently surface candidates across diverse content tiers. However, to capture segments such as fresh and long-tail content, modern systems typically resort to a fragmented “zoo” of specialized retrieval models. This operational complexity is attributed to a fundamental challenge in heterogeneous retrieval systems — the Scaling Bias of Heterogeneity — where model capacity gains do not apply equally across diverse content tiers. To bridge this gap, we propose MESH as a unified retrieval scaling framework that mitigates this bias through a modularized architecture integrated with gated bias correction. By partitioning the feature space into independent domains, MESH enforces a structural inductive bias that reduces interference between sparse-item signals and high-frequency engagement features. This protected gradient path leads to improved scaling behavior for sparse content, empirically validated by a 14 × improvement in the power-law scaling exponent for fresh items. In online evaluations on Pinterest’s Related Pins platform — a billion-scale item-to-item recommendation system — these improvements translate into a +5.5% lift in fresh-item repins, alongside with 55% improvement in funnel efficiency and +0.46% improvement in user retention. Finally, our asynchronous serving strategy ensures production viability by delivering a 2.87 × improvement in system throughput. Our findings suggest MESH as a promising paradigm for consolidating fragmented retrieval infrastructures into more scalable and ecosystem-aware backbones.",
+    "analysis": {},
+    "authors": [
+      "Jiaxing Qu",
+      "Yilin Chen",
+      "Junpeng Hou",
+      "Jinfeng Rao",
+      "Olafur Gudmundsson",
+      "Sai Xiao",
+      "Huizhong Duan"
+    ],
+    "categories": [],
+    "content_hash": "c5f47e318f1375264fe9bcf376b12c9698ad8478b234d2834c1b05ab99f7ea7f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3773078.3831925",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7168368673",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3773078.3831925",
+    "primary_category": "",
+    "published": "2026-09-25",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Scalability",
+      "Computer science",
+      "Scaling",
+      "Asynchronous communication",
+      "Unification",
+      "Distributed computing",
+      "Lift (data mining)",
+      "Theoretical computer science",
+      "Data mining",
+      "Path (computing)",
+      "Robustness (evolution)",
+      "Key (lock)",
+      "Interleaving",
+      "Performance improvement",
+      "Minification",
+      "Scale (ratio)",
+      "Algorithm",
+      "Maximization",
+      "Information retrieval",
+      "Workflow",
+      "Node (physics)",
+      "Artificial intelligence",
+      "Metamodeling"
+    ],
+    "source_id": "https://openalex.org/W7168368673",
+    "title": "MESH: Scaling Up Retrieval with Heterogeneous Content Unification",
+    "title_key": "mesh scaling up retrieval with heterogeneous content unification",
+    "updated": "2026-09-27",
+    "url": "https://doi.org/10.1145/3773078.3831925",
     "venue": "未记录"
   },
   {
@@ -119,7 +460,7 @@
       "Michael Levin"
     ],
     "categories": [],
-    "content_hash": "44e0fab8662544dbfd78942d45ee583b78e1f0c878a82b0730b53a6aa4fe15bd",
+    "content_hash": "bafcec360f73f1ca40309c450ee5ba5e88f3de77333c8a6be08c99fbbcd32138",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.31224/8240",
     "evidence_level": "abstract",
@@ -127,7 +468,7 @@
     "first_seen": "2026-09-22",
     "id": "openalex-w7213408692",
     "included": false,
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "OpenAlex: cache coherence directed test generation",
       "OpenAlex: cache coherence transition coverage verification"
@@ -141,7 +482,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -173,7 +514,7 @@
     "source_id": "https://openalex.org/W7213408692",
     "title": "Oncomorphic computing: a bio-derived paradigm for decentralized adaptation across software and hardware",
     "title_key": "oncomorphic computing a bio derived paradigm for decentralized adaptation across software and hardware",
-    "updated": "2026-09-18",
+    "updated": "2026-09-24",
     "url": "https://doi.org/10.31224/8240",
     "venue": "未记录"
   },
@@ -463,6 +804,46 @@
     "title_key": "from data availability to evidence sufficiency pih ms as an auditable framework for diagnosing hydrogeological knowledge gaps in mato grosso do sul brazil",
     "updated": "2026-09-13",
     "url": "https://doi.org/10.31223/x5pr53",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Can one language model hand its live memory to another without the receiver rereading the context? We demonstrate useful persistent hybrid-state transfer across one architecture-matched Qwen3.5 4B-to-9B sibling pair. To our knowledge, this is the first demonstrated cross-model handoff of persistent recurrent inference state between differently sized hybrid language models without target prefix replay. Translated attention KV alone leaves a large gap; adding the Gated DeltaNet (GDN) persistent-state package lowers teacher-forced negative log-likelihood (NLL), the average next-token log-loss, by 0.747 nats/token (95% paired document bootstrap CI [0.6921, 0.8047]), improving all 64 PG19 documents. Direct recurrent and convolution reuse outperforms the tested learned GDN maps, consistent with partial functional compatibility of persistent-state coordinates. A fresh component factorial selects translated KV with direct recurrent and convolution state. An additional 434,176-parameter correction improves that base on 64 fresh web documents: continuation loss is 0.076 nats/token above native 9B (excess NLL), Jensen-Shannon (JS) divergence is 0.022, and native context recovery (NCR) is 0.918. Corrected 9B significantly beats continued 4B inference while processing zero historical prefix tokens. Evidence covers one direction, one geometry-matched Base-model pair, and 4K teacher-forced continuation; the near-native gate failed, the 16K branch was not run, and free-generation equivalence and a general state interface remain unproven.",
+    "analysis": {},
+    "authors": [
+      "Simon P. Villani"
+    ],
+    "categories": [],
+    "content_hash": "0a8a9b8699e382b50502e8d00a5f655bd30d64c87ab7f24b3c829e3bb4b7d666",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "semantic-scholar-4232e5d59b174c4a014648da60afb80d4a70e9e5",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "Semantic Scholar: cache coherence directed test generation"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2026-09-07",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "4232e5d59b174c4a014648da60afb80d4a70e9e5",
+    "title": "LatentPort: Beyond KV Cache - Cross-Model Transfer of Recurrent Memory in Hybrid Language Models: A 4B-to-9B Hybrid-State Handoff Without Target Prefix Replay",
+    "title_key": "latentport beyond kv cache cross model transfer of recurrent memory in hybrid language models a 4b to 9b hybrid state handoff without target prefix replay",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/4232e5d59b174c4a014648da60afb80d4a70e9e5",
     "venue": "未记录"
   },
   {
@@ -1548,12 +1929,12 @@
     "authors": [
       "Andrei K. Diakonov",
       "Roy Zektzer",
-      "Xiyuan Lu",
+      "Xi-Yuan Lu",
       "Kartik A. Srinivasan",
       "Liron Stern"
     ],
     "categories": [],
-    "content_hash": "aa055f62e3cdcc15205db454c47098981172b841c6d085664b01008018754563",
+    "content_hash": "f03be8d570f55d1f71fdcb32f4b8c04193a4833beec35240599104c2d2251218",
     "curation_status": "excluded",
     "doi": "",
     "evidence_level": "abstract",
@@ -1561,7 +1942,7 @@
     "first_seen": "2026-08-29",
     "id": "semantic-scholar-21ec9dec78646fa9afca8af21d222c412c9eb85a",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: cache coherence directed test generation"
     ],
@@ -1574,7 +1955,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Physics"
@@ -4472,6 +4853,58 @@
     "venue": "IEEE International Symposium on Hardware Oriented Security and Trust"
   },
   {
+    "abstract": "International audience",
+    "analysis": {},
+    "authors": [
+      "Mohammed Mezaouli",
+      "Yehya A. Nasser",
+      "Samir Saoudi",
+      "Marc‐Oliver Pahl"
+    ],
+    "categories": [],
+    "content_hash": "620b6a5fb6c3039ca00457fcb65ce5409a72e298b028f26df9830e877565794b",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/noms69089.2026.11668267",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7206186642",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing"
+    ],
+    "pdf_url": "https://imt-atlantique.hal.science/hal-05543603/document",
+    "primary_category": "",
+    "published": "2026-05-01",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Artificial intelligence",
+      "Anomaly detection",
+      "Computer vision",
+      "Pattern recognition (psychology)",
+      "Noise (video)",
+      "Feature (linguistics)",
+      "Object detection",
+      "Measure (data warehouse)",
+      "Image processing"
+    ],
+    "source_id": "https://openalex.org/W7206186642",
+    "title": "Real-Time Instruction-Level Anomaly Detection for Embedded Applications Using AI",
+    "title_key": "real time instruction level anomaly detection for embedded applications using ai",
+    "updated": "2026-09-29",
+    "url": "https://doi.org/10.1109/noms69089.2026.11668267",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Operating system specialization is a well-known approach to optimize a specific application's performance, memory usage, security, or other important metrics. Specializing an OS for an application is typically a manual process that requires great expertise. Specialization through configuration lends itself well to automation; however, it is challenging due to the sheer size of the configuration space of modern OSes, the difficulty to quantify that space, the long time it takes to evaluate a configuration, and the large number of invalid configurations. Hence, existing attempts at specializing OSes automatically are limited to switching features on and off to minimize memory consumption or attack surface, and cannot target metrics such as performance.",
     "analysis": {},
     "authors": [
@@ -4545,7 +4978,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "65d8d5eb05b66b155e13b830a9815f86dc6548673bfbb0f81bbc907186b63a09",
+    "content_hash": "42c06a494779b94cc58c3576c5a2539b962dde715b35da24d939000b00c13b0b",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -4553,7 +4986,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-09-22",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -4568,7 +5001,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 9,
+    "seen_count": 10,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -4579,7 +5012,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-09-21",
+    "updated": "2026-09-25",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -4989,7 +5422,7 @@
       "Vijay Kumar Gupta",
       "Noah W. Dahle",
       "Robert E. Canady",
-      "Abel Diaz Gonzalez",
+      "Abel Diaz-Gonzalez",
       "Austin Coursey",
       "Bryce Bjorkman",
       "Cailani Lemieux-Mack",
@@ -5009,7 +5442,7 @@
       "Amir Shirkhodaie"
     ],
     "categories": [],
-    "content_hash": "91ce89388d911d9f9b3300f37f23a4406190d1d140c47d67674b91122d172c84",
+    "content_hash": "5f955622fb795bfdea3008a01bb17fca2409581fe4fc87675e313049044e9ba5",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.2514/6.2026-2892",
     "evidence_level": "abstract",
@@ -5017,7 +5450,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7124143460",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -5031,7 +5464,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -5064,7 +5497,7 @@
     "source_id": "https://openalex.org/W7124143460",
     "title": "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)",
     "title_key": "a survey of security challenges and solutions for uas traffic management utm and small unmanned aerial systems suas",
-    "updated": "2026-09-27",
+    "updated": "2026-09-29",
     "url": "https://doi.org/10.2514/6.2026-2892",
     "venue": "未记录"
   },
@@ -6682,7 +7115,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "bf59259e8a0362ab844684220b171e6cdb8162c9b6a2aeda42f94e46a99dfe6d",
+    "content_hash": "2397c19c92cc17872a88d5796e7af6929cfd55055208dc26351d25ff27aec82a",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -6690,7 +7123,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -6705,7 +7138,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6718,7 +7151,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-09-27",
+    "updated": "2026-09-29",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -6963,6 +7396,55 @@
     "updated": "2025-12-04",
     "url": "http://arxiv.org/abs/2412.13222v3",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Les attaques multi-fautes permettent de compromettre la sécurité d'applications prouvées théoriquement robustes, et cela, malgré l'intégration de mécanismes de sécurité. L'évaluation de sécurité pour ce type d'attaque comporte une analyse du programme pour déterminer des vulnérabilités puis une campagne d'injection de fautes sur du matériel. Cependant, considérer plusieurs fautes lors de l'analyse reste un problème ouvert en raison de la taille de l'espace des états fautés à explorer. Ce document vise à étudier les techniques d'évaluation de la sécurité contre des attaques multi-fautes. D'abord, nous explorons faisabilité d’une méthode de détermination de vulnérabilités basée exclusivement sur l’analyse statique. Ensuite, nous étudions une méthode d'identification des paramètres d'injection de fautes afin de faciliter la réalisation de campagne. Des expérimentations ont été menées sur des programmes d'évaluation de code PIN comportant diverses contre-mesures logicielles. Les résultats démontrent l'efficacité de notre approche, avec des attaques comportant jusqu'à huit fautes impactant plus de 80 instructions.",
+    "analysis": {},
+    "authors": [
+      "Antoine Gicquel"
+    ],
+    "categories": [],
+    "content_hash": "2598314b0a7bfefd8f4424485127c2b235958f4a143bee4ce8aa011adbb636c8",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70675/7272c1c5z7d75z4c47z97cfzf5d4d61c36d2",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-01",
+    "id": "openalex-w7151973172",
+    "included": false,
+    "last_seen": "2026-10-01",
+    "matched_queries": [
+      "OpenAlex: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "https://hal.science/tel-04842415v1/document",
+    "primary_category": "",
+    "published": "2024-12-12",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Humanities",
+      "Political science",
+      "Art",
+      "Computer science",
+      "Philosophy",
+      "Hesperian",
+      "Open access publishing",
+      "Art history",
+      "Falcon",
+      "Archivist"
+    ],
+    "source_id": "https://openalex.org/W7151973172",
+    "title": "Etude de vulnérabilité d'un programme au format binaire en présence de fautes précises et nombreuses",
+    "title_key": "etude de vuln rabilit d un programme au format binaire en pr sence de fautes pr cises et nombreuses",
+    "updated": "2026-09-29",
+    "url": "https://doi.org/10.70675/7272c1c5z7d75z4c47z97cfzf5d4d61c36d2",
+    "venue": "未记录"
   },
   {
     "abstract": "Testing complex RISC-V extensions such as RISC-V Vector (RVV) with its 600+ highly configurable instructions is crucial. For this reason, test suites have been developed over the last years, including both hand-written and automatically generated tests. Although the process of running these tests is often highly automated, a significant portion of the work, namely the result analysis, has to be conducted manually after the run.",
@@ -7520,12 +8002,12 @@
       "Drew Zagieboylo",
       "C. Sherk",
       "Andrew C. Myers",
-      "G. E. Suh"
+      "G. Suh"
     ],
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "a6482a3829b20c1f599402d933f6ce943e6409b6d81a0f29374d4ee3cdadc87b",
+    "content_hash": "e3daebb4c0c02b9f3764e3e59d6ef38b83737114f28494230393ffae72bb8cce",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3576915.3623074",
     "evidence_level": "abstract",
@@ -7533,7 +8015,7 @@
     "first_seen": "2026-08-15",
     "id": "semantic-scholar-98f5be384d3279545af9b94284995b430c848aaf",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: transient execution RTL fuzzing"
     ],
@@ -7548,7 +8030,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"

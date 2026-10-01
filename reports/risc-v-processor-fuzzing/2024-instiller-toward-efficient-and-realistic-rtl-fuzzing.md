@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Gen Zhang、Pengfei Wang、Tai Yue、Danjun Liu、Yubei Guo、Kai Lu
+- 作者：Gen Zhang、Pengfei Wang、Tai Yue、Dan-Jun Liu、Yu-Bei Guo、Kai Lu
 - 发表日期：2024-01-29
 - 会议/期刊：IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
 - 主分类：RISC-V 处理器 Fuzzing

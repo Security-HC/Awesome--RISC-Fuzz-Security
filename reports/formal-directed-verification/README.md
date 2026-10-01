@@ -1,11 +1,12 @@
 # 形式化与定向处理器验证
 
-本目录仅按主分类收录，共 12 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 13 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
 | 日期 | 论文 | 会议/期刊 | 相关性 | 证据 | 核心贡献 | 链接 |
 |---|---|---|---|---|---|---|
+| 2026-09-19 | [The Agentic Stack Architecture, Coordination, and Governance of Autonomous AI](./2026-the-agentic-stack-architecture-coordination-and-governance-of-autonomous-ai.md) | 未记录 | B·强邻近 | 摘要级 | 待全文核验；当前仅能确认论文题名为《The Agentic Stack Architecture, Coordination, and Governance of Autonomous AI》，初步归入“Formal & Directed Processor Verification”。 原因：未… | [页面](https://doi.org/10.70593/978-81-6632-064-4) / [PDF](https://deepscienceresearch.com/dsr/catalog/download/854/3719/6372) |
 | 2026-09-11 | [Self-Verifying Anomaly Detection using Explainable AI for Cybersecurity of DER Networks](./2026-self-verifying-anomaly-detection-using-explainable-ai-for-cybersecurity-of-der-networks.md) | arXiv | B·强邻近 | 全文核验 | 提出 ExCYDER：面向 DER SOC 的 XAI 自验证异常检测框架。具体：a) 边缘—云分层工作流，边缘用 LightGBM 做实时异常检测并生成告警，云端进行验证与可视化；b) 将 LightGBM 决策规则与 SHAP 特征归因结合，定义 Overlap、Direction、Cover… | [页面](http://arxiv.org/abs/2609.12305v1) / [PDF](https://arxiv.org/pdf/2609.12305v1) |
 | 2026-08-20 | [Engineering the Intelligent Enterprise: The Complete Guide to Data and AI Platform Engineering](./2026-engineering-the-intelligent-enterprise-the-complete-guide-to-data-and-ai-platform-engineer.md) | 未记录 | B·强邻近 | 摘要级 | 待全文核验；当前仅能确认论文题名为《Engineering the Intelligent Enterprise: The Complete Guide to Data and AI Platform Engineering》，初步归入“Formal & Directed Processor Ve… | [页面](https://doi.org/10.70593/978-81-69589-46-8) / [PDF](https://deepscienceresearch.com/dsr/catalog/download/797/3474/6044) |
 | 2026-07-10 | [From RISC to Risk: Exception Handling as a Gateway to Exploitation](./2026-from-risc-to-risk-exception-handling-as-a-gateway-to-exploitation.md) | Computers | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《From RISC to Risk: Exception Handling as a Gateway to Exploitation》，初步归入“Formal & Directed Processor Verification”。 原因：未找到可直接下载的 PD… | [页面](https://doi.org/10.3390/computers15070440) / [PDF](https://www.mdpi.com/2073-431X/15/7/440/pdf?version=1783694420) |

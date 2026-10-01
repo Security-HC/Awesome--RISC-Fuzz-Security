@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Tobias Jauch、Alex Wezel、M. R. Fadiheh、Philipp Schmitz、Sayak Ray、Jason M. Fung、Christopher W. Fletcher、D. Stoffel、W. Kunz
+- 作者：Tobias Jauch、Alex Wezel、M. Fadiheh、Philipp Schmitz、Sayak Ray、Jason M. Fung、Christopher W. Fletcher、D. Stoffel、W. Kunz
 - 发表日期：2023-10-28
 - 会议/期刊：2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)
 - 主分类：微架构安全自动测试

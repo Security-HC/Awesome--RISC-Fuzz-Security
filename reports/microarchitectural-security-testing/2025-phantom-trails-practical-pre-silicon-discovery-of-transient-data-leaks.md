@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Alvise de Faveri Tron、Raphael Isemann、Hany Ragab、Cristiano Giuffrida、K. V. Gleissenthall、Herbert Bos
+- 作者：Alvise de Faveri Tron、Raphael Isemann、Hany Ragab、Cristiano Giuffrida、Klaus von Gleissenthall、Herbert Bos
 - 发表日期：2025
 - 会议/期刊：USENIX Security Symposium
 - 主分类：微架构安全自动测试

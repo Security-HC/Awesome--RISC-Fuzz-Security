@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：G. Abarajithan、Zheng-Hua Ma、Cristian Tirelli、Andres Meza、F. Restuccia、C. Sturton、Ryan Kastner
+- 作者：G Abarajithan、Zhenghua Ma、Cristian Tirelli、Andres Meza、Francesco Restuccia、Cynthia Sturton、Ryan Kastner
 - 发表日期：2026-09-23
-- 会议/期刊：未记录
+- 会议/期刊：arXiv
 - 主分类：RTL 与 SoC 硬件 Fuzzing
 - 相关性：A·直接相关（score=10）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: hardware fuzzing；hardware/processor object: cpu, rtl, soc；verification/fuzzing method: fuzz, verification；security relevance: security
-- 论文页面：[https://www.semanticscholar.org/paper/4ab1e2172f097a417e6385d209c20c870f74aad1](https://www.semanticscholar.org/paper/4ab1e2172f097a417e6385d209c20c870f74aad1)
+- 论文页面：[http://arxiv.org/abs/2609.27300v1](http://arxiv.org/abs/2609.27300v1)
 - PDF：[https://arxiv.org/pdf/2609.27300v1](https://arxiv.org/pdf/2609.27300v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 18 页，提取 96114 字符
 

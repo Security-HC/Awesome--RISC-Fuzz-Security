@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Samuel Moussa、Steven Ibrahim、Ahmad Sudky、A. Fawzy、Abanoub Nabil、Alhassan Sayed、Hossam Hassan、Hyungmin Yoon
+- 作者：Samuel Moussa、Steven Ibrahim、Ahmad Sudky、Ahmad Fawzy、Abanoub Nabil、Alhassan Sayed、Hossam Hassan、Hyung-Min Yoon
 - 发表日期：2026-09-10
-- 会议/期刊：未记录
+- 会议/期刊：arXiv
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=5）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology、Formal & Directed Processor Verification
 - 纳入依据：hardware/processor object: risc-v, rtl；verification/fuzzing method: fuzz, verification, model checking；security relevance: security
-- 论文页面：[https://www.semanticscholar.org/paper/4697ed87a32d00273ac266f94530318fd6619b6d](https://www.semanticscholar.org/paper/4697ed87a32d00273ac266f94530318fd6619b6d)
+- 论文页面：[http://arxiv.org/abs/2609.13311v1](http://arxiv.org/abs/2609.13311v1)
 - PDF：[https://arxiv.org/pdf/2609.13311v1](https://arxiv.org/pdf/2609.13311v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 12 页，提取 66081 字符
 

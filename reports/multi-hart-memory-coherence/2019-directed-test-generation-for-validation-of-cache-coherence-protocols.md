@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Yangdi Lyu、Xiaoke Qin、Mingsong Chen、P. Mishra
+- 作者：Yangdi Lyu、Xiaoke Qin、Ming-Song Chen、Prabhat Mishra
 - 发表日期：2019-01-01
 - 会议/期刊：IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
 - 主分类：多 Hart、内存一致性与缓存一致性

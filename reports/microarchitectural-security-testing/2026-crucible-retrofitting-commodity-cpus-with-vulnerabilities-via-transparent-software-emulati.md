@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Tristan Hornetz、Lukas Gerlach、Michael Schwarz
+- 作者：Tristan Hornetz、L. Gerlach、Michael Schwarz
 - 发表日期：2026-05-18
 - 会议/期刊：IEEE Symposium on Security and Privacy
 - 主分类：微架构安全自动测试

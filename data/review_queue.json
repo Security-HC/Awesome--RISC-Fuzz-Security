@@ -15,7 +15,7 @@
       "Paul A. Mayewski"
     ],
     "categories": [],
-    "content_hash": "54b6254ee2cf4d7011a1fab405c3e3ebc5a02149386876b331a0cf13c9519a65",
+    "content_hash": "ff69612ecf4293725b6ebb2083f0f3c4569f16fa0a05fc6993e65a487306a87f",
     "curation_status": "review",
     "doi": "https://doi.org/10.5194/egusphere-2026-4779",
     "evidence_level": "abstract",
@@ -23,7 +23,7 @@
     "first_seen": "2026-09-29",
     "id": "openalex-w7214110607",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing"
     ],
@@ -37,7 +37,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Ice core",
@@ -61,7 +61,7 @@
     "source_id": "https://openalex.org/W7214110607",
     "title": "Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core",
     "title_key": "preservation of glaciochemical signals in a warming tropical ice cap evidence from the 2022 quelccaya ice core",
-    "updated": "2026-09-26",
+    "updated": "2026-09-30",
     "url": "https://doi.org/10.5194/egusphere-2026-4779",
     "venue": "未记录"
   },
@@ -1679,13 +1679,13 @@
     "authors": [
       "Marleson Graf",
       "Gabriel A. G. Andrade",
-      "Luiz C. V. dos Santos"
+      "L. D. dos Santos"
     ],
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "841dddc16bf114a92fd4fd043708a8ac99c0327d89344a50b09027a0740e2234",
+    "content_hash": "0d61b16dae4aef5dc323262e6bd01cd7cdf5527cb09813e1df10a900147c2f1d",
     "curation_status": "review",
     "doi": "https://doi.org/10.1109/TCAD.2022.3178051",
     "evidence_level": "abstract",
@@ -1693,7 +1693,7 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-e9ec1cd8bddc71ea44ba1f9cd01f44b2e30322e4",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
@@ -1708,7 +1708,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -1953,13 +1953,13 @@
       "Gabriel A. G. Andrade",
       "Marleson Graf",
       "Nícolas Pfeifer",
-      "Luiz C. V. dos Santos"
+      "L. D. dos Santos"
     ],
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "b0323fb35040c62c76645a53d5f0ef1ad1db863543163568a17832befde024ec",
+    "content_hash": "e2cecb3492bd19441ab8ab032bf10146ac5e6a2cabbda0c0518b8627656e6e01",
     "curation_status": "review",
     "doi": "https://doi.org/10.1109/TCAD.2020.2974343",
     "evidence_level": "abstract",
@@ -1967,7 +1967,7 @@
     "first_seen": "2026-08-29",
     "id": "semantic-scholar-ad9d7b1ee04a6b4579fd2919bba684bdef3455de",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: cache coherence directed test generation"
     ],
@@ -1981,7 +1981,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -2366,13 +2366,13 @@
       "Gabriel A. G. Andrade",
       "Marleson Graf",
       "Nícolas Pfeifer",
-      "L. Santos"
+      "L. D. dos Santos"
     ],
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "8bfbfddd73989afdeadaebe32d65a34c0a5912ef3949e2ed390ed7c48e3b7ccb",
+    "content_hash": "3be78b8480e1183707d0bb065dff3543d49a203e98bcdbd383f22fbc06747bc3",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3240765.3240852",
     "evidence_level": "abstract",
@@ -2380,7 +2380,7 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-74cf07f179e0d63f9fc1f509218f02f64858d64d",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
@@ -2395,7 +2395,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -2765,16 +2765,16 @@
     "abstract": "",
     "analysis": {},
     "authors": [
-      "Mingsong Chen",
+      "Ming-Song Chen",
       "Xiaoke Qin",
       "Heon-Mo Koo",
-      "P. Mishra"
+      "Prabhat Mishra"
     ],
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence",
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "d796a353e72038a123628e8709419f46924906f3b56aa190b23488317fe9fce3",
+    "content_hash": "eac25ca1b77dd076f0d3c887b40d8c23800529fd7cb6cc153464587ee60b0e6b",
     "curation_status": "review",
     "doi": "https://doi.org/10.1007/978-1-4614-1359-2_11",
     "evidence_level": "metadata",
@@ -2782,7 +2782,7 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-b0a10e399798654855907b170f4b49f55f144b42",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-01",
     "matched_queries": [
       "Semantic Scholar: cache coherence directed test generation",
       "Semantic Scholar: cache coherence transition coverage verification"
@@ -2797,7 +2797,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"

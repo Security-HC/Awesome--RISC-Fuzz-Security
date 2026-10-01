@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Jan Drescher、David Klein、Martin Johns
+- 作者：Jan Drescher、David A. Klein、Martin Johns
 - 发表日期：2026-01-01
 - 会议/期刊：未记录
 - 主分类：微架构安全自动测试
