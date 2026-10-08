@@ -1,6 +1,6 @@
 # 覆盖、Oracle 与 Fuzzing 方法
 
-本目录仅按主分类收录，共 14 篇；论文不会因多个关键词而在多个类别中重复出现。
+本目录仅按主分类收录，共 15 篇；论文不会因多个关键词而在多个类别中重复出现。
 
 [返回总表](../README.md)
 
@@ -11,6 +11,7 @@
 | 2026-06-11 | [Information Flow Paths from RTL Traces](./2026-information-flow-paths-from-rtl-traces.md) | arXiv | B·强邻近 | 全文核验 | 提出从RTL跟踪数据构建信息流路径的算法，包括时间流提取、图构建、候选边推广和路径回环；实现并应用于PicoRV32，发现实际漏洞路径。 | [页面](http://arxiv.org/abs/2606.13860v1) / [PDF](https://arxiv.org/pdf/2606.13860v1) |
 | 2026-04-16 | [Emulation-based System-on-Chip Security Verification: Challenges and Opportunities](./2026-emulation-based-system-on-chip-security-verification-challenges-and-opportunities.md) | arXiv | B·强邻近 | 全文核验 | 1）厘清了硬件仿真在SoC安全验证中的定位；2）提出了ESV工作流的三维分类法（刺激驱动、引擎集成、可观测性）；3）分析了工程权衡和主要挑战；4）指出了未来研究方向和开放问题。 | [页面](http://arxiv.org/abs/2604.15073v1) / [PDF](https://arxiv.org/pdf/2604.15073v1) |
 | 2025-09-23 | [Semantic-Aware Fuzzing: An Empirical Framework for LLM-Guided, Reasoning-Driven Input Mutation](./2025-semantic-aware-fuzzing-an-empirical-framework-for-llm-guided-reasoning-driven-input-mutati.md) | arXiv | A·直接相关 | 全文核验 | 开源微服务框架集成推理LLM与AFL++；首次系统比较不同shot策略和四个推理LLM；发现平衡语法正确性和多样性重要；提供经验性基线。 | [页面](http://arxiv.org/abs/2509.19533v1) / [PDF](https://arxiv.org/pdf/2509.19533v1) |
+| 2025-06-22 | [IntraFuzz: Coverage-Guided Intra-Enclave Fuzzing for Intel SGX Applications](./2025-intrafuzz-coverage-guided-intra-enclave-fuzzing-for-intel-sgx-applications.md) | Design Automation Conference | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《IntraFuzz: Coverage-Guided Intra-Enclave Fuzzing for Intel SGX Applications》，初步归入“Coverage, Oracles & Fuzzing Methodology”。 原因：未找到可… | [页面](https://doi.org/10.1109/DAC63849.2025.11132848) |
 | 2024-10-27 | [HybriDIFT: Scalable Memory-Aware Dynamic Information Flow Tracking for Hardware](./2024-hybridift-scalable-memory-aware-dynamic-information-flow-tracking-for-hardware.md) | 未记录 | A·直接相关 | 摘要级 | 待全文核验；当前仅能确认论文题名为《HybriDIFT: Scalable Memory-Aware Dynamic Information Flow Tracking for Hardware》，初步归入“Coverage, Oracles & Fuzzing Methodology”。 原因：… | [页面](https://doi.org/10.1145/3676536.3676658) / [PDF](https://dl.acm.org/doi/pdf/10.1145/3676536.3676658) |
 | 2024-01-29 | [Data-Oblivious ML Accelerators using Hardware Security Extensions](./2024-data-oblivious-ml-accelerators-using-hardware-security-extensions.md) | arXiv | A·直接相关 | 全文核验 | 1. 首次将 BliMe 的 DIFT 扩展到矩阵乘法加速器（Gemmini），实现端到端数据机密性保证；2. 提出行粒度 DIFT 优化，利用脉动阵列的固定行为减少面积开销（相对通用 CPU DIFT）；3. 集成到 Chipyard 并评估实际 ML 工作负载，显示低开销；4. 扩展 BliM… | [页面](http://arxiv.org/abs/2401.16583v1) / [PDF](https://arxiv.org/pdf/2401.16583v1) |
 | 2023-07-26 | [PSOFuzz: Fuzzing Processors with Particle Swarm Optimization](./2023-psofuzz-fuzzing-processors-with-particle-swarm-optimization.md) | arXiv | A·直接相关 | 全文核验 | 1) 首次将PSO用于硬件fuzzing的变异操作符调度和种子生成；2) 解决PSO应用于硬件fuzzing的挑战：粒子饱和问题（重置策略）和无效种子生成（PSO种子生成）；3) 实验验证在三个处理器上加速漏洞检测和覆盖率。 | [页面](http://arxiv.org/abs/2307.14480v2) / [PDF](https://arxiv.org/pdf/2307.14480v2) |

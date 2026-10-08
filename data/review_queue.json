@@ -1568,7 +1568,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "a7203ad6077c66a6810b04faa21d52b7d3c0cfff6ca745ae3225448e36765ce2",
+    "content_hash": "692dcbafea46d6b5adac78ef04eb438c5b35846f2509b31769d7041b5258d8f7",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1576,7 +1576,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1590,7 +1590,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1625,9 +1625,9 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-08-25",
+    "updated": "2026-10-06",
     "url": "https://doi.org/10.1145/3579371.3589087",
-    "venue": "未记录"
+    "venue": "Proceedings - International Symposium on Computer Architecture/Proceedings"
   },
   {
     "abstract": "Concolic testing is a scalable solution for automated generation of directed tests for validation of hardware designs. Unfortunately, concolic testing also fails to cover complex corner cases such as hard-to-activate branches. In this paper, we propose an incremental concolic testing technique to cover hard-to-activate branches in register-transfer level models. We show that a complex branch condition can be viewed as a sequence of easy-to-activate events. We map the branch coverage problem to the coverage of a sequence of events. We propose an efficient algorithm to cover the sequence of events using concolic testing. Specifically, the test generated to activate the current event is used as the starting point to activate the next event in the sequence. Experimental results demonstrate that our approach can be used to generate directed tests to cover complex corner cases while state-of-the-art methods fail to activate them.",
@@ -1788,9 +1788,10 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-562a5c3164bebf082c367539040e88143676ad18",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-10-08",
     "matched_queries": [
-      "Semantic Scholar: RISC-V processor verification benchmark artifact"
+      "Semantic Scholar: RISC-V processor verification benchmark artifact",
+      "Semantic Scholar: processor fuzzing coverage guided RTL"
     ],
     "pdf_url": "",
     "primary_category": "Coverage, Oracles & Fuzzing Methodology",
@@ -1802,7 +1803,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [],
     "source_id": "562a5c3164bebf082c367539040e88143676ad18",
@@ -2044,12 +2045,12 @@
     "authors": [
       "Gabriel A. G. Andrade",
       "Marleson Graf",
-      "Luiz C. V. dos Santos"
+      "L. D. dos Santos"
     ],
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "f74a54c438be77b291867316ecb02366eceffad5c6c90688969cd3151d8cfb57",
+    "content_hash": "21db4033fd9b7daea069fe0592bb947a6c16394ea6dbfb8eeec49a882bc2c0ef",
     "curation_status": "review",
     "doi": "https://doi.org/10.1109/TCAD.2019.2894376",
     "evidence_level": "abstract",
@@ -2057,7 +2058,7 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-0f63f2ace326d316a66ec9494328c0c644bc50a3",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
@@ -2071,7 +2072,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -2595,7 +2596,7 @@
       "Abderahman Kriouile"
     ],
     "categories": [],
-    "content_hash": "06a61de2c8c6cfbba83d230404fa0e62f60a60906ba23445e2ae2f7062f896fc",
+    "content_hash": "a858c03cefd3e9d45e054674d33806362986db01e94f807984995c8473f8cb11",
     "curation_status": "review",
     "doi": "https://doi.org/10.70675/f79a290azc193z4d7fza536zffe11157794b",
     "evidence_level": "abstract",
@@ -2603,11 +2604,11 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-dd25604632bb01735ac40c77030706d6c4d9cb15",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "Semantic Scholar: cache coherence transition coverage verification"
     ],
-    "pdf_url": "",
+    "pdf_url": "https://theses.hal.science/tel-01280455v1/file/KRIOUILE_2015_archivage.pdf",
     "primary_category": "",
     "published": "2015-09-17",
     "relevance_reasons": [
@@ -2617,7 +2618,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"

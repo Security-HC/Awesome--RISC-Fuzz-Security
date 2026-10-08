@@ -4,7 +4,7 @@
 
 - 作者：Chen Chen、Zaiyan Xu、Mohamadreza Rostami、David Liu、Dileep M. Kalathil、Ahmad‐Reza Sadeghi、Jeyavijayan Rajendran
 - 发表日期：2026-01-01
-- 会议/期刊：未记录
+- 会议/期刊：Network and Distributed System Security Symposium
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=100）
 - 证据等级：全文核验

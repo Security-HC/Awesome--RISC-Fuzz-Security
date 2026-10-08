@@ -1,23 +1,23 @@
-# FuzzWiz - Fuzzing Framework for Efficient Hardware Coverage
+# FuzzWiz -- Fuzzing Framework for Efficient Hardware Coverage
 
 ## 基本信息
 
-- 作者：Deepak Narayan Gadde、Aman Kumar、Djones Vinicius Lettnin、Sebastian Simon
-- 发表日期：2024-11-07
-- 会议/期刊：未记录
+- 作者：Deepak Narayan Gadde、Aman Kumar、Djones Lettnin、Sebastian Simon
+- 发表日期：2024-10-23
+- 会议/期刊：arXiv
 - 主分类：RTL 与 SoC 硬件 Fuzzing
 - 相关性：B·强邻近（score=7）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in abstract: hardware fuzzing；hardware/processor object: rtl, system-on-chip, soc；verification/fuzzing method: fuzz, verification
-- 论文页面：[https://doi.org/10.1109/isetc63109.2024.10797245](https://doi.org/10.1109/isetc63109.2024.10797245)
-- PDF：[https://arxiv.org/pdf/2410.17732](https://arxiv.org/pdf/2410.17732)
+- 论文页面：[http://arxiv.org/abs/2410.17732v1](http://arxiv.org/abs/2410.17732v1)
+- PDF：[https://arxiv.org/pdf/2410.17732v1](https://arxiv.org/pdf/2410.17732v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 5 页，提取 30001 字符
 
 ## 摘要
 
-Ever-increasing design complexity of System-on-Chips (SoCs) led to significant verification challenges. Unlike software, bugs in hardware design are vigorous and eternal i.e., once the hardware is fabricated, it cannot be repaired with any patch. Despite being one of the powerful techniques used in verification, the dynamic random approach cannot give confidence to complex Register Transfer Level (RTL) designs during the pre-silicon design phase. In particular, achieving coverage targets and exposing bugs is a complicated task with random simulations. In this paper, we leverage an existing testing solution available in the software world known as fuzzing and apply it to hardware verification in order to achieve coverage targets in quick time. We created an automated hardware fuzzing framework FuzzWiz using metamodeling and Python to achieve coverage goals faster. It includes parsing the RTL design module, converting it into C/C++ models, creating generic testbench with assertions, fuzzer-specific compilation, linking, and fuzzing. Furthermore, it is configurable and provides the debug flow if any crash is detected during the fuzzing process. The proposed framework is applied on four IP blocks from Google's OpenTitan chip with various fuzzing engines to show its scalability and compatibility. Our benchmarking results show that we could achieve around 90 % of the coverage 10 times faster than traditional simulation regression based approach.
+Ever-increasing design complexity of System-on-Chips (SoCs) led to significant verification challenges. Unlike software, bugs in hardware design are vigorous and eternal i.e., once the hardware is fabricated, it cannot be repaired with any patch. Despite being one of the powerful techniques used in verification, the dynamic random approach cannot give confidence to complex Register Transfer Leve (RTL) designs during the pre-silicon design phase. In particular, achieving coverage targets and exposing bugs is a complicated task with random simulations. In this paper, we leverage an existing testing solution available in the software world known as fuzzing and apply it to hardware verification in order to achieve coverage targets in quick time. We created an automated hardware fuzzing framework FuzzWiz using metamodeling and Python to achieve coverage goals faster. It includes parsing the RTL design module, converting it into C/C++ models, creating generic testbench with assertions, fuzzer-specific compilation, linking, and fuzzing. Furthermore, it is configurable and provides the debug flow if any crash is detected during the fuzzing process. The proposed framework is applied on four IP blocks from Google's OpenTitan chip with various fuzzing engines to show its scalability and compatibility. Our benchmarking results show that we could achieve around 90% of the coverage 10 times faster than traditional simulation regression based approach.
 
 ## 研究问题
 

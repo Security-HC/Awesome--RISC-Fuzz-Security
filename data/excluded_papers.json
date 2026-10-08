@@ -1,5 +1,402 @@
 [
   {
+    "abstract": "Automated program repair (APR) research has been constrained to design time. Current techniques localize and fix bugs in Register- Transfer Level (RTL) or High Level Synthesis (HLS) designs before a chip reaches production. Once a hardware vulnerability surfaces post-silicon, the patch content must be manually generated. Exist- ing automation methods address patch deployment but not patch synthesis. Based on established pre-silicon APR methods, we study the feasibility of extending to this firmware layer a dictionary- guided, localize-synthesize-validate APR methodology originally developed for RTL repair. An automated commit-clustering miner surfaces recurring fix templates across the EDK II (UEFI) firmware repository’s full commit history without depending on previously known Common Vulnerabilities and Exposures (CVE) identifiers, recovering all three known CVE-fix campaigns and surfacing two additional candidate bug families. Grounding our detectors in real fix evidence, we build four independent localizers: missing specu- lation barriers in C (CVE-2017-5753, Spectre v1), missing bounds checks before array writes in C (decompression library CVE), miss- ing Return Stack Buffer (RSB)-stuffing macro calls in x86 assembly (CVE-2017-5715), and missing integer-overflow guards in Hand-Off Block (HOB) creation C code (surfaced by the miner itself). All four achieve 100% recall; precision ranges from 2.1–15.5% on the C families to 100% on the assembly and HOB families. We perform root-cause analysis for the C-family false positives mechanically, which attributes 77–90% to two intra-procedural causes, isolating the inter-procedural alias-analysis gap as a measured 15–20% rather than an estimate. A held-out test confirms Spectre v1 localization holds at 100% recall on unseen files; a fifth, independently built dictionary entry (CVE-2018-3630) shows the methodology extends to a new bug signature at low added cost; and a naive syntactic baseline recalls at most 14% where our targeted detector recalls 100%. We frame these results within a broader research agenda for a unified hardware-to-firmware correctness lifecycle",
+    "analysis": {},
+    "authors": [
+      "Maisha Mastora",
+      "Dean Sullivan"
+    ],
+    "categories": [],
+    "content_hash": "78db8e11713220c8b2d236648a96d95416050537d42912eb02540d36205036ef",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3842651.3843185",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: rtl; security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7207660843",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: processor fuzzing coverage guided RTL"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3842651.3843185",
+    "primary_category": "",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Firmware",
+      "Computer science",
+      "Block (permutation group theory)",
+      "Pipeline (software)",
+      "Frame (networking)",
+      "Header",
+      "Embedded system",
+      "Missing data",
+      "Operating system",
+      "Malware",
+      "Reverse engineering",
+      "USable",
+      "Malware analysis",
+      "Firewall (physics)",
+      "Event (particle physics)",
+      "Microarchitecture",
+      "Buffer overflow",
+      "Reuse",
+      "Automation",
+      "Fuzz testing",
+      "Tree traversal",
+      "Engineering",
+      "Computer hardware",
+      "Vulnerability (computing)",
+      "Software",
+      "False positive paradox",
+      "Symbolic execution",
+      "Software bug",
+      "Signature (topology)",
+      "False positives and false negatives",
+      "Code (set theory)"
+    ],
+    "source_id": "https://openalex.org/W7207660843",
+    "title": "From Silicon to Boot Code: Extending Automated Program Repair to Firmware-Layer Security Workarounds",
+    "title_key": "from silicon to boot code extending automated program repair to firmware layer security workarounds",
+    "updated": "2026-10-03",
+    "url": "https://doi.org/10.1145/3842651.3843185",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Standing waves on river surfaces encode flow velocity and depth through the dispersion relation, but their use for non-contact monitoring has been limited to wavelength and frequency because no field-deployable method resolves the three-dimensional water-surface geometry, including wave amplitude. We introduce a novel inverse-modeling framework that reconstructs time-averaged water-surface geometry from a single oblique camera by treating angular deviations of tracked surface flow paths from the streamwise direction as a signature of local surface slope. Synthetic tests recovered imposed wavelengths to within 5% in 35 of 39 cases and reproduced amplitude trends. Applied to thirteen videos of a gravel-bed river spanning 15-123 m 3 s -1 , the method yielded coherent standing-wave fields for eleven cases, with wavelengths of 1.2-4.8 m and amplitudes of 0.025-0.105 m that increased with flow discharge. Wavelength-derived surface velocities tracked image-velocimetry estimates closely (r = 0.94) but exceeded them by a median of 11%, consistent with feature tracking being biased low in the presence of stationary waves. Because the dispersion relation is saturated at the observed relative depths (kh≈3-8), this modest bias is amplified into depth underestimation dependent on the velocity profile model used. The power-function profile formulation yielded the smallest error of 0.47 m. Combining wavelength with amplitude in an empirical relation estimated depth with a root-mean-square deviation of 13% under cross-validation. This demonstrates the potential for the information carried by wave amplitude to be used to refine depth estimates.",
+    "analysis": {},
+    "authors": [
+      "Matthew Thomas Perks",
+      "Giulio Dolcetti"
+    ],
+    "categories": [],
+    "content_hash": "d79cda854b57dbf7b6994056ae6c7735af2ac9ed25510de150caec70758ff860",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.22541/essoar.15009796/v1",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7215946131",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://essopenarchive.org/doi/pdf/10.22541/essoar.15009796/v1",
+    "primary_category": "",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Amplitude",
+      "Wavelength",
+      "Dispersion (optics)",
+      "Geometry",
+      "Geology",
+      "Inverse",
+      "Flow (mathematics)",
+      "Optics",
+      "Surface (topology)",
+      "Inverse problem",
+      "Tracking (education)",
+      "Surface wave",
+      "Feature (linguistics)",
+      "Dispersion relation",
+      "Geodesy",
+      "Ranging",
+      "Mathematics",
+      "Mean flow",
+      "Monocular",
+      "Remote sensing",
+      "Flow velocity",
+      "Geometrical optics",
+      "Approximation error",
+      "Synthetic data",
+      "Oblique case"
+    ],
+    "source_id": "https://openalex.org/W7215946131",
+    "title": "Water-surface geometry reconstruction for non-contact river flow monitoring through monocular imagery and inverse modeling",
+    "title_key": "water surface geometry reconstruction for non contact river flow monitoring through monocular imagery and inverse modeling",
+    "updated": "2026-10-07",
+    "url": "https://doi.org/10.22541/essoar.15009796/v1",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Welcome from the ChairsWelcome to the 2nd International Workshop on Language Models and Programming Languages (LMPL 2026), co-located with SPLASH/ISSTA 2026 in Oakland, California, USA.LMPL brings together the programming languages and AI communities to explore how large language models and programming language techniques can inform and advance each other in program analysis, verification, synthesis, testing, and optimization.As LMPL enters its second year, we are excited to see continued growth in this area.We envision the workshop as a forum for researchers from diverse backgrounds to exchange ideas, explore connections between established PL techniques and emerging generative AI approaches, and develop new research directions.This year, we solicited two types of submissions: research papers (8-12 pages) and extended abstracts (1-4 pages).Authors of accepted research papers could choose to include their papers in the proceedings.Extended abstracts provided a venue for work in progress and position papers, with presentation at the workshop but no inclusion in the proceedings.We received 22",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "b1a66bd4669d421a1f1e8108857a0bb07cb1853c1654ef07b306ca4a84e40e55",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843750",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7216260891",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing",
+      "OpenAlex: memory consistency checker processor trace",
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843750?download=true",
+    "primary_category": "",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 3,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Programming language",
+      "Computer science",
+      "Fifth-generation programming language",
+      "Software engineering",
+      "Modeling language",
+      "Constructed language",
+      "Programming paradigm",
+      "Natural language processing",
+      "Artificial intelligence",
+      "Natural language",
+      "Linguistics"
+    ],
+    "source_id": "https://openalex.org/W7216260891",
+    "title": "Proceedings of the 2nd ACM SIGPLAN International Workshop on Language Models and Programming Languages",
+    "title_key": "proceedings of the 2nd acm sigplan international workshop on language models and programming languages",
+    "updated": "2026-10-05",
+    "url": "https://doi.org/10.1145/3843750",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Database migration involves translating schemas, data, and queries from one database system to another. Query translation, a key step in this process, is widely practiced but error-prone: subtle semantic differences between SQL dialects can cause silent data corruption and incorrect query results. As migrations increasingly rely on LLMs, the translated queries lack equivalence validations. Existing formal verification tools cannot handle the full range of features in SQL dialects, and differential testing provides no confidence measure when all tests pass. We propose LAMT, an LLM-assisted mutation-score-guided testing approach that addresses both problems. Given a pair of pre-migration and post-migration SQL queries, LAMT operates as an adversarial loop: an LLM table generator produces test data aimed at killing query mutants, i.e., exposing behavioral differences, while an LLM query generator produces mutants that attempt to evade detection by the current test suite. The resulting mutation score is then calibrated into a confidence threshold that estimates the risk of undetected non-equivalent pairs. We evaluate LAMT on 1,035 cross-dialect migration pairs spanning three dialect pairs. Query-aware table generation reduces the average false negative rate from 58.3% to 20.0% with 4 more generated tables. The mutation score calibration provides directional confidence estimates, though a gap between estimated and true FNR remains, particularly for weaker models.",
+    "analysis": {},
+    "authors": [
+      "Yuhao Zhang",
+      "Sayan Ghosh",
+      "Amit Kachroo",
+      "Jun Huan"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "91a4a9b3d3ee209209f17e8053821504ae50a622fe962446cf742c8055045f81",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843750.3843845",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: differential testing, verification, validation, formal verification; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7215791524",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843750.3843845?download=true",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "verification/fuzzing method: differential testing, verification, validation, formal verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "SQL",
+      "Generator (circuit theory)",
+      "Data mining",
+      "Table (database)",
+      "Equivalence (formal languages)",
+      "Query by Example",
+      "Database",
+      "Database security",
+      "Fuzz testing",
+      "Query language",
+      "Key (lock)",
+      "Measure (data warehouse)",
+      "Calibration",
+      "Range (aeronautics)",
+      "Query optimization",
+      "Online aggregation",
+      "Test case",
+      "Test data",
+      "Information retrieval",
+      "Artificial intelligence",
+      "View"
+    ],
+    "source_id": "https://openalex.org/W7215791524",
+    "title": "Detecting Database Migration Non-equivalence through LLM-Assisted Mutation-Score-Guided Testing",
+    "title_key": "detecting database migration non equivalence through llm assisted mutation score guided testing",
+    "updated": "2026-10-05",
+    "url": "https://doi.org/10.1145/3843750.3843845",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "The increasing scale of System-on-Chip (SoC) architectures exacerbates the reliability risks of single-particle radiation effects, rendering traditional exhaustive gate-level fault injection prohibitively slow. To address this, we propose SSRESF-OPT, an end-to-end simulation and optimization framework combining accelerated dynamic fault injection with machine learning-driven prediction. The framework first introduces a cross-layer static binding mechanism to eliminate runtime string resolution, reducing per-injection simulation overhead to \\(\\mathcal {O}(1) \\) complexity. Building on this optimized engine, an SVM-based classification pipeline, guided by structural clustering, accurately predicts the radiation vulnerability of unsimulated circuit nodes using netlist-derived features. To maximize resource efficiency, an OPT-based top- k hardening strategy is then employed to prioritize critical architectural bottlenecks. Evaluations across 15 gate-level netlists, including massive AES subsystems and RISC-V PULP SoCs, demonstrate the framework’s efficacy. The model-assisted approach achieves an average end-to-end runtime speedup of 6.35 × over the highly optimized simulation baseline while maintaining a 94.58% prediction accuracy. Furthermore, hardening only the top 10% of ranked nodes reduces system Soft Error Rate (SER) by 85%, providing a fast and actionable methodology for radiation-hardened microprocessor design.",
+    "analysis": {},
+    "authors": [
+      "Meng Liu",
+      "Liang Wang",
+      "Boan Chen",
+      "Fei Xiao",
+      "Peng Huixin",
+      "Zhe Li"
+    ],
+    "categories": [],
+    "content_hash": "3fbe93dba0b5c38e072b4eb62425fd272ee87ee87d32168dcea6ad62a0ec846d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3849812",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, processor, system-on-chip, soc; security relevance: vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7216028476",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3849812?download=true",
+    "primary_category": "",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, system-on-chip, soc",
+      "security relevance: vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Fault injection",
+      "Speedup",
+      "Rendering (computer graphics)",
+      "Soft error",
+      "Microprocessor",
+      "Embedding",
+      "Computer engineering",
+      "Fault Simulator",
+      "Simulated annealing",
+      "Overhead (engineering)",
+      "Software",
+      "Reliability (semiconductor)",
+      "Machine learning",
+      "Embedded system",
+      "Artificial intelligence",
+      "Fault (geology)",
+      "Reliability engineering",
+      "Probabilistic logic",
+      "Optimization algorithm",
+      "Real-time computing",
+      "Optimization problem"
+    ],
+    "source_id": "https://openalex.org/W7216028476",
+    "title": "SSRESF-OPT: A Sensitivity-Aware Framework for Single-Particle Radiation Effects Simulation and Optimization in SoC Platforms Using Machine Learning",
+    "title_key": "ssresf opt a sensitivity aware framework for single particle radiation effects simulation and optimization in soc platforms using machine learning",
+    "updated": "2026-10-05",
+    "url": "https://doi.org/10.1145/3849812",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems"
+  },
+  {
+    "abstract": "This is written for engineers and engineering leaders who build software in regulated financial environments and who are already using AI coding assistants, whether or not their institution has decided that they may. If you are a developer working in payments, core banking, lending or any system that touches customer financial data, Parts I and II are about what the tools do not know and why that matters more here than elsewhere. Part III is the practical core: how to build a control that holds. If you lead an engineering function, Part IV is the part written for you. Policy, training, provenance, deployment and the conversation you will eventually have with an examiner. Chapter 14 in particular is about why most policies in this area fail, which is a design problem rather than a compliance one. If you work in compliance, risk or audit and are trying to understand what your engineers are actually doing, Chapters 1 through 3 will tell you why this is different from the software risk you already govern, and Chapter 18 describes what a defensible position looks like. Some assumptions. I assume you can read code, the listings are short and in C# or YAML, and the argument survives if you skim them. I assume familiarity with the frameworks by name rather than by section number; where a specific requirement matters I have cited it. I do not assume you have read PCI DSS in full, because almost nobody has, and Chapter 1 argues that this is precisely the problem. A note on scope. The book covers four regimes: PCI DSS, the Bank Secrecy Act and anti-money-laundering rules, Sarbanes-Oxley, and the Gramm-Leach-Bliley Act. These are the ones I have worked under and can speak to from experience. Institutions operating under other frameworks will find the architecture transfers and the specifics do not. What this book is not: a compliance manual, a survey of the field, or a prediction about where the technology goes. Chapter 19 is as far forward as I am willing to look, and it is deliberately the least confident chapter in the book.",
+    "analysis": {},
+    "authors": [
+      "Ashutosh Pal"
+    ],
+    "categories": [],
+    "content_hash": "ee286c9eaa6477743a5f1b88c28e3943fcdba61c63bc326d3d9f5c3997d7cdb5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70593/978-81-6632-094-1",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7216265819",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://deepscienceresearch.com/dsr/catalog/download/888/3834/6476",
+    "primary_category": "",
+    "published": "2026-09-30",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Financial institution",
+      "nobody",
+      "Computer science",
+      "Conversation",
+      "Software deployment",
+      "Software",
+      "Coding (social sciences)",
+      "Audit",
+      "Software engineering",
+      "Work (physics)",
+      "Position paper",
+      "Engineering",
+      "Mistake",
+      "Code (set theory)",
+      "Payment",
+      "Position (finance)",
+      "Counterexample",
+      "Need to know",
+      "Software system",
+      "Core (optical fiber)",
+      "Software development",
+      "Accounts receivable",
+      "Computer security",
+      "Institution",
+      "Risk analysis (engineering)",
+      "Source code",
+      "Finance",
+      "Secure coding",
+      "Financial services",
+      "Payroll",
+      "Secrecy",
+      "Revenue",
+      "Argument (complex analysis)"
+    ],
+    "source_id": "https://openalex.org/W7216265819",
+    "title": "Code You Didn't Write, Risk You Still Own: Governing LLM Coding Assistants in Regulated Financial Software",
+    "title_key": "code you didn t write risk you still own governing llm coding assistants in regulated financial software",
+    "updated": "2026-10-05",
+    "url": "https://doi.org/10.70593/978-81-6632-094-1",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Google AI Overviews (AIOs) are arguably the most widely encountered deployment of generative AI, reaching over 2 billion users who may not realize the answers they see are AI-generated. Where search engines have traditionally surfaced ranked sources and left users to evaluate them, AIOs synthesize and deliver a single answer — giving Google unprecedented editorial control over what users read and know. We present a large-scale longitudinal measurement study, issuing 55,393 trending queries across 19 topical categories over a 40-day window (March 13–April 21, 2026). We report four main findings. First, overall AIO activation is 13.7%, rising to 64.7% for question-form queries, while politically sensitive topics see markedly lower rates. Second, AIO-cited domains are more credible than co-displayed first-page results, yet nearly 30% do not appear in those results at all, indicating a source selection mechanism distinct from Google's ranking algorithm. Third, decomposing responses into 98,020 atomic claims, 11.0% are unsupported by the cited pages — with omission the dominant failure mode — and source quality and claim fidelity are largely independent. Fourth, well over half of AIO-cited pages carry display advertising, meaning publishers lose revenue when AIOs suppress the click-through, even as Google's own sponsored ads continue to appear on the same page. Together, these findings document a rapid transformation of the online information ecosystem whose consequences for epistemic security remain poorly understood.",
     "analysis": {},
     "authors": [
@@ -150,7 +547,7 @@
       "Mohammed Ameen Saleh Al-Bareda"
     ],
     "categories": [],
-    "content_hash": "04b4620d650ae4fd49e61e6bdc3176c5cd36b22a34a9f29431359fffc81f8eff",
+    "content_hash": "f58a7108cfd644d2e92e2e66de3cf974c4d06c71fdcbf58369e02b01a79ec28e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.59628/jast.v4i9.2816",
     "evidence_level": "abstract",
@@ -158,7 +555,7 @@
     "first_seen": "2026-10-01",
     "id": "openalex-w7214639222",
     "included": false,
-    "last_seen": "2026-10-01",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: formal assisted processor fuzzing",
       "OpenAlex: processor fuzzer automatic bug injection"
@@ -174,7 +571,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer security",
@@ -204,7 +601,7 @@
     "source_id": "https://openalex.org/W7214639222",
     "title": "An Analytical Framework for Wi-Fi Network Attacks and Protection Techniques.",
     "title_key": "an analytical framework for wi fi network attacks and protection techniques",
-    "updated": "2026-09-30",
+    "updated": "2026-10-07",
     "url": "https://doi.org/10.59628/jast.v4i9.2816",
     "venue": "مجلة جامعة صنعاء للعلوم التطبيقية والتكنولوجيا"
   },
@@ -3689,6 +4086,66 @@
     "venue": "未记录"
   },
   {
+    "abstract": "The vast majority of hardware platforms are integrated into embedded systems, making them a strong driver for innovations, for example, in the health, energy, and mobility sectors. Many types of embedded systems are characterized by their stringent resource constraints: While the software of embedded real-time systems must fulfill timing constraints and guarantee that deadlines are met, battery-operated or batteryless/energy-harvesting devices similarly demand reliable execution under strict energy budgets. Likewise, limited memory creates challenges for running applications with substantial code and data requirements. With a generic view on the topic of resource limits in embedded systems, this cumulative habilitation treatise further aims to advance more sustainable, carbon-aware systems. Within these four types of resource constraints (i.e., time, energy, memory, and carbon), a main focus of this treatise is on providing provably safe execution for target applications while minimizing the resources required for this execution. Targeting these four types of resource constraints, I have concentrated on three overlapping subject areas over the last years with the eventual goal of making embedded systems more reliable and/or more efficient. These areas comprise (1) analysis and (2) optimization techniques for (3) the design and implementation of embedded systems that execute within resource limits. This cumulative habilitation treatise, which covers 12 peer-reviewed papers, first describes static and dynamic program analysis techniques to determine worst-case behaviors of program code. Second, based on previously identified analysis results, optimization techniques exploit tradeoffs in order to find resource-optimized configurations of systems. Third, this work presents several embedded systems where both the analysis and optimization techniques are utilized. The development of techniques and abstractions that comprehensively address the three overlapping subject areas is the central goal of this treatise.",
+    "analysis": {},
+    "authors": [
+      "Peter Wägemann"
+    ],
+    "categories": [],
+    "content_hash": "72f38e689104c88bb194ef52e143c0ad70ab89e9c4c3e181dbf0f6e85c71c4f2",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.25593/open-fau-3465",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "openalex-w7214468885",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing"
+    ],
+    "pdf_url": "https://d-nb.info/1421012545/34",
+    "primary_category": "",
+    "published": "2026-07-03",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Embedded system",
+      "Exploit",
+      "Resource (disambiguation)",
+      "Distributed computing",
+      "Embedded software",
+      "Software",
+      "Resource allocation",
+      "Focus (optics)",
+      "Embedded operating system",
+      "Resource management (computing)",
+      "Static analysis",
+      "Resource constraints",
+      "Software system",
+      "Code (set theory)",
+      "Scheduling (production processes)",
+      "Avionics software",
+      "Adaptation (eye)",
+      "Program analysis",
+      "Real-time computing",
+      "Program optimization"
+    ],
+    "source_id": "https://openalex.org/W7214468885",
+    "title": "Embedded Systems Under Resource Limits",
+    "title_key": "embedded systems under resource limits",
+    "updated": "2026-10-06",
+    "url": "https://doi.org/10.25593/open-fau-3465",
+    "venue": "未记录"
+  },
+  {
     "abstract": "When should an AI system's answer be trusted? Formal proof assistants offer certainty but cannot reach most of the problem distribution; scalar LLM judges offer coverage but produce opaque scores that cannot be audited after the fact and are subject to the same coherence issues as any LLM. We present Theoria, a verification architecture that closes this gap. A candidate solution is rewritten into a sequence of typed state transitions, each licensed by an explicit justification, whether that be a citation, computation, or problem-given fact, and every transition is independently auditable. The foundational invariant is completeness of change: every difference between consecutive proof states must be accounted for, so hidden premises surface as unlicensed mutations rather than passing silently. On HLE-Verified Gold (185 text-only expert problems), Theoria certifies 105 at 91.4% strict precision (Wilson 95% CI [84.5%, 95.4%]). Every certification produces a human readable proof trace in which each step can be independently challenged. Holistic LLM judges achieve comparable precision at matched coverage but fail on different problems (Jaccard 0.14-0.36), making the approaches complementary. On 95 adversarial poisoned proofs across 15 domains, structured judges catch 94.7% versus 83.2% for holistic judging (p= 0.0017). The overall 11.5 pp gap concentrates in hidden premises (90.6% vs. 62.5%, a 28 pp difference) and fabricated citations (100% vs. 90%), the error classes where the formal analysis predicts an advantage; performance is identical on arithmetic and theorem-misapplication errors, where no advantage is predicted. On GPQA Diamond (n= 65), certified precision is 97.1% (Wilson CI [85.1%, 99.5%]).",
     "analysis": {},
     "authors": [
@@ -5296,7 +5753,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "0a79bfe459f62afe554882d3fcdb443b7421055d11a00ce7c9d1db075cf472e0",
+    "content_hash": "7c1e1cbb65ff6d023ff56c5b0deec5158123e0910affd4ffbaaa05351caad25f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -5304,7 +5761,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -5318,7 +5775,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -5352,7 +5809,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-09-25",
+    "updated": "2026-10-01",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -5643,7 +6100,7 @@
       "Luke Geeson"
     ],
     "categories": [],
-    "content_hash": "41541c335430893e0140b697f726ffffae1e731edc07929968eac4c56ab5b9b6",
+    "content_hash": "0224432e209e2708b955b2f4ba8d68063f910eb34e64765eeba24515fd783427",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -5651,7 +6108,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -5664,7 +6121,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5688,42 +6145,43 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-09-25",
+    "updated": "2026-10-01",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
   {
-    "abstract": "Securityboundary, as each CPU runs its own firmware [47], [29].While firmware is individual per CPU, remaining hardware such as memory and peripherals are shared among CPUs via various buses [2], [3], [4].Depending on the MCU architecture, the CPUs have nearly unlimited access to all its components via those buses.Such architectures introduce a host of novel attack surfaces that currently is not well understood by researchers.State-of-the art security analysis techniques for embedded systems are limited to analysis of single CPUs or firmwares.For example, recent advances in rehosting, a popular technique that aims to emulate the firmware hardware-less, focuses on peripheral interaction as wrong peripheral behavior blocks firmware execution [53].However, rehosting analyzes each peripheral in isolation and does not capture inter-peripheral dependence, e.g., inter-CPU communication interfaces [16].For a specific attack, Classen et al. analyzed two Bluetooth-WiFi chip architectures by Broadcom, in which Bluetooth and WiFi functionality is split between two CPUs [12].The authors explore the communication channel specific to this architecture and identify vulnerabilities that can be exploited if one of the cores is malicious due to an inherent trust between both chips.In this paper, we provide the first systematical assessment of security issues introduced by multi-CPU architectures in embedded devices.We investigate the general components of traditional, single-CPU embedded systems.We then analyze each component in the context of multi-CPU embedded devices and find that the introduction of more processors (each running individual firmware) introduces new attack surface.We distill the results into 4 general attack vectors.To confirm the validity of these 4 attack vectors, we first perform a theoretical analysis of multi-CPU devices.To that end, we collect a list of 11 device families that have at least two CPUs.We theoretically investigate their vulnerability to the newly identified attack vectors.We find that 6 out of 11 devices are vulnerable to at least one of the attack vectors.We implement our attacks on one of the vulnerable devices and practically verify our theoretical findings.We show that our attack vectors introduce arbitrary read, arbitrary write, and code execution primitives on the co-located CPUs or even in TEEs.Then, we demonstrate the practical relevance with a case study on two commercial products: the network stack of the STM32WB, and the security architecture of the Samsung Galaxy Ring.We find fundamental issues in both cases, and demonstrate practical exploits for a reproduction of the Galaxy Ring architecture.We disclosed our findings to the vendors, resulting in a security advisory and a patch.",
+    "abstract": "Nils Ole Tippenhauer",
     "analysis": {},
     "authors": [
       "Simeon Hoffmann",
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "821e0f698255cb0278ac971c3966af846c6caa6da860c708ec65ef0919e41468",
+    "content_hash": "2c1bf7db5c9a760273c055b4ec46d40a3d831c7a6cd90f36aa5d572aed00e1a1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
-    "exclusion_reason": "hardware/processor object: processor, cpu; security relevance: security, vulnerability; missing object-method conjunction",
+    "exclusion_reason": "hardware/processor object: cpu; security relevance: security; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-08-22",
+    "last_seen": "2026-10-08",
     "matched_queries": [
-      "OpenAlex: microarchitectural timing vulnerability fuzzing"
+      "OpenAlex: microarchitectural timing vulnerability fuzzing",
+      "OpenAlex: multicore processor fuzzing shared memory"
     ],
     "pdf_url": "https://doi.org/10.14722/ndss.2026.240971",
     "primary_category": "",
     "published": "2026-01-01",
     "relevance_reasons": [
-      "hardware/processor object: processor, cpu",
-      "security relevance: security, vulnerability",
+      "hardware/processor object: cpu",
+      "security relevance: security",
       "missing object-method conjunction"
     ],
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5740,9 +6198,9 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-08-18",
+    "updated": "2026-10-05",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
-    "venue": "未记录"
+    "venue": "Network and Distributed System Security Symposium"
   },
   {
     "abstract": "NVIDIA GPUs underpin the vast majority of modern AI workloads.These workloads are ultimately executed in the form of Streaming Assembly (SASS), the lowest-level assembly for NVIDIA hardware.However, SASS remains largely undocumented, let alone well studied, posing a significant barrier to downstream security applications, such as security auditing, vulnerability discovery, binary hardening, etc.In this paper, we address this challenge with NVLift, a systematic framework that lifts NVIDIA GPU SASS into LLVM IR to enable downstream GPU binary analysis.To lift SASS instructions, NVLift reconstructs instruction semantics by consolidating prior reverse-engineering efforts and validating execution behaviors at runtime using cuda-gdb.To verify the semantic correctness of the lifted IR, we design and implement a differential testing pipeline by compiling the lifted IR into SASS and comparing the GPU execution results against the SASS generated from the reference CUDA kernel compilation.In total, NVLift supports 47 commonly used SASS instructions on the Turing architecture (SM75), covering 88.39% of instruction occurrence count in popular CUDA libraries.Using NVLift, we lifted 11 CUDA kernels, including representative DNN operators, and verified the semantic correctness of 5 kernels.We further provide a PoC implementation of GPU binary decompilation by translating the lifted LLVM IR into pseudo C code using RetDec.In sum, NVLift is a critical step towards enabling GPU binary analysis and downstream security applications.",
@@ -7115,7 +7573,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "2397c19c92cc17872a88d5796e7af6929cfd55055208dc26351d25ff27aec82a",
+    "content_hash": "60cd6566ec0e17380bcc33e27c3600e16833bed0da4023a6a10714747590f3ea",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -7123,7 +7581,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-10-01",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -7138,7 +7596,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7151,7 +7609,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-09-29",
+    "updated": "2026-10-02",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -8488,6 +8946,51 @@
   {
     "abstract": "",
     "analysis": {},
+    "authors": [
+      "Marcello Maugeri",
+      "Cristian Daniele",
+      "Giampaolo Bella"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "a9adeed6b4539dde64f30fe1b80cda6a189733099c9af2d884c9f6b069d5857c",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1007/978-3-031-54129-2_17",
+    "evidence_level": "metadata",
+    "exclusion_reason": "verification/fuzzing method: fuzz, coverage-guided; missing object-method conjunction",
+    "first_seen": "2026-10-08",
+    "id": "semantic-scholar-04bb74d57042f52167a1fd4778916c49af934778",
+    "included": false,
+    "last_seen": "2026-10-08",
+    "matched_queries": [
+      "Semantic Scholar: processor fuzzing coverage guided RTL"
+    ],
+    "pdf_url": "",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2023",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz, coverage-guided",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "04bb74d57042f52167a1fd4778916c49af934778",
+    "title": "Forkfuzz: Leveraging the Fork-Awareness in Coverage-Guided Fuzzing",
+    "title_key": "forkfuzz leveraging the fork awareness in coverage guided fuzzing",
+    "updated": "",
+    "url": "https://doi.org/10.1007/978-3-031-54129-2_17",
+    "venue": "ESORICS Workshops"
+  },
+  {
+    "abstract": "",
+    "analysis": {},
     "authors": [],
     "categories": [],
     "content_hash": "8613902602e0fd403946e9575174fbb42e61a75d49d1b8294c36f0b750cfe6e2",
@@ -9527,7 +10030,7 @@
       "Kevin R. B. Butler"
     ],
     "categories": [],
-    "content_hash": "45179bf0102c2b9bb13be82ad4a8adfc16e568b421638dc83b0648e9eb8791a8",
+    "content_hash": "6112fc6fe19106404ceb2ff55b3677effa96ac0b8fc61af6e8ec7fc8dbca60a7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -9535,7 +10038,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-08",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -9549,7 +10052,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -9574,9 +10077,9 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-09-26",
+    "updated": "2026-10-06",
     "url": "https://doi.org/10.1109/sp.2019.00041",
-    "venue": "未记录"
+    "venue": "Proceedings - IEEE Symposium on Security and Privacy/Proceedings of the ... IEEE Symposium on Security and Privacy"
   },
   {
     "abstract": "Parallel supercomputer-based Monte Carlo and stochastic simulations require pseudorandom number generators that can produce distinct pseudorandom streams across many independent processes. We propose a scalable class of parallel and vectorizable pseudorandom number generators based on a non-cryptographic version of the RSA public-key exponentiation cipher. Our method generates uniformly distributed IEEE double-precision floating point pseudorandom sequences on $[0,1)$ by encrypting pseudorandom sequences of 64-bit integer messages by modular exponentiation. The advantages of the method are: the method is parallelizable by parameterization with each pseudorandom number generator instance derived from an independent 64-bit composite modulus, the method is fully scalable on massively parallel computing clusters because of the millions of available 32-bit prime numbers, the seeding and initialization of the independent streams is simple, the periods of the independent instances are all different and greater than $8.5\\times 10^{37}$, and the method passes a battery of intrastream and interstream correlation tests. The calculations in each instance can be vectorized using steam splitting and can produce more than $10^8$ pseudorandom numbers per second on each multicore CPU.",

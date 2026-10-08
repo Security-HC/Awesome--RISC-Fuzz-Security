@@ -4,7 +4,7 @@
 
 - 作者：Quentin Bordier、Tobias Kovats、Flavien Solt、Kaveh Razavi
 - 发表日期：2026-06-01
-- 会议/期刊：未记录
+- 会议/期刊：ACM/IEEE International Symposium on Computer Architecture (ISCA)
 - 主分类：多 Hart、内存一致性与缓存一致性
 - 相关性：A·直接相关（score=100）
 - 证据等级：摘要级

@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Daniel Weber、A. Ibrahim、Hamed Nemati、Michael Schwarz、C. Rossow
+- 作者：Daniel Weber、Ahmad Ibrahim、Hamed Nemati、Michael Schwarz、Christian Rossow
 - 发表日期：2021-06-07
-- 会议/期刊：USENIX Security Symposium
+- 会议/期刊：arXiv
 - 主分类：微架构安全自动测试
 - 相关性：A·直接相关（score=100）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：Microarchitectural Security Testing
 - 纳入依据：manual direct seed title
-- 论文页面：[https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2](https://www.semanticscholar.org/paper/c6ab953b41d2ea810657c3ee4989409177f51af2)
+- 论文页面：[http://arxiv.org/abs/2106.03470v1](http://arxiv.org/abs/2106.03470v1)
 - PDF：[https://arxiv.org/pdf/2106.03470v1](https://arxiv.org/pdf/2106.03470v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 18 页，提取 93096 字符
 

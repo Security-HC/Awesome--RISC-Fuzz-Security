@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：王恩东、胡雷钧、陈继承、张峰、周恒钊、符云越、甘小伟
+- 作者：En-Dong Wang、Lei-Jun Hu、Ji-Cheng Chen、Feng Zhang、Heng-Zhao Zhou、Yun-Yue Fu、Xiao-Wei Gan
 - 发表日期：2013-01-18
 - 会议/期刊：未记录
 - 主分类：多 Hart、内存一致性与缓存一致性

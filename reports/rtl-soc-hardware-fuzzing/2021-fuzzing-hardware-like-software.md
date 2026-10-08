@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Timothy Trippel、K. Shin、A. Chernyakhovsky、Garret Kelly、Dominic Rizzo、Matthew Hicks
+- 作者：Timothy Trippel、Kang G. Shin、Alex Chernyakhovsky、Garret Kelly、Dominic Rizzo、Matthew Hicks
 - 发表日期：2021-02-03
-- 会议/期刊：USENIX Security Symposium
+- 会议/期刊：arXiv
 - 主分类：RTL 与 SoC 硬件 Fuzzing
 - 相关性：B·强邻近（score=90）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology、Formal & Directed Processor Verification
 - 纳入依据：manual adjacent seed title
-- 论文页面：[https://www.semanticscholar.org/paper/de7eff32b91ab9c2a73077e5e7258a3877ffcb94](https://www.semanticscholar.org/paper/de7eff32b91ab9c2a73077e5e7258a3877ffcb94)
+- 论文页面：[http://arxiv.org/abs/2102.02308v1](http://arxiv.org/abs/2102.02308v1)
 - PDF：[https://arxiv.org/pdf/2102.02308v1](https://arxiv.org/pdf/2102.02308v1)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 15 页，提取 85944 字符
 

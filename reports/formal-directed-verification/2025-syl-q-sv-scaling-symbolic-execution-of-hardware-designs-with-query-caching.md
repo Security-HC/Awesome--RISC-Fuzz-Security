@@ -4,7 +4,7 @@
 
 - 作者：Kaki Ryan、Cynthia Sturton
 - 发表日期：2025-08-06
-- 会议/期刊：未记录
+- 会议/期刊：ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)
 - 主分类：形式化与定向处理器验证
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级

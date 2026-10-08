@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Bi Zhongqin、Meijing Shan
+- 作者：Zhong-Qin Bi、Meijing Shan
 - 发表日期：2011
 - 会议/期刊：未记录
 - 主分类：多 Hart、内存一致性与缓存一致性
