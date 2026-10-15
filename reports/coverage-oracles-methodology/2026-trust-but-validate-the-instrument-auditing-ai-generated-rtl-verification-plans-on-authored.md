@@ -11,8 +11,8 @@
 - 全文状态：已完成
 - 标签：Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：hardware/processor object: rtl；verification/fuzzing method: verification, validation；security relevance: security
-- 论文页面：[http://arxiv.org/abs/2609.19844v1](http://arxiv.org/abs/2609.19844v1)
-- PDF：[https://arxiv.org/pdf/2609.19844v1](https://arxiv.org/pdf/2609.19844v1)
+- 论文页面：[http://arxiv.org/abs/2609.19844v2](http://arxiv.org/abs/2609.19844v2)
+- PDF：[https://arxiv.org/pdf/2609.19844v2](https://arxiv.org/pdf/2609.19844v2)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 7 页，提取 33174 字符
 
 ## 摘要

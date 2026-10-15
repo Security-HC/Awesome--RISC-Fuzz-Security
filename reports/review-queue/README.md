@@ -1,14 +1,15 @@
 # 待人工复核
 
-共 58 篇。该列表不进入主 README。
+共 59 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
 | 2026-09-23 | [Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core](https://doi.org/10.5194/egusphere-2026-4779) | 4 | hardware/processor object: soc；verification/fuzzing method: fuzz |
+| 2026-09-20 | [VSpector: Specification-Driven Bug Detection for RISC-V CPUs](https://www.semanticscholar.org/paper/5a5b11db297b64825aa9dfd36bed91f359a7ce71) | 4 | hardware/processor object: risc-v, cpu, rtl；verification/fuzzing method: fuzz |
 | 2026-08-20 | [Transaction-Level Design and Verification of a Hybrid AMBA AXI4-Lite/ACE Interconnect for Scalable Heterogeneous SoCs](https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026) | 4 | hardware/processor object: cpu, rtl, verilog, soc；verification/fuzzing method: verification |
 | 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2026-08-12 | [GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing](http://arxiv.org/abs/2608.12635v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification, mutation testing |
-| 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](http://arxiv.org/abs/2608.02915v1) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
+| 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](https://www.semanticscholar.org/paper/7ab84b885f79b71b1c8a60906d34b7ab250901df) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
 | 2026-07-30 | [Brain-Connectivity Modelling and Cognitive-State Discovery using Quantum Topological Data Analysis for Explainable Neuroinformatics](https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [Timelines Over Tokens](https://doi.org/10.31979/etd.ewrn-xhac) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [RThermaL](https://doi.org/10.31979/etd.x48p-hs5d) | 4 | hardware/processor object: processor, rtl, verilog；verification/fuzzing method: validation |

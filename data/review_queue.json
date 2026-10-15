@@ -66,6 +66,55 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Detecting RTL design bugs in open-source RISC-V CPU implementations is critical for ensuring system reliability. Traditional detection approaches inherently rely on predefined artifacts. In this paper, we leverage the official,natural-language RISC-V specifications as an effective information source for bug detection. We present VSpector, a specification-driven bug detection pipeline that directly checks whether CPU register-transfer level (RTL) implementations adhere to official specification rules, without requiring specialized construction of reference models, formal properties, or custom bug patterns. To resolve the key technical trade-off between broad context scope and model reasoning accuracy when using Large Language Models (LLMs), VSpector employs a stepwise context refinement scheme across a four-stage pipeline: rule extraction, implementation localization, candidate identification, and sequential violation auditing. We evaluate VSpector on two industrial-strength RISC-V CPUs, CVA6 and XiangShan. Out of 217 reported candidates, manual inspection confirmed 148 true violations, representing a 68.2% precision. These violations correspond to 73 distinct bugs, including 42 previously unknown bugs. In our comparative experiments, DiveFuzz, a state-of-the-art CPU fuzzer, detected none of these new bugs during 24-hour runs per CPU. All 42 new bugs have been reported upstream, with developers already fixing 19 and confirming an additional 11 (30 in total), demonstrating that specification-driven auditing is a practical and complementary strategy for CPU bug detection.",
+    "analysis": {},
+    "authors": [
+      "Tian-Yu Jia",
+      "Zhao-Yang Yu",
+      "Yuan-Liang Chen",
+      "Wei You",
+      "Jian-Jun Huang",
+      "Bin Liang"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing",
+      "RTL & SoC Hardware Fuzzing"
+    ],
+    "content_hash": "9b14cb9ee1a93f84a307459a7bdc50f776b38e9c7d7907d2d98116597c651471",
+    "curation_status": "review",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-10-15",
+    "id": "semantic-scholar-5a5b11db297b64825aa9dfd36bed91f359a7ce71",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2026-09-20",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, cpu, rtl",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "5a5b11db297b64825aa9dfd36bed91f359a7ce71",
+    "title": "VSpector: Specification-Driven Bug Detection for RISC-V CPUs",
+    "title_key": "vspector specification driven bug detection for risc v cpus",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/5a5b11db297b64825aa9dfd36bed91f359a7ce71",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Modern heterogeneous systems-on-chip require both lightweight register access and coherent shared-memory communication, yet these needs are often discussed as if AXI4-Lite and ACE were a single protocol layer.This paper presents a transaction-level architecture that deliberately separates an AXI4-Lite control plane from an ACE/ACE-Lite coherent data plane while sharing address-routing, arbitration, response-handling, monitoring, and verification services.The architecture targets CPU cores, accelerators, DMA engines, memory controllers, and memory-mapped peripherals.A deterministic cycle-abstract reference model is used to evaluate class-aware round-robin arbitration, filtered snooping, error responses, back-pressure, and cache-visible data consistency before RTL implementation.Verification covers 100,000 randomized address/response transactions, 20,000 cycles of continuous four-master contention, and 50,000 coherent memory operations, with no decode, response, mutual-exclusion, or stale-read violations in the reference model.At an offered load of 0.12 transactions/cycle, the proposed splitplane architecture reduces mean latency by 40.6%, 50.7%, and 76.3% for control-dominant, balanced, and memory-dominant mixes, respectively, compared with a serialized fixed-priority/broadcast-snoop baseline.Filtered snooping reduces peer snoop probes by 52.2-57.7%.A balanced-load sweep further shows that the baseline saturates near 0.154 transactions/cycle, whereas the proposed model sustains approximately 0.178 transactions/cycle at an offered load of 0.18.The results establish a reproducible architectural baseline for subsequent System Verilog/UVM implementation and FPGA/ASIC evaluation.",
     "analysis": {},
     "authors": [
@@ -214,25 +263,26 @@
       "Pingqing Zheng",
       "Jiayin Qin",
       "Fuqi Zhang",
-      "Zishen Wan",
-      "Shang Wu",
+      "Zi-Shen Wan",
+      "S. Wu",
       "Yu Cao",
-      "Caiwen Ding",
-      "Yang Katie Zhao"
+      "Cai-Wen Ding",
+      "Yang Zhao"
     ],
     "categories": [
       "RISC-V Processor Fuzzing"
     ],
-    "content_hash": "48f411566223bb0122c633be52906a35b6e737dff5fdbe196bb4426a26344596",
+    "content_hash": "451069d92c4d67c5792e307aa703aa4a0283e83958878ace36110c38ed2ac137",
     "curation_status": "review",
     "evidence_level": "abstract",
     "exclusion_reason": "",
     "first_seen": "2026-08-08",
     "id": "arxiv-2608-02915v1",
     "included": false,
-    "last_seen": "2026-08-08",
+    "last_seen": "2026-10-15",
     "matched_queries": [
-      "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+      "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
     ],
     "pdf_url": "https://arxiv.org/pdf/2608.02915v1",
     "primary_category": "RISC-V Processor Fuzzing",
@@ -244,19 +294,17 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
-      "cs.AR",
-      "cs.CL",
-      "cs.SE"
+      "Computer Science"
     ],
     "source_id": "2608.02915v1",
     "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
     "title_key": "lace large language model aided multi agent framework for agile risc v instruction extension",
     "updated": "2026-08-03",
-    "url": "http://arxiv.org/abs/2608.02915v1",
-    "venue": "arXiv"
+    "url": "https://www.semanticscholar.org/paper/7ab84b885f79b71b1c8a60906d34b7ab250901df",
+    "venue": "未记录"
   },
   {
     "abstract": "Abstract Brain connectivity is increasingly understood as a dynamic, multiscale relational system in which cognitive states emerge from coordinated patterns rather than isolated regional activity. This monograph develops an integrated research architecture for explaining and predicting such states through quantum topological data analysis (QTDA), network statistics, causal reasoning, trustworthy machine learning, and scalable neuroinformatics engineering. The central premise is that topology can preserve mesoscopic structure across noisy, heterogeneous measurements, while quantum and quantum-inspired representations may offer alternative computational geometries for comparing complex connectivity configurations. The book formalizes uncertainty at measurement, model, and decision levels; distinguishes associational prediction from causal explanation; and links persistent topological summaries to interpretable state discovery. It further specifies validation regimes for calibration, transportability, robustness, fairness, privacy, and reproducibility, together with MLOps practices for multimodal and distributed data. Applications span clinical decision support, neuroergonomics, learning systems, population brain health, and public policy, with comparative relevance to South Asia, Europe, Africa, and the Americas. The resulting framework is designed as a reusable scholarly platform for hypothesis generation, computational experimentation, governance design, and responsible translation of brain-connectivity analytics into research, industry, and policy settings. Keywords brain connectivity, cognitive-state discovery, quantum topological data analysis, explainable neuroinformatics, network neuroscience, persistent homology, simplicial complexes, quantum kernels, causal inference, hierarchical modeling, dynamic state-space models, machine learning, calibration, out-of-distribution generalization, algorithmic fairness, privacy-preserving analytics, multimodal neurodata, MLOps, federated learning, data provenance, neuroergonomics, population brain health, AI governance",
@@ -1145,14 +1193,14 @@
     "abstract": "The RISC-V instruction set architecture (ISA) offers flexibility for domain-specific custom instruction extensions. While the basic RISC-V ISA contains common instructions, the extended accelerators provide additional computing power to meet diverse needs. High-level synthesis (HLS) is often used to agilely create custom extension accelerators, allowing engineers to design complex digital circuits using high-level languages such as C/C++, further improving development efficiency. However, verifying a design that includes RISC-V cores and custom extensions is rarely studied and can be challenging. Traditional approaches for verifying HLS-generated designs use C-RTL co-simulation, primarily focusing on the unit level. This method can be extremely time-consuming and often makes impractical assumptions about interactions between HLS-generated circuits and the processor. Therefore, system-level verification is essential to extensively exercise the RISC-V cores, the custom extensions, and their interconnections. To efficiently verify a RISC-V processor design with custom instruction extensions, we propose Corvus: a novel co-verification framework that combines the benefits of the high-level abstraction of C/C++ simulation and cycle-accurate modeling of C-RTL co-simulations. Corvus provides hardware wrapper templates that efficiently connect HLS-generated accelerators and the RISC-V core, and a tool flow that automatically translates HLS unit-level tests into system-level stimulus. Corvus maps the core and the accelerators, along with their corresponding C/C++ software models, onto the same FPGA with hardened processors, allowing them to run simultaneously whilst checking both results on the fly with dedicated hardware monitors and checkers. If a mismatch is detected, we capture a snapshot of the accelerator hardware and reconstruct the simulation in external software simulators for detailed debugging. When potential issues are fixed, the accelerator region can be partially reconfigured without recompiling the entire design, further improving the design-verification efficiency. Results show a significant performance improvement over conventional approaches, from 4423× to 16626×.",
     "analysis": {},
     "authors": [
-      "Zijian Jiang",
+      "Zi-Jian Jiang",
       "Keran Zheng",
       "David Boland",
       "Yungang Bao",
       "Kan Shi"
     ],
     "categories": [],
-    "content_hash": "0b82c9150954db5d8148b61ac01250e5743c5b4c8ece490f6ec0507279b43647",
+    "content_hash": "7201631e1e68ac3fd93870e6d0b2c211031a8db4f5f19a4bd63a476d282cd3b2",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3658617.3697757",
     "evidence_level": "abstract",
@@ -1160,11 +1208,11 @@
     "first_seen": "2026-08-01",
     "id": "semantic-scholar-2e56155176bbc5ce284c1596402f99289f0ef2cc",
     "included": false,
-    "last_seen": "2026-08-01",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "Semantic Scholar: RISC-V RTL fuzzing differential testing"
     ],
-    "pdf_url": "",
+    "pdf_url": "https://doi.org/10.1145/3658617.3697757",
     "primary_category": "",
     "published": "2025-01-20",
     "relevance_reasons": [
@@ -1174,7 +1222,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"

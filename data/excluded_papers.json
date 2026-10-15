@@ -1,5 +1,466 @@
 [
   {
+    "abstract": "Agentic systems increasingly operate through executable workflows: they search artifacts, invoke tools, inspect structured observations, and query databases. Training such agents requires supervision that captures valid tool interactions, but query-first synthesis can produce plausible requests that do not correspond to valid tool sequences, compatible parameters, or available data. We propose SyntheticAgentTraceQA, an execution-first framework that constructs workflow templates, assigns tools under data-flow constraints, executes and validates traces, and only then synthesizes user tasks, teacher reasoning, and reference answers. Across the evaluated tool ecosystems, fine-tuning Qwen3.5 variants on the resulting data improves several measures of tool-use behavior, reference-trace agreement, and answer generation. Masked supervision, which excludes reasoning tokens from the loss, yields higher answer-production rates than full supervision and does not consistently improve trace agreement, especially at the 9B scale.",
+    "analysis": {},
+    "authors": [
+      "Hafsa Ouajdi",
+      "Francesco Giannuzzo",
+      "Alaa Boukhary",
+      "Paolo Papotti",
+      "Gerard P. Conangla",
+      "Adam Elwood"
+    ],
+    "categories": [],
+    "content_hash": "ae772168c4c32be8315c3e6ae201932baabddd23487632774de8a7413d5276aa",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843282.3844446",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7172276035",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3843282.3844446",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Executable",
+      "Computer science",
+      "Workflow",
+      "Scalability",
+      "Code (set theory)",
+      "TRACE (psycholinguistics)",
+      "Software engineering",
+      "Programming language",
+      "Data mining",
+      "Quality (philosophy)",
+      "Automation",
+      "Synthetic data",
+      "Data quality",
+      "Artificial intelligence",
+      "Machine learning",
+      "Table (database)",
+      "Data exploration",
+      "Data flow diagram",
+      "Relational database",
+      "Human–computer interaction",
+      "Source code",
+      "Data modeling",
+      "Training set"
+    ],
+    "source_id": "https://openalex.org/W7172276035",
+    "title": "Execution-First Synthetic Tool-Use Trace Generation for LLM Agents",
+    "title_key": "execution first synthetic tool use trace generation for llm agents",
+    "updated": "2026-10-10",
+    "url": "https://doi.org/10.1145/3843282.3844446",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Existing LLM-based approaches for software Requirements Engineering (RE) typically rely on basic prompting strategies or rudimentary agent collaboration, under-utilizing the full potential of multi-agent systems. Meanwhile, available datasets focus on isolated subtasks, such as requirements extraction, classification, and completeness detection, leaving the absence of an end-to-end RE benchmark that spans from requirements elicitation to generation. We present Agent4RE - a self-refining multi-agent RE system that orchestrates specialized agents and incorporates two iterative improvement loops. To support evaluation, we construct RE-E2E - a real-world dataset built from human-written requirement specifications, enabling end-to-end assessment of RE workflows. Building on this foundation, we further propose two enhanced Agent4RE versions that incorporate either autonomous self-refinement or structured human feedback, and analyze their strengths and limitations across different scenarios. Evaluation on 8 Large Language Models (LLMs) demonstrates that all three Agent4RE variants consistently outperform a domain-context-augmented prompting baseline by average 8% in text-based metrics. The two enhanced variants achieve the highest LLM-as-a-judge and human ratings, surpassing two RE baselines by approximately 0.8 points on a four-point scale. This consistent performance establishes Agent4RE as a practical end-to-end RE solution for industrial environments.",
+    "analysis": {},
+    "authors": [
+      "Yongjian Tang",
+      "Linhan Li",
+      "Thomas A. Runkler"
+    ],
+    "categories": [],
+    "content_hash": "43c4244b38456de504e954e09772c35dab9966d755bf1d5d9db7257abba12de6",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843779.3844634",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221055282",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843779.3844634?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Systems engineering",
+      "Benchmarking",
+      "Software engineering",
+      "Requirements analysis",
+      "Engineering",
+      "Software requirements",
+      "Software",
+      "Software development",
+      "Requirements engineering",
+      "Measure (data warehouse)",
+      "Requirement",
+      "Software requirements specification",
+      "Component (thermodynamics)",
+      "Non-functional requirement",
+      "Requirement prioritization",
+      "Requirements elicitation",
+      "Context (archaeology)",
+      "Software system",
+      "Work (physics)"
+    ],
+    "source_id": "https://openalex.org/W7221055282",
+    "title": "Agent4RE: A Self-Refining Multi-agent Framework for End-to-End Software Requirements Engineering and Benchmarking",
+    "title_key": "agent4re a self refining multi agent framework for end to end software requirements engineering and benchmarking",
+    "updated": "2026-10-14",
+    "url": "https://doi.org/10.1145/3843779.3844634",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Smart contracts are immutable programs deployed on blockchain platforms, and their vulnerabilities can cause severe financial losses. Therefore, several tools have been proposed to detect these vulnerabilities. Among them, recent research has increasingly leveraged Large Language Models (LLMs) relying on carefully crafted prompts. Meanwhile, prior work has identified several prompt patterns, such as persona roles, chain-of-thought reasoning, and multi-agent interactions. However, the sensitivity of LLM performance to prompt design raises questions about the reliability of existing evaluations.",
+    "analysis": {},
+    "authors": [
+      "Gerardo Iuliano",
+      "Dario Di Nucci"
+    ],
+    "categories": [],
+    "content_hash": "2e4535963ce19e47e6e8f12c2f0335cb2d81a15fb529f8791e2e5a0846d1d9ff",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843781.3844627",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7204635274",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843781.3844627?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "security relevance: vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Persona",
+      "Computer science",
+      "Computer security",
+      "Risk analysis (engineering)",
+      "Vulnerability (computing)",
+      "Measure (data warehouse)",
+      "Artificial intelligence",
+      "Business",
+      "Simple (philosophy)",
+      "Chen",
+      "Internet privacy",
+      "Actuarial science",
+      "Human–computer interaction",
+      "Psychology",
+      "Data science",
+      "Key (lock)",
+      "Operations management",
+      "Machine learning",
+      "Engineering",
+      "Risk assessment",
+      "Case-based reasoning"
+    ],
+    "source_id": "https://openalex.org/W7204635274",
+    "title": "The Role of Prompt Patterns in LLM-Based Smart Contract Vulnerability Detection",
+    "title_key": "the role of prompt patterns in llm based smart contract vulnerability detection",
+    "updated": "2026-10-11",
+    "url": "https://doi.org/10.1145/3843781.3844627",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Security vulnerabilities caused by bugs in software do not exist in isolation. Attackers can chain vulnerabilities caused by multiple bugs together to achieve their goals. However, determining whether multiple vulnerabilities can be triggered during a single execution is a difficult problem. In this paper, we present an agentic pipeline for automatically discovering whether a single shared input can trigger multiple bugs. In particular, we introduce an agentic approach that automatically generates predicates and constraint-based harnesses from buggy code, leveraging symbolic execution and SMT solving. We validate our approach using real-world vulnerabilities across three widely used, open source libraries: tcpdump, libxml2, and nDPI. Our pipeline successfully generates concrete shared inputs to trigger multiple bug pairs, including heap buffer overflows in tcpdump, stack and heap memory corruptions in libxml2 and out-of-bounds reads across independent protocol dissectors in nDPI. Furthermore, our methodology correctly identifies and proves the absence of shared inputs when bugs require mutually exclusive constraints. Our work introduces and demonstrates the feasibility of automated bug composition analysis, results of which can be valuable in identifying potential exploit chains and prioritizing critical vulnerabilities for patching.",
+    "analysis": {},
+    "authors": [
+      "Vishva Arasan",
+      "Mahima Chaudhary",
+      "Wendy Contreras Martinez",
+      "Md Shafiuzzaman",
+      "Achintya Desai",
+      "Tevfik Bultan"
+    ],
+    "categories": [],
+    "content_hash": "dd6b2560e36a569be845d31b89e44b10a1313280c0ebdc4d3c9bedf58d5cc882",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843282.3844434",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7220986977",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843282.3844434?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Event (particle physics)",
+      "Process (computing)",
+      "Identification (biology)",
+      "Troubleshooting",
+      "Action (physics)",
+      "Engineering",
+      "Key (lock)",
+      "Artificial intelligence",
+      "Computer security"
+    ],
+    "source_id": "https://openalex.org/W7220986977",
+    "title": "Bug Composition: Triggering Multiple Bugs with Agentic Driver Generation",
+    "title_key": "bug composition triggering multiple bugs with agentic driver generation",
+    "updated": "2026-10-11",
+    "url": "https://doi.org/10.1145/3843282.3844434",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Welcome from the ChairsWelcome to the 2nd edition of the International Workshop on Software Security Testing (SECUTE 2026), focusing on security testing of software systems.The workshop was held on October 16, 2026, at the Holiday Inn Munich -City Center in Munich, Germany, co-located with ASE 2026.Following the first edition in 2024, SECUTE 2026 aims to build a community where researchers and practitioners can discuss new ideas and share fresh insights on software security testing.SECUTE places particular emphasis on innovative automated techniques and methods to support the creation, management, and evolution of automated tests that detect security flaws in source code.This also includes evaluating existing security testing approaches, understanding the current state of security testing practices, and defining key challenges and a roadmap for future research in the field.The event hosted a thematic talk by Prof. Jürgen Cito from TU Wien, Austria, titled \"Language Models as Penetration Testing Agents: Surprising Capabilities and Ethical Dimensions\", which presented how LLMs reason and operate in penetration testing compared to human testers and discussed ethical concerns.Afterward, the authors of each accepted paper gave a technical talk describing their respective work.Finally, a plenary session discussed the relevance of software security testing and future research directions.SECUTE received nine submissions; seven met the requirements and were sent to three program committee members for review.After online discussions, the committee ultimately accepted five papers (71% acceptance rate).The workshop chairs thank the program committee, the web and publicity chair, the keynote speaker, the paper authors, and the ASE 2026 organizers for making this event possible and successful.",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "5046ed35d5ae88951ad72f956a159eaeb67beb8865267a6923a9dc11b3fe189e",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3843781",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221014174",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3843781?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Software engineering",
+      "Software",
+      "Software testing",
+      "Software security assurance",
+      "Engineering",
+      "Security testing",
+      "Engineering management",
+      "Computer security",
+      "Systems engineering",
+      "Test (biology)"
+    ],
+    "source_id": "https://openalex.org/W7221014174",
+    "title": "Proceedings of the 2nd International Workshop on Software Security Testing",
+    "title_key": "proceedings of the 2nd international workshop on software security testing",
+    "updated": "2026-10-10",
+    "url": "https://doi.org/10.1145/3843781",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Every automated vulnerability detector is pinned to a tradeoff between precision and recall, fixed by its algorithm and chosen to work well enough across all code. But code is not uniform: every project has its own conventions, idioms, and functionality (the recurring, project-stable patterns that software genomics reads as a codebase’s genes), and these are exactly the information that could push a detector past its global frontier. Tuning a detector to a specific codebase has always helped, but it demands expert effort per project across millions of projects, so we settle for one universal detector. We argue that LLM agents overturn this compromise, making per-project customization automatable for the first time. We take the position that security is not a fixed external checker but part of a project’s genome, so detection should be optimized per project and co-evolve with it, synthesizing for each repository a detector specialized to its attack surface across static analysis, invariants, formal verification, and fuzzing, grounded in the project’s code style, semantics, and history of past defects. We outline RepoTune, an agentic feedback loop that profiles a repository’s genome and evolves a specialized detector against the repository’s own code and vulnerability history to minimize false positives and maximize recall, with developers contributing domain knowledge, and we lay out the research agenda this opens for software genomics, including how such detectors propagate through a software supply chain.",
+    "analysis": {},
+    "authors": [
+      "Yuqiang Sun",
+      "Ruozhao Yang",
+      "Ying Li"
+    ],
+    "categories": [
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "abfd5de3baf5a3ab76d70601f61a370e775b38c3bd810a15a0e9629cbd80b91a",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3844178.3844643",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz, verification, formal verification; security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221049449",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3844178.3844643?download=true",
+    "primary_category": "Formal & Directed Processor Verification",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz, verification, formal verification",
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Biology",
+      "Genome",
+      "Computer science",
+      "Computational biology",
+      "Genetics",
+      "Vulnerability (computing)",
+      "Human genome",
+      "Genomics",
+      "Population",
+      "Identification (biology)"
+    ],
+    "source_id": "https://openalex.org/W7221049449",
+    "title": "RepoTune: Co-evolving Vulnerability Detection with a Repository’s Genome",
+    "title_key": "repotune co evolving vulnerability detection with a repository s genome",
+    "updated": "2026-10-12",
+    "url": "https://doi.org/10.1145/3844178.3844643",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Grammar-based fuzzing can synthesize valid inputs for programs that process structured data. For behavior learning, the same inputs can be paired with the outputs a program produces, creating datasets that train neural program mocks. The fuzzer then serves as a data generator, and its selection policy determines which behaviors the model observes during training. To study how grammar-based input generation affects neural behavior modeling, we compare four generator configurations, train encoder-decoder Transformer models on 10,000 and 100,000 generated input-output pairs, and evaluate the resulting models on synthetic hold-out data and available real-world samples. On synthetic hold-out data, the larger training corpus improves the BLEU score in all 48 paired comparisons; random generation and k-path guidance are strongest on average, though the best generator remains subject-dependent. On real-world data, the larger corpus improves the BLEU score in 35 of 40 paired comparisons, but the gains are smaller and less consistent. JSON-to-YAML models retain high real-world accuracy, whereas msticpy and py-asciimath models expose large synthetic-to-real quality gaps. Overall, generator selection affects learned behavior models, but practical performance depends strongly on how well grammar-generated inputs match the deployment distribution.",
+    "analysis": {},
+    "authors": [
+      "Tural Mammadov",
+      "Alireza Kheradmand",
+      "Marius Smytzek",
+      "Andreas Zeller"
+    ],
+    "categories": [],
+    "content_hash": "140023078011b65779394944a26b4f706d34285167942dca9828fd1b74c6fae4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3820756.3844912",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7220975096",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3820756.3844912?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Artificial intelligence",
+      "Computer science",
+      "Synthetic data",
+      "Pattern recognition (psychology)",
+      "Feature (linguistics)",
+      "Machine learning",
+      "Matching (statistics)",
+      "Key (lock)",
+      "Generalization",
+      "Component (thermodynamics)"
+    ],
+    "source_id": "https://openalex.org/W7220975096",
+    "title": "How Grammar-Based Synthetic Data Shapes Behavior Learning",
+    "title_key": "how grammar based synthetic data shapes behavior learning",
+    "updated": "2026-10-11",
+    "url": "https://doi.org/10.1145/3820756.3844912",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "The security community widely uses software composition analysis (SCA) to identify vulnerabilities introduced by third-party libraries (TPLs) in the software supply chain. However, static analysis produces many false positives, so a Proof-of-Concept (PoC) is needed to confirm that a vulnerability is exploitable. Existing research studies PoC migration for cross-project vulnerability propagation. Propagation across operating systems and hardware architectures has received far less attention, yet each type raises distinct migration requirements and challenges. In this paper, we present three real-world usage scenarios of PoC migration, one for each propagation type: cross-project, cross-OS, and cross-architecture. For each scenario, we analyze its challenges and propose preliminary solutions by synthesizing existing research and empirically analyzing dozens of reproduced PoC cases. We regard the difference between the original and target vulnerability vectors as the mutation that a vulnerability undergoes as it propagates. Building on this view, we reuse an already-verified PoCo as a high-fidelity seed and propose diff-based PoC migration as the preliminary solution. We further discuss how, in the era of large language models (LLMs), an agentic workflow can use LLMs to interpret these differences and to drive the program-analysis tools that adapt the PoC. We hope this work provides a basis for studying real-world PoC migration and for strengthening supply-chain security.",
+    "analysis": {},
+    "authors": [
+      "Wenjing Dang",
+      "Xiaohong Li",
+      "Sen Chen"
+    ],
+    "categories": [],
+    "content_hash": "82904e062752acb4b1bc7e84bcbe7d569bfa1d0baf97ba004e75b7505104328d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3844178.3844647",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221029696",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: formal assisted processor fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3844178.3844647?download=true",
+    "primary_category": "",
+    "published": "2026-10-08",
+    "relevance_reasons": [
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Perspective (graphical)",
+      "Business",
+      "Vulnerability (computing)",
+      "Risk analysis (engineering)",
+      "Software",
+      "Computer science",
+      "Vulnerability assessment",
+      "Supply chain",
+      "Key (lock)",
+      "Process management",
+      "Environmental resource management",
+      "Environmental economics",
+      "Environmental planning",
+      "Computer security",
+      "Context (archaeology)",
+      "Work (physics)",
+      "Operations management"
+    ],
+    "source_id": "https://openalex.org/W7221029696",
+    "title": "Vulnerability Proof-of-Concepts in Software Supply Chain: Real-World Usage Scenarios from the Perspective of Migration",
+    "title_key": "vulnerability proof of concepts in software supply chain real world usage scenarios from the perspective of migration",
+    "updated": "2026-10-11",
+    "url": "https://doi.org/10.1145/3844178.3844647",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Automated program repair (APR) research has been constrained to design time. Current techniques localize and fix bugs in Register- Transfer Level (RTL) or High Level Synthesis (HLS) designs before a chip reaches production. Once a hardware vulnerability surfaces post-silicon, the patch content must be manually generated. Exist- ing automation methods address patch deployment but not patch synthesis. Based on established pre-silicon APR methods, we study the feasibility of extending to this firmware layer a dictionary- guided, localize-synthesize-validate APR methodology originally developed for RTL repair. An automated commit-clustering miner surfaces recurring fix templates across the EDK II (UEFI) firmware repository’s full commit history without depending on previously known Common Vulnerabilities and Exposures (CVE) identifiers, recovering all three known CVE-fix campaigns and surfacing two additional candidate bug families. Grounding our detectors in real fix evidence, we build four independent localizers: missing specu- lation barriers in C (CVE-2017-5753, Spectre v1), missing bounds checks before array writes in C (decompression library CVE), miss- ing Return Stack Buffer (RSB)-stuffing macro calls in x86 assembly (CVE-2017-5715), and missing integer-overflow guards in Hand-Off Block (HOB) creation C code (surfaced by the miner itself). All four achieve 100% recall; precision ranges from 2.1–15.5% on the C families to 100% on the assembly and HOB families. We perform root-cause analysis for the C-family false positives mechanically, which attributes 77–90% to two intra-procedural causes, isolating the inter-procedural alias-analysis gap as a measured 15–20% rather than an estimate. A held-out test confirms Spectre v1 localization holds at 100% recall on unseen files; a fifth, independently built dictionary entry (CVE-2018-3630) shows the methodology extends to a new bug signature at low added cost; and a naive syntactic baseline recalls at most 14% where our targeted detector recalls 100%. We frame these results within a broader research agenda for a unified hardware-to-firmware correctness lifecycle",
     "analysis": {},
     "authors": [
@@ -323,6 +784,67 @@
     "updated": "2026-10-05",
     "url": "https://doi.org/10.1145/3849812",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
+  },
+  {
+    "abstract": "How are AI and digital sovereignty reshaping open source governance in Europe? Marking a major research milestone, LF Research and LF Europe have published the 5th annual State of Open Source in Europe, delivering crucial data on navigating these operational mandates. Digital sovereignty is now a strategic priority for 94% of European organizations, driven heavily by security and privacy concerns. Meanwhile, AI adoption is accelerating open source engagement: 76% of organizations report AI tools help them extract greater value from their existing open source software. Crucially, governance maturity pays off, as organizations with advanced governance achieve a 4.6x benefit-to-cost return on open source, compared to 3.6x for those with no formal governance. Read the report to discover how open governance drives ROI, mitigates regulatory risk, and secures long-term digital resilience.",
+    "analysis": {},
+    "authors": [
+      "Mirko Boehm",
+      "Paula Grzegorzewska",
+      "Gerosa Marco"
+    ],
+    "categories": [],
+    "content_hash": "afb0a5f7192d4b3bc850aa52adb93a0ef81698b13a1ae98a6cbcf91d59865796",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70828/olta8310",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221116215",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing"
+    ],
+    "pdf_url": "https://www.linuxfoundation.org/hubfs/Research%20Reports/WorldofOS_EUSpotlight_2026_final.pdf?hsLang=en",
+    "primary_category": "",
+    "published": "2026-10-01",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Open source",
+      "Sovereignty",
+      "Corporate governance",
+      "State (computer science)",
+      "Maturity (psychological)",
+      "Open data",
+      "Political science",
+      "Business",
+      "Open government",
+      "Open research",
+      "Public administration",
+      "Value (mathematics)",
+      "Information governance",
+      "Reality check",
+      "Computer security",
+      "E-governance",
+      "Computer science",
+      "Open source software",
+      "National security"
+    ],
+    "source_id": "https://openalex.org/W7221116215",
+    "title": "2026 State of Open Source in Europe: Navigating AI and Digital Sovereignty Through Open Governance",
+    "title_key": "2026 state of open source in europe navigating ai and digital sovereignty through open governance",
+    "updated": "2026-10-12",
+    "url": "https://doi.org/10.70828/olta8310",
+    "venue": "未记录"
   },
   {
     "abstract": "This is written for engineers and engineering leaders who build software in regulated financial environments and who are already using AI coding assistants, whether or not their institution has decided that they may. If you are a developer working in payments, core banking, lending or any system that touches customer financial data, Parts I and II are about what the tools do not know and why that matters more here than elsewhere. Part III is the practical core: how to build a control that holds. If you lead an engineering function, Part IV is the part written for you. Policy, training, provenance, deployment and the conversation you will eventually have with an examiner. Chapter 14 in particular is about why most policies in this area fail, which is a design problem rather than a compliance one. If you work in compliance, risk or audit and are trying to understand what your engineers are actually doing, Chapters 1 through 3 will tell you why this is different from the software risk you already govern, and Chapter 18 describes what a defensible position looks like. Some assumptions. I assume you can read code, the listings are short and in C# or YAML, and the argument survives if you skim them. I assume familiarity with the frameworks by name rather than by section number; where a specific requirement matters I have cited it. I do not assume you have read PCI DSS in full, because almost nobody has, and Chapter 1 argues that this is precisely the problem. A note on scope. The book covers four regimes: PCI DSS, the Bank Secrecy Act and anti-money-laundering rules, Sarbanes-Oxley, and the Gramm-Leach-Bliley Act. These are the ones I have worked under and can speak to from experience. Institutions operating under other frameworks will find the architecture transfers and the specifics do not. What this book is not: a compliance manual, a survey of the field, or a prediction about where the technology goes. Chapter 19 is as far forward as I am willing to look, and it is deliberately the least confident chapter in the book.",
@@ -963,6 +1485,50 @@
     "updated": "2026-09-18",
     "url": "http://arxiv.org/abs/2609.18022v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Post-quantum cryptography (PQC) acceleration has been studied for CPUs and FPGAs, yet GPGPUs - dominating high-throughput computing - remain unexplored for PQC hardware integration as a functional unit. We present what is, to our knowledge, the first such integration: the Vortex Post-Quantum Crypto Unit (PCU) on the open-source Vortex RISC-V GPGPU. The PCU implements a 256-point NTT over Kyber (q=3329) and Dilithium (q=8380417) moduli in 134 logic cells (73 LUT4 + 61 CCU2C) - the smallest reported NTT accelerator by logic-cell count, 2.8x smaller than the next smallest design. It achieves 228.78 MHz on Lattice ECP5 and 299.8 MHz place-and-route on Xilinx Artix-7, and passes 253 functional tests across 7 suites. On Vortex SimX, it achieves 42.6x acceleration over GPU ALU execution, projecting to roughly 36x speedup on RTL. Synthesized to ASAP7 7nm, the NTT datapath occupies 96.53 um^2 (post-route) at 702 MHz. This work establishes a foundation for integrating PQC hardware acceleration into general-purpose parallel computing.",
+    "analysis": {},
+    "authors": [
+      "Hossam Hassan",
+      "M. Makkes",
+      "Chae Eun Lee",
+      "Hyungmin Yoon"
+    ],
+    "categories": [],
+    "content_hash": "f2f8cb16ce02b2f08c04ee6c8717c8be4c80852e4efdf41e4f47bb088adf3e56",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: risc-v, cpu, rtl; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "semantic-scholar-48c378d9b9808b1ca6d57b46702fe12f65af4e0b",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "Semantic Scholar: RISC-V RTL fuzzing differential testing"
+    ],
+    "pdf_url": "",
+    "primary_category": "",
+    "published": "2026-09-16",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, cpu, rtl",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "Semantic Scholar",
+    "source_categories": [
+      "Computer Science"
+    ],
+    "source_id": "48c378d9b9808b1ca6d57b46702fe12f65af4e0b",
+    "title": "Design-Space Exploration of Post-Quantum Cryptography Acceleration on an Open-Source RISC-V GPGPU",
+    "title_key": "design space exploration of post quantum cryptography acceleration on an open source risc v gpgpu",
+    "updated": "",
+    "url": "https://www.semanticscholar.org/paper/48c378d9b9808b1ca6d57b46702fe12f65af4e0b",
+    "venue": "未记录"
   },
   {
     "abstract": "AI-assisted claims can appear authoritative when evidence, analysis, human authorization, presentation, and correction history refer to different states. Provenance, attestation, and transparency expose history but alone do not specify the publication transition examined here. We develop Publication Authority as an exact-state, non-transferable, single-use publication capability and instantiate it in PAC-2026 (Publication-Accountability Calculus), a machine-readable AIJIM Protocol candidate. We evaluate its fourth bounded semantic freeze (SF-4), a fixed-profile specification designed for replaceable bindings. Six obligations govern evidence, runs and artifacts, measurement disclosure, authorization, surface correspondence, and lifecycle continuity. Each yields a target-bound witness, localized counterexample, or localized unverifiability; none can compensate for another. Only a fresh, complete all-pass record derives the permit consumed by one atomic publication transition. We use identity vectors, adversarial cases, finite models, and historical implementations. Ten models explored 110,764 safe reachable states; 76 unsafe configurations produced the expected violation or observer countermodel. A reader surface passing its correspondence check cannot authorize publication unless the accepted record admits that surface. SF-4 separates evidence horizon from verification time and rejects an authentic but causally invalid authorization. A historical predecessor path reproduced 17 frozen authorization-successor outcomes. A later in-house, instance-blind test of known case classes matched all 183 scored expectations; same-host package execution reproduced its 240 archived observations. Results support internal coherence, bounded safety, fault sensitivity, and limited constructibility, but not factual truth, general refinement, blind interoperability, field efficacy, or standards status.",
@@ -2848,12 +3414,12 @@
       "Jyotiprakash Mishra",
       "Sanjay K. Sahay",
       "Swati Mishra",
-      "aman Pathak"
+      "Aman Pathak"
     ],
     "categories": [
       "Microarchitectural Security Testing"
     ],
-    "content_hash": "53fb0bab8173f03af7a3530da1d96c780fd76ff0ffec32ff04f0c4fc919bb7fd",
+    "content_hash": "c2d16e9245c8d8ad1522b8722dc1c9993c36568da21ebe2270fe523e6369db13",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/computers15080479",
     "evidence_level": "abstract",
@@ -2861,7 +3427,7 @@
     "first_seen": "2026-08-01",
     "id": "openalex-w7171559005",
     "included": false,
-    "last_seen": "2026-09-01",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact",
       "OpenAlex: cache coherence transition coverage verification",
@@ -2878,7 +3444,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -3366,6 +3932,79 @@
     "updated": "2026-07-17",
     "url": "https://doi.org/10.32614/cran.package.gdpar",
     "venue": "未记录"
+  },
+  {
+    "abstract": "Kernel architecture determines how much code runs with full hardware privilege, shaping both performance and fault containment. This study compares MINIX 3 (a microkernel) and Ubuntu Linux (a monolithic kernel) on two matched bare-metal machines (Intel Core i5-4570, 4 GB RAM) running MINIX 3.4.0 (Clang 3.7.1) and Ubuntu 22.04.4 LTS, kernel 5.15.0-113-generic (GCC 11.4.0), tested 1–30 June 2026. LMbench 3.0-a7 measured system calls, process creation, IPC, context switching, and memory throughput/latency, each test averaged over 30 runs. For five core metrics, all 30 raw readings were retained and tested with Welch's t-test and Mann-Whitney U; every difference is significant (p < 0.001), with coefficients of variation below 1.5%. Ubuntu was faster on null-syscall latency (0.2616 µs vs. 0.8939 µs) and on all memory-bandwidth tests (up to 26×). MINIX 3 was faster on process fork (102.09 µs vs. 186.26 µs), pipe latency (20.35 µs vs. 34.81 µs), and, most sharply, two-process context switching (1.41 µs vs. 51.65 µs, roughly 37×). These patterns support a straightforward reading: microkernel designs reward frequent switching between isolated components, while monolithic kernels retain a clear throughput edge. We also discuss the results architecturally in terms of Trusted Computing Base (TCB) size, without claiming any direct empirical security measurement — no penetration testing or exploitation was attempted. This revision replaces an earlier virtualized testbed with matched bare-metal machines specifically to remove hypervisor overhead as a confound on the isolation-sensitive metrics.",
+    "analysis": {},
+    "authors": [
+      "Salem Abdesalam Alamouri",
+      "Nuha Omran Abokhdair"
+    ],
+    "categories": [],
+    "content_hash": "0177852e613959a0b3cff7066241f99da9089b030e3fe4458c4a0d05f7d7d4cf",
+    "curation_status": "excluded",
+    "doi": "",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7221238228",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://sjst.scst.edu.ly/index.php/sjst/article/download/318/331",
+    "primary_category": "",
+    "published": "2026-07-12",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Hypervisor",
+      "Computer science",
+      "Operating system",
+      "Context switch",
+      "Microkernel",
+      "Trusted computing base",
+      "Testbed",
+      "Embedded system",
+      "Rootkit",
+      "Isolation (microbiology)",
+      "Kernel (algebra)",
+      "Context (archaeology)",
+      "Latency (audio)",
+      "System call",
+      "Spec#",
+      "Architecture",
+      "Multi-core processor",
+      "Overhead (engineering)",
+      "Fault detection and isolation",
+      "Process (computing)",
+      "Fault tolerance",
+      "Base (topology)",
+      "Trusted Computing",
+      "Regression testing",
+      "Linux kernel",
+      "Fault injection",
+      "Virtualization",
+      "Malware",
+      "Static analysis",
+      "Mandatory access control",
+      "Server",
+      "Benchmark (surveying)"
+    ],
+    "source_id": "https://openalex.org/W7221238228",
+    "title": "Performance and Architectural Analysis of MINIX 3 and Ubuntu Linux: Implications for Isolation and Trusted Computing Base",
+    "title_key": "performance and architectural analysis of minix 3 and ubuntu linux implications for isolation and trusted computing base",
+    "updated": "2026-10-11",
+    "url": "https://openalex.org/W7221238228",
+    "venue": "مجلة صرمان للعلوم والتقنية"
   },
   {
     "abstract": "The integration of Large Language Models (LLMs) into software engineering and critical infrastructure has been driven by vendor consensus and artificial benchmarks, masking a profound systemic failure. This meta-study synthesizes longitudinal raw telemetry, CI/CD artifacts, randomized controlled trials (RCTs), and neuroimaging to bypass subjective sentiment surveys and expose the net-negative productivity loops of LLM-driven workflows. We identify a fundamental ontological mismatch: LLMs are probabilistic next-token predictors optimized for linguistic fluency, not semantic comprehension or logical correctness. Applying these statistical text-generators to zero-error engineering environments has triggered a triad of structural deficits. Economically, proprietary providers extract capital through opaque “idle meter” billing, background loops, and silent model downgrades, financially incentivizing failure-and-retry cycles over single-shot resolution. Technically, the illusion of rapid drafting is erased by a severe “review/rework tax.” Alarmingly, 24.2% of AI-introduced vulnerabilities survive into production due to automation bias and soft CI/CD gating. Cognitively, the outsourcing of productive cognitive friction to algorithmic generation measurably degrades human enactive neuroplasticity. EEG telemetry and longitudinal data reveal a widening skill gap between domain-master engineers and superficial “prompters,” accelerating a trajectory toward a macro-economic “knowledge-collapse steady state.” We conclude that the current Generative AI paradigm constitutes a compounding global infrastructure risk. To mitigate this, we propose immediate institutional directives: the mandatory unbundling of API billing, strict human-expert hard-gating for critical systems, a transition to deterministic fixed-cost computing, and a systemic reallocation of research funding toward verifiable, neuro-symbolic AI architectures.",
@@ -5435,7 +6074,7 @@
       "Hao Chen"
     ],
     "categories": [],
-    "content_hash": "42c06a494779b94cc58c3576c5a2539b962dde715b35da24d939000b00c13b0b",
+    "content_hash": "6dede9effe475b70ebe740ce1b027e4ce43daca1bb404e40c94d8b555ca419e6",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3793654.3793756",
     "evidence_level": "abstract",
@@ -5443,7 +6082,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4399694522",
     "included": false,
-    "last_seen": "2026-10-01",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
@@ -5458,7 +6097,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 10,
+    "seen_count": 11,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -5469,7 +6108,7 @@
     "source_id": "https://openalex.org/W4399694522",
     "title": "LLAMAFUZZ: Large Language Model Enhanced Greybox Fuzzing",
     "title_key": "llamafuzz large language model enhanced greybox fuzzing",
-    "updated": "2026-09-25",
+    "updated": "2026-10-14",
     "url": "https://doi.org/10.1145/3793654.3793756",
     "venue": "未记录"
   },
@@ -5812,6 +6451,68 @@
     "updated": "2026-10-01",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
+  },
+  {
+    "abstract": "Retrieval Augmented Generation (RAG) is an essential agent for Large Language Model (LLM) aided Description Language (HDL) tasks, addressing the challenges of limited training data and prohibitively long prompts. However, its performance in handling ambiguous queries and real-world, repository-level HDL projects containing thousands or even tens of thousands of code lines remains limited. Our analysis demonstrates two fundamental mismatches, structural and vocabulary, between conventional semantic similarity-based RAGs and HDL codes. To this end, we propose HDLxGraph, the first framework that integrates the inherent graph characteristics of HDLs with RAGs for LLM-assisted tasks. Specifically, HDLxGraph incorporates Syntax Trees (ASTs) to capture HDLs’ hierarchical structures and Data Flow Graphs (DFGs) to address the vocabulary mismatch. In addition, to overcome the lack of comprehensive HDL search benchmarks, we introduce HDLSearch, an LLMgenerated dataset derived from real-world, repository-level HDL projects. Evaluations show that HDLxGraph improves search, debugging, and completion accuracy by $\\mathbf{1 2. 0 4 \\%} \\boldsymbol{/} \\mathbf{1 2. 2 2 \\%} \\boldsymbol{/} \\mathbf{5. 0 4 \\%}$ and by $\\mathbf{1 1. 5 9 \\%} \\boldsymbol{/} \\mathbf{8. 1 8 \\%} \\boldsymbol{/} \\mathbf{4. 0 7 \\%}$ over state-of-the-art similarity-based RAG and software-code Graph RAG baselines, respectively. The code of HDLxGraph and HDLSearch benchmark are available at https://github.com/UMN-ZhaoLab/HDLxGraph.",
+    "analysis": {},
+    "authors": [
+      "Pingqing Zheng",
+      "Jiayin Qin",
+      "F Zhang",
+      "Niraj Chitla",
+      "Zishen Wan",
+      "Shang Wu",
+      "Yu Kevin Cao",
+      "Caiwen Ding",
+      "Yang Zhao"
+    ],
+    "categories": [],
+    "content_hash": "56387e7472a8232b0f3c162469c795cc784998db3d7c4e59f4b19fc8ef8ad493",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-15",
+    "id": "openalex-w7134990248",
+    "included": false,
+    "last_seen": "2026-10-15",
+    "matched_queries": [
+      "OpenAlex: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2505.15701",
+    "primary_category": "",
+    "published": "2026-01-19",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Bridging (networking)",
+      "Computer science",
+      "Graph",
+      "Database",
+      "Natural language processing",
+      "Graph database",
+      "Information retrieval",
+      "Artificial intelligence",
+      "Data modeling",
+      "Query language",
+      "Language model",
+      "Programming language",
+      "Relational database",
+      "Information model",
+      "Theoretical computer science"
+    ],
+    "source_id": "https://openalex.org/W7134990248",
+    "title": "HDLxGraph: Bridging Large Language Models and HDL Repositories via HDL Graph Databases",
+    "title_key": "hdlxgraph bridging large language models and hdl repositories via hdl graph databases",
+    "updated": "2026-10-14",
+    "url": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
+    "venue": "Asia and South Pacific Design Automation Conference (ASP-DAC)"
   },
   {
     "abstract": "Compilers constitute the foundational root-of-trust in software supply chains; however, their immense complexity inevitably conceals critical defects. Recent research has attempted to leverage historical bugs to design new mutation operators or fine-tune models to increase program diversity for compiler fuzzing.We observe, however, that bugs manifest primarily based on the semantics of input programs rather than their syntax. Unfortunately, current approaches, whether relying on syntactic mutation or general Large Language Model (LLM) fine-tuning, struggle to preserve the specific semantics found in the logic of bug-triggering programs. Consequently, these critical semantic triggers are often lost, resulting in a limitation of the diversity of generated programs. To explicitly reuse such semantics, we propose FeatureFuzz, a compiler fuzzer that combines features to generate programs. We define a feature as a decoupled primitive that encapsulates a natural language description of a bug-prone invariant, such as an out-of-bounds array access, alongside a concrete code witness of its realization. FeatureFuzz operates via a three-stage workflow: it first extracts features from historical bug reports, synthesizes coherent groups of features, and finally instantiates these groups into valid programs for compiler fuzzing. We evaluated FeatureFuzz on GCC and LLVM. Over 24-hour campaigns, FeatureFuzz uncovered 167 unique crashes, which is 2.78x more than the second-best fuzzer. Furthermore, through a 72-hour fuzzing campaign, FeatureFuzz identified 113 bugs in GCC and LLVM, 97 of which have already been confirmed by compiler developers, validating the approach's ability to stress-test modern compilers effectively.",
@@ -6157,7 +6858,7 @@
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "2c1bf7db5c9a760273c055b4ec46d40a3d831c7a6cd90f36aa5d572aed00e1a1",
+    "content_hash": "6895cddc8bbd4b7e5b627caaee5bb83f0bb1a92166c3432e5a2b790edf290d3c",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
@@ -6165,7 +6866,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing",
       "OpenAlex: multicore processor fuzzing shared memory"
@@ -6181,7 +6882,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6198,7 +6899,7 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-10-05",
+    "updated": "2026-10-12",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
     "venue": "Network and Distributed System Security Symposium"
   },
@@ -7573,7 +8274,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "60cd6566ec0e17380bcc33e27c3600e16833bed0da4023a6a10714747590f3ea",
+    "content_hash": "d8215c763f95e1304ebebec65d4d796e63913a7f5212f5be2bd67cf63b45c59f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -7581,7 +8282,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -7596,7 +8297,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7609,7 +8310,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-10-02",
+    "updated": "2026-10-14",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -8323,10 +9024,10 @@
     "abstract": "Sécurisation matérielle de la compilation à la volée des machines virtuelles langage Les machines virtuelles langage (VM) sont l’environnement d’exécution des langages de haut niveau les plus répandus. Elles permettent une portabilité du code applicatif et la gestion automatique de la mémoire. Leur large diffusion couplée à l’exécution de tâches de bas niveau les rendent intéressantes pour les attaquants. Les solutions purement logicielles entraînent souvent une perte de performance incompatible avec la compilation just-in-time (JIT). Des solutions accélérées matériellement sont ajoutées dans des processeurs commerciaux pour concilier des garanties de sécurité fortes avec la performance. Pour comparer ces solutions, cette thèse s’intéresse au jeu d’instructions RISC-V et à ses capacités d’extension. Nous présentons Gigue, un générateur de binaires similaires au code JIT directement exécutables sur les softcores RISC-V. Il fournit une interface pour des instructions personnalisées et garantit leur exécution. Nous présentons une solution d’isolation de domaine au niveau des instructions ajoutée aux binaires de Gigue et déployée dans un processeur avec des modifications minimales. La solution ajoute un surcoût de performance négligeable tout en garantissant des propriétés fortes sur les domaines. Afin de motiver le déploiement dans des cas d’utilisation réels, nous étendons le compilateur JIT Pharo au jeu d’instructions RISC-V, ainsi que son infrastructure de test.",
     "analysis": {},
     "authors": [
-      "Q. Ducasse"
+      "Quentin Ducasse"
     ],
     "categories": [],
-    "content_hash": "40d5a9ff9d7fe3b38e05a9e94824117f8e6533921a465bd9e2c5c15e1e3fe3e8",
+    "content_hash": "cda228feb82fdb43395ae49e2f28c3398f7cb5bcde8da5e8811929171fb7b0f0",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -8334,7 +9035,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -8349,7 +9050,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 9,
+    "seen_count": 10,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8361,7 +9062,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-09-24",
+    "updated": "2026-10-12",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -10030,7 +10731,7 @@
       "Kevin R. B. Butler"
     ],
     "categories": [],
-    "content_hash": "6112fc6fe19106404ceb2ff55b3677effa96ac0b8fc61af6e8ec7fc8dbca60a7",
+    "content_hash": "887cd9fda9f8fda94578e388aae197015c7c8e16a37a8b4e67e9d7d554c9e786",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -10038,7 +10739,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-15",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -10052,7 +10753,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -10077,7 +10778,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-10-06",
+    "updated": "2026-10-12",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "Proceedings - IEEE Symposium on Security and Privacy/Proceedings of the ... IEEE Symposium on Security and Privacy"
   },
