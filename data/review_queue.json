@@ -1,5 +1,96 @@
 [
   {
+    "abstract": "Despite decades of progress in model-based methods and tools for embedded real-time systems, there is still no integrated environment that supports the entire development lifecycle. This paper presents MIMOS-Tools, a comprehensive toolchain spanning the key phases of development, including modeling, simulation, formal verification, real-time scheduling, schedulability and end-to-end latency analysis, and code generation for heterogeneous multicore platforms. All phases are grounded in a single, coherent, and deterministic model of computation, the MIMOS model, for which we present a formal operational semantics and establish both functional and timing determinism. This semantic foundation ensures that properties verified at the model level are preserved throughout the development process and in the generated implementation. A distinguishing feature of MIMOS-Tools is its support for not only deterministic but also modular, compositional design. Unlike synchronous design environments such as SCADE and Simulink, which rely on a global base clock and offline static scheduling, MIMOS-Tools supports time-triggered asynchronous communication together with flexible real-time scheduling of computation. This removes the tight global coupling of the synchronous paradigm: components can be added, modified, or updated without recomputing a system-wide schedule, enabling scalable and incremental design and dynamic updates throughout the system lifecycle. However, MIMOS-Tools also supports Simulink models when the deadlines of tasks are set to zero to emulate the zero-time semantics of synchronous design. The toolchain is available at uu-mimos.github.io.",
+    "analysis": {},
+    "authors": [
+      "Wang Yi",
+      "Chengzi Huang",
+      "Behnam Khodabandeloo",
+      "Duc Anh Nguyen"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence",
+      "Formal & Directed Processor Verification"
+    ],
+    "content_hash": "a3f505f013526d282aa511a239a36040aa33b13399cfaec23eb099aca3078e41",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-10-22",
+    "id": "arxiv-2610-27826v1",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.27826v1",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2026-10-20",
+    "relevance_reasons": [
+      "hardware/processor object: multicore",
+      "verification/fuzzing method: verification, formal verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 2,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2610.27826v1",
+    "title": "MIMOS-Tools: An Integrated Toolchain for Model-Based Design of Embedded Systems",
+    "title_key": "mimos tools an integrated toolchain for model based design of embedded systems",
+    "updated": "2026-10-20",
+    "url": "http://arxiv.org/abs/2610.27826v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "LLM agents can write directed tests that close functional coverage, but coverage only shows that a state was reached, not that the data on the way there was correct. This is a long-known point in verification and we do not claim it as new. We describe a small coverage-closure agent that applies it to an LLM loop: coverage is read from the report that the simulation itself exports (cocotb-coverage YAML) and never taken from the model's account, and data integrity is checked by scoreboards that are separate from the model. On three architecturally distinct RTL designs (an asynchronous FIFO, a UART transmitter and an AHB2APB bridge) the agent raised coverage from 91.7%, 88.9% and 67.4% to 100% within its 8-iteration budget in every logged run, using one design-agnostic agent. A reactive scoreboard monitor attached to the FIFO's base testbench also found a clock-domain-crossing bug in the author's own stimulus code. The monitor is not yet attached to the LLM-generated tests, so their data integrity is not independently checked; one manual check on a single FIFO test is reported as preliminary. We list the weaknesses of this evidence: three designs, no baseline, no ablation, and logged runs that come from several agent checkpoints.",
+    "analysis": {},
+    "authors": [
+      "Venkata Krishna Kumar Vedantam"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "3be1f6a3ef3b352cb9bece6029bc143f1e3ed6c461d374941664e6638229b68e",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-10-22",
+    "id": "arxiv-2610-21570v1",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.21570v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-10-15",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "source_id": "2610.21570v1",
+    "title": "Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design",
+    "title_key": "independent data integrity verification for llm driven functional coverage closure in hardware design",
+    "updated": "2026-10-15",
+    "url": "http://arxiv.org/abs/2610.21570v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Abstract. Paleoclimate records stored in ice cores are facing great threat as on-going mass loss is rapidly accelerating. To study Amazon’s paleoclimate, an ice core was drilled in the Quelccaya ice cap, in Peru, in 2022. However, as a first step, post-depositional alterations need to be discussed and described. During drilling, one water table (WT) associated with the firn-ice transition and a major fracture at 45 m depth were identified. Here we present the first chemical results retrieved from the ice core and discuss the preservation state of the record in terms of post-depositional alterations. Concentrations of levoglucosan, Na+, K+, Cl−, SO42− and NO3− were analyzed and compared with the relatively insoluble and immobile black carbon signal. Furthermore, signal preservation was evaluated using descriptive statistics, covariance analysis, ionic balance, and multivariate classification. Statistical analyses reveal enhanced ion concentration atop the WT. The section below the WT extending to the fracture is marked by a highly altered chemical signal, as indicated by multivariate analysis. Within this interval, Cl− is strongly depleted and Na+ shows increased association with SO42− and NO3−, while the ionic balance indicates increased acidity relative to the WT onset. Below the fracture, chemical signals are attenuated but largely preserved. Principal Component Analysis coupled to Fuzzy C-Means clustering independently identifies the WT, altered ice interval, the fracture zone and a deep ice anomaly, suggesting variable preservation along the core. We define depth intervals characterized by preserved, amplified, altered and attenuated signals and show that despite significant meltwater influence, post-depositional alterations are locally concentrated rather than affecting the entire record. These results provide a basis for future paleoclimatic investigations using what could be the last Quelccaya Ice Cap ice core before continued melting irreversibly alters the record.",
     "analysis": {},
     "authors": [
@@ -263,23 +354,23 @@
       "Pingqing Zheng",
       "Jiayin Qin",
       "Fuqi Zhang",
-      "Zi-Shen Wan",
-      "S. Wu",
+      "Zishen Wan",
+      "Shang Wu",
       "Yu Cao",
-      "Cai-Wen Ding",
-      "Yang Zhao"
+      "Caiwen Ding",
+      "Yang Katie Zhao"
     ],
     "categories": [
       "RISC-V Processor Fuzzing"
     ],
-    "content_hash": "451069d92c4d67c5792e307aa703aa4a0283e83958878ace36110c38ed2ac137",
+    "content_hash": "48f411566223bb0122c633be52906a35b6e737dff5fdbe196bb4426a26344596",
     "curation_status": "review",
     "evidence_level": "abstract",
     "exclusion_reason": "",
     "first_seen": "2026-08-08",
     "id": "arxiv-2608-02915v1",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "((all:\"RISC-V\" OR all:riscv) AND (all:fuzzing OR all:\"differential testing\" OR all:\"random testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
       "Semantic Scholar: RISC-V RTL fuzzing differential testing"
@@ -294,17 +385,19 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
-      "Computer Science"
+      "cs.AR",
+      "cs.CL",
+      "cs.SE"
     ],
     "source_id": "2608.02915v1",
     "title": "LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension",
     "title_key": "lace large language model aided multi agent framework for agile risc v instruction extension",
     "updated": "2026-08-03",
-    "url": "https://www.semanticscholar.org/paper/7ab84b885f79b71b1c8a60906d34b7ab250901df",
-    "venue": "未记录"
+    "url": "http://arxiv.org/abs/2608.02915v1",
+    "venue": "arXiv"
   },
   {
     "abstract": "Abstract Brain connectivity is increasingly understood as a dynamic, multiscale relational system in which cognitive states emerge from coordinated patterns rather than isolated regional activity. This monograph develops an integrated research architecture for explaining and predicting such states through quantum topological data analysis (QTDA), network statistics, causal reasoning, trustworthy machine learning, and scalable neuroinformatics engineering. The central premise is that topology can preserve mesoscopic structure across noisy, heterogeneous measurements, while quantum and quantum-inspired representations may offer alternative computational geometries for comparing complex connectivity configurations. The book formalizes uncertainty at measurement, model, and decision levels; distinguishes associational prediction from causal explanation; and links persistent topological summaries to interpretable state discovery. It further specifies validation regimes for calibration, transportability, robustness, fairness, privacy, and reproducibility, together with MLOps practices for multimodal and distributed data. Applications span clinical decision support, neuroergonomics, learning systems, population brain health, and public policy, with comparative relevance to South Asia, Europe, Africa, and the Americas. The resulting framework is designed as a reusable scholarly platform for hypothesis generation, computational experimentation, governance design, and responsible translation of brain-connectivity analytics into research, industry, and policy settings. Keywords brain connectivity, cognitive-state discovery, quantum topological data analysis, explainable neuroinformatics, network neuroscience, persistent homology, simplicial complexes, quantum kernels, causal inference, hierarchical modeling, dynamic state-space models, machine learning, calibration, out-of-distribution generalization, algorithmic fairness, privacy-preserving analytics, multimodal neurodata, MLOps, federated learning, data provenance, neuroergonomics, population brain health, AI governance",

@@ -1,5 +1,195 @@
 [
   {
+    "abstract": "An agent based on a large language model (LLM) may store an untrusted document and use it weeks later to select a payment destination. Preventing this action requires evidence of authorization that remains valid when stored text changes. We study a policy that requires either endorsements (explicit approvals) from two separately administered sources or explicit user authorization. In an abstract memory model, we prove the policy is preserved under permitted transformations for stores of any size, assuming correct source and authority binding, protected records, and checks on every consequential action. We evaluate the executable monitor, which checks calls before execution, separately from the proof. In 1,152 controlled tool-use episodes, GPT-4o-mini executes attacker-selected actions in 61 of 72 undefended episodes and none of the 72 monitored episodes. Clean-task completion remains 24 of 24 when both endorsers are available. A separate 1,728-episode experiment tests recovery after denial. Returning to signed records instead of rereading a contaminated note raises attacked-task completion from 14/72 to 72/72 for GPT-4o-mini and from 22/72 to 43/72 for Gemini 2.5 Flash, without executing an attacker-selected action. Neither model completes transactions with fewer than two sources. Whole-action tests reject unauthorized combinations of individually approved fields. Extraction probes identify mistaken approvals, and fault analysis shows how shared failures can negate a second domain's benefit. Calibrations using original defense implementations reveal security and task-completion tradeoffs under different policies. These results support conditional enforcement and recovery in constructed workflows, but do not establish that endorsements will be available or correct in deployment.",
+    "analysis": {},
+    "authors": [
+      "Yedidel Louck"
+    ],
+    "categories": [],
+    "content_hash": "5284fd8fa76787d446ceaeb88984a9409bf8560624889729512161f4e613613c",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.66977/xsci.2610.001o",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-10-22",
+    "id": "openalex-w7165756039",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://xsci.com/preprint/doi/10.66977/xsci.2610.001o.pdf",
+    "primary_category": "",
+    "published": "2026-10-18",
+    "relevance_reasons": [
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Computer security",
+      "Adversary",
+      "Vulnerability (computing)",
+      "Malleability",
+      "Pipeline (software)",
+      "Session (web analytics)",
+      "Benchmark (surveying)",
+      "Control (management)",
+      "Identity (music)",
+      "Cryptography",
+      "Secrecy",
+      "Enhanced Data Rates for GSM Evolution",
+      "Base (topology)",
+      "Adversary model",
+      "Fingerprint (computing)",
+      "Money laundering",
+      "Asset (computer security)",
+      "Class (philosophy)",
+      "Frontier",
+      "Memory protection",
+      "Anonymity"
+    ],
+    "source_id": "https://openalex.org/W7165756039",
+    "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
+    "title_key": "securing llm agent long term memory against poisoning non malleable origin bound authority with machine checked guarantees",
+    "updated": "2026-10-20",
+    "url": "https://doi.org/10.66977/xsci.2610.001o",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Modern highly distributed artificial intelligence systems face a dual scaling barrier: the systematic accumulation of micro-truncation deviations inherent to the IEEE 754 floating-point standard (float64/FP16), and the operational latency of traditional von Neumann architectures restricted to discrete, event-driven request-response paradigms. Under multi-billion parameter iterative weight synchronization topologies, this parasitic round-off drift yields exponential entropy degradation and alignment instability within the runtime execution layer. To bypass these scaling constraints, this paper introduces a non-von Neumann distributed computational environment operating under a continuous memory register synchronization regime. We propose an algebraic framework built upon a non-zero modular residue ring (M9) and introduce the Gauss–Shalyga cyclic modular reduction operator (R9). This operator mathematically intercepts register anomalies near singular coordinate thresholds (ΔV → 0), executing deterministic hardware-level fault mitigation and preventing catastrophic runtime crashes without relying on conditional software branching. Furthermore, we substitute stochastic floating-point representations with arbitrary-precision fractional calculus (Fraction(p, q)), enforcing absolute metric convergence across long-duration execution pipelines. To regularize data density distribution across asynchronous multi-node topographies without triggering discrete clipping operations, we formalize an asymptotic damping buffer derived from the Riemann zeta function (ζ(2)) alongside an information-theoretic boundary defined by the Golden Ratio attractor (ϕ). Finally, we validate this framework against state-of-the-art stress-testing logs of high-throughput agentic networks, demonstrating unprecedented fault tolerance, latent semantic calibration under zero-signal anomalies, and an architectural blueprint for scalable, structurally resilient Artificial Superintelligence (ASI) environments.",
+    "analysis": {},
+    "authors": [
+      "Антон Шалыга"
+    ],
+    "categories": [],
+    "content_hash": "01c0c9bb8576d621c9c5b8b0be6856a3a242a754261bf32b340441ce439e98d4",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.24108/preprints-3116714",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-22",
+    "id": "openalex-w7222968523",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://preprints.ru/files/6154",
+    "primary_category": "",
+    "published": "2026-10-16",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Parallel computing",
+      "Asynchronous communication",
+      "Algorithm",
+      "Concurrency",
+      "Theoretical computer science",
+      "Modular design",
+      "Synchronization (alternating current)",
+      "Software",
+      "Debugging",
+      "Rate of convergence",
+      "Massively parallel",
+      "Probabilistic logic",
+      "Nondeterministic algorithm",
+      "Overhead (engineering)",
+      "Buffer overflow",
+      "Reduction (mathematics)",
+      "Differentiable function",
+      "Mutual exclusion",
+      "Compiler",
+      "Scaling",
+      "Asynchrony (computer programming)",
+      "Uncertainty quantification",
+      "Probability distribution",
+      "Arbiter",
+      "Von Neumann architecture",
+      "Distributed algorithm",
+      "Execution model"
+    ],
+    "source_id": "https://openalex.org/W7222968523",
+    "title": "Eliminating Iterative Mantissa Drift and Pulse-Event Bottlenecks in Distributed ASI Architectures via Modular Reduction and Continuous-Time Runtimes",
+    "title_key": "eliminating iterative mantissa drift and pulse event bottlenecks in distributed asi architectures via modular reduction and continuous time runtimes",
+    "updated": "2026-10-21",
+    "url": "https://doi.org/10.24108/preprints-3116714",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "I did not set out to write a book about compliance. I set out to solve a problem that would not stay solved. For most of the last three years I have been building payment infrastructure with AI coding assistants in the loop, and watching what they produce land in systems where a mistake is not a bug but a reportable incident. The tools are good. That is the part people underestimate when they argue about whether to allow them. They are fast, they are competent, and on most days they are better than I am at the parts of the job I find tedious. What they are not is aware of where they are. A model writing a logging statement in a payment authorization path produces the same code it would produce anywhere else, because nothing in the code tells it that this particular field is subject to a rule that makes the obvious implementation illegal. That gap does not close as models improve, and understanding why took me longer than it should have. I tried the obvious thing first. I told the assistant what the rules were. It agreed, restated them accurately, and then produced code that broke them — not always, and not obviously, which is what made the pattern slow to see. Eventually it was the agreement rather than the failure that made the point. I had been treating the model's assurance as evidence of compliance, and the two turned out to be unrelated. That conclusion is the whole book. If a rule cannot be reliably held inside the model, it has to be held outside it — in a layer that sits between the developer and the assistant, enforcing policy that neither party has to remember. I filed a patent on a system that does this, and Part III describes it in detail. But the argument matters more than the implementation, and it is an argument I would make even to somebody who intends to build nothing. This book is written from inside the problem rather than above it. The examples are things that happened: a settlement file carrying account numbers, my own address masked into legibility, a velocity counter that blocked customers for money they never sent, an alert somebody disabled on a Tuesday intending to fix it later. None of them involved anybody being careless. All of them involved reasonable decisions made without a piece of information that was not available at the point of decision. I have tried to be honest about the limits. There are problems here I do not know how to solve, and I have said so rather than reaching for a framework I have not seen work. Chapter 16 describes a control I recommend and have not implemented. Chapter 19 ends without an answer. I would rather a reader trust the parts I am confident about than find out later which ones I was bluffing on.",
+    "analysis": {},
+    "authors": [
+      "Ashutosh Pal"
+    ],
+    "categories": [],
+    "content_hash": "a498e1a1d0467777b59cd1cf8cfb6f324f3dfabb5dde91dd637df71fa265a0c2",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.70593/978-81-6632-146-7",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-10-22",
+    "id": "openalex-w7222898540",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://deepscienceresearch.com/dsr/catalog/download/910/3903/6535",
+    "primary_category": "",
+    "published": "2026-10-13",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Mistake",
+      "Computer science",
+      "Payment",
+      "Code (set theory)",
+      "Computer security",
+      "Coding (social sciences)",
+      "Software",
+      "Nothing",
+      "Set (abstract data type)",
+      "Field (mathematics)",
+      "Software engineering",
+      "Authorization",
+      "Secrecy",
+      "Source code",
+      "Statement (logic)",
+      "Payroll",
+      "Workstation",
+      "Subject (documents)",
+      "World Wide Web",
+      "Certification",
+      "Internet privacy",
+      "Database transaction"
+    ],
+    "source_id": "https://openalex.org/W7222898540",
+    "title": "Code You Didn't Write, Risk You Still Own: Governing LLM Coding Assistants in Regulated Financial Software - Second Edition",
+    "title_key": "code you didn t write risk you still own governing llm coding assistants in regulated financial software second edition",
+    "updated": "2026-10-20",
+    "url": "https://doi.org/10.70593/978-81-6632-146-7",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Agentic systems increasingly operate through executable workflows: they search artifacts, invoke tools, inspect structured observations, and query databases. Training such agents requires supervision that captures valid tool interactions, but query-first synthesis can produce plausible requests that do not correspond to valid tool sequences, compatible parameters, or available data. We propose SyntheticAgentTraceQA, an execution-first framework that constructs workflow templates, assigns tools under data-flow constraints, executes and validates traces, and only then synthesizes user tasks, teacher reasoning, and reference answers. Across the evaluated tool ecosystems, fine-tuning Qwen3.5 variants on the resulting data improves several measures of tool-use behavior, reference-trace agreement, and answer generation. Masked supervision, which excludes reasoning tokens from the loss, yields higher answer-production rates than full supervision and does not consistently improve trace agreement, especially at the 9B scale.",
     "analysis": {},
     "authors": [
@@ -201,7 +391,7 @@
       "Tevfik Bultan"
     ],
     "categories": [],
-    "content_hash": "dd6b2560e36a569be845d31b89e44b10a1313280c0ebdc4d3c9bedf58d5cc882",
+    "content_hash": "1e32cb78b0b7fd68a1bfd3cf1db2564f6fa9b69ac2d70aa6396bb2f53398bb3e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3843282.3844434",
     "evidence_level": "abstract",
@@ -209,7 +399,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7220986977",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "OpenAlex: processor fuzzer automatic bug injection"
     ],
@@ -223,7 +413,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -240,7 +430,7 @@
     "source_id": "https://openalex.org/W7220986977",
     "title": "Bug Composition: Triggering Multiple Bugs with Agentic Driver Generation",
     "title_key": "bug composition triggering multiple bugs with agentic driver generation",
-    "updated": "2026-10-11",
+    "updated": "2026-10-16",
     "url": "https://doi.org/10.1145/3843282.3844434",
     "venue": "未记录"
   },
@@ -6467,7 +6657,7 @@
       "Yang Zhao"
     ],
     "categories": [],
-    "content_hash": "56387e7472a8232b0f3c162469c795cc784998db3d7c4e59f4b19fc8ef8ad493",
+    "content_hash": "50d2018c242df4328758a31281de1a30047d29fd128aefd551d2a926b6929568",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "evidence_level": "abstract",
@@ -6475,7 +6665,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7134990248",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -6488,7 +6678,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Bridging (networking)",
@@ -6510,7 +6700,7 @@
     "source_id": "https://openalex.org/W7134990248",
     "title": "HDLxGraph: Bridging Large Language Models and HDL Repositories via HDL Graph Databases",
     "title_key": "hdlxgraph bridging large language models and hdl repositories via hdl graph databases",
-    "updated": "2026-10-14",
+    "updated": "2026-10-16",
     "url": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "venue": "Asia and South Pacific Design Automation Conference (ASP-DAC)"
   },
@@ -6564,6 +6754,58 @@
     "title_key": "discovering 100 compiler defects in 72 hours via llm driven semantic logic recomposition",
     "updated": "2026-01-27",
     "url": "http://arxiv.org/abs/2601.12360v2",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "CI/CD pipelines often execute build and test tasks with high privileges, making the compilation stage security-sensitive. In this setting, malicious pull requests may exploit carefully crafted source code to trigger arbitrary code execution or excessive resource consumption during compilation, making compiler vulnerabilities security-relevant. Recent work has leveraged bug-prone knowledge from historical bugs to drive compiler exploration and bug discovery. However, many compiler bugs depend on program semantics rather than syntax, and existing approaches either rely on syntactic mutation or encode this knowledge in model parameters, making it difficult to preserve and recombine the semantics that actually trigger compiler bugs. We propose FeatureFuzz, a compiler fuzzer that explicitly reuses bug-prone semantics through features and feature groups. FeatureFuzz extracts these bug-prone semantics from historical bugs as features, synthesizes them into coherent feature groups, and instantiates them into programs for compiler fuzzing. On GCC and LLVM, over 24-hour campaigns, FeatureFuzz uncovers 167 unique crashes, 2.78x as many as the second-best fuzzer. Over a 72-hour fuzzing campaign, FeatureFuzz identifies 122 bugs, of which 106 have been confirmed by compiler developers as zero-days. Among reported bugs, 64 affect release-build compilers, including 9 memory-corruption bugs, highlighting the security relevance of compiler fuzzing in CI/CD settings.",
+    "analysis": {},
+    "authors": [
+      "Xingbang He",
+      "Yuanwei Chen",
+      "Hao Wu",
+      "Jikang Zhang",
+      "Zicheng Wang",
+      "Ligeng Chen",
+      "Junjie Peng",
+      "Haiyang Wei",
+      "Yi Qian",
+      "Tiantai Zhang",
+      "Linzhang Wang",
+      "Bing Mao"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "4fca1c2d564de3935faac56faeb6cac8adeef1cdc5f5c8351e94541c0e28bdf3",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: compiler fuzzing",
+    "first_seen": "2026-10-22",
+    "id": "arxiv-2601-12360v3",
+    "included": false,
+    "last_seen": "2026-10-22",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2601.12360v3",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2026-01-18",
+    "relevance_reasons": [
+      "excluded phrase: compiler fuzzing"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2601.12360v3",
+    "title": "FeatureFuzz: Treating Bug-prone Features as Core Primitives for Compiler Fuzzing",
+    "title_key": "featurefuzz treating bug prone features as core primitives for compiler fuzzing",
+    "updated": "2026-10-16",
+    "url": "http://arxiv.org/abs/2601.12360v3",
     "venue": "arXiv"
   },
   {
@@ -8274,7 +8516,7 @@
       "Saleh Mulhem"
     ],
     "categories": [],
-    "content_hash": "d8215c763f95e1304ebebec65d4d796e63913a7f5212f5be2bd67cf63b45c59f",
+    "content_hash": "6ca387518ba83af3630d27422f30fc7e03d89a4fed986eb76cf0986a72572232",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3735641",
     "evidence_level": "abstract",
@@ -8282,7 +8524,7 @@
     "first_seen": "2026-08-08",
     "id": "openalex-w4410321356",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -8297,7 +8539,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8310,7 +8552,7 @@
     "source_id": "https://openalex.org/W4410321356",
     "title": "A Systematic Mapping Study on SystemC/TLM Modeling Capabilities in New Research Domains",
     "title_key": "a systematic mapping study on systemc tlm modeling capabilities in new research domains",
-    "updated": "2026-10-14",
+    "updated": "2026-10-16",
     "url": "https://doi.org/10.1145/3735641",
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
@@ -9027,7 +9269,7 @@
       "Quentin Ducasse"
     ],
     "categories": [],
-    "content_hash": "cda228feb82fdb43395ae49e2f28c3398f7cb5bcde8da5e8811929171fb7b0f0",
+    "content_hash": "d2d7634407eea3d8b10a61c7ce0729b9cf5163fd3b2298800ab7d010b8aae0ed",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -9035,7 +9277,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -9050,7 +9292,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 10,
+    "seen_count": 11,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -9062,7 +9304,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-10-12",
+    "updated": "2026-10-21",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -10731,7 +10973,7 @@
       "Kevin R. B. Butler"
     ],
     "categories": [],
-    "content_hash": "887cd9fda9f8fda94578e388aae197015c7c8e16a37a8b4e67e9d7d554c9e786",
+    "content_hash": "5a4050b3cd991993bf8be5e5249ced6423608edceef43b590fbb9bf04ed4e9d6",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -10739,7 +10981,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-22",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -10753,7 +10995,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 8,
+    "seen_count": 9,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -10778,7 +11020,7 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-10-12",
+    "updated": "2026-10-16",
     "url": "https://doi.org/10.1109/sp.2019.00041",
     "venue": "Proceedings - IEEE Symposium on Security and Privacy/Proceedings of the ... IEEE Symposium on Security and Privacy"
   },
