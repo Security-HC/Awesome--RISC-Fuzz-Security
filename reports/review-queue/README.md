@@ -1,9 +1,11 @@
 # 待人工复核
 
-共 61 篇。该列表不进入主 README。
+共 64 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-10-23 | [Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors](http://arxiv.org/abs/2610.32597v1) | 4 | hardware/processor object: risc-v, processor, rtl；verification/fuzzing method: verification, mutation testing |
+| 2026-10-22 | [Typed Template Fuzzing](http://arxiv.org/abs/2610.31342v1) | 4 | hardware/processor object: verilog, systemverilog；verification/fuzzing method: fuzz, test generation |
 | 2026-10-20 | [MIMOS-Tools: An Integrated Toolchain for Model-Based Design of Embedded Systems](http://arxiv.org/abs/2610.27826v1) | 4 | hardware/processor object: multicore；verification/fuzzing method: verification, formal verification |
 | 2026-10-15 | [Independent Data-Integrity Verification for LLM-Driven Functional Coverage Closure in Hardware Design](http://arxiv.org/abs/2610.21570v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification |
 | 2026-09-23 | [Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core](https://doi.org/10.5194/egusphere-2026-4779) | 4 | hardware/processor object: soc；verification/fuzzing method: fuzz |
@@ -15,6 +17,7 @@
 | 2026-07-30 | [Brain-Connectivity Modelling and Cognitive-State Discovery using Quantum Topological Data Analysis for Explainable Neuroinformatics](https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [Timelines Over Tokens](https://doi.org/10.31979/etd.ewrn-xhac) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [RThermaL](https://doi.org/10.31979/etd.x48p-hs5d) | 4 | hardware/processor object: processor, rtl, verilog；verification/fuzzing method: validation |
+| 2026-07-26 | [Seeing the Unseen: Reverse Engineering Hidden PMU Events by Differential Analysis and Simulation Validation](https://doi.org/10.1145/3770743.3804084) | 4 | hardware/processor object: processor, microarchitectural；verification/fuzzing method: validation |
 | 2026-07-15 | [nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency](https://doi.org/10.3390/computers15070447) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: validation |
 | 2026-07-05 | [EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR](https://doi.org/10.1145/3803437.3806400) | 4 | hardware/processor object: verilog；verification/fuzzing method: verification, formal verification |
 | 2026-05-05 | [täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)](http://arxiv.org/abs/2605.04172v1) | 4 | hardware/processor object: microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |

@@ -1,12 +1,96 @@
 [
   {
+    "abstract": "A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in real time. LLM agents have recently become capable of finding real-world vulnerabilities by working as a security expert would: they run analysis tools, explore the surrounding code, test hypotheses and weigh the evidence before forming their own judgement. This reasoning, however, spans many model calls, so that each verdict takes minutes of compute, far too long for real-time screening. Faster detectors, which fine-tune deep learning models or prompt an LLM for a direct verdict, are less accurate: they judge a function without the context an agent gathers, and an LLM's generated verdict is unreliable even when given some of it. We present REVA (REal-time Vulnerability Analysis), an AI vulnerability detector that brings the security context and code understanding components behind agentic detectors into a single forward pass of an LLM. For each new function, REVA gives the LLM a pre-computed threat model of its module, lightweight static analysis findings and call-graph information. REVA leverages a trained probe to read the LLM's internal representations of the new function in this context. On PrimeVul's held-out test set, REVA on GLM-5.3-Flash reaches 60.0% accuracy in about one second per function. This matches VulTriage (59.2%), the state-of-the-art agentic detector, run on the same LLM, while being over 250 times faster and less than a tenth as costly. On the same prompt, the probe is 14% to 17% more accurate than the LLM's own direct verdict. Across three open LLMs, REVA is at least as accurate as VulTriage, and about 10% more accurate on two of them. An LLM's internal representations thus encode much of what agentic detectors obtain through reasoning.",
+    "analysis": {},
+    "authors": [
+      "Amine Lbath",
+      "Massih-Reza Amini"
+    ],
+    "categories": [],
+    "content_hash": "216265f7f8aa3fc5a0dbbe4266c7b09679982f1c0f2675d420a980f761ba68d6",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-10-29",
+    "id": "arxiv-2610-35829v1",
+    "included": false,
+    "last_seen": "2026-10-29",
+    "matched_queries": [
+      "((all:\"timing vulnerability\" OR all:\"microarchitectural leakage\") AND (all:fuzzing OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.35829v1",
+    "primary_category": "",
+    "published": "2026-10-26",
+    "relevance_reasons": [
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "source_id": "2610.35829v1",
+    "title": "Reva: Real-Time Vulnerability Detection through Contextual Probing of Large Language Models",
+    "title_key": "reva real time vulnerability detection through contextual probing of large language models",
+    "updated": "2026-10-26",
+    "url": "http://arxiv.org/abs/2610.35829v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Making an open-weight language model generate text is not the same as making it finish coding work. This retrospective empirical systems experience report follows my engineering work from July to October 2026 across coding clients, model-specific serving recipes, vLLM, SGLang, llama.cpp, and MLX. Models behind a nominally compatible endpoint still differed in tool-call formatting, turn control, context behavior, cache reuse, and reliability. A served model, coherent text, executed tool calls, and code that passes independent behavioral checks proved to be distinct levels of progress. The evidence includes 4,165 coding-agent gateway turns from my own sessions, 623 debug jobs, and three separate delegation studies with hidden behavioral checks and a fixed Claude Opus 5.5 parent. Saved cold-prefix requests had a median time to first token of about 69.4 s, versus 2.8 s for high-reuse requests (observational). In a 45-trial study, direct coding passed 15/15 and delegation to a quantized Qwen3-Coder 30B-A3B worker passed 12/15 and 14/15. On a second 15-task suite under a fixed artifact contract, the completed replacement cohort had 45/45 for direct coding and 12/45 for a Nemotron Cascade 2 worker (11 worker substitutions). Sixteen sessions stopped by a subscription limit before any model call were replaced; counting them as failures gives 37/45 and 8/45. A Qwen3-Coder worker passed 0/45. In both studies with a direct arm, direct coding had lower API list-price-equivalent frontier cost per verified success. A post-hoc diagnostic found that 19 of 36 artifacts rejected only for renamed parameters passed the hidden checks unchanged; they are not counted as successes. The contribution is an evidence-qualified account of serving, agent protocol, session continuity, artifact validation, and verification in practice. The studies are not pooled and do not rank models or runtimes.",
+    "analysis": {},
+    "authors": [
+      "Vaibhav Jain"
+    ],
+    "categories": [
+      "RISC-V Processor Fuzzing"
+    ],
+    "content_hash": "feb67a7b00a3ebba38f48d87b57451281348de4b0d0c7bfb82035c8e2ad60aa4",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification, validation; missing object-method conjunction",
+    "first_seen": "2026-10-29",
+    "id": "arxiv-2610-34241v1",
+    "included": false,
+    "last_seen": "2026-10-29",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.34241v1",
+    "primary_category": "RISC-V Processor Fuzzing",
+    "published": "2026-10-25",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification, validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2610.34241v1",
+    "title": "Beyond Benchmarks: Can Small Open-Weight Models Get Real Coding Work Done?",
+    "title_key": "beyond benchmarks can small open weight models get real coding work done",
+    "updated": "2026-10-25",
+    "url": "http://arxiv.org/abs/2610.34241v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "An agent based on a large language model (LLM) may store an untrusted document and use it weeks later to select a payment destination. Preventing this action requires evidence of authorization that remains valid when stored text changes. We study a policy that requires either endorsements (explicit approvals) from two separately administered sources or explicit user authorization. In an abstract memory model, we prove the policy is preserved under permitted transformations for stores of any size, assuming correct source and authority binding, protected records, and checks on every consequential action. We evaluate the executable monitor, which checks calls before execution, separately from the proof. In 1,152 controlled tool-use episodes, GPT-4o-mini executes attacker-selected actions in 61 of 72 undefended episodes and none of the 72 monitored episodes. Clean-task completion remains 24 of 24 when both endorsers are available. A separate 1,728-episode experiment tests recovery after denial. Returning to signed records instead of rereading a contaminated note raises attacked-task completion from 14/72 to 72/72 for GPT-4o-mini and from 22/72 to 43/72 for Gemini 2.5 Flash, without executing an attacker-selected action. Neither model completes transactions with fewer than two sources. Whole-action tests reject unauthorized combinations of individually approved fields. Extraction probes identify mistaken approvals, and fault analysis shows how shared failures can negate a second domain's benefit. Calibrations using original defense implementations reveal security and task-completion tradeoffs under different policies. These results support conditional enforcement and recovery in constructed workflows, but do not establish that endorsements will be available or correct in deployment.",
     "analysis": {},
     "authors": [
       "Yedidel Louck"
     ],
     "categories": [],
-    "content_hash": "5284fd8fa76787d446ceaeb88984a9409bf8560624889729512161f4e613613c",
+    "content_hash": "23df9c70f500466e25b902d324f8406075570308815b2404c8d632e96003e5b1",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.66977/xsci.2610.001o",
     "evidence_level": "abstract",
@@ -14,7 +98,7 @@
     "first_seen": "2026-10-22",
     "id": "openalex-w7165756039",
     "included": false,
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: memory consistency checker processor trace"
     ],
@@ -28,7 +112,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -57,7 +141,7 @@
     "source_id": "https://openalex.org/W7165756039",
     "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
     "title_key": "securing llm agent long term memory against poisoning non malleable origin bound authority with machine checked guarantees",
-    "updated": "2026-10-20",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.66977/xsci.2610.001o",
     "venue": "未记录"
   },
@@ -325,7 +409,7 @@
       "Dario Di Nucci"
     ],
     "categories": [],
-    "content_hash": "2e4535963ce19e47e6e8f12c2f0335cb2d81a15fb529f8791e2e5a0846d1d9ff",
+    "content_hash": "e4c6305d7211e47c945ae41b864ab1056efb8712675308642c8fceed918f4db4",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3843781.3844627",
     "evidence_level": "abstract",
@@ -333,7 +417,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7204635274",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: processor fuzzer automatic bug injection"
     ],
@@ -347,7 +431,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Persona",
@@ -375,7 +459,7 @@
     "source_id": "https://openalex.org/W7204635274",
     "title": "The Role of Prompt Patterns in LLM-Based Smart Contract Vulnerability Detection",
     "title_key": "the role of prompt patterns in llm based smart contract vulnerability detection",
-    "updated": "2026-10-11",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1145/3843781.3844627",
     "venue": "未记录"
   },
@@ -439,7 +523,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "5046ed35d5ae88951ad72f956a159eaeb67beb8865267a6923a9dc11b3fe189e",
+    "content_hash": "32835ce136fba0cf9c6a13c914ce9566464e3367167e2fc273254cccbc7f7471",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3843781",
     "evidence_level": "abstract",
@@ -447,7 +531,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7221014174",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: processor fuzzer automatic bug injection"
     ],
@@ -461,7 +545,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -479,7 +563,7 @@
     "source_id": "https://openalex.org/W7221014174",
     "title": "Proceedings of the 2nd International Workshop on Software Security Testing",
     "title_key": "proceedings of the 2nd international workshop on software security testing",
-    "updated": "2026-10-10",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1145/3843781",
     "venue": "未记录"
   },
@@ -494,7 +578,7 @@
     "categories": [
       "Formal & Directed Processor Verification"
     ],
-    "content_hash": "abfd5de3baf5a3ab76d70601f61a370e775b38c3bd810a15a0e9629cbd80b91a",
+    "content_hash": "ce32fd96c6aef06f9e71cd8f172a83d2c0b2c2c36507430e43c844ecf2e7d5c3",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3844178.3844643",
     "evidence_level": "abstract",
@@ -502,7 +586,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7221049449",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: processor fuzzer automatic bug injection"
     ],
@@ -517,7 +601,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Biology",
@@ -534,7 +618,7 @@
     "source_id": "https://openalex.org/W7221049449",
     "title": "RepoTune: Co-evolving Vulnerability Detection with a Repository’s Genome",
     "title_key": "repotune co evolving vulnerability detection with a repository s genome",
-    "updated": "2026-10-12",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1145/3844178.3844643",
     "venue": "未记录"
   },
@@ -658,7 +742,7 @@
       "Dean Sullivan"
     ],
     "categories": [],
-    "content_hash": "78db8e11713220c8b2d236648a96d95416050537d42912eb02540d36205036ef",
+    "content_hash": "3270f6f7068e1f29332949da4860b3fb9976af382953ebf4b9cb49baa7e46209",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3842651.3843185",
     "evidence_level": "abstract",
@@ -666,7 +750,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7207660843",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -681,7 +765,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Firmware",
@@ -719,7 +803,7 @@
     "source_id": "https://openalex.org/W7207660843",
     "title": "From Silicon to Boot Code: Extending Automated Program Repair to Firmware-Layer Security Workarounds",
     "title_key": "from silicon to boot code extending automated program repair to firmware layer security workarounds",
-    "updated": "2026-10-03",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1145/3842651.3843185",
     "venue": "未记录"
   },
@@ -984,7 +1068,7 @@
       "Gerosa Marco"
     ],
     "categories": [],
-    "content_hash": "afb0a5f7192d4b3bc850aa52adb93a0ef81698b13a1ae98a6cbcf91d59865796",
+    "content_hash": "7929ee6126696a28682575d0e8ce2f2577761788132d84c52c2808119f2f6fa2",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70828/olta8310",
     "evidence_level": "abstract",
@@ -992,7 +1076,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7221116215",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing"
     ],
@@ -1006,7 +1090,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Open source",
@@ -1032,7 +1116,7 @@
     "source_id": "https://openalex.org/W7221116215",
     "title": "2026 State of Open Source in Europe: Navigating AI and Digital Sovereignty Through Open Governance",
     "title_key": "2026 state of open source in europe navigating ai and digital sovereignty through open governance",
-    "updated": "2026-10-12",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.70828/olta8310",
     "venue": "未记录"
   },
@@ -4921,7 +5005,7 @@
       "Peter Wägemann"
     ],
     "categories": [],
-    "content_hash": "72f38e689104c88bb194ef52e143c0ad70ab89e9c4c3e181dbf0f6e85c71c4f2",
+    "content_hash": "c5569d79b85738d7b9ca8cf80642919a9ef8a7667d2b16a15dfefa4adbed95b6",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.25593/open-fau-3465",
     "evidence_level": "abstract",
@@ -4929,7 +5013,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7214468885",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -4942,7 +5026,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -4970,7 +5054,7 @@
     "source_id": "https://openalex.org/W7214468885",
     "title": "Embedded Systems Under Resource Limits",
     "title_key": "embedded systems under resource limits",
-    "updated": "2026-10-06",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.25593/open-fau-3465",
     "venue": "未记录"
   },
@@ -5775,18 +5859,18 @@
       "Dakuo Wang"
     ],
     "categories": [],
-    "content_hash": "1b0205782dc708f6cee4f11b729f92bcb3efcac7ddba3e1c7ac9b11e27f1831f",
+    "content_hash": "faf413d871e26a845733e86d675d795a3ecc36962eb89f85f536c64362e4743f",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2605-17558v1",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2605.17558v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.17558v2",
     "primary_category": "",
     "published": "2026-05-17",
     "relevance_reasons": [
@@ -5796,7 +5880,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.SE",
@@ -5805,8 +5889,8 @@
     "source_id": "2605.17558v1",
     "title": "Firefly: Illuminating Large-Scale Verified Tool-Call Data Generation from Real APIs",
     "title_key": "firefly illuminating large scale verified tool call data generation from real apis",
-    "updated": "2026-05-17",
-    "url": "http://arxiv.org/abs/2605.17558v1",
+    "updated": "2026-10-26",
+    "url": "http://arxiv.org/abs/2605.17558v2",
     "venue": "arXiv"
   },
   {
@@ -7043,7 +7127,7 @@
       "Luke Geeson"
     ],
     "categories": [],
-    "content_hash": "0224432e209e2708b955b2f4ba8d68063f910eb34e64765eeba24515fd783427",
+    "content_hash": "9d01c6b85e6461a703e765c08c75759934fedcdd4f0cd5e89a2d7d82d86314f7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14324/000.th.10224678",
     "evidence_level": "abstract",
@@ -7051,7 +7135,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161287957",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -7064,7 +7148,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7088,7 +7172,7 @@
     "source_id": "https://openalex.org/W7161287957",
     "title": "Detecting Relaxed Memory Concurrency Bugs in C and C++ Compilers",
     "title_key": "detecting relaxed memory concurrency bugs in c and c compilers",
-    "updated": "2026-10-01",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.14324/000.th.10224678",
     "venue": "未记录"
   },
@@ -7100,7 +7184,7 @@
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "6895cddc8bbd4b7e5b627caaee5bb83f0bb1a92166c3432e5a2b790edf290d3c",
+    "content_hash": "a371c7a3563421729307318c6d29a3e45ddc46e851f6b0a4f2360007ff5aa41b",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
@@ -7108,7 +7192,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing",
       "OpenAlex: multicore processor fuzzing shared memory"
@@ -7124,7 +7208,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7141,7 +7225,7 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-10-12",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
     "venue": "Network and Distributed System Security Symposium"
   },
@@ -7490,7 +7574,7 @@
       "Hongwei Zhao"
     ],
     "categories": [],
-    "content_hash": "b239a8f95739be43dff04f5d49d4e096861d37b71989a440ed6b0a647b1b4ffe",
+    "content_hash": "ad2823d8696ad1669d10d8eee8ecfb5b36d67c921755f91c58d9a21947f8cadf",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/5fd427bazfed8z4625zb976zdef4ecb34c38",
     "evidence_level": "abstract",
@@ -7498,7 +7582,7 @@
     "first_seen": "2026-09-29",
     "id": "openalex-w7152728502",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory",
       "OpenAlex: transient execution RTL fuzzing"
@@ -7512,7 +7596,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Humanities",
@@ -7529,7 +7613,7 @@
     "source_id": "https://openalex.org/W7152728502",
     "title": "Analysis of vulnerabilities in communication architectures in systems-on-chip with regard to fault attacks and countermeasure propositions for trusted systems",
     "title_key": "analysis of vulnerabilities in communication architectures in systems on chip with regard to fault attacks and countermeasure propositions for trusted systems",
-    "updated": "2026-09-25",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.70675/5fd427bazfed8z4625zb976zdef4ecb34c38",
     "venue": "未记录"
   },
@@ -8019,7 +8103,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "2bb4e65c610ec89b70cd1ac021f4f2fa8d86cb6ef94f944e584b73cb972df59e",
+    "content_hash": "efe14557ceadd8319140dce9174b9c7ae39c34840486b372a140ed888512a583",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3742873",
     "evidence_level": "abstract",
@@ -8027,7 +8111,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7111013464",
     "included": false,
-    "last_seen": "2026-08-29",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: transient execution RTL fuzzing"
@@ -8041,7 +8125,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8058,7 +8142,7 @@
     "source_id": "https://openalex.org/W7111013464",
     "title": "Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis",
     "title_key": "proceedings of the international conference on hardware software codesign and system synthesis",
-    "updated": "2026-08-23",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1145/3742873",
     "venue": "未记录"
   },
@@ -9269,7 +9353,7 @@
       "Quentin Ducasse"
     ],
     "categories": [],
-    "content_hash": "d2d7634407eea3d8b10a61c7ce0729b9cf5163fd3b2298800ab7d010b8aae0ed",
+    "content_hash": "c65e204554120d81e6b96a1a70ac2a8e97e01c4fd1560ea48e20aa1fbc6953e0",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "evidence_level": "abstract",
@@ -9277,7 +9361,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4402426579",
     "included": false,
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -9292,7 +9376,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 11,
+    "seen_count": 12,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -9304,7 +9388,7 @@
     "source_id": "https://openalex.org/W4402426579",
     "title": "Hardware security for just-in-time compilation in language virtual machines",
     "title_key": "hardware security for just in time compilation in language virtual machines",
-    "updated": "2026-10-21",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.70675/1c2989a4zac63z44c2zbe6dz33453471a8d8",
     "venue": "未记录"
   },
@@ -10837,7 +10921,7 @@
       "M. Michael"
     ],
     "categories": [],
-    "content_hash": "610b2c489d761f6150a9312acdadbb591a3fac5630bc1b8c4c1bc7ffdfe4dc2a",
+    "content_hash": "c34af60342b78ae1f6afd3c54aaaeb8eeb6bbbc03597a2a04b07e2ca4692d229",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/TCAD.2018.2855131",
     "evidence_level": "abstract",
@@ -10845,11 +10929,11 @@
     "first_seen": "2026-08-15",
     "id": "semantic-scholar-6dc58360db7a65673da37d71ca87e16230accf88",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "Semantic Scholar: multicore processor fuzzing shared memory"
     ],
-    "pdf_url": "https://zenodo.org/record/1313832/files/Hadjitheophanous%20Parallel%20Fault%20Simulation.pdf",
+    "pdf_url": "https://zenodo.org/record/1313832",
     "primary_category": "",
     "published": "2019-08-01",
     "relevance_reasons": [
@@ -10859,7 +10943,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -10973,7 +11057,7 @@
       "Kevin R. B. Butler"
     ],
     "categories": [],
-    "content_hash": "5a4050b3cd991993bf8be5e5249ced6423608edceef43b590fbb9bf04ed4e9d6",
+    "content_hash": "6871ae36858d3f6c5ae296e6d113d50f5608a56cf95b19ff7b6f3d832e6a61ba",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp.2019.00041",
     "evidence_level": "abstract",
@@ -10981,7 +11065,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w2974742226",
     "included": false,
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-10-29",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -10995,7 +11079,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 9,
+    "seen_count": 10,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -11020,9 +11104,9 @@
     "source_id": "https://openalex.org/W2974742226",
     "title": "LBM: A Security Framework for Peripherals within the Linux Kernel",
     "title_key": "lbm a security framework for peripherals within the linux kernel",
-    "updated": "2026-10-16",
+    "updated": "2026-10-28",
     "url": "https://doi.org/10.1109/sp.2019.00041",
-    "venue": "Proceedings - IEEE Symposium on Security and Privacy/Proceedings of the ... IEEE Symposium on Security and Privacy"
+    "venue": "IEEE Symposium on Security and Privacy (S&P)"
   },
   {
     "abstract": "Parallel supercomputer-based Monte Carlo and stochastic simulations require pseudorandom number generators that can produce distinct pseudorandom streams across many independent processes. We propose a scalable class of parallel and vectorizable pseudorandom number generators based on a non-cryptographic version of the RSA public-key exponentiation cipher. Our method generates uniformly distributed IEEE double-precision floating point pseudorandom sequences on $[0,1)$ by encrypting pseudorandom sequences of 64-bit integer messages by modular exponentiation. The advantages of the method are: the method is parallelizable by parameterization with each pseudorandom number generator instance derived from an independent 64-bit composite modulus, the method is fully scalable on massively parallel computing clusters because of the millions of available 32-bit prime numbers, the seeding and initialization of the independent streams is simple, the periods of the independent instances are all different and greater than $8.5\\times 10^{37}$, and the method passes a battery of intrastream and interstream correlation tests. The calculations in each instance can be vectorized using steam splitting and can produce more than $10^8$ pseudorandom numbers per second on each multicore CPU.",

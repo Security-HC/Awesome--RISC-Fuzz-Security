@@ -3,21 +3,21 @@
 ## 基本信息
 
 - 作者：Juncheng Huo、Yunfan Gao、Xinxin Liu、Sa Wang、Yungang Bao、Xitong Gao、Kan Shi
-- 发表日期：2025-12-15
-- 会议/期刊：arXiv
+- 发表日期：2026-07-26
+- 会议/期刊：ACM/IEEE Design Automation Conference (DAC)
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=9）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: processor fuzzing；hardware/processor object: risc-v, processor, soc；verification/fuzzing method: fuzz, verification
-- 论文页面：[http://arxiv.org/abs/2512.13686v3](http://arxiv.org/abs/2512.13686v3)
-- PDF：[https://arxiv.org/pdf/2512.13686v3](https://arxiv.org/pdf/2512.13686v3)
+- 论文页面：[https://doi.org/10.1145/3770743.3803956](https://doi.org/10.1145/3770743.3803956)
+- PDF：[https://doi.org/10.1145/3770743.3803956](https://doi.org/10.1145/3770743.3803956)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 7 页，提取 36625 字符
 
 ## 摘要
 
-As processor designs grow more complex, verification remains bottlenecked by slow software simulation and low-quality random test stimuli. Recent research has applied software fuzzers to hardware verification, but these rely on semantically blind random mutations that may generate shallow, low-quality stimuli unable to explore complex behaviors. These limitations result in slow coverage convergence and prohibitively high verification costs. In this paper, we present Lyra, a heterogeneous RISC-V verification framework that addresses both challenges by pairing hardware-accelerated verification with an ISA-aware generative model. Lyra executes the DUT and reference model concurrently on an FPGA SoC, enabling high-throughput differential checking and hardware-level coverage collection. Instead of creating verification stimuli randomly or through simple mutations, we train a domain-specialized generative model, LyraGen, with inherent semantic awareness to generate high-quality, semantically rich instruction sequences. Empirical results show Lyra achieves up to $1.27\times$ higher coverage and accelerates end-to-end verification by up to $107\times$ to $3343\times$ compared to state-of-the-art software fuzzers, while consistently demonstrating lower convergence difficulty.
+As processor designs grow more complex, verification remains bottlenecked by slow software simulation and low-quality random test stimuli. Recent research has applied software fuzzers to hardware verification, but these rely on semantically blind random mutations that may generate shallow, low-quality stimuli unable to explore complex behaviors. These limitations result in slow coverage convergence and prohibitively high verification costs. In this paper, we present Lyra, a heterogeneous RISC-V verification framework that addresses both challenges by pairing hardware-accelerated verification with an ISA-aware generative model. Lyra executes the DUT and reference model concurrently on an FPGA SoC, enabling high-throughput differential checking and hardware-level coverage collection. Instead of creating verification stimuli randomly or through simple mutations, we train a domain-specialized generative model, LyraGen, with inherent semantic awareness to generate high-quality, semantically rich instruction sequences. Empirical results show Lyra achieves up to 1.27× higher coverage and accelerates end-to-end verification by up to 107× to 3343× compared to state-of-the-art software fuzzers, while consistently demonstrating lower convergence difficulty.
 
 ## 研究问题
 

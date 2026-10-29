@@ -4,7 +4,7 @@
 
 - 作者：Rihui Sun、Jin Xiang Wu、Hanyin Liu、Zikang Tao、Gang Qu、Dongsheng Wang、Yongqiang Lyu、Jian Dong
 - 发表日期：2025-06-22
-- 会议/期刊：Proceedings - ACM IEEE Design Automation Conference
+- 会议/期刊：ACM/IEEE Design Automation Conference (DAC)
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=5）
 - 证据等级：摘要级
