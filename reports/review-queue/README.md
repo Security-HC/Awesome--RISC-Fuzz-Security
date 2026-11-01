@@ -1,9 +1,10 @@
 # 待人工复核
 
-共 64 篇。该列表不进入主 README。
+共 65 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-10-28 | [GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing](http://arxiv.org/abs/2610.38489v1) | 4 | hardware/processor object: rtl, verilog；verification/fuzzing method: fuzz, differential testing |
 | 2026-10-23 | [Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors](http://arxiv.org/abs/2610.32597v1) | 4 | hardware/processor object: risc-v, processor, rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-10-22 | [Typed Template Fuzzing](http://arxiv.org/abs/2610.31342v1) | 4 | hardware/processor object: verilog, systemverilog；verification/fuzzing method: fuzz, test generation |
 | 2026-10-20 | [MIMOS-Tools: An Integrated Toolchain for Model-Based Design of Embedded Systems](http://arxiv.org/abs/2610.27826v1) | 4 | hardware/processor object: multicore；verification/fuzzing method: verification, formal verification |
@@ -11,7 +12,7 @@
 | 2026-09-23 | [Preservation of Glaciochemical Signals in a Warming Tropical Ice Cap: Evidence from the 2022 Quelccaya Ice Core](https://doi.org/10.5194/egusphere-2026-4779) | 4 | hardware/processor object: soc；verification/fuzzing method: fuzz |
 | 2026-09-20 | [VSpector: Specification-Driven Bug Detection for RISC-V CPUs](https://www.semanticscholar.org/paper/5a5b11db297b64825aa9dfd36bed91f359a7ce71) | 4 | hardware/processor object: risc-v, cpu, rtl；verification/fuzzing method: fuzz |
 | 2026-08-20 | [Transaction-Level Design and Verification of a Hybrid AMBA AXI4-Lite/ACE Interconnect for Scalable Heterogeneous SoCs](https://doi.org/10.64971/j.cph.eijtem.v13.i3.14.2026) | 4 | hardware/processor object: cpu, rtl, verilog, soc；verification/fuzzing method: verification |
-| 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
+| 2026-08-12 | [Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing](http://arxiv.org/abs/2608.11886v2) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2026-08-12 | [GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing](http://arxiv.org/abs/2608.12635v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-08-03 | [LACE: Large Language Model Aided Multi-Agent Framework for Agile RISC-V Instruction Extension](http://arxiv.org/abs/2608.02915v1) | 4 | hardware/processor object: risc-v, riscv, microarchitecture, rtl；verification/fuzzing method: differential testing |
 | 2026-07-30 | [Brain-Connectivity Modelling and Cognitive-State Discovery using Quantum Topological Data Analysis for Explainable Neuroinformatics](https://doi.org/10.62311/nesx/rb1jy-978-81-689097-9-3) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |

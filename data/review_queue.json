@@ -1,5 +1,51 @@
 [
   {
+    "abstract": "Register-Transfer Level (RTL) simulators are fundamental to modern IC design workflows, yet like any complex software, they frequently contain critical bugs that compromise simulation accuracy. To systematically stress-test these tools, we introduce GI-RTL-Fuzz, a grammar-informed fuzzing framework that leverages Large Language Models (LLMs) to generate high-quality RTL test cases. Our key innovation is guiding the LLM's generation process using Backus-Naur Form (BNF) grammar coverage information, enabling the exploration of complex and rarely-tested language features. By performing differential testing against different RTL simulators, our framework uncovered a significant number of previously unknown inconsistencies in both the linting process and simulation results of major Verilog simulators.",
+    "analysis": {},
+    "authors": [
+      "Ziyue Zheng",
+      "Zhi Qu",
+      "Yangdi Lyu"
+    ],
+    "categories": [
+      "RTL & SoC Hardware Fuzzing",
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "56a3db744cb98751dec11908798b623db532872a15f752be4d694e2dc28912aa",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-01",
+    "id": "arxiv-2610-38489v1",
+    "included": false,
+    "last_seen": "2026-11-01",
+    "matched_queries": [
+      "((all:RTL OR all:Verilog OR all:SystemVerilog) AND (all:fuzzing OR all:\"directed testing\")) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.38489v1",
+    "primary_category": "RTL & SoC Hardware Fuzzing",
+    "published": "2026-10-28",
+    "relevance_reasons": [
+      "hardware/processor object: rtl, verilog",
+      "verification/fuzzing method: fuzz, differential testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.CR"
+    ],
+    "source_id": "2610.38489v1",
+    "title": "GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing",
+    "title_key": "gi rtl fuzz grammar informed rtl generation with llms for end to end differential simulator fuzzing",
+    "updated": "2026-10-28",
+    "url": "http://arxiv.org/abs/2610.38489v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "Functional verification of Register-Transfer Level(RTL) designs has become a critical bottleneck in modern semiconductor development, often consuming the majority of project resources. Debugging, in particular, remains an especially time-consuming task, requiring careful analysis of simulation traces or counterexamples. Recent work has explored applying Large Language Models (LLMs) to RTL debug and repair with great promise. However, the existing approaches typically are for single-line bugs, operate in open-loop, rely heavily on prompts or retrieval, lack scalability, and often produce incorrect fixes. In this paper, we propose a novel automated RTL bug repair methodology that combines LLMs, assertions, and a model checker to provide scalable, trustworthy semantic grounding and formal guarantees. Concretely, the methodology leverages failing assertions to guide the LLM in generating patches for multi-line bugs. Each candidate patch is formally verified using a model checker (JasperGold), ensuring only valid repairs are accepted. We evaluate the efficacy and scalability of our methodology on the BRISC-V RISC-V core using mutation testing, introducing several mutation types, and demonstrate that our methodology can repair up to 98% of single-line RTL bugs and 93% of the multi-line bugs. To the best of our knowledge, this is the first work to show automated, LLM-assisted RTL multi-line bug repair results on a complex RISC-V processor design in a scalable manner.",
     "analysis": {},
     "authors": [
@@ -365,18 +411,18 @@
       "Guowei Yang"
     ],
     "categories": [],
-    "content_hash": "7b49e773d1fe0a6588c4775c2a922c4561cb950063209b810ab9733e2f2048b9",
+    "content_hash": "b9630b9a3945b3fae5424dd92ea1b3e144ca9b35f3dcd06d732260e19d3ac69b",
     "curation_status": "review",
     "evidence_level": "abstract",
     "exclusion_reason": "",
     "first_seen": "2026-08-15",
     "id": "arxiv-2608-11886v1",
     "included": false,
-    "last_seen": "2026-08-15",
+    "last_seen": "2026-11-01",
     "matched_queries": [
       "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2608.11886v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.11886v2",
     "primary_category": "",
     "published": "2026-08-12",
     "relevance_reasons": [
@@ -386,7 +432,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.SE"
@@ -394,8 +440,8 @@
     "source_id": "2608.11886v1",
     "title": "Testing Deep Learning Library APIs via Cross-Framework Differential Fuzzing",
     "title_key": "testing deep learning library apis via cross framework differential fuzzing",
-    "updated": "2026-08-12",
-    "url": "http://arxiv.org/abs/2608.11886v1",
+    "updated": "2026-10-29",
+    "url": "http://arxiv.org/abs/2608.11886v2",
     "venue": "arXiv"
   },
   {

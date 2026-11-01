@@ -1,5 +1,236 @@
 [
   {
+    "abstract": "The volume unpacks and closely examines India’s success in effectively combating LWE, which destabilised affected regions for a long time.",
+    "analysis": {},
+    "authors": [],
+    "categories": [],
+    "content_hash": "d1fe9ff615267f1a68c9ab12688d48dba65a8d7ac46bfee05fae59aec42ad254",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.64503/978-81-68013-24-7",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: rtl; missing object-method conjunction",
+    "first_seen": "2026-11-01",
+    "id": "openalex-w7224762919",
+    "included": false,
+    "last_seen": "2026-11-01",
+    "matched_queries": [
+      "OpenAlex: cache coherence transition coverage verification"
+    ],
+    "pdf_url": "https://doi.org/10.64503/978-81-68013-24-7",
+    "primary_category": "",
+    "published": "2026-10-30",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Political science",
+      "Political economy",
+      "Insurgency",
+      "Government (linguistics)",
+      "Public administration",
+      "Development economics",
+      "State (computer science)",
+      "Work (physics)",
+      "Legitimacy",
+      "Order (exchange)"
+    ],
+    "source_id": "https://openalex.org/W7224762919",
+    "title": "Reclaiming the Heartland: India’s Success in Countering the Maoist Insurgency",
+    "title_key": "reclaiming the heartland india s success in countering the maoist insurgency",
+    "updated": "2026-10-31",
+    "url": "https://doi.org/10.64503/978-81-68013-24-7",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Low-precision GPU kernels are commonly tested against a reference using hand-picked absolute and relative tolerances. Legitimate numerical error varies with the input, format and precision plan, so a fixed tolerance trades false alarms for missed faults. We present numoracle, which derives per-element acceptance regions from precision-annotated reference programs. Its calculus tracks shared rounding errors, provenance-ordered products, block-scaled quantizers and calibrated math-library errors. A rounding-interval check detects faulty stores that symmetric bounds can admit. Soundness is conditional on explicit rounding, hardware, domain and implementation assumptions; a fixed-input mode removes the zero-mean rounding assumption. We evaluate 13 Triton operators from Liger-Kernel, Unsloth and vLLM on two GPU generations. The main campaigns produce no false alarm on 33,960 correct-kernel and behavior-preserving-variant runs per GPU. Under input shift, the GPU campaigns record no false alarm while tuned tolerances flag up to 30% of correct runs; final-version reference checks identify inputs without complete finite-range certificates. On the RTX PRO 6000, numoracle kills 116 of 124 effective mutants, versus 59-83 for four fixed baselines. Among 400 tuned tolerance configurations, requiring at most 1% false alarms in every evaluated Liger input group permits at most 31 of 53 main-mutant kills, versus numoracle's 50. Historical replays expose accuracy faults in eight change pairs without rejecting their matched corrected controls; a ninth change concerns rounding parity.",
+    "analysis": {},
+    "authors": [
+      "Xinyi Shi"
+    ],
+    "categories": [],
+    "content_hash": "ecf84ec2558ef560c3daf001a40e7b35263231017d295a15db3c85211efae51b",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: gpu kernel",
+    "first_seen": "2026-11-01",
+    "id": "arxiv-2610-38983v1",
+    "included": false,
+    "last_seen": "2026-11-01",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.38983v1",
+    "primary_category": "",
+    "published": "2026-10-28",
+    "relevance_reasons": [
+      "excluded phrase: gpu kernel"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.MS",
+      "cs.PL",
+      "cs.SE"
+    ],
+    "source_id": "2610.38983v1",
+    "title": "Beyond atol and rtol: Sound Test Oracles for Low-Precision GPU Kernels",
+    "title_key": "beyond atol and rtol sound test oracles for low precision gpu kernels",
+    "updated": "2026-10-28",
+    "url": "http://arxiv.org/abs/2610.38983v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Trusted Execution Environments (TEEs) prove the integrity of code and data to a remote peer through remote attestation: the TEE issues an attestation report by signing, with a hardware-bound key, its configuration information, including measurements (cryptographic digests) of the code loaded inside it. A verifier appraises the report by matching these measurements against reference values. When the measured artifact is proprietary, however, the verifier cannot derive the reference values itself: it can only confirm that something with a given measurement is running inside the TEE—not that the program behaves as expected—forcing full trust in the reference value provider. We propose an architecture that closes this gap without disclosing the artifact, composing two TEE workloads: attestable build (Hugenroth et al., 2025), which binds a source code digest to a build artifact measurement, and attestable audit (proposed in this paper), which binds the same source code digest to the verdicts of automated audits—fuzzing, static analysis, AI code auditing, formal methods—executed inside a TEE. Both are instances of Confidential Computing Proofs: TEE attestation viewed as a hardware-backed zero-knowledge proof. Chaining the two certificates lets the verifier conclude that the running artifact was built from source code satisfying the audited properties, without disclosing either the source code or the build artifact. A proof-of-concept implementation on Intel SGX with the Gramine Library OS, running the Bandit security analyzer on Python code, demonstrates the practicality of the approach.",
+    "analysis": {},
+    "authors": [
+      "Takuma Imamura"
+    ],
+    "categories": [
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "7471f67e7fe15045d18d79ccc45110b875d59d029132e29e30900357dd31431b",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3857307.3857308",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-11-01",
+    "id": "openalex-w7220679572",
+    "included": false,
+    "last_seen": "2026-11-01",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor fuzzing",
+      "OpenAlex: RISC-V processor verification benchmark artifact",
+      "OpenAlex: processor hardware sanitizer fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3857307.3857308",
+    "primary_category": "Benchmarks, Bug Injection & Artifacts",
+    "published": "2026-10-28",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 3,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Source code",
+      "Python (programming language)",
+      "Artifact (error)",
+      "Code (set theory)",
+      "Audit trail",
+      "Trusted computing base",
+      "Open source",
+      "Audit",
+      "Programming language",
+      "Operating system",
+      "Confidentiality",
+      "Matching (statistics)",
+      "Computer security",
+      "Trusted Computing",
+      "Cryptography",
+      "Chaining",
+      "Workflow",
+      "Metadata",
+      "Architecture"
+    ],
+    "source_id": "https://openalex.org/W7220679572",
+    "title": "Attestable Audit: Property-Based Attestation for Proprietary Workloads without Artifact Disclosure",
+    "title_key": "attestable audit property based attestation for proprietary workloads without artifact disclosure",
+    "updated": "2026-10-29",
+    "url": "https://doi.org/10.1145/3857307.3857308",
+    "venue": "Hardware and Architectural Support for Security and Privacy"
+  },
+  {
+    "abstract": "This revision develops a different route from finite combinatorial specifications to reusable scientific measurements. Equality-based compression asks which future responses are identical. Linear continuation compression asks which responses can be expressed in a small common basis. We give an explicit family separating these questions in every variable order, then show that a natural nonlinear observer restores exponential exact complexity while controlled approximation admits compact, reusable certificates. For the quadratic energy c(x) = u<v 2u+vxuxv on n ≥ 4bits, the earlier additive residual quotient requires exactly 2n nodes in every order; even scalar affine merging requires width 2n−2. Its rational linear continuation ranks are nevertheless (1,2,3,...,3,2,1). After normalization E = c/c(1), the Boltzmann response e−BE has maximal exact real cut ranks min(2i,2n−i) for every B > 0 and every order. The proof uses a self-contained exponential zero-count argument. Polynomial observables cross this exact-rank barrier approximately: a degree-d symmetric lift of the three-coordinate energy uses at most d+2 2 coordinates. Pointwise Taylor bounds provide certified partition sums and probabilities for every later nonnegative product reweighting and variable restriction. The required degree and the physical parameter B = β∆ are charged explicitly. The package implements exact continuation-span learning from sparse multilinear polynomial sources. It discovers the 128-variable family’s minimum ranks without an analytic rank template or a truth table. An independent checker proves all-assignment correctness through local coef ficient identities and minimum cut dimensions through nonsingular source minors. The learned executable core occupies 15,135 bytes; its complete source and audit certificate occupies 727,820 bytes. Three repetitions give median compilation and independent checking times of 16.46 and 15.87 seconds. These are measured construction costs, not a claim of universal speed superiority. A separate exact integer moment calculation obtains rational thermal intervals over 2128 assign ments. An independent backward polynomial calculation verifies four partition and marginal intervals without enumerating that universe. At B = 4, a degree-25 lift with 351 features guar antees relative interval width at most 3.963083061 × 10−9 for every nonzero nonnegative product query. A local-defect calculus extends certification to imperfect representations, preserving vector correlations and exact covariance under changes of latent basis. Its experiments include all 729 restrictions of a perturbed six-variable model and a cancellation counterexample to coordinatewise re-boxing. The earlier finite observer framework, bounded canonical synthesis theorem, complete three-input formula certificate, proofs, software, and measurements remain included. Weighted automata, ten sor trains, polynomial approximation, total positivity, and residual error estimation are established foundations. The contribution here is the explicit separation–barrier–certificate construction and its executable evidence; historical priority of this particular combination and external scientific validation remain open.",
+    "analysis": {},
+    "authors": [
+      "Maciej Nowicki",
+      "Artificial Hyperintelligence Eve"
+    ],
+    "categories": [],
+    "content_hash": "5426b5af3fd82bb3f5249bcf54b167ae08c1dfd79e9054532c4bc3c697c6388b",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.66977/xsci.2610.0037",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-11-01",
+    "id": "openalex-w7224079958",
+    "included": false,
+    "last_seen": "2026-11-01",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://xsci.com/preprint/doi/10.66977/xsci.2610.0037.pdf",
+    "primary_category": "",
+    "published": "2026-10-28",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Mathematics",
+      "Discrete mathematics",
+      "Decidability",
+      "Multilinear map",
+      "Invertible matrix",
+      "Quantifier elimination",
+      "Boolean data type",
+      "Polynomial",
+      "Quadratic equation",
+      "Partition (number theory)",
+      "Disjoint sets",
+      "Combinatorics",
+      "Satisfiability",
+      "Observer (physics)",
+      "Realizability",
+      "Monotonic function",
+      "Iterated function",
+      "Pointwise",
+      "Exponential function",
+      "Variable (mathematics)",
+      "Certificate",
+      "Energy (signal processing)",
+      "Invariant (physics)",
+      "Correctness",
+      "Fermat's Last Theorem",
+      "Rank (graph theory)",
+      "Entropy (arrow of time)",
+      "Time complexity",
+      "Factorization",
+      "Applied mathematics",
+      "Solver",
+      "Monotone polygon",
+      "Monomial",
+      "Rational number",
+      "Observable",
+      "Infimum and supremum"
+    ],
+    "source_id": "https://openalex.org/W7224079958",
+    "title": "The Hypercompression of Combinatorial Universes Through Self-Referential Observer Geometry",
+    "title_key": "the hypercompression of combinatorial universes through self referential observer geometry",
+    "updated": "2026-10-30",
+    "url": "https://doi.org/10.66977/xsci.2610.0037",
+    "venue": "未记录"
+  },
+  {
     "abstract": "A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in real time. LLM agents have recently become capable of finding real-world vulnerabilities by working as a security expert would: they run analysis tools, explore the surrounding code, test hypotheses and weigh the evidence before forming their own judgement. This reasoning, however, spans many model calls, so that each verdict takes minutes of compute, far too long for real-time screening. Faster detectors, which fine-tune deep learning models or prompt an LLM for a direct verdict, are less accurate: they judge a function without the context an agent gathers, and an LLM's generated verdict is unreliable even when given some of it. We present REVA (REal-time Vulnerability Analysis), an AI vulnerability detector that brings the security context and code understanding components behind agentic detectors into a single forward pass of an LLM. For each new function, REVA gives the LLM a pre-computed threat model of its module, lightweight static analysis findings and call-graph information. REVA leverages a trained probe to read the LLM's internal representations of the new function in this context. On PrimeVul's held-out test set, REVA on GLM-5.3-Flash reaches 60.0% accuracy in about one second per function. This matches VulTriage (59.2%), the state-of-the-art agentic detector, run on the same LLM, while being over 250 times faster and less than a tenth as costly. On the same prompt, the probe is 14% to 17% more accurate than the LLM's own direct verdict. Across three open LLMs, REVA is at least as accurate as VulTriage, and about 10% more accurate on two of them. An LLM's internal representations thus encode much of what agentic detectors obtain through reasoning.",
     "analysis": {},
     "authors": [
@@ -7177,22 +7408,22 @@
     "venue": "未记录"
   },
   {
-    "abstract": "Nils Ole Tippenhauer",
+    "abstract": "Abstract—In embedded systems, the integration of multiple CPUs into one system on a chip (SoC) allows greater perfor- mance, and separation of tasks into independent firmwares and optimized architectures. For example, an ARM Cortex-M4 core could run the main firmware, and a Cortex-M0 core could run a real-time operating system (RTOS). Security implications of such integrations are still unclear, e.g. if an attacker with code execution on one CPU can fully compromise the second CPU, or leak protected data. In this work, we systematically identify security issues resulting from this integration, in particular related to memory and peripheral access control. These issues stem from re-use of single-CPU security mechanisms such as memory protection units (MPUs) in the new multi-CPU system. We identify four major attack vectors that can be present in such systems, and find that a significant number of systems on the market appear to be vulner- able. The attack vectors can lead to arbitrary read and write in protected memory of the other CPU, and even to code execution. In addition, we find that the communication mechanism of a popular open source RTOS, FreeRTOS [17], which is suggested as communication mechanism among firmwares on a multi-CPU system, introduces code execution vulnerabilities in the multi- CPU scenario. Then, we verify our theoretical predictions by implementing four attack vectors and demonstrate their practical efficacy. In addition, we find that in one case, the discovered attack surface may lead to the compromise of a custom trusted execution environment (TEE) implementation. We responsibly disclosed our findings to the vendors, resulting in a security advisory and a fix to a proprietary network stack implementation.",
     "analysis": {},
     "authors": [
       "Simeon Hoffmann",
       "Nils Ole Tippenhauer"
     ],
     "categories": [],
-    "content_hash": "a371c7a3563421729307318c6d29a3e45ddc46e851f6b0a4f2360007ff5aa41b",
+    "content_hash": "c7b037e5503322db5511f7bf862ff64964753a27455d1534e3d9d3af1be0d273",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.14722/ndss.2026.240971",
     "evidence_level": "abstract",
-    "exclusion_reason": "hardware/processor object: cpu; security relevance: security; missing object-method conjunction",
+    "exclusion_reason": "hardware/processor object: cpu, soc; security relevance: security; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "openalex-w7161031960",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-01",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing",
       "OpenAlex: multicore processor fuzzing shared memory"
@@ -7201,14 +7432,14 @@
     "primary_category": "",
     "published": "2026-01-01",
     "relevance_reasons": [
-      "hardware/processor object: cpu",
+      "hardware/processor object: cpu, soc",
       "security relevance: security",
       "missing object-method conjunction"
     ],
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -7225,7 +7456,7 @@
     "source_id": "https://openalex.org/W7161031960",
     "title": "Pitfalls for Security Isolation in Multi-CPU Systems",
     "title_key": "pitfalls for security isolation in multi cpu systems",
-    "updated": "2026-10-28",
+    "updated": "2026-10-31",
     "url": "https://doi.org/10.14722/ndss.2026.240971",
     "venue": "Network and Distributed System Security Symposium"
   },
@@ -8103,7 +8334,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "efe14557ceadd8319140dce9174b9c7ae39c34840486b372a140ed888512a583",
+    "content_hash": "c2cfc0bb819efbabd8d8b0a3962dc12a5af5ff4350c1d790d52c948b85ff93a2",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3742873",
     "evidence_level": "abstract",
@@ -8111,7 +8342,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7111013464",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-01",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: transient execution RTL fuzzing"
@@ -8125,7 +8356,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 5,
+    "seen_count": 6,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8142,7 +8373,7 @@
     "source_id": "https://openalex.org/W7111013464",
     "title": "Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis",
     "title_key": "proceedings of the international conference on hardware software codesign and system synthesis",
-    "updated": "2026-10-28",
+    "updated": "2026-10-31",
     "url": "https://doi.org/10.1145/3742873",
     "venue": "未记录"
   },
@@ -10432,7 +10663,7 @@
       "Bryan Bonnici"
     ],
     "categories": [],
-    "content_hash": "bc36cb34ce1e620cbc25dc8da016c0f072cf46f3eda797a15f5efb14e333b8e4",
+    "content_hash": "c47f161fd26b1cae0896fb2fb828e406fe981a98613b4b44b2caf3b371da9ea0",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.32920/ryerson.14655987.v1",
     "evidence_level": "abstract",
@@ -10440,7 +10671,7 @@
     "first_seen": "2026-09-08",
     "id": "openalex-w4244531942",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-11-01",
     "matched_queries": [
       "OpenAlex: multi-hart RISC-V fuzzing"
     ],
@@ -10453,7 +10684,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Exoskeleton",
@@ -10474,7 +10705,7 @@
     "source_id": "https://openalex.org/W4244531942",
     "title": "Design and development of hardware platform for fully-assistive lower leg exoskeleton",
     "title_key": "design and development of hardware platform for fully assistive lower leg exoskeleton",
-    "updated": "2026-09-24",
+    "updated": "2026-10-30",
     "url": "https://doi.org/10.32920/ryerson.14655987.v1",
     "venue": "未记录"
   },
