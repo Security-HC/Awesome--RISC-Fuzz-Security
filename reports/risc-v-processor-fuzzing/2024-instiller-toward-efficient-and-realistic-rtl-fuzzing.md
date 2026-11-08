@@ -2,8 +2,8 @@
 
 ## 基本信息
 
-- 作者：Gen Zhang、Pengfei Wang、Tai Yue、Dan-Jun Liu、Yu-Bei Guo、Kai Lu
-- 发表日期：2024-01-29
+- 作者：Gen Zhang、Pengfei Wang、Tai Yue、Danjun Liu、Yubei Guo、Kai Lü
+- 发表日期：2024-01-31
 - 会议/期刊：IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=9）
@@ -11,13 +11,13 @@
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、RTL & SoC Hardware Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: rtl fuzzing；hardware/processor object: cpu, rtl；verification/fuzzing method: fuzz
-- 论文页面：[https://doi.org/10.1109/TCAD.2024.3360318](https://doi.org/10.1109/TCAD.2024.3360318)
+- 论文页面：[https://doi.org/10.1109/tcad.2024.3360318](https://doi.org/10.1109/tcad.2024.3360318)
 - PDF：[https://arxiv.org/pdf/2401.15967](https://arxiv.org/pdf/2401.15967)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 15 页，提取 77730 字符
 
 ## 摘要
 
-Bugs exist in hardware, such as CPU. Unlike software bugs, these hardware bugs need to be detected before deployment. Previous fuzzing work in CPU bug detection has several disadvantages, e.g., the length of register transition level (RTL) input instructions keeps growing, and longer inputs are ineffective for fuzzing. In this article, we propose Instiller (Instruction Distiller), an RTL fuzzer based on ant colony optimization (ACO). First, to keep the input instruction length short and efficient in fuzzing, it distills input instructions with a variant of ACO (VACO). Next, related work cannot simulate realistic interruptions well in fuzzing, and Instiller solves the problem of inserting interruptions and exceptions in generating the inputs. Third, to further improve the fuzzing performance of Instiller, we propose hardware-based seed selection and mutation strategies. We implement a prototype and conduct extensive experiments against state-of-the-art fuzzing work in real-world target CPU cores. In experiments, Instiller has 29.4% more coverage than DiFuzzRTL. In addition, 17.0% more mismatches are detected by Instiller. With the VACO algorithm, Instiller generates 79.3% shorter input instructions than DiFuzzRTL, demonstrating its effectiveness in distilling the input instructions. In addition, the distillation leads to a 6.7% increase in execution speed on average.
+Bugs exist in hardware, such as CPU. Unlike software bugs, these hardware bugs need to be detected before deployment. Previous fuzzing work in CPU bug detection has several disadvantages, e.g., the length of RTL input instructions keeps growing, and longer inputs are ineffective for fuzzing. In this paper, we propose INSTILLER (Instruction Distiller), an RTL fuzzer based on ant colony optimization (ACO). First, to keep the input instruction length short and efficient in fuzzing, it distills input instructions with a variant of ACO (VACO). Next, related work cannot simulate realistic interruptions well in fuzzing, and INSTILLER solves the problem of inserting interruptions and exceptions in generating the inputs. Third, to further improve the fuzzing performance of INSTILLER, we propose hardware-based seed selection and mutation strategies. We implement a prototype and conduct extensive experiments against state-of-the-art fuzzing work in real-world target CPU cores. In experiments, INSTILLER has 29.4% more coverage than DiFuzzRTL. In addition, 17.0% more mismatches are detected by INSTILLER. With the VACO algorithm, INSTILLER generates 79.3% shorter input instructions than DiFuzzRTL, demonstrating its effectiveness in distilling the input instructions. In addition, the distillation leads to a 6.7% increase in execution speed on average.
 
 ## 研究问题
 

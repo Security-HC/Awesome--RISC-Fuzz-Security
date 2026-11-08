@@ -1,10 +1,158 @@
 [
   {
+    "abstract": "Safety-aligned language models are commonly deployed as multi-turn assistants, which lets adversaries spread unsafe intent across several user turns instead of a single prompt. Gradient-based jailbreak detectors such as GradSafe were developed for single prompts: they score an input by the alignment between its induced gradient and a fixed unsafe reference direction, and their effectiveness in multi-turn dialogue remains unclear. We conduct a controlled evaluation of gradient-based jailbreak detection in multi-turn settings. We extend GradSafe with a Context Window Scanner that applies the detector to fixed-size windows of user turns and uses the maximum window score as the conversation-level score. We evaluate different window sizes, attack families, benign conversation distributions, and target models. The results differ sharply between synthetic and realistic benign settings. Against synthetic benign conversations, the detector achieves an ROC-AUC of 0.98 on human-authored multi-turn jailbreaks. On WildChat benign conversations, ROC-AUC drops to 0.76, and a threshold calibrated on synthetic data flags more than 90% of benign conversations as unsafe. Under realistic benign distributions, single-turn windows give the highest separability, whereas longer windows and accumulated contexts reduce performance. The detector is also sensitive to the attack-generation method and target model: successful Crescendo attacks receive scores comparable to or lower than benign conversations, and Qwen2.5-7B-Instruct yields near-random separability with a different optimal window size. These findings show that gradient-based signals can support multi-turn jailbreak detection, but reliable deployment requires calibration on realistic benign conversations, short-window scoring, length-aware thresholds, and evaluation across attack types and model architectures.",
+    "analysis": {},
+    "authors": [
+      "Omar Sheta",
+      "Rinku Deuja",
+      "Hadi Masoudi",
+      "Minghong Fang"
+    ],
+    "categories": [],
+    "content_hash": "3bd6869b3423daa050759c87496f7a1be4e4e096bdaf7ff4b5c673acdbc0ff9d",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3846374.3846392",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7214944946",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3846374.3846392",
+    "primary_category": "",
+    "published": "2026-11-05",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Detector",
+      "Computer science",
+      "Fragility",
+      "Window (computing)",
+      "Context (archaeology)",
+      "Conversation",
+      "Software deployment",
+      "Artificial intelligence",
+      "Sliding window protocol",
+      "Computer vision",
+      "Data mining",
+      "Calibration",
+      "Synthetic data",
+      "Speech recognition",
+      "Computer security",
+      "Real-time computing",
+      "Data validation",
+      "Rare events",
+      "Machine learning",
+      "Key (lock)",
+      "Object detection"
+    ],
+    "source_id": "https://openalex.org/W7214944946",
+    "title": "Does the Unsafe Gradient Survive a Conversation? On the Fragility of Gradient-Based Jailbreak Detection in Multi-Turn Dialogue",
+    "title_key": "does the unsafe gradient survive a conversation on the fragility of gradient based jailbreak detection in multi turn dialogue",
+    "updated": "2026-11-07",
+    "url": "https://doi.org/10.1145/3846374.3846392",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Project-level code generation aims to automatically synthesize complete software repositories from high-level requirements, producing coherent multi-file systems with well-structured modules and consistent cross-file dependencies. Despite the strong capabilities of large language models (LLMs) in specification understanding and code synthesis, existing approaches still exhibit several critical limitations. First, many methods rely on static architectural designs that cannot adapt during iterative generation, leading to a growing misalignment between architecture and implementation. Second, they lack mechanisms to accumulate and reuse experience across iterations, resulting in recurring errors and reduced efficiency. Third, they often depend on standalone LLM-based evaluation of intermediate artifacts, which suffer from limited transparency and potential unreliability under long-context reasoning. To address these challenges, we propose EvoCodeAgent, a state-centric framework for project-level code generation. EvoCodeAgent maintains an evolving architectural state initialized from structured project specifications and continuously reconciles predicted relations from architecture and skeletons with realized relations extracted from generated code. It further uses tool-grounded verification evidence to support reliable state updates and abstracts reusable repair experiences from previous revision attempts to guide subsequent generation. Extensive experiments on project-level benchmarks of different scales, including DevBench and CodeProjectEval, demonstrate that EvoCodeAgent consistently outperforms baseline approaches. Under the GPT-5 setting, it achieves unit test pass rates of 60.48% and 27.73%, respectively, yielding up to a 53.5% improvement over the strongest baseline.",
+    "analysis": {},
+    "authors": [
+      "Qianhui Zhao",
+      "Li Zhang",
+      "Fang Liu"
+    ],
+    "categories": [],
+    "content_hash": "5370b756b2367d32aff11c08f152b5e1991dfc6d8de1437f79fec138c346731c",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "arxiv-2611-06328v1",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2611.06328v1",
+    "primary_category": "",
+    "published": "2026-11-04",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.SE"
+    ],
+    "source_id": "2611.06328v1",
+    "title": "EvoCodeAgent: Project-Level Code Generation via Architecture-Code Co-Evolution and Experience-Guided Repair",
+    "title_key": "evocodeagent project level code generation via architecture code co evolution and experience guided repair",
+    "updated": "2026-11-04",
+    "url": "http://arxiv.org/abs/2611.06328v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "In FPGA soft processors with shared backing block RAM, memory admission can stall a multiplication after its product has been prepared. We study how admission timing changes result retention in PaceRV, our board-tested five-stage RV32IMC core, using fixed binaries and matched dynamic instructions. Offering data requests one edge earlier reduces geometric-mean Embench cycles by 18.2% and retention opportunities from 375,063 to 4,373. Admission and retention cycle gains are conditional and non-additive. Under slower reads, a 99% capture target selects an 18-edge validity window with registered requests and 28 edges with early requests, although no multiplication matched within both measurement intervals waits longer. A predeclared sizing rule predicts opportunity recovery exactly in all finite tests, including kernels excluded from model development. Independent timing analysis closely estimates execution-cycle savings. The results support choosing admission first, then deciding whether to extend validity and sizing it against an explicit capture or missed-opportunity objective.",
+    "analysis": {},
+    "authors": [
+      "Yihang Dai",
+      "Shuyu Xu",
+      "Yinfeng Zhou",
+      "Chenglei Peng"
+    ],
+    "categories": [],
+    "content_hash": "d02c49c33fd3b915185017d796dbc252e497034faef79ce0948a5971d39f85ca",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "arxiv-2611-02974v1",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "((all:\"multi-hart\" OR all:multihart OR all:multicore) AND (all:fuzzing OR all:verification OR all:testing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2611.02974v1",
+    "primary_category": "",
+    "published": "2026-11-02",
+    "relevance_reasons": [
+      "hardware/processor object: processor",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR"
+    ],
+    "source_id": "2611.02974v1",
+    "title": "Memory Admission and Result-Retention Sizing in an RV32IMC FPGA Soft Processor",
+    "title_key": "memory admission and result retention sizing in an rv32imc fpga soft processor",
+    "updated": "2026-11-02",
+    "url": "http://arxiv.org/abs/2611.02974v1",
+    "venue": "arXiv"
+  },
+  {
     "abstract": "The volume unpacks and closely examines India’s success in effectively combating LWE, which destabilised affected regions for a long time.",
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "d1fe9ff615267f1a68c9ab12688d48dba65a8d7ac46bfee05fae59aec42ad254",
+    "content_hash": "0efa8b018ac95a70be9d562c754ccce44af69a93ead87e135ca46a4388726409",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.64503/978-81-68013-24-7",
     "evidence_level": "abstract",
@@ -12,7 +160,7 @@
     "first_seen": "2026-11-01",
     "id": "openalex-w7224762919",
     "included": false,
-    "last_seen": "2026-11-01",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: cache coherence transition coverage verification"
     ],
@@ -26,7 +174,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Political science",
@@ -43,8 +191,73 @@
     "source_id": "https://openalex.org/W7224762919",
     "title": "Reclaiming the Heartland: India’s Success in Countering the Maoist Insurgency",
     "title_key": "reclaiming the heartland india s success in countering the maoist insurgency",
-    "updated": "2026-10-31",
+    "updated": "2026-11-04",
     "url": "https://doi.org/10.64503/978-81-68013-24-7",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Experimental computing often combines functional tests, stored-record integrity audits, electrical timing reports, power-cycle observations, and external assessments. These objects support different claims. A record that is internally complete, however, need not establish that the underlying experiment occurred or that its evidence belongs to the claimed device and session. We specify and implement a deliberately bounded claim-scoped relational metadata gate. Five evidence classes require kind-specific fields; witnesses are additionally bound to a claim kind, subject and session, with limited ordering checks for persistence and a declared role-separation check for review. The output is READY_FOR_INSPECTION, INCOMPLETE_METADATA or INCONSISTENT_METADATA, never a physical pass, certification or authenticated proof. We reproduce an exhaustive 15-bit presence study yielding 163,840 claim assessments and 2,160 deterministic structured-record tests covering missing fields, mismatches, empty values and unrelated evidence. An earlier presence-only gate accepts 630 intentionally inconsistent cases. The relational gate rejects all 630 and matches the fixture specification in all 2,160 cases. Additional ordering and role-separation fixtures test narrower conditions. These are self-authored synthetic experiments, not independent corroboration or estimates of real-world error rates. The contribution is an auditable demonstration of conservative metadata-readiness checks and their limits, rather than a hardware qualification or external certification system.",
+    "analysis": {},
+    "authors": [
+      "Loris Longarini"
+    ],
+    "categories": [],
+    "content_hash": "4344eb6229a9c18fb3fc5659c3965b5979a9576a572faa77e76e5902b70b238f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.66977/xsci.2610.003i",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7224823394",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://xsci.com/preprint/doi/10.66977/xsci.2610.003i.pdf",
+    "primary_category": "",
+    "published": "2026-10-30",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Bounded function",
+      "Computer science",
+      "Certification",
+      "Arithmetic",
+      "Metadata",
+      "Algorithm",
+      "Theoretical computer science",
+      "Relational database",
+      "Atomicity",
+      "Data integrity",
+      "Mathematical proof",
+      "Data mining",
+      "Relation (database)",
+      "Reciprocal",
+      "Mathematics",
+      "Certificate",
+      "Test (biology)",
+      "Logic gate",
+      "Boolean function",
+      "Subject (documents)",
+      "Reliability (semiconductor)",
+      "Programming language",
+      "Function (biology)",
+      "Upper and lower bounds",
+      "Multiplication (music)",
+      "Discrete mathematics"
+    ],
+    "source_id": "https://openalex.org/W7224823394",
+    "title": "Claim-Scoped Relational Evidence Gates for Experimental Computing: A Bounded Reproducibility Study",
+    "title_key": "claim scoped relational evidence gates for experimental computing a bounded reproducibility study",
+    "updated": "2026-11-04",
+    "url": "https://doi.org/10.66977/xsci.2610.003i",
     "venue": "未记录"
   },
   {
@@ -97,7 +310,7 @@
     "categories": [
       "Benchmarks, Bug Injection & Artifacts"
     ],
-    "content_hash": "7471f67e7fe15045d18d79ccc45110b875d59d029132e29e30900357dd31431b",
+    "content_hash": "15126451c50a945294d76e6040154cda0d702b99e23d27d69668c0a1a5d83841",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3857307.3857308",
     "evidence_level": "abstract",
@@ -105,7 +318,7 @@
     "first_seen": "2026-11-01",
     "id": "openalex-w7220679572",
     "included": false,
-    "last_seen": "2026-11-01",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: RISC-V processor verification benchmark artifact",
@@ -122,7 +335,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -149,7 +362,7 @@
     "source_id": "https://openalex.org/W7220679572",
     "title": "Attestable Audit: Property-Based Attestation for Proprietary Workloads without Artifact Disclosure",
     "title_key": "attestable audit property based attestation for proprietary workloads without artifact disclosure",
-    "updated": "2026-10-29",
+    "updated": "2026-11-07",
     "url": "https://doi.org/10.1145/3857307.3857308",
     "venue": "Hardware and Architectural Support for Security and Privacy"
   },
@@ -161,7 +374,7 @@
       "Artificial Hyperintelligence Eve"
     ],
     "categories": [],
-    "content_hash": "5426b5af3fd82bb3f5249bcf54b167ae08c1dfd79e9054532c4bc3c697c6388b",
+    "content_hash": "2daa6b68c6980250ce704d99273fbff3cbdfb449b3197f78debb372d109201a7",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.66977/xsci.2610.0037",
     "evidence_level": "abstract",
@@ -169,7 +382,7 @@
     "first_seen": "2026-11-01",
     "id": "openalex-w7224079958",
     "included": false,
-    "last_seen": "2026-11-01",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: memory consistency checker processor trace"
     ],
@@ -183,7 +396,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Mathematics",
@@ -226,9 +439,74 @@
     "source_id": "https://openalex.org/W7224079958",
     "title": "The Hypercompression of Combinatorial Universes Through Self-Referential Observer Geometry",
     "title_key": "the hypercompression of combinatorial universes through self referential observer geometry",
-    "updated": "2026-10-30",
+    "updated": "2026-11-04",
     "url": "https://doi.org/10.66977/xsci.2610.0037",
     "venue": "未记录"
+  },
+  {
+    "abstract": "Zero-knowledge proofs have attracted growing interest from the hardware acceleration community, driven by their use in verifiable computation, privacy-preserving systems, and blockchain applications. A key prover kernel in many such systems is SumCheck, whose table-parallel structure makes it a natural target for GPU acceleration. Practical SumCheck kernels over cryptographic fields, however, are shaped not by bandwidth but by multi-limb arithmetic, Montgomery reduction, expression specialization, reduction structure, and launch overhead. We present zkDuel , an open-source benchmark that isolates SumCheck as a standalone GPU kernel through matched Triton and CUDA implementations. zkDuel pairs diagnostic microbenchmark polynomials for controlled analysis with zkPHIRE-derived constraints for prover-style stress testing, sweeps 32/64/128/256-bit prime fields, and validates both backends against a CPU reference before any performance measurement. Across 800 attempted configurations on an NVIDIA H100, 758 complete with matching Triton and CUDA checksums, and both backends reproduce the CPU reference on every reported workload and field width. On these configurations, we find that the cost of programming-model abstraction reduces with arithmetic width. CUDA holds a 3.5 × median advantage over Triton at 32 bits but only 1.4 × at 256 bits, where 30 of 171 validated configurations finish within 1.1 × of CUDA, including 19 large-table configurations on which Triton is faster. An A100 exhibits the same width-dependent convergence, from 4.4 × at 32 bits to 1.6 × at 256 bits. This convergence comes from fixed overheads being amortized as per-element arithmetic grows. In particular, host-side launch costs dominate short-running Triton kernels, while Triton’s original block-reduction implementation performs redundant modular additions across threads. Replacing that reduction with tl.reduce brings Triton’s median kernel time to within 8% of CUDA’s on both A100 and H100. Specialized point interpolation accelerates 256-bit evaluation kernels by 1.55–1.75 × on both backends. At large cryptographic field widths, a Python-embedded DSL is therefore a compelling choice for prover kernels. The remaining performance gap depends strongly on reduction and launch structure, while arithmetic specialization benefits both programming models.",
+    "analysis": {},
+    "authors": [
+      "Samarth Narang",
+      "Alhad Daftardar",
+      "Brandon Reagen"
+    ],
+    "categories": [],
+    "content_hash": "1976ae763ef38a85f5f5f062624d83eb64efe35f7d6ca689a5972e18bc98d05f",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3857307.3857312",
+    "evidence_level": "abstract",
+    "exclusion_reason": "excluded phrase: gpu kernel",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7224107798",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V processor verification benchmark artifact"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3857307.3857312",
+    "primary_category": "",
+    "published": "2026-10-28",
+    "relevance_reasons": [
+      "excluded phrase: gpu kernel"
+    ],
+    "relevance_score": -100,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "CUDA",
+      "Gas meter prover",
+      "Parallel computing",
+      "Kernel (algebra)",
+      "Mathematical proof",
+      "Benchmark (surveying)",
+      "Single-precision floating-point format",
+      "Convergence (economics)",
+      "Double-precision floating-point format",
+      "Key (lock)",
+      "Memory model",
+      "Abstraction",
+      "Matching (statistics)",
+      "Theoretical computer science",
+      "Cryptography",
+      "POSIX Threads",
+      "Algorithm",
+      "Arbitrary-precision arithmetic",
+      "Verifiable secret sharing",
+      "Reduction (mathematics)",
+      "Multi-core processor",
+      "General-purpose computing on graphics processing units",
+      "Arithmetic"
+    ],
+    "source_id": "https://openalex.org/W7224107798",
+    "title": "zkDuel: Characterizing SumCheck Prover Kernels across GPU Programming Models",
+    "title_key": "zkduel characterizing sumcheck prover kernels across gpu programming models",
+    "updated": "2026-11-06",
+    "url": "https://doi.org/10.1145/3857307.3857312",
+    "venue": "Hardware and Architectural Support for Security and Privacy"
   },
   {
     "abstract": "A vulnerability costs more to fix the later it is discovered. As coding agents generate code faster than developers can review it, software needs a first line of defense screening each new function in real time. LLM agents have recently become capable of finding real-world vulnerabilities by working as a security expert would: they run analysis tools, explore the surrounding code, test hypotheses and weigh the evidence before forming their own judgement. This reasoning, however, spans many model calls, so that each verdict takes minutes of compute, far too long for real-time screening. Faster detectors, which fine-tune deep learning models or prompt an LLM for a direct verdict, are less accurate: they judge a function without the context an agent gathers, and an LLM's generated verdict is unreliable even when given some of it. We present REVA (REal-time Vulnerability Analysis), an AI vulnerability detector that brings the security context and code understanding components behind agentic detectors into a single forward pass of an LLM. For each new function, REVA gives the LLM a pre-computed threat model of its module, lightweight static analysis findings and call-graph information. REVA leverages a trained probe to read the LLM's internal representations of the new function in this context. On PrimeVul's held-out test set, REVA on GLM-5.3-Flash reaches 60.0% accuracy in about one second per function. This matches VulTriage (59.2%), the state-of-the-art agentic detector, run on the same LLM, while being over 250 times faster and less than a tenth as costly. On the same prompt, the probe is 14% to 17% more accurate than the LLM's own direct verdict. Across three open LLMs, REVA is at least as accurate as VulTriage, and about 10% more accurate on two of them. An LLM's internal representations thus encode much of what agentic detectors obtain through reasoning.",
@@ -973,7 +1251,7 @@
       "Dean Sullivan"
     ],
     "categories": [],
-    "content_hash": "3270f6f7068e1f29332949da4860b3fb9976af382953ebf4b9cb49baa7e46209",
+    "content_hash": "40b3dd82d1a022fbd60332dc16a0633578c8a08b0991fc9945a16bd9cd3cfc8d",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3842651.3843185",
     "evidence_level": "abstract",
@@ -981,7 +1259,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7207660843",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -996,7 +1274,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Firmware",
@@ -1034,7 +1312,7 @@
     "source_id": "https://openalex.org/W7207660843",
     "title": "From Silicon to Boot Code: Extending Automated Program Repair to Firmware-Layer Security Workarounds",
     "title_key": "from silicon to boot code extending automated program repair to firmware layer security workarounds",
-    "updated": "2026-10-28",
+    "updated": "2026-11-07",
     "url": "https://doi.org/10.1145/3842651.3843185",
     "venue": "未记录"
   },
@@ -1291,6 +1569,61 @@
     "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
   {
+    "abstract": "Specifications are the central mechanism for communicating intents, requirements, and constraints in software development. When they are explicit, clear, and reliable, they are an effective means for collaboration and cooperation. They allow for stakeholders to specify what they want, developers (or AI agents) to understand and implement the needed functionality, for clients to effectively use the system, and for automated tooling to validate the correctness for each of these steps.",
+    "analysis": {},
+    "authors": [
+      "Mark Marron"
+    ],
+    "categories": [],
+    "content_hash": "8425182c47836876a9d85ff94279c036ce852f5fde4214010b4c3a080312bdf5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3842652.3843194",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7216360489",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: processor hardware sanitizer fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3842652.3843194",
+    "primary_category": "",
+    "published": "2026-10-02",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Correctness",
+      "Software engineering",
+      "Software",
+      "Software development",
+      "Systems engineering",
+      "Component (thermodynamics)",
+      "Engineering",
+      "Automation",
+      "Mechanism (biology)",
+      "Key (lock)",
+      "Software inspection",
+      "Software system",
+      "Process (computing)",
+      "Work (physics)",
+      "Software prototyping"
+    ],
+    "source_id": "https://openalex.org/W7216360489",
+    "title": "Specifications for Humans, Agents, and Tooling: BOSQUE API (BAPI) Tooling",
+    "title_key": "specifications for humans agents and tooling bosque api bapi tooling",
+    "updated": "2026-11-06",
+    "url": "https://doi.org/10.1145/3842652.3843194",
+    "venue": "未记录"
+  },
+  {
     "abstract": "How are AI and digital sovereignty reshaping open source governance in Europe? Marking a major research milestone, LF Research and LF Europe have published the 5th annual State of Open Source in Europe, delivering crucial data on navigating these operational mandates. Digital sovereignty is now a strategic priority for 94% of European organizations, driven heavily by security and privacy concerns. Meanwhile, AI adoption is accelerating open source engagement: 76% of organizations report AI tools help them extract greater value from their existing open source software. Crucially, governance maturity pays off, as organizations with advanced governance achieve a 4.6x benefit-to-cost return on open source, compared to 3.6x for those with no formal governance. Read the report to discover how open governance drives ROI, mitigates regulatory risk, and secures long-term digital resilience.",
     "analysis": {},
     "authors": [
@@ -1422,6 +1755,48 @@
     "updated": "2026-10-05",
     "url": "https://doi.org/10.70593/978-81-6632-094-1",
     "venue": "未记录"
+  },
+  {
+    "abstract": "Prior studies on quantum money from knots, and the invariant money framework that generalizes it, anchor their security on the hardness of path-finding. However, we show that the hardness of path-finding is proven to be necessary for security under certain conditions. In other conditions, this assumption is not a direct anchoring hardness problem such that breaking it allows an adversary to forge a banknote directly. In particular, for quantum money from knots, even when the path-finding assumption does not hold, an adversary still cannot directly forge a banknote. The adversary needs to additionally prepare the uniform superposition over the paths it finds, which we show is as hard as the original problem. Existing security proofs supplement path-finding hardness with knowledge-of-path assumptions. While this combination is sufficient, it may not be necessary. We identify an assumption pair, preparation assumption and transfer assumption, that is both necessary and sufficient for the security of every invariant money scheme. Breaking either assumption directly enables a forgery. The preparation assumption says that no efficient algorithm, given the serial number of a banknote and one object measured from it, prepares a state that verification accepts. While quantum money security gives a forger one quantum state and asks for two that pass, our assumption concerns a problem that takes only classical inputs and asks for one quantum state that passes. This assumption is equivalent to security against forgers that measure their banknote first. Given that its inputs are classical, it is falsifiable and can be attacked and bounded like other computational problems. The transfer assumption covers forgers that keep the banknote coherent, stating that every such forger only has an advantage over the measure-first adversary by at most a polynomial factor.",
+    "analysis": {},
+    "authors": [
+      "Hans Schmiedel",
+      "Jiangshan Yu"
+    ],
+    "categories": [],
+    "content_hash": "36027c7635cd15579ea7c448d9be4def3965fc7947bd20cd9ccfb2ada4ba9df4",
+    "curation_status": "excluded",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: verification; security relevance: security; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "arxiv-2609-39774v3",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.39774v3",
+    "primary_category": "",
+    "published": "2026-09-30",
+    "relevance_reasons": [
+      "verification/fuzzing method: verification",
+      "security relevance: security",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR"
+    ],
+    "source_id": "2609.39774v3",
+    "title": "Anchoring the Security of Invariant Quantum Money",
+    "title_key": "anchoring the security of invariant quantum money",
+    "updated": "2026-11-03",
+    "url": "http://arxiv.org/abs/2609.39774v3",
+    "venue": "arXiv"
   },
   {
     "abstract": "Google AI Overviews (AIOs) are arguably the most widely encountered deployment of generative AI, reaching over 2 billion users who may not realize the answers they see are AI-generated. Where search engines have traditionally surfaced ranked sources and left users to evaluate them, AIOs synthesize and deliver a single answer — giving Google unprecedented editorial control over what users read and know. We present a large-scale longitudinal measurement study, issuing 55,393 trending queries across 19 topical categories over a 40-day window (March 13–April 21, 2026). We report four main findings. First, overall AIO activation is 13.7%, rising to 64.7% for question-form queries, while politically sensitive topics see markedly lower rates. Second, AIO-cited domains are more credible than co-displayed first-page results, yet nearly 30% do not appear in those results at all, indicating a source selection mechanism distinct from Google's ranking algorithm. Third, decomposing responses into 98,020 atomic claims, 11.0% are unsupported by the cited pages — with omission the dominant failure mode — and source quality and claim fidelity are largely independent. Fourth, well over half of AIO-cited pages carry display advertising, meaning publishers lose revenue when AIOs suppress the click-through, even as Google's own sponsored ads continue to appear on the same page. Together, these findings document a rapid transformation of the online information ecosystem whose consequences for epistemic security remain poorly understood.",
@@ -4221,6 +4596,145 @@
     "venue": "未记录"
   },
   {
+    "abstract": "Debugging complex FPGA prototypes of modern processors in embedded systems is challenging due to limited signal visibility and significant tracing overhead. Existing approaches struggle to balance execution efficiency with debugging capability, often requiring either expensive continuous tracing or heavyweight snapshots. We propose Prelude, a lightweight snapshot-based debugging framework that records only essential architectural states and memory footprint of the processor on FPGA. During replay, a short visibility warm-up reconstructs internal micro-architectural states, enabling cycle-accurate analysis. Implemented on BOOM and Rocket, Prelude provides comparable visibility to prior work while significantly improving debugging efficiency: 32.88× / 2191.2× speedup over DESSERT / ENCORE on BOOM, and 18.09× / 896.4× on Rocket.",
+    "analysis": {},
+    "authors": [
+      "Jialin Sun",
+      "Yuchen Hu",
+      "Dean You",
+      "Hui Wang",
+      "Yushu Du",
+      "Xinwei Fang",
+      "Zhe Jiang"
+    ],
+    "categories": [],
+    "content_hash": "074ebbcf5ab012434ef9a7e98c4b221b84e663a7185784f0d4b2b4cf98baafab",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770743.3804273",
+    "evidence_level": "abstract",
+    "exclusion_reason": "hardware/processor object: processor; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7172559937",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: RISC-V RTL fuzzing differential testing",
+      "OpenAlex: transient execution RTL fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3770743.3804273",
+    "primary_category": "",
+    "published": "2026-07-26",
+    "relevance_reasons": [
+      "hardware/processor object: processor",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Debugging",
+      "Visibility",
+      "Computer science",
+      "Tracing",
+      "Nexus (standard)",
+      "Background debug mode interface",
+      "Embedded system",
+      "State (computer science)",
+      "Memory footprint",
+      "Algorithmic program debugging",
+      "Field-programmable gate array",
+      "Boom",
+      "Footprint",
+      "Ray tracing (physics)",
+      "Computer hardware",
+      "Computer architecture",
+      "Real-time computing",
+      "Scheme (mathematics)",
+      "Heuristics"
+    ],
+    "source_id": "https://openalex.org/W7172559937",
+    "title": "Prelude: Priming-Guided State Reconstruction for Efficient FPGA Processor Debugging",
+    "title_key": "prelude priming guided state reconstruction for efficient fpga processor debugging",
+    "updated": "2026-11-07",
+    "url": "https://doi.org/10.1145/3770743.3804273",
+    "venue": "ACM/IEEE Design Automation Conference (DAC)"
+  },
+  {
+    "abstract": "The increasing complexity of embedded software has made comprehensive manual testing impractical, motivating the use of automated techniques such as fuzzing. Coverage-guided fuzzers like AFL++ have shown strong results for conventional software but remain challenging to apply effectively in embedded contexts, where peripheral behaviors play critical roles. Existing approaches either use fast user-mode simulators, sacrificing peripheral realism, or rely on full-system simulators with manual instrumentation, limiting applicability to large-scale software. In this work, we present a novel framework that integrates AFL++ with a stateful SystemC-TLM virtual prototype to enable realistic fuzzing of embedded software. Fuzzer-generated inputs are injected directly into peripheral models, allowing peripherals to trigger natural side effects such as interrupts and FIFO updates. By integrating fuzzing with full-system simulation, our framework advances the effectiveness of pre-silicon testing for embedded systems. Results on embedded workloads show that our approach eliminates false positives while maintaining comparable code coverage and execution performance as state-of-the-art tools.",
+    "analysis": {},
+    "authors": [
+      "Chiara Ghinami",
+      "Igor Pontes Tresolavy",
+      "Luis Seibt",
+      "Nils Bosbach",
+      "Rainer Leupers"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "077776fa4b36936bbd2986b8f41eacabef70b570422f60aaa982627f1daa49f0",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770743.3804000",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz, coverage-guided; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7155400373",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: microarchitectural path coverage processor fuzzing"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3770743.3804000",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-07-26",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz, coverage-guided",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Fuzz testing",
+      "Computer science",
+      "Stateful firewall",
+      "Embedded system",
+      "FIFO (computing and electronics)",
+      "Software",
+      "Limiting",
+      "Suite",
+      "Bytecode",
+      "SystemC",
+      "False positive paradox",
+      "Embedded software",
+      "Operating system",
+      "Code (set theory)",
+      "Memory safety",
+      "Virtual machine",
+      "Control flow",
+      "Memory leak",
+      "Debugging",
+      "Programming language",
+      "Heuristic",
+      "Software performance testing",
+      "Taint checking",
+      "Interface (matter)",
+      "Cover (algebra)",
+      "Table (database)",
+      "Codebase"
+    ],
+    "source_id": "https://openalex.org/W7155400373",
+    "title": "Stateful Embedded Fuzzing Using Peripheral-Accurate SystemC Virtual Prototypes",
+    "title_key": "stateful embedded fuzzing using peripheral accurate systemc virtual prototypes",
+    "updated": "2026-11-07",
+    "url": "https://doi.org/10.1145/3770743.3804000",
+    "venue": "ACM/IEEE Design Automation Conference (DAC)"
+  },
+  {
     "abstract": "This book addresses a systematically overlooked reality in Ecuadorian higher education: the statistically inevitable presence of neurodiverse students those with ADHD, dyslexia, and ASD in university EFL courses. Grounded in the neurodiversity paradigm, which frames neurological variation as natural human difference rather than deficit, the book constructs a conceptual, pedagogical, and legal framework that equips EFL instructors to respond with academic rigour and genuine inclusion. The first four chapters analyse the neurobiological bases of each condition, translating that knowledge into differentiated skill profiles, evidence-based strategies, and assessment options. Chapter 5 integrates these within the UDL framework; Chapter 6 addresses assessment redesign for validity, fairness, and accessibility; Chapter 7 closes with three composite Ecuadorian case studies and a Professional Development Plan. Twenty-two ready-to-use instruments are offered, applicable without additional resources.",
     "analysis": {},
     "authors": [
@@ -4446,7 +4960,7 @@
       "Nuha Omran Abokhdair"
     ],
     "categories": [],
-    "content_hash": "0177852e613959a0b3cff7066241f99da9089b030e3fe4458c4a0d05f7d7d4cf",
+    "content_hash": "727f0eb550ddea31b2573389c7b881508c28a395a21187df84073e1a65017794",
     "curation_status": "excluded",
     "doi": "",
     "evidence_level": "abstract",
@@ -4454,7 +4968,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7221238228",
     "included": false,
-    "last_seen": "2026-10-15",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4468,7 +4982,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Hypervisor",
@@ -4507,7 +5021,7 @@
     "source_id": "https://openalex.org/W7221238228",
     "title": "Performance and Architectural Analysis of MINIX 3 and Ubuntu Linux: Implications for Isolation and Trusted Computing Base",
     "title_key": "performance and architectural analysis of minix 3 and ubuntu linux implications for isolation and trusted computing base",
-    "updated": "2026-10-11",
+    "updated": "2026-11-07",
     "url": "https://openalex.org/W7221238228",
     "venue": "مجلة صرمان للعلوم والتقنية"
   },
@@ -5236,7 +5750,7 @@
       "Peter Wägemann"
     ],
     "categories": [],
-    "content_hash": "c5569d79b85738d7b9ca8cf80642919a9ef8a7667d2b16a15dfefa4adbed95b6",
+    "content_hash": "68fe685582c2540563907495e3bde78c57939cd2c9544b5b5c0004d0e8fff288",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.25593/open-fau-3465",
     "evidence_level": "abstract",
@@ -5244,7 +5758,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7214468885",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -5257,35 +5771,24 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
-      "Embedded system",
-      "Exploit",
-      "Resource (disambiguation)",
-      "Distributed computing",
-      "Embedded software",
-      "Software",
-      "Resource allocation",
-      "Focus (optics)",
-      "Embedded operating system",
-      "Resource management (computing)",
-      "Static analysis",
-      "Resource constraints",
-      "Software system",
-      "Code (set theory)",
-      "Scheduling (production processes)",
-      "Avionics software",
-      "Adaptation (eye)",
-      "Program analysis",
-      "Real-time computing",
-      "Program optimization"
+      "Term (time)",
+      "Political science",
+      "Engineering",
+      "Key (lock)",
+      "Set (abstract data type)",
+      "Identification (biology)",
+      "Relation (database)",
+      "Business",
+      "Quality (philosophy)"
     ],
     "source_id": "https://openalex.org/W7214468885",
     "title": "Embedded Systems Under Resource Limits",
     "title_key": "embedded systems under resource limits",
-    "updated": "2026-10-28",
+    "updated": "2026-11-07",
     "url": "https://doi.org/10.25593/open-fau-3465",
     "venue": "未记录"
   },
@@ -6070,6 +6573,60 @@
     "venue": "IEEE Symposium on Security and Privacy"
   },
   {
+    "abstract": "Memory safety bugs, such as buffer overflows and use-after-frees, are the leading causes of software safety issues in production. Software-based approaches, e.g., Address Sanitizer (ASAN), can detect such bugs with high precision, but with prohibitively high overhead. ARM's Memory Tagging Extension (MTE) offers a promising alternative to detect these bugs in hardware with a much lower overhead. In this paper, we perform a thorough investigation of the first production implementation of ARM MTE (Google Pixel 8) and observe that MTE can only achieve coarse precision in bug detection compared with software-based approaches such as ASAN, mainly due to its 16-byte tag granularity. To address this issue, we present nanotag11.We open-source our work at https://github.com/ice-rlab/NanoTag, a system to probabilistically detect buffer overflows at byte granularity in unmodified MTE-enabled binaries with minimal changes to memory allocators, introducing an explicit detectionperformance tradeoff for in-house testing. NanoTag detects buffer overflows at byte granularity by setting up a tripwire for tag granules that may require intra-granule overflow detection. The memory access to the tripwire causes additional overflow detection in the software while using MTE's hardware to detect bugs for the rest of the accesses. We implement nanotag based on the Scudo Hardened Allocator, the default memory allocator on Android since Android 11. Our evaluation results across popular benchmarks and real-world case studies show that NanoTag detects nearly as many memory safety bugs as ASAN while incurring similar run-time overhead to Scudo Hardened Allocator in MTE SYNC mode.",
+    "analysis": {},
+    "authors": [
+      "Mingkai Li",
+      "Hang Ye",
+      "Joseph L. Devietti",
+      "Suman Jana",
+      "Tanvir Ahmed Khan"
+    ],
+    "categories": [],
+    "content_hash": "51f1cd103a5968255efe4d071afd059922e6c9f5df09be171f7910c7e9659917",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1109/sp63933.2026.00231",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: sanitizer; missing object-method conjunction",
+    "first_seen": "2026-11-08",
+    "id": "openalex-w7166891569",
+    "included": false,
+    "last_seen": "2026-11-08",
+    "matched_queries": [
+      "OpenAlex: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://doi.org/10.1109/sp63933.2026.00231",
+    "primary_category": "",
+    "published": "2026-05-18",
+    "relevance_reasons": [
+      "verification/fuzzing method: sanitizer",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Control system",
+      "Noise (video)",
+      "Control theory (sociology)",
+      "Real-time computing",
+      "Engineering",
+      "Set (abstract data type)",
+      "Stability (learning theory)",
+      "Work (physics)",
+      "Control engineering"
+    ],
+    "source_id": "https://openalex.org/W7166891569",
+    "title": "NanoTag: Systems Support for Efficient Byte-Granular Overflow Detection on ARM MTE",
+    "title_key": "nanotag systems support for efficient byte granular overflow detection on arm mte",
+    "updated": "2026-11-04",
+    "url": "https://doi.org/10.1109/sp63933.2026.00231",
+    "venue": "IEEE Symposium on Security and Privacy (S&P)"
+  },
+  {
     "abstract": "Training tool-calling agents requires large-scale trajectory data with verifiable labels, yet existing approaches either synthesize environments that diverge from real API behavior or generate tasks without ground-truth outcomes for verification. We present FireFly, a pipeline for generating verified tool-call data from real-world MCP servers. Our key insight is to invert the standard synthesis pipeline: rather than generating tasks and hoping they are solvable, we first let a strong LLM explore real APIs along graph-guided DAG structures, then synthesize tasks backward from observed outcomes, guaranteeing label correctness by construction. To handle the scale of real-world tool spaces (${\\sim}$1,000 tools), we build a pairwise tool graph and sample sub-DAGs to focus exploration on semantically coherent workflows. To address environment drift in live APIs, we construct a retrieval-augmented simulator that caches all exploration results and replays them during training and evaluation, enabling fully offline and reproducible RL. Applying this pipeline yields 5,144 verified tasks spanning 240 servers and 993 tools. A 4B-parameter model trained with GRPO on FireFly matches Claude Sonnet 4.6 on our held-out test set and shows improvements on multiple tool-calling benchmarks including Tau2-Bench, MCPMark, and MCP-Atlas.",
     "analysis": {},
     "authors": [
@@ -6268,30 +6825,30 @@
     "analysis": {},
     "authors": [
       "Chiyu Zhang",
+      "Lu Zhou",
+      "Xiaogang Xu",
       "Huiqin Yang",
       "Bendong Jiang",
       "Xiaolei Zhang",
       "Yiran Zhao",
       "Ruyi Chen",
-      "Lu Zhou",
-      "Xiaogang Xu",
       "Jiafei Wu",
       "Liming Fang",
       "Zhe Liu"
     ],
     "categories": [],
-    "content_hash": "3c3e394130a10dfca63d4ecdc69c19108de41e67a2e2c1cf2edc7682d18841ce",
+    "content_hash": "10d306076d272d1430b7024af97fdf9d5e7fa144259fd4c5802578cec822cf44",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification, litmus; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2605-10779v1",
     "included": false,
-    "last_seen": "2026-07-22",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "((all:\"memory consistency\" OR all:RVWMO OR all:litmus) AND (all:verification OR all:checker OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2605.10779v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.10779v2",
     "primary_category": "",
     "published": "2026-05-11",
     "relevance_reasons": [
@@ -6301,7 +6858,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.CR",
@@ -6310,8 +6867,8 @@
     "source_id": "2605.10779v1",
     "title": "LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Real OS Environments",
     "title_key": "litmus benchmarking behavioral jailbreaks of llm agents in real os environments",
-    "updated": "2026-05-11",
-    "url": "http://arxiv.org/abs/2605.10779v1",
+    "updated": "2026-11-04",
+    "url": "http://arxiv.org/abs/2605.10779v2",
     "venue": "arXiv"
   },
   {
@@ -6897,7 +7454,7 @@
       "Byung Il Kwak"
     ],
     "categories": [],
-    "content_hash": "7c1e1cbb65ff6d023ff56c5b0deec5158123e0910affd4ffbaaa05351caad25f",
+    "content_hash": "924840b6a28dd4800aa9cbafd6d152fde396e9ee13cba0b568931d8087db6d30",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.3390/systems14020196",
     "evidence_level": "abstract",
@@ -6905,7 +7462,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7128589379",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -6919,7 +7476,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Payload (computing)",
@@ -6953,7 +7510,7 @@
     "source_id": "https://openalex.org/W7128589379",
     "title": "XGBoost-Based Anomaly Detection Framework for SOME/IP in In-Vehicle Networks",
     "title_key": "xgboost based anomaly detection framework for some ip in in vehicle networks",
-    "updated": "2026-10-01",
+    "updated": "2026-11-04",
     "url": "https://doi.org/10.3390/systems14020196",
     "venue": "Systems"
   },
@@ -6972,7 +7529,7 @@
       "Yang Zhao"
     ],
     "categories": [],
-    "content_hash": "50d2018c242df4328758a31281de1a30047d29fd128aefd551d2a926b6929568",
+    "content_hash": "8bb7642e6ff49567fa98a57e4b235b72681eeab2641068eb41d81424d98ba376",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "evidence_level": "abstract",
@@ -6980,7 +7537,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7134990248",
     "included": false,
-    "last_seen": "2026-10-22",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -6993,7 +7550,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Bridging (networking)",
@@ -7015,7 +7572,7 @@
     "source_id": "https://openalex.org/W7134990248",
     "title": "HDLxGraph: Bridging Large Language Models and HDL Repositories via HDL Graph Databases",
     "title_key": "hdlxgraph bridging large language models and hdl repositories via hdl graph databases",
-    "updated": "2026-10-16",
+    "updated": "2026-11-07",
     "url": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "venue": "Asia and South Pacific Design Automation Conference (ASP-DAC)"
   },
@@ -8334,7 +8891,7 @@
     "analysis": {},
     "authors": [],
     "categories": [],
-    "content_hash": "c2cfc0bb819efbabd8d8b0a3962dc12a5af5ff4350c1d790d52c948b85ff93a2",
+    "content_hash": "c7646a7d8d388fdb8d58d0092e268e9d0177f0ffd18e3f8a42af90cfaf8bb7ab",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3742873",
     "evidence_level": "abstract",
@@ -8342,7 +8899,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w7111013464",
     "included": false,
-    "last_seen": "2026-11-01",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing",
       "OpenAlex: transient execution RTL fuzzing"
@@ -8356,7 +8913,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 6,
+    "seen_count": 7,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -8373,7 +8930,7 @@
     "source_id": "https://openalex.org/W7111013464",
     "title": "Proceedings of the International Conference on Hardware/Software Codesign and System Synthesis",
     "title_key": "proceedings of the international conference on hardware software codesign and system synthesis",
-    "updated": "2026-10-31",
+    "updated": "2026-11-04",
     "url": "https://doi.org/10.1145/3742873",
     "venue": "未记录"
   },

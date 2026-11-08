@@ -747,7 +747,7 @@
       "Dongsheng Wang"
     ],
     "categories": [],
-    "content_hash": "975bfac2e9f05990e492dd9bf771abb30022527b48cd198b4b4cb3bc60ef24c8",
+    "content_hash": "f7bac1eedbef1ce3397864663fc14e907b52aec2c218a883d2a5fe664b29169d",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3770743.3804084",
     "evidence_level": "abstract",
@@ -755,7 +755,7 @@
     "first_seen": "2026-10-29",
     "id": "openalex-w7223234250",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -769,7 +769,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Reverse engineering",
@@ -788,7 +788,7 @@
     "source_id": "https://openalex.org/W7223234250",
     "title": "Seeing the Unseen: Reverse Engineering Hidden PMU Events by Differential Analysis and Simulation Validation",
     "title_key": "seeing the unseen reverse engineering hidden pmu events by differential analysis and simulation validation",
-    "updated": "2026-10-28",
+    "updated": "2026-11-04",
     "url": "https://doi.org/10.1145/3770743.3804084",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
@@ -1906,7 +1906,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "692dcbafea46d6b5adac78ef04eb438c5b35846f2509b31769d7041b5258d8f7",
+    "content_hash": "5562c0ab86262ade1c5cde1179b61c090d1f5aee2290cd422569efed17fad9bb",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1914,7 +1914,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-10-08",
+    "last_seen": "2026-11-08",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1928,7 +1928,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 7,
+    "seen_count": 8,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1963,7 +1963,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-10-06",
+    "updated": "2026-11-07",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "Proceedings - International Symposium on Computer Architecture/Proceedings"
   },

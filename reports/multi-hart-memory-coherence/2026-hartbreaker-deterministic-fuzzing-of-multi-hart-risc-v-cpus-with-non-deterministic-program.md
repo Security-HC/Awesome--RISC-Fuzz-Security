@@ -12,7 +12,7 @@
 - 标签：Multi-Hart, Memory Consistency & Cache Coherence、RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：manual direct seed title
 - 论文页面：[https://doi.org/10.1109/isca66397.2026.00155](https://doi.org/10.1109/isca66397.2026.00155)
-- PDF：未记录
+- PDF：[https://doi.org/10.1109/isca66397.2026.00155](https://doi.org/10.1109/isca66397.2026.00155)
 - 分析模式：摘要级占位（未全文核验）
 
 ## 摘要
