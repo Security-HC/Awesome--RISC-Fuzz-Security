@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Dian-Lun Lin、Yanqing Zhang、Haoxing Ren、Brucek Khailany、Shih-Hsin Wang、Tsung-Wei Huang
+- 作者：Dian-Lun Lin、Yan-Qing Zhang、Haoxing Ren、Brucek Khailany、Shih-Hsin Wang、Tsung-Wei Huang
 - 发表日期：2023-07-09
 - 会议/期刊：Design Automation Conference
 - 主分类：形式化与定向处理器验证

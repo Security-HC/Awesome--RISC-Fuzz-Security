@@ -12,7 +12,7 @@
 - 标签：RISC-V Processor Fuzzing、Microarchitectural Security Testing、RTL & SoC Hardware Fuzzing
 - 纳入依据：strong phrase in abstract: risc-v fuzzing；hardware/processor object: risc-v, riscv, processor, cpu；verification/fuzzing method: fuzz
 - 论文页面：[https://doi.org/10.1145/3770743.3803916](https://doi.org/10.1145/3770743.3803916)
-- PDF：[https://doi.org/10.1145/3770743.3803916](https://doi.org/10.1145/3770743.3803916)
+- PDF：[https://dl.acm.org/doi/pdf/10.1145/3770743.3803916?download=true](https://dl.acm.org/doi/pdf/10.1145/3770743.3803916?download=true)
 - 分析模式：摘要级占位（未全文核验）
 
 ## 摘要

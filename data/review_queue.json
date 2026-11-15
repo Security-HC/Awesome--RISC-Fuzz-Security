@@ -747,7 +747,7 @@
       "Dongsheng Wang"
     ],
     "categories": [],
-    "content_hash": "f7bac1eedbef1ce3397864663fc14e907b52aec2c218a883d2a5fe664b29169d",
+    "content_hash": "1c8d9c8b7550f6fd035a7c7d0fb1e00e8b21d5fe6d7a8d5da6ca708fb62c21d3",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3770743.3804084",
     "evidence_level": "abstract",
@@ -755,7 +755,7 @@
     "first_seen": "2026-10-29",
     "id": "openalex-w7223234250",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -769,7 +769,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Reverse engineering",
@@ -788,8 +788,68 @@
     "source_id": "https://openalex.org/W7223234250",
     "title": "Seeing the Unseen: Reverse Engineering Hidden PMU Events by Differential Analysis and Simulation Validation",
     "title_key": "seeing the unseen reverse engineering hidden pmu events by differential analysis and simulation validation",
-    "updated": "2026-11-04",
+    "updated": "2026-11-14",
     "url": "https://doi.org/10.1145/3770743.3804084",
+    "venue": "ACM/IEEE Design Automation Conference (DAC)"
+  },
+  {
+    "abstract": "This paper presents Thrend, the first defense that mitigates counting threads used in timing side-channel attacks on Arm and Apple CPUs through real-time monitoring and scheduling. Thrend leverages fuzzing to automatically generate high-quality counting threads for training, and detects them by sampling hardware performance counters. For suspected counting threads, Thrend prevents effective timing measurements by co-scheduling the attacker threads and the counting threads on the same core. We implement Thrend on four Arm and Apple devices. Under a sampling rate of 100 Hz, Thrend achieves 99.71% detection accuracy, a 0% false-negative rate, and incurs less than 1.42% runtime overhead.",
+    "analysis": {},
+    "authors": [
+      "Chang Liu",
+      "Shuaihu Feng",
+      "佳琦 崔",
+      "Hongpei Zheng",
+      "Aodong Cui",
+      "Jian Dong",
+      "Yuan Li",
+      "Trevor E. Carlson",
+      "Dongsheng Wang"
+    ],
+    "categories": [],
+    "content_hash": "f65f1f1e69486515c8e3e5c821135a91b7d1e3c2dd3f2c07eb75d4d434d389b0",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3770743.3804173",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225430343",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: microarchitectural timing vulnerability fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3770743.3804173?download=true",
+    "primary_category": "",
+    "published": "2026-07-26",
+    "relevance_reasons": [
+      "hardware/processor object: cpu",
+      "verification/fuzzing method: fuzz"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Fuzz testing",
+      "Sampling (signal processing)",
+      "Computer hardware",
+      "Embedded system",
+      "Real-time computing",
+      "ARM architecture",
+      "Operating system",
+      "Execution time",
+      "Parallel computing",
+      "Running time",
+      "Thread (computing)"
+    ],
+    "source_id": "https://openalex.org/W7225430343",
+    "title": "Thrend: Mitigating Counting Thread-based Fine-grained Timing on Arm and Apple CPUs",
+    "title_key": "thrend mitigating counting thread based fine grained timing on arm and apple cpus",
+    "updated": "2026-11-08",
+    "url": "https://doi.org/10.1145/3770743.3804173",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
   {
@@ -1571,14 +1631,14 @@
       "Yi-Nan Xu",
       "Sa Wang",
       "Dan Tang",
-      "Ninghui Sun",
+      "Ning-Hui Sun",
       "Yun-Gang Bao"
     ],
     "categories": [
       "RTL & SoC Hardware Fuzzing",
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "e7c33212c1cf25e953914a747ac0bbf199efedfd429688a9ccd9ab0152c32b7a",
+    "content_hash": "0bc5ae4f3686f56ddd5739fb5c491968b1c484e4ea76f02ac571cfd9822ba24f",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3649329.3655911",
     "evidence_level": "abstract",
@@ -1586,7 +1646,7 @@
     "first_seen": "2026-09-29",
     "id": "semantic-scholar-3384a28e7725e1c79de3a613d8f603af7c5c5770",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "Semantic Scholar: CPU fuzzing hardware verification"
     ],
@@ -1600,7 +1660,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -1620,12 +1680,12 @@
       "Gwok-Waa Wan",
       "Sam-Zaak Wong",
       "Layton Zhang",
-      "Tianyang Liu",
+      "Tian-Yang Liu",
       "Qi Tian",
-      "Jianmin Ye"
+      "Jian-Min Ye"
     ],
     "categories": [],
-    "content_hash": "1c2b7598ad6ffa1bff808c961e464c5cb8991f4ad5d7032e6c445ca02640295f",
+    "content_hash": "8d4db61af9d1e90a31b975b3c6b7929355b3e47489e631e2178b127b97d09f45",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3649329.3658493",
     "evidence_level": "abstract",
@@ -1633,7 +1693,7 @@
     "first_seen": "2026-09-29",
     "id": "semantic-scholar-e6fd0a19cb9c24281d49a08d897b9442e8f17d8d",
     "included": false,
-    "last_seen": "2026-09-29",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "Semantic Scholar: CPU fuzzing hardware verification"
     ],
@@ -1647,7 +1707,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "Semantic Scholar",
     "source_categories": [
       "Computer Science"
@@ -1906,7 +1966,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "5562c0ab86262ade1c5cde1179b61c090d1f5aee2290cd422569efed17fad9bb",
+    "content_hash": "91baff53d35b6006a6928b161e9cb0e361306c691705950298c5b516b5e45835",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1914,7 +1974,7 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
@@ -1928,7 +1988,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 8,
+    "seen_count": 9,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -1963,7 +2023,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-11-07",
+    "updated": "2026-11-10",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "Proceedings - International Symposium on Computer Architecture/Proceedings"
   },

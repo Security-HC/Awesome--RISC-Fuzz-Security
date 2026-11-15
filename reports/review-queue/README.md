@@ -1,6 +1,6 @@
 # 待人工复核
 
-共 65 篇。该列表不进入主 README。
+共 66 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
@@ -19,6 +19,7 @@
 | 2026-07-28 | [Timelines Over Tokens](https://doi.org/10.31979/etd.ewrn-xhac) | 4 | hardware/processor object: soc；verification/fuzzing method: validation |
 | 2026-07-28 | [RThermaL](https://doi.org/10.31979/etd.x48p-hs5d) | 4 | hardware/processor object: processor, rtl, verilog；verification/fuzzing method: validation |
 | 2026-07-26 | [Seeing the Unseen: Reverse Engineering Hidden PMU Events by Differential Analysis and Simulation Validation](https://doi.org/10.1145/3770743.3804084) | 4 | hardware/processor object: processor, microarchitectural；verification/fuzzing method: validation |
+| 2026-07-26 | [Thrend: Mitigating Counting Thread-based Fine-grained Timing on Arm and Apple CPUs](https://doi.org/10.1145/3770743.3804173) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2026-07-15 | [nSim-RV: A Reproducible RISC-V Framework for Scheduler-Aware Timing Scalability Under Increasing Task Concurrency](https://doi.org/10.3390/computers15070447) | 4 | hardware/processor object: risc-v, processor；verification/fuzzing method: validation |
 | 2026-07-05 | [EquivFusion: Unifying Hardware Equivalence Checking from Algorithms to Netlists via MLIR](https://doi.org/10.1145/3803437.3806400) | 4 | hardware/processor object: verilog；verification/fuzzing method: verification, formal verification |
 | 2026-05-05 | [täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)](http://arxiv.org/abs/2605.04172v1) | 4 | hardware/processor object: microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |

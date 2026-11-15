@@ -1,5 +1,173 @@
 [
   {
+    "abstract": "SHA-256 of the PDF of this edition: 63678f4a304ed68c39d69ac3ed70beb9de8ff29649b144076b261129a84ec61e",
+    "analysis": {},
+    "authors": [
+      "Forrest Landry"
+    ],
+    "categories": [],
+    "content_hash": "a6206c709b141a3acb673a10b045769c840bfb0bebf35f2b5bdfec0eb0a54017",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.67291/ciox9507",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225815706",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.67291/ciox9507",
+    "primary_category": "",
+    "published": "2026-11-11",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Political science",
+      "Work (physics)",
+      "Business",
+      "Government (linguistics)",
+      "Natural (archaeology)",
+      "Perspective (graphical)",
+      "Face (sociological concept)",
+      "Field (mathematics)",
+      "Process (computing)"
+    ],
+    "source_id": "https://openalex.org/W7225815706",
+    "title": "The Possibilities of One World",
+    "title_key": "the possibilities of one world",
+    "updated": "2026-11-13",
+    "url": "https://doi.org/10.67291/ciox9507",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Computers move and rewrite data whose useful lifetimes range from inner-loop iterations to years, yet memory systems usually hide retention as a fixed physical property. We argue that required lifetime should become a first-class resource across algorithms, programming systems, controllers, and devices. Building on prior lifetime-aware placement, we propose an event-based validity contract that links application completion events to retention-class selection and renewal of protection. Applications would be enabled to express semantic contracts such as ``until this tile completes'' and the system will map data to homogeneous arrays engineered for ephemeral, epoch, or durable retention and preserve correctness through margins, ECC, refresh, migration, or recomputation. We present a trace-based simulator and FPGA prototype that exercises class migration.",
+    "analysis": {},
+    "authors": [
+      "Adrian Jackson"
+    ],
+    "categories": [],
+    "content_hash": "f600d7eca7cd8ea431fcb277914dac4fcde0d794e106e1af35505efdb2cbd1e5",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.66977/xsci.2611.001c",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225644280",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: cache coherence directed test generation"
+    ],
+    "pdf_url": "https://xsci.com/preprint/doi/10.66977/xsci.2611.001c.pdf",
+    "primary_category": "",
+    "published": "2026-11-10",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Correctness",
+      "Computer science",
+      "Homogeneous",
+      "Class (philosophy)",
+      "Selection (genetic algorithm)",
+      "Range (aeronautics)",
+      "Resource (disambiguation)",
+      "Variety (cybernetics)",
+      "Distributed computing",
+      "Real-time computing",
+      "Semantics (computer science)",
+      "Programming language",
+      "Data retention",
+      "Embedded system",
+      "Simple (philosophy)",
+      "Systems design",
+      "Field-programmable gate array",
+      "Component (thermodynamics)"
+    ],
+    "source_id": "https://openalex.org/W7225644280",
+    "title": "Memory as a Temporal Resource: Lifetime Contracts for Multi-Retention Systems",
+    "title_key": "memory as a temporal resource lifetime contracts for multi retention systems",
+    "updated": "2026-11-12",
+    "url": "https://doi.org/10.66977/xsci.2611.001c",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "Photonic integrated circuits (PICs) are rapidly increasing in scale and routing complexity, driven by photonic computing, optical switching, programmable interferometer meshes, wavelength-routed optical networks-on-chip, and chip-to-chip optical interconnects. Manual waveguide planning becomes increasingly impractical as designs approach hundreds to thousands of photonic components, because routing must satisfy geometric, optical, electrical, and manufacturing constraints. This paper presents Photonic Routing Optimization and Placement Engine (PROPEL) , a memory-driven, native-accelerated adaptive vector-flow-field routing framework with process-aware waveguide generation for large-scale PIC physical design. PROPEL builds a routing kernel based on a bounded vector-flow-field algorithm and design-rule checking (DRC) validation. The same kernel supports passive optical routing, active optical–electrical routing, and topology-driven net assignment. C++ accelerates computationally intensive field and routing calculations, while Python performs detailed DRC replay, legality checking, route commitment, and GDSFactory-based geometry generation. Compared with state-of-the-art routing solutions, PROPEL is faster on 17 of 18 shared passive-routing cases, with a median speedup of 2.6 × and a geometric-mean speedup of 2.5 ×, while maintaining zero final design-rule violations. PROPEL also supports active optical–electrical routing, topology-driven net assignment, length, delay, and optical-path-length matching, process-map-aware waveguide generation, route-memory reuse, selective rip-up/reroute, and Graphic Data System (GDSII)-level legality replay. These capabilities address heterogeneous PIC layouts where optical, electrical, process, topology, matching, and manufacturability constraints must be handled together. In incremental-layout experiments, PROPEL restores more than 95% of previously verified routes after small local component movements and reroutes only the affected subset, reducing modified-design routing from tens or hundreds of seconds to a few seconds while maintaining zero final design-rule violations.",
+    "analysis": {},
+    "authors": [
+      "A. Abdur Rahman Akib",
+      "Eunso Shin",
+      "Jonathan Rogers",
+      "Jonathan Wierer",
+      "Stanley S. Cheung"
+    ],
+    "categories": [],
+    "content_hash": "5c73cf3cfc80625bd1a4eaa9b01c6755bd6a868562a486ad262f497ef0396c1c",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3862639",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: validation; missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7172276678",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.1145/3862639",
+    "primary_category": "",
+    "published": "2026-11-07",
+    "relevance_reasons": [
+      "verification/fuzzing method: validation",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Router",
+      "Speedup",
+      "Routing (electronic design automation)",
+      "Computer science",
+      "Photonics",
+      "Photonic integrated circuit",
+      "Waveguide",
+      "Optical switch",
+      "Design for manufacturability",
+      "Electronic engineering",
+      "Static routing",
+      "Integrated circuit",
+      "Electronic circuit",
+      "Routing Information Protocol",
+      "Parallel computing",
+      "Equal-cost multi-path routing",
+      "Optical add-drop multiplexer",
+      "Kernel (algebra)"
+    ],
+    "source_id": "https://openalex.org/W7172276678",
+    "title": "PROPEL: A Memory-Driven, Adaptive Vector-Flow-Field Router with Process-Aware Waveguide Generation for Large-Scale Photonic Integrated Circuits",
+    "title_key": "propel a memory driven adaptive vector flow field router with process aware waveguide generation for large scale photonic integrated circuits",
+    "updated": "2026-11-14",
+    "url": "https://doi.org/10.1145/3862639",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems"
+  },
+  {
     "abstract": "Safety-aligned language models are commonly deployed as multi-turn assistants, which lets adversaries spread unsafe intent across several user turns instead of a single prompt. Gradient-based jailbreak detectors such as GradSafe were developed for single prompts: they score an input by the alignment between its induced gradient and a fixed unsafe reference direction, and their effectiveness in multi-turn dialogue remains unclear. We conduct a controlled evaluation of gradient-based jailbreak detection in multi-turn settings. We extend GradSafe with a Context Window Scanner that applies the detector to fixed-size windows of user turns and uses the maximum window score as the conversation-level score. We evaluate different window sizes, attack families, benign conversation distributions, and target models. The results differ sharply between synthetic and realistic benign settings. Against synthetic benign conversations, the detector achieves an ROC-AUC of 0.98 on human-authored multi-turn jailbreaks. On WildChat benign conversations, ROC-AUC drops to 0.76, and a threshold calibrated on synthetic data flags more than 90% of benign conversations as unsafe. Under realistic benign distributions, single-turn windows give the highest separability, whereas longer windows and accumulated contexts reduce performance. The detector is also sensitive to the attack-generation method and target model: successful Crescendo attacks receive scores comparable to or lower than benign conversations, and Qwen2.5-7B-Instruct yields near-random separability with a different optimal window size. These findings show that gradient-based signals can support multi-turn jailbreak detection, but reliable deployment requires calibration on realistic benign conversations, short-window scoring, length-aware thresholds, and evaluation across attack types and model architectures.",
     "analysis": {},
     "authors": [
@@ -60,6 +228,56 @@
     "title_key": "does the unsafe gradient survive a conversation on the fragility of gradient based jailbreak detection in multi turn dialogue",
     "updated": "2026-11-07",
     "url": "https://doi.org/10.1145/3846374.3846392",
+    "venue": "未记录"
+  },
+  {
+    "abstract": "SHA-256 of the PDF of this edition: d0ae0ead08311e35edec4d7655ebda33415c4d7cceb9b10af0c6707409abb780",
+    "analysis": {},
+    "authors": [
+      "Forrest Landry"
+    ],
+    "categories": [],
+    "content_hash": "3b652d3b4f78da706c5e292c9528ff503a97a23b81810c27f4e699bc27171339",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.67291/ciel7614",
+    "evidence_level": "abstract",
+    "exclusion_reason": "missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225393112",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: memory consistency checker processor trace"
+    ],
+    "pdf_url": "https://doi.org/10.67291/ciel7614",
+    "primary_category": "",
+    "published": "2026-11-05",
+    "relevance_reasons": [
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 0,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Grammar",
+      "Artificial intelligence",
+      "Computation",
+      "Natural language processing",
+      "Linguistics",
+      "Programming language",
+      "Theoretical computer science",
+      "Head-driven phrase structure grammar",
+      "Computational linguistics",
+      "Interpretation (philosophy)"
+    ],
+    "source_id": "https://openalex.org/W7225393112",
+    "title": "The Grammar of Computation: On Language, Code, Proof, and the Structure of Formal Thought",
+    "title_key": "the grammar of computation on language code proof and the structure of formal thought",
+    "updated": "2026-11-13",
+    "url": "https://doi.org/10.67291/ciel7614",
     "venue": "未记录"
   },
   {
@@ -146,6 +364,72 @@
     "updated": "2026-11-02",
     "url": "http://arxiv.org/abs/2611.02974v1",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "DevSecOps seeks to embed security into every stage of software delivery, yet its security testing remains divided between build-time tools that search code for weaknesses and run-time tools that watch networks for attacks. This review examines how artificial intelligence can connect these two ends of the pipeline. It analyzes what each pipeline stage requires of an AI-based tester, surveys cross-project vulnerability discovery and learning-based real-time network intrusion detection, and critically assesses the distance between benchmark results and operational performance. It then proposes a reference architecture in which both detectors share a risk and evidence store, common identifiers, and a feedback loop, and it describes integration patterns, risk-scoring and gate policies, and use cases such as pre-merge review with exposure context, attack replay in staging, and incident-to-regression conversion. Pipeline-level evaluation measures are discussed alongside model-level practice. Open challenges include false-positive burden, model drift and maintenance, adversarial and supply chain risks, privacy, and latency. The review concludes that integrated, evidence-driven security testing is feasible but depends on linked benchmarks, realistic evaluation, and attention to developer trust.",
+    "analysis": {},
+    "authors": [
+      "Lalitha Anand"
+    ],
+    "categories": [],
+    "content_hash": "9ab5af1805f4fa8da551de9dbfe9e1dc0e58dad7ee45415dd5773acea373d498",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.14293/pr2199.004780.v1",
+    "evidence_level": "abstract",
+    "exclusion_reason": "security relevance: security, vulnerability; missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225590614",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: processor fuzzer automatic bug injection"
+    ],
+    "pdf_url": "https://www.scienceopen.com/document_file/d365f9cf-7613-44ea-b510-71c8f1a672c8/ScienceOpenPreprint/DevSecOps_AI_Security_Testing_Review.pdf",
+    "primary_category": "",
+    "published": "2026-10-31",
+    "relevance_reasons": [
+      "security relevance: security, vulnerability",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 1,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer security",
+      "Vulnerability (computing)",
+      "Computer science",
+      "Intrusion detection system",
+      "Pipeline (software)",
+      "Benchmark (surveying)",
+      "Software security assurance",
+      "Vulnerability assessment",
+      "Vulnerability management",
+      "Security testing",
+      "Software",
+      "Key (lock)",
+      "Adversarial system",
+      "Network security",
+      "Identification (biology)",
+      "Security information and event management",
+      "Code (set theory)",
+      "Evasion (ethics)",
+      "Computer security model",
+      "Application security",
+      "Security community",
+      "Risk analysis (engineering)",
+      "Open research",
+      "Threat model",
+      "False alarm",
+      "Security policy"
+    ],
+    "source_id": "https://openalex.org/W7225590614",
+    "title": "AI-Driven Security Testing in DevSecOps: Integrating Cross-Project Vulnerability Discovery with Real-Time Network Intrusion Detection",
+    "title_key": "ai driven security testing in devsecops integrating cross project vulnerability discovery with real time network intrusion detection",
+    "updated": "2026-11-10",
+    "url": "https://doi.org/10.14293/pr2199.004780.v1",
+    "venue": "未记录"
   },
   {
     "abstract": "The volume unpacks and closely examines India’s success in effectively combating LWE, which destabilised affected regions for a long time.",
@@ -267,18 +551,18 @@
       "Xinyi Shi"
     ],
     "categories": [],
-    "content_hash": "ecf84ec2558ef560c3daf001a40e7b35263231017d295a15db3c85211efae51b",
+    "content_hash": "f13c6056e1539c94714063bf7db92acf823d537cd641c98256d6e1af71a860dc",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "excluded phrase: gpu kernel",
     "first_seen": "2026-11-01",
     "id": "arxiv-2610-38983v1",
     "included": false,
-    "last_seen": "2026-11-01",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2610.38983v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.38983v2",
     "primary_category": "",
     "published": "2026-10-28",
     "relevance_reasons": [
@@ -287,7 +571,7 @@
     "relevance_score": -100,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "arXiv",
     "source_categories": [
       "cs.MS",
@@ -297,8 +581,8 @@
     "source_id": "2610.38983v1",
     "title": "Beyond atol and rtol: Sound Test Oracles for Low-Precision GPU Kernels",
     "title_key": "beyond atol and rtol sound test oracles for low precision gpu kernels",
-    "updated": "2026-10-28",
-    "url": "http://arxiv.org/abs/2610.38983v1",
+    "updated": "2026-11-09",
+    "url": "http://arxiv.org/abs/2610.38983v2",
     "venue": "arXiv"
   },
   {
@@ -310,7 +594,7 @@
     "categories": [
       "Benchmarks, Bug Injection & Artifacts"
     ],
-    "content_hash": "15126451c50a945294d76e6040154cda0d702b99e23d27d69668c0a1a5d83841",
+    "content_hash": "205b4da53d7f661a51db07f522a7309326dc6ad314f35f83a3a5b634f255276e",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3857307.3857308",
     "evidence_level": "abstract",
@@ -318,7 +602,7 @@
     "first_seen": "2026-11-01",
     "id": "openalex-w7220679572",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: RISC-V processor fuzzing",
       "OpenAlex: RISC-V processor verification benchmark artifact",
@@ -335,7 +619,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 4,
+    "seen_count": 5,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -362,7 +646,7 @@
     "source_id": "https://openalex.org/W7220679572",
     "title": "Attestable Audit: Property-Based Attestation for Proprietary Workloads without Artifact Disclosure",
     "title_key": "attestable audit property based attestation for proprietary workloads without artifact disclosure",
-    "updated": "2026-11-07",
+    "updated": "2026-11-14",
     "url": "https://doi.org/10.1145/3857307.3857308",
     "venue": "Hardware and Architectural Support for Security and Privacy"
   },
@@ -452,7 +736,7 @@
       "Brandon Reagen"
     ],
     "categories": [],
-    "content_hash": "1976ae763ef38a85f5f5f062624d83eb64efe35f7d6ca689a5972e18bc98d05f",
+    "content_hash": "afa64561c6c7e108df086de8b64b786ab6e8982216cb62c59765176998b98ab9",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3857307.3857312",
     "evidence_level": "abstract",
@@ -460,7 +744,7 @@
     "first_seen": "2026-11-08",
     "id": "openalex-w7224107798",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: RISC-V processor verification benchmark artifact"
     ],
@@ -473,7 +757,7 @@
     "relevance_score": -100,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -504,7 +788,7 @@
     "source_id": "https://openalex.org/W7224107798",
     "title": "zkDuel: Characterizing SumCheck Prover Kernels across GPU Programming Models",
     "title_key": "zkduel characterizing sumcheck prover kernels across gpu programming models",
-    "updated": "2026-11-06",
+    "updated": "2026-11-14",
     "url": "https://doi.org/10.1145/3857307.3857312",
     "venue": "Hardware and Architectural Support for Security and Privacy"
   },
@@ -1251,7 +1535,7 @@
       "Dean Sullivan"
     ],
     "categories": [],
-    "content_hash": "40b3dd82d1a022fbd60332dc16a0633578c8a08b0991fc9945a16bd9cd3cfc8d",
+    "content_hash": "7de0093ace6c5e67c3966fba1557b087ffbc09896af02bde00cac09a990bcd03",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3842651.3843185",
     "evidence_level": "abstract",
@@ -1259,7 +1543,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7207660843",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: processor fuzzing coverage guided RTL"
     ],
@@ -1274,7 +1558,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Firmware",
@@ -1312,7 +1596,7 @@
     "source_id": "https://openalex.org/W7207660843",
     "title": "From Silicon to Boot Code: Extending Automated Program Repair to Firmware-Layer Security Workarounds",
     "title_key": "from silicon to boot code extending automated program repair to firmware layer security workarounds",
-    "updated": "2026-11-07",
+    "updated": "2026-11-08",
     "url": "https://doi.org/10.1145/3842651.3843185",
     "venue": "未记录"
   },
@@ -4608,7 +4892,7 @@
       "Zhe Jiang"
     ],
     "categories": [],
-    "content_hash": "074ebbcf5ab012434ef9a7e98c4b221b84e663a7185784f0d4b2b4cf98baafab",
+    "content_hash": "5d849adb270af06f1717e2638ce4d1c60da31a88dc2c0561a0ee8ce351f1f90a",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3770743.3804273",
     "evidence_level": "abstract",
@@ -4616,12 +4900,12 @@
     "first_seen": "2026-11-08",
     "id": "openalex-w7172559937",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: RISC-V RTL fuzzing differential testing",
       "OpenAlex: transient execution RTL fuzzing"
     ],
-    "pdf_url": "https://doi.org/10.1145/3770743.3804273",
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3770743.3804273?download=true",
     "primary_category": "",
     "published": "2026-07-26",
     "relevance_reasons": [
@@ -4631,7 +4915,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Debugging",
@@ -4657,7 +4941,7 @@
     "source_id": "https://openalex.org/W7172559937",
     "title": "Prelude: Priming-Guided State Reconstruction for Efficient FPGA Processor Debugging",
     "title_key": "prelude priming guided state reconstruction for efficient fpga processor debugging",
-    "updated": "2026-11-07",
+    "updated": "2026-11-10",
     "url": "https://doi.org/10.1145/3770743.3804273",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
@@ -4674,7 +4958,7 @@
     "categories": [
       "Coverage, Oracles & Fuzzing Methodology"
     ],
-    "content_hash": "077776fa4b36936bbd2986b8f41eacabef70b570422f60aaa982627f1daa49f0",
+    "content_hash": "1f0ec8ad1dfa9d5e4949af74718c963b02d1060308b6a3a18ed7dec0d133997d",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1145/3770743.3804000",
     "evidence_level": "abstract",
@@ -4682,7 +4966,7 @@
     "first_seen": "2026-11-08",
     "id": "openalex-w7155400373",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -4696,7 +4980,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Fuzz testing",
@@ -4730,8 +5014,77 @@
     "source_id": "https://openalex.org/W7155400373",
     "title": "Stateful Embedded Fuzzing Using Peripheral-Accurate SystemC Virtual Prototypes",
     "title_key": "stateful embedded fuzzing using peripheral accurate systemc virtual prototypes",
-    "updated": "2026-11-07",
+    "updated": "2026-11-10",
     "url": "https://doi.org/10.1145/3770743.3804000",
+    "venue": "ACM/IEEE Design Automation Conference (DAC)"
+  },
+  {
+    "abstract": "Previous studies have verified that some special Performance Monitoring Unit (PMU) events are insecure. In this work, we further disclose that even the PMU events are securely designed and implemented, they are capable of constructing malicious attacks. We develop and implement a fuzz testing framework to automatically identify and verify numerous PMU events. Based on which, we successfully discover 118 vulnerable PMU events. Leveraging these identified events, we introduce PMU-Faker, a precise timing mechanism that can implement most of the timing-based side channel attacks without timer. To accommodate variations in instruction-triggered cycle durations, PMU-Faker provides two timing mechanisms with varying levels of granularity, thereby balancing precision and adaptability. Moreover, we successfully utilizing PMU-Faker to implement four attacks including executing transient execution attacks, extracting AES's key, conducting attacks against Intel Software Guard Extensions (SGX), and achieving cross-virtual machine information leakage.",
+    "analysis": {},
+    "authors": [
+      "Zeru Lan",
+      "Pengfei Qiu",
+      "Yaxuan Zhao",
+      "Ziyan Huang",
+      "Zhihao Zhang",
+      "Jiayi Guo",
+      "Chunlu Wang",
+      "Dongsheng Wang",
+      "Gang Qu"
+    ],
+    "categories": [
+      "Microarchitectural Security Testing"
+    ],
+    "content_hash": "4a54d93b24d5852feb695b482e58627142e6a607e75d4dfd94bc2002ca182da0",
+    "curation_status": "excluded",
+    "doi": "https://doi.org/10.1145/3770743.3804180",
+    "evidence_level": "abstract",
+    "exclusion_reason": "verification/fuzzing method: fuzz; security relevance: side channel, transient execution, leakage; missing object-method conjunction",
+    "first_seen": "2026-11-15",
+    "id": "openalex-w7225409023",
+    "included": false,
+    "last_seen": "2026-11-15",
+    "matched_queries": [
+      "OpenAlex: microarchitectural timing vulnerability fuzzing",
+      "OpenAlex: multicore processor fuzzing shared memory"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3770743.3804180?download=true",
+    "primary_category": "Microarchitectural Security Testing",
+    "published": "2026-07-26",
+    "relevance_reasons": [
+      "verification/fuzzing method: fuzz",
+      "security relevance: side channel, transient execution, leakage",
+      "missing object-method conjunction"
+    ],
+    "relevance_score": 2,
+    "relevance_tier": "D",
+    "scope": "excluded",
+    "seen_count": 2,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Guard (computer science)",
+      "Software",
+      "System monitoring",
+      "Computer security",
+      "Real-time computing",
+      "Embedded system",
+      "Side channel attack",
+      "Reliability engineering",
+      "Transient (computer programming)",
+      "Unit (ring theory)",
+      "Key (lock)",
+      "Mechanism (biology)",
+      "Event (particle physics)",
+      "Robustness (evolution)",
+      "Unexpected events",
+      "Timing attack"
+    ],
+    "source_id": "https://openalex.org/W7225409023",
+    "title": "PMU-Faker: The Apparently Harmless Performance Monitoring Unit Events are Actually Harmful",
+    "title_key": "pmu faker the apparently harmless performance monitoring unit events are actually harmful",
+    "updated": "2026-11-10",
+    "url": "https://doi.org/10.1145/3770743.3804180",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
   {
@@ -4960,7 +5313,7 @@
       "Nuha Omran Abokhdair"
     ],
     "categories": [],
-    "content_hash": "727f0eb550ddea31b2573389c7b881508c28a395a21187df84073e1a65017794",
+    "content_hash": "b1d636e5a13b570cdf7351567893b03a61bac83a52dbd059ef53c9031e6ad3e7",
     "curation_status": "excluded",
     "doi": "",
     "evidence_level": "abstract",
@@ -4968,7 +5321,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7221238228",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -4982,7 +5335,7 @@
     "relevance_score": 1,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "OpenAlex",
     "source_categories": [
       "Hypervisor",
@@ -5021,7 +5374,7 @@
     "source_id": "https://openalex.org/W7221238228",
     "title": "Performance and Architectural Analysis of MINIX 3 and Ubuntu Linux: Implications for Isolation and Trusted Computing Base",
     "title_key": "performance and architectural analysis of minix 3 and ubuntu linux implications for isolation and trusted computing base",
-    "updated": "2026-11-07",
+    "updated": "2026-11-14",
     "url": "https://openalex.org/W7221238228",
     "venue": "مجلة صرمان للعلوم والتقنية"
   },
@@ -5750,7 +6103,7 @@
       "Peter Wägemann"
     ],
     "categories": [],
-    "content_hash": "68fe685582c2540563907495e3bde78c57939cd2c9544b5b5c0004d0e8fff288",
+    "content_hash": "e0570cc04d319ce1b2884a43680dca4c34fe47c7ba2a117dc05556bd92e2231f",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.25593/open-fau-3465",
     "evidence_level": "abstract",
@@ -5758,7 +6111,7 @@
     "first_seen": "2026-10-08",
     "id": "openalex-w7214468885",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -5771,7 +6124,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -5788,7 +6141,7 @@
     "source_id": "https://openalex.org/W7214468885",
     "title": "Embedded Systems Under Resource Limits",
     "title_key": "embedded systems under resource limits",
-    "updated": "2026-11-07",
+    "updated": "2026-11-14",
     "url": "https://doi.org/10.25593/open-fau-3465",
     "venue": "未记录"
   },
@@ -6583,7 +6936,7 @@
       "Tanvir Ahmed Khan"
     ],
     "categories": [],
-    "content_hash": "51f1cd103a5968255efe4d071afd059922e6c9f5df09be171f7910c7e9659917",
+    "content_hash": "a094d0852a104e590ce21622fa3be06a0f4caa5fa0e4b27fd7435962baa9b1c8",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/sp63933.2026.00231",
     "evidence_level": "abstract",
@@ -6591,7 +6944,7 @@
     "first_seen": "2026-11-08",
     "id": "openalex-w7166891569",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: multicore processor fuzzing shared memory"
     ],
@@ -6605,7 +6958,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -6622,7 +6975,7 @@
     "source_id": "https://openalex.org/W7166891569",
     "title": "NanoTag: Systems Support for Efficient Byte-Granular Overflow Detection on ARM MTE",
     "title_key": "nanotag systems support for efficient byte granular overflow detection on arm mte",
-    "updated": "2026-11-04",
+    "updated": "2026-11-14",
     "url": "https://doi.org/10.1109/sp63933.2026.00231",
     "venue": "IEEE Symposium on Security and Privacy (S&P)"
   },
@@ -6647,18 +7000,18 @@
       "Dakuo Wang"
     ],
     "categories": [],
-    "content_hash": "faf413d871e26a845733e86d675d795a3ecc36962eb89f85f536c64362e4743f",
+    "content_hash": "42e5b588f8cbc30f37dcb01286142682131987cdf131991dc8c322059f386d7c",
     "curation_status": "excluded",
     "evidence_level": "abstract",
     "exclusion_reason": "verification/fuzzing method: verification; missing object-method conjunction",
     "first_seen": "2026-07-22",
     "id": "arxiv-2605-17558v1",
     "included": false,
-    "last_seen": "2026-10-29",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "((all:\"cache coherence\" OR all:coherency) AND (all:verification OR all:\"test generation\" OR all:fuzzing)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
     ],
-    "pdf_url": "https://arxiv.org/pdf/2605.17558v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.17558v3",
     "primary_category": "",
     "published": "2026-05-17",
     "relevance_reasons": [
@@ -6668,7 +7021,7 @@
     "relevance_score": 2,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 2,
+    "seen_count": 3,
     "source": "arXiv",
     "source_categories": [
       "cs.SE",
@@ -6677,8 +7030,8 @@
     "source_id": "2605.17558v1",
     "title": "Firefly: Illuminating Large-Scale Verified Tool-Call Data Generation from Real APIs",
     "title_key": "firefly illuminating large scale verified tool call data generation from real apis",
-    "updated": "2026-10-26",
-    "url": "http://arxiv.org/abs/2605.17558v2",
+    "updated": "2026-11-10",
+    "url": "http://arxiv.org/abs/2605.17558v3",
     "venue": "arXiv"
   },
   {
@@ -7529,7 +7882,7 @@
       "Yang Zhao"
     ],
     "categories": [],
-    "content_hash": "8bb7642e6ff49567fa98a57e4b235b72681eeab2641068eb41d81424d98ba376",
+    "content_hash": "f76f3caee92d8ed2f38b572fd00cd6e79ea680c2fd4740cbbfd08f3ed39a379a",
     "curation_status": "excluded",
     "doi": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "evidence_level": "abstract",
@@ -7537,7 +7890,7 @@
     "first_seen": "2026-10-15",
     "id": "openalex-w7134990248",
     "included": false,
-    "last_seen": "2026-11-08",
+    "last_seen": "2026-11-15",
     "matched_queries": [
       "OpenAlex: transient execution RTL fuzzing"
     ],
@@ -7550,7 +7903,7 @@
     "relevance_score": 0,
     "relevance_tier": "D",
     "scope": "excluded",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Bridging (networking)",
@@ -7572,7 +7925,7 @@
     "source_id": "https://openalex.org/W7134990248",
     "title": "HDLxGraph: Bridging Large Language Models and HDL Repositories via HDL Graph Databases",
     "title_key": "hdlxgraph bridging large language models and hdl repositories via hdl graph databases",
-    "updated": "2026-11-07",
+    "updated": "2026-11-10",
     "url": "https://doi.org/10.1109/asp-dac66049.2026.11420358",
     "venue": "Asia and South Pacific Design Automation Conference (ASP-DAC)"
   },

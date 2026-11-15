@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：S. Miftah、Hyunmin Kim、Kanad Basu
+- 作者：Samit Shahnawaz Miftah、Hyunmin Kim、Kanad Basu
 - 发表日期：2025-06-22
 - 会议/期刊：Design Automation Conference
 - 主分类：RTL 与 SoC 硬件 Fuzzing

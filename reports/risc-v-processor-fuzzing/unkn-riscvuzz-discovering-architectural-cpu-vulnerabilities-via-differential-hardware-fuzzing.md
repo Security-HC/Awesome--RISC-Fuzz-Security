@@ -2,7 +2,7 @@
 
 ## 基本信息
 
-- 作者：Fabian Thomas、Lorenz Hetterich、Ruiyi Zhang、Daniel Weber、L. Gerlach、Michael Schwarz
+- 作者：Fabian Thomas、Lorenz Hetterich、Rui-Yi Zhang、Daniel Weber、Lukas Gerlach、Michael Schwarz
 - 发表日期：
 - 会议/期刊：未记录
 - 主分类：RISC-V 处理器 Fuzzing
