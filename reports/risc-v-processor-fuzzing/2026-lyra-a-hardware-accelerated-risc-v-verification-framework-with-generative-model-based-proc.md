@@ -2,9 +2,9 @@
 
 ## 基本信息
 
-- 作者：Jun-Cheng Huo、Yun-Fan Gao、Xin-Xin Liu、Sa Wang、Yun-Gang Bao、Xi-Tong Gao、Kan Shi
-- 发表日期：2025-12-15
-- 会议/期刊：Design Automation Conference
+- 作者：Juncheng Huo、Yunfan Gao、Xinxin Liu、Sa Wang、Yungang Bao、Xitong Gao、Kan Shi
+- 发表日期：2026-07-26
+- 会议/期刊：ACM/IEEE Design Automation Conference (DAC)
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=9）
 - 证据等级：全文核验

@@ -1,9 +1,12 @@
 # 待人工复核
 
-共 66 篇。该列表不进入主 README。
+共 70 篇。该列表不进入主 README。
 
 | 日期 | 论文 | 分数 | 自动判断依据 |
 |---|---|---:|---|
+| 2026-11-19 | [From FIPS to FPGA with LLM Agents: Measuring What Tests and Reviews Miss in Post-Quantum Cryptographic Hardware](http://arxiv.org/abs/2611.25339v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: verification |
+| 2026-11-18 | [MicroAssert: Microarchitecture-Aware Structured Assertion Generation for CPU Verification](http://arxiv.org/abs/2611.24872v1) | 4 | hardware/processor object: risc-v, cpu, microarchitecture, microarchitectural；verification/fuzzing method: coverage-guided, verification, mutation testing |
+| 2026-11-14 | [MBCheck: Practical Static Analysis Framework for Detecting Memory Ordering Violations under WMM](https://doi.org/10.1145/3828523.3857079) | 4 | hardware/processor object: risc-v, cpu；verification/fuzzing method: litmus |
 | 2026-10-28 | [GI-RTL-Fuzz: Grammar-Informed RTL Generation with LLMs for End-to-End Differential Simulator Fuzzing](http://arxiv.org/abs/2610.38489v1) | 4 | hardware/processor object: rtl, verilog；verification/fuzzing method: fuzz, differential testing |
 | 2026-10-23 | [Automated Multi-Line Bug Repair Using Model Checker Aided LLMs: A Case Study on RISC-V Processors](http://arxiv.org/abs/2610.32597v1) | 4 | hardware/processor object: risc-v, processor, rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-10-22 | [Typed Template Fuzzing](http://arxiv.org/abs/2610.31342v1) | 4 | hardware/processor object: verilog, systemverilog；verification/fuzzing method: fuzz, test generation |
@@ -25,6 +28,7 @@
 | 2026-05-05 | [täkōFormal: Enabling Robust Software for Programmable Memory Hierarchies (Extended Version)](http://arxiv.org/abs/2605.04172v1) | 4 | hardware/processor object: microarchitectural, memory consistency；verification/fuzzing method: verification, litmus |
 | 2026-04-10 | [From Indiscriminate to Targeted: Efficient RTL Verification via Functionally Key Signal-Driven LLM Assertion Generation](http://arxiv.org/abs/2604.08932v1) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: verification, mutation testing |
 | 2026-04-10 | [From Indiscriminate to Targeted: Functionally Critical Signal-Driven Assertion Generation using LLMs for Efficient RTL Verification](http://arxiv.org/abs/2604.08932v2) | 4 | hardware/processor object: cpu, rtl；verification/fuzzing method: verification, mutation testing |
+| 2026-03-19 | [DeepVerifier: Learning to Update Test Sequences for Coverage-Guided Verification](https://doi.org/10.1145/3721133) | 4 | hardware/processor object: risc-v, processor, soc；verification/fuzzing method: test generation, coverage-guided, verification |
 | 2026-03-05 | [Challenges and Design Considerations for Finding CUDA Bugs Through GPU-Native Fuzzing](http://arxiv.org/abs/2603.05725v1) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz |
 | 2025-12-01 | [OntoMetric: An Ontology-Driven LLM-Assisted Framework for Automated ESG Metric Knowledge Graph Generation](https://www.semanticscholar.org/paper/534f308e0feef5bc1a9c5cc53103fbc20b4a0c11) | 4 | hardware/processor object: soc；verification/fuzzing method: verification, validation |
 | 2025-10-12 | [A Verified High-Performance Composable Object Library for Remote Direct Memory Access (Extended Version)](http://arxiv.org/abs/2510.10531v1) | 4 | hardware/processor object: cpu, memory consistency；verification/fuzzing method: verification |
@@ -42,7 +46,7 @@
 | 2024-01-08 | [RaceFixer -- An Automated Data Race Fixer](http://arxiv.org/abs/2401.04221v1) | 4 | hardware/processor object: multicore；verification/fuzzing method: sanitizer |
 | 2023-11-16 | [LightEMU: Hardware Assisted Fuzzing of Trusted Applications](https://doi.org/10.1109/HOST55342.2024.10545377) | 4 | hardware/processor object: cpu；verification/fuzzing method: fuzz, coverage-guided |
 | 2023-10-28 | [SurgeFuzz: Surge-Aware Directed Fuzzing for CPU Designs](https://doi.org/10.1109/ICCAD57390.2023.10323819) | 4 | hardware/processor object: processor, cpu；verification/fuzzing method: fuzz, verification |
-| 2023-06-16 | [Imprecise Store Exceptions](https://doi.org/10.1145/3579371.3589087) | 4 | hardware/processor object: risc-v, microarchitectural, memory consistency；verification/fuzzing method: litmus |
+| 2023-06-17 | [Imprecise Store Exceptions](https://doi.org/10.1145/3579371.3589087) | 4 | hardware/processor object: risc-v, microarchitectural, memory consistency；verification/fuzzing method: litmus |
 | 2023-02-23 | [Sequence-Based Incremental Concolic Testing of RTL Models](http://arxiv.org/abs/2302.12241v1) | 4 | hardware/processor object: rtl；verification/fuzzing method: validation |
 | 2023-02-01 | [EveCheck: An Event-Driven, Scalable Algorithm for Coherent Shared Memory Verification](https://doi.org/10.1109/TCAD.2022.3178051) | 4 | hardware/processor object: cache coherence, memory consistency, multicore；verification/fuzzing method: directed test generation, test generation, verification, litmus |
 | 2022-03-09 | [CUBES: A Parallel Synthesizer for SQL Using Examples](http://arxiv.org/abs/2203.04995v2) | 4 | hardware/processor object: multicore；verification/fuzzing method: fuzz |

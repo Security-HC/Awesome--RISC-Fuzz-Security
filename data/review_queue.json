@@ -1,5 +1,159 @@
 [
   {
+    "abstract": "As LLM agents increasingly generate RTL alongside the tests and reviews that validate it, self-generated evidence is a weak foundation for trustworthy hardware. We present our seven-stage verification-gated workflow, evolved during a post-quantum design port, in which a gate counts only if shown able to fail on negative controls and fault mutants, and reviewer agents audit work before commit. We then audit this evidence with tool-selected netlist mutants, flaw replays, and formal checks. The flow ported an ML-KEM-768/ML-DSA-65 accelerator to a 300 MHz Zynq UltraScale+ key-custody card: all six operations are byte-exact on the board, and it passes all 85 interface-applicable NIST ACVP cases (of 285) and 484 ML-DSA known answers. However, passing module tests overstate the verification strength. Across three RTL modules, existing simulation gates kill only 76% of 399 tool-selected netlist mutants; specification-derived tests guided by the survivors raise the fresh-draw decapsulation kill rate from 48% to 74%. In pre-registered single-model replays on flaws invisible to known-answer tests, undirected whole-design review catches two verifier flaws in only 3/6 and 1/6 sessions, whereas module-scoped review catches every known flaw in all 54 sessions. Even scoped review detects planted key-custody flaws in only 3/20 sessions, whereas formal checks (one added for the replay) flag every one. In this study, trustworthy agentic hardware needed author-independent mutants for test gates, module-level scoping for LLM review, and formal checks for custody invariants.",
+    "analysis": {},
+    "authors": [
+      "Jungmin Park",
+      "Eunha Kim",
+      "Wooseop Kim",
+      "Seongjoon Cho",
+      "Byungho Cha"
+    ],
+    "categories": [],
+    "content_hash": "9c9c11b426a319e09149109734d9cacbd8e91618e6821dcec3d1f71ed9f06ecd",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-22",
+    "id": "arxiv-2611-25339v1",
+    "included": false,
+    "last_seen": "2026-11-22",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2611.25339v1",
+    "primary_category": "",
+    "published": "2026-11-19",
+    "relevance_reasons": [
+      "hardware/processor object: rtl",
+      "verification/fuzzing method: verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.AR"
+    ],
+    "source_id": "2611.25339v1",
+    "title": "From FIPS to FPGA with LLM Agents: Measuring What Tests and Reviews Miss in Post-Quantum Cryptographic Hardware",
+    "title_key": "from fips to fpga with llm agents measuring what tests and reviews miss in post quantum cryptographic hardware",
+    "updated": "2026-11-19",
+    "url": "http://arxiv.org/abs/2611.25339v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Automatic assertion generation reduces manual verification effort, yet existing approaches struggle to capture microarchitectural behaviors and cross-region interactions in CPUs. We present MicroAssert, a microarchitecture-aware framework that identifies functional regions directly from RTL and generates local and composite assertions through structured contracts and deterministic verification primitives. Coverage-guided feedback further improves verification completeness by progressively expanding proof-relevant RTL coverage. Evaluated on five open-source RISC-V CPUs against three existing assertion generation approaches, MicroAssert achieves 100% syntax correctness and complete branch, statement, and toggle coverage, with an average proven rate of 74.82% and Proof Core coverage of 90.96%. Mutation testing further demonstrates its advantage, achieving an average error detection rate of 28.73%, 1.99 to 3.51 times higher than existing methods. These results demonstrate the effectiveness of microarchitecture-aware assertion generation.",
+    "analysis": {},
+    "authors": [
+      "Hongqin Lyu",
+      "Yonghao Wang",
+      "Zhiteng Chao",
+      "Wenxing Li",
+      "Tiancheng Wang",
+      "Evangeline F. Y. Young",
+      "Huawei Li"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology",
+      "Benchmarks, Bug Injection & Artifacts"
+    ],
+    "content_hash": "ac73ed6c1add0e08e81b948c9db6bb1b649bdb4466fac23fd64674a1105faeca",
+    "curation_status": "review",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-22",
+    "id": "arxiv-2611-24872v1",
+    "included": false,
+    "last_seen": "2026-11-22",
+    "matched_queries": [
+      "((all:\"bug injection\" OR all:mutant OR all:\"mutation testing\") AND (all:processor OR all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)",
+      "((all:processor OR all:CPU) AND (all:fuzzing OR all:\"coverage-guided\") AND (all:RTL OR all:hardware)) AND (cat:cs.CR OR cat:cs.AR OR cat:cs.DC OR cat:cs.SE OR cat:eess.SY)"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2611.24872v1",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-11-18",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, cpu, microarchitecture, microarchitectural",
+      "verification/fuzzing method: coverage-guided, verification, mutation testing"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 2,
+    "source": "arXiv",
+    "source_categories": [
+      "cs.AR",
+      "cs.SE"
+    ],
+    "source_id": "2611.24872v1",
+    "title": "MicroAssert: Microarchitecture-Aware Structured Assertion Generation for CPU Verification",
+    "title_key": "microassert microarchitecture aware structured assertion generation for cpu verification",
+    "updated": "2026-11-18",
+    "url": "http://arxiv.org/abs/2611.24872v1",
+    "venue": "arXiv"
+  },
+  {
+    "abstract": "Memory-ordering violations in lock-free kernel code, where threads share data without locks, are a high-impact source of faults that are hard to detect and debug. On architectures with a weak memory model (WMM), such as AArch64 and RISC-V, a missing release, a misplaced fence, or an ordinary load in place of an acquire can allow other CPUs to observe partially constructed memory objects. The Linux Kernel Memory Model (LKMM), evaluated with the herd7 tool, is the definitive reference for deciding whether such an outcome is allowed. However, herd7 only decides this for a small multi-threaded program, a litmus test , that a developer writes by hand. As a result, the model covers only a fraction of the millions of cross-function interactions in the kernel. MBCheck addresses this gap. It is an extensible static analysis framework that transforms a complete kernel build into a collection of automatically synthesized litmus tests and evaluates them with herd7 . MBCheck reduces each function to the shared accesses around its memory-ordering instructions, discards function pairs that cannot run concurrently, and synthesizes a litmus test for every remaining pair, together with the outcome that a missing ordering would allow. A runtime verifier checks that each litmus test is faithful to the kernel code. For a complete kernel build, MBCheck synthesizes and evaluates about 30,000 litmus tests in under an hour. On Linux v7.3-rc4, we report 47 memory-ordering violations and have submitted 41 patches to the kernel maintainers. Five of the violations have been confirmed so far, and two fixes have been accepted.",
+    "analysis": {},
+    "authors": [
+      "Jaidev Shastri",
+      "Binoy Ravindran"
+    ],
+    "categories": [
+      "Multi-Hart, Memory Consistency & Cache Coherence"
+    ],
+    "content_hash": "3797346c2a7ec113fb89ecc284cc8b0e0e22baf8620be25daf9560cd3cb16961",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3828523.3857079",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-22",
+    "id": "openalex-w7230136790",
+    "included": false,
+    "last_seen": "2026-11-22",
+    "matched_queries": [
+      "OpenAlex: CPU fuzzing hardware verification",
+      "OpenAlex: RISC-V processor fuzzing",
+      "OpenAlex: RISC-V processor verification benchmark artifact",
+      "OpenAlex: RVWMO litmus testing verification",
+      "OpenAlex: processor hardware sanitizer fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3828523.3857079?download=true",
+    "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
+    "published": "2026-11-14",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, cpu",
+      "verification/fuzzing method: litmus"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 5,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Static analysis",
+      "Computer science",
+      "Algorithm",
+      "Transient analysis",
+      "Static timing analysis",
+      "Key (lock)",
+      "Electronic engineering",
+      "Signal processing",
+      "Network analysis",
+      "Real-time computing"
+    ],
+    "source_id": "https://openalex.org/W7230136790",
+    "title": "MBCheck: Practical Static Analysis Framework for Detecting Memory Ordering Violations under WMM",
+    "title_key": "mbcheck practical static analysis framework for detecting memory ordering violations under wmm",
+    "updated": "2026-11-21",
+    "url": "https://doi.org/10.1145/3828523.3857079",
+    "venue": "未记录"
+  },
+  {
     "abstract": "Register-Transfer Level (RTL) simulators are fundamental to modern IC design workflows, yet like any complex software, they frequently contain critical bugs that compromise simulation accuracy. To systematically stress-test these tools, we introduce GI-RTL-Fuzz, a grammar-informed fuzzing framework that leverages Large Language Models (LLMs) to generate high-quality RTL test cases. Our key innovation is guiding the LLM's generation process using Backus-Naur Form (BNF) grammar coverage information, enabling the exploration of complex and rarely-tested language features. By performing differential testing against different RTL simulators, our framework uncovered a significant number of previously unknown inconsistencies in both the linting process and simulation results of major Verilog simulators.",
     "analysis": {},
     "authors": [
@@ -747,7 +901,7 @@
       "Dongsheng Wang"
     ],
     "categories": [],
-    "content_hash": "1c8d9c8b7550f6fd035a7c7d0fb1e00e8b21d5fe6d7a8d5da6ca708fb62c21d3",
+    "content_hash": "4156ca3b74f06f3aa294409a1cb4405eff34daeec9ea96d36561eb658547fb78",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3770743.3804084",
     "evidence_level": "abstract",
@@ -755,7 +909,7 @@
     "first_seen": "2026-10-29",
     "id": "openalex-w7223234250",
     "included": false,
-    "last_seen": "2026-11-15",
+    "last_seen": "2026-11-22",
     "matched_queries": [
       "OpenAlex: microarchitectural path coverage processor fuzzing"
     ],
@@ -769,7 +923,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 3,
+    "seen_count": 4,
     "source": "OpenAlex",
     "source_categories": [
       "Reverse engineering",
@@ -788,7 +942,7 @@
     "source_id": "https://openalex.org/W7223234250",
     "title": "Seeing the Unseen: Reverse Engineering Hidden PMU Events by Differential Analysis and Simulation Validation",
     "title_key": "seeing the unseen reverse engineering hidden pmu events by differential analysis and simulation validation",
-    "updated": "2026-11-14",
+    "updated": "2026-11-21",
     "url": "https://doi.org/10.1145/3770743.3804084",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
@@ -807,7 +961,7 @@
       "Dongsheng Wang"
     ],
     "categories": [],
-    "content_hash": "f65f1f1e69486515c8e3e5c821135a91b7d1e3c2dd3f2c07eb75d4d434d389b0",
+    "content_hash": "d048feadf7938f5590a5e3ffe33e88ff3fd0ddfb352612e6f6ba9c5337d7ee33",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3770743.3804173",
     "evidence_level": "abstract",
@@ -815,7 +969,7 @@
     "first_seen": "2026-11-15",
     "id": "openalex-w7225430343",
     "included": false,
-    "last_seen": "2026-11-15",
+    "last_seen": "2026-11-22",
     "matched_queries": [
       "OpenAlex: microarchitectural timing vulnerability fuzzing"
     ],
@@ -829,7 +983,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 1,
+    "seen_count": 2,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -848,7 +1002,7 @@
     "source_id": "https://openalex.org/W7225430343",
     "title": "Thrend: Mitigating Counting Thread-based Fine-grained Timing on Arm and Apple CPUs",
     "title_key": "thrend mitigating counting thread based fine grained timing on arm and apple cpus",
-    "updated": "2026-11-08",
+    "updated": "2026-11-21",
     "url": "https://doi.org/10.1145/3770743.3804173",
     "venue": "ACM/IEEE Design Automation Conference (DAC)"
   },
@@ -1165,6 +1319,60 @@
     "updated": "2026-08-11",
     "url": "http://arxiv.org/abs/2604.08932v2",
     "venue": "arXiv"
+  },
+  {
+    "abstract": "Verification is critical in ensuring the reliable operation of modern, complex computing systems. However, as processor designs become increasingly sophisticated, conventional static verification techniques struggle to generate high-quality test sequences that achieve comprehensive coverage. Dynamic simulation-based approaches, which leverage coverage-driven objectives, can increase confidence in correct processor functionality but often suffer from low verification efficiency due to the generation of redundant test sequences and significant computational overhead. To address these challenges, this paper presents DeepVerifier, a novel coverage-guided test generation framework that leverages data-driven learning of existing test sequences and their associated coverage feedback. DeepVerifier uses a language model to learn the semantic representations of test sequences, ensure adherence to syntax constraints, and estimate the relationship between test sequences and coverage scores. By updating test sequences with higher coverage, DeepVerifier can significantly improve the efficiency and effectiveness of the verification process. Experimental results of verifying an out-of-order RISC-V microprocessor demonstrate that the framework accurately estimates the coverage scores of test sequences and updates high-quality sequences that contribute to higher coverage. This coverage-guided test generation technique holds promise for enhancing the reliability of modern processor designs.",
+    "analysis": {},
+    "authors": [
+      "Yuntao Lu",
+      "Chen Bai",
+      "Yuxuan Zhao",
+      "Ziyue Zheng",
+      "Yangdi Lyu",
+      "Mingyu Liu",
+      "Bei Yu"
+    ],
+    "categories": [
+      "Coverage, Oracles & Fuzzing Methodology"
+    ],
+    "content_hash": "f48d07a49cede8696ed318a3f0c39666ffee0e52dd2354392a615c91c5aeec1d",
+    "curation_status": "review",
+    "doi": "https://doi.org/10.1145/3721133",
+    "evidence_level": "abstract",
+    "exclusion_reason": "",
+    "first_seen": "2026-11-22",
+    "id": "openalex-w4408070679",
+    "included": false,
+    "last_seen": "2026-11-22",
+    "matched_queries": [
+      "OpenAlex: multi-hart RISC-V fuzzing"
+    ],
+    "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3721133",
+    "primary_category": "Coverage, Oracles & Fuzzing Methodology",
+    "published": "2026-03-19",
+    "relevance_reasons": [
+      "hardware/processor object: risc-v, processor, soc",
+      "verification/fuzzing method: test generation, coverage-guided, verification"
+    ],
+    "relevance_score": 4,
+    "relevance_tier": "C",
+    "scope": "review",
+    "seen_count": 1,
+    "source": "OpenAlex",
+    "source_categories": [
+      "Computer science",
+      "Test (biology)",
+      "Artificial intelligence",
+      "Machine learning",
+      "Paleontology",
+      "Biology"
+    ],
+    "source_id": "https://openalex.org/W4408070679",
+    "title": "DeepVerifier: Learning to Update Test Sequences for Coverage-Guided Verification",
+    "title_key": "deepverifier learning to update test sequences for coverage guided verification",
+    "updated": "2026-11-20",
+    "url": "https://doi.org/10.1145/3721133",
+    "venue": "ACM Transactions on Design Automation of Electronic Systems"
   },
   {
     "abstract": "Modern computing is shifting from homogeneous CPU-centric systems to heterogeneous systems with closely integrated CPUs and GPUs. While the CPU software stack has benefited from decades of memory safety hardening, the GPU software stack remains dangerously immature. This discrepancy presents a critical ethical challenge: the world's most advanced AI and scientific workloads are increasingly deployed on vulnerable hardware components. In this paper, we study the key challenges of ensuring memory safety on heterogeneous systems. We show that, while the number of exploitable bugs in heterogeneous systems rises every year, current mitigation methods often rely on unfaithful translations, i.e., converting GPU programs to run on CPUs for testing, which fails to capture the architectural differences between CPUs and GPUs. We argue that the faithfulness of the program behavior is at the core of secure and reliable heterogeneous systems design. To ensure faithfulness, we discuss several design considerations of a GPU-native fuzzing pipeline for CUDA programs.",
@@ -1966,7 +2174,7 @@
     "categories": [
       "Multi-Hart, Memory Consistency & Cache Coherence"
     ],
-    "content_hash": "91baff53d35b6006a6928b161e9cb0e361306c691705950298c5b516b5e45835",
+    "content_hash": "8b43c0cdca12f2d3d5501d8c5c05baefb3c4d274c197f92325b68d835725ffda",
     "curation_status": "review",
     "doi": "https://doi.org/10.1145/3579371.3589087",
     "evidence_level": "abstract",
@@ -1974,13 +2182,13 @@
     "first_seen": "2026-07-22",
     "id": "openalex-w4380881120",
     "included": false,
-    "last_seen": "2026-11-15",
+    "last_seen": "2026-11-22",
     "matched_queries": [
       "OpenAlex: RVWMO litmus testing verification"
     ],
     "pdf_url": "https://dl.acm.org/doi/pdf/10.1145/3579371.3589087",
     "primary_category": "Multi-Hart, Memory Consistency & Cache Coherence",
-    "published": "2023-06-16",
+    "published": "2023-06-17",
     "relevance_reasons": [
       "hardware/processor object: risc-v, microarchitectural, memory consistency",
       "verification/fuzzing method: litmus"
@@ -1988,7 +2196,7 @@
     "relevance_score": 4,
     "relevance_tier": "C",
     "scope": "review",
-    "seen_count": 9,
+    "seen_count": 10,
     "source": "OpenAlex",
     "source_categories": [
       "Computer science",
@@ -2023,7 +2231,7 @@
     "source_id": "https://openalex.org/W4380881120",
     "title": "Imprecise Store Exceptions",
     "title_key": "imprecise store exceptions",
-    "updated": "2026-11-10",
+    "updated": "2026-11-20",
     "url": "https://doi.org/10.1145/3579371.3589087",
     "venue": "Proceedings - International Symposium on Computer Architecture/Proceedings"
   },

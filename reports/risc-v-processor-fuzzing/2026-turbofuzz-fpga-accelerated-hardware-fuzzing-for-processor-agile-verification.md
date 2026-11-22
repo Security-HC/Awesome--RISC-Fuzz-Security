@@ -2,16 +2,16 @@
 
 ## 基本信息
 
-- 作者：Yang Zhong、Haoran Wu、Xue-Qi Li、Sa Wang、D. Boland、Yun-Gang Bao、Kan Shi
-- 发表日期：2025-09-12
-- 会议/期刊：International Symposium on High-Performance Computer Architecture
+- 作者：Yang Zhong、Haoran Wu、Xueqi Li、Sa Wang、David Boland、Yungang Bao、Kan Shi
+- 发表日期：2026-01-31
+- 会议/期刊：IEEE International Symposium on High-Performance Computer Architecture (HPCA)
 - 主分类：RISC-V 处理器 Fuzzing
 - 相关性：A·直接相关（score=9）
 - 证据等级：全文核验
 - 全文状态：已完成
 - 标签：RISC-V Processor Fuzzing、Coverage, Oracles & Fuzzing Methodology
 - 纳入依据：strong phrase in title: hardware fuzzing；hardware/processor object: risc-v, processor；verification/fuzzing method: fuzz, test generation, verification
-- 论文页面：[https://doi.org/10.1109/HPCA68181.2026.11408489](https://doi.org/10.1109/HPCA68181.2026.11408489)
+- 论文页面：[https://doi.org/10.1109/hpca68181.2026.11408489](https://doi.org/10.1109/hpca68181.2026.11408489)
 - PDF：[https://arxiv.org/pdf/2509.10400](https://arxiv.org/pdf/2509.10400)
 - 分析模式：DeepSeek 全文分析：deepseek-v4-flash；PDF 全文共 14 页，提取 71964 字符
 

@@ -2,9 +2,9 @@
 
 ## 基本信息
 
-- 作者：Yu-Chen Hu、Jia-Lin Sun、Yu-Shu Du、Ren-Shuang Jiang、Ning Wang、Weiwei Shan、Xin-Wei Fang、Xi Wang、Nan Guan、Zhen-Ling Jiang
+- 作者：Yuchen Hu、Jialin Sun、Yushu Du、Renshuang Jiang、Ning Wang、Weiwei Shan、Xinwei Fang、Xi Wang、Guan Nan、Zhe Jiang
 - 发表日期：2026-07-26
-- 会议/期刊：Design Automation Conference
+- 会议/期刊：ACM/IEEE Design Automation Conference (DAC)
 - 主分类：形式化与定向处理器验证
 - 相关性：A·直接相关（score=9）
 - 证据等级：摘要级
